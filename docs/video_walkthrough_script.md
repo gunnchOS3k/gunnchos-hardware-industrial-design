@@ -1,19 +1,8 @@
-# Video Walkthrough — gunnchOS Hardware
+# Video Walkthrough Script
 
-## Opening
-Four device families for schools, SMBs, and 7GC — EVT-0 OpenSCAD, not manufacturing drawings.
+See also [video_walkthrough_script.md](video_walkthrough_script.md) if present.
 
-## CAD tour
-- `cad/openscad/student_14_5/student_14_5_concept.scad`
-- `exploded_view.scad` — internal zones
-
-## Specs
-`devices/student_14_5/system_spec.md` — three affordability tiers
-
-## Demo
-```bash
-make e2e
-```
-
-## Close
-Modular 6G radio is Frontier tier roadmap only.
+1. Problem in plain English (30s)
+2. Run `make e2e` (60s)
+3. Show output — label as smoke only (30s)
+4. What would make this final (30s)
