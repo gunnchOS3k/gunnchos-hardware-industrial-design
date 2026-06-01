@@ -1,0 +1,4 @@
+.                                                                        [100%]
+1 passed in 0.01s
+OpenSCAD not installed. Install: https://openscad.org/downloads.html
+Skipping STL export (non-fatal).
