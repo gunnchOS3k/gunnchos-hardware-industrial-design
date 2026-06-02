@@ -1,0 +1,23 @@
+site_id: ghana
+kit_name: ghana campus kit
+device_mix:
+- community_tablet
+- lab_sbc
+- rugged_router_stub
+community_baseline_tier: affordable_repairable
+research_lab_tier: sensor_radio_dev
+frontier_prototype_tier: mmwave_devkit_stub
+power_assumptions: solar+battery where noted in site profile
+repair_assumptions: modular parts list
+connectivity_assumptions: wifi6e_stepping_stone
+accessibility_assumptions: standard
+privacy_security_assumptions: tpm_target
+logistics_risks:
+- import_delay
+- parts_moq
+local_maintenance_plan: train local repair mentors
+evidence_needed_before_adoption:
+- pilot_safety_review
+- bom_quotes
+- thermal_stub
+manufacturing_ready: false

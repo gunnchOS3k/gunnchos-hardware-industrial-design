@@ -1,6 +1,6 @@
 # Hardware E2E Report
 
-Generated: 2026-06-01T15:04:41.821618+00:00
+Generated: 2026-06-02T20:22:12.586987+00:00
 
 - BOM validated
 - CAD tree validated

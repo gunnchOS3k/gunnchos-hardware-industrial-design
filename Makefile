@@ -11,6 +11,7 @@ e2e:
 	python3 scripts/generate_device_spec_tables.py
 	bash scripts/render_openscad.sh >> results/e2e/e2e_terminal_output.txt 2>&1 || echo "OpenSCAD optional"
 	python3 scripts/make_e2e_report.py
+	python3 scripts/generate_campus_device_kits.py >> results/e2e/e2e_terminal_output.txt
 	python3 scripts/e2e_check_required_artifacts.py
 
 
