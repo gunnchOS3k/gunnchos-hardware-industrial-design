@@ -1,0 +1,6 @@
+{
+  "device": "ds_xl_coder",
+  "tests": [
+    "power_on"
+  ]
+}

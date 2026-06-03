@@ -1,0 +1,7 @@
+(kicad_pcb (version 20230121) (generator "gunnchos_stub")
+  (general (thickness 1.6))
+  (paper "A4")
+  (layers 4)
+  (setup (stackup 1))
+  (net 0 "")
+)

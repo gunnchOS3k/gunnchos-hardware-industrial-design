@@ -1,0 +1,4 @@
+state,power_mW
+active,8500
+idle,1200
+sleep,80

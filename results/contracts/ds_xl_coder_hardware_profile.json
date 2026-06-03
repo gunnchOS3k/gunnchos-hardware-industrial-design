@@ -1,0 +1,30 @@
+{
+  "device_id": "ds_xl_coder",
+  "readiness_level": "H2",
+  "thermal_limits": {
+    "skin_c_max": 45
+  },
+  "battery_limits": {
+    "max_charge_w": 65
+  },
+  "display_capabilities": {
+    "touch": true
+  },
+  "input_capabilities": {
+    "keyboard": false
+  },
+  "wireless_capabilities": {
+    "wifi": "6e_minimum"
+  },
+  "security_capabilities": {
+    "tpm_target": true,
+    "secure_boot_target": true
+  },
+  "factory_test_points": [
+    "TP1",
+    "TP2"
+  ],
+  "repairability_flags": {
+    "battery_service": "evaluated"
+  }
+}

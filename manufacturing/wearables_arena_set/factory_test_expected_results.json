@@ -1,0 +1,6 @@
+{
+  "device": "wearables_arena_set",
+  "tests": [
+    "power_on"
+  ]
+}

@@ -1,9 +1,10 @@
 # Hardware E2E Report
 
-Generated: 2026-06-02T20:22:12.586987+00:00
+Generated: 2026-06-03T02:26:18.879475+00:00
 
 - BOM validated
 - CAD tree validated
-- Device specs indexed
+- KiCad EVT-1 stubs present
+- Device reports and contracts generated
 
-EVT-0 research prototype only.
+Readiness: **H2 EVT-1 candidate** — not H3 manufacture-ready until ERC/DRC/Gerber.

@@ -1,0 +1,4 @@
+item_id,quantity,reference_designator,manufacturer,manufacturer_part_number,description,package,lifecycle_status,unit_cost_estimate,moq,lead_time,criticality,repair_part,compliance_notes
+PWR001,1,U1,TBD,TBD-PMIC,PMIC / power management,QFN,active,TODO_quote,100,8w,high,yes,battery_safety_review
+MCU001,1,U2,TBD,TBD-SOC,Application processor,BGA,active,TODO_quote,50,12w,high,no,
+WIFI001,1,U3,TBD,TBD-WIFI7,Wi-Fi module research option,module,active,TODO_quote,25,10w,medium,yes,FCC_pre_scan_TBD

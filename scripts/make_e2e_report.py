@@ -7,7 +7,9 @@ def main():
     e2e.mkdir(parents=True, exist_ok=True)
     (e2e / "hardware_e2e_report.md").write_text(
         f"# Hardware E2E Report\n\nGenerated: {datetime.now(timezone.utc).isoformat()}\n\n"
-        "- BOM validated\n- CAD tree validated\n- Device specs indexed\n\nEVT-0 research prototype only.\n"
+        "- BOM validated\n- CAD tree validated\n- KiCad EVT-1 stubs present\n"
+        "- Device reports and contracts generated\n\n"
+        "Readiness: **H2 EVT-1 candidate** — not H3 manufacture-ready until ERC/DRC/Gerber.\n"
     )
     return 0
 

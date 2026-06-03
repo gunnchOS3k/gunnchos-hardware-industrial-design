@@ -4,7 +4,10 @@ from pathlib import Path
 import sys
 
 def main():
-    for p in Path("bom").glob("*.csv"):
+    paths = list(Path("bom").glob("**/*.csv"))
+    if not paths:
+        paths = list(Path("devices").glob("**/bom_target.csv"))
+    for p in paths:
         rows = list(csv.reader(p.open()))
         if not rows:
             print("FAIL empty", p)
