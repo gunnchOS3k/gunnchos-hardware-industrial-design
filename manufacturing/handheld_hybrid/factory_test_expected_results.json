@@ -1,0 +1,6 @@
+{
+  "device": "handheld_hybrid",
+  "tests": [
+    "power_on"
+  ]
+}

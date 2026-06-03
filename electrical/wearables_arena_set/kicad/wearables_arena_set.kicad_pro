@@ -1,0 +1,10 @@
+{
+  "board": {
+    "design_settings": {}
+  },
+  "meta": {
+    "version": 1,
+    "generator": "gunnchos-seed",
+    "readiness": "EVT-1-schematic-stub"
+  }
+}

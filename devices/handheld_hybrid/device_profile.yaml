@@ -1,0 +1,12 @@
+{
+  "device_id": "handheld_hybrid",
+  "device_name": "Handheld Hybrid",
+  "readiness_level": "H2",
+  "evidence_status": "EVT-1_engineering_package_candidate",
+  "not_claimed": [
+    "FCC_certified",
+    "manufacture_ready",
+    "field_validated",
+    "school_adoption"
+  ]
+}

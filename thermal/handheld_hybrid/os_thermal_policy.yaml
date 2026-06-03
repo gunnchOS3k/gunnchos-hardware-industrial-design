@@ -1,0 +1,2 @@
+throttle_c: 85
+throttle_action: reduce_gpu

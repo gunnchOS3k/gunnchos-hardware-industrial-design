@@ -1,0 +1,9 @@
+(kicad_sch (version 20230121) (generator "gunnchos_stub")
+  (uuid handheld_hybrid-root)
+  (paper "A4")
+  (title_block
+    (title "handheld_hybrid")
+    (comment 1 "EVT-1 hierarchical schematic — layout TBD")
+    (comment 2 "NOT manufacture-ready until ERC/DRC pass")
+  )
+)

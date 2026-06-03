@@ -1,0 +1,9 @@
+(kicad_sch (version 20230121) (generator "gunnchos_stub")
+  (uuid wearables_arena_set-root)
+  (paper "A4")
+  (title_block
+    (title "wearables_arena_set")
+    (comment 1 "EVT-1 hierarchical schematic — layout TBD")
+    (comment 2 "NOT manufacture-ready until ERC/DRC pass")
+  )
+)

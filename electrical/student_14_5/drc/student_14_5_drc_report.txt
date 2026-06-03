@@ -1,0 +1,2 @@
+DRC: STUB — run KiCad DRC before claiming H3
+Status: pending_review

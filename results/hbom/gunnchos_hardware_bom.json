@@ -1,0 +1,21 @@
+{
+  "devices": [
+    {
+      "device_id": "student_14_5",
+      "bom_path": "bom/student_14_5/bom.csv"
+    },
+    {
+      "device_id": "handheld_hybrid",
+      "bom_path": "bom/handheld_hybrid/bom.csv"
+    },
+    {
+      "device_id": "ds_xl_coder",
+      "bom_path": "bom/ds_xl_coder/bom.csv"
+    },
+    {
+      "device_id": "wearables_arena_set",
+      "bom_path": "bom/wearables_arena_set/bom.csv"
+    }
+  ],
+  "readiness": "H2"
+}
