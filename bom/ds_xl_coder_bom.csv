@@ -1,2 +1,5 @@
-ref,description,qty,evt0_note
-MECH-001,concept enclosure,1,not manufacturing BOM
+device,subsystem,part_category,example_part_or_module,quantity,criticality,target_cost_low,target_cost_high,vendor_candidates,notes
+ds_xl_coder,compute,SoC_module,TBD mobile APU module,1,critical,80,150,OEM/ODM,EVT-1 placeholder
+ds_xl_coder,memory,RAM,TBD DDR/LPDDR,1,critical,20,60,vendor TBD,per PRD
+ds_xl_coder,storage,NVMe,TBD NVMe,1,high,30,80,vendor TBD,
+ds_xl_coder,power,charger,TBD charger IC,1,critical,2,5,vendor TBD,EE review

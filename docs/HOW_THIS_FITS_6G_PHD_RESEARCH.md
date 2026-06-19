@@ -2,4 +2,4 @@
 
 Themes: Edge AI platforms · testbed hardware · digital equality access devices
 
-This documents **research alignment** with AI-RAN, digital twin, wireless, NTN, privacy, and digital equality directions common in programs such as Oulu CWC—**not** an institutional affiliation claim.
+This documents **research alignment** with AI-RAN, digital twin, wireless, NTN, privacy, and digital equality directions common in programs such as gunnchOS CWC—**not** an institutional affiliation claim.

@@ -1,0 +1,5 @@
+device,subsystem,part_category,example_part_or_module,quantity,criticality,target_cost_low,target_cost_high,vendor_candidates,notes
+student_14,compute,SoC_module,TBD mobile APU module,1,critical,80,150,OEM/ODM,EVT-1 placeholder
+student_14,memory,RAM,TBD DDR/LPDDR,1,critical,20,60,vendor TBD,per PRD
+student_14,storage,NVMe,TBD NVMe,1,high,30,80,vendor TBD,
+student_14,power,charger,TBD charger IC,1,critical,2,5,vendor TBD,EE review

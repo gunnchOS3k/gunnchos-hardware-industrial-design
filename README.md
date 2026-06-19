@@ -178,3 +178,22 @@ Full table: [quality/READINESS_GATE_TABLE.md](quality/READINESS_GATE_TABLE.md)
 
 **Notice:** Aligned with public research ecosystems — [non-affiliation](industry_research_stack/NON_AFFILIATION_NOTICE.md). Smoke stubs only unless documented otherwise.
 
+## Wireless engineering alignment
+
+See [docs/WIRELESS_ENGINEERING_ALIGNMENT.md](docs/WIRELESS_ENGINEERING_ALIGNMENT.md).
+
+
+---
+
+## EVT-1 hardware package (this pass)
+
+**Status:** manufacturing-track architecture package — **not** final manufacturing release.
+
+```bash
+python3 scripts/validate_bom.py
+pytest -q tests/test_bom_schema.py tests/test_required_files.py
+```
+
+PRD: [product/PRD_GUNNCHOS_MODULAR_CONSOLE_ECOSYSTEM.md](product/PRD_GUNNCHOS_MODULAR_CONSOLE_ECOSYSTEM.md)
+
+OS contract: [docs/OS_HARDWARE_CONTRACT.md](docs/OS_HARDWARE_CONTRACT.md)
