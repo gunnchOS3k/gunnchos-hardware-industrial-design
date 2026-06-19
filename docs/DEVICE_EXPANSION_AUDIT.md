@@ -34,21 +34,16 @@ This repo is currently **EVT-0 concept scaffold** with OpenSCAD assets, draft BO
 | `docs/07_compliance/` | partial |
 | `compliance/REGULATORY_MATRIX.md` | **added** |
 
-## Gaps addressed this pass
+## Gaps addressed this pass (PRD full expansion)
 
 | Gap | EVT-1 action |
 |-----|----------------|
-| Schematics | KiCad skeleton `.kicad_sch` per product |
-| KiCad structure | `schematics/*/README.md` |
-| Block diagrams | `architecture/SYSTEM_BLOCK_DIAGRAM.md` |
-| PCB stack-up | `pcb/STACKUP_PLAN.md` |
-| Connector map | `architecture/DATA_FLOW_AND_CONNECTOR_MAP.md` |
-| Power tree | `architecture/POWER_TREE.md` |
-| Battery/charger | `battery/` docs |
-| Thermal | `thermal/` docs |
-| CM quote package | `manufacturing/CM_QUOTE_PACKAGE_CHECKLIST.md` |
-| DFM/DFT | `pcb/DFM_NOTES.md`, `DFT_NOTES.md` |
-| EVT/DVT/PVT | `manufacturing/EVT_DVT_PVT_PLAN.md` |
+| Full PRD §1–12 | `product/PRD_GUNNCHOS_MODULAR_CONSOLE_ECOSYSTEM.md` |
+| Personas / performance / MVP / claim boundary | `product/*.md` |
+| Hardware acceptance criteria §6.3 | `docs/HARDWARE_ACCEPTANCE_CRITERIA.md` |
+| Approved vendor list | `bom/APPROVED_VENDOR_LIST.md` |
+| COPPA/CIPA in compliance matrix | `compliance/REGULATORY_MATRIX.md` |
+| Device comparison matrix | `architecture/DEVICE_COMPARISON_MATRIX.md` |
 
 ## Not claimed
 

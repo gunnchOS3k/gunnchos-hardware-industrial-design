@@ -1,107 +1,243 @@
-# PRD — gunnchOS Modular Console Ecosystem
+# gunnchOS3k Modular Console Ecosystem — Product Requirements Document
 
-**Status:** EVT-1 alpha product requirements — **requires engineering review**. **Not** a final manufacturing release.
+**Status:** EVT-1 alpha product requirements — **requires engineering review**.  
+**Not claimed:** certified hardware, finished OS, mass-production readiness, regulatory approval.
 
-## 1. Vision
+---
 
-gunnchOS3k delivers a modular console ecosystem for digital-equity education: Windows-first devices with a gunnchOS shell, offline learning, safe AI tutoring, and builder pathways. Hardware and OS evolve together through EVT → DVT → PVT — this document targets **EVT-1 package** scope.
+## 1. Product vision
+
+gunnchOS3k is a modular console ecosystem built to help students learn, build, play, create, collaborate, and stay connected across school, university, work, and community life.
+
+The product is not only a gaming device. It is a student computer, coding console, media device, learning platform, research endpoint, and community-access tool.
+
+The system must support:
+
+* Four years of high school use
+* Any university degree path
+* STEM and computer science workloads
+* Creative work
+* Gaming and recreation
+* Streaming and media
+* Offline-first learning
+* Low-cost education access
+* Safe youth/community use
+* Repairability and long-term ownership
+
+---
 
 ## 2. Product line
 
-| Product | Form factor | Primary user |
-|---------|-------------|--------------|
-| **Student 14.5"** | Clamshell laptop/tablet | High school + university students |
-| **Handheld Hybrid** | 7–8" handheld + dock | Gaming + portable learning |
-| **DS-XL Coder** | Dual-screen clamshell | Coding + preview workflow |
-| **Wearables/Arena Set** | BLE wearables + venue kit | Arena/education events (compliance review required) |
+### 2.1 Student 14.5"
+
+A laptop-adjacent student console.
+
+**Primary use cases:** schoolwork · coding · office/productivity · web research · WSL/Linux development · streaming media · Steam gaming · AI tutor · remote learning · university coursework
+
+**Minimum target specification:**
+
+| Spec | Target |
+|------|--------|
+| Display | 14.5" FHD+ or better |
+| CPU/GPU | AMD/Intel mobile APU class |
+| RAM | 16 GB min · 32 GB recommended |
+| Storage | 512 GB NVMe min · 1 TB recommended |
+| Wireless | Wi-Fi 6E min · Bluetooth 5.2+ |
+| I/O | USB-C charging + display · HDMI or USB-C dock |
+| AV | Webcam + microphone |
+| Security | TPM 2.0 / secure boot capable (design target) |
+| Repair | Replaceable battery target · repairable storage target |
+
+**Operating system target:** Windows 11 base · gunnchOS shell/launcher · WSL2 · Steam · browser/media · School/Developer/Play/Research modes
+
+### 2.2 Handheld Hybrid
+
+A PSP/Switch-style portable console.
+
+**Primary use cases:** Steam gaming · gunnchOS games · light coding · AI tutor · deploy target from DS-XL Coder · dock to TV/projector · LAN/venue play · media streaming
+
+**Minimum target specification:**
+
+| Spec | Target |
+|------|--------|
+| Display | 7–8" 1080p |
+| SoC | APU for Steam indie + low/mid PC games |
+| RAM / storage | 16 GB min · 512 GB NVMe min · microSD preferred |
+| Controls | Hall-effect sticks · D-pad · ABXY · bumpers · triggers · gyro/IMU |
+| Audio | Stereo speakers · headphone jack |
+| I/O | USB-C video out · dock support |
+| Wireless | Wi-Fi 6/6E · Bluetooth 5.2+ |
+| Battery | 2–4 hr gaming · 6+ hr light media/learning |
+
+**OS target:** Windows-first · Steam Big Picture / handheld launcher · gunnchOS overlay · controller-first · school/developer/play/research profiles · safe update rollback
+
+### 2.3 DS-XL Coder
+
+Dual-screen handheld for building, learning, and previewing.
+
+**Primary use cases:** code on lower screen · preview on upper · game jam · Python/JS/HTML learning · local build/run · deploy to Student 14.5" and Handheld Hybrid · offline lessons · coding meetups
+
+**Minimum target specification:**
+
+| Spec | Target |
+|------|--------|
+| Displays | Dual 7" — lower touch + optional keyboard · upper live preview |
+| RAM / storage | 8 GB min (16 GB rec) · 256 GB min (512 GB rec) |
+| Wireless | Wi-Fi 6 · Bluetooth 5.2+ |
+| I/O | USB-C data/charging · optional snap-on keyboard |
+| Mechanical | Rugged hinge · student-safe case |
+
+**OS target:** gunnchOS Coder Mode · local editor · local web preview · Python/JS templates · one-tap deploy · offline curriculum · optional Git/GitHub sync · no always-online requirement
+
+### 2.4 Wearables and Arena Set
+
+Future add-on for safe, physical, community play.
+
+**Components:** bracelet/ring tracker · haptic glove · glasses/HUD concept · BLE/UWB or approved tracking · venue beacons · charging case · arena safety controls
+
+**Safety constraints:** no unsafe lasers · no uncontrolled public deployment · venue marshal mode · youth safety policy · wireless compliance · no biometric surveillance by default
+
+---
 
 ## 3. User personas
 
-- High school student — safe school mode, offline lessons, parental controls
-- University CS/STEM student — WSL, VS Code, research measurement mode
-- Non-STEM university student — media, writing, AI tutor, accessibility
-- Educator/mentor — fleet policy, lesson deployment, consent-first telemetry
-- Community partner — pilot deployments, digital-equity pathway (not citywide claims)
+| Persona | Key needs |
+|---------|-----------|
+| **High school student** | homework · productivity · coding · tutoring · games · videos · safe comms · offline resources · durability |
+| **University CS/STEM** | VS Code · Git · Python/Java/C++ · WSL · Docker where feasible · external monitor · GPU where feasible |
+| **Non-STEM university** | writing · research · presentations · streaming · notes · AI tutor · affordable reliability |
+| **Educator / mentor** | class mode · lesson deploy · student-safe controls · offline content · fleet visibility · privacy-respecting telemetry |
+| **Community partner** | reliable devices · easy setup · youth policies · support/warranty model · non-surveillance analytics · low-cost deployment |
 
-## 4. Workloads
+See [USER_PERSONAS.md](USER_PERSONAS.md).
 
-High school · university · CS/STEM · creative work · coding · AI tutor · Steam/gaming (licensed) · streaming/media · offline learning
+---
 
-## 5. OS strategy
+## 4. Core product requirements
 
-- **Windows-first** with gunnchOS shell/launcher
-- **WSL2** dev tools path
-- **Steam** support via OS integration (licensing boundary documented)
-- Media/browser support (DRM/HDCP caveats — no circumvention)
-- Future optional Linux/SteamOS-like path — **planned**, not EVT-1
+### 4.1 Education
 
-## 6. Hardware requirements (baseline)
+Browser learning · PDF/office · video lectures · local files · offline lessons · AI tutor · coding kits · school restrictions · accessibility
 
-### Student 14.5"
+### 4.2 Development
 
-- 14.5" FHD+ · mobile APU · 16 GB RAM min (32 GB rec) · 512 GB NVMe min (1 TB rec)
-- Wi-Fi 6E · BT 5.2+ · USB-C PD/display · external monitor · webcam/mic
-- Secure boot + TPM-capable platform (design target — not certified in EVT-1)
+VS Code · Git · Python · Node.js · C/C++ where feasible · WSL2 · local preview · one-tap deploy · GitHub export · templates · game jam workflows
 
-### Handheld Hybrid
+### 4.3 Gaming
 
-- 7–8" 1080p · APU for indie/low-mid PC · 16 GB RAM · 512 GB NVMe · microSD preferred
-- Hall sticks · IMU · stereo + headphone jack · USB-C video · dock · Wi-Fi 6/6E
+Steam · controller-first mode · gunnchOS games · local multiplayer · remapping · parental restrictions · storage management · cloud saves where licensed · offline where licenses allow
 
-### DS-XL Coder
+### 4.4 Media
 
-- Dual 7" · code + preview · 8 GB min (16 GB rec) · 256 GB min (512 GB rec)
-- Optional snap keyboard · USB-C · Wi-Fi 6 · offline learning packs · deploy to Student/Handheld
+YouTube · Netflix/Hulu via supported browser routes · speakers/headphones · external display · DRM/HDCP planning · school-safe controls
 
-### Wearables/Arena Set
+### 4.5 Security and privacy
 
-- Bracelet/ring · haptic glove · glasses/HUD concept · BLE/UWB placeholder
-- Venue anchors · charging case · marshal controls · **no unsafe laser** · compliance review required
+Secure boot capable · TPM/root of trust · signed update plan · rollback · profiles/roles · encryption where feasible · privacy-preserving telemetry · no private packet capture · youth safety · parental controls · content reporting
 
-## 7. Software requirements
+### 4.6 Accessibility
 
-See [gunnchos-device-os/docs/PRODUCT_REQUIREMENTS_SUMMARY.md](https://github.com/gunnchOS3k/gunnchos-device-os/blob/main/docs/PRODUCT_REQUIREMENTS_SUMMARY.md).
+Screen scaling · high contrast · keyboard nav · controller remapping · captions · color-blind UI · TTS planning · low-bandwidth/offline · repairability · affordability
 
-## 8. Security / privacy
+---
 
-Least privilege · opt-in telemetry · no private payload collection · youth safety · signed update placeholder · rollback mock
+## 5. Operating system requirements
 
-## 9. Accessibility
+See [gunnchos-device-os](https://github.com/gunnchOS3k/gunnchos-device-os) — `gunnchos_device_os/` package.
 
-WCAG-oriented UI targets · multilingual console software (scaly-wings) · keyboard/switch notes
+### 5.1 OS strategy
 
-## 10. Compliance
+**First operational version:** Windows 11 + gunnchOS launcher · WSL2 · Steam · browser/media · school/developer/play/research/coder profiles
 
-FCC Part 15 · CE/UKCA · RoHS/REACH · UN 38.3 battery · module cert · youth privacy — **planned**, not approved
+**Future optional:** Linux/SteamOS-like handheld · education kiosk · recovery · developer images
 
-## 11. EVT / DVT / PVT roadmap
+### 5.2 Required OS modules (EVT-1 alpha)
 
-| Phase | Goal |
-|-------|------|
-| EVT-0 | Concept scaffold (prior) |
-| **EVT-1** | **This pass** — OS alpha model + hardware architecture package |
-| EVT-2 | Integrated prototypes |
-| DVT | Design validation |
-| PVT | Production validation |
-| Pilot | Small batch |
+| Module | Path |
+|--------|------|
+| Mode manager | `gunnchos_device_os/mode_manager.py` |
+| App launcher | `gunnchos_device_os/launcher.py` |
+| Profile manager | `gunnchos_device_os/profile_manager.py` |
+| Parental/school controls | `gunnchos_device_os/parental_controls.py` |
+| Telemetry consent | `gunnchos_device_os/telemetry_consent.py` |
+| Updater | `gunnchos_device_os/updater.py` |
+| Rollback | `gunnchos_device_os/rollback.py` |
+| Device health | `gunnchos_device_os/device_health.py` |
+| HAL | `gunnchos_device_os/hardware_abstraction.py` |
+| Input mapper | `gunnchos_device_os/input_mapper.py` |
+| Dock/display | `gunnchos_device_os/dock_manager.py` |
+| Performance governor | `gunnchos_device_os/performance_governor.py` |
+| Accessibility | `gunnchos_device_os/accessibility.py` |
+| WAIKE integration | `gunnchos_device_os/waike_integration.py` |
+| gunnchAI3k integration | `gunnchos_device_os/gunnchai_integration.py` |
+| Steam integration | `gunnchos_device_os/steam_integration.py` |
+| WSL/dev tools | `gunnchos_device_os/wsl_dev_tools.py` |
 
-## 12. MVP acceptance criteria (EVT-1)
+### 5.3 OS acceptance criteria
 
-- [ ] OS alpha runs offline demo JSON
-- [ ] Mode/profile/policy tests pass
-- [ ] Hardware PRD + BOM + schematic skeletons exist
-- [ ] Manufacturing-readiness checklist at EVT-1 level
-- [ ] Cross-linked OS/hardware contracts
+Documented in [gunnchos-device-os/docs/EVT1_OS_ACCEPTANCE_CRITERIA.md](https://github.com/gunnchOS3k/gunnchos-device-os/blob/main/docs/EVT1_OS_ACCEPTANCE_CRITERIA.md).
 
-## 13. Manufacturing-readiness gap list
+---
 
-- Final schematics + PCB layout
-- EMC/RF validation
-- Thermal validation
-- Battery UN 38.3 test data
-- CM DFM sign-off
-- Regulatory submissions
+## 6. Hardware requirements
 
-## 14. Claim boundary
+### 6.1 Hardware architecture
 
-**Not claimed:** certified hardware, shipping product, mass production, regulatory approval, finished OS, production MDM, finished media/Steam licensing.
+Each console: compute · RAM · storage · display · battery · charging · PMIC · Wi-Fi/BT · audio · input · USB-C · thermal · enclosure · service/repair plan
+
+### 6.2 Manufacturing documentation
+
+PRD · architecture · block diagrams · schematic drafts · PCB stack-up · connector map · BOM · vendor list · mechanical CAD · assembly · thermal · battery safety · regulatory matrix · DFM/DFT · EVT/DVT/PVT · CM quote · risk register
+
+### 6.3 Hardware acceptance criteria
+
+See [docs/HARDWARE_ACCEPTANCE_CRITERIA.md](../docs/HARDWARE_ACCEPTANCE_CRITERIA.md) — **manufacturing-candidate** gates, not met at EVT-1.
+
+---
+
+## 7. Product performance targets
+
+See [PERFORMANCE_TARGETS.md](PERFORMANCE_TARGETS.md).
+
+---
+
+## 8. Software ecosystem
+
+See [SOFTWARE_ECOSYSTEM.md](SOFTWARE_ECOSYSTEM.md).
+
+---
+
+## 9. Compliance and safety
+
+FCC Part 15 · CE/UKCA · RoHS/REACH · UN 38.3 · IEC/UL review · module cert · charger safety · youth privacy · COPPA/CIPA awareness · open-source compliance · SBOM · security update policy
+
+See [compliance/REGULATORY_MATRIX.md](../compliance/REGULATORY_MATRIX.md).
+
+---
+
+## 10. MVP scope
+
+See [MVP_SCOPE.md](MVP_SCOPE.md).
+
+---
+
+## 11. First milestone — EVT-1 Alpha Device + OS Package
+
+| Criterion | Status |
+|-----------|--------|
+| OS launcher + mode manager runnable locally | EVT-1 alpha |
+| Hardware architecture + KiCad skeletons | EVT-1 package |
+| PRD exists | this document |
+| BOM + compliance + manufacturing checklist | EVT-1 package |
+| Prototype vs certified clearly stated | yes |
+| Demo walkthrough | see device-os `demo/` |
+
+---
+
+## 12. Core claim boundary
+
+This project is moving from concept/EVT-0 toward **EVT-1**. It is **not** manufacturing-ready, certified, a finished OS, or a shipping consumer device.
+
+**Safe claim after this pass:**
+
+> gunnchOS3k has an EVT-1-ready product requirements package, OS alpha architecture, schematic/PCB documentation skeleton, and manufacturing-readiness roadmap for a modular student console ecosystem.
