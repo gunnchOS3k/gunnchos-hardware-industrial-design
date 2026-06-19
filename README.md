@@ -194,6 +194,8 @@ python3 scripts/validate_bom.py
 pytest -q tests/test_bom_schema.py tests/test_required_files.py
 ```
 
-PRD: [product/PRD_GUNNCHOS_MODULAR_CONSOLE_ECOSYSTEM.md](product/PRD_GUNNCHOS_MODULAR_CONSOLE_ECOSYSTEM.md)
+PRD: [product/PRD_GUNNCHOS_MODULAR_CONSOLE_ECOSYSTEM.md](product/PRD_GUNNCHOS_MODULAR_CONSOLE_ECOSYSTEM.md) (full §1–12)
+
+Supporting: [PERFORMANCE_TARGETS](product/PERFORMANCE_TARGETS.md) · [USER_PERSONAS](product/USER_PERSONAS.md) · [SOFTWARE_ECOSYSTEM](product/SOFTWARE_ECOSYSTEM.md) · [MVP_SCOPE](product/MVP_SCOPE.md) · [CLAIM_BOUNDARY](product/CLAIM_BOUNDARY.md)
 
 OS contract: [docs/OS_HARDWARE_CONTRACT.md](docs/OS_HARDWARE_CONTRACT.md)
