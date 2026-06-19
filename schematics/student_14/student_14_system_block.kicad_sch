@@ -1,0 +1,23 @@
+(kicad_sch (version 20230121) (generator gunnchOS3k-evt1-skeleton)
+
+  ; NOT A FINAL MANUFACTURING SCHEMATIC
+  ; EVT-1 SYSTEM BLOCK SCHEMATIC SKELETON
+  ; REQUIRES ELECTRICAL ENGINEERING REVIEW
+  ; REQUIRES PCB LAYOUT, DFM, DFT, EMC REVIEW
+
+  ; block: APU_compute_module
+  ; block: DDR5_LPDDR
+  ; block: NVMe
+  ; block: eDP_display
+  ; block: USB_C_PD
+  ; block: battery_pack
+  ; block: charger_IC
+  ; block: PMIC
+  ; block: WiFi_BT
+  ; block: audio_codec
+  ; block: webcam_mic
+  ; block: keyboard_trackpad
+  ; block: fan_thermal
+  ; block: TPM_optional
+  ; block: debug_header
+)
