@@ -1,0 +1,99 @@
+device_id: wearables_arena_set
+hardware_repo_device_name: Wearables / Arena Set
+os_repo_profile_name: wearables_arena_set
+display:
+  size_class: wearable_or_arena
+  touch: true
+input:
+  keyboard: false
+  touch: true
+  controller: true
+audio:
+  speakers: true
+  haptic: true
+camera_mic:
+  mic: arena_marshal_only
+network:
+  wifi: wifi_6
+  offline_capable: true
+storage:
+  class: emmc
+  min_gb: 64
+memory:
+  ram_gb: 4
+battery:
+  class: wearable_short_cycle
+thermal:
+  class: strict_throttle
+ports:
+- usb_c_charge
+dock:
+  supported: false
+sensors:
+- haptic
+controller:
+  supported: true
+keyboard:
+  built_in: false
+touch:
+  supported: true
+accessibility:
+  audio_cues: true
+  haptic_cues: true
+supported_modes:
+- Play
+- School
+- Offline
+- Library
+- Admin
+unsupported_modes:
+- Developer
+- Workshop
+- Laboratory
+supported_journey_presets:
+- scooter
+- bicycle
+- arcade
+- guardian
+- offline
+supported_app_packs:
+- learn_pack
+- game_pack
+- accessibility_essentials_pack
+- offline_essentials_pack
+developer_features:
+  wsl_path: false
+gaming_media_features:
+  venue_arcade: true
+creator_features:
+  haptic_learning: true
+research_features:
+  arena_research_placeholder: true
+school_library_features:
+  supervised_session: true
+guardian_features:
+  marshal_mode: true
+offline_features:
+  offline_arena_games: true
+boot_expectations: Wearable/arena profile; marshal supervision flags on first run.
+recovery_expectations: Arena-safe recovery; haptic/audio cue path — requirements only.
+firmware_interface_expectations: Strict throttle; haptic/motion sensor placeholders;
+  no dock.
+power_management_expectations: Short-cycle wearable battery; arena-safe power caps.
+thermal_management_expectations: Strict throttle per thermal/wearables_arena_set/os_thermal_policy.yaml.
+known_gaps:
+- arena_safety_rules_not_field_validated
+- no_wsl_workstation
+- real_boot_not_proven
+required_real_hardware_evidence:
+- boot_log
+- haptic_test
+- arena_session_log
+- marshal_controls_test
+claim_boundary: Hardware export manifest — profile-based compatibility only; requires
+  real hardware validation.
+source_artifacts:
+- io/wearables_arena_ports.md
+- power/wearables_arena_power_budget.csv
+- thermal/wearables_arena_set/thermal_test_plan.md
+- mechanical_correctness/device_mechanical_targets.json#wearables_arena_set

@@ -36,5 +36,15 @@ jobs:
         run: python3 scripts/validate_certification_readiness.py
       - name: Production release gate validation
         run: python3 scripts/validate_production_release_gate.py
+      - name: External evidence layer validation
+        run: python3 scripts/validate_external_evidence_layer.py
+      - name: OS compatibility handoff validation
+        run: python3 scripts/validate_os_compatibility_handoff.py
+      - name: Firmware OS interface validation
+        run: python3 scripts/validate_firmware_os_interface.py
+      - name: Hardware OS validation package
+        run: python3 scripts/validate_hardware_os_validation.py
+      - name: HLK readiness validation
+        run: python3 scripts/validate_hlk_readiness.py
       - name: Package tests
         run: pytest -q

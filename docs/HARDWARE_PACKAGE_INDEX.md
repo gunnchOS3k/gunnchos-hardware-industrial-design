@@ -27,6 +27,16 @@
 - [production_release/README.md](../production_release/README.md)
 - [PRODUCTION_RELEASE_EVIDENCE_MATRIX.md](../production_release/PRODUCTION_RELEASE_EVIDENCE_MATRIX.md)
 
+## OS compatibility handoff (gunnchos-device-os)
+- [os_compatibility/README.md](../os_compatibility/README.md)
+- [HARDWARE_TO_OS_TRACEABILITY.md](../os_compatibility/HARDWARE_TO_OS_TRACEABILITY.md)
+- [device_class_exports/](../os_compatibility/device_class_exports/)
+- [firmware_os_interface/](../firmware_os_interface/)
+- [hardware_os_validation/](../hardware_os_validation/)
+- [hlk_readiness/](../hlk_readiness/)
+- [os_compatibility_evidence/](../os_compatibility_evidence/)
+- [hardware_release/HARDWARE_COMPATIBILITY_EVIDENCE_MATRIX.md](../hardware_release/HARDWARE_COMPATIBILITY_EVIDENCE_MATRIX.md)
+
 ## Production-candidate track
 - [versions/production_candidate/README.md](../versions/production_candidate/README.md)
 - [Production backlog](../production_backlog/MECHANICAL_PRINT_DVT_PVT_CERTIFICATION_ISSUES.md)
@@ -60,5 +70,6 @@
 - DVT/PVT execution and reports
 - Certification evidence
 - Production release
+- Real hardware OS boot and HLK-style certification
 
 **Current status:** production release not claimed; certification not claimed; DVT/PVT not complete.

@@ -8,3 +8,5 @@ FCC/CE/UKCA status: Not certified.
 Battery certification status: Not certified.
 RF exposure review status: Not performed.
 Compliance lab review: Not performed.
+HLK-style readiness: Plan documented in hlk_readiness/ — HLK testing not run; WHCP qualification not claimed.
+OS compatibility: Hardware handoff exists; real hardware boot and driver certification not proven.

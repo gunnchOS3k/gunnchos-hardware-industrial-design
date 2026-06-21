@@ -1,0 +1,98 @@
+device_id: ds_xl_coder
+hardware_repo_device_name: DS-XL Coder
+os_repo_profile_name: ds_xl_coder
+display:
+  size_inches: 7.0
+  dual_screen: true
+  touch: true
+input:
+  keyboard: true
+  touch: true
+audio:
+  speakers: true
+camera_mic:
+  mic: true
+network:
+  wifi: wifi_6e
+  offline_capable: true
+storage:
+  class: nvme
+  min_gb: 1024
+memory:
+  ram_gb: 16
+battery:
+  class: workstation_portable
+thermal:
+  class: active_cooling
+ports:
+- usb_c
+dock:
+  supported: true
+sensors: []
+controller:
+  supported: false
+keyboard:
+  built_in: true
+touch:
+  supported: true
+  dual_screen_touch: true
+accessibility:
+  keyboard_navigation: true
+supported_modes:
+- Developer
+- Coder
+- Workshop
+- Laboratory
+- School
+- Offline
+- Admin
+unsupported_modes: []
+supported_journey_presets:
+- workshop
+- laboratory
+- spaceship
+- bicycle
+- offline
+supported_app_packs:
+- cs_student_pack
+- game_dev_pack
+- learn_pack
+- research_pack
+- offline_essentials_pack
+developer_features:
+  wsl_path: true
+  dual_screen_workflow: true
+gaming_media_features:
+  game_dev_preview: true
+creator_features:
+  coding_lessons: true
+research_features:
+  research_notebook_authoring: true
+school_library_features:
+  classroom_coding: true
+guardian_features:
+  deploy_approval: true
+offline_features:
+  offline_coding: true
+boot_expectations: Dual-screen profile discovery; developer workstation binding.
+recovery_expectations: Dual-screen safe mode layout; deploy-source recovery — requirements
+  only.
+firmware_interface_expectations: Dual display enumeration; USB-C host role for deploy
+  target.
+power_management_expectations: Workstation portable battery; developer throttle policy.
+thermal_management_expectations: Active cooling per thermal/ds_xl_coder/os_thermal_policy.yaml.
+known_gaps:
+- dual_screen_os_shell_not_proven_on_hardware
+- real_boot_not_proven
+required_real_hardware_evidence:
+- boot_log
+- dual_display_test
+- deploy_usb_host_test
+- keyboard_touch_matrix
+claim_boundary: Hardware export manifest — profile-based compatibility only; requires
+  real hardware validation.
+source_artifacts:
+- io/ds_xl_coder_ports.md
+- power/ds_xl_coder_power_budget.csv
+- thermal/ds_xl_coder/thermal_test_plan.md
+- mechanical_correctness/device_mechanical_targets.json#ds_xl_coder

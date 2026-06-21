@@ -1,0 +1,105 @@
+device_id: handheld_hybrid
+hardware_repo_device_name: Handheld Hybrid
+os_repo_profile_name: handheld_hybrid
+display:
+  size_inches: 8.4
+  resolution: 1920x1200
+  touch: true
+input:
+  keyboard: dock_optional
+  touch: true
+  controller: true
+audio:
+  speakers: true
+  haptic: true
+camera_mic:
+  mic: true
+network:
+  wifi: wifi_6e
+  offline_capable: true
+storage:
+  class: nvme
+  min_gb: 512
+memory:
+  ram_gb: 12
+battery:
+  class: portable_extended
+thermal:
+  class: active_cooling
+ports:
+- usb_c
+dock:
+  supported: true
+  tv_mode: true
+sensors:
+- imu_placeholder
+controller:
+  supported: true
+keyboard:
+  built_in: false
+touch:
+  supported: true
+accessibility:
+  controller_navigation: true
+supported_modes:
+- School
+- Play
+- Media
+- Studio
+- Arcade
+- Guardian
+- Library
+- Offline
+unsupported_modes:
+- Admin
+supported_journey_presets:
+- scooter
+- bicycle
+- arcade
+- car
+- studio
+- offline
+- library
+supported_app_packs:
+- learn_pack
+- game_pack
+- music_pack
+- offline_essentials_pack
+developer_features:
+  light_coding: true
+gaming_media_features:
+  steam_path: true
+creator_features:
+  light_studio: true
+research_features:
+  limited_measurement: true
+school_library_features:
+  community_kiosk: true
+guardian_features:
+  play_time_window: true
+offline_features:
+  offline_games: true
+boot_expectations: Handheld profile with controller-first input; dock/TV mode hotplug
+  expectations.
+recovery_expectations: Controller-navigable recovery; USB-C firmware recovery path
+  — requirements only.
+firmware_interface_expectations: Gamepad HID enumeration; active cooling fan curve
+  interface placeholder.
+power_management_expectations: Portable extended battery; gaming-balanced throttle.
+thermal_management_expectations: Active cooling per thermal/handheld_hybrid/os_thermal_policy.yaml.
+known_gaps:
+- steam_compatibility_not_certified
+- battery_validation_pending
+- real_boot_not_proven
+required_real_hardware_evidence:
+- boot_log
+- controller_input_test
+- tv_mode_display
+- thermal_fan_curve
+claim_boundary: Hardware export manifest — profile-based compatibility only; requires
+  real hardware validation.
+source_artifacts:
+- io/handheld_hybrid_ports.md
+- power/handheld_hybrid_power_budget.csv
+- thermal/handheld_hybrid/thermal_test_plan.md
+- mechanical_correctness/device_mechanical_targets.json#handheld_hybrid
