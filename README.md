@@ -239,6 +239,7 @@ python scripts/validate_bom.py
 python scripts/validate_power_budget.py
 python scripts/validate_issue_closure_matrix.py
 python scripts/validate_production_track.py
+python scripts/validate_stl_exports.py
 pytest -q
 ```
 

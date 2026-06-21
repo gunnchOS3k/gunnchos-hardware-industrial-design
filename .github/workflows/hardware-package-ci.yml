@@ -24,5 +24,7 @@ jobs:
         run: python3 scripts/validate_issue_closure_matrix.py
       - name: Production track validation
         run: python3 scripts/validate_production_track.py
+      - name: STL export validation
+        run: python3 scripts/validate_stl_exports.py
       - name: Package tests
         run: pytest -q
