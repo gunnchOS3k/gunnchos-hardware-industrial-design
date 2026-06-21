@@ -1,0 +1,116 @@
+device_id: student_14_5
+hardware_repo_device_name: Student 14.5
+os_repo_profile_name: student_14_5
+display:
+  size_inches: 14.5
+  resolution: 1920x1200
+  touch: true
+input:
+  keyboard: true
+  touch: true
+  controller: false
+audio:
+  speakers: true
+camera_mic:
+  webcam: true
+  mic: true
+network:
+  wifi: wifi_6e
+  offline_capable: true
+storage:
+  class: nvme
+  min_gb: 256
+memory:
+  ram_gb: 8
+battery:
+  class: school_day
+thermal:
+  class: passive_fanless
+ports:
+- usb_c
+- usb_a
+dock:
+  supported: true
+sensors: []
+controller:
+  supported: false
+keyboard:
+  built_in: true
+touch:
+  supported: true
+accessibility:
+  screen_reader_labels: true
+supported_modes:
+- School
+- Developer
+- Play
+- Media
+- Studio
+- Workshop
+- Laboratory
+- Guardian
+- Library
+- Offline
+- Admin
+unsupported_modes: []
+supported_journey_presets:
+- scooter
+- bicycle
+- car
+- studio
+- workshop
+- laboratory
+- guardian
+- classroom
+- library
+- offline
+- spaceship
+supported_app_packs:
+- learn_pack
+- write_pack
+- cs_student_pack
+- stem_lab_pack
+- research_pack
+- offline_essentials_pack
+developer_features:
+  wsl_path: true
+gaming_media_features:
+  steam_path: true
+creator_features:
+  writer_studio: true
+research_features:
+  edge_io_companion: true
+school_library_features:
+  classroom_mode: true
+guardian_features:
+  guardian_mode: true
+offline_features:
+  offline_lessons: true
+boot_expectations: UEFI-style profile discovery placeholder; OS binds student_14_5
+  profile on first run.
+recovery_expectations: Recovery partition and safe-mode entry via firmware menu —
+  requirements only.
+firmware_interface_expectations: ACPI battery/thermal/ALS placeholders; USB-C dock
+  enumeration.
+power_management_expectations: School-day battery target; S3/S0ix assumptions documented
+  in power/POWER_BUDGET_MASTER.md.
+thermal_management_expectations: Passive fanless throttle policy per thermal/student_14_5/os_thermal_policy.yaml.
+known_gaps:
+- physical_thermal_validation_pending
+- hlk_not_run
+- real_boot_not_proven
+required_real_hardware_evidence:
+- boot_log
+- display_touch_test
+- dock_enumeration
+- battery_runtime
+- thermal_readings
+claim_boundary: Hardware export manifest — profile-based compatibility only; requires
+  real hardware validation.
+source_artifacts:
+- product/PRD_GUNNCHOS_MODULAR_CONSOLE_ECOSYSTEM.md
+- io/student_14_ports.md
+- power/student_14_power_budget.csv
+- battery/BATTERY_REQUIREMENTS.md
+- thermal/student_14_5/thermal_test_plan.md
+- mechanical_correctness/device_mechanical_targets.json#student_14

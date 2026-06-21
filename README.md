@@ -11,6 +11,13 @@ Conceptual **EVT-0 industrial design** for gunnchOS modular console ecosystem.
 - DS-XL Coder
 - Wearables/Arena Set
 
+## OS compatibility handoff
+
+Reciprocal handoff package for [gunnchos-device-os](https://github.com/gunnchOS3k/gunnchos-device-os) hardware compatibility layer:
+
+- [os_compatibility/README.md](os_compatibility/README.md) — device-class export manifests, traceability, claim boundary
+- Requires real hardware validation before hardware-compatible release can be claimed
+
 ## CAD
 
 OpenSCAD parametric models under `cad/openscad/`. Export with `scripts/render_openscad.sh`.
@@ -270,6 +277,7 @@ It is not yet a final manufacturing release because it does not include complete
 | Manufacturing readiness | [manufacturing/MANUFACTURING_READINESS_CHECKLIST.md](manufacturing/MANUFACTURING_READINESS_CHECKLIST.md) |
 | Issue closure matrix | [docs/ISSUE_CLOSURE_MATRIX.md](docs/ISSUE_CLOSURE_MATRIX.md) |
 | Package index | [docs/HARDWARE_PACKAGE_INDEX.md](docs/HARDWARE_PACKAGE_INDEX.md) |
+| OS compatibility handoff | [os_compatibility/README.md](os_compatibility/README.md) |
 
 **Validation commands:**
 
@@ -285,6 +293,11 @@ python scripts/validate_printability.py
 python scripts/validate_dvt_pvt_readiness.py
 python scripts/validate_certification_readiness.py
 python scripts/validate_production_release_gate.py
+python scripts/validate_external_evidence_layer.py
+python scripts/validate_os_compatibility_handoff.py
+python scripts/validate_firmware_os_interface.py
+python scripts/validate_hardware_os_validation.py
+python scripts/validate_hlk_readiness.py
 pytest -q
 ```
 

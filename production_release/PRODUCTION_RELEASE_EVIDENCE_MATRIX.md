@@ -14,6 +14,13 @@
 | battery safety | EE review + cert path | Planning docs | planned | Battery EE | Yes |
 | thermal validation | Sim or measured data | Assumptions only | not_started | Thermal EE | Yes |
 | firmware/OS integration | Integration test report | OS alpha external | planned | SW/HW | Yes |
+| OS compatibility handoff | os_compatibility/device_class_exports/*.yaml + traceability | Handoff package created; OS PR #27 consumed profiles | documented | SW/HW | Yes |
+| OS profile export manifest | Four device class export YAMLs | Exports in os_compatibility/ | documented | Program | Yes |
+| simulated OS compatibility | OS hardware_compat engine demos | OS-side simulated only | simulated | SW | Yes |
+| hardware-side OS validation plan | hardware_os_validation/ package | Plan exists; real HW not started | documented | QA | Yes |
+| real hardware boot | os_compatibility_evidence/OS_BOOT_LOG_PLACEHOLDER.md | Placeholder only — not proven | needs_real_hardware | QA | Yes |
+| HLK-style readiness | hlk_readiness/ package | Plan only; HLK not run | documented | Compliance | No |
+| real hardware compatibility | Lab signoff + evidence intake | Not started | blocked | QA | Yes |
 | DVT pass | DVT report | Not complete | not_started | QA | Yes |
 | PVT pass | PVT report | Not complete | not_started | CM/QA | Yes |
 | compliance/certification | Lab reports | Not certified | not_started | Compliance | Yes |
