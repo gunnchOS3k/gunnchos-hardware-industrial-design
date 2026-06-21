@@ -1,0 +1,26 @@
+name: EVT-1 hardware package CI
+
+on:
+  push:
+    branches: [main, master, hardware-evt1-*]
+  pull_request:
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+      - run: pip install pytest
+      - name: Required files
+        run: python3 scripts/check_required_files.py
+      - name: BOM validation
+        run: python3 scripts/validate_bom.py
+      - name: Power budget validation
+        run: python3 scripts/validate_power_budget.py
+      - name: Issue closure matrix
+        run: python3 scripts/validate_issue_closure_matrix.py
+      - name: Package tests
+        run: pytest -q

@@ -1,23 +1,25 @@
 #!/usr/bin/env python3
-"""Generate placeholder render README or Blender PNGs if available."""
+"""Generate placeholder SVG renders for EVT-1 vendor package."""
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
-RENDERS = ROOT / "cad" / "renders"
-RENDERS.mkdir(parents=True, exist_ok=True)
+OUT = ROOT / "exports" / "renders"
+OUT.mkdir(parents=True, exist_ok=True)
 
-try:
-    import subprocess
-    subprocess.run(["blender", "--version"], capture_output=True, check=True)
-    has_blender = True
-except Exception:
-    has_blender = False
+SVG = """<svg xmlns="http://www.w3.org/2000/svg" width="400" height="240" viewBox="0 0 400 240">
+  <rect width="400" height="240" fill="#f4f4f5"/>
+  <text x="200" y="110" text-anchor="middle" font-family="sans-serif" font-size="16" fill="#52525b">{label}</text>
+  <text x="200" y="140" text-anchor="middle" font-family="sans-serif" font-size="12" fill="#71717a">EVT-1 PLACEHOLDER RENDER</text>
+  <text x="200" y="165" text-anchor="middle" font-family="sans-serif" font-size="10" fill="#a1a1aa">Not a manufacturing drawing</text>
+</svg>"""
 
-if not has_blender:
-    (RENDERS / "README.md").write_text(
-        "# Placeholder renders\n\nInstall Blender to auto-render STLs. "
-        "Until then, use OpenSCAD preview or import STL into your CAD tool.\n"
-    )
-    print("Blender not found; wrote cad/renders/README.md")
-else:
-    print("Blender found; add batch render script in a future iteration.")
+DEVICES = {
+    "student_14_placeholder.svg": "Student 14.5\"",
+    "handheld_hybrid_placeholder.svg": "Handheld Hybrid",
+    "ds_xl_coder_placeholder.svg": "DS-XL Coder",
+    "wearables_arena_set_placeholder.svg": "Wearables/Arena Set",
+}
+
+for fname, label in DEVICES.items():
+    (OUT / fname).write_text(SVG.format(label=label))
+    print(f"Wrote exports/renders/{fname}")
