@@ -1,0 +1,8 @@
+device,subsystem,mode,min_w_typ,max_w_typ,duty_cycle_estimate,notes
+student_14,usb_c_input,charging,15,45,0.15,USB-C PD placeholder
+student_14,battery,school,3,8,0.35,APU light load
+student_14,main_system_rail,developer,12,25,0.20,compile/build
+student_14,display_rail,media,4,10,0.15,streaming
+student_14,radio_rail,standby,0.5,2,0.10,Wi-Fi idle
+student_14,display_rail,play,8,18,0.10,Steam gaming
+student_14,charger,docked,20,60,0.05,dock charge

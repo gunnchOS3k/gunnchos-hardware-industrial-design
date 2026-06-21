@@ -1,0 +1,6 @@
+device,subsystem,mode,min_w_typ,max_w_typ,duty_cycle_estimate,notes
+wearables_arena,battery,school,0.3,1.5,0.50,beacon idle
+wearables_arena,radio_rail,research,0.5,2,0.30,BLE mesh
+wearables_arena,main_system_rail,play,1,4,0.15,arena game
+wearables_arena,always-on_rail,standby,0.05,0.3,0.40,sensor wake
+wearables_arena,usb_c_input,charging,2,5,0.05,case charge

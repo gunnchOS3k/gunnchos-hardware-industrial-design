@@ -241,3 +241,33 @@ This project is moving from concept/EVT-0 toward **EVT-1**. It is **not** manufa
 **Safe claim after this pass:**
 
 > gunnchOS3k has an EVT-1-ready product requirements package, OS alpha architecture, schematic/PCB documentation skeleton, and manufacturing-readiness roadmap for a modular student console ecosystem.
+
+---
+
+## 13. Repairability and accessibility
+
+See [docs/REPAIRABILITY_AND_RIGHT_TO_REPAIR.md](../docs/REPAIRABILITY_AND_RIGHT_TO_REPAIR.md) and [mechanical/REPAIRABILITY_REQUIREMENTS.md](../mechanical/REPAIRABILITY_REQUIREMENTS.md).
+
+---
+
+## 14. Compliance and safety (summary)
+
+Planning docs under `compliance/` — **no certification claimed**. See §9 and [compliance/REGULATORY_MATRIX.md](../compliance/REGULATORY_MATRIX.md).
+
+---
+
+## 15. EVT-1 acceptance criteria
+
+See [EVT1_ACCEPTANCE_CRITERIA.md](EVT1_ACCEPTANCE_CRITERIA.md).
+
+---
+
+## 16. DVT/PVT/manufacturing gates
+
+See [manufacturing/EVT_DVT_PVT_PLAN.md](../manufacturing/EVT_DVT_PVT_PLAN.md). Current target: **EVT-1 prototype RFQ package** only.
+
+---
+
+## 17. Claim boundary
+
+See [CLAIM_BOUNDARY.md](CLAIM_BOUNDARY.md).

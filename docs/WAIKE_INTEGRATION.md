@@ -2,39 +2,39 @@
 
 Part of **WAIKE** (Wireless + Artificial Intelligence Kinesthetic Education) and **gunnchAI3k** Discord tutor.
 
-## What WAIKE teaches from this repo
+## How each device supports WAIKE
 
-- Read the repo README and ROADMAP as instructor source material.
-- Map labs to WAIKE levels 4–5 (specialist / apprentice).
+| Device | WAIKE use |
+|--------|-----------|
+| Student 14.5" | Full-stack labs, Steam/gaming demos, university coursework |
+| Handheld Hybrid | Portable game jam deploy target, docked classroom demos |
+| DS-XL Coder | Primary coding/game jam device; offline lessons |
+| Wearables/Arena Set | Field measurement, BLE arena games, Edge-IO pairing |
 
-## What students can build
+## Student tasks by device
 
-- Beginner: explain the repo purpose in plain English; run tests locally.
-- Intermediate: extend docs, fix a good-first issue, demo to class.
-- Advanced: research contribution, capstone, publication artifact.
+See [STUDENT_TASKS.md](STUDENT_TASKS.md) and [DEVICE_LEARNING_PATHWAYS.md](DEVICE_LEARNING_PATHWAYS.md).
 
-## What apprentices can contribute
+## Tutor cards for gunnchAI3k
 
-Issues labeled `good-first-research-task` and WAIKE portfolio templates.
+See [TUTOR_CARDS.md](TUTOR_CARDS.md).
 
-## What instructors can demonstrate
+## Field measurement tasks
 
-Professor demo scripts (where present) + gunnchAI3k `/mentor` mode.
+Edge-IO + Wearables arena kits for RF/sensor labs (planning — no field data claimed).
 
-## What gunnchAI3k can tutor
+## Coding / game jam tasks
 
-Topics indexed in `waike-research-ops/knowledge_maps/waike_skill_tree.yaml` with repo link `gunnchos-hardware-industrial-design`.
+DS-XL Coder and Handheld Hybrid deploy path from local build to play test.
 
-## Portfolio artifacts
+## Hardware teardown / repair learning
 
-- Lab report (no secrets)
-- Demo video or Streamlit/notebook screenshot
-- Story card from `waike-research-ops/templates/project_story_card.md`
+Service panel placeholders in OpenSCAD; repair docs under `mechanical/` and `docs/REPAIRABILITY_AND_RIGHT_TO_REPAIR.md`.
 
-## Task ladder
+## Safety rules for minors
 
-| Level | Task |
-|-------|------|
-| Beginner | Clone, read README, summarize in Discord `/portfolio` |
-| Intermediate | Pass CI tests locally; open docs PR |
-| Advanced | Capstone feature or research notebook |
+No DIY battery assembly. Supervised tool use only. See [compliance/YOUTH_PRIVACY_AND_SAFETY.md](../compliance/YOUTH_PRIVACY_AND_SAFETY.md).
+
+## Accessibility and low-cost access
+
+See [ACCESSIBILITY_AND_LOW_COST.md](../ACCESSIBILITY_AND_LOW_COST.md) and educator script [EDUCATOR_DEMO_SCRIPT.md](EDUCATOR_DEMO_SCRIPT.md).

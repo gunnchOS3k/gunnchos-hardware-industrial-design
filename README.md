@@ -185,6 +185,42 @@ See [docs/WIRELESS_ENGINEERING_ALIGNMENT.md](docs/WIRELESS_ENGINEERING_ALIGNMENT
 
 ---
 
+## Prototype vendor handoff
+
+This repo now contains an EVT-1 prototype RFQ package for engineering/vendor review. It is suitable for discussing scope with hardware engineers, PCB/PCBA vendors, enclosure prototyping vendors, compliance consultants, and contract manufacturers.
+
+It is not yet a final manufacturing release because it does not include completed routed PCB layout, verified Gerbers, compliance test reports, battery certification, or physical prototype test results.
+
+| Package | Link |
+|---------|------|
+| PRD | [product/PRD_GUNNCHOS_MODULAR_CONSOLE_ECOSYSTEM.md](product/PRD_GUNNCHOS_MODULAR_CONSOLE_ECOSYSTEM.md) |
+| Product system overview | [docs/PRODUCT_SYSTEM_OVERVIEW.md](docs/PRODUCT_SYSTEM_OVERVIEW.md) |
+| Architecture | [architecture/SYSTEM_BLOCK_DIAGRAM.md](architecture/SYSTEM_BLOCK_DIAGRAM.md) |
+| CAD | [cad/README.md](cad/README.md) |
+| Schematics | [schematics/README.md](schematics/README.md) |
+| BOM | [bom/MASTER_BOM.md](bom/MASTER_BOM.md) |
+| I/O | [io/PORT_IO_MASTER_MATRIX.md](io/PORT_IO_MASTER_MATRIX.md) |
+| Power | [power/POWER_BUDGET_MASTER.md](power/POWER_BUDGET_MASTER.md) |
+| Battery | [battery/BATTERY_REQUIREMENTS.md](battery/BATTERY_REQUIREMENTS.md) |
+| Thermal | [thermal/THERMAL_REQUIREMENTS.md](thermal/THERMAL_REQUIREMENTS.md) |
+| Compliance | [compliance/REGULATORY_MATRIX.md](compliance/REGULATORY_MATRIX.md) |
+| Prototype RFQ | [prototype_rfq/README.md](prototype_rfq/README.md) |
+| Manufacturing readiness | [manufacturing/MANUFACTURING_READINESS_CHECKLIST.md](manufacturing/MANUFACTURING_READINESS_CHECKLIST.md) |
+| Issue closure matrix | [docs/ISSUE_CLOSURE_MATRIX.md](docs/ISSUE_CLOSURE_MATRIX.md) |
+| Package index | [docs/HARDWARE_PACKAGE_INDEX.md](docs/HARDWARE_PACKAGE_INDEX.md) |
+
+**Validation commands:**
+
+```bash
+python scripts/check_required_files.py
+python scripts/validate_bom.py
+python scripts/validate_power_budget.py
+python scripts/validate_issue_closure_matrix.py
+pytest -q
+```
+
+---
+
 ## EVT-1 hardware package (this pass)
 
 **Status:** manufacturing-track architecture package — **not** final manufacturing release.

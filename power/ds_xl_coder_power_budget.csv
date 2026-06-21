@@ -1,0 +1,6 @@
+device,subsystem,mode,min_w_typ,max_w_typ,duty_cycle_estimate,notes
+ds_xl_coder,battery,developer,5,10,0.35,dual-screen dev
+ds_xl_coder,display_rail,school,4,8,0.30,lesson mode
+ds_xl_coder,main_system_rail,research,6,12,0.15,local build
+ds_xl_coder,audio_rail,media,0.5,2,0.10,speakers
+ds_xl_coder,standby,standby,0.2,1,0.10,sleep
