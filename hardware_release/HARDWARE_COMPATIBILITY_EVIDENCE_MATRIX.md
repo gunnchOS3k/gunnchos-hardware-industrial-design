@@ -7,7 +7,7 @@
 | Simulated OS compatibility | OS compatibility engine demos | OS-side simulated | simulated | Yes |
 | Hardware-side validation plan | hardware_os_validation/ | Created this pass | documented | Yes |
 | Real hardware boot | Boot logs in os_compatibility_evidence/ | Placeholder only | needs_real_hardware | Yes |
-| Firmware/OS interface | firmware_os_interface/ | Requirements only | documented | Yes |
+| Firmware/OS interface | firmware/ harness + firmware_os_interface/ | Harness implemented in CI | documented | Yes |
 | HLK-style readiness | hlk_readiness/ | Plan only | documented | No |
 | Real hardware compatibility | Lab signoff | Not started | blocked | Yes |
 

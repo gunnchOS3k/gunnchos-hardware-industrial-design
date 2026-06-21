@@ -18,6 +18,13 @@ Reciprocal handoff package for [gunnchos-device-os](https://github.com/gunnchOS3
 - [os_compatibility/README.md](os_compatibility/README.md) — device-class export manifests, traceability, claim boundary
 - Requires real hardware validation before hardware-compatible release can be claimed
 
+## Firmware compatibility harness
+
+Real implementation artifacts (emulation/host validation):
+
+- [firmware/README.md](firmware/README.md) — manifests, ACPI/DeviceTree descriptors, interface contracts, QEMU dry-run, capsule simulation
+- Physical-board validation remains pending
+
 ## CAD
 
 OpenSCAD parametric models under `cad/openscad/`. Export with `scripts/render_openscad.sh`.
@@ -298,6 +305,11 @@ python scripts/validate_os_compatibility_handoff.py
 python scripts/validate_firmware_os_interface.py
 python scripts/validate_hardware_os_validation.py
 python scripts/validate_hlk_readiness.py
+python scripts/validate_firmware_manifests.py
+python scripts/validate_firmware_descriptors.py
+python scripts/validate_capsule_update_simulation.py
+python scripts/validate_firmware_implementation.py
+python scripts/run_firmware_compat_smoke.py
 pytest -q
 ```
 

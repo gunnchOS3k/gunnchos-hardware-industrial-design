@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Validate firmware OS interface package — requirements only, no false implementation claims."""
+"""Validate firmware OS interface package links to implementation artifacts."""
 import re
 import sys
 from pathlib import Path
@@ -27,13 +27,14 @@ REQUIRED = [
 FORBIDDEN = [
     r"\bUEFI/ACPI implementation complete\b",
     r"\bsecure boot complete\b",
-    r"\bfirmware implementation exists\b",
+    r"\bphysical-board boot complete\b",
     r"\bTPM implementation complete\b",
     r"\bmeasured boot complete\b",
     r"\breal hardware profile discovery proven\b",
+    r"\bHLK passed\b",
 ]
 
-REQUIRED_STATUS = "requirements defined only"
+IMPL_MARKERS = ["firmware/manifests/", "firmware/interfaces/", "implemented in emulation"]
 
 
 def main() -> int:
@@ -43,11 +44,16 @@ def main() -> int:
         return 1
 
     status = (ROOT / "firmware_os_interface/FIRMWARE_OS_INTERFACE_STATUS.md").read_text()
-    if REQUIRED_STATUS not in status:
-        print("FAIL FIRMWARE_OS_INTERFACE_STATUS must state requirements defined only")
+    if "implemented in emulation" not in status.lower():
+        print("FAIL status must state implemented in emulation/host harness")
         return 1
-    if "Not yet proven" not in status:
-        print("FAIL FIRMWARE_OS_INTERFACE_STATUS must list not-yet-proven items")
+    if "Physical-board validation remains pending" not in status:
+        print("FAIL status must state physical-board validation pending")
+        return 1
+
+    dock = (ROOT / "firmware_os_interface/DOCKING_AND_EXTERNAL_DISPLAY_REQUIREMENTS.md").read_text()
+    if "Implementation artifacts" not in dock:
+        print("FAIL docking doc must list implementation artifacts")
         return 1
 
     for pat in FORBIDDEN:

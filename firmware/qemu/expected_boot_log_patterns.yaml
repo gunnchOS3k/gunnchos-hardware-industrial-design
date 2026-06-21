@@ -1,0 +1,5 @@
+patterns:
+- GunnchOS
+- device_profile
+- UEFI
+- Boot0001

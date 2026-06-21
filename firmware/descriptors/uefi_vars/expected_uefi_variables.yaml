@@ -1,0 +1,6 @@
+variables:
+- BootOrder
+- FirmwareVersion
+- DeviceProfile
+- RecoveryRequested
+- CapsulePending

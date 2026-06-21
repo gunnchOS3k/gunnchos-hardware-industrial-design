@@ -13,7 +13,7 @@ jobs:
       - uses: actions/setup-python@v5
         with:
           python-version: "3.11"
-      - run: pip install pytest
+      - run: pip install pytest pyyaml
       - name: Required files
         run: python3 scripts/check_required_files.py
       - name: BOM validation
@@ -46,5 +46,15 @@ jobs:
         run: python3 scripts/validate_hardware_os_validation.py
       - name: HLK readiness validation
         run: python3 scripts/validate_hlk_readiness.py
+      - name: Firmware manifest validation
+        run: python3 scripts/validate_firmware_manifests.py
+      - name: Firmware descriptor validation
+        run: python3 scripts/validate_firmware_descriptors.py
+      - name: Capsule update simulation validation
+        run: python3 scripts/validate_capsule_update_simulation.py
+      - name: Firmware implementation validation
+        run: python3 scripts/validate_firmware_implementation.py
+      - name: Firmware compatibility smoke
+        run: python3 scripts/run_firmware_compat_smoke.py
       - name: Package tests
         run: pytest -q
