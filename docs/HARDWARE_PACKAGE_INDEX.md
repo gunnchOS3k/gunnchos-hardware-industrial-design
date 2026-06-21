@@ -3,59 +3,62 @@
 ## Start here
 - [README](../README.md)
 - [PRD](../product/PRD_GUNNCHOS_MODULAR_CONSOLE_ECOSYSTEM.md)
-- [Product System Overview](PRODUCT_SYSTEM_OVERVIEW.md)
 - [Claim Boundary](../product/CLAIM_BOUNDARY.md)
 
-## Prototype-ready package (EVT-1)
+## EVT-1 prototype package
 - [versions/prototype_evt1/README.md](../versions/prototype_evt1/README.md)
 - [Prototype RFQ](../prototype_rfq/README.md)
-- [Prototype file manifest](../versions/prototype_evt1/PROTOTYPE_FILE_MANIFEST.md)
+
+## Mechanical correctness and printability
+- [mechanical_correctness/README.md](../mechanical_correctness/README.md)
+- [printability/README.md](../printability/README.md)
+- [MECHANICAL_CORRECTNESS_VALIDATION.md](../results/MECHANICAL_CORRECTNESS_VALIDATION.md)
+- [PRINTABILITY_VALIDATION.md](../results/PRINTABILITY_VALIDATION.md)
+
+## DVT/PVT readiness
+- [dvt/README.md](../dvt/README.md)
+- [pvt/README.md](../pvt/README.md)
+
+## Certification readiness
+- [certification/README.md](../certification/README.md)
+- [vendor_labs/COMPLIANCE_LAB_RFQ.md](../vendor_labs/COMPLIANCE_LAB_RFQ.md)
+
+## Production release gate
+- [production_release/README.md](../production_release/README.md)
+- [PRODUCTION_RELEASE_EVIDENCE_MATRIX.md](../production_release/PRODUCTION_RELEASE_EVIDENCE_MATRIX.md)
 
 ## Production-candidate track
 - [versions/production_candidate/README.md](../versions/production_candidate/README.md)
-- [Production gap analysis](../versions/production_candidate/PRODUCTION_GAP_ANALYSIS.md)
-- [Production backlog](../production_backlog/PRODUCTION_ISSUES_TO_CREATE.md)
-- **Status:** production release not claimed
+- [Production backlog](../production_backlog/MECHANICAL_PRINT_DVT_PVT_CERTIFICATION_ISSUES.md)
 
 ## For hardware engineer
 - [Architecture](../architecture/SYSTEM_BLOCK_DIAGRAM.md)
 - [Schematics](../schematics/README.md)
-- [Power](../power/POWER_BUDGET_MASTER.md)
-- [Thermal](../thermal/THERMAL_REQUIREMENTS.md)
-- [I/O](../io/PORT_IO_MASTER_MATRIX.md)
+- [Mechanical correctness](../mechanical_correctness/README.md)
 
 ## For PCB/PCBA vendor
 - [PCB plan](../pcb/README.md)
-- [Gerber status](../pcb/GERBER_OUTPUT_STATUS.md)
-- [BOM](../bom/MASTER_BOM.md)
-- [Schematic skeletons](../schematics/README.md)
+- [vendor_labs/PCB_PCBA_VENDOR_RFQ.md](../vendor_labs/PCB_PCBA_VENDOR_RFQ.md)
 
-## For enclosure prototype vendor
+## For enclosure / print vendor
 - [CAD](../cad/README.md)
 - [STL exports](../exports/stl/)
-- [OpenSCAD export status](../exports/OPENSCAD_EXPORT_STATUS.md)
-- [Mechanical requirements](../mechanical/MECHANICAL_REQUIREMENTS.md)
+- [vendor_labs/PRINT_VENDOR_RFQ.md](../vendor_labs/PRINT_VENDOR_RFQ.md)
 
 ## For compliance consultant
-- [Regulatory matrix](../compliance/REGULATORY_MATRIX.md)
-- [Production compliance plan](../compliance/PRODUCTION_COMPLIANCE_PLAN.md)
-- [FCC Part 15 plan](../compliance/FCC_PART_15_PLAN.md)
-
-## For investor/advisor
-- [Investor diligence](../diligence/INVESTOR_TECHNICAL_DILIGENCE_CHECKLIST.md)
-- [Manufacturing readiness](../manufacturing/MANUFACTURING_READINESS_CHECKLIST.md)
-- [Issue closure matrix](ISSUE_CLOSURE_MATRIX.md)
+- [certification/CERTIFICATION_READINESS_MATRIX.md](../certification/CERTIFICATION_READINESS_MATRIX.md)
 
 ## What is ready now
 - EVT-1 prototype-ready package
-- Real STL exports (OpenSCAD 2026.06.12)
-- Vendor RFQ package
-- Production-candidate requirements and gap track
+- Mechanical/printability/DVT/PVT/certification **readiness gate definitions**
+- STL exports with structure validation
+- Vendor/lab RFQ templates
 
 ## What is not ready yet
-- Final PCB layout and verified Gerbers
-- Drill files and pick-and-place outputs
-- Compliance certification evidence
-- Battery certification evidence
-- DVT/PVT test reports
+- Mechanical fit physically proven
+- Print-ready enclosures (first-article print pending)
+- DVT/PVT execution and reports
+- Certification evidence
 - Production release
+
+**Current status:** production release not claimed; certification not claimed; DVT/PVT not complete.

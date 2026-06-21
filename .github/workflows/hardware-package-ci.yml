@@ -26,5 +26,15 @@ jobs:
         run: python3 scripts/validate_production_track.py
       - name: STL export validation
         run: python3 scripts/validate_stl_exports.py
+      - name: Mechanical correctness validation
+        run: python3 scripts/validate_mechanical_correctness.py
+      - name: Printability validation
+        run: python3 scripts/validate_printability.py
+      - name: DVT/PVT readiness validation
+        run: python3 scripts/validate_dvt_pvt_readiness.py
+      - name: Certification readiness validation
+        run: python3 scripts/validate_certification_readiness.py
+      - name: Production release gate validation
+        run: python3 scripts/validate_production_release_gate.py
       - name: Package tests
         run: pytest -q
