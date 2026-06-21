@@ -1,0 +1,9 @@
+{
+  "type": "object",
+  "required": [
+    "capsule_id",
+    "target_version",
+    "device_id",
+    "simulated_only"
+  ]
+}

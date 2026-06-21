@@ -1,5 +1,7 @@
-# README
+# Firmware / OS Interface
 
-Firmware/OS interface requirements package — requirements only.
+Firmware/OS interface requirements linked to the `firmware/` implementation harness.
 
-Requirements defined only — no firmware implementation claimed.
+Implemented in emulation/host harness. Physical-board validation remains pending.
+
+See [FIRMWARE_OS_INTERFACE_STATUS.md](FIRMWARE_OS_INTERFACE_STATUS.md) and [../firmware/README.md](../firmware/README.md).

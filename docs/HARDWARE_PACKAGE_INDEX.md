@@ -32,6 +32,7 @@
 - [HARDWARE_TO_OS_TRACEABILITY.md](../os_compatibility/HARDWARE_TO_OS_TRACEABILITY.md)
 - [device_class_exports/](../os_compatibility/device_class_exports/)
 - [firmware_os_interface/](../firmware_os_interface/)
+- [firmware/](../firmware/) — manifests, descriptors, harness
 - [hardware_os_validation/](../hardware_os_validation/)
 - [hlk_readiness/](../hlk_readiness/)
 - [os_compatibility_evidence/](../os_compatibility_evidence/)

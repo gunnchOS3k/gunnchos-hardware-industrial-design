@@ -1,0 +1,12 @@
+[
+  {
+    "version": "0.1.0-harness",
+    "status": "installed",
+    "simulated": true
+  },
+  {
+    "version": "0.1.1-harness",
+    "status": "pending_reboot",
+    "simulated": true
+  }
+]
