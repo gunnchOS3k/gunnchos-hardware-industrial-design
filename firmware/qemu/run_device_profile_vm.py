@@ -5,34 +5,31 @@ from __future__ import annotations
 import argparse
 import json
 import shutil
-import subprocess
 import sys
 from pathlib import Path
 
-try:
-    import yaml
-except ImportError:
-    yaml = None  # type: ignore
-
 ROOT = Path(__file__).resolve().parent
-PROFILES = ROOT / "qemu_device_profiles.yaml"
-
-
-def load_profiles() -> dict:
-    if yaml is None:
-        return {"profiles": {}}
-    return yaml.safe_load(PROFILES.read_text()) or {}
+sys.path.insert(0, str(ROOT.parent))
+from _device_util import load_qemu_profiles, normalize_device_id  # noqa: E402
 
 
 def dry_run(device: str) -> dict:
-    profiles = load_profiles().get("profiles", {})
-    if device not in profiles:
+    canon = normalize_device_id(device)
+    if not canon:
+        return {"status": "fail", "error": f"unknown device {device}"}
+    profiles = load_qemu_profiles(
+        ROOT / "qemu_device_profiles.yaml",
+        ROOT / "qemu_device_profiles.json",
+    )
+    profile = profiles.get(canon)
+    if not profile:
         return {"status": "fail", "error": f"unknown device {device}"}
     qemu = shutil.which("qemu-system-x86_64")
     return {
         "status": "pass",
-        "device": device,
-        "profile": profiles[device],
+        "device": canon,
+        "requested_device": device,
+        "profile": profile,
         "qemu_available": qemu is not None,
         "mode": "dry_run" if not qemu else "qemu_invoked",
         "message": "OVMF-style harness validated (dry run)" if not qemu else "QEMU present — profile validated",

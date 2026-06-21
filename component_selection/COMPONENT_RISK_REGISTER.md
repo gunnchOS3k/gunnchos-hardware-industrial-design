@@ -1,0 +1,3 @@
+# COMPONENT RISK REGISTER
+
+See RECOMMENDED_COMPONENT_STACKS.md and simulations/results/.

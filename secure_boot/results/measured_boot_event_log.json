@@ -1,0 +1,7 @@
+[
+  {
+    "pcr": 0,
+    "event": "simulated_firmware_handoff",
+    "simulated": true
+  }
+]

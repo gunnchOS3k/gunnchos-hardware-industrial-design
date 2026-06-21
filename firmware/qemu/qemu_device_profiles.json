@@ -1,0 +1,8 @@
+{
+  "profiles": {
+    "student_14_5": {"machine": "q35", "firmware": "OVMF", "device_profile": "student_14_5"},
+    "handheld_hybrid": {"machine": "q35", "firmware": "OVMF", "device_profile": "handheld_hybrid"},
+    "ds_xl_coder": {"machine": "q35", "firmware": "OVMF", "device_profile": "ds_xl_coder"},
+    "wearables_arena_set": {"machine": "q35", "firmware": "OVMF", "device_profile": "wearables_arena_set"}
+  }
+}

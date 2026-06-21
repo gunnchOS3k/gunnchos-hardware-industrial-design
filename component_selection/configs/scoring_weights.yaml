@@ -1,0 +1,11 @@
+performance_headroom: 0.15
+battery_life: 0.12
+thermal_risk: 0.12
+storage_pressure: 0.08
+ram_pressure: 0.1
+dock_display: 0.1
+repairability: 0.08
+bom_complexity: 0.05
+os_compatibility: 0.1
+firmware_complexity: 0.05
+user_fit: 0.05

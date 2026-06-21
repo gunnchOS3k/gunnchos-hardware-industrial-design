@@ -13,7 +13,7 @@ jobs:
       - uses: actions/setup-python@v5
         with:
           python-version: "3.11"
-      - run: pip install pytest pyyaml
+      - run: pip install -r requirements.txt || pip install pytest pyyaml
       - name: Required files
         run: python3 scripts/check_required_files.py
       - name: BOM validation
@@ -56,5 +56,13 @@ jobs:
         run: python3 scripts/validate_firmware_implementation.py
       - name: Firmware compatibility smoke
         run: python3 scripts/run_firmware_compat_smoke.py
+      - name: Component selection validation
+        run: python3 scripts/validate_component_selection.py
+      - name: Secure boot simulation validation
+        run: python3 scripts/validate_secure_boot_simulation.py
+      - name: Stale language validation
+        run: python3 scripts/validate_no_stale_not_implemented_language.py
+      - name: Full hardware simulation
+        run: python3 scripts/run_full_hardware_simulation.py
       - name: Package tests
         run: pytest -q

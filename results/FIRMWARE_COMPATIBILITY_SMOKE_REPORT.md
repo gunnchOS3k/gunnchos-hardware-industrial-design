@@ -1,6 +1,6 @@
 # Firmware Compatibility Smoke Report
 
-Generated: 2026-06-21T22:00:57.224358+00:00
+Generated: 2026-06-21T22:29:53.903577+00:00
 
 Overall: PASS
 
@@ -24,7 +24,7 @@ Overall: PASS
   },
   "qemu_dry_run": {
     "exit_code": 0,
-    "output": "{\n  \"status\": \"pass\",\n  \"device\": \"student_14_5\",\n  \"profile\": {\n    \"machine\": \"q35\",\n    \"firmware\": \"OVMF\",\n    \"device_profile\": \"student_14_5\"\n  },\n  \"qemu_available\": false,\n  \"mode\": \"dry_run\",\n  \"message\": \"OVMF-style harness validated (dry run)\"\n}"
+    "output": "{\n  \"status\": \"pass\",\n  \"device\": \"student_14_5\",\n  \"requested_device\": \"student_14_5\",\n  \"profile\": {\n    \"machine\": \"q35\",\n    \"firmware\": \"OVMF\",\n    \"device_profile\": \"student_14_5\"\n  },\n  \"qemu_available\": false,\n  \"mode\": \"dry_run\",\n  \"message\": \"OVMF-style harness validated (dry run)\"\n}"
   },
   "capsule_sim": {
     "exit_code": 0,

@@ -43,8 +43,11 @@ def main() -> int:
     if "hardware-side validation plan exists" not in status:
         print("FAIL HARDWARE_OS_VALIDATION_STATUS must state plan exists")
         return 1
-    if "Not started" not in status:
-        print("FAIL real hardware validation must be Not started")
+    if "implementation_backlog/REAL_HARDWARE_VALIDATION_ISSUES.md" not in status:
+        print("FAIL status must link to REAL_HARDWARE_VALIDATION_ISSUES evidence gate")
+        return 1
+    if re.search(r"\breal hardware validation (passed|complete)\b", status, re.I):
+        print("FAIL must not claim real hardware validation passed")
         return 1
 
     evidence_dir = ROOT / "os_compatibility_evidence"

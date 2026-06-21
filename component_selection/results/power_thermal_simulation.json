@@ -1,0 +1,10 @@
+{
+  "student_14_5": {
+    "watts_peak": 25,
+    "thermal_risk": "medium"
+  },
+  "handheld_hybrid": {
+    "watts_peak": 30,
+    "thermal_risk": "high"
+  }
+}
