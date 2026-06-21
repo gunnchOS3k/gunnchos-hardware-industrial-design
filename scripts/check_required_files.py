@@ -124,6 +124,7 @@ REQUIRED = [
     "scripts/validate_power_budget.py",
     "scripts/validate_issue_closure_matrix.py",
     "scripts/validate_production_track.py",
+    "scripts/validate_stl_exports.py",
     "scripts/generate_hardware_package_index.py",
     ".github/workflows/hardware-package-ci.yml",
     "versions/README.md",
