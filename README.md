@@ -185,6 +185,28 @@ See [docs/WIRELESS_ENGINEERING_ALIGNMENT.md](docs/WIRELESS_ENGINEERING_ALIGNMENT
 
 ---
 
+## Prototype-ready package
+
+Use this path if you are a prototype vendor, engineer, enclosure vendor, or advisor reviewing the EVT-1 package.
+
+Start here:
+- [versions/prototype_evt1/README.md](versions/prototype_evt1/README.md)
+- [prototype_rfq/FILES_TO_SEND_CHECKLIST.md](prototype_rfq/FILES_TO_SEND_CHECKLIST.md)
+- [docs/HARDWARE_PACKAGE_INDEX.md](docs/HARDWARE_PACKAGE_INDEX.md)
+
+## Production-candidate track
+
+Use this path if you are helping move gunnchOS hardware toward production readiness.
+
+Start here:
+- [versions/production_candidate/README.md](versions/production_candidate/README.md)
+- [manufacturing/PRODUCTION_RELEASE_PLAN.md](manufacturing/PRODUCTION_RELEASE_PLAN.md)
+- [production_backlog/PRODUCTION_ISSUES_TO_CREATE.md](production_backlog/PRODUCTION_ISSUES_TO_CREATE.md)
+
+**Current status:** production release not claimed.
+
+---
+
 ## Prototype vendor handoff
 
 This repo now contains an EVT-1 prototype RFQ package for engineering/vendor review. It is suitable for discussing scope with hardware engineers, PCB/PCBA vendors, enclosure prototyping vendors, compliance consultants, and contract manufacturers.
@@ -216,6 +238,7 @@ python scripts/check_required_files.py
 python scripts/validate_bom.py
 python scripts/validate_power_budget.py
 python scripts/validate_issue_closure_matrix.py
+python scripts/validate_production_track.py
 pytest -q
 ```
 

@@ -123,8 +123,22 @@ REQUIRED = [
     "scripts/validate_bom.py",
     "scripts/validate_power_budget.py",
     "scripts/validate_issue_closure_matrix.py",
+    "scripts/validate_production_track.py",
     "scripts/generate_hardware_package_index.py",
     ".github/workflows/hardware-package-ci.yml",
+    "versions/README.md",
+    "versions/prototype_evt1/README.md",
+    "versions/prototype_evt1/PROTOTYPE_READY_PACKAGE.md",
+    "versions/prototype_evt1/PROTOTYPE_FILE_MANIFEST.md",
+    "versions/production_candidate/README.md",
+    "versions/production_candidate/PRODUCTION_READINESS_REQUIREMENTS.md",
+    "versions/production_candidate/PRODUCTION_RELEASE_CHECKLIST.md",
+    "versions/production_candidate/PRODUCTION_GAP_ANALYSIS.md",
+    "production_backlog/PRODUCTION_ISSUES_TO_CREATE.md",
+    "manufacturing/PRODUCTION_RELEASE_PLAN.md",
+    "manufacturing/PRODUCTION_GATE_REVIEW.md",
+    "pcb/GERBER_OUTPUT_STATUS.md",
+    "compliance/PRODUCTION_COMPLIANCE_PLAN.md",
 ]
 
 # At least one of STL exports or export status must exist
