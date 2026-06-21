@@ -185,6 +185,46 @@ See [docs/WIRELESS_ENGINEERING_ALIGNMENT.md](docs/WIRELESS_ENGINEERING_ALIGNMENT
 
 ---
 
+## EVT-1 prototype package
+
+Start here:
+- [versions/prototype_evt1/README.md](versions/prototype_evt1/README.md)
+- [prototype_rfq/FILES_TO_SEND_CHECKLIST.md](prototype_rfq/FILES_TO_SEND_CHECKLIST.md)
+
+## Mechanical correctness and printability
+
+Start here:
+- [mechanical_correctness/README.md](mechanical_correctness/README.md)
+- [printability/README.md](printability/README.md)
+- [results/MECHANICAL_CORRECTNESS_VALIDATION.md](results/MECHANICAL_CORRECTNESS_VALIDATION.md)
+- [results/PRINTABILITY_VALIDATION.md](results/PRINTABILITY_VALIDATION.md)
+
+## DVT/PVT readiness
+
+Start here:
+- [dvt/README.md](dvt/README.md)
+- [pvt/README.md](pvt/README.md)
+
+## Certification readiness
+
+Start here:
+- [certification/README.md](certification/README.md)
+- [vendor_labs/COMPLIANCE_LAB_RFQ.md](vendor_labs/COMPLIANCE_LAB_RFQ.md)
+
+## Production release gate
+
+Start here:
+- [production_release/README.md](production_release/README.md)
+- [production_release/PRODUCTION_RELEASE_EVIDENCE_MATRIX.md](production_release/PRODUCTION_RELEASE_EVIDENCE_MATRIX.md)
+
+**Current status:**
+- prototype package exists
+- production release not claimed
+- certification not claimed
+- DVT/PVT not complete
+
+---
+
 ## Prototype-ready package
 
 Use this path if you are a prototype vendor, engineer, enclosure vendor, or advisor reviewing the EVT-1 package.
@@ -240,6 +280,11 @@ python scripts/validate_power_budget.py
 python scripts/validate_issue_closure_matrix.py
 python scripts/validate_production_track.py
 python scripts/validate_stl_exports.py
+python scripts/validate_mechanical_correctness.py
+python scripts/validate_printability.py
+python scripts/validate_dvt_pvt_readiness.py
+python scripts/validate_certification_readiness.py
+python scripts/validate_production_release_gate.py
 pytest -q
 ```
 

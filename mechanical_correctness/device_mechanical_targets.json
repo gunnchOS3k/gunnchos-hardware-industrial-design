@@ -1,0 +1,30 @@
+{
+  "student_14": {
+    "device_label": "Student 14.5\"",
+    "stl_file": "exports/stl/student_14_placeholder.stl",
+    "expected_class": "14.5 inch laptop-adjacent device",
+    "bbox_mm_min": [250, 150, 5],
+    "bbox_mm_max": [420, 400, 220]
+  },
+  "handheld_hybrid": {
+    "device_label": "Handheld Hybrid",
+    "stl_file": "exports/stl/handheld_hybrid_placeholder.stl",
+    "expected_class": "portable handheld console",
+    "bbox_mm_min": [120, 60, 10],
+    "bbox_mm_max": [280, 160, 50]
+  },
+  "ds_xl_coder": {
+    "device_label": "DS-XL Coder",
+    "stl_file": "exports/stl/ds_xl_coder_placeholder.stl",
+    "expected_class": "dual-screen handheld coder",
+    "bbox_mm_min": [100, 80, 10],
+    "bbox_mm_max": [220, 180, 70]
+  },
+  "wearables_arena_set": {
+    "device_label": "Wearables/Arena Set",
+    "stl_file": "exports/stl/wearables_arena_set_placeholder.stl",
+    "expected_class": "wearables arena kit placeholder assembly",
+    "bbox_mm_min": [40, 40, 5],
+    "bbox_mm_max": [120, 120, 40]
+  }
+}
