@@ -1,0 +1,3 @@
+# COMPONENT CANDIDATE MATRIX
+
+See RECOMMENDED_COMPONENT_STACKS.md and simulations/results/.

@@ -1,0 +1,21 @@
+personas:
+- pre_k_learner
+- high_school_student
+- college_cs_stem
+- artist
+- writer
+- musician
+- gamer
+- game_developer
+- hardware_maker
+- researcher
+- library_shared_user
+- accessibility_first
+modes:
+- School
+- Developer
+- Play
+- Media
+- Studio
+- Laboratory
+- Offline

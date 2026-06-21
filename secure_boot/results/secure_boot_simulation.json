@@ -1,0 +1,10 @@
+{
+  "status": "simulated_pass",
+  "pk_present": true,
+  "kek_present": true,
+  "db_allowlist": true,
+  "dbx_blocklist_placeholder": true,
+  "signature_valid": true,
+  "rollback_prevented": true,
+  "simulated_only": true
+}

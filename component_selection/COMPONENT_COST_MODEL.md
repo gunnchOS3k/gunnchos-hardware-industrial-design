@@ -1,0 +1,3 @@
+# COMPONENT COST MODEL
+
+See RECOMMENDED_COMPONENT_STACKS.md and simulations/results/.

@@ -2,24 +2,28 @@
 """Verify capsule manifest schema and simulated_only flag."""
 from __future__ import annotations
 
+import json
 import sys
 from pathlib import Path
 
-try:
-    import yaml
-except ImportError:
-    print("FAIL pyyaml required")
-    sys.exit(1)
-
 ROOT = Path(__file__).resolve().parent
-MANIFEST = ROOT / "sample_capsule_manifest.yaml"
+MANIFEST_YAML = ROOT / "sample_capsule_manifest.yaml"
+MANIFEST_JSON = ROOT / "sample_capsule_manifest.json"
+sys.path.insert(0, str(ROOT.parent))
+from _device_util import load_structured  # noqa: E402
+
+
+def load_manifest() -> dict:
+    if MANIFEST_JSON.exists():
+        return json.loads(MANIFEST_JSON.read_text())
+    return load_structured(MANIFEST_YAML)
 
 
 def main() -> int:
-    if not MANIFEST.exists():
-        print("FAIL sample_capsule_manifest.yaml missing")
+    if not MANIFEST_YAML.exists() and not MANIFEST_JSON.exists():
+        print("FAIL sample capsule manifest missing")
         return 1
-    data = yaml.safe_load(MANIFEST.read_text()) or {}
+    data = load_manifest()
     for key in ("capsule_id", "target_version", "device_id", "simulated_only"):
         if key not in data:
             print(f"FAIL missing {key}")

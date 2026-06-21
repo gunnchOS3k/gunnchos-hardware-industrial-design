@@ -1,0 +1,3 @@
+# MEASURED BOOT EVENT LOG MODEL
+
+See scripts/simulate_secure_boot_chain.py

@@ -1,0 +1,1 @@
+Implemented as a secure-boot simulation harness with test keys and measured-boot event log model. Production secure boot requires OEM firmware integration, real key ceremony, TPM hardware, and physical validation.
