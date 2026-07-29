@@ -1,6 +1,6 @@
 .PHONY: test validate validate-bom validate-cad validate-schematics \
 	generate-device-reports generate-campus-kits generate-contracts \
-	generate-manufacturing-package generate-hbom diagrams e2e smoke
+	generate-manufacturing-package generate-hbom diagrams e2e smoke gate6-dry-run
 
 test:
 	pytest -q
@@ -54,3 +54,7 @@ e2e-tooling:
 
 e2e-sionna e2e-deepmimo e2e-aerial e2e-oran:
 	@echo "Optional target $@ — requires external install; not run in default CI"
+
+# Gate 6 harness only — synthetic/emulated; DESIGN_ONLY / HARDWARE_PROTOTYPE_PENDING
+gate6-dry-run:
+	python3 scripts/gate6_dry_run.py
