@@ -1,0 +1,31 @@
+{
+  "gate": "6",
+  "repository": "gunnchos-hardware-industrial-design",
+  "mode": "dry_run",
+  "started": "2026-07-29T19:06:14Z",
+  "files": {
+    "ok": true,
+    "missing": [],
+    "required": [
+      "prototype_evidence.schema.json",
+      "BOARD_BRINGUP_CHECKLIST.md",
+      "power_thermal_battery_log.schema.json",
+      "MECHANICAL_FIT_RECORD_TEMPLATE.json",
+      "DEFECT_REGISTRY_TEMPLATE.json",
+      "fixtures/synthetic_prototype_dry_run.json",
+      "fixtures/synthetic_power_thermal_dry_run.json"
+    ]
+  },
+  "fixtures": {
+    "ok": true,
+    "errors": []
+  },
+  "statuses": {
+    "GATE6_HARNESS": "GATE6_HARNESS_PASS",
+    "HARDWARE_PROTOTYPE": "HARDWARE_PROTOTYPE_PENDING",
+    "CLAIM_BOUNDARY": "DESIGN_ONLY",
+    "PHYSICAL_EVIDENCE": "PHYSICAL_EVIDENCE_PENDING"
+  },
+  "claim": "GATE6_HARNESS_PASS only \u2014 DESIGN_ONLY / HARDWARE_PROTOTYPE_PENDING for physical claims",
+  "finished": "2026-07-29T19:06:14Z"
+}
