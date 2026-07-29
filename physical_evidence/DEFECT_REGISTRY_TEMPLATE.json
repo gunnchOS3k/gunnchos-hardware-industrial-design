@@ -1,0 +1,18 @@
+{
+  "template_id": "defect-registry-v1",
+  "registry_id": "REPLACE",
+  "prototype_id": "REPLACE",
+  "claim_boundary": "DESIGN_ONLY",
+  "defects": [],
+  "defect_entry_schema": {
+    "defect_id": "DEF-###",
+    "severity": "info|minor|major|blocker",
+    "area": "electrical|mechanical|thermal|firmware|other",
+    "description": "REPLACE",
+    "observed_at": "REPLACE_ISO8601",
+    "resolution": "open|mitigated|closed",
+    "evidence_label": "BLOCKED_HARDWARE|SYNTHETIC_EXPERIMENT|DOCUMENTED_IMPLEMENTATION"
+  },
+  "status": "PENDING",
+  "notes": "Do not invent defects or resolutions. Empty defects[] is correct for dry-run / DESIGN_ONLY."
+}

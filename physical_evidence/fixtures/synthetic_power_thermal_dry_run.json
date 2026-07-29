@@ -1,0 +1,22 @@
+{
+  "log_id": "hw-dryrun-ptb-001",
+  "prototype_id": "emulated-prototype-001",
+  "board_revision": "DESIGN_ONLY",
+  "mode": "DRY_RUN",
+  "claim_boundary": "HARDWARE_PROTOTYPE_PENDING",
+  "started_at": "2026-07-29T00:00:00Z",
+  "ended_at": "2026-07-29T00:00:00Z",
+  "samples": [
+    {
+      "t_offset_s": 0,
+      "vin_v": null,
+      "iin_a": null,
+      "temp_c": null,
+      "battery_soc_pct": null,
+      "rail": "emulated",
+      "notes": "SYNTHETIC / EMULATED — no physical power measurement"
+    }
+  ],
+  "status": "DRY_RUN_SYNTHETIC",
+  "notes": "Emulated dry-run sample only. Not a physical power/thermal/battery log."
+}

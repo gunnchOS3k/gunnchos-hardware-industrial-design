@@ -1,0 +1,61 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://gunnchos.org/schemas/prototype_evidence.schema.json",
+  "title": "HardwarePrototypeEvidenceRecord",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "evidence_id",
+    "evidence_label",
+    "domain",
+    "captured_at",
+    "operator",
+    "repository",
+    "commit",
+    "status",
+    "claim_boundary",
+    "artifacts"
+  ],
+  "properties": {
+    "evidence_id": { "type": "string", "minLength": 1 },
+    "evidence_label": {
+      "type": "string",
+      "enum": [
+        "SYNTHETIC_EXPERIMENT",
+        "DOCUMENTED_IMPLEMENTATION",
+        "BLOCKED_HARDWARE",
+        "CONTROLLED_DEVICE_MEASUREMENT",
+        "VERIFIED_PHYSICAL"
+      ]
+    },
+    "domain": {
+      "type": "string",
+      "enum": ["hardware_prototype", "power_thermal", "mechanical_fit", "board_bringup"]
+    },
+    "captured_at": { "type": "string" },
+    "operator": { "type": "string" },
+    "repository": { "type": "string" },
+    "commit": { "type": "string", "minLength": 7 },
+    "prototype_id": { "type": ["string", "null"] },
+    "board_revision": { "type": ["string", "null"] },
+    "claim_boundary": {
+      "type": "string",
+      "enum": ["DESIGN_ONLY", "HARDWARE_PROTOTYPE_PENDING", "PHYSICAL_MEASURED"]
+    },
+    "status": {
+      "type": "string",
+      "enum": [
+        "DRY_RUN_SYNTHETIC",
+        "PENDING",
+        "BLOCKED_HARDWARE",
+        "VALID",
+        "QUARANTINED"
+      ]
+    },
+    "artifacts": {
+      "type": "array",
+      "items": { "type": "string" }
+    },
+    "notes": { "type": "string" }
+  }
+}

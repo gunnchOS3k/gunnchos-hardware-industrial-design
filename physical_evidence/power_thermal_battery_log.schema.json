@@ -1,0 +1,52 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://gunnchos.org/schemas/power_thermal_battery_log.schema.json",
+  "title": "PowerThermalBatteryLog",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "log_id",
+    "prototype_id",
+    "mode",
+    "claim_boundary",
+    "samples",
+    "status"
+  ],
+  "properties": {
+    "log_id": { "type": "string" },
+    "prototype_id": { "type": "string" },
+    "board_revision": { "type": ["string", "null"] },
+    "mode": {
+      "type": "string",
+      "enum": ["DRY_RUN", "EMULATED", "PHYSICAL"]
+    },
+    "claim_boundary": {
+      "type": "string",
+      "enum": ["DESIGN_ONLY", "HARDWARE_PROTOTYPE_PENDING", "PHYSICAL_MEASURED"]
+    },
+    "started_at": { "type": ["string", "null"] },
+    "ended_at": { "type": ["string", "null"] },
+    "samples": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["t_offset_s"],
+        "properties": {
+          "t_offset_s": { "type": "number" },
+          "vin_v": { "type": ["number", "null"] },
+          "iin_a": { "type": ["number", "null"] },
+          "temp_c": { "type": ["number", "null"] },
+          "battery_soc_pct": { "type": ["number", "null"] },
+          "rail": { "type": ["string", "null"] },
+          "notes": { "type": "string" }
+        }
+      }
+    },
+    "status": {
+      "type": "string",
+      "enum": ["DRY_RUN_SYNTHETIC", "PENDING", "BLOCKED_HARDWARE", "VALID"]
+    },
+    "notes": { "type": "string" }
+  }
+}

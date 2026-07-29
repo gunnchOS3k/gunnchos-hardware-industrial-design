@@ -1,0 +1,17 @@
+{
+  "evidence_id": "hw-dryrun-prototype-001",
+  "evidence_label": "SYNTHETIC_EXPERIMENT",
+  "domain": "hardware_prototype",
+  "captured_at": "2026-07-29T00:00:00Z",
+  "operator": "cursor-gate6-dry-run",
+  "repository": "gunnchos-hardware-industrial-design",
+  "commit": "dryrun00",
+  "prototype_id": "emulated-prototype-001",
+  "board_revision": "DESIGN_ONLY",
+  "claim_boundary": "DESIGN_ONLY",
+  "status": "DRY_RUN_SYNTHETIC",
+  "artifacts": [
+    "physical_evidence/fixtures/synthetic_prototype_dry_run.json"
+  ],
+  "notes": "Emulated dry-run only. HARDWARE_PROTOTYPE_PENDING for all physical claims."
+}
