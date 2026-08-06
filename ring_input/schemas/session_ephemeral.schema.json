@@ -1,0 +1,35 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://gunnchos.local/schemas/session_ephemeral.schema.json",
+  "title": "EphemeralRingSession",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "session_id",
+    "device_id",
+    "user_id",
+    "host_id",
+    "session_key_version",
+    "opened_ts_ms",
+    "expires_ts_ms",
+    "permission_scope",
+    "next_seq"
+  ],
+  "properties": {
+    "session_id": { "type": "string" },
+    "device_id": { "type": "string" },
+    "user_id": { "type": "string" },
+    "host_id": { "type": "string" },
+    "session_key_version": { "type": "integer", "minimum": 1 },
+    "opened_ts_ms": { "type": "integer" },
+    "expires_ts_ms": { "type": "integer" },
+    "permission_scope": {
+      "type": "array",
+      "items": { "type": "string" }
+    },
+    "next_seq": { "type": "integer", "minimum": 0 },
+    "surface_id": { "type": "string" },
+    "calibration_id": { "type": "string" },
+    "offline": { "type": "boolean", "default": true }
+  }
+}

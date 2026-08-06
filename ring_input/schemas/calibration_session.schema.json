@@ -1,0 +1,38 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://gunnchos.local/schemas/calibration_session.schema.json",
+  "title": "RingCalibrationSession",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "calibration_id",
+    "surface_id",
+    "device_id",
+    "user_id",
+    "created_ts_ms",
+    "expires_ts_ms",
+    "active"
+  ],
+  "properties": {
+    "calibration_id": { "type": "string" },
+    "surface_id": { "type": "string" },
+    "device_id": { "type": "string" },
+    "user_id": { "type": "string" },
+    "created_ts_ms": { "type": "integer" },
+    "expires_ts_ms": { "type": "integer" },
+    "active": { "type": "boolean" },
+    "transform": {
+      "type": "object",
+      "properties": {
+        "scale_x": { "type": "number" },
+        "scale_y": { "type": "number" },
+        "offset_x": { "type": "number" },
+        "offset_y": { "type": "number" }
+      }
+    },
+    "notes": {
+      "type": "string",
+      "description": "Software calibration only unless physical evidence attached separately"
+    }
+  }
+}

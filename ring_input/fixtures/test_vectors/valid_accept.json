@@ -1,0 +1,7 @@
+{
+  "description": "Positive vector metadata — actual MAC computed at test runtime",
+  "evidence_class": "SOFTWARE_SIMULATED",
+  "physical_ring_claimed": false,
+  "case": "valid_accept",
+  "expected": "accept"
+}

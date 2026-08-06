@@ -1,0 +1,5 @@
+{"evidence_class":"SOFTWARE_SIMULATED","physical_ring_claimed":false,"ts_ms":1700000000000,"ax":0.0,"ay":0.0,"az":0.98,"gesture_hint":"pointer_move","confidence_hint":0.93}
+{"evidence_class":"SOFTWARE_SIMULATED","physical_ring_claimed":false,"ts_ms":1700000000016,"ax":0.01,"ay":0.02,"az":0.98,"gesture_hint":"click","confidence_hint":0.91}
+{"evidence_class":"SOFTWARE_SIMULATED","physical_ring_claimed":false,"ts_ms":1700000000032,"ax":0.02,"ay":0.04,"az":0.97,"gesture_hint":"pointer_move","confidence_hint":0.88}
+{"evidence_class":"SOFTWARE_SIMULATED","physical_ring_claimed":false,"ts_ms":1700000000048,"ax":0.03,"ay":0.01,"az":0.99,"gesture_hint":"scroll","confidence_hint":0.35}
+{"evidence_class":"SOFTWARE_SIMULATED","physical_ring_claimed":false,"ts_ms":1700000000064,"ax":0.0,"ay":0.0,"az":1.0,"gesture_hint":"destructive_confirm","confidence_hint":0.42}

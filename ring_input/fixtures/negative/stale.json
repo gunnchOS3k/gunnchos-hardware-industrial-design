@@ -1,0 +1,6 @@
+{
+  "case": "stale",
+  "expected_reject": "stale",
+  "evidence_class": "SOFTWARE_SIMULATED",
+  "physical_ring_claimed": false
+}

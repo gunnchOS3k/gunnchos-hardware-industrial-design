@@ -1,0 +1,6 @@
+{
+  "case": "wrong_target",
+  "expected_reject": "wrong_target",
+  "evidence_class": "SOFTWARE_SIMULATED",
+  "physical_ring_claimed": false
+}

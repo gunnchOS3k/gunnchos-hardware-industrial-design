@@ -1,0 +1,6 @@
+{
+  "case": "calibration_mismatch",
+  "expected_reject": "calibration_mismatch",
+  "evidence_class": "SOFTWARE_SIMULATED",
+  "physical_ring_claimed": false
+}
