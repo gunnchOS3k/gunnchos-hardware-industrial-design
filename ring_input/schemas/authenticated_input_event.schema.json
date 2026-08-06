@@ -1,0 +1,67 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://gunnchos.local/schemas/authenticated_input_event.schema.json",
+  "title": "AuthenticatedRingInputEvent",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "protocol_version",
+    "device_id",
+    "user_id",
+    "source_device_id",
+    "target_device_id",
+    "session_id",
+    "session_key_version",
+    "seq",
+    "nonce",
+    "ts_ms",
+    "event_type",
+    "permission_scope",
+    "confidence",
+    "surface_id",
+    "calibration_id",
+    "payload",
+    "mac"
+  ],
+  "properties": {
+    "protocol_version": { "type": "string", "const": "1.0" },
+    "device_id": { "type": "string", "minLength": 1 },
+    "user_id": { "type": "string", "minLength": 1 },
+    "source_device_id": { "type": "string", "minLength": 1 },
+    "target_device_id": { "type": "string", "minLength": 1 },
+    "session_id": { "type": "string", "minLength": 1 },
+    "session_key_version": { "type": "integer", "minimum": 1 },
+    "seq": { "type": "integer", "minimum": 0 },
+    "nonce": { "type": "string", "minLength": 8 },
+    "ts_ms": { "type": "integer", "minimum": 0 },
+    "event_type": {
+      "type": "string",
+      "enum": [
+        "pointer_move",
+        "click",
+        "key_press",
+        "key_release",
+        "scroll",
+        "text_select",
+        "destructive_confirm",
+        "calibration_ping",
+        "heartbeat"
+      ]
+    },
+    "permission_scope": {
+      "type": "array",
+      "items": { "type": "string" },
+      "minItems": 1
+    },
+    "confidence": { "type": "number", "minimum": 0, "maximum": 1 },
+    "surface_id": { "type": "string", "minLength": 1 },
+    "calibration_id": { "type": "string", "minLength": 1 },
+    "payload": { "type": "object" },
+    "mac": { "type": "string", "pattern": "^[0-9a-f]{64}$" },
+    "evidence_class": {
+      "type": "string",
+      "enum": ["SOFTWARE_SIMULATED", "PHYSICAL_HARDWARE"],
+      "default": "SOFTWARE_SIMULATED"
+    }
+  }
+}

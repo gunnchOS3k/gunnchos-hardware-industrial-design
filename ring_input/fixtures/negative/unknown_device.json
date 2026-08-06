@@ -1,0 +1,6 @@
+{
+  "case": "unknown_device",
+  "expected_reject": "unknown_device",
+  "evidence_class": "SOFTWARE_SIMULATED",
+  "physical_ring_claimed": false
+}

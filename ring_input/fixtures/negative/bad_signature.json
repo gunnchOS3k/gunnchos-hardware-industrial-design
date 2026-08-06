@@ -1,0 +1,7 @@
+{
+  "description": "Negative fixture: forged MAC",
+  "evidence_class": "SOFTWARE_SIMULATED",
+  "physical_ring_claimed": false,
+  "case": "bad_signature",
+  "expected_reject": "bad_signature"
+}

@@ -1,0 +1,45 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://gunnchos.local/schemas/pairing_ceremony.schema.json",
+  "title": "RingPairingCeremony",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "pairing_id",
+    "device_id",
+    "user_id",
+    "host_id",
+    "state",
+    "challenge_nonce",
+    "created_ts_ms",
+    "offline_capable"
+  ],
+  "properties": {
+    "pairing_id": { "type": "string" },
+    "device_id": { "type": "string" },
+    "user_id": { "type": "string" },
+    "host_id": { "type": "string" },
+    "state": {
+      "type": "string",
+      "enum": [
+        "DISCOVER",
+        "CHALLENGE",
+        "VERIFY",
+        "CONFIRM",
+        "PAIRED",
+        "FAILED",
+        "REVOKED"
+      ]
+    },
+    "challenge_nonce": { "type": "string" },
+    "challenge_response": { "type": ["string", "null"] },
+    "created_ts_ms": { "type": "integer" },
+    "paired_ts_ms": { "type": ["integer", "null"] },
+    "offline_capable": { "type": "boolean" },
+    "permission_scope": {
+      "type": "array",
+      "items": { "type": "string" }
+    },
+    "device_secret_fingerprint": { "type": "string" }
+  }
+}

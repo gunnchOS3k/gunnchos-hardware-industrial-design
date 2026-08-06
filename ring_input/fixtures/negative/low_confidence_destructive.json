@@ -1,0 +1,6 @@
+{
+  "case": "low_confidence_destructive",
+  "expected_reject": "low_confidence_destructive",
+  "evidence_class": "SOFTWARE_SIMULATED",
+  "physical_ring_claimed": false
+}

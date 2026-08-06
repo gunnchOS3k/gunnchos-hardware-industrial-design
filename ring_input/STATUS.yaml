@@ -1,0 +1,14 @@
+workstream: gate_1_workstream_b
+title: Authenticated ring input vertical slice
+statuses:
+  AUTHENTICATED_INPUT_PROTOCOL_PASS: true
+  RING_PHYSICAL_PROTOTYPE_PENDING: true
+physical_ring_claimed: false
+evidence_class: SOFTWARE_SIMULATED
+hosts:
+  protocol_schemas_and_reference: gunnchos-hardware-industrial-design/ring_input
+  measurement_harness: edge-io-measurement-node/src/edge_io_node/ring_input_harness
+  os_input_adapter: gunnchos-device-os/ring_input
+notes:
+  - Protocol properties implemented in software reference; physical ring remains pending.
+  - Audit logging excludes persistent raw motion by default.
