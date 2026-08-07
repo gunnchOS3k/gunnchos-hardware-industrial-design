@@ -1,0 +1,11 @@
+{
+  "meta": {
+    "filename": "edge_io_ring.kicad_pro"
+  },
+  "sheets": [
+    {
+      "name": "Root",
+      "file": "edge_io_ring.kicad_sch"
+    }
+  ]
+}

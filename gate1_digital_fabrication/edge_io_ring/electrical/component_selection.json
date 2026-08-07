@@ -1,0 +1,402 @@
+{
+  "board": "edge_io_ring_evt0",
+  "version": "0.1.0-dev",
+  "generated_at_utc": "2026-08-07T22:20:56Z",
+  "claim_boundary": "DIGITAL_SELECTION_ONLY \u2014 parts not purchased; PHYSICAL_EXECUTION_FREEZE ACTIVE",
+  "status_tokens": [
+    "RING_DIGITAL_FABRICATION_PACKAGE_COMPLETE",
+    "RING_PHYSICAL_PROTOTYPE_PENDING"
+  ],
+  "components": [
+    {
+      "ref": "U1",
+      "role": "MCU_SoC_BLE",
+      "manufacturer": "Nordic Semiconductor",
+      "mpn": "nRF52840-CKAA-R",
+      "package": "WLCSP-aQFN-73 (3.544\u00d73.607 mm)",
+      "voltage_v": "1.7\u20133.6 (VDD); IO 1.8/3.3",
+      "current_ma": "active TX +0 dBm ~4.8; System ON idle ~1.5; System OFF ~0.4 \u00b5A",
+      "interfaces": "BLE 5.3/2.4 GHz radio, SWD, SPI/TWI/UART, GPIO, USB (unused on ring), QSPI",
+      "availability_risk": "LOW \u2014 broadly stocked; WLCSP assembly requires fine-pitch SMT capability",
+      "why_selected": "Integrated BLE + Cortex-M4F + crypto accelerator minimizes ring BOM volume vs discrete radio; matches authenticated ring protocol crypto needs",
+      "approved_alternative": "nRF52840-QIAA-R (AQFN-73) if WLCSP assembly yield risk",
+      "datasheet_url": "https://docs.nordicsemi.com/bundle/ps_nrf52840/page/keyfeatures_html5.html"
+    },
+    {
+      "ref": "U2",
+      "role": "IMU_6AXIS",
+      "manufacturer": "Bosch Sensortec",
+      "mpn": "BMI270",
+      "package": "LGA-14 (2.5\u00d73.0\u00d70.8 mm)",
+      "voltage_v": "1.71\u20133.6 VDD; VDDIO 1.2\u20133.6",
+      "current_ma": "typ 685 \u00b5A @ 100 Hz accel+gyro; suspend ~3 \u00b5A",
+      "interfaces": "I2C (primary ADDR 0x68) / SPI",
+      "availability_risk": "LOW \u2014 high-volume wearable IMU",
+      "why_selected": "Wrist/finger gesture class IMU with FIFO and significant motion interrupt for low-power wake",
+      "approved_alternative": "ST LSM6DSOX (LGA-14) if BMI270 allocation risk",
+      "datasheet_url": "https://www.bosch-sensortec.com/products/motion-sensors/imus/bmi270/"
+    },
+    {
+      "ref": "U3",
+      "role": "HAPTIC_DRIVER",
+      "manufacturer": "Texas Instruments",
+      "mpn": "DRV2605LDGSR",
+      "package": "VSSOP-10",
+      "voltage_v": "2.0\u20135.2 V",
+      "current_ma": "idle ~0.5; LRA drive peaks depend on actuator (budget <80 mA avg)",
+      "interfaces": "I2C (ADDR 0x5A), PWM/ENA, rated for LRA/ERM",
+      "availability_risk": "LOW",
+      "why_selected": "Library waveforms + auto-resonance LRA drive for ring haptic feedback path",
+      "approved_alternative": "DRV2604L (RAM waveforms) if custom haptic library required",
+      "datasheet_url": "https://www.ti.com/lit/ds/symlink/drv2605l.pdf"
+    },
+    {
+      "ref": "U4",
+      "role": "PMIC_CHARGER",
+      "manufacturer": "Texas Instruments",
+      "mpn": "BQ25100YFPR",
+      "package": "DSBGA-6 (0.9\u00d71.6 mm)",
+      "voltage_v": "VIN 3.5\u20136.45; VBAT charge 4.2",
+      "current_ma": "charge current programmable to 250 mA max (set 25\u201340 mA for 80 mAh cell)",
+      "interfaces": "USB 5 V input via pogo/pads; status via CHG pin",
+      "availability_risk": "MEDIUM \u2014 DSBGA fine pitch; alternate QFN charger preferred for hand-assembly EVT",
+      "why_selected": "Ultra-small Li-Ion linear charger sized for <100 mAh wearable cells",
+      "approved_alternative": "MCP73831T-2ACI/OT (SOT-23-5) for easier prototype assembly",
+      "datasheet_url": "https://www.ti.com/lit/ds/symlink/bq25100.pdf"
+    },
+    {
+      "ref": "U5",
+      "role": "BATTERY_PROTECTION",
+      "manufacturer": "Ricoh Electronic Devices",
+      "mpn": "R5540K001A-TR-F",
+      "package": "DFN(PLP)1616-6",
+      "voltage_v": "overcharge detect ~4.28 V; overdischarge ~2.8 V class (confirm exact suffix)",
+      "current_ma": "protection FET path rated for small-cell discharge currents",
+      "interfaces": "series with LiPo +/\u2212 before charger/load",
+      "availability_risk": "MEDIUM \u2014 confirm distributor stock for exact suffix; cell pack may include PCM",
+      "why_selected": "Dedicated 1-cell protection required before any body-worn powered prototype",
+      "approved_alternative": "Use pouch cell with integrated PCM (DW01A+FS8205A module) \u2014 preferred for EVT0 if discrete PCM layout risk",
+      "datasheet_url": "https://www.nisshinbo-microdevices.co.jp/en/products/category/power/battery-protection-ic/"
+    },
+    {
+      "ref": "U6",
+      "role": "LDO_3V3",
+      "manufacturer": "Texas Instruments",
+      "mpn": "TLV70033DSET",
+      "package": "WSON-6 (1.5\u00d71.5 mm)",
+      "voltage_v": "out 3.3 V \u00b12%; Vin 2\u20135.5",
+      "current_ma": "200 mA max; Iq ~30 \u00b5A",
+      "interfaces": "VBAT_SYS \u2192 3V3 rail for SoC/IMU/haptic (SoC can also run direct from VBAT; LDO for IO consistency)",
+      "availability_risk": "LOW",
+      "why_selected": "Low Iq LDO for always-on 3V3 rail under body-worn thermal/efficiency constraints",
+      "approved_alternative": "TPS7A2033PDBVR (SOT-23-5) for easier hand rework",
+      "datasheet_url": "https://www.ti.com/lit/ds/symlink/tlv700.pdf"
+    },
+    {
+      "ref": "BT1",
+      "role": "BATTERY",
+      "manufacturer": "GMB / PowerStream-class pouch (EVT candidate)",
+      "mpn": "GMB501215 (80 mAh LiPo pouch) \u2014 supplier quote required",
+      "package": "Curved/flat pouch ~5.0\u00d712\u00d715 mm class",
+      "voltage_v": "3.7 V nom; 4.2 V charge; 3.0 V cutoff",
+      "current_ma": "80 mAh capacity; continuous discharge \u22641C recommended",
+      "interfaces": "2-wire to PCM/charger; polarity keyed in mechanical cavity",
+      "availability_risk": "HIGH \u2014 custom curve/pouch geometry needs supplier quote; UN38.3 paperwork pending purchase",
+      "why_selected": "Capacity class matches 50\u2013100 mAh ring energy budget from research targets",
+      "approved_alternative": "PKCELL LP402025 70\u2013100 mAh flat pouch for bench mule (not curved)",
+      "datasheet_url": "https://www.powerstream.com/li-polymer-battery.htm",
+      "blocker_class": "REQUIRES_SUPPLIER_QUOTE"
+    },
+    {
+      "ref": "ANT1",
+      "role": "BLE_ANTENNA",
+      "manufacturer": "Johanson Technology",
+      "mpn": "2450AT18A100",
+      "package": "chip antenna 3.2\u00d71.6 mm",
+      "voltage_v": "RF passive",
+      "current_ma": "n/a",
+      "interfaces": "50 \u03a9 feed from nRF52840 ANT pin via pi-match (C_ANT/L_ANT/C_SHUNT)",
+      "availability_risk": "LOW",
+      "why_selected": "Proven 2.45 GHz chip antenna with documented keep-outs suitable for ring arc PCB",
+      "approved_alternative": "PCB inverted-F trace antenna (no MPN) if enclosure RF study favors it",
+      "datasheet_url": "https://www.johansontechnology.com/datasheets/2450AT18A100/2450AT18A100.pdf"
+    },
+    {
+      "ref": "D1",
+      "role": "ESD_USB_POGO",
+      "manufacturer": "Nexperia",
+      "mpn": "PESD5V0S1UL,315",
+      "package": "SOD882 (DFN1006-2)",
+      "voltage_v": "VRWM 5 V",
+      "current_ma": "n/a (clamping)",
+      "interfaces": "across CHARGE_5V to GND at pogo input",
+      "availability_risk": "LOW",
+      "why_selected": "Low-cap ESD for charge contact protection",
+      "approved_alternative": "TPD1E05U06DPYR",
+      "datasheet_url": "https://assets.nexperia.com/documents/data-sheet/PESD5V0S1UL.pdf"
+    },
+    {
+      "ref": "D2",
+      "role": "ESD_SWD",
+      "manufacturer": "Nexperia",
+      "mpn": "PESD3V3S1UL,315",
+      "package": "SOD882",
+      "voltage_v": "VRWM 3.3 V",
+      "current_ma": "n/a",
+      "interfaces": "SWDIO line to GND",
+      "availability_risk": "LOW",
+      "why_selected": "Protect debug pads used during factory/dev flash",
+      "approved_alternative": "TPD1E10B06DPYR",
+      "datasheet_url": "https://assets.nexperia.com/documents/data-sheet/PESD3V3S1UL.pdf"
+    },
+    {
+      "ref": "J1",
+      "role": "DEBUG_SWD",
+      "manufacturer": "Tag-Connect",
+      "mpn": "TC2030-CTX-NL footprint (cable TC2030-CTX)",
+      "package": "PCB pads only (no connector BOM for NL)",
+      "voltage_v": "3.3 V SWD",
+      "current_ma": "debug only",
+      "interfaces": "SWDIO, SWDCLK, nRESET, VTref, GND",
+      "availability_risk": "LOW for pads; cable is tooling",
+      "why_selected": "Zero-height debug for sealed ring; no receptacle volume",
+      "approved_alternative": "0.05\" 5-pin header pogo fixture for EVT mule",
+      "datasheet_url": "https://www.tag-connect.com/product/tc2030-ctx-nl-6-pin-no-legs-cable-with-10-pin-micro-connector-for-use-with-cortex-processors"
+    },
+    {
+      "ref": "J2",
+      "role": "CHARGE_POGO",
+      "manufacturer": "Mill-Max / custom fixture",
+      "mpn": "Mill-Max 0900-0-15-20-75-14-11-0 (pogo pin) \u00d72 on cradle",
+      "package": "Cradle-side pogo; ring has gold pads",
+      "voltage_v": "5 V charge in / GND",
+      "current_ma": "\u226440 mA charge set",
+      "interfaces": "CHARGE_5V, GND pads on ring outer arc",
+      "availability_risk": "MEDIUM \u2014 cradle mechanical alignment is EVT risk",
+      "why_selected": "No USB-C receptacle volume on ring; pogo cradle charging",
+      "approved_alternative": "Horizontal USB-C on bench mule board only",
+      "datasheet_url": "https://www.mill-max.com/engineering_spec_pdfs/0900.pdf",
+      "blocker_class": "REQUIRES_PHYSICAL_FABRICATION"
+    },
+    {
+      "ref": "Y1",
+      "role": "HFCLK_XTAL",
+      "manufacturer": "Abracon",
+      "mpn": "ABM8-32.000MHZ-B2-T",
+      "package": "3.2\u00d72.5 mm SMD crystal",
+      "voltage_v": "n/a",
+      "current_ma": "n/a",
+      "interfaces": "XL1/XL2 of nRF52840",
+      "availability_risk": "LOW",
+      "why_selected": "32 MHz HFCLK for BLE PHY timing",
+      "approved_alternative": "FA-128 32.0000MF10Z-K3",
+      "datasheet_url": "https://abracon.com/Resonators/ABM8.pdf"
+    },
+    {
+      "ref": "Y2",
+      "role": "LFCLK_XTAL",
+      "manufacturer": "Abracon",
+      "mpn": "ABS07-32.768KHZ-9-T",
+      "package": "3.2\u00d71.5 mm cylinder SMD",
+      "voltage_v": "n/a",
+      "current_ma": "n/a",
+      "interfaces": "XL1/XL2 LF of nRF52840",
+      "availability_risk": "LOW",
+      "why_selected": "32.768 kHz for RTC / low-power BLE sleep accuracy",
+      "approved_alternative": "FC-135R 32.7680KA-A3",
+      "datasheet_url": "https://abracon.com/Resonators/ABS07.pdf"
+    },
+    {
+      "ref": "M1",
+      "role": "LRA_ACTUATOR",
+      "manufacturer": "Jinlong Machinery",
+      "mpn": "C10-100 / equivalent 8\u201310 mm LRA (EVT quote)",
+      "package": "coin LRA \u226410 mm diameter, \u22642.5 mm height",
+      "voltage_v": "driven by DRV2605L (~1.8\u20132.0 Vrms class)",
+      "current_ma": "peaks budgeted in haptic driver; avg << charge budget",
+      "interfaces": "2-wire to DRV2605L OUT+/OUT\u2212",
+      "availability_risk": "MEDIUM \u2014 exact thin LRA for ring cavity needs supplier dimensional confirm",
+      "why_selected": "Thin coin LRA fits ring cavity haptic pocket",
+      "approved_alternative": "Vybronics VLV101040A",
+      "datasheet_url": "https://www.vybronics.com/wp-content/uploads/2021/03/VLV101040A-datasheet.pdf",
+      "blocker_class": "REQUIRES_SUPPLIER_QUOTE"
+    }
+  ],
+  "passives": [
+    {
+      "ref": "C1",
+      "mpn": "GRM155R61A105KE15D",
+      "mfr": "Murata",
+      "value": "1uF 10V 0402",
+      "role": "U1 DEC_VDD"
+    },
+    {
+      "ref": "C2",
+      "mpn": "GRM155R61A105KE15D",
+      "mfr": "Murata",
+      "value": "1uF 10V 0402",
+      "role": "U1 DEC_VDDH"
+    },
+    {
+      "ref": "C3",
+      "mpn": "GRM155R71C104KA88D",
+      "mfr": "Murata",
+      "value": "100nF 16V 0402",
+      "role": "U1 DEC"
+    },
+    {
+      "ref": "C4",
+      "mpn": "GRM155R61A105KE15D",
+      "mfr": "Murata",
+      "value": "1uF 10V 0402",
+      "role": "U2 VDD"
+    },
+    {
+      "ref": "C5",
+      "mpn": "GRM155R71C104KA88D",
+      "mfr": "Murata",
+      "value": "100nF 16V 0402",
+      "role": "U2 VDDIO"
+    },
+    {
+      "ref": "C6",
+      "mpn": "GRM155R61A105KE15D",
+      "mfr": "Murata",
+      "value": "1uF 10V 0402",
+      "role": "U6 CIN"
+    },
+    {
+      "ref": "C7",
+      "mpn": "GRM155R61A105KE15D",
+      "mfr": "Murata",
+      "value": "1uF 10V 0402",
+      "role": "U6 COUT"
+    },
+    {
+      "ref": "C8",
+      "mpn": "GRM1555C1H100JA01D",
+      "mfr": "Murata",
+      "value": "10pF C0G 0402",
+      "role": "HFXTAL load"
+    },
+    {
+      "ref": "C9",
+      "mpn": "GRM1555C1H100JA01D",
+      "mfr": "Murata",
+      "value": "10pF C0G 0402",
+      "role": "HFXTAL load"
+    },
+    {
+      "ref": "C10",
+      "mpn": "GRM1555C1H120JA01D",
+      "mfr": "Murata",
+      "value": "12pF C0G 0402",
+      "role": "LFXTAL load"
+    },
+    {
+      "ref": "C11",
+      "mpn": "GRM1555C1H120JA01D",
+      "mfr": "Murata",
+      "value": "12pF C0G 0402",
+      "role": "LFXTAL load"
+    },
+    {
+      "ref": "C12",
+      "mpn": "GJM1555C1H1R0BB01D",
+      "mfr": "Murata",
+      "value": "1.0pF RF 0402",
+      "role": "ANT series match (seed)"
+    },
+    {
+      "ref": "C13",
+      "mpn": "GJM1555C1H1R5BB01D",
+      "mfr": "Murata",
+      "value": "1.5pF RF 0402",
+      "role": "ANT shunt match (seed)"
+    },
+    {
+      "ref": "L1",
+      "mpn": "LQP15MN1N5B02D",
+      "mfr": "Murata",
+      "value": "1.5nH 0402",
+      "role": "ANT series match (seed)"
+    },
+    {
+      "ref": "R1",
+      "mpn": "RC0402FR-07100KL",
+      "mfr": "Yageo",
+      "value": "100k 0402",
+      "role": "BQ25100 ISET"
+    },
+    {
+      "ref": "R2",
+      "mpn": "RC0402FR-0710KL",
+      "mfr": "Yageo",
+      "value": "10k 0402",
+      "role": "I2C SDA pull-up"
+    },
+    {
+      "ref": "R3",
+      "mpn": "RC0402FR-0710KL",
+      "mfr": "Yageo",
+      "value": "10k 0402",
+      "role": "I2C SCL pull-up"
+    },
+    {
+      "ref": "R4",
+      "mpn": "RC0402FR-0710KL",
+      "mfr": "Yageo",
+      "value": "10k 0402",
+      "role": "nRESET pull-up"
+    },
+    {
+      "ref": "TP1",
+      "mpn": "PAD-0.8MM",
+      "mfr": "PCB",
+      "value": "test point",
+      "role": "3V3"
+    },
+    {
+      "ref": "TP2",
+      "mpn": "PAD-0.8MM",
+      "mfr": "PCB",
+      "value": "test point",
+      "role": "GND"
+    },
+    {
+      "ref": "TP3",
+      "mpn": "PAD-0.8MM",
+      "mfr": "PCB",
+      "value": "test point",
+      "role": "VBAT"
+    },
+    {
+      "ref": "TP4",
+      "mpn": "PAD-0.8MM",
+      "mfr": "PCB",
+      "value": "test point",
+      "role": "SWDIO"
+    },
+    {
+      "ref": "TP5",
+      "mpn": "PAD-0.8MM",
+      "mfr": "PCB",
+      "value": "test point",
+      "role": "SWDCLK"
+    },
+    {
+      "ref": "TP6",
+      "mpn": "PAD-0.8MM",
+      "mfr": "PCB",
+      "value": "test point",
+      "role": "I2C_SDA"
+    },
+    {
+      "ref": "TP7",
+      "mpn": "PAD-0.8MM",
+      "mfr": "PCB",
+      "value": "test point",
+      "role": "I2C_SCL"
+    }
+  ]
+}

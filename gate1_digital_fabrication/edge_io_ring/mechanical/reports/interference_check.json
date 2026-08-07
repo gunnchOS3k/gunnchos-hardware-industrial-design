@@ -1,0 +1,31 @@
+{
+  "generated_at_utc": "2026-08-07T22:20:56Z",
+  "pass": true,
+  "checks": [
+    {
+      "name": "pcb_vs_inner_wall",
+      "clearance_mm": 0.25,
+      "result": "PASS"
+    },
+    {
+      "name": "battery_vs_pcb",
+      "clearance_mm": 0.4,
+      "result": "PASS"
+    },
+    {
+      "name": "lra_vs_battery",
+      "clearance_mm": 1.1,
+      "result": "PASS"
+    },
+    {
+      "name": "antenna_keepout_vs_battery",
+      "clearance_mm": 3.0,
+      "result": "PASS"
+    },
+    {
+      "name": "charge_window_vs_antenna",
+      "clearance_mm": 8.5,
+      "result": "PASS"
+    }
+  ]
+}

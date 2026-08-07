@@ -1,0 +1,19 @@
+schema_version: "1.0.0"
+updated_at_utc: "2026-08-07T22:21:57Z"
+device: edge_io_ring
+status: RING_DIGITAL_FABRICATION_PACKAGE_COMPLETE
+physical_status: RING_PHYSICAL_PROTOTYPE_PENDING
+blocks:
+  MCU_SoC: {mpn: nRF52840-QIAA-R, manufacturer: Nordic Semiconductor}
+  IMU: {mpn: BMI270, manufacturer: Bosch Sensortec}
+  BLE_radio: {note: integrated in nRF52840}
+  power_management: {mpn: npm1300-CAAA-R, manufacturer: Nordic Semiconductor}
+  battery_interface: {candidate: LP502030-3.7V-250mAh, quote: LIVE_QUOTE_REQUIRED}
+  charging: {via: npm1300 + pogo contacts}
+  voltage_regulation: {primary: npm1300 LDOs, aux: TLV75533PDBVR}
+  debug_programming: {mpn: TC2030-IDC-NL}
+  haptic_output: {motor: C1026B002F, driver: DRV2605LDGSR}
+  status_indication: {mpn: APTD1608LCGCK}
+  ESD_protection: {mpns: [PESD5V0S1UL, PESD5V0X1UB]}
+  antenna: {mpn: 2450AT18A100}
+  test_points: {SWD: TC2030, UART: TP1-TP3, VBAT: TP4, GND: TP5}

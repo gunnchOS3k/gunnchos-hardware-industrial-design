@@ -1,0 +1,9 @@
+ISO-10303-21;
+HEADER;
+FILE_DESCRIPTION(('Edge I/O Ring digital'),'2;1');
+FILE_NAME('edge_io_ring.step','2026-08-07T22:21:57Z',('gunnchos'),('gunnchOS3k'),' ',' ',' ');
+ENDSEC;
+DATA;
+/* Surrogate STEP metadata — OpenSCAD is source of truth until CAD kernel STEP export */
+ENDSEC;
+END-ISO-10303-21;
