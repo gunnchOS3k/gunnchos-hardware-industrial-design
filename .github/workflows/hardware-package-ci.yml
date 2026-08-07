@@ -2,12 +2,22 @@ name: EVT-1 hardware package CI
 
 on:
   push:
-    branches: [main, master, hardware-evt1-*]
+    branches: [main, hardware-evt1-*]
   pull_request:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: hardware-package-ci-${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
 
 jobs:
   validate:
     runs-on: ubuntu-latest
+    timeout-minutes: 45
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-python@v5
