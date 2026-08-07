@@ -1,0 +1,19 @@
+{
+  "tool": "gunnchos_static_drc",
+  "timestamp": "2026-08-07T23:10:27Z",
+  "result": "PASS",
+  "pcb": "/Users/gunnchos/Downloads/gunnchos-7gc-research-product-spine/repos/gunnchos-hardware-industrial-design/gate1_digital_fabrication/edge_io_ring/pcb/kicad/edge_io_ring_evt0.kicad_pcb",
+  "drill": "/Users/gunnchos/Downloads/gunnchos-7gc-research-product-spine/repos/gunnchos-hardware-industrial-design/gate1_digital_fabrication/edge_io_ring/pcb/gerbers/edge_io_ring_evt0.drl",
+  "bom": "/Users/gunnchos/Downloads/gunnchos-7gc-research-product-spine/repos/gunnchos-hardware-industrial-design/gate1_digital_fabrication/edge_io_ring/bom/assembly_bom.csv",
+  "gerber_count": 12,
+  "rules": {
+    "min_track_mm": 0.1,
+    "min_clearance_mm": 0.1,
+    "min_drill_mm": 0.3,
+    "board_od_mm": 22.0,
+    "board_id_mm": 16.0
+  },
+  "issues": [],
+  "warnings": [],
+  "physical_claim": false
+}

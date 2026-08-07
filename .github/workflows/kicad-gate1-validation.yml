@@ -1,0 +1,66 @@
+name: Gate1 KiCad validation (static + optional CLI)
+
+on:
+  pull_request:
+    paths:
+      - "gate1_digital_fabrication/edge_io_ring/**"
+      - ".github/workflows/kicad-gate1-validation.yml"
+  push:
+    branches: [main]
+    paths:
+      - "gate1_digital_fabrication/edge_io_ring/**"
+      - ".github/workflows/kicad-gate1-validation.yml"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: kicad-gate1-${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  static-erc-drc:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+      - name: Deterministic static ERC/DRC (must pass)
+        working-directory: gate1_digital_fabrication/edge_io_ring
+        run: |
+          python3 scripts/static_erc_drc_validator.py
+          python3 scripts/validate_digital_fab_package.py
+      - name: Upload static reports
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: static-erc-drc-reports
+          path: |
+            gate1_digital_fabrication/edge_io_ring/schematic/reports/static_erc_report.json
+            gate1_digital_fabrication/edge_io_ring/pcb/reports/static_drc_report.json
+            gate1_digital_fabrication/edge_io_ring/validation/STATIC_VALIDATION_REPORT.md
+
+  kicad-cli-optional:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+      - name: Optional kicad-cli (soft-skip if absent)
+        working-directory: gate1_digital_fabrication/edge_io_ring
+        run: |
+          chmod +x scripts/run_kicad_cli_validation.sh
+          scripts/run_kicad_cli_validation.sh
+          status=$(python3 -c "import json; print(json.load(open('validation/kicad_cli/kicad_cli_meta.json'))['status'])")
+          echo "kicad status=$status"
+          if [[ "$status" == "KICAD_CLI_ABSENT" ]]; then
+            echo "KICAD_CLI_ABSENT soft-skip OK"
+          fi
+      - name: Upload kicad-cli meta
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: kicad-cli-meta
+          path: gate1_digital_fabrication/edge_io_ring/validation/kicad_cli/

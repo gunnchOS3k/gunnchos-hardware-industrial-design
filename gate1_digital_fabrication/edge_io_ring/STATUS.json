@@ -1,11 +1,13 @@
 {
   "board": "edge_io_ring_evt0",
   "version": "0.1.0-dev",
-  "generated_at_utc": "2026-08-07T22:20:56Z",
+  "generated_at_utc": "2026-08-07T23:11:41Z",
   "physical_execution_freeze": "ACTIVE",
   "tokens_set": [
     "RING_DIGITAL_FABRICATION_PACKAGE_COMPLETE",
-    "RING_PHYSICAL_PROTOTYPE_PENDING"
+    "RING_PHYSICAL_PROTOTYPE_PENDING",
+    "RING_KICAD_STATIC_ERC_DRC_PASS",
+    "KICAD_CLI_ABSENT"
   ],
   "tokens_forbidden": [
     "RING_PHYSICAL_PROTOTYPE_EXISTS",
@@ -13,6 +15,42 @@
   ],
   "erc_pass": true,
   "drc_pass": true,
+  "static_erc": {
+    "tool": "gunnchos_static_erc",
+    "timestamp": "2026-08-07T23:10:27Z",
+    "result": "PASS",
+    "netlist": "/Users/gunnchos/Downloads/gunnchos-7gc-research-product-spine/repos/gunnchos-hardware-industrial-design/gate1_digital_fabrication/edge_io_ring/schematic/netlist.json",
+    "schematic": "/Users/gunnchos/Downloads/gunnchos-7gc-research-product-spine/repos/gunnchos-hardware-industrial-design/gate1_digital_fabrication/edge_io_ring/schematic/kicad/edge_io_ring_evt0.kicad_sch",
+    "issues": [],
+    "warnings": [],
+    "baseline": "/Users/gunnchos/Downloads/gunnchos-7gc-research-product-spine/repos/gunnchos-hardware-industrial-design/gate1_digital_fabrication/edge_io_ring/validation/baselines/pinout_baseline.json",
+    "physical_claim": false
+  },
+  "static_drc": {
+    "tool": "gunnchos_static_drc",
+    "timestamp": "2026-08-07T23:10:27Z",
+    "result": "PASS",
+    "pcb": "/Users/gunnchos/Downloads/gunnchos-7gc-research-product-spine/repos/gunnchos-hardware-industrial-design/gate1_digital_fabrication/edge_io_ring/pcb/kicad/edge_io_ring_evt0.kicad_pcb",
+    "drill": "/Users/gunnchos/Downloads/gunnchos-7gc-research-product-spine/repos/gunnchos-hardware-industrial-design/gate1_digital_fabrication/edge_io_ring/pcb/gerbers/edge_io_ring_evt0.drl",
+    "bom": "/Users/gunnchos/Downloads/gunnchos-7gc-research-product-spine/repos/gunnchos-hardware-industrial-design/gate1_digital_fabrication/edge_io_ring/bom/assembly_bom.csv",
+    "gerber_count": 12,
+    "rules": {
+      "min_track_mm": 0.1,
+      "min_clearance_mm": 0.1,
+      "min_drill_mm": 0.3,
+      "board_od_mm": 22.0,
+      "board_id_mm": 16.0
+    },
+    "issues": [],
+    "warnings": [],
+    "physical_claim": false
+  },
+  "kicad_cli": {
+    "status": "KICAD_CLI_ABSENT",
+    "version": null,
+    "path": null,
+    "note": "Install skipped (sudo required on this host); soft-skip when absent."
+  },
   "irreducible_blockers": [
     {
       "class": "REQUIRES_SUPPLIER_QUOTE",
@@ -39,6 +77,12 @@
       "class": "REQUIRES_EDMUND_ACCEPTANCE",
       "items": [
         "Gate 1 physical ACCEPT"
+      ]
+    },
+    {
+      "class": "TOOL_INSTALL",
+      "items": [
+        "KiCad cask install requires interactive sudo on this host"
       ]
     }
   ]
