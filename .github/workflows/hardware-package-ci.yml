@@ -75,4 +75,4 @@ jobs:
       - name: Full hardware simulation
         run: python3 scripts/run_full_hardware_simulation.py
       - name: Package tests
-        run: pytest -q
+        run: PYTHONPATH=ring_input/python${PYTHONPATH:+:$PYTHONPATH} pytest -q
