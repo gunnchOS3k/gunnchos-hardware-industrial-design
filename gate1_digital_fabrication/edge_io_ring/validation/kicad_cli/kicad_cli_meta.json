@@ -1,0 +1,7 @@
+{
+  "timestamp": "2026-08-07T23:10:27Z",
+  "status": "KICAD_CLI_ABSENT",
+  "kicad_cli": null,
+  "version": null,
+  "note": "kicad-cli not found; static ERC/DRC remains mandatory. No physical claim."
+}

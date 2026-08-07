@@ -1,0 +1,11 @@
+{
+  "tool": "gunnchos_static_erc",
+  "timestamp": "2026-08-07T23:10:27Z",
+  "result": "PASS",
+  "netlist": "/Users/gunnchos/Downloads/gunnchos-7gc-research-product-spine/repos/gunnchos-hardware-industrial-design/gate1_digital_fabrication/edge_io_ring/schematic/netlist.json",
+  "schematic": "/Users/gunnchos/Downloads/gunnchos-7gc-research-product-spine/repos/gunnchos-hardware-industrial-design/gate1_digital_fabrication/edge_io_ring/schematic/kicad/edge_io_ring_evt0.kicad_sch",
+  "issues": [],
+  "warnings": [],
+  "baseline": "/Users/gunnchos/Downloads/gunnchos-7gc-research-product-spine/repos/gunnchos-hardware-industrial-design/gate1_digital_fabrication/edge_io_ring/validation/baselines/pinout_baseline.json",
+  "physical_claim": false
+}

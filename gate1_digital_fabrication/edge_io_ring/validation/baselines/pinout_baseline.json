@@ -1,0 +1,35 @@
+{
+  "board": "edge_io_ring_evt0",
+  "mcu": "nRF52840",
+  "physical_claim": false,
+  "gpio_map": {
+    "I2C_SDA": "P0.26",
+    "I2C_SCL": "P0.27",
+    "IMU_INT": "P0.11",
+    "CHG_STATUS": "P0.02"
+  },
+  "dedicated": ["SWDIO", "SWDCLK", "nRESET"],
+  "required_nets": [
+    "3V3",
+    "GND",
+    "VBAT",
+    "I2C_SDA",
+    "I2C_SCL",
+    "SWDIO",
+    "SWDCLK",
+    "nRESET",
+    "IMU_INT",
+    "CHG_STATUS",
+    "RF_ANT",
+    "HAPTIC_P",
+    "HAPTIC_N"
+  ],
+  "required_refs": ["U1", "U2", "U3", "U4", "BT1", "ANT1", "J1", "J2"],
+  "rules": {
+    "min_track_mm": 0.1,
+    "min_clearance_mm": 0.1,
+    "min_drill_mm": 0.3,
+    "board_od_mm": 22.0,
+    "board_id_mm": 16.0
+  }
+}
