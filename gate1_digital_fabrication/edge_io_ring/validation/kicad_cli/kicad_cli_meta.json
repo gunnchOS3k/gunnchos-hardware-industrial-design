@@ -1,7 +1,37 @@
 {
-  "timestamp": "2026-08-07T23:10:27Z",
-  "status": "KICAD_CLI_ABSENT",
+  "timestamp": "2026-08-07T23:37:53Z",
+  "status": "HUMAN_OS_AUTHORIZATION_REQUIRED",
+  "target_token": "RING_KICAD_CLI_VALIDATION_PASS",
+  "target_token_achieved": false,
   "kicad_cli": null,
   "version": null,
-  "note": "kicad-cli not found; static ERC/DRC remains mandatory. No physical claim."
+  "physical_claim": false,
+  "physical_execution_freeze": "ACTIVE",
+  "discovery": {
+    "command_v": null,
+    "applications_find": [],
+    "mdfind": [],
+    "brew_cask_list": []
+  },
+  "install_attempt": {
+    "command": "brew install --cask kicad",
+    "cask_version_fetched": "10.0.5",
+    "result": "FAILED",
+    "blocker": "HUMAN_OS_AUTHORIZATION_REQUIRED",
+    "edmund_instruction": "Approve the macOS administrator/install prompt.",
+    "error": "sudo: a terminal is required to read the password; either use the -S option to read from standard input or configure an askpass helper",
+    "failed_step": "/usr/bin/sudo -E -- mkdir -p -- /Library/Application Support/kicad",
+    "purged": true
+  },
+  "cli_validation": {
+    "erc": "NOT_RUN",
+    "drc": "NOT_RUN",
+    "gerber": "NOT_RUN",
+    "drill": "NOT_RUN",
+    "bom": "NOT_RUN",
+    "step": "NOT_RUN",
+    "parity": "NOT_RUN",
+    "reason": "kicad-cli unavailable after sudo-blocked cask install"
+  },
+  "note": "Final macOS close-out attempt for KiCad CLI residual. Install blocked on interactive admin password. No physical claim. PHYSICAL_EXECUTION_FREEZE remains ACTIVE."
 }

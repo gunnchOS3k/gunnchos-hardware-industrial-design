@@ -1,13 +1,14 @@
 {
   "board": "edge_io_ring_evt0",
   "version": "0.1.0-dev",
-  "generated_at_utc": "2026-08-07T23:11:41Z",
+  "generated_at_utc": "2026-08-07T23:37:53Z",
   "physical_execution_freeze": "ACTIVE",
   "tokens_set": [
     "RING_DIGITAL_FABRICATION_PACKAGE_COMPLETE",
     "RING_PHYSICAL_PROTOTYPE_PENDING",
     "RING_KICAD_STATIC_ERC_DRC_PASS",
-    "KICAD_CLI_ABSENT"
+    "HUMAN_OS_AUTHORIZATION_REQUIRED",
+    "KICAD_CLI_REVALIDATION_PENDING_HOST_INSTALL"
   ],
   "tokens_forbidden": [
     "RING_PHYSICAL_PROTOTYPE_EXISTS",
@@ -46,10 +47,12 @@
     "physical_claim": false
   },
   "kicad_cli": {
-    "status": "KICAD_CLI_ABSENT",
+    "status": "HUMAN_OS_AUTHORIZATION_REQUIRED",
     "version": null,
     "path": null,
-    "note": "Install skipped (sudo required on this host); soft-skip when absent."
+    "target_token": "RING_KICAD_CLI_VALIDATION_PASS",
+    "target_token_achieved": false,
+    "note": "brew install --cask kicad (10.0.5) failed: sudo password required for /Library/Application Support/kicad. Edmund: Approve the macOS administrator/install prompt."
   },
   "irreducible_blockers": [
     {
@@ -82,7 +85,9 @@
     {
       "class": "TOOL_INSTALL",
       "items": [
-        "KiCad cask install requires interactive sudo on this host"
+        "HUMAN_OS_AUTHORIZATION_REQUIRED",
+        "Approve the macOS administrator/install prompt.",
+        "brew install --cask kicad requires interactive sudo on this host"
       ]
     }
   ]
