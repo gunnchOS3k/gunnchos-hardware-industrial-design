@@ -1,0 +1,45 @@
+{
+  "board": "edge_io_ring_evt0",
+  "version": "0.1.0-dev",
+  "generated_at_utc": "2026-08-07T22:20:56Z",
+  "physical_execution_freeze": "ACTIVE",
+  "tokens_set": [
+    "RING_DIGITAL_FABRICATION_PACKAGE_COMPLETE",
+    "RING_PHYSICAL_PROTOTYPE_PENDING"
+  ],
+  "tokens_forbidden": [
+    "RING_PHYSICAL_PROTOTYPE_EXISTS",
+    "PRESENT_CONFIRMED_RING"
+  ],
+  "erc_pass": true,
+  "drc_pass": true,
+  "irreducible_blockers": [
+    {
+      "class": "REQUIRES_SUPPLIER_QUOTE",
+      "items": [
+        "BT1 curved pouch",
+        "M1 thin LRA exact MPN"
+      ]
+    },
+    {
+      "class": "REQUIRES_PHYSICAL_FABRICATION",
+      "items": [
+        "PCB fab/assembly",
+        "enclosure print/machine",
+        "cradle pogo alignment"
+      ]
+    },
+    {
+      "class": "REQUIRES_LOCAL_HARDWARE",
+      "items": [
+        "flash + bring-up measurements"
+      ]
+    },
+    {
+      "class": "REQUIRES_EDMUND_ACCEPTANCE",
+      "items": [
+        "Gate 1 physical ACCEPT"
+      ]
+    }
+  ]
+}

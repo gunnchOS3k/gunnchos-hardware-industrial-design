@@ -1,0 +1,11 @@
+layers: 2
+thickness_mm: 0.8
+dielectric: FR-4
+copper_oz: 1
+impedance:
+  ble_rf_ohm: 50
+  note: "Chip antenna feed microstrip target 50 ohm; finalize with fab stack-up."
+flex_or_rigid: rigid-flex_candidate_band
+min_track_mm: 0.1
+min_clearance_mm: 0.1
+min_drill_mm: 0.3

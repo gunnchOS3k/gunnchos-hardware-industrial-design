@@ -1,0 +1,21 @@
+{
+  "tool": "gunnchos_erc_static",
+  "timestamp": "2026-08-07T22:21:57Z",
+  "result": "PASS",
+  "checks": {
+    "netlist_present": true,
+    "power_tree": {
+      "VDD": true,
+      "GND": true,
+      "VBAT": true
+    },
+    "interface_voltage": {
+      "logic_domain_V": 3.3,
+      "vbat_max_V": 4.2,
+      "status": "PASS"
+    },
+    "pin_conflicts": [],
+    "issues": []
+  },
+  "note": "Static ERC on digital netlist; KiCad GUI ERC should be re-run when KiCad CLI available."
+}

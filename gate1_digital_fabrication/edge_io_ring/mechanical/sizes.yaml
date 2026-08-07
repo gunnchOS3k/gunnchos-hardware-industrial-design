@@ -1,0 +1,11 @@
+sizes:
+  US7: {inner_d_mm: 17.3}
+  US8: {inner_d_mm: 18.2}
+  US9: {inner_d_mm: 19.0}
+  US10: {inner_d_mm: 19.8}
+tolerances_mm:
+  print: 0.2
+  injection_mold_future: 0.1
+min_wall_mm: 1.2
+fastening: snap_fit_band_split_with_adhesive_option
+skin_contact: hypoallergenic_coating_candidate

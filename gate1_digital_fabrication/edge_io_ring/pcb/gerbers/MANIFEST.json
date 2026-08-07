@@ -1,0 +1,46 @@
+{
+  "board": "edge_io_ring_evt0",
+  "generated_at_utc": "2026-08-07T22:20:56Z",
+  "files": [
+    {
+      "file": "edge_io_ring_evt0-B_Cu.gbr",
+      "sha256": "00e5f2c63846daae9c84f0f485afe8640ef05fef4857573b68cc43c7eca57c98",
+      "bytes": 496
+    },
+    {
+      "file": "edge_io_ring_evt0-B_Mask.gbr",
+      "sha256": "f299825aba56cb0640a78f4d575bf1fd4d7e5b19cd566e33f315e78091c23aa4",
+      "bytes": 208
+    },
+    {
+      "file": "edge_io_ring_evt0-Edge_Cuts.gbr",
+      "sha256": "86aaad9136624721336df5d1a7189ec3ecdd9376243470dfadecbb34cae03e28",
+      "bytes": 298
+    },
+    {
+      "file": "edge_io_ring_evt0-F_Cu.gbr",
+      "sha256": "7587b6fa3b3e6ed40e8e89570bd6074905cd72d29a0eaa468315d7f6f9abf355",
+      "bytes": 1007
+    },
+    {
+      "file": "edge_io_ring_evt0-F_Mask.gbr",
+      "sha256": "36a301fa92436522a73436fec58bc01c7328c316eeba8a6a523fe7a5398e0003",
+      "bytes": 468
+    },
+    {
+      "file": "edge_io_ring_evt0-F_Paste.gbr",
+      "sha256": "2179aec4eb08d307a6d3f89db14f7121552cb5efd44f46f0e60a5fd73a15f7b7",
+      "bytes": 469
+    },
+    {
+      "file": "edge_io_ring_evt0-F_SilkS.gbr",
+      "sha256": "4819f06379af775750313689b2aea0646175f9ff5c933d8c8e82fa4f88b51ee3",
+      "bytes": 469
+    },
+    {
+      "file": "edge_io_ring_evt0.drl",
+      "sha256": "d12c45533c08f8efd20d5cff0fb8db4069d3c3d10efc495dc02961cab4d574c7",
+      "bytes": 131
+    }
+  ]
+}

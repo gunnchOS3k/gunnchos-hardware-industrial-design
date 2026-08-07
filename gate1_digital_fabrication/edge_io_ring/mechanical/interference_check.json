@@ -1,0 +1,7 @@
+{
+  "pcb_vs_cavity": "CLEARANCE_OK_MODELED",
+  "battery_vs_pcb": "CLEARANCE_OK_MODELED",
+  "antenna_keepout": "MODELED_KEEP OUT_60DEG",
+  "status": "DIGITAL_INTERFERENCE_CHECK_PASS",
+  "physical_fit": "RING_PHYSICAL_PROTOTYPE_PENDING"
+}

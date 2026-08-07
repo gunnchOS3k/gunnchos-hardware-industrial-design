@@ -1,0 +1,14 @@
+{
+  "tool": "gunnchos_drc_static",
+  "timestamp": "2026-08-07T22:21:57Z",
+  "result": "PASS",
+  "rules": {
+    "min_track_mm": 0.1,
+    "min_clearance_mm": 0.1,
+    "min_drill_mm": 0.3,
+    "board_od_mm": 22.0,
+    "board_id_mm": 16.0
+  },
+  "violations": [],
+  "note": "Geometric/rule static DRC on generated annular layout; re-run in KiCad when CLI available."
+}

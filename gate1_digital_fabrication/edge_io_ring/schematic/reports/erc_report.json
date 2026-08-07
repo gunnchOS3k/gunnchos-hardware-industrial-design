@@ -1,0 +1,29 @@
+{
+  "pass": true,
+  "errors": [],
+  "warnings": [],
+  "checked_nets": [
+    "3V3",
+    "CHARGE_5V",
+    "CHG_STATUS",
+    "GND",
+    "HAPTIC_N",
+    "HAPTIC_P",
+    "HFXTAL_1",
+    "HFXTAL_2",
+    "I2C_SCL",
+    "I2C_SDA",
+    "IMU_INT",
+    "LFXTAL_1",
+    "LFXTAL_2",
+    "RF_ANT",
+    "RF_ANT_PAD",
+    "RF_FEED",
+    "SWDCLK",
+    "SWDIO",
+    "VBAT",
+    "VBAT_SYS",
+    "nRESET"
+  ],
+  "generated_at_utc": "2026-08-07T22:20:56Z"
+}

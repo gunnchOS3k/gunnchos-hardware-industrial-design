@@ -1,0 +1,157 @@
+{
+  "format": "gunnchos_netlist_v1",
+  "components": [
+    {
+      "ref": "U1",
+      "value": "nRF52840-QIAA-R",
+      "function": "MCU"
+    },
+    {
+      "ref": "U2",
+      "value": "BMI270",
+      "function": "IMU"
+    },
+    {
+      "ref": "U3",
+      "value": "npm1300-CAAA-R",
+      "function": "PMIC"
+    },
+    {
+      "ref": "U4",
+      "value": "DRV2605LDGSR",
+      "function": "HAPTIC_DRV"
+    },
+    {
+      "ref": "U5",
+      "value": "TLV75533PDBVR",
+      "function": "LDO"
+    },
+    {
+      "ref": "A1",
+      "value": "2450AT18A100",
+      "function": "ANT"
+    },
+    {
+      "ref": "M1",
+      "value": "C1026B002F",
+      "function": "HAPTIC"
+    },
+    {
+      "ref": "D1",
+      "value": "APTD1608LCGCK",
+      "function": "LED"
+    },
+    {
+      "ref": "J1",
+      "value": "TC2030-IDC-NL",
+      "function": "SWD"
+    },
+    {
+      "ref": "J2",
+      "value": "POGO_PAIR",
+      "function": "CHG"
+    },
+    {
+      "ref": "BT1",
+      "value": "LiPo-250mAh-CANDIDATE",
+      "function": "BATT"
+    }
+  ],
+  "nets": [
+    {
+      "name": "NET_VDD",
+      "pins": [
+        "U1.VDD",
+        "U2.VDD",
+        "U3.VOUTSYS",
+        "U4.VDD",
+        "U5.OUT",
+        "D1.A"
+      ]
+    },
+    {
+      "name": "NET_GND",
+      "pins": [
+        "U1.GND",
+        "U2.GND",
+        "U3.GND",
+        "U4.GND",
+        "U5.GND",
+        "A1.GND",
+        "J1.GND",
+        "J2.GND",
+        "BT1.NEG",
+        "M1.NEG",
+        "D1.K"
+      ]
+    },
+    {
+      "name": "NET_I2C_SDA",
+      "pins": [
+        "U1.P0.26",
+        "U2.SDA",
+        "U3.SDA",
+        "U4.SDA"
+      ]
+    },
+    {
+      "name": "NET_I2C_SCL",
+      "pins": [
+        "U1.P0.27",
+        "U2.SCL",
+        "U3.SCL",
+        "U4.SCL"
+      ]
+    },
+    {
+      "name": "NET_SWDIO",
+      "pins": [
+        "U1.SWDIO",
+        "J1.SWDIO"
+      ]
+    },
+    {
+      "name": "NET_SWDCLK",
+      "pins": [
+        "U1.SWDCLK",
+        "J1.SWDCLK"
+      ]
+    },
+    {
+      "name": "NET_VBAT",
+      "pins": [
+        "BT1.POS",
+        "U3.VBAT",
+        "J2.VCHG"
+      ]
+    },
+    {
+      "name": "NET_HAPTIC",
+      "pins": [
+        "U4.OUT",
+        "M1.POS"
+      ]
+    },
+    {
+      "name": "NET_RF",
+      "pins": [
+        "U1.ANT",
+        "A1.RF"
+      ]
+    },
+    {
+      "name": "NET_IMU_INT",
+      "pins": [
+        "U1.P1.01",
+        "U2.INT1"
+      ]
+    },
+    {
+      "name": "NET_LED",
+      "pins": [
+        "U1.P0.13",
+        "D1.A_seriesR"
+      ]
+    }
+  ]
+}

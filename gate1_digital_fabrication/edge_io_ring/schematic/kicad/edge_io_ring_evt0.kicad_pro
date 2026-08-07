@@ -1,0 +1,26 @@
+{
+  "board": {
+    "design_settings": {
+      "rules": {
+        "min_clearance": 0.1,
+        "min_track_width": 0.1,
+        "min_via": 0.3
+      }
+    }
+  },
+  "meta": {
+    "filename": "edge_io_ring_evt0.kicad_pro",
+    "version": 1
+  },
+  "sheets": [
+    [
+      "",
+      "edge_io_ring_evt0.kicad_sch"
+    ]
+  ],
+  "text_variables": {
+    "BOARD": "edge_io_ring_evt0",
+    "VERSION": "0.1.0-dev",
+    "CLAIM": "DIGITAL_FAB_ONLY"
+  }
+}

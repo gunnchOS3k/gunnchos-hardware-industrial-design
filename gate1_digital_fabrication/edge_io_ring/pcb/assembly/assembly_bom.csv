@@ -1,0 +1,41 @@
+ref,manufacturer,mpn,package,qty,role,datasheet_url
+U1,Nordic Semiconductor,nRF52840-CKAA-R,WLCSP-aQFN-73 (3.544×3.607 mm),1,MCU_SoC_BLE,https://docs.nordicsemi.com/bundle/ps_nrf52840/page/keyfeatures_html5.html
+U2,Bosch Sensortec,BMI270,LGA-14 (2.5×3.0×0.8 mm),1,IMU_6AXIS,https://www.bosch-sensortec.com/products/motion-sensors/imus/bmi270/
+U3,Texas Instruments,DRV2605LDGSR,VSSOP-10,1,HAPTIC_DRIVER,https://www.ti.com/lit/ds/symlink/drv2605l.pdf
+U4,Texas Instruments,BQ25100YFPR,DSBGA-6 (0.9×1.6 mm),1,PMIC_CHARGER,https://www.ti.com/lit/ds/symlink/bq25100.pdf
+U5,Ricoh Electronic Devices,R5540K001A-TR-F,DFN(PLP)1616-6,1,BATTERY_PROTECTION,https://www.nisshinbo-microdevices.co.jp/en/products/category/power/battery-protection-ic/
+U6,Texas Instruments,TLV70033DSET,WSON-6 (1.5×1.5 mm),1,LDO_3V3,https://www.ti.com/lit/ds/symlink/tlv700.pdf
+BT1,GMB / PowerStream-class pouch (EVT candidate),GMB501215 (80 mAh LiPo pouch) — supplier quote required,Curved/flat pouch ~5.0×12×15 mm class,1,BATTERY,https://www.powerstream.com/li-polymer-battery.htm
+ANT1,Johanson Technology,2450AT18A100,chip antenna 3.2×1.6 mm,1,BLE_ANTENNA,https://www.johansontechnology.com/datasheets/2450AT18A100/2450AT18A100.pdf
+D1,Nexperia,"PESD5V0S1UL,315",SOD882 (DFN1006-2),1,ESD_USB_POGO,https://assets.nexperia.com/documents/data-sheet/PESD5V0S1UL.pdf
+D2,Nexperia,"PESD3V3S1UL,315",SOD882,1,ESD_SWD,https://assets.nexperia.com/documents/data-sheet/PESD3V3S1UL.pdf
+J1,Tag-Connect,TC2030-CTX-NL footprint (cable TC2030-CTX),PCB pads only (no connector BOM for NL),1,DEBUG_SWD,https://www.tag-connect.com/product/tc2030-ctx-nl-6-pin-no-legs-cable-with-10-pin-micro-connector-for-use-with-cortex-processors
+J2,Mill-Max / custom fixture,Mill-Max 0900-0-15-20-75-14-11-0 (pogo pin) ×2 on cradle,Cradle-side pogo; ring has gold pads,1,CHARGE_POGO,https://www.mill-max.com/engineering_spec_pdfs/0900.pdf
+Y1,Abracon,ABM8-32.000MHZ-B2-T,3.2×2.5 mm SMD crystal,1,HFCLK_XTAL,https://abracon.com/Resonators/ABM8.pdf
+Y2,Abracon,ABS07-32.768KHZ-9-T,3.2×1.5 mm cylinder SMD,1,LFCLK_XTAL,https://abracon.com/Resonators/ABS07.pdf
+M1,Jinlong Machinery,C10-100 / equivalent 8–10 mm LRA (EVT quote),"coin LRA ≤10 mm diameter, ≤2.5 mm height",1,LRA_ACTUATOR,https://www.vybronics.com/wp-content/uploads/2021/03/VLV101040A-datasheet.pdf
+C1,Murata,GRM155R61A105KE15D,1uF 10V 0402,1,U1 DEC_VDD,
+C2,Murata,GRM155R61A105KE15D,1uF 10V 0402,1,U1 DEC_VDDH,
+C3,Murata,GRM155R71C104KA88D,100nF 16V 0402,1,U1 DEC,
+C4,Murata,GRM155R61A105KE15D,1uF 10V 0402,1,U2 VDD,
+C5,Murata,GRM155R71C104KA88D,100nF 16V 0402,1,U2 VDDIO,
+C6,Murata,GRM155R61A105KE15D,1uF 10V 0402,1,U6 CIN,
+C7,Murata,GRM155R61A105KE15D,1uF 10V 0402,1,U6 COUT,
+C8,Murata,GRM1555C1H100JA01D,10pF C0G 0402,1,HFXTAL load,
+C9,Murata,GRM1555C1H100JA01D,10pF C0G 0402,1,HFXTAL load,
+C10,Murata,GRM1555C1H120JA01D,12pF C0G 0402,1,LFXTAL load,
+C11,Murata,GRM1555C1H120JA01D,12pF C0G 0402,1,LFXTAL load,
+C12,Murata,GJM1555C1H1R0BB01D,1.0pF RF 0402,1,ANT series match (seed),
+C13,Murata,GJM1555C1H1R5BB01D,1.5pF RF 0402,1,ANT shunt match (seed),
+L1,Murata,LQP15MN1N5B02D,1.5nH 0402,1,ANT series match (seed),
+R1,Yageo,RC0402FR-07100KL,100k 0402,1,BQ25100 ISET,
+R2,Yageo,RC0402FR-0710KL,10k 0402,1,I2C SDA pull-up,
+R3,Yageo,RC0402FR-0710KL,10k 0402,1,I2C SCL pull-up,
+R4,Yageo,RC0402FR-0710KL,10k 0402,1,nRESET pull-up,
+TP1,PCB,PAD-0.8MM,test point,1,3V3,
+TP2,PCB,PAD-0.8MM,test point,1,GND,
+TP3,PCB,PAD-0.8MM,test point,1,VBAT,
+TP4,PCB,PAD-0.8MM,test point,1,SWDIO,
+TP5,PCB,PAD-0.8MM,test point,1,SWDCLK,
+TP6,PCB,PAD-0.8MM,test point,1,I2C_SDA,
+TP7,PCB,PAD-0.8MM,test point,1,I2C_SCL,
