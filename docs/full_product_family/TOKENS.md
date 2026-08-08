@@ -21,7 +21,8 @@ Branch: `cursor/full-product-continuation-vi-eda-closure`
 - **MFG_PACKAGE_COMPLETABLE_PRODUCTS_DEEPENED**
 - **CERT_DIGITAL_PREP_NO_CLAIMS**
 - **KICAD_CLI_RESUME_SCRIPTS_READY**
-- **EDMUND_ACTION_REQUIRED_KICAD_BREW_ADMIN** (still, until CLI present)
+- **KICAD_CLI_FAMILY_BEST_EFFORT_RAN** (kicad-cli 10.0.5 present mid Cont VI; ERC violations expected)
+- EDMUND_ACTION_REQUIRED_KICAD_BREW_ADMIN (historical Cont V; CLI now present)
 
 ## Explicitly NOT claimed
 - FULL_HARDWARE_DESIGN_RELEASE_COMPLETE (any product)

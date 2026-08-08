@@ -1,5 +1,5 @@
 {
-  "timestamp": "2026-08-08T21:01:04Z",
+  "timestamp": "2026-08-08T21:04:47Z",
   "status": "BEST_EFFORT",
   "kicad_cli": "/opt/homebrew/bin/kicad-cli",
   "version": "10.0.5",
@@ -26,21 +26,11 @@
     "dock": {
       "dir": "docs/full_product_family/evidence/kicad_cli/dock",
       "erc.json": true,
-      "drc.json": false,
-      "board.step": false,
+      "drc.json": true,
+      "board.step": true,
       "netlist.sexp": true,
-      "gerber_count": 0,
-      "erc_keys": [
-        "$schema",
-        "coordinate_units",
-        "date",
-        "ignored_checks",
-        "included_severities",
-        "kicad_version",
-        "sheets",
-        "source"
-      ],
-      "erc_mentions_violations": true
+      "gerber_count": 11,
+      "note": "PCB layer stack fixed Cont VI; DRC/Gerber/STEP exported"
     },
     "edge_io_rings": {
       "dir": "docs/full_product_family/evidence/kicad_cli/edge_io_rings",
