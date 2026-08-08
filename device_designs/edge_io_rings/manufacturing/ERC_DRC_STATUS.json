@@ -1,0 +1,13 @@
+{
+  "product": "edge_io_rings",
+  "updated_at_utc": "2026-08-08T20:15:00Z",
+  "kicad_cli": "ABSENT",
+  "erc": {"status": "NOT_RUN", "reason": "EDMUND_ACTION_REQUIRED_brew_kicad"},
+  "drc": {"status": "NOT_RUN", "reason": "EDMUND_ACTION_REQUIRED_brew_kicad"},
+  "gerber": {"status": "NOT_EXPORTED"},
+  "pick_place": {"status": "PLAN_ONLY"},
+  "step": {"status": "NOT_EXPORTED"},
+  "full_hardware_design_release_complete": false,
+  "compute_mpn": "Nordic nRF52840-QIAA-R",
+  "firmware_parity": "see docs/BOM_SCH_FW_PARITY.md"
+}

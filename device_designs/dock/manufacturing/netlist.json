@@ -1,0 +1,46 @@
+{
+  "device": "dock",
+  "updated_at_utc": "2026-08-08T20:15:00Z",
+  "evidence_class": "MODELED",
+  "architecture_freeze": "USB4_TB4_40G_NOT_TB5",
+  "adr": "ADR-HW-002",
+  "nodes": [
+    {
+      "ref": "U1",
+      "mpn": "JHL8440",
+      "role": "USB4_TB4_DOCK_CONTROLLER",
+      "nets": ["VDD_3V3", "VBUS_UPSTREAM", "SS_TX", "SS_RX", "AUX", "PCIE_TUNNEL"],
+      "evidence": "PUBLIC_DOCS_role_only_pinout_NDA"
+    },
+    {
+      "ref": "U1R",
+      "mpn": "JHL9040R",
+      "role": "TB4_RETIMER",
+      "nets": ["SS_TX", "SS_RX", "VDD_1V8"],
+      "evidence": "PUBLIC_DOCS_retimer"
+    },
+    {
+      "ref": "U1A",
+      "mpn": "VL108",
+      "role": "USB3DP_COSTDOWN_SKU",
+      "dnp": true,
+      "nets": ["VBUS_UPSTREAM", "DP_TX", "USB3"]
+    },
+    {
+      "ref": "U2",
+      "mpn": "TPS65994",
+      "nets": ["VBUS_UPSTREAM", "CC1", "CC2", "I2C_PD"]
+    },
+    {
+      "ref": "U3",
+      "mpn": "RTL8156",
+      "nets": ["VDD_3V3", "USB_HUB_DS", "MDI"]
+    },
+    {
+      "ref": "U4",
+      "mpn": "VL817",
+      "nets": ["VDD_5V", "USB_UP", "USB_A1", "USB_A2"]
+    }
+  ],
+  "forbidden": ["JHL9480", "JHL9580", "TB5_80G_claim"]
+}

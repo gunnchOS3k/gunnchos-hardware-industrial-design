@@ -1,32 +1,37 @@
-# KiCad status — hardware design release
+# KiCad status — Continuation V
 
-Updated: 2026-08-08T19:40:00Z
+Updated: 2026-08-08T20:15:00Z
 
-## Environment
+## Environment probe
 ```
 which kicad-cli → not found
 which kicad → not found
+ls /Applications/KiCad* → none
+brew info --cask kicad → 10.0.5 (not installed)
 ```
 
+## brew install attempt
+```
+brew install --cask kicad
+```
+**FAILED** — Homebrew prefixes not writable by user (`/opt/homebrew`, `~/Library/Logs/Homebrew`).  
+Evidence: `docs/full_product_family/evidence/BREW_KICAD_INSTALL_ATTEMPT.log`
+
 ## EDMUND_ACTION_REQUIRED
-Approve macOS administrator / Homebrew install for KiCad so `kicad-cli` can run:
+```bash
+sudo chown -R "$(whoami)" /opt/homebrew /Users/gunnchos/Library/Logs/Homebrew
+brew install --cask kicad
+export PATH="/Applications/KiCad/KiCad.app/Contents/MacOS:$PATH"
+which kicad-cli
+```
+Then per product:
+1. `kicad-cli sch erc`
+2. `kicad-cli pcb drc`
+3. Gerber / drill / pos / STEP per `device_designs/*/manufacturing/GERBER_EXPORT_PLAN.md`
+4. Replace `Device:R` placeholders with vendor symbols/footprints
 
-1. `kicad-cli sch erc` on each `*.kicad_sch`
-2. `kicad-cli pcb drc` on each `*.kicad_pcb`
-3. Optional Gerber/drill export for digital package completeness checks
-4. Replace structural `Device:R` placeholders with vendor-accurate symbols/footprints (COM-HPC Mini connector, SODIMM-260, QFN/BGA modules)
-
-Until then: **static/text structure only**. No claim of ERC/DRC pass. Source EDA continues to deepen under freeze.
-
-## Source locations
-| Product | Schematic / PCB / Mfg |
-|---|---|
-| Student | `device_designs/student_14_5/kicad/` + `electrical/student_14_5/kicad/` + `device_designs/student_14_5/manufacturing/` |
-| DS-XL | `device_designs/ds_xl_coder/kicad/` + `electrical/ds_xl_coder/kicad/` + mfg |
-| Handheld | `device_designs/handheld_hybrid/kicad/` + `electrical/handheld_hybrid/kicad/` + mfg |
-| Rings | `device_designs/edge_io_rings/kicad/` + `gate1_digital_fabrication/edge_io_ring/` + Fusion CAD package |
-| Dock | `device_designs/dock/kicad/` + `device_designs/dock/pcb/` + mfg |
+Work continued without stalling: mfg export plans + ERC/DRC blocker JSON checked in for all five.
 
 ## Tokens
-Claimed: digital schematic/PCB **structure present** + exact MPN values in sources  
-Not claimed: `KICAD_CLI_ERC_PASS`, `KICAD_CLI_DRC_PASS`, fab-ready Gerbers, production lib completeness
+- Claimed: `EDMUND_ACTION_REQUIRED_KICAD_BREW_ADMIN`
+- Not claimed: `KICAD_CLI_ERC_PASS`, `KICAD_CLI_DRC_PASS`

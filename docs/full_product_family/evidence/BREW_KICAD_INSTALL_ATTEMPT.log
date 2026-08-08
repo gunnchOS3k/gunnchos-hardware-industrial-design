@@ -1,0 +1,11 @@
+Command: brew install --cask kicad
+Date: 2026-08-08 (Continuation V)
+Result: FAILED — Homebrew directories not writable by user (admin/sudo ownership fix required).
+Exit: Error listing /opt/homebrew and /Users/gunnchos/Library/Logs/Homebrew as not writable.
+Suggested Edmund action:
+  sudo chown -R $(whoami) /opt/homebrew /Users/gunnchos/Library/Logs/Homebrew
+  brew install --cask kicad
+Then: export PATH="/Applications/KiCad/KiCad.app/Contents/MacOS:$PATH"
+       which kicad-cli
+EDMUND_ACTION_REQUIRED: true
+kicad-cli available after attempt: false

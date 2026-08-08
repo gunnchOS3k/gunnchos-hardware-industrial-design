@@ -16,4 +16,6 @@ Module docs: https://docs.ipi.wiki/com-hpc/mini-type-meteor-lake/ModuleIntroduct
 | MIPI CSI | COM←camera FPC | 2× on-module FFC option | PUBLIC_DOCS |
 | SEMA / fan | COM↔thermal | ADLINK SEMA board controller | PUBLIC_DOCS |
 
-Connector: COM-HPC Mini 400-pin. Exact mating connector MPN from ADLINK carrier design guide (may require NDA). **Purchase frozen.**
+Connector: COM-HPC Mini 400-pin. Exact mating connector MPN from ADLINK carrier design guide (**NARROW_NDA** — PICMG/ADLINK). **Purchase frozen.**
+
+Continuation V: full pin-by-pin netlist is **not** PUBLIC_DOCS. Carrier schematics must not invent pin numbers. See `docs/full_product_family/COM_HPC_NX5_FEASIBILITY_PINOUT.md`.
