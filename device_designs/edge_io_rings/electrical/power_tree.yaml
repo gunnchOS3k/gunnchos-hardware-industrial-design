@@ -1,0 +1,9 @@
+device_id: edge_io_rings
+evidence_class: MODELED
+updated_at_utc: "2026-08-08T01:15:00Z"
+adr: ADR-FP-008
+rails:
+  - {name: VBAT, volts: 3.7}
+  - {name: VDD_3V3, regulator_mpn: TLV70033DSET_or_npm1300}
+  - {name: VDD_UWB, note: "switched rail; off when DNP/UWB_ON_COMPANION"}
+see_also: gate1_digital_fabrication/edge_io_ring/electrical/

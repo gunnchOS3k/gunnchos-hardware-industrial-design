@@ -1,0 +1,6 @@
+device_id: edge_io_rings
+evidence_class: MODELED
+updated_at_utc: "2026-08-08T01:15:00Z"
+capacity_mah_range: [40, 250]
+chemistry: LiPo
+charger: BQ25100_or_npm1300

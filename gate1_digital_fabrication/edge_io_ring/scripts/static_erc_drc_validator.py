@@ -237,7 +237,10 @@ def run_drc(baseline: dict) -> dict:
             warnings.append("bom_missing_nrf52840_string")
 
     # Min rule regression: compare committed DRC report if present
-    committed = ROOT / "pcb" / "reports" / "drc_report.json"
+    committed = ROOT / "pcb" / "reports" / "DRC_REPORT.json"
+    if not committed.exists():
+        # Legacy lowercase name (case-sensitive CI must not rely on this alone)
+        committed = ROOT / "pcb" / "reports" / "drc_report.json"
     if committed.exists():
         prev = _load_json(committed)
         prev_rules = prev.get("rules") or {}

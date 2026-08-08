@@ -1,0 +1,7 @@
+device_id: dock
+evidence_class: MODELED
+updated_at_utc: "2026-08-08T01:15:00Z"
+cooling: passive_aluminum_chassis_candidate
+hotspots: [JHL9040, TPS55288, VL817]
+skin_c_max: 55
+ambient_c: 25

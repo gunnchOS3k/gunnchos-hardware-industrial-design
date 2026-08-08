@@ -1,0 +1,38 @@
+schema_version: "1.0.0"
+device: edge_io_ring
+adr: ADR-FP-008
+updated_at_utc: "2026-08-08T00:50:00Z"
+evidence_class: MODELED
+physical_execution_freeze: ACTIVE
+kicad_cli: EDMUND_ACTION_REQUIRED
+verdict: nRF52840_alone_insufficient_for_spatial_input
+battery_wh_modeled: 0.22
+rails:
+  - name: CHARGE_5V
+    volts: 5.0
+    budget_ma_avg: 40
+    budget_ma_peak: 80
+  - name: VBAT_SYS
+    volts: 3.7
+    budget_ma_avg: 8
+    budget_ma_peak: 45
+  - name: VDD_3V3
+    volts: 3.3
+    regulator_mpn: TLV70033DSET
+    alternate_mpn: TPS7A2033PDBVR
+    budget_ma_avg: 6.5
+    budget_ma_peak: 40
+    loads:
+      - {refdes: U1, mpn: nRF52840-CKAA-R, ma_avg: 2.5, ma_peak: 15}
+      - {refdes: U2, mpn: BMI270, ma_avg: 0.7, ma_peak: 1.0}
+      - {refdes: U5, mpn: IQS7222A, ma_avg: 0.15, ma_peak: 0.5, status: FOOTPRINT_REQUIRED}
+      - {refdes: U6, mpn: DWM3001C, ma_avg: 2.0, ma_peak: 25, status: FOOTPRINT_DNP_OK}
+      - {refdes: U7, mpn: BHI360, ma_avg: 0.8, ma_peak: 3.0, status: FOOTPRINT_OPTIONAL}
+      - {refdes: U_MAG, mpn: BMM350, ma_avg: 0.2, ma_peak: 0.6, status: FOOTPRINT_OPTIONAL}
+      - {refdes: U_SE, mpn: SE050C1HQ1, ma_avg: 0.3, ma_peak: 10, status: FROZEN_BASELINE}
+regulators:
+  - {mpn: BQ25100YFPR, role: charger}
+  - {mpn: TLV70033DSET, role: 3V3_LDO}
+scenarios:
+  - {id: spatial_active_no_uwb, ma_avg_modeled: 6.5}
+  - {id: spatial_active_uwb_burst, ma_avg_modeled: 9.0, escape: UWB_ON_COMPANION}

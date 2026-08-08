@@ -1,0 +1,73 @@
+{
+  "device": "dock",
+  "updated_at_utc": "2026-08-08T01:15:00Z",
+  "evidence_class": "MODELED",
+  "nodes": [
+    {
+      "ref": "U1",
+      "mpn": "JHL9040",
+      "nets": [
+        "VDD_3V3",
+        "VBUS_UPSTREAM",
+        "SS_TX",
+        "SS_RX",
+        "AUX"
+      ]
+    },
+    {
+      "ref": "U2",
+      "mpn": "TPS65994",
+      "nets": [
+        "VBUS_UPSTREAM",
+        "CC1",
+        "CC2",
+        "I2C_PD"
+      ]
+    },
+    {
+      "ref": "U3",
+      "mpn": "RTL8156",
+      "nets": [
+        "VDD_3V3",
+        "USB_HUB_DS",
+        "MDI"
+      ]
+    },
+    {
+      "ref": "U4",
+      "mpn": "VL817",
+      "nets": [
+        "VDD_5V",
+        "USB_UP",
+        "USB_A1",
+        "USB_A2"
+      ]
+    },
+    {
+      "ref": "U5",
+      "mpn": "TPS55288RPMR",
+      "nets": [
+        "AC_ADAPTER_VBUS",
+        "VBUS_UPSTREAM"
+      ]
+    },
+    {
+      "ref": "U8",
+      "mpn": "DWM3001C",
+      "nets": [
+        "VDD_3V3",
+        "SPI_UWB"
+      ],
+      "dnp": true
+    },
+    {
+      "ref": "J_RING",
+      "mpn": "pogo_pair",
+      "nets": [
+        "RING_CHARGE_5V",
+        "GND"
+      ]
+    }
+  ],
+  "kicad_cli": "ABSENT"
+}

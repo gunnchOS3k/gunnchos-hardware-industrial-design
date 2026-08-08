@@ -1,0 +1,19 @@
+device_id: student_14_5
+evidence_class: MODELED
+updated_at_utc: "2026-08-08T01:15:00Z"
+envelope:
+  sustained_skin_c_max: 45
+  sustained_soc_c_throttle: 95
+  ambient_c: 25
+cooling:
+  type: dual_heatpipe_plus_fan_candidate
+  com_module_tdp_w_sustained: 15
+  com_module_tdp_w_pl2_burst: 45
+scenarios:
+  - name: sustained_learning
+    power_w: 14
+    predicted_skin_c: 41
+  - name: av_conference
+    power_w: 18
+    predicted_skin_c: 43
+non_claims: [no chamber measurement, no IR thermography]

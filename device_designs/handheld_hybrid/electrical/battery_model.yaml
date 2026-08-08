@@ -1,0 +1,8 @@
+device_id: handheld_hybrid
+evidence_class: MODELED
+updated_at_utc: "2026-08-08T01:15:00Z"
+capacity_mah: 6000
+chemistry: Li-ion
+config_candidates: [2S1P, 1S2P]
+gauge: BQ27Z273
+charge_input: USB-C PD

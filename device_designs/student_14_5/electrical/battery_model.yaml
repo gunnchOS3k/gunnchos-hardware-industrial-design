@@ -1,0 +1,12 @@
+device_id: student_14_5
+evidence_class: MODELED
+updated_at_utc: "2026-08-08T01:15:00Z"
+chemistry: Li-ion
+config: 4S1P
+capacity_wh: 60
+voltage_nom: 14.8
+gauge: BQ40Z50-R2
+charger: BQ25792RQMR
+charge_input: USB-C PD up to 100W negotiated
+cycle_life_target: 800
+safety: [UN38.3 pack cert at purchase time, not claimed now]

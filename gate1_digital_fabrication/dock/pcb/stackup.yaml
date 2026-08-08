@@ -1,0 +1,17 @@
+board: dock_main_pcb
+layers: 4
+updated_at_utc: "2026-08-08T01:15:00Z"
+stackup:
+  - {name: F.Cu, type: copper, oz: 1}
+  - {name: dielectric1, type: prepreg, thickness_mm: 0.2, er: 4.5}
+  - {name: In1.Cu, type: copper, oz: 1, role: GND}
+  - {name: dielectric2, type: core, thickness_mm: 0.7, er: 4.5}
+  - {name: In2.Cu, type: copper, oz: 1, role: PWR}
+  - {name: dielectric3, type: prepreg, thickness_mm: 0.2, er: 4.5}
+  - {name: B.Cu, type: copper, oz: 1}
+impedance_targets:
+  - {net_class: USB3_SS, ohms: 90, type: diff}
+  - {net_class: USB4_SS, ohms: 85, type: diff}
+  - {net_class: HDMI, ohms: 100, type: diff}
+evidence_class: MODELED
+cli_status: EDMUND_ACTION_REQUIRED
