@@ -1,0 +1,15 @@
+device_id: handheld_hybrid
+updated_at_utc: "2026-08-08T19:40:00Z"
+evidence_class: MODELED
+radios:
+  - mpn: AP6275P
+    type: wifi6e_bt
+    antennas: 2
+    bands_ghz: [2.4, 5, 6]
+  - mpn: RM520N-GL
+    type: wwan_5g_sub6
+    populated: optional_thermal_gated
+    antennas: 4
+    ntn: false
+    is_6g: false
+non_claims: [no chamber measurement, no NTN]

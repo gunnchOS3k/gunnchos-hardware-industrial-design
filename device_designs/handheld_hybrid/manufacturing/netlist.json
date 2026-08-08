@@ -1,0 +1,84 @@
+{
+  "device": "handheld_hybrid",
+  "updated_at_utc": "2026-08-08T19:40:00Z",
+  "evidence_class": "MODELED",
+  "compute_mpn": "RM121-D8E32",
+  "nodes": [
+    {
+      "ref": "USOM1",
+      "mpn": "RM121-D8E32",
+      "nets": [
+        "VCC_5V",
+        "MIPI_DSI_OR_EDP",
+        "USB3",
+        "I2C",
+        "SPI",
+        "GPIO_HID",
+        "SDMMC"
+      ]
+    },
+    {
+      "ref": "JSOM1",
+      "mpn": "SODIMM-260",
+      "nets": [
+        "VCC_5V",
+        "MIPI_DSI_OR_EDP",
+        "USB3",
+        "I2C",
+        "SPI",
+        "GPIO_HID",
+        "SDMMC"
+      ]
+    },
+    {
+      "ref": "U_WIFI",
+      "mpn": "AP6275P",
+      "nets": [
+        "SDIO_OR_PCIE",
+        "VDD_3V3"
+      ]
+    },
+    {
+      "ref": "U_WWAN",
+      "mpn": "RM520N-GL",
+      "nets": [
+        "PCIE_OR_USB3"
+      ],
+      "dnp": true
+    },
+    {
+      "ref": "U_HID",
+      "mpn": "STM32F103C8T6",
+      "nets": [
+        "USB_HID",
+        "GPIO_BTNS",
+        "ADC_STICKS"
+      ]
+    },
+    {
+      "ref": "U_PD",
+      "mpn": "TPS65987DDHRSHR",
+      "nets": [
+        "VBUS",
+        "CC1",
+        "CC2"
+      ]
+    },
+    {
+      "ref": "U_CHG",
+      "mpn": "BQ25895RTWR",
+      "nets": [
+        "VBUS",
+        "VBAT"
+      ]
+    },
+    {
+      "ref": "U_SE",
+      "mpn": "SE050C1HQ1",
+      "nets": [
+        "I2C_SE"
+      ]
+    }
+  ],
+  "kicad_cli": "ABSENT"
+}

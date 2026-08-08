@@ -1,36 +1,32 @@
-# Full product hardware family depth
+# Full product hardware design release (Continuation IV)
 
-Branch: `cursor/full-product-hardware-family-depth`  
-Base: `origin/main` @ `2ff20bedfe07d1a951872973155202c3b632e8b1`  
-Updated: 2026-08-08T01:15:00Z
+Branch: `cursor/full-product-hardware-design-release`  
+Base: `origin/main` @ `79b11aba3ca9d4db7051b6d5ccb3571e72503396`  
+Updated: 2026-08-08T19:40:00Z
 
 PHYSICAL_EXECUTION_FREEZE ACTIVE — no fab, no purchase, draft digital only
 
+## Intent
+Move beyond family **depth/skeleton** toward **HARDWARE_DESIGN_RELEASE_CANDIDATE** packages for all five products, with **exact orderable MPNs** (no vague COM-class strings, no fake CPU BGA).
+
 ## Products (five)
-| Product | Hardware package | Strategy |
+| Product | Hardware package | Exact compute MPN |
 |---|---|---|
-| Student 14.5 | `device_designs/student_14_5/` | **COM module + carrier** (no fake proprietary CPU BGA) |
-| DS-XL Coder | `device_designs/ds_xl_coder/` | Shared COM + dual-eDP carrier + second-display ICD |
-| Handheld Hybrid | `device_designs/handheld_hybrid/` | RK3588S **SoM + carrier** sized for sustained game load |
-| Edge I/O Rings | `device_designs/edge_io_rings/` + `gate1_digital_fabrication/edge_io_ring/` | Native EDA tracks ADR-FP-008 fusion BOM |
-| Dock | `device_designs/dock/` + `gate1_digital_fabrication/dock/` | Discrete USB4/PD PCB package (beyond skeleton) |
+| Student 14.5 | `device_designs/student_14_5/` | ADLINK **COM-HPC-mMTL-155H-32G** + carrier |
+| DS-XL Coder | `device_designs/ds_xl_coder/` | Shared COM + dual-eDP carrier |
+| Handheld Hybrid | `device_designs/handheld_hybrid/` | Radxa NX5 **RM121-D8E32** + game carrier |
+| Edge I/O Rings | `device_designs/edge_io_rings/` + gate1 | **nRF52840-QIAA-R** + fusion BOM; Fusion CAD package |
+| Dock | `device_designs/dock/` + gate1 | **JHL9040** discrete PCB (beyond skeleton) |
 
-## Cross-cutting
-- Driver classification: `docs/full_product_family/DRIVER_CLASSIFICATION.md`
-- Modem freeze: `docs/full_product_family/MODEM_ARCHITECTURE_FREEZE.md`
-- Family status table: `docs/full_product_family/FAMILY_STATUS.md`
-- KiCad status: `docs/full_product_family/KICAD_STATUS.md`
-- COM/carrier amendment: `docs/adr/ADR-HW-001-com-carrier-strategy.md`
+## Cross-cutting index
+- Exact MPN matrix: `EXACT_MPN_MATRIX.md`
+- Procurement/lifecycle: `PROCUREMENT_LIFECYCLE.md`
+- Release status (honest): `HARDWARE_DESIGN_RELEASE_STATUS.md`
+- Release COMPLETE criteria: `RELEASE_CRITERIA.md`
+- Driver classification: `DRIVER_CLASSIFICATION.md`
+- Modem freeze + public verify: `MODEM_ARCHITECTURE_FREEZE.md`, `MODEM_RM520N_GL_PUBLIC_VERIFY.md`
+- KiCad / EDMUND: `KICAD_STATUS.md`
+- ADR: `docs/adr/ADR-HW-001-com-carrier-strategy.md`
 
-## Tokens claimed
-- `HARDWARE_FAMILY_DEPTH_DIGITAL_PACKAGE`
-- `STUDENT_COM_CARRIER_ARCHITECTURE_DOCUMENTED`
-- `DS_XL_SECOND_DISPLAY_ICD_DOCUMENTED`
-- `HANDHELD_SUSTAINED_GAME_LOAD_MODEL_DOCUMENTED`
-- `RING_EDA_TRACKS_ADR_FP_008_FUSION_BOM`
-- `DOCK_PCB_DIGITAL_PACKAGE_BEYOND_SKELETON`
-
-## Tokens NOT claimed
-- `GATE_2_PASS`, any `*_PHYSICAL_PROTOTYPE_COMPLETE`, fab/purchase, FCC/CE/USB-IF logos
-- `KICAD_CLI_ERC_PASS`, `KICAD_CLI_DRC_PASS`, Gerber manufacture-ready
-- Fake 6G modem certification / proprietary Ultra 7 BGA fanout designed in-house
+## Tokens
+See `TOKENS.md`. **No** `FULL_HARDWARE_DESIGN_RELEASE_COMPLETE` claimed.

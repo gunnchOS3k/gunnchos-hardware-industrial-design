@@ -1,0 +1,59 @@
+{
+  "device": "ds_xl_coder",
+  "updated_at_utc": "2026-08-08T19:40:00Z",
+  "evidence_class": "MODELED",
+  "compute_mpn": "COM-HPC-mMTL-155H-32G",
+  "nodes": [
+    {
+      "ref": "UCOM1",
+      "mpn": "COM-HPC-mMTL-155H-32G",
+      "nets": [
+        "COM_VIN",
+        "EDP0",
+        "EDP1_OR_DDI",
+        "USB4",
+        "PCIE_NVME",
+        "PCIE_WWAN",
+        "ESPI"
+      ]
+    },
+    {
+      "ref": "J_EDP_UP",
+      "mpn": "eDP_upper",
+      "nets": [
+        "EDP0"
+      ]
+    },
+    {
+      "ref": "J_EDP_LO",
+      "mpn": "eDP_lower",
+      "nets": [
+        "EDP1_OR_BRIDGE"
+      ]
+    },
+    {
+      "ref": "U_BRIDGE",
+      "mpn": "LT8711UX",
+      "nets": [
+        "DDI",
+        "EDP1_OR_BRIDGE"
+      ],
+      "dnp": true
+    },
+    {
+      "ref": "U_WIFI",
+      "mpn": "BE200",
+      "nets": [
+        "CNVI_OR_PCIE"
+      ]
+    },
+    {
+      "ref": "U_WWAN",
+      "mpn": "RM520N-GL",
+      "nets": [
+        "PCIE_OR_USB3"
+      ]
+    }
+  ],
+  "kicad_cli": "ABSENT"
+}

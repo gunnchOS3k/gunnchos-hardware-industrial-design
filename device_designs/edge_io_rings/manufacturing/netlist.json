@@ -1,0 +1,68 @@
+{
+  "device": "edge_io_rings",
+  "updated_at_utc": "2026-08-08T19:40:00Z",
+  "evidence_class": "MODELED",
+  "compute_mpn": "nRF52840-QIAA-R",
+  "nodes": [
+    {
+      "ref": "U1",
+      "mpn": "nRF52840-QIAA-R",
+      "nets": [
+        "VDD",
+        "SWD",
+        "I2C",
+        "SPI",
+        "ANT_BLE"
+      ]
+    },
+    {
+      "ref": "U2",
+      "mpn": "BMI270",
+      "nets": [
+        "I2C",
+        "INT"
+      ]
+    },
+    {
+      "ref": "U3",
+      "mpn": "IQS7222A",
+      "nets": [
+        "I2C"
+      ]
+    },
+    {
+      "ref": "U4",
+      "mpn": "DWM3001C",
+      "nets": [
+        "SPI_UWB",
+        "VDD"
+      ],
+      "dnp": true
+    },
+    {
+      "ref": "U5",
+      "mpn": "BHI360",
+      "nets": [
+        "SPI_OR_I2C"
+      ],
+      "dnp": true
+    },
+    {
+      "ref": "U6",
+      "mpn": "SE050C1HQ1",
+      "nets": [
+        "I2C_SE"
+      ]
+    },
+    {
+      "ref": "U7",
+      "mpn": "npm1300-CAAA-R",
+      "nets": [
+        "VBAT",
+        "VDD",
+        "I2C_PMIC"
+      ]
+    }
+  ],
+  "kicad_cli": "ABSENT"
+}

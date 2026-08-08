@@ -1,6 +1,6 @@
 # Handheld Hybrid architecture
 
-Updated: 2026-08-08T01:15:00Z
+Updated: 2026-08-08T19:40:00Z
 
 ```
 [RK3588S SoM — 4×A76+4×A55, Mali-G610 MP4, 16GB LPDDR4x, UFS on-SoM or carrier]

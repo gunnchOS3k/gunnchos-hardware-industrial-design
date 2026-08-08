@@ -1,7 +1,8 @@
 # Modem architecture freeze notes
 
-Updated: 2026-08-08T01:15:00Z  
-Canonical ADR: field-kit `ADR-FP-005` (mirrored intent here; no field-kit PR required).
+Updated: 2026-08-08T19:40:00Z  
+Canonical ADR: field-kit `ADR-FP-005` (mirrored intent here).  
+Public verification detail: `MODEM_RM520N_GL_PUBLIC_VERIFY.md`
 
 ## Frozen
 - Primary WWAN: **Quectel RM520N-GL** (M.2 3052), **5G NR Sub-6** + LTE fallback
@@ -13,7 +14,7 @@ Canonical ADR: field-kit `ADR-FP-005` (mirrored intent here; no field-kit PR req
 ## Forbidden claims
 - Not 6G certified
 - Not “fake 6G modem” in BOM or marketing
-- No NTN/satellite claim unless separate ADR with real module MPN
+- **No NTN/satellite claim** — RM520N-GL public listings do not support NTN; do not infer
 
 ## Product applicability
 | Product | Modem |

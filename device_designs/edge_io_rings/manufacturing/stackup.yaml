@@ -1,0 +1,11 @@
+board: edge_io_ring_main
+product: edge_io_rings
+layers: 4
+updated_at_utc: "2026-08-08T19:40:00Z"
+compute_mpn: "nRF52840-QIAA-R"
+evidence_class: MODELED
+cli_status: EDMUND_ACTION_REQUIRED
+physical_execution_freeze: true
+stackup_notes: >
+  Target stackup for digital package. Final dielectric thicknesses and
+  impedance coupons to be confirmed with fab house after freeze lifts.

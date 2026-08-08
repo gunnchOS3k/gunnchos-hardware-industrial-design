@@ -1,6 +1,7 @@
 # Sustained game load — Handheld Hybrid
 
-Updated: 2026-08-08T01:15:00Z  
+Updated: 2026-08-08T19:40:00Z
+Exact SoM: Radxa NX5 **RM121-D8E32** (8GB LPDDR4X — honest vs prior vague 16GB SoM string)  
 Evidence: MODELED
 
 ## Target workload

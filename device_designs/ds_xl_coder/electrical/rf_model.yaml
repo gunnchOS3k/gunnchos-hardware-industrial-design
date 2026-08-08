@@ -1,0 +1,21 @@
+device_id: ds_xl_coder
+updated_at_utc: "2026-08-08T19:40:00Z"
+evidence_class: MODELED
+physical_execution_freeze: true
+radios:
+  - mpn: BE200
+    type: wifi7_bt
+    antennas: 2
+    bands_ghz: [2.4, 5, 6]
+  - mpn: RM520N-GL
+    type: wwan_5g_sub6
+    antennas: 4
+    gnss_optional: true
+    ntn: false
+    is_6g: false
+    public_verify: docs/full_product_family/MODEM_RM520N_GL_PUBLIC_VERIFY.md
+keepouts_mm:
+  wifi_ant_clearance: 5
+  wwan_ant_clearance: 8
+  metal_exclusion_around_ant: true
+non_claims: [no chamber measurement, no OTA TRP/TIS, no NTN]

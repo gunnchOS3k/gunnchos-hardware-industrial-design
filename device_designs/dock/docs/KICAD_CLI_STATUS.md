@@ -1,11 +1,6 @@
-# Dock KiCad CLI
+# Dock KiCad CLI status
 
-`kicad-cli` / `kicad` **not found** on agent host (2026-08-08T01:15:00Z).
+Updated: 2026-08-08T19:40:00Z
 
-```
-EDMUND_ACTION_REQUIRED: Approve macOS admin/install prompt for KiCad.
-```
-
-Pending after install:
-1. `kicad-cli sch erc device_designs/dock/kicad/dock.kicad_sch`
-2. `kicad-cli pcb drc device_designs/dock/pcb/dock.kicad_pcb`
+`kicad-cli` ABSENT → EDMUND_ACTION_REQUIRED  
+Source PCB package continues to deepen; no ERC/DRC pass claimed.
