@@ -1,0 +1,10 @@
+{
+  "generated_at_utc": "2026-08-08T00:29:08Z",
+  "token_RING_KICAD_CLI_VALIDATION_PASS": false,
+  "kicad_cli_available": false,
+  "brew_cask_attempted": "kicad@10.0.5",
+  "blocker": "sudo_password_required_for_/Library/Application Support/kicad",
+  "edmound_action_required": "EDMUND_ACTION_REQUIRED: Approve the macOS administrator/install prompt for KiCad.",
+  "sudo_chown_brew_ownership_issue": false,
+  "physical_execution_freeze": true
+}
