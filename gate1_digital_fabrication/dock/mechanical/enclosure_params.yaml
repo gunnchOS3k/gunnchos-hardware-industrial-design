@@ -1,0 +1,7 @@
+device_id: dock
+updated_at_utc: "2026-08-08T00:50:00Z"
+units: mm
+envelope: {length: 140, width: 90, height: 35}
+ring_cradle: {pocket_od_mm: 28, pogo_pitch_mm: 6.0}
+status: CAD_PENDING
+mass_g_estimate_modeled: 320

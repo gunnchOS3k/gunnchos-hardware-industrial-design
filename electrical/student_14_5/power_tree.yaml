@@ -1,0 +1,13 @@
+device_id: student_14_5
+evidence_class: MODELED
+updated_at_utc: "2026-08-08T00:50:00Z"
+battery_wh_modeled: 60
+rails:
+  - {name: VBAT, volts: 14.8, gauge_mpn: BQ40Z50-R2}
+  - {name: VSYS, regulator_mpn: BQ25792RQMR, alternate_mpn: BQ25798}
+  - {name: VBUS_PD, regulator_mpn: TPS65994ADFBRQ1, alternate_mpn: CYPD6227-96LQXIT}
+  - {name: VDD_SOC_VCORE, regulator_mpn: MP2978A, alternate_mpn: TPS536C7}
+  - {name: VDD_GT, regulator_mpn: MP2040, alternate_mpn: TPS53667}
+  - {name: VDD_5V_SYS, regulator_mpn: TPS51396AJYYR, alternate_mpn: TPS62175}
+  - {name: VDD_3V3, regulator_mpn: TPS62864YCPR, ldo_holdup_mpn: TLV75533PDRVR}
+  - {name: VDD_1V8, regulator_mpn: TPS62864YCPR, ldo_holdup_mpn: TLV75518PDRVR}

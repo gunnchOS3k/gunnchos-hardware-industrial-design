@@ -25,3 +25,18 @@ Board: `edge_io_ring_evt0` v0.1.0-dev
 | 3V3 | 3.3 V | U6 | IMU, haptic, IO pull-ups | Always-on when VBAT present |
 
 Voltage domain checks: SWD/I2C at 3V3; RF path AC-coupled/passive; CHARGE_5V never routed to 3V3 IO.
+
+---
+
+## Wave A2 / ADR-FP-008 addendum (2026-08-08T00:50:00Z)
+
+**Verdict:** nRF52840 alone is **insufficient** for spatial-input promise.
+
+| Load | MPN | Avg | Peak | Status |
+|---|---|---|---|---|
+| Capacitive | IQS7222A | 0.15 mA | 0.5 mA | FOOTPRINT_REQUIRED |
+| UWB | DWM3001C | 2.0 mA | 25 mA | FOOTPRINT; DNP → UWB_ON_COMPANION |
+| Sensor hub | BHI360 | 0.8 mA | 3.0 mA | FOOTPRINT_OPTIONAL |
+| Mag | BMM350 | 0.2 mA | 0.6 mA | FOOTPRINT_OPTIONAL |
+
+See `power_budget.yaml`.

@@ -1,4 +1,13 @@
-item_id,quantity,reference_designator,manufacturer,manufacturer_part_number,description,package,lifecycle_status,unit_cost_estimate,moq,lead_time,criticality,repair_part,compliance_notes
-PWR001,1,U1,TBD,TBD-PMIC,PMIC / power management,QFN,active,TODO_quote,100,8w,high,yes,battery_safety_review
-MCU001,1,U2,TBD,TBD-SOC,Application processor,BGA,active,TODO_quote,50,12w,high,no,
-WIFI001,1,U3,TBD,TBD-WIFI7,Wi-Fi module research option,module,active,TODO_quote,25,10w,medium,yes,FCC_pre_scan_TBD
+avl_id,category,manufacturer,mpn,status,notes
+AVL-S145-MCU,compute,Intel,Core Ultra 7 155H,PENDING_OEM,ADR-FP-001
+AVL-S145-PD,power,Texas Instruments,TPS65994ADFBRQ1,CANDIDATE,PD
+AVL-S145-CHG,power,Texas Instruments,BQ25792RQMR,CANDIDATE,NVDC
+AVL-S145-V5,power,Texas Instruments,TPS51396AJYYR,CANDIDATE,5V buck
+AVL-S145-BUCK,power,Texas Instruments,TPS62864YCPR,CANDIDATE,3V3/1V8
+AVL-S145-LDO33,power,Texas Instruments,TLV75533PDRVR,CANDIDATE,LDO
+AVL-S145-LDO18,power,Texas Instruments,TLV75518PDRVR,CANDIDATE,LDO
+AVL-S145-GAUGE,battery,Texas Instruments,BQ40Z50-R2,CANDIDATE,fuel gauge
+AVL-S145-WIFI,wireless,Intel,BE200,CANDIDATE,
+AVL-S145-WWAN,wireless,Quectel,RM520N-GL,CANDIDATE,ADR-FP-005
+AVL-S145-TPM,security,Infineon,SLB9672XQ2.0,CANDIDATE,
+AVL-S145-DISP,display,BOE/AUO/TBD,14.5in_2880x1800_eDP,PENDING_QUOTE,ADR-FP-007
