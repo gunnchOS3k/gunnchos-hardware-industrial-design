@@ -1,6 +1,6 @@
 # Mechanical Correctness Validation
 
-**Generated:** 2026-06-21 22:30 UTC
+**Generated:** 2026-08-08 20:59 UTC
 
 > Validates artifact presence and broad bounding-box plausibility only. **Mechanical correctness is not proven.**
 

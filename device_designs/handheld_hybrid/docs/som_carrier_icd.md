@@ -1,18 +1,24 @@
-# ICD — Radxa NX5 RM121-D8E32 ↔ Handheld game carrier
+# ICD — Radxa NX5 RM121-D8E32 ↔ Handheld game carrier (Continuation VI)
 
-Updated: 2026-08-08T19:40:00Z  
-Docs: https://dl.radxa.com/nx5/radxa_nx5_product_brief.pdf · https://docs.radxa.com/en/som/nx/nx5
+Updated: 2026-08-08T20:58:59Z  
+Docs: https://dl.radxa.com/nx5/radxa_nx5_product_brief.pdf · pinout xlsx in-repo evidence  
+Evidence rule: **PUBLIC_PINOUT** nets only — no invented remux.
 
-| Group | Direction | Notes | Evidence |
-|---|---|---|---|
-| 5V DC (max 5.2V) | carrier→SoM | NX5 power input | PUBLIC_DOCS |
-| HDMI / eDP / DP+USB3 combo / MIPI DSI | SoM→display path | Game SKU uses eDP or MIPI DSI to 7" panel | PUBLIC_DOCS + MODELED |
-| USB3 OTG / Host | SoM↔Type-C / dock | | MODELED |
-| PCIe2.0 / SATA mux notes | SoM→optional WWAN or storage | Follow Radxa pinout mux | PUBLIC_DOCS |
-| SDMMC | SoM↔µSD | | PUBLIC_DOCS |
-| I2C/SPI/UART/GPIO/PWM | SoM↔HID MCU, sticks, SE | | MODELED |
-| Gigabit Ethernet PHY on SoM | optional unused in handheld | | PUBLIC_DOCS |
+| Group | Direction | SoM pins (public) | Notes | Evidence |
+|---|---|---|---|---|
+| Power 5V | carrier→SoM | VCC_SYSIN **251–260** | Max 5.2V; brief Vin | PUBLIC_PINOUT + PUBLIC_DOCS |
+| GND | — | multiple GND pins (e.g. 1,2,7,8,…) | Return path | PUBLIC_PINOUT |
+| Display | SoM→panel | HDMI0/eDP lanes **63,65,69,71,75,77,81,83** and/or MIPI DPHY TX **70,72,76,78,82,84,90,92**; BL PWM **220**; LCD_RESET **126** | Game SKU panel path | PUBLIC_PINOUT |
+| USB2 | SoM↔ports | USB20_HOST0_DM **109**, HOST1_DM **121** | Host ports | PUBLIC_PINOUT |
+| USB3 SS | SoM↔Type-C | USB30_2_SS* **167,169,172,174** (mux w/ PCIe/SATA) | Follow Func columns | PUBLIC_PINOUT |
+| Controls / HID | SoM↔STM32 | I2C0_M2 **185/187**; sticks/buttons on HID MCU | HID USB to SoM host | PUBLIC_PINOUT + MODELED |
+| WWAN opt | SoM→M.2 | PCIe2.0 **131,133,134,136** + refclk **160,162** | DNP OK; RM520N-GL; not 6G/NTN | PUBLIC_PINOUT |
+| Audio | SoM↔codec | I2S0 **193,195,197,199,212** | | PUBLIC_PINOUT |
+| Storage | SoM↔µSD | SDMMC **88,208,219,221,223,225,227,229** | eMMC on-module | PUBLIC_PINOUT |
+| Debug | SoM→header | UART2 **236/238** | | PUBLIC_PINOUT |
 
-Connector: **260-pin SODIMM**. No bare RK3588S BGA. Lifecycle: brief availability ≥ Sep 2033.
+Connector: **260-pin SODIMM**. Full table: `docs/radxa_nx5_public_pinout_table.csv`.  
+No bare RK3588S BGA. COM-HPC NDA **does not block** this product.
 
-Continuation V: pin-by-pin map is **PUBLIC_PINOUT** at https://dl.radxa.com/nx5/ (`radxa_nx5_260_pinout_v1100.xlsx`, `radxa_nx5_pinout_v1.1.xlsx`). Carrier nets must cite that table — no invented remux. Module STP: `radxa_nx5_v1.1_3d_stp.zip`. See `docs/full_product_family/COM_HPC_NX5_FEASIBILITY_PINOUT.md`.
+## Token
+`HANDHELD_PUBLIC_PINOUT_EDA_COMPLETE`

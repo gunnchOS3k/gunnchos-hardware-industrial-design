@@ -9,7 +9,7 @@ Handheld Hybrid,WWAN_opt,Quectel,RM520N-GL,Optional 5G M.2,1,alternate,,FOOTPRIN
 Handheld Hybrid,HID_MCU,STMicro,STM32F103C8T6,Gamepad HID MCU,1,preferred,nRF52840-QIAA-R,FROZEN_BASELINE,,
 Handheld Hybrid,PD,Texas Instruments,TPS65987DDHRSHR,USB-C PD,1,preferred,IP2726 class,FROZEN_BASELINE,,
 Handheld Hybrid,Charger,Texas Instruments,BQ25895RTWR,Single-cell pack charger class,1,preferred,BQ25792RQMR,FROZEN_BASELINE,topology-dependent,
-Handheld Hybrid,FuelGauge,Texas Instruments,BQ27Z561YPHR,Fuel gauge,1,preferred,BQ27Z273,FROZEN_BASELINE,,
+Handheld Hybrid,FuelGauge,Texas Instruments,BQ27Z561YPHR,Fuel gauge,1,preferred,BQ27Z561YPHR,FROZEN_BASELINE,,
 Handheld Hybrid,Battery,OEM,6000mAh_1S2P_or_2S,Game pack,1,preferred,,FROZEN_BASELINE,MODELED,
 Handheld Hybrid,Sticks,ALPS,RKJXV122400D,Analog stick,2,preferred,,AVL_PENDING,,
 Handheld Hybrid,Buttons,OEM,tactile_ABXY_LR_DPAD,Button set,1,preferred,,AVL_PENDING,,

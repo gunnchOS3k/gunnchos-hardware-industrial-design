@@ -1,8 +1,8 @@
-# Ring BOM ↔ schematic ↔ firmware parity (hardware ↔ edge-io)
+# Ring BOM ↔ schematic ↔ firmware parity (Continuation VI)
 
-Updated: 2026-08-08T20:15:00Z  
-Hardware repo branch: `cursor/full-product-continuation-v-hardware-release`  
-edge-io reference SHA: `fc617e831916362e77aa157d77d458e935dc4cfa`
+Updated: 2026-08-08T20:58:59Z  
+Hardware branch: `cursor/full-product-continuation-vi-eda-closure`  
+edge-io reference baseline: `gate1_digital_fabrication/edge_io_ring/validation/baselines/pinout_baseline.json`
 
 PHYSICAL_EXECUTION_FREEZE ACTIVE — digital parity only.
 
@@ -11,39 +11,47 @@ PHYSICAL_EXECUTION_FREEZE ACTIVE — digital parity only.
 |---|---|
 | Hardware BOM | `device_designs/edge_io_rings/bom/assembly_bom.csv` |
 | Hardware schematic | `device_designs/edge_io_rings/kicad/edge_io_rings.kicad_sch` |
-| edge-io firmware pinout | `gate1_digital_fabrication/ring_firmware/dts/pinout.json` |
-| edge-io board DT | `gate1_digital_fabrication/ring_firmware/boards/edge_io_ring/edge_io_ring.dts` |
-| edge-io Zephyr smoke | `gate1_digital_fabrication/ring_firmware/zephyr_app/src/main.c` |
+| In-repo pinout baseline | `gate1_digital_fabrication/edge_io_ring/validation/baselines/pinout_baseline.json` |
+| Proposed DT overlay notes | this file §Proposed edge-io DT parity |
 
 ## Parity matrix
 
-| MPN / function | In hardware BOM | In hardware KiCad Value | In edge-io pinout/DT | Firmware driver status | Verdict |
+| MPN / function | Hardware BOM | Hardware KiCad Value | Baseline DT/pinout | Firmware status | Verdict |
 |---|---|---|---|---|---|
-| nRF52840-QIAA-R | YES | YES (U1) | YES (mcu) | Zephyr west smoke build | **PARITY** |
-| BMI270 | YES | YES (U2) | YES I2C `0x68` + INT P0.11 | Stub/DT only | **PARITY (DT)** |
-| DRV2605L | YES | (BOM haptic driver) | YES I2C `0x5A` | Stub/DT only | **PARITY (DT)** |
-| IQS7222A (cap touch) | YES | YES (U3) | **NO** | Missing | **GAP** → edge-io PR |
-| DWM3001C (UWB) | YES (DNP OK) | YES DNP (U4) | **NO** | Missing | **GAP** (optional EVT) |
-| BHI360 | YES alternate | YES DNP (U5) | **NO** | Missing | **GAP** (optional) |
-| BMM350 | YES optional | YES DNP (U6) | **NO** | Missing | **GAP** (optional) |
-| SE050C1HQ1 | YES | YES (U7) | **NO** | Missing | **GAP** → edge-io PR |
-| npm1300-CAAA-R | YES | (power tree) | **NO** (only CHG_STATUS GPIO) | Partial | **PARTIAL** |
-| Johanson 2450AT18A100 | YES | RF model | N/A antenna | N/A | BOM-only OK |
-| I2C SDA/SCL | implied | nets MODELED | P0.26 / P0.27 | DT aliases | **PARITY** |
-| CHG_STATUS | pogo/ESD path | MODELED | P0.02 | DT | **PARITY** |
+| nRF52840-QIAA-R | YES | YES (U1) | YES MCU | Zephyr smoke | **PARITY** |
+| BMI270 | YES | YES (U2) | I2C `0x68` + INT P0.11 | DT stub | **PARITY (DT)** |
+| DRV2605LDGSR | YES | YES (U8) | I2C `0x5A` proposed | Stub | **PARITY (DT note)** |
+| IQS7222A | YES | YES (U3) | I2C `0x44` class + RDY GPIO proposed | Missing in baseline | **GAP → edge-io** |
+| DWM3001C | YES DNP | YES DNP (U4) | SPI reserved proposed | Optional | **GAP optional** |
+| BHI360 | YES alt | YES DNP (U5) | — | Optional | **GAP optional** |
+| BMM350 | YES opt | YES DNP (U6) | — | Optional | **GAP optional** |
+| SE050C1HQ1 | YES | YES (U7) | I2C `0x48`/`0x1a` family proposed | Missing | **GAP → edge-io** |
+| npm1300-CAAA-R | YES | YES (U9 Cont VI) | CHG_STATUS P0.02 exists | Partial | **PARTIAL→IMPROVED** |
+| TLV75533PDBVR | YES | YES (U10 Cont VI) | power | N/A | **PARITY** |
+| Johanson 2450AT18A100 | YES | YES (ANT1) | RF_ANT | N/A | **PARITY** |
+| I2C SDA/SCL | implied | nets | P0.26 / P0.27 | DT | **PARITY** |
+
+## Proposed edge-io DT parity (second PR — do not forge physical boot)
+
+```
+/* proposed overlay — addresses from public datasheets; GPIOs TBD with board bring-up */
+&i2c0 {
+  iqs7222a@44 { compatible = "azoteq,iqs7222a"; reg = <0x44>; /* CAP_RDY GPIO TBD */ };
+  se050@48 { compatible = "nxp,se05x"; reg = <0x48>; };
+  drv2605@5a { compatible = "ti,drv2605l"; reg = <0x5a>; };
+  npm1300@6b { compatible = "nordic,npm1300"; reg = <0x6b>; };
+};
+```
+
+GPIO freeze already in baseline: I2C P0.26/P0.27, IMU_INT P0.11, CHG_STATUS P0.02.  
+New GPIOs for CAP_RDY / SE_IRQ / HAPTIC_TRIG remain **TBD_BOARD** — not invented.
 
 ## Honesty
-- edge-io Zephyr app at reference SHA is a **west build smoke** (`printk` loop) — not full sensor fusion firmware.
-- Hardware schematic still uses structural `Device:R` placeholders — Values track BOM MPNs; footprints incomplete → blocks `FULL_HARDWARE_DESIGN_RELEASE_COMPLETE`.
-- Pin numbers in edge-io are labeled EVT0 assumptions pending physical verify (`RING_PHYSICAL_BOOT_PENDING`).
-
-## Recommended edge-io follow-up (second PR)
-Branch suggestion: `cursor/full-product-continuation-v-ring-firmware-parity`
-1. Extend `pinout.json` + DT with IQS7222A + SE050 I2C addresses (from datasheets) and reserved GPIOs.
-2. Document DNP optional lines (DWM3001C, BHI360, BMM350) as `#if` stubs.
-3. Align npm1300 CHG/INT bindings with hardware power tree.
-4. Do **not** claim `RING_PHYSICAL_BOOT` under freeze.
+- Structural `Device:R` placeholders remain → blocks `FULL_HARDWARE_DESIGN_RELEASE_COMPLETE`.
+- Cont VI aligned KiCad Values to BOM preferred PMIC/LDO MPNs.
+- No `RING_PHYSICAL_BOOT` claim under freeze.
 
 ## Tokens
-- Claimed here: `RING_BOM_SCH_FW_PARITY_MATRIX_DOCUMENTED`
-- Not claimed: full firmware feature parity / physical boot
+- `RING_EDA_DT_PARITY_NOTES_COMPLETE`
+- `RING_BOM_SCH_FW_PARITY_MATRIX_DOCUMENTED` (updated)
+- Not claimed: `RING_DESIGN_RELEASE_COMPLETE`, full firmware feature parity

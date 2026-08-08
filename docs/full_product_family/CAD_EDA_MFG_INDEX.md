@@ -1,13 +1,13 @@
-# CAD / EDA / Manufacturing index
+# CAD / EDA / Manufacturing index — Continuation VI
 
-Updated: 2026-08-08T20:15:00Z
+Updated: 2026-08-08T20:58:59Z
 
-| Product | EDA | CAD | Manufacturing |
+| Product | EDA | Public engineerability | Manufacturing |
 |---|---|---|---|
-| Student | `device_designs/student_14_5/kicad/` | `device_designs/student_14_5/cad/` + OpenSCAD | `manufacturing/` + Gerber/STEP/PnP plans + ERC_DRC_STATUS.json |
-| DS-XL | `device_designs/ds_xl_coder/kicad/` | `device_designs/ds_xl_coder/cad/` + OpenSCAD | same deepen |
-| Handheld | `device_designs/handheld_hybrid/kicad/` | cad + Radxa STP reference | same deepen |
-| Rings | device_designs + gate1 KiCad | **Fusion package** `cad/fusion/` + OpenSCAD twin | same deepen + `docs/BOM_SCH_FW_PARITY.md` |
-| Dock | device_designs/dock/kicad + pcb | enclosure params + SCAD | same deepen; USB4/TB4 freeze |
+| Student | `device_designs/student_14_5/kicad/` | **BLOCKED_NDA** (Option3) | plans + NDA_BLOCKER |
+| DS-XL | `device_designs/ds_xl_coder/kicad/` | **BLOCKED_NDA** | plans + NDA_BLOCKER |
+| Handheld | PUBLIC_PINOUT carrier sch + 260-pin CSV | **OPEN** | deepened checklist |
+| Rings | KiCad + DT parity notes | OPEN (public Nordic) | deepened checklist |
+| Dock | TB4 topology sch/netlist | Topology open; pkg pins NDA | deepened checklist |
 
-KiCad CLI: **ABSENT → EDMUND_ACTION_REQUIRED** (brew admin; does not stall other product deepening).
+KiCad CLI: resume via `make kicad-validate-family` / `scripts/run_family_kicad_cli.sh`.

@@ -1,6 +1,6 @@
 # FULL_HARDWARE_DESIGN_RELEASE_COMPLETE — criteria
 
-Updated: 2026-08-08T20:15:00Z
+Updated: 2026-08-08T20:58:59Z
 
 A product may claim `FULL_HARDWARE_DESIGN_RELEASE_COMPLETE` only if **all** are true:
 
@@ -15,12 +15,12 @@ A product may claim `FULL_HARDWARE_DESIGN_RELEASE_COMPLETE` only if **all** are 
 9. Dock (if applicable): architecture generation matches ADR-HW-002 (USB4/TB4 40G) with correct controller vs retimer roles
 10. COM-HPC carriers: either PUBLIC_PINOUT nets or documented **NARROW_NDA** pinout intake — no invented pins
 
-## Current environment blockers (Continuation V)
-- `kicad-cli` **ABSENT** after failed `brew install --cask kicad` (permissions) → `EDMUND_ACTION_REQUIRED` (criteria #6)
-- KiCad sources still use structural `Device:R` placeholders → criteria #2 not met
-- Autodesk Fusion not installed here → Rings Fusion `.f3d` binary authoring blocked
-- COM-HPC Mini full pinout remains **NARROW_NDA**
-- Ring firmware parity gaps vs edge-io (IQS7222A, SE050, …) — matrix documented; second PR recommended
+## Cont VI additions
+- Student/DS-XL: Option3 gate → `*_BLOCKED_NDA` until NDA pinout intake; criteria #10 fails for COMPLETE
+- Handheld: PUBLIC_PINOUT carrier EDA may claim `HANDHELD_PUBLIC_PINOUT_EDA_COMPLETE` without claiming FULL COMPLETE
+- `*_DESIGN_RELEASE_COMPLETE` (short token) also requires criteria #2 and #6 — **not earned** while Device:R + CLI absent
 
-Therefore: products remain **HARDWARE_DESIGN_RELEASE_CANDIDATE**, not COMPLETE.  
-`FULL_HARDWARE_DESIGN_RELEASE_COMPLETE` is **not honestly earned**.
+## Current environment blockers
+- `kicad-cli` ABSENT → `EDMUND_ACTION_REQUIRED` / resume via `make kicad-validate-family`
+- Device:R structural placeholders remain
+- COM-HPC Mini full pinout remains NARROW_NDA

@@ -1,0 +1,4 @@
+===== student_14_5 =====
+-- schematic erc --
+-- pcb drc --
+drc_exit=3

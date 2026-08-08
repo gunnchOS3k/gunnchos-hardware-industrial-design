@@ -1,0 +1,12 @@
+### Footprint positions - created on 2026-08-08T16:01:18 ###
+### Printed by KiCad version 10.0.5
+## Unit = inches, Angle = deg.
+## Side : All
+# Ref     Val       Package                       PosX       PosY       Rot  Side
+USOM1     SoM       QFN-48-1EP_7x7mm_P0.5mm     1.5748    -1.5748    0.0000  top
+U_CHG     CHG       QFN-48-1EP_7x7mm_P0.5mm     3.9370    -3.1496    0.0000  top
+U_HID     HID       QFN-48-1EP_7x7mm_P0.5mm     6.2992    -1.5748    0.0000  top
+U_PD      PD        QFN-48-1EP_7x7mm_P0.5mm     1.5748    -3.1496    0.0000  top
+U_WIFI    WiFi      QFN-48-1EP_7x7mm_P0.5mm     3.9370    -1.5748    0.0000  top
+U_WWAN    WWAN      QFN-48-1EP_7x7mm_P0.5mm     6.2992    -3.1496    0.0000  top
+## End

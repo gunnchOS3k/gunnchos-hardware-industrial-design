@@ -29,3 +29,6 @@ Host compositor exposes two DRM connectors; gunnchOS layouts:
 
 ## Non-claims
 No measured hinge cycle life. No panel AVL PO. No CLI ERC/DRC.
+
+
+Continuation VI: status token `DSXL_BLOCKED_NDA` — Option 3 public-engineerability gate.

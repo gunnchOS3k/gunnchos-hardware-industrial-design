@@ -1,0 +1,66 @@
+(export
+	(version "E")
+	(design
+		(source "/Users/gunnchos/Downloads/gunnchos-7gc-research-product-spine/repos/gunnchos-hardware-industrial-design/electrical/edge_io_rings/kicad/edge_io_rings.kicad_sch")
+		(date "2026-08-08T16:00:40")
+		(tool "Eeschema 10.0.5")
+		(textvar
+			(name "EDMUND_ACTION_REQUIRED") "install_kicad_cli")
+		(textvar
+			(name "KICAD_CLI") "ABSENT")
+		(sheet
+			(number "1")
+			(name "/")
+			(tstamps "/")
+			(title_block
+				(title "Edge I/O Ring EVT1 — ADR-FP-008 fusion")
+				(company "gunnchOS3k / HARDWARE FAMILY DEPTH")
+				(rev "0.2.0-dev")
+				(date "2026-08-08")
+				(source "edge_io_rings.kicad_sch")
+				(comment
+					(number "1")
+					(value "Fusion BOM tracked in native EDA")
+				)
+				(comment
+					(number "2")
+					(value "ADR-FP-008")
+				)
+				(comment
+					(number "3")
+					(value "kicad-cli ABSENT → EDMUND_ACTION_REQUIRED")
+				)
+				(comment
+					(number "4")
+					(value "PHYSICAL_EXECUTION_FREEZE ACTIVE — no fab, no purchase, draft digital only")
+				)
+				(comment
+					(number "5")
+					(value "")
+				)
+				(comment
+					(number "6")
+					(value "")
+				)
+				(comment
+					(number "7")
+					(value "")
+				)
+				(comment
+					(number "8")
+					(value "")
+				)
+				(comment
+					(number "9")
+					(value "")
+				)
+			)
+		)
+	)
+	(components)
+	(groups)
+	(variants)
+	(libparts)
+	(libraries)
+	(nets)
+)

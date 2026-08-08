@@ -1,0 +1,127 @@
+{
+    "$schema": "https://schemas.kicad.org/drc.v1.json",
+    "coordinate_units": "mm",
+    "date": "2026-08-08T16:01:51",
+    "ignored_checks": [
+        {
+            "description": "Footprint has no courtyard defined",
+            "key": "missing_courtyard"
+        },
+        {
+            "description": "Track endpoint not centered on via",
+            "key": "track_not_centered_on_via"
+        },
+        {
+            "description": "Tuning profile track geometries",
+            "key": "tuning_profile_track_geometries"
+        },
+        {
+            "description": "Footprint doesn't match symbol's footprint filters",
+            "key": "footprint_filters_mismatch"
+        },
+        {
+            "description": "Footprint component type doesn't match footprint pads",
+            "key": "footprint_type_mismatch"
+        }
+    ],
+    "included_severities": [
+        "error",
+        "warning"
+    ],
+    "kicad_version": "10.0.5",
+    "schematic_parity": [],
+    "source": "ds_xl_coder.kicad_pcb",
+    "unconnected_items": [],
+    "violations": [
+        {
+            "description": "The current configuration does not include the footprint library 'Package_DFN_QFN'",
+            "items": [
+                {
+                    "description": "Footprint UCOM1",
+                    "pos": {
+                        "x": 50.0,
+                        "y": 40.0
+                    },
+                    "uuid": "94f2aa54-bf45-50a7-af79-dad1ab0dd24d"
+                }
+            ],
+            "severity": "warning",
+            "type": "lib_footprint_issues"
+        },
+        {
+            "description": "The current configuration does not include the footprint library 'Package_DFN_QFN'",
+            "items": [
+                {
+                    "description": "Footprint J_EDP0",
+                    "pos": {
+                        "x": 120.0,
+                        "y": 40.0
+                    },
+                    "uuid": "1cca6ef6-4291-5602-b999-ead1b21cea3d"
+                }
+            ],
+            "severity": "warning",
+            "type": "lib_footprint_issues"
+        },
+        {
+            "description": "The current configuration does not include the footprint library 'Package_DFN_QFN'",
+            "items": [
+                {
+                    "description": "Footprint J_EDP1",
+                    "pos": {
+                        "x": 190.0,
+                        "y": 40.0
+                    },
+                    "uuid": "522f41f4-c93a-50d5-b976-bca7c297b394"
+                }
+            ],
+            "severity": "warning",
+            "type": "lib_footprint_issues"
+        },
+        {
+            "description": "The current configuration does not include the footprint library 'Package_DFN_QFN'",
+            "items": [
+                {
+                    "description": "Footprint U_BRG",
+                    "pos": {
+                        "x": 260.0,
+                        "y": 40.0
+                    },
+                    "uuid": "7e369c5e-ab8f-5458-8d35-2559de993976"
+                }
+            ],
+            "severity": "warning",
+            "type": "lib_footprint_issues"
+        },
+        {
+            "description": "The current configuration does not include the footprint library 'Package_DFN_QFN'",
+            "items": [
+                {
+                    "description": "Footprint U_PD",
+                    "pos": {
+                        "x": 50.0,
+                        "y": 110.0
+                    },
+                    "uuid": "bbc65cb9-436f-5864-8284-bfa4a07f7aeb"
+                }
+            ],
+            "severity": "warning",
+            "type": "lib_footprint_issues"
+        },
+        {
+            "description": "The current configuration does not include the footprint library 'Package_DFN_QFN'",
+            "items": [
+                {
+                    "description": "Footprint U_WWAN",
+                    "pos": {
+                        "x": 120.0,
+                        "y": 110.0
+                    },
+                    "uuid": "40d01849-86c1-5204-8473-7e50955762c5"
+                }
+            ],
+            "severity": "warning",
+            "type": "lib_footprint_issues"
+        }
+    ]
+}

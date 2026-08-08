@@ -1,0 +1,4 @@
+===== ds_xl_coder =====
+-- schematic erc --
+-- pcb drc --
+drc_exit=3

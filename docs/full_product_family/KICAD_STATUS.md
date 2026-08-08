@@ -1,37 +1,37 @@
-# KiCad status — Continuation V
+# KiCad status — Continuation VI
 
-Updated: 2026-08-08T20:15:00Z
+Updated: 2026-08-08T20:58:59Z
 
 ## Environment probe
 ```
-which kicad-cli → not found
+which kicad-cli → not found (Cont VI authoring)
 which kicad → not found
 ls /Applications/KiCad* → none
-brew info --cask kicad → 10.0.5 (not installed)
 ```
 
-## brew install attempt
-```
-brew install --cask kicad
-```
-**FAILED** — Homebrew prefixes not writable by user (`/opt/homebrew`, `~/Library/Logs/Homebrew`).  
-Evidence: `docs/full_product_family/evidence/BREW_KICAD_INSTALL_ATTEMPT.log`
+## brew install (inherited Cont V)
+`brew install --cask kicad` previously FAILED — Homebrew prefixes not writable.  
+Evidence: `docs/full_product_family/evidence/BREW_KICAD_INSTALL_ATTEMPT.log`  
+`EDMUND_ACTION_REQUIRED` remains until admin install completes.
 
-## EDMUND_ACTION_REQUIRED
+## Resume path (Cont VI)
 ```bash
 sudo chown -R "$(whoami)" /opt/homebrew /Users/gunnchos/Library/Logs/Homebrew
 brew install --cask kicad
 export PATH="/Applications/KiCad/KiCad.app/Contents/MacOS:$PATH"
-which kicad-cli
+make kicad-validate-family
+# or:
+bash scripts/run_family_kicad_cli.sh
 ```
-Then per product:
+
+Per native board under `device_designs/*/kicad/`:
 1. `kicad-cli sch erc`
 2. `kicad-cli pcb drc`
-3. Gerber / drill / pos / STEP per `device_designs/*/manufacturing/GERBER_EXPORT_PLAN.md`
+3. Gerber / drill / pos / STEP → `docs/full_product_family/evidence/kicad_cli/<product>/`
 4. Replace `Device:R` placeholders with vendor symbols/footprints
 
-Work continued without stalling: mfg export plans + ERC/DRC blocker JSON checked in for all five.
+Soft-skip when CLI absent (exit 0, `KICAD_CLI_ABSENT` meta). Static Cont VI validator remains mandatory.
 
 ## Tokens
-- Claimed: `EDMUND_ACTION_REQUIRED_KICAD_BREW_ADMIN`
+- Claimed: `KICAD_CLI_RESUME_SCRIPTS_READY`, `EDMUND_ACTION_REQUIRED_KICAD_BREW_ADMIN`
 - Not claimed: `KICAD_CLI_ERC_PASS`, `KICAD_CLI_DRC_PASS`

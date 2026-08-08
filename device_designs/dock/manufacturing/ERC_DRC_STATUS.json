@@ -1,15 +1,25 @@
 {
   "product": "dock",
-  "updated_at_utc": "2026-08-08T20:15:00Z",
+  "updated_at_utc": "2026-08-08T20:58:59Z",
   "kicad_cli": "ABSENT",
-  "erc": {"status": "NOT_RUN", "reason": "EDMUND_ACTION_REQUIRED_brew_kicad"},
-  "drc": {"status": "NOT_RUN", "reason": "EDMUND_ACTION_REQUIRED_brew_kicad"},
-  "gerber": {"status": "NOT_EXPORTED"},
-  "pick_place": {"status": "PLAN_ONLY"},
-  "step": {"status": "NOT_EXPORTED"},
+  "erc": {
+    "status": "NOT_RUN",
+    "reason": "KICAD_CLI_ABSENT_RESUME_SCRIPTS_READY"
+  },
+  "drc": {
+    "status": "NOT_RUN",
+    "reason": "KICAD_CLI_ABSENT_RESUME_SCRIPTS_READY"
+  },
+  "gerber": {
+    "status": "NOT_EXPORTED"
+  },
+  "pick_place": {
+    "status": "PLAN_ONLY"
+  },
+  "step": {
+    "status": "NOT_EXPORTED"
+  },
   "full_hardware_design_release_complete": false,
-  "architecture_freeze": "USB4_TB4_40G_NOT_TB5",
-  "controller_mpn": "JHL8440",
-  "retimer_mpn": "JHL9040R",
-  "forbidden_mpns": ["JHL9480", "JHL9580"]
+  "design_release_complete": false,
+  "cont_vi_digital_eda": true
 }

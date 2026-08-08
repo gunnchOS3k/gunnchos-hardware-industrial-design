@@ -1,0 +1,1002 @@
+{
+  "updated_at_utc": "2026-08-08T20:58:59Z",
+  "branch": "cursor/full-product-continuation-vi-eda-closure",
+  "summary": {
+    "ambiguous_or_MPN": 16,
+    "Device:R structural placeholder": 143,
+    "generic/undefined/fake": 4
+  },
+  "resolvable_actions_taken": [
+    "Handheld BOM ambiguous or-MPNs frozen to preferred exact MPNs",
+    "Dock PD MPN expanded to TPS65994ADFBRQ1",
+    "Ring KiCad Values aligned to npm1300-CAAA-R + TLV75533PDBVR",
+    "Dock forbidden TB5 parts explicitly DNP on schematic",
+    "Handheld schematic Values/nets driven from PUBLIC_PINOUT table"
+  ],
+  "not_digitally_resolvable_without_kicad_libs": [
+    "Device:R \u2192 vendor symbols/footprints (requires KiCad library install + CLI)",
+    "Intel JHL8440/JHL9040R package ball maps (NDA design kit)",
+    "COM-HPC Mini 400-pin map (NARROW_NDA)"
+  ],
+  "findings_sample": [
+    {
+      "file": "device_designs/edge_io_rings/electrical/power_tree.yaml",
+      "line": 7,
+      "class": "ambiguous_or_MPN",
+      "snippet": "- {name: VDD_3V3, regulator_mpn: TLV70033DSET_or_npm1300}"
+    },
+    {
+      "file": "device_designs/edge_io_rings/electrical/battery_model.yaml",
+      "line": 6,
+      "class": "ambiguous_or_MPN",
+      "snippet": "charger: BQ25100_or_npm1300"
+    },
+    {
+      "file": "device_designs/edge_io_rings/bom/assembly_bom.csv",
+      "line": 1,
+      "class": "ambiguous_or_MPN",
+      "snippet": "device,subsystem,manufacturer,MPN,description,quantity,preferred_or_alternate,approved_alternative,reason,datasheet_url,package,voltage,current,interfaces,avail"
+    },
+    {
+      "file": "device_designs/edge_io_rings/docs/STATUS.md",
+      "line": 8,
+      "class": "Device:R structural placeholder",
+      "snippet": "RING_DESIGN_RELEASE_COMPLETE = NOT CLAIMED (Device:R + CLI + Fusion .f3d)"
+    },
+    {
+      "file": "device_designs/edge_io_rings/docs/BOM_SCH_FW_PARITY.md",
+      "line": 50,
+      "class": "Device:R structural placeholder",
+      "snippet": "- Structural `Device:R` placeholders remain \u2192 blocks `FULL_HARDWARE_DESIGN_RELEASE_COMPLETE`."
+    },
+    {
+      "file": "device_designs/edge_io_rings/manufacturing/RELEASE_PACKAGE_CHECKLIST.md",
+      "line": 11,
+      "class": "Device:R structural placeholder",
+      "snippet": "- [ ] Vendor-accurate footprints (replace Device:R)"
+    },
+    {
+      "file": "device_designs/edge_io_rings/kicad/edge_io_rings.kicad_sch",
+      "line": 15,
+      "class": "Device:R structural placeholder",
+      "snippet": "(symbol (lib_id \"Device:R\") (at 40 40 0) (unit 1)"
+    },
+    {
+      "file": "device_designs/edge_io_rings/kicad/edge_io_rings.kicad_sch",
+      "line": 24,
+      "class": "Device:R structural placeholder",
+      "snippet": "(symbol (lib_id \"Device:R\") (at 90 40 0) (unit 1)"
+    },
+    {
+      "file": "device_designs/edge_io_rings/kicad/edge_io_rings.kicad_sch",
+      "line": 33,
+      "class": "Device:R structural placeholder",
+      "snippet": "(symbol (lib_id \"Device:R\") (at 140 40 0) (unit 1)"
+    },
+    {
+      "file": "device_designs/edge_io_rings/kicad/edge_io_rings.kicad_sch",
+      "line": 42,
+      "class": "Device:R structural placeholder",
+      "snippet": "(symbol (lib_id \"Device:R\") (at 190 40 0) (unit 1)"
+    },
+    {
+      "file": "device_designs/edge_io_rings/kicad/edge_io_rings.kicad_sch",
+      "line": 51,
+      "class": "Device:R structural placeholder",
+      "snippet": "(symbol (lib_id \"Device:R\") (at 40 80 0) (unit 1)"
+    },
+    {
+      "file": "device_designs/edge_io_rings/kicad/edge_io_rings.kicad_sch",
+      "line": 60,
+      "class": "Device:R structural placeholder",
+      "snippet": "(symbol (lib_id \"Device:R\") (at 90 80 0) (unit 1)"
+    },
+    {
+      "file": "device_designs/edge_io_rings/kicad/edge_io_rings.kicad_sch",
+      "line": 69,
+      "class": "Device:R structural placeholder",
+      "snippet": "(symbol (lib_id \"Device:R\") (at 140 80 0) (unit 1)"
+    },
+    {
+      "file": "device_designs/edge_io_rings/kicad/edge_io_rings.kicad_sch",
+      "line": 78,
+      "class": "Device:R structural placeholder",
+      "snippet": "(symbol (lib_id \"Device:R\") (at 190 80 0) (unit 1)"
+    },
+    {
+      "file": "device_designs/edge_io_rings/kicad/edge_io_rings.kicad_sch",
+      "line": 87,
+      "class": "Device:R structural placeholder",
+      "snippet": "(symbol (lib_id \"Device:R\") (at 40 120 0) (unit 1)"
+    },
+    {
+      "file": "device_designs/edge_io_rings/kicad/edge_io_rings.kicad_sch",
+      "line": 96,
+      "class": "Device:R structural placeholder",
+      "snippet": "(symbol (lib_id \"Device:R\") (at 90 120 0) (unit 1)"
+    },
+    {
+      "file": "device_designs/edge_io_rings/kicad/edge_io_rings.kicad_sch",
+      "line": 105,
+      "class": "Device:R structural placeholder",
+      "snippet": "(symbol (lib_id \"Device:R\") (at 140 120 0) (unit 1)"
+    },
+    {
+      "file": "device_designs/edge_io_rings/kicad/edge_io_rings.kicad_sch",
+      "line": 114,
+      "class": "Device:R structural placeholder",
+      "snippet": "(symbol (lib_id \"Device:R\") (at 190 120 0) (unit 1)"
+    },
+    {
+      "file": "device_designs/ds_xl_coder/bom/assembly_bom.csv",
+      "line": 1,
+      "class": "ambiguous_or_MPN",
+      "snippet": "device,subsystem,manufacturer,MPN,description,qty,preferred_or_alternate,approved_alternative,status,notes,datasheet_or_docs"
+    },
+    {
+      "file": "device_designs/ds_xl_coder/docs/STATUS.md",
+      "line": 10,
+      "class": "generic/undefined/fake",
+      "snippet": "NO_FAKE_COM_HPC_PINOUT"
+    },
+    {
+      "file": "device_designs/ds_xl_coder/manufacturing/RELEASE_PACKAGE_CHECKLIST.md",
+      "line": 11,
+      "class": "Device:R structural placeholder",
+      "snippet": "- [ ] Vendor-accurate footprints (replace Device:R)"
+    },
+    {
+      "file": "device_designs/ds_xl_coder/kicad/ds_xl_coder.kicad_sch",
+      "line": 15,
+      "class": "Device:R structural placeholder",
+      "snippet": "(symbol (lib_id \"Device:R\") (at 40 40 0) (unit 1)"
+    },
+    {
+      "file": "device_designs/ds_xl_coder/kicad/ds_xl_coder.kicad_sch",
+      "line": 24,
+      "class": "Device:R structural placeholder",
+      "snippet": "(symbol (lib_id \"Device:R\") (at 90 40 0) (unit 1)"
+    },
+    {
+      "file": "device_designs/ds_xl_coder/kicad/ds_xl_coder.kicad_sch",
+      "line": 33,
+      "class": "Device:R structural placeholder",
+      "snippet": "(symbol (lib_id \"Device:R\") (at 140 40 0) (unit 1)"
+    },
+    {
+      "file": "device_designs/ds_xl_coder/kicad/ds_xl_coder.kicad_sch",
+      "line": 42,
+      "class": "Device:R structural placeholder",
+      "snippet": "(symbol (lib_id \"Device:R\") (at 190 40 0) (unit 1)"
+    },
+    {
+      "file": "device_designs/ds_xl_coder/kicad/ds_xl_coder.kicad_sch",
+      "line": 51,
+      "class": "Device:R structural placeholder",
+      "snippet": "(symbol (lib_id \"Device:R\") (at 40 80 0) (unit 1)"
+    },
+    {
+      "file": "device_designs/ds_xl_coder/kicad/ds_xl_coder.kicad_sch",
+      "line": 60,
+      "class": "Device:R structural placeholder",
+      "snippet": "(symbol (lib_id \"Device:R\") (at 90 80 0) (unit 1)"
+    },
+    {
+      "file": "device_designs/ds_xl_coder/kicad/ds_xl_coder.kicad_sch",
+      "line": 69,
+      "class": "Device:R structural placeholder",
+      "snippet": "(symbol (lib_id \"Device:R\") (at 140 80 0) (unit 1)"
+    },
+    {
+      "file": "device_designs/ds_xl_coder/kicad/ds_xl_coder.kicad_sch",
+      "line": 78,
+      "class": "Device:R structural placeholder",
+      "snippet": "(symbol (lib_id \"Device:R\") (at 190 80 0) (unit 1)"
+    },
+    {
+      "file": "device_designs/ds_xl_coder/kicad/ds_xl_coder.kicad_sch",
+      "line": 87,
+      "class": "Device:R structural placeholder",
+      "snippet": "(symbol (lib_id \"Device:R\") (at 40 120 0) (unit 1)"
+    },
+    {
+      "file": "device_designs/ds_xl_coder/kicad/ds_xl_coder.kicad_sch",
+      "line": 96,
+      "class": "Device:R structural placeholder",
+      "snippet": "(symbol (lib_id \"Device:R\") (at 90 120 0) (unit 1)"
+    },
+    {
+      "file": "device_designs/ds_xl_coder/kicad/ds_xl_coder.kicad_sch",
+      "line": 46,
+      "class": "ambiguous_or_MPN",
+      "snippet": "(property \"Value\" \"LT8711_or_PS8625\" (at 190 47 0) (effects (font (size 1.27 1.27))))"
+    },
+    {
+      "file": "device_designs/ds_xl_coder/kicad/ds_xl_coder.kicad_sch",
+      "line": 91,
+      "class": "ambiguous_or_MPN",
+      "snippet": "(property \"Value\" \"EC_NPCX_or_ITE\" (at 40 127 0) (effects (font (size 1.27 1.27))))"
+    },
+    {
+      "file": "device_designs/student_14_5/bom/assembly_bom.csv",
+      "line": 1,
+      "class": "ambiguous_or_MPN",
+      "snippet": "device,subsystem,manufacturer,MPN,description,qty,preferred_or_alternate,approved_alternative,status,notes,datasheet_or_docs"
+    },
+    {
+      "file": "device_designs/student_14_5/docs/STATUS.md",
+      "line": 10,
+      "class": "generic/undefined/fake",
+      "snippet": "NO_FAKE_COM_HPC_PINOUT"
+    },
+    {
+      "file": "device_designs/student_14_5/manufacturing/RELEASE_PACKAGE_CHECKLIST.md",
+      "line": 11,
+      "class": "Device:R structural placeholder",
+      "snippet": "- [ ] Vendor-accurate footprints (replace Device:R)"
+    },
+    {
+      "file": "device_designs/student_14_5/kicad/student_14_5.kicad_sch",
+      "line": 15,
+      "class": "Device:R structural placeholder",
+      "snippet": "(symbol (lib_id \"Device:R\") (at 40 40 0) (unit 1)"
+    },
+    {
+      "file": "device_designs/student_14_5/kicad/student_14_5.kicad_sch",
+      "line": 24,
+      "class": "Device:R structural placeholder",
+      "snippet": "(symbol (lib_id \"Device:R\") (at 90 40 0) (unit 1)"
+    },
+    {
+      "file": "device_designs/student_14_5/kicad/student_14_5.kicad_sch",
+      "line": 33,
+      "class": "Device:R structural placeholder",
+      "snippet": "(symbol (lib_id \"Device:R\") (at 140 40 0) (unit 1)"
+    },
+    {
+      "file": "device_designs/student_14_5/kicad/student_14_5.kicad_sch",
+      "line": 42,
+      "class": "Device:R structural placeholder",
+      "snippet": "(symbol (lib_id \"Device:R\") (at 190 40 0) (unit 1)"
+    },
+    {
+      "file": "device_designs/student_14_5/kicad/student_14_5.kicad_sch",
+      "line": 51,
+      "class": "Device:R structural placeholder",
+      "snippet": "(symbol (lib_id \"Device:R\") (at 40 80 0) (unit 1)"
+    },
+    {
+      "file": "device_designs/student_14_5/kicad/student_14_5.kicad_sch",
+      "line": 60,
+      "class": "Device:R structural placeholder",
+      "snippet": "(symbol (lib_id \"Device:R\") (at 90 80 0) (unit 1)"
+    },
+    {
+      "file": "device_designs/student_14_5/kicad/student_14_5.kicad_sch",
+      "line": 69,
+      "class": "Device:R structural placeholder",
+      "snippet": "(symbol (lib_id \"Device:R\") (at 140 80 0) (unit 1)"
+    },
+    {
+      "file": "device_designs/student_14_5/kicad/student_14_5.kicad_sch",
+      "line": 78,
+      "class": "Device:R structural placeholder",
+      "snippet": "(symbol (lib_id \"Device:R\") (at 190 80 0) (unit 1)"
+    },
+    {
+      "file": "device_designs/student_14_5/kicad/student_14_5.kicad_sch",
+      "line": 87,
+      "class": "Device:R structural placeholder",
+      "snippet": "(symbol (lib_id \"Device:R\") (at 40 120 0) (unit 1)"
+    },
+    {
+      "file": "device_designs/student_14_5/kicad/student_14_5.kicad_sch",
+      "line": 96,
+      "class": "Device:R structural placeholder",
+      "snippet": "(symbol (lib_id \"Device:R\") (at 90 120 0) (unit 1)"
+    },
+    {
+      "file": "device_designs/student_14_5/kicad/student_14_5.kicad_sch",
+      "line": 105,
+      "class": "Device:R structural placeholder",
+      "snippet": "(symbol (lib_id \"Device:R\") (at 140 120 0) (unit 1)"
+    },
+    {
+      "file": "device_designs/student_14_5/kicad/student_14_5.kicad_sch",
+      "line": 114,
+      "class": "Device:R structural placeholder",
+      "snippet": "(symbol (lib_id \"Device:R\") (at 190 120 0) (unit 1)"
+    },
+    {
+      "file": "device_designs/student_14_5/kicad/student_14_5.kicad_sch",
+      "line": 123,
+      "class": "Device:R structural placeholder",
+      "snippet": "(symbol (lib_id \"Device:R\") (at 40 160 0) (unit 1)"
+    },
+    {
+      "file": "device_designs/student_14_5/kicad/student_14_5.kicad_sch",
+      "line": 132,
+      "class": "Device:R structural placeholder",
+      "snippet": "(symbol (lib_id \"Device:R\") (at 90 160 0) (unit 1)"
+    },
+    {
+      "file": "device_designs/student_14_5/kicad/student_14_5.kicad_sch",
+      "line": 141,
+      "class": "Device:R structural placeholder",
+      "snippet": "(symbol (lib_id \"Device:R\") (at 140 160 0) (unit 1)"
+    },
+    {
+      "file": "device_designs/student_14_5/kicad/student_14_5.kicad_sch",
+      "line": 150,
+      "class": "Device:R structural placeholder",
+      "snippet": "(symbol (lib_id \"Device:R\") (at 190 160 0) (unit 1)"
+    },
+    {
+      "file": "device_designs/handheld_hybrid/electrical/power_tree.yaml",
+      "line": 8,
+      "class": "ambiguous_or_MPN",
+      "snippet": "- {name: VSYS, regulator_mpn: BQ25895_or_BQ25792}"
+    },
+    {
+      "file": "device_designs/handheld_hybrid/bom/assembly_bom.csv",
+      "line": 1,
+      "class": "ambiguous_or_MPN",
+      "snippet": "device,subsystem,manufacturer,MPN,description,qty,preferred_or_alternate,approved_alternative,status,notes,datasheet_or_docs"
+    },
+    {
+      "file": "device_designs/handheld_hybrid/bom/assembly_bom.csv",
+      "line": 13,
+      "class": "ambiguous_or_MPN",
+      "snippet": "Handheld Hybrid,Battery,OEM,6000mAh_1S2P_or_2S,Game pack,1,preferred,,FROZEN_BASELINE,MODELED,"
+    },
+    {
+      "file": "device_designs/handheld_hybrid/docs/STATUS.md",
+      "line": 11,
+      "class": "Device:R structural placeholder",
+      "snippet": "HANDHELD_DESIGN_RELEASE_COMPLETE = NOT CLAIMED (Device:R + CLI criteria)"
+    },
+    {
+      "file": "device_designs/handheld_hybrid/manufacturing/netlist.json",
+      "line": 1405,
+      "class": "ambiguous_or_MPN",
+      "snippet": "\"mpn\": \"I2S_CODEC_or_HP\","
+    },
+    {
+      "file": "device_designs/handheld_hybrid/manufacturing/RELEASE_PACKAGE_CHECKLIST.md",
+      "line": 11,
+      "class": "Device:R structural placeholder",
+      "snippet": "- [ ] Vendor-accurate footprints (replace Device:R)"
+    },
+    {
+      "file": "device_designs/handheld_hybrid/kicad/handheld_hybrid.kicad_sch",
+      "line": 11,
+      "class": "Device:R structural placeholder",
+      "snippet": "(comment 3 \"Structural Device:R until vendor libs + kicad-cli; Values/nets truthful\")"
+    },
+    {
+      "file": "device_designs/handheld_hybrid/kicad/handheld_hybrid.kicad_sch",
+      "line": 15,
+      "class": "Device:R structural placeholder",
+      "snippet": "(symbol (lib_id \"Device:R\") (at 40 35 0) (unit 1)"
+    },
+    {
+      "file": "device_designs/handheld_hybrid/kicad/handheld_hybrid.kicad_sch",
+      "line": 25,
+      "class": "Device:R structural placeholder",
+      "snippet": "(symbol (lib_id \"Device:R\") (at 85 35 0) (unit 1)"
+    },
+    {
+      "file": "device_designs/handheld_hybrid/kicad/handheld_hybrid.kicad_sch",
+      "line": 35,
+      "class": "Device:R structural placeholder",
+      "snippet": "(symbol (lib_id \"Device:R\") (at 130 35 0) (unit 1)"
+    },
+    {
+      "file": "device_designs/handheld_hybrid/kicad/handheld_hybrid.kicad_sch",
+      "line": 45,
+      "class": "Device:R structural placeholder",
+      "snippet": "(symbol (lib_id \"Device:R\") (at 175 35 0) (unit 1)"
+    },
+    {
+      "file": "device_designs/handheld_hybrid/kicad/handheld_hybrid.kicad_sch",
+      "line": 55,
+      "class": "Device:R structural placeholder",
+      "snippet": "(symbol (lib_id \"Device:R\") (at 220 35 0) (unit 1)"
+    },
+    {
+      "file": "device_designs/handheld_hybrid/kicad/handheld_hybrid.kicad_sch",
+      "line": 65,
+      "class": "Device:R structural placeholder",
+      "snippet": "(symbol (lib_id \"Device:R\") (at 40 75 0) (unit 1)"
+    },
+    {
+      "file": "device_designs/handheld_hybrid/kicad/handheld_hybrid.kicad_sch",
+      "line": 75,
+      "class": "Device:R structural placeholder",
+      "snippet": "(symbol (lib_id \"Device:R\") (at 85 75 0) (unit 1)"
+    },
+    {
+      "file": "device_designs/handheld_hybrid/kicad/handheld_hybrid.kicad_sch",
+      "line": 85,
+      "class": "Device:R structural placeholder",
+      "snippet": "(symbol (lib_id \"Device:R\") (at 130 75 0) (unit 1)"
+    },
+    {
+      "file": "device_designs/handheld_hybrid/kicad/handheld_hybrid.kicad_sch",
+      "line": 95,
+      "class": "Device:R structural placeholder",
+      "snippet": "(symbol (lib_id \"Device:R\") (at 175 75 0) (unit 1)"
+    },
+    {
+      "file": "device_designs/handheld_hybrid/kicad/handheld_hybrid.kicad_sch",
+      "line": 105,
+      "class": "Device:R structural placeholder",
+      "snippet": "(symbol (lib_id \"Device:R\") (at 220 75 0) (unit 1)"
+    },
+    {
+      "file": "device_designs/handheld_hybrid/kicad/handheld_hybrid.kicad_sch",
+      "line": 115,
+      "class": "Device:R structural placeholder",
+      "snippet": "(symbol (lib_id \"Device:R\") (at 40 115 0) (unit 1)"
+    },
+    {
+      "file": "device_designs/handheld_hybrid/kicad/handheld_hybrid.kicad_sch",
+      "line": 125,
+      "class": "Device:R structural placeholder",
+      "snippet": "(symbol (lib_id \"Device:R\") (at 85 115 0) (unit 1)"
+    },
+    {
+      "file": "device_designs/handheld_hybrid/kicad/handheld_hybrid.kicad_sch",
+      "line": 135,
+      "class": "Device:R structural placeholder",
+      "snippet": "(symbol (lib_id \"Device:R\") (at 130 115 0) (unit 1)"
+    },
+    {
+      "file": "device_designs/handheld_hybrid/kicad/handheld_hybrid.kicad_sch",
+      "line": 145,
+      "class": "Device:R structural placeholder",
+      "snippet": "(symbol (lib_id \"Device:R\") (at 175 115 0) (unit 1)"
+    },
+    {
+      "file": "device_designs/handheld_hybrid/kicad/handheld_hybrid.kicad_sch",
+      "line": 155,
+      "class": "Device:R structural placeholder",
+      "snippet": "(symbol (lib_id \"Device:R\") (at 220 115 0) (unit 1)"
+    },
+    {
+      "file": "device_designs/handheld_hybrid/kicad/handheld_hybrid.kicad_sch",
+      "line": 165,
+      "class": "Device:R structural placeholder",
+      "snippet": "(symbol (lib_id \"Device:R\") (at 40 155 0) (unit 1)"
+    },
+    {
+      "file": "device_designs/handheld_hybrid/kicad/handheld_hybrid.kicad_sch",
+      "line": 175,
+      "class": "Device:R structural placeholder",
+      "snippet": "(symbol (lib_id \"Device:R\") (at 85 155 0) (unit 1)"
+    },
+    {
+      "file": "device_designs/handheld_hybrid/kicad/handheld_hybrid.kicad_sch",
+      "line": 185,
+      "class": "Device:R structural placeholder",
+      "snippet": "(symbol (lib_id \"Device:R\") (at 130 155 0) (unit 1)"
+    },
+    {
+      "file": "device_designs/handheld_hybrid/pcb/netlist.json",
+      "line": 1405,
+      "class": "ambiguous_or_MPN",
+      "snippet": "\"mpn\": \"I2S_CODEC_or_HP\","
+    },
+    {
+      "file": "device_designs/dock/bom/assembly_bom.csv",
+      "line": 1,
+      "class": "ambiguous_or_MPN",
+      "snippet": "device,subsystem,manufacturer,MPN,description,qty,preferred_or_alternate,approved_alternative,status,notes"
+    },
+    {
+      "file": "device_designs/dock/docs/STATUS.md",
+      "line": 10,
+      "class": "Device:R structural placeholder",
+      "snippet": "DOCK_DESIGN_RELEASE_COMPLETE = NOT CLAIMED (Device:R + CLI + Intel NDA package pins)"
+    },
+    {
+      "file": "device_designs/dock/manufacturing/netlist.json",
+      "line": 223,
+      "class": "generic/undefined/fake",
+      "snippet": "\"fake_intel_ball_map\""
+    },
+    {
+      "file": "device_designs/dock/kicad/dock.kicad_sch",
+      "line": 15,
+      "class": "Device:R structural placeholder",
+      "snippet": "(symbol (lib_id \"Device:R\") (at 35 30 0) (unit 1)"
+    },
+    {
+      "file": "device_designs/dock/kicad/dock.kicad_sch",
+      "line": 24,
+      "class": "Device:R structural placeholder",
+      "snippet": "(symbol (lib_id \"Device:R\") (at 75 30 0) (unit 1)"
+    },
+    {
+      "file": "device_designs/dock/kicad/dock.kicad_sch",
+      "line": 33,
+      "class": "Device:R structural placeholder",
+      "snippet": "(symbol (lib_id \"Device:R\") (at 115 30 0) (unit 1)"
+    },
+    {
+      "file": "device_designs/dock/kicad/dock.kicad_sch",
+      "line": 42,
+      "class": "Device:R structural placeholder",
+      "snippet": "(symbol (lib_id \"Device:R\") (at 155 30 0) (unit 1)"
+    },
+    {
+      "file": "device_designs/dock/kicad/dock.kicad_sch",
+      "line": 51,
+      "class": "Device:R structural placeholder",
+      "snippet": "(symbol (lib_id \"Device:R\") (at 195 30 0) (unit 1)"
+    },
+    {
+      "file": "device_designs/dock/kicad/dock.kicad_sch",
+      "line": 60,
+      "class": "Device:R structural placeholder",
+      "snippet": "(symbol (lib_id \"Device:R\") (at 235 30 0) (unit 1)"
+    },
+    {
+      "file": "device_designs/dock/kicad/dock.kicad_sch",
+      "line": 69,
+      "class": "Device:R structural placeholder",
+      "snippet": "(symbol (lib_id \"Device:R\") (at 35 65 0) (unit 1)"
+    },
+    {
+      "file": "device_designs/dock/kicad/dock.kicad_sch",
+      "line": 78,
+      "class": "Device:R structural placeholder",
+      "snippet": "(symbol (lib_id \"Device:R\") (at 75 65 0) (unit 1)"
+    },
+    {
+      "file": "device_designs/dock/kicad/dock.kicad_sch",
+      "line": 87,
+      "class": "Device:R structural placeholder",
+      "snippet": "(symbol (lib_id \"Device:R\") (at 115 65 0) (unit 1)"
+    },
+    {
+      "file": "device_designs/dock/kicad/dock.kicad_sch",
+      "line": 96,
+      "class": "Device:R structural placeholder",
+      "snippet": "(symbol (lib_id \"Device:R\") (at 155 65 0) (unit 1)"
+    },
+    {
+      "file": "device_designs/dock/kicad/dock.kicad_sch",
+      "line": 105,
+      "class": "Device:R structural placeholder",
+      "snippet": "(symbol (lib_id \"Device:R\") (at 195 65 0) (unit 1)"
+    },
+    {
+      "file": "device_designs/dock/kicad/dock.kicad_sch",
+      "line": 114,
+      "class": "Device:R structural placeholder",
+      "snippet": "(symbol (lib_id \"Device:R\") (at 235 65 0) (unit 1)"
+    },
+    {
+      "file": "device_designs/dock/kicad/dock.kicad_sch",
+      "line": 123,
+      "class": "Device:R structural placeholder",
+      "snippet": "(symbol (lib_id \"Device:R\") (at 35 100 0) (unit 1)"
+    },
+    {
+      "file": "device_designs/dock/kicad/dock.kicad_sch",
+      "line": 132,
+      "class": "Device:R structural placeholder",
+      "snippet": "(symbol (lib_id \"Device:R\") (at 75 100 0) (unit 1)"
+    },
+    {
+      "file": "device_designs/dock/kicad/dock.kicad_sch",
+      "line": 141,
+      "class": "Device:R structural placeholder",
+      "snippet": "(symbol (lib_id \"Device:R\") (at 115 100 0) (unit 1)"
+    },
+    {
+      "file": "device_designs/dock/kicad/dock.kicad_sch",
+      "line": 150,
+      "class": "Device:R structural placeholder",
+      "snippet": "(symbol (lib_id \"Device:R\") (at 155 100 0) (unit 1)"
+    },
+    {
+      "file": "device_designs/dock/kicad/dock.kicad_sch",
+      "line": 159,
+      "class": "Device:R structural placeholder",
+      "snippet": "(symbol (lib_id \"Device:R\") (at 195 100 0) (unit 1)"
+    },
+    {
+      "file": "device_designs/dock/kicad/dock.kicad_sch",
+      "line": 168,
+      "class": "Device:R structural placeholder",
+      "snippet": "(symbol (lib_id \"Device:R\") (at 235 100 0) (unit 1)"
+    },
+    {
+      "file": "device_designs/dock/kicad/dock.kicad_sch",
+      "line": 177,
+      "class": "Device:R structural placeholder",
+      "snippet": "(symbol (lib_id \"Device:R\") (at 35 135 0) (unit 1)"
+    },
+    {
+      "file": "device_designs/dock/kicad/dock.kicad_sch",
+      "line": 186,
+      "class": "Device:R structural placeholder",
+      "snippet": "(symbol (lib_id \"Device:R\") (at 75 135 0) (unit 1)"
+    },
+    {
+      "file": "device_designs/dock/kicad/dock.kicad_sch",
+      "line": 195,
+      "class": "Device:R structural placeholder",
+      "snippet": "(symbol (lib_id \"Device:R\") (at 115 135 0) (unit 1)"
+    },
+    {
+      "file": "device_designs/dock/pcb/netlist.json",
+      "line": 223,
+      "class": "generic/undefined/fake",
+      "snippet": "\"fake_intel_ball_map\""
+    },
+    {
+      "file": "docs/full_product_family/KICAD_STATUS.md",
+      "line": 31,
+      "class": "Device:R structural placeholder",
+      "snippet": "4. Replace `Device:R` placeholders with vendor symbols/footprints"
+    },
+    {
+      "file": "docs/full_product_family/HARDWARE_DESIGN_RELEASE_STATUS.md",
+      "line": 24,
+      "class": "Device:R structural placeholder",
+      "snippet": "2. Structural `Device:R` placeholders remain (criteria #2)"
+    },
+    {
+      "file": "docs/full_product_family/RELEASE_CRITERIA.md",
+      "line": 8,
+      "class": "Device:R structural placeholder",
+      "snippet": "2. Native EDA package: hierarchical schematic + PCB with **real library symbols/footprints** (not Device:R placeholders) for all non-DNP BOM lines"
+    },
+    {
+      "file": "docs/full_product_family/RELEASE_CRITERIA.md",
+      "line": 20,
+      "class": "Device:R structural placeholder",
+      "snippet": "- KiCad sources still use structural `Device:R` placeholders \u2192 criteria #2 not met"
+    },
+    {
+      "file": "gate1_digital_fabrication/edge_io_ring/schematic/edge_io_ring.kicad_sch",
+      "line": 15,
+      "class": "Device:R structural placeholder",
+      "snippet": "(symbol (lib_id \"Device:R\") (at 40 40 0) (unit 1)"
+    },
+    {
+      "file": "gate1_digital_fabrication/edge_io_ring/schematic/edge_io_ring.kicad_sch",
+      "line": 24,
+      "class": "Device:R structural placeholder",
+      "snippet": "(symbol (lib_id \"Device:R\") (at 90 40 0) (unit 1)"
+    },
+    {
+      "file": "gate1_digital_fabrication/edge_io_ring/schematic/edge_io_ring.kicad_sch",
+      "line": 33,
+      "class": "Device:R structural placeholder",
+      "snippet": "(symbol (lib_id \"Device:R\") (at 140 40 0) (unit 1)"
+    },
+    {
+      "file": "gate1_digital_fabrication/edge_io_ring/schematic/edge_io_ring.kicad_sch",
+      "line": 42,
+      "class": "Device:R structural placeholder",
+      "snippet": "(symbol (lib_id \"Device:R\") (at 190 40 0) (unit 1)"
+    },
+    {
+      "file": "gate1_digital_fabrication/edge_io_ring/schematic/edge_io_ring.kicad_sch",
+      "line": 51,
+      "class": "Device:R structural placeholder",
+      "snippet": "(symbol (lib_id \"Device:R\") (at 40 80 0) (unit 1)"
+    },
+    {
+      "file": "gate1_digital_fabrication/edge_io_ring/schematic/edge_io_ring.kicad_sch",
+      "line": 60,
+      "class": "Device:R structural placeholder",
+      "snippet": "(symbol (lib_id \"Device:R\") (at 90 80 0) (unit 1)"
+    },
+    {
+      "file": "gate1_digital_fabrication/edge_io_ring/schematic/edge_io_ring.kicad_sch",
+      "line": 69,
+      "class": "Device:R structural placeholder",
+      "snippet": "(symbol (lib_id \"Device:R\") (at 140 80 0) (unit 1)"
+    },
+    {
+      "file": "gate1_digital_fabrication/edge_io_ring/schematic/edge_io_ring.kicad_sch",
+      "line": 78,
+      "class": "Device:R structural placeholder",
+      "snippet": "(symbol (lib_id \"Device:R\") (at 190 80 0) (unit 1)"
+    },
+    {
+      "file": "gate1_digital_fabrication/edge_io_ring/schematic/edge_io_ring.kicad_sch",
+      "line": 87,
+      "class": "Device:R structural placeholder",
+      "snippet": "(symbol (lib_id \"Device:R\") (at 40 120 0) (unit 1)"
+    },
+    {
+      "file": "gate1_digital_fabrication/edge_io_ring/schematic/edge_io_ring.kicad_sch",
+      "line": 96,
+      "class": "Device:R structural placeholder",
+      "snippet": "(symbol (lib_id \"Device:R\") (at 90 120 0) (unit 1)"
+    },
+    {
+      "file": "gate1_digital_fabrication/edge_io_ring/schematic/edge_io_ring.kicad_sch",
+      "line": 105,
+      "class": "Device:R structural placeholder",
+      "snippet": "(symbol (lib_id \"Device:R\") (at 140 120 0) (unit 1)"
+    },
+    {
+      "file": "gate1_digital_fabrication/edge_io_ring/schematic/edge_io_ring.kicad_sch",
+      "line": 114,
+      "class": "Device:R structural placeholder",
+      "snippet": "(symbol (lib_id \"Device:R\") (at 190 120 0) (unit 1)"
+    },
+    {
+      "file": "gate1_digital_fabrication/edge_io_ring/schematic/kicad/edge_io_ring_evt0.kicad_sch",
+      "line": 15,
+      "class": "Device:R structural placeholder",
+      "snippet": "(symbol (lib_id \"Device:R\") (at 40 40 0) (unit 1)"
+    },
+    {
+      "file": "gate1_digital_fabrication/edge_io_ring/schematic/kicad/edge_io_ring_evt0.kicad_sch",
+      "line": 24,
+      "class": "Device:R structural placeholder",
+      "snippet": "(symbol (lib_id \"Device:R\") (at 90 40 0) (unit 1)"
+    },
+    {
+      "file": "gate1_digital_fabrication/edge_io_ring/schematic/kicad/edge_io_ring_evt0.kicad_sch",
+      "line": 33,
+      "class": "Device:R structural placeholder",
+      "snippet": "(symbol (lib_id \"Device:R\") (at 140 40 0) (unit 1)"
+    },
+    {
+      "file": "gate1_digital_fabrication/edge_io_ring/schematic/kicad/edge_io_ring_evt0.kicad_sch",
+      "line": 42,
+      "class": "Device:R structural placeholder",
+      "snippet": "(symbol (lib_id \"Device:R\") (at 190 40 0) (unit 1)"
+    },
+    {
+      "file": "gate1_digital_fabrication/edge_io_ring/schematic/kicad/edge_io_ring_evt0.kicad_sch",
+      "line": 51,
+      "class": "Device:R structural placeholder",
+      "snippet": "(symbol (lib_id \"Device:R\") (at 40 80 0) (unit 1)"
+    },
+    {
+      "file": "gate1_digital_fabrication/edge_io_ring/schematic/kicad/edge_io_ring_evt0.kicad_sch",
+      "line": 60,
+      "class": "Device:R structural placeholder",
+      "snippet": "(symbol (lib_id \"Device:R\") (at 90 80 0) (unit 1)"
+    },
+    {
+      "file": "gate1_digital_fabrication/edge_io_ring/schematic/kicad/edge_io_ring_evt0.kicad_sch",
+      "line": 69,
+      "class": "Device:R structural placeholder",
+      "snippet": "(symbol (lib_id \"Device:R\") (at 140 80 0) (unit 1)"
+    },
+    {
+      "file": "gate1_digital_fabrication/edge_io_ring/schematic/kicad/edge_io_ring_evt0.kicad_sch",
+      "line": 78,
+      "class": "Device:R structural placeholder",
+      "snippet": "(symbol (lib_id \"Device:R\") (at 190 80 0) (unit 1)"
+    },
+    {
+      "file": "gate1_digital_fabrication/edge_io_ring/schematic/kicad/edge_io_ring_evt0.kicad_sch",
+      "line": 87,
+      "class": "Device:R structural placeholder",
+      "snippet": "(symbol (lib_id \"Device:R\") (at 40 120 0) (unit 1)"
+    },
+    {
+      "file": "gate1_digital_fabrication/edge_io_ring/schematic/kicad/edge_io_ring_evt0.kicad_sch",
+      "line": 96,
+      "class": "Device:R structural placeholder",
+      "snippet": "(symbol (lib_id \"Device:R\") (at 90 120 0) (unit 1)"
+    },
+    {
+      "file": "gate1_digital_fabrication/edge_io_ring/schematic/kicad/edge_io_ring_evt0.kicad_sch",
+      "line": 105,
+      "class": "Device:R structural placeholder",
+      "snippet": "(symbol (lib_id \"Device:R\") (at 140 120 0) (unit 1)"
+    },
+    {
+      "file": "gate1_digital_fabrication/edge_io_ring/schematic/kicad/edge_io_ring_evt0.kicad_sch",
+      "line": 114,
+      "class": "Device:R structural placeholder",
+      "snippet": "(symbol (lib_id \"Device:R\") (at 190 120 0) (unit 1)"
+    },
+    {
+      "file": "gate1_digital_fabrication/edge_io_ring/schematic/kicad/edge_io_ring_evt0.kicad_sch",
+      "line": 123,
+      "class": "Device:R structural placeholder",
+      "snippet": "(symbol (lib_id \"Device:R\") (at 40 160 0) (unit 1)"
+    },
+    {
+      "file": "gate1_digital_fabrication/edge_io_ring/schematic/kicad/edge_io_ring_evt0.kicad_sch",
+      "line": 132,
+      "class": "Device:R structural placeholder",
+      "snippet": "(symbol (lib_id \"Device:R\") (at 90 160 0) (unit 1)"
+    },
+    {
+      "file": "gate1_digital_fabrication/edge_io_ring/schematic/kicad/edge_io_ring_evt0.kicad_sch",
+      "line": 141,
+      "class": "Device:R structural placeholder",
+      "snippet": "(symbol (lib_id \"Device:R\") (at 140 160 0) (unit 1)"
+    },
+    {
+      "file": "gate1_digital_fabrication/edge_io_ring/schematic/kicad/edge_io_ring_evt0.kicad_sch",
+      "line": 249,
+      "class": "Device:R structural placeholder",
+      "snippet": "(symbol (lib_id \"Device:R\") (at 40 200 0) (unit 1)"
+    },
+    {
+      "file": "gate1_digital_fabrication/edge_io_ring/schematic/kicad/edge_io_ring_evt0.kicad_sch",
+      "line": 258,
+      "class": "Device:R structural placeholder",
+      "snippet": "(symbol (lib_id \"Device:R\") (at 90 200 0) (unit 1)"
+    },
+    {
+      "file": "gate1_digital_fabrication/edge_io_ring/schematic/kicad/edge_io_ring_evt0.kicad_sch",
+      "line": 267,
+      "class": "Device:R structural placeholder",
+      "snippet": "(symbol (lib_id \"Device:R\") (at 140 200 0) (unit 1)"
+    },
+    {
+      "file": "gate1_digital_fabrication/edge_io_ring/schematic/kicad/edge_io_ring_evt0.kicad_sch",
+      "line": 276,
+      "class": "Device:R structural placeholder",
+      "snippet": "(symbol (lib_id \"Device:R\") (at 190 200 0) (unit 1)"
+    },
+    {
+      "file": "gate1_digital_fabrication/edge_io_ring/schematic/kicad/edge_io_ring_evt0.kicad_sch",
+      "line": 285,
+      "class": "Device:R structural placeholder",
+      "snippet": "(symbol (lib_id \"Device:R\") (at 40 240 0) (unit 1)"
+    },
+    {
+      "file": "gate1_digital_fabrication/edge_io_ring/bom/assembly_bom.csv",
+      "line": 1,
+      "class": "ambiguous_or_MPN",
+      "snippet": "device,subsystem,manufacturer,MPN,description,quantity,preferred_or_alternate,approved_alternative,reason,datasheet_url,package,voltage,current,interfaces,avail"
+    },
+    {
+      "file": "gate1_digital_fabrication/edge_io_ring/pcb/stackup.yaml",
+      "line": 8,
+      "class": "ambiguous_or_MPN",
+      "snippet": "flex_or_rigid: rigid-flex_candidate_band"
+    },
+    {
+      "file": "gate1_digital_fabrication/dock/bom/assembly_bom.csv",
+      "line": 1,
+      "class": "ambiguous_or_MPN",
+      "snippet": "device,subsystem,manufacturer,MPN,description,qty,preferred_or_alternate,approved_alternative,status,notes"
+    },
+    {
+      "file": "gate1_digital_fabrication/dock/kicad/dock.kicad_sch",
+      "line": 15,
+      "class": "Device:R structural placeholder",
+      "snippet": "(symbol (lib_id \"Device:R\") (at 35 30 0) (unit 1)"
+    },
+    {
+      "file": "gate1_digital_fabrication/dock/kicad/dock.kicad_sch",
+      "line": 24,
+      "class": "Device:R structural placeholder",
+      "snippet": "(symbol (lib_id \"Device:R\") (at 75 30 0) (unit 1)"
+    },
+    {
+      "file": "gate1_digital_fabrication/dock/kicad/dock.kicad_sch",
+      "line": 33,
+      "class": "Device:R structural placeholder",
+      "snippet": "(symbol (lib_id \"Device:R\") (at 115 30 0) (unit 1)"
+    },
+    {
+      "file": "gate1_digital_fabrication/dock/kicad/dock.kicad_sch",
+      "line": 42,
+      "class": "Device:R structural placeholder",
+      "snippet": "(symbol (lib_id \"Device:R\") (at 155 30 0) (unit 1)"
+    },
+    {
+      "file": "gate1_digital_fabrication/dock/kicad/dock.kicad_sch",
+      "line": 51,
+      "class": "Device:R structural placeholder",
+      "snippet": "(symbol (lib_id \"Device:R\") (at 195 30 0) (unit 1)"
+    },
+    {
+      "file": "gate1_digital_fabrication/dock/kicad/dock.kicad_sch",
+      "line": 60,
+      "class": "Device:R structural placeholder",
+      "snippet": "(symbol (lib_id \"Device:R\") (at 235 30 0) (unit 1)"
+    },
+    {
+      "file": "gate1_digital_fabrication/dock/kicad/dock.kicad_sch",
+      "line": 69,
+      "class": "Device:R structural placeholder",
+      "snippet": "(symbol (lib_id \"Device:R\") (at 35 65 0) (unit 1)"
+    },
+    {
+      "file": "gate1_digital_fabrication/dock/kicad/dock.kicad_sch",
+      "line": 78,
+      "class": "Device:R structural placeholder",
+      "snippet": "(symbol (lib_id \"Device:R\") (at 75 65 0) (unit 1)"
+    },
+    {
+      "file": "gate1_digital_fabrication/dock/kicad/dock.kicad_sch",
+      "line": 87,
+      "class": "Device:R structural placeholder",
+      "snippet": "(symbol (lib_id \"Device:R\") (at 115 65 0) (unit 1)"
+    },
+    {
+      "file": "gate1_digital_fabrication/dock/kicad/dock.kicad_sch",
+      "line": 96,
+      "class": "Device:R structural placeholder",
+      "snippet": "(symbol (lib_id \"Device:R\") (at 155 65 0) (unit 1)"
+    },
+    {
+      "file": "gate1_digital_fabrication/dock/kicad/dock.kicad_sch",
+      "line": 105,
+      "class": "Device:R structural placeholder",
+      "snippet": "(symbol (lib_id \"Device:R\") (at 195 65 0) (unit 1)"
+    },
+    {
+      "file": "gate1_digital_fabrication/dock/kicad/dock.kicad_sch",
+      "line": 114,
+      "class": "Device:R structural placeholder",
+      "snippet": "(symbol (lib_id \"Device:R\") (at 235 65 0) (unit 1)"
+    },
+    {
+      "file": "gate1_digital_fabrication/dock/kicad/dock.kicad_sch",
+      "line": 123,
+      "class": "Device:R structural placeholder",
+      "snippet": "(symbol (lib_id \"Device:R\") (at 35 100 0) (unit 1)"
+    },
+    {
+      "file": "gate1_digital_fabrication/dock/kicad/dock.kicad_sch",
+      "line": 132,
+      "class": "Device:R structural placeholder",
+      "snippet": "(symbol (lib_id \"Device:R\") (at 75 100 0) (unit 1)"
+    },
+    {
+      "file": "gate1_digital_fabrication/dock/kicad/dock.kicad_sch",
+      "line": 141,
+      "class": "Device:R structural placeholder",
+      "snippet": "(symbol (lib_id \"Device:R\") (at 115 100 0) (unit 1)"
+    },
+    {
+      "file": "gate1_digital_fabrication/dock/kicad/dock.kicad_sch",
+      "line": 150,
+      "class": "Device:R structural placeholder",
+      "snippet": "(symbol (lib_id \"Device:R\") (at 155 100 0) (unit 1)"
+    },
+    {
+      "file": "gate1_digital_fabrication/dock/kicad/dock.kicad_sch",
+      "line": 159,
+      "class": "Device:R structural placeholder",
+      "snippet": "(symbol (lib_id \"Device:R\") (at 195 100 0) (unit 1)"
+    },
+    {
+      "file": "gate1_digital_fabrication/dock/kicad/dock.kicad_sch",
+      "line": 168,
+      "class": "Device:R structural placeholder",
+      "snippet": "(symbol (lib_id \"Device:R\") (at 235 100 0) (unit 1)"
+    },
+    {
+      "file": "gate1_digital_fabrication/dock/kicad/dock.kicad_sch",
+      "line": 177,
+      "class": "Device:R structural placeholder",
+      "snippet": "(symbol (lib_id \"Device:R\") (at 35 135 0) (unit 1)"
+    },
+    {
+      "file": "gate1_digital_fabrication/dock/kicad/dock.kicad_sch",
+      "line": 186,
+      "class": "Device:R structural placeholder",
+      "snippet": "(symbol (lib_id \"Device:R\") (at 75 135 0) (unit 1)"
+    },
+    {
+      "file": "gate1_digital_fabrication/dock/kicad/dock.kicad_sch",
+      "line": 195,
+      "class": "Device:R structural placeholder",
+      "snippet": "(symbol (lib_id \"Device:R\") (at 115 135 0) (unit 1)"
+    }
+  ],
+  "findings_total": 163
+}
