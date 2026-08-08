@@ -1,0 +1,12 @@
+{
+  "generated_at_utc": "2026-08-08T00:50:00Z",
+  "wave": "A2_hardware_depth",
+  "branch": "cursor/full-product-wave-a2-hardware-depth",
+  "token_RING_KICAD_CLI_VALIDATION_PASS": false,
+  "kicad_cli_available": false,
+  "blocker": "kicad_cli_absent_on_host",
+  "edmund_action_required": "EDMUND_ACTION_REQUIRED: Approve the macOS administrator/install prompt for KiCad.",
+  "continued_without_cli": true,
+  "physical_execution_freeze": true,
+  "fab": false
+}

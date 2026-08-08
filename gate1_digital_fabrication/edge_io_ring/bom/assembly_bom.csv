@@ -17,3 +17,8 @@ Edge I/O Ring,NTC,Murata,NCP15XH103F03RC,10k NTC for battery temp,1,preferred,NC
 Edge I/O Ring,Decoupling,Samsung Electro-Mechanics,CL05A104KA5NNNC,100nF 0402 X5R,12,preferred,GRM155R61A104KA01D,Local decoupling MCU/IMU/PMIC,https://www.samsungsem.com/,0402,6.3V,—,power,low,Standard decoupling,none
 Edge I/O Ring,Bulk cap,Murata,GRM188R60J106ME47D,10uF 0603,4,preferred,CL10A106MQ8NNNC,Bulk on VBAT/3V3,https://www.murata.com/,0603,6.3V,—,power,low,Rail stability,none
 Edge I/O Ring,Series R,Yageo,RC0402FR-0710KL,10k 0402 1%,8,preferred,ERJ-2RKF1002X,Pull-ups I2C/config,https://www.yageo.com/,0402,—,—,passives,low,I2C and config straps,none
+Edge I/O Ring,Capacitive,Azoteq,IQS7222A,Capacitive touch/proximity controller,1,preferred,IQS550,ADR-FP-008 contact modality,https://www.azoteq.com/,QFN,1.8-3.6V,~150uA,I2C,medium,Required footprint for spatial multi-modal,none
+Edge I/O Ring,UWB,Qorvo,DWM3001C,UWB module DW3000-class,1,preferred,DW3000+balun,Spatial ranging assist; DNP→UWB_ON_COMPANION,https://www.qorvo.com/,module,2.5-3.6V,burst,SPI,medium,Footprint for ADR-FP-008,none
+Edge I/O Ring,SensorHub,Bosch Sensortec,BHI360,IMU+fusion coprocessor optional,1,alternate,BHI260AP,Optional offload when standalone spatial demos required,https://www.bosch-sensortec.com/,LGA,1.8V,sub-mA,SPI/I2C,medium,Coprocessor footprint ADR-FP-008,none
+Edge I/O Ring,Magnetometer,Bosch Sensortec,BMM350,3-axis mag optional,1,preferred,BMM150,Heading assist DNP OK,https://www.bosch-sensortec.com/,WLCSP,1.72-3.6V,~200uA,I2C/SPI,low,Optional modality,none
+Edge I/O Ring,SecureElement,NXP,SE050C1HQ1,Secure element,1,preferred,ATECC608B,Identity/attestation,https://www.nxp.com/,HXQFN,1.62-3.6V,burst,I2C,medium,Auth path,none

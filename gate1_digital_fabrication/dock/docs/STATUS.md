@@ -1,0 +1,11 @@
+# Dock digital status
+
+Updated: 2026-08-08T00:50:00Z
+
+```
+DOCK_DIGITAL_PACKAGE_SKELETON
+DOCK_PHYSICAL_PROTOTYPE_PENDING
+PHYSICAL_EXECUTION_FREEZE ACTIVE
+```
+
+No fab. No certification logos.

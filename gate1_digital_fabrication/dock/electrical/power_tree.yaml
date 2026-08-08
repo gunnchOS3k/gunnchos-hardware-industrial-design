@@ -1,0 +1,29 @@
+device_id: dock
+evidence_class: MODELED
+adr: ADR-FP-006
+updated_at_utc: "2026-08-08T00:50:00Z"
+rails:
+  - name: AC_ADAPTER_VBUS
+    volts: 20.0
+    budget_w_peak: 100
+  - name: VBUS_UPSTREAM
+    regulator_mpn: TPS65994
+    alternate_mpn: CYPD6227
+    budget_w_negotiated: 100
+  - name: VSYS_5V
+    regulator_mpn: TPS62864
+    alternate_mpn: TPS62135
+    budget_ma_peak: 4000
+  - name: VDD_3V3
+    regulator_mpn: TLV75533PDRVR
+    alternate_mpn: TLV70033DSET
+    budget_ma_peak: 800
+  - name: RING_CHARGE_5V
+    regulator_mpn: TPS62864
+    budget_ma_peak: 100
+regulators:
+  - {mpn: TPS65994, role: PD}
+  - {mpn: TPS55288RPMR, role: buck_boost_VBUS}
+  - {mpn: TPS62864, role: 5V_buck}
+  - {mpn: TLV75533PDRVR, role: 3V3_LDO}
+  - {mpn: JHL9040, role: USB4_controller}

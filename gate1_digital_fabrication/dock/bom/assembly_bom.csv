@@ -1,0 +1,9 @@
+device,subsystem,manufacturer,MPN,description,quantity,preferred_or_alternate,approved_alternative
+Dock,USB4,Intel,JHL9040,USB4 dock controller,1,preferred,VL108
+Dock,PD,Texas Instruments,TPS65994,USB-C PD controller,1,preferred,CYPD6227
+Dock,Ethernet,Realtek,RTL8156,2.5GbE USB ethernet,1,preferred,RTL8153
+Dock,USBHub,VIA Labs,VL817,USB 3.1 hub,1,preferred,VL822
+Dock,BuckBoost,Texas Instruments,TPS55288RPMR,PD VBUS regulator,1,preferred,
+Dock,Buck5V,Texas Instruments,TPS62864,5V system buck,1,preferred,TPS62135
+Dock,LDO3V3,Texas Instruments,TLV75533PDRVR,3V3 LDO,1,preferred,TLV70033
+Dock,UWB,Qorvo,DWM3001C,Optional UWB companion,1,optional,DW3000
