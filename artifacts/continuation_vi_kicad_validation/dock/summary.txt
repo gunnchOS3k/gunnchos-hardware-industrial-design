@@ -1,0 +1,4 @@
+===== dock =====
+-- schematic erc --
+-- pcb drc --
+drc_exit=3

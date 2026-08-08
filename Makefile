@@ -58,3 +58,18 @@ e2e-sionna e2e-deepmimo e2e-aerial e2e-oran:
 # Gate 6 harness only — synthetic/emulated; DESIGN_ONLY / HARDWARE_PROTOTYPE_PENDING
 gate6-dry-run:
 	python3 scripts/gate6_dry_run.py
+
+# Continuation VI — EDA closure / KiCad resume
+.PHONY: continuation-vi validate-continuation-vi kicad-validate-family placeholder-scan-vi
+
+continuation-vi:
+	$(PYTHON) scripts/continuation_vi_eda_closure.py
+
+validate-continuation-vi:
+	$(PYTHON) scripts/validate_continuation_vi.py
+
+kicad-validate-family:
+	bash scripts/run_family_kicad_cli.sh
+
+placeholder-scan-vi:
+	$(PYTHON) scripts/continuation_vi_eda_closure.py

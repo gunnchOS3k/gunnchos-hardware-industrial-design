@@ -1,0 +1,367 @@
+{
+    "$schema": "https://schemas.kicad.org/erc.v1.json",
+    "coordinate_units": "mm",
+    "date": "2026-08-08T16:01:44",
+    "ignored_checks": [
+        {
+            "description": "Global label only appears once in the schematic",
+            "key": "single_global_label"
+        },
+        {
+            "description": "Four connection points are joined together",
+            "key": "four_way_junction"
+        },
+        {
+            "description": "SPICE model issue",
+            "key": "simulation_model_issue"
+        },
+        {
+            "description": "Assigned footprint doesn't match footprint filters",
+            "key": "footprint_filter"
+        }
+    ],
+    "included_severities": [
+        "error",
+        "warning"
+    ],
+    "kicad_version": "10.0.5",
+    "sheets": [
+        {
+            "path": "/",
+            "uuid_path": "/343251f6-0a40-52a7-a13c-013682c2e92e",
+            "violations": [
+                {
+                    "description": "Label not connected",
+                    "items": [
+                        {
+                            "description": "Global Label 'VSYS'",
+                            "pos": {
+                                "x": 0.3,
+                                "y": 2.0
+                            },
+                            "uuid": "ad06b85c-23ea-5cf3-a82d-7100df116ae9"
+                        }
+                    ],
+                    "severity": "error",
+                    "type": "label_dangling"
+                },
+                {
+                    "description": "Label not connected",
+                    "items": [
+                        {
+                            "description": "Global Label 'COM_VIN'",
+                            "pos": {
+                                "x": 0.65,
+                                "y": 2.0
+                            },
+                            "uuid": "83e3cec5-46bf-53c7-899f-b60dab14f54d"
+                        }
+                    ],
+                    "severity": "error",
+                    "type": "label_dangling"
+                },
+                {
+                    "description": "Label not connected",
+                    "items": [
+                        {
+                            "description": "Global Label 'VDD_3V3'",
+                            "pos": {
+                                "x": 1.0,
+                                "y": 2.0
+                            },
+                            "uuid": "5bbbab0b-efa6-5ae4-9797-c1a21b02188b"
+                        }
+                    ],
+                    "severity": "error",
+                    "type": "label_dangling"
+                },
+                {
+                    "description": "Label not connected",
+                    "items": [
+                        {
+                            "description": "Global Label 'VBUS_PD'",
+                            "pos": {
+                                "x": 1.35,
+                                "y": 2.0
+                            },
+                            "uuid": "a472aa86-d6c4-596d-a841-2fc39eb37b62"
+                        }
+                    ],
+                    "severity": "error",
+                    "type": "label_dangling"
+                },
+                {
+                    "description": "Label not connected",
+                    "items": [
+                        {
+                            "description": "Global Label 'eDP0'",
+                            "pos": {
+                                "x": 1.7,
+                                "y": 2.0
+                            },
+                            "uuid": "3ae9f168-9600-56ca-af45-2d6c97680bb4"
+                        }
+                    ],
+                    "severity": "error",
+                    "type": "label_dangling"
+                },
+                {
+                    "description": "Label not connected",
+                    "items": [
+                        {
+                            "description": "Global Label 'I2C_EC'",
+                            "pos": {
+                                "x": 2.05,
+                                "y": 2.0
+                            },
+                            "uuid": "adbcbe5f-9721-5b3e-886d-7000f14f26ef"
+                        }
+                    ],
+                    "severity": "error",
+                    "type": "label_dangling"
+                },
+                {
+                    "description": "The current configuration does not include the footprint library ''",
+                    "items": [
+                        {
+                            "description": "Symbol UCOM1 [R]",
+                            "pos": {
+                                "x": 0.4,
+                                "y": 0.4
+                            },
+                            "uuid": "12c4b4a5-9393-5f5f-b384-b9ca5b42daee"
+                        }
+                    ],
+                    "severity": "warning",
+                    "type": "footprint_link_issues"
+                },
+                {
+                    "description": "The current configuration does not include the footprint library ''",
+                    "items": [
+                        {
+                            "description": "Symbol U_CHG [R]",
+                            "pos": {
+                                "x": 0.4,
+                                "y": 0.8
+                            },
+                            "uuid": "c196561e-08c6-5e04-a1a7-838824e35b37"
+                        }
+                    ],
+                    "severity": "warning",
+                    "type": "footprint_link_issues"
+                },
+                {
+                    "description": "The current configuration does not include the footprint library ''",
+                    "items": [
+                        {
+                            "description": "Symbol U_TPM [R]",
+                            "pos": {
+                                "x": 0.4,
+                                "y": 1.2
+                            },
+                            "uuid": "266fc158-5399-544b-b62d-11a3557540ca"
+                        }
+                    ],
+                    "severity": "warning",
+                    "type": "footprint_link_issues"
+                },
+                {
+                    "description": "The current configuration does not include the footprint library ''",
+                    "items": [
+                        {
+                            "description": "Symbol U_5V [R]",
+                            "pos": {
+                                "x": 0.4,
+                                "y": 1.6
+                            },
+                            "uuid": "93a9bb08-516c-549a-bd0d-9a162c8002ee"
+                        }
+                    ],
+                    "severity": "warning",
+                    "type": "footprint_link_issues"
+                },
+                {
+                    "description": "The current configuration does not include the footprint library ''",
+                    "items": [
+                        {
+                            "description": "Symbol JCOM1 [R]",
+                            "pos": {
+                                "x": 0.9,
+                                "y": 0.4
+                            },
+                            "uuid": "c802c8d3-969a-52d5-ab6c-af1b1123cedc"
+                        }
+                    ],
+                    "severity": "warning",
+                    "type": "footprint_link_issues"
+                },
+                {
+                    "description": "The current configuration does not include the footprint library ''",
+                    "items": [
+                        {
+                            "description": "Symbol U_FG [R]",
+                            "pos": {
+                                "x": 0.9,
+                                "y": 0.8
+                            },
+                            "uuid": "1046cb71-583f-57e1-a256-af90d6021756"
+                        }
+                    ],
+                    "severity": "warning",
+                    "type": "footprint_link_issues"
+                },
+                {
+                    "description": "The current configuration does not include the footprint library ''",
+                    "items": [
+                        {
+                            "description": "Symbol U_AUD [R]",
+                            "pos": {
+                                "x": 0.9,
+                                "y": 1.2
+                            },
+                            "uuid": "98bbb924-0a82-5223-a7fa-152940593b96"
+                        }
+                    ],
+                    "severity": "warning",
+                    "type": "footprint_link_issues"
+                },
+                {
+                    "description": "The current configuration does not include the footprint library ''",
+                    "items": [
+                        {
+                            "description": "Symbol U_3V3 [R]",
+                            "pos": {
+                                "x": 0.9,
+                                "y": 1.6
+                            },
+                            "uuid": "13d00418-0ad9-50a9-9118-8b23ef2184d7"
+                        }
+                    ],
+                    "severity": "warning",
+                    "type": "footprint_link_issues"
+                },
+                {
+                    "description": "The current configuration does not include the footprint library ''",
+                    "items": [
+                        {
+                            "description": "Symbol U_EC [R]",
+                            "pos": {
+                                "x": 1.4,
+                                "y": 0.4
+                            },
+                            "uuid": "24614b59-12bc-5a6d-bb3e-6124b84ca02e"
+                        }
+                    ],
+                    "severity": "warning",
+                    "type": "footprint_link_issues"
+                },
+                {
+                    "description": "The current configuration does not include the footprint library ''",
+                    "items": [
+                        {
+                            "description": "Symbol U_WIFI [R]",
+                            "pos": {
+                                "x": 1.4,
+                                "y": 0.8
+                            },
+                            "uuid": "b2695a22-dc95-5d07-bdd9-30b0ea719a14"
+                        }
+                    ],
+                    "severity": "warning",
+                    "type": "footprint_link_issues"
+                },
+                {
+                    "description": "The current configuration does not include the footprint library ''",
+                    "items": [
+                        {
+                            "description": "Symbol J_EDP [R]",
+                            "pos": {
+                                "x": 1.4,
+                                "y": 1.2
+                            },
+                            "uuid": "9c427f88-c419-5718-9428-7ecffb34f99d"
+                        }
+                    ],
+                    "severity": "warning",
+                    "type": "footprint_link_issues"
+                },
+                {
+                    "description": "The current configuration does not include the footprint library ''",
+                    "items": [
+                        {
+                            "description": "Symbol SSD1 [R]",
+                            "pos": {
+                                "x": 1.4,
+                                "y": 1.6
+                            },
+                            "uuid": "7e717aad-1d51-5b4b-8b01-fc3268054ee6"
+                        }
+                    ],
+                    "severity": "warning",
+                    "type": "footprint_link_issues"
+                },
+                {
+                    "description": "The current configuration does not include the footprint library ''",
+                    "items": [
+                        {
+                            "description": "Symbol U_PD [R]",
+                            "pos": {
+                                "x": 1.9,
+                                "y": 0.4
+                            },
+                            "uuid": "c610dd1a-0ac0-5ee1-9895-be812641cff5"
+                        }
+                    ],
+                    "severity": "warning",
+                    "type": "footprint_link_issues"
+                },
+                {
+                    "description": "The current configuration does not include the footprint library ''",
+                    "items": [
+                        {
+                            "description": "Symbol U_WWAN [R]",
+                            "pos": {
+                                "x": 1.9,
+                                "y": 0.8
+                            },
+                            "uuid": "bd47d7e4-a968-5811-9d66-555d05f22182"
+                        }
+                    ],
+                    "severity": "warning",
+                    "type": "footprint_link_issues"
+                },
+                {
+                    "description": "The current configuration does not include the footprint library ''",
+                    "items": [
+                        {
+                            "description": "Symbol J_USB4 [R]",
+                            "pos": {
+                                "x": 1.9,
+                                "y": 1.2
+                            },
+                            "uuid": "54549507-deb5-5e71-bec8-636d43b0d752"
+                        }
+                    ],
+                    "severity": "warning",
+                    "type": "footprint_link_issues"
+                },
+                {
+                    "description": "The current configuration does not include the footprint library ''",
+                    "items": [
+                        {
+                            "description": "Symbol BT1 [R]",
+                            "pos": {
+                                "x": 1.9,
+                                "y": 1.6
+                            },
+                            "uuid": "5cd25130-e57a-522f-ad75-c85888884833"
+                        }
+                    ],
+                    "severity": "warning",
+                    "type": "footprint_link_issues"
+                }
+            ]
+        }
+    ],
+    "source": "student_14_5.kicad_sch"
+}

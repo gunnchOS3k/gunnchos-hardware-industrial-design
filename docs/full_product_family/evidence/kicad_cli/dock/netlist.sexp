@@ -1,0 +1,68 @@
+(export
+	(version "E")
+	(design
+		(source "/Users/gunnchos/Downloads/gunnchos-7gc-research-product-spine/repos/gunnchos-hardware-industrial-design/device_designs/dock/kicad/dock.kicad_sch")
+		(date "2026-08-08T16:01:24")
+		(tool "Eeschema 10.0.5")
+		(textvar
+			(name "EDMUND_ACTION_REQUIRED") "install_kicad_cli")
+		(textvar
+			(name "KICAD_CLI") "ABSENT")
+		(textvar
+			(name "PACKAGE") "DOCK_PCB_DIGITAL_BEYOND_SKELETON")
+		(sheet
+			(number "1")
+			(name "/")
+			(tstamps "/")
+			(title_block
+				(title "Dock Main PCB — USB4/TB4 40G topology")
+				(company "gunnchOS3k / CONTINUATION VI")
+				(rev "0.3.0-cont-vi")
+				(date "2026-08-08")
+				(source "dock.kicad_sch")
+				(comment
+					(number "1")
+					(value "ADR-HW-002: JHL8440 controller + JHL9040R retimer — NOT TB5")
+				)
+				(comment
+					(number "2")
+					(value "No fake Intel package pinouts; topology nets only")
+				)
+				(comment
+					(number "3")
+					(value "kicad-cli ABSENT → resume scripts ready")
+				)
+				(comment
+					(number "4")
+					(value "PHYSICAL_EXECUTION_FREEZE ACTIVE")
+				)
+				(comment
+					(number "5")
+					(value "")
+				)
+				(comment
+					(number "6")
+					(value "")
+				)
+				(comment
+					(number "7")
+					(value "")
+				)
+				(comment
+					(number "8")
+					(value "")
+				)
+				(comment
+					(number "9")
+					(value "")
+				)
+			)
+		)
+	)
+	(components)
+	(groups)
+	(variants)
+	(libparts)
+	(libraries)
+	(nets)
+)

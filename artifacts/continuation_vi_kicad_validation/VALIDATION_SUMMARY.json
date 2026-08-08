@@ -1,0 +1,60 @@
+{
+  "generated_at_utc": "2026-08-08T21:02:13Z",
+  "kicad_cli": "/opt/homebrew/bin/kicad-cli",
+  "kicad_version": "10.0.5",
+  "KICAD_INSTALLATION_PASS": true,
+  "KICAD_CLI_DISCOVERY_PASS": true,
+  "RING_KICAD_CLI_VALIDATION_PASS": true,
+  "boards": {
+    "student_14_5": {
+      "erc_json": true,
+      "drc_json": true,
+      "gerber_count": 18,
+      "pnp": true,
+      "step": true,
+      "netlist": true,
+      "erc_violation_entries": 22,
+      "drc_violation_entries": 8
+    },
+    "ds_xl_coder": {
+      "erc_json": true,
+      "drc_json": true,
+      "gerber_count": 18,
+      "pnp": true,
+      "step": true,
+      "netlist": true,
+      "erc_violation_entries": 5,
+      "drc_violation_entries": 6
+    },
+    "handheld_hybrid": {
+      "erc_json": true,
+      "drc_json": true,
+      "gerber_count": 12,
+      "pnp": true,
+      "step": true,
+      "netlist": true,
+      "erc_violation_entries": 5,
+      "drc_violation_entries": 6
+    },
+    "edge_io_rings": {
+      "erc_json": true,
+      "drc_json": true,
+      "gerber_count": 12,
+      "pnp": true,
+      "step": true,
+      "netlist": true,
+      "erc_violation_entries": 7,
+      "drc_violation_entries": 6
+    },
+    "dock": {
+      "erc_json": true,
+      "drc_json": true,
+      "gerber_count": 12,
+      "pnp": true,
+      "step": true,
+      "netlist": true,
+      "erc_violation_entries": 24,
+      "drc_violation_entries": 9
+    }
+  }
+}

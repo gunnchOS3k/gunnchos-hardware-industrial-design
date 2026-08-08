@@ -1,0 +1,112 @@
+{
+    "$schema": "https://schemas.kicad.org/erc.v1.json",
+    "coordinate_units": "mm",
+    "date": "2026-08-08T16:00:31",
+    "ignored_checks": [
+        {
+            "description": "Global label only appears once in the schematic",
+            "key": "single_global_label"
+        },
+        {
+            "description": "Four connection points are joined together",
+            "key": "four_way_junction"
+        },
+        {
+            "description": "SPICE model issue",
+            "key": "simulation_model_issue"
+        },
+        {
+            "description": "Assigned footprint doesn't match footprint filters",
+            "key": "footprint_filter"
+        }
+    ],
+    "included_severities": [
+        "error",
+        "warning"
+    ],
+    "kicad_version": "10.0.5",
+    "sheets": [
+        {
+            "path": "/",
+            "uuid_path": "/108fa02b-f603-5d6a-a9b0-cd24627cf0c7",
+            "violations": [
+                {
+                    "description": "Label not connected",
+                    "items": [
+                        {
+                            "description": "Global Label 'SOM_VIN'",
+                            "pos": {
+                                "x": 0.3,
+                                "y": 1.6
+                            },
+                            "uuid": "8f0cb425-4433-58a3-b176-c5b36f1d0316"
+                        }
+                    ],
+                    "severity": "error",
+                    "type": "label_dangling"
+                },
+                {
+                    "description": "Label not connected",
+                    "items": [
+                        {
+                            "description": "Global Label 'VDD_3V3'",
+                            "pos": {
+                                "x": 0.65,
+                                "y": 1.6
+                            },
+                            "uuid": "2242df53-c3c4-50ed-98ea-e58e069ad6e9"
+                        }
+                    ],
+                    "severity": "error",
+                    "type": "label_dangling"
+                },
+                {
+                    "description": "Label not connected",
+                    "items": [
+                        {
+                            "description": "Global Label 'USB_SS'",
+                            "pos": {
+                                "x": 1.0,
+                                "y": 1.6
+                            },
+                            "uuid": "d85d0155-e7e5-593d-9fc3-788848213961"
+                        }
+                    ],
+                    "severity": "error",
+                    "type": "label_dangling"
+                },
+                {
+                    "description": "Label not connected",
+                    "items": [
+                        {
+                            "description": "Global Label 'MIPI_DSI'",
+                            "pos": {
+                                "x": 1.35,
+                                "y": 1.6
+                            },
+                            "uuid": "1ad7694d-6c75-5e6f-ab1d-9b168d8ef925"
+                        }
+                    ],
+                    "severity": "error",
+                    "type": "label_dangling"
+                },
+                {
+                    "description": "Label not connected",
+                    "items": [
+                        {
+                            "description": "Global Label 'I2C_HID'",
+                            "pos": {
+                                "x": 1.7,
+                                "y": 1.6
+                            },
+                            "uuid": "c5876408-cf9e-5397-bd86-c75b3eb0b124"
+                        }
+                    ],
+                    "severity": "error",
+                    "type": "label_dangling"
+                }
+            ]
+        }
+    ],
+    "source": "handheld_hybrid.kicad_sch"
+}

@@ -1,0 +1,15 @@
+# ds_xl_coder — Continuation VI status
+
+Updated: 2026-08-08T20:58:59Z
+
+```
+DSXL_BLOCKED_NDA
+PUBLIC_ENGINEERABILITY_GATE_OPTION3_ADLINK_NDA_EXTERNAL
+HARDWARE_DESIGN_RELEASE_CANDIDATE
+FULL_HARDWARE_DESIGN_RELEASE_COMPLETE = NOT CLAIMED
+NO_FAKE_COM_HPC_PINOUT
+PHYSICAL_EXECUTION_FREEZE ACTIVE
+```
+
+Carrier architecture / power / feature-group ICDs remain valid under PUBLIC_DOCS + MODELED.
+Pin-accurate nets require NARROW_NDA intake — stored external only (Option 3).

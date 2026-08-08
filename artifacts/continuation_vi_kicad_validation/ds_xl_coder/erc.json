@@ -1,0 +1,112 @@
+{
+    "$schema": "https://schemas.kicad.org/erc.v1.json",
+    "coordinate_units": "mm",
+    "date": "2026-08-08T16:00:20",
+    "ignored_checks": [
+        {
+            "description": "Global label only appears once in the schematic",
+            "key": "single_global_label"
+        },
+        {
+            "description": "Four connection points are joined together",
+            "key": "four_way_junction"
+        },
+        {
+            "description": "SPICE model issue",
+            "key": "simulation_model_issue"
+        },
+        {
+            "description": "Assigned footprint doesn't match footprint filters",
+            "key": "footprint_filter"
+        }
+    ],
+    "included_severities": [
+        "error",
+        "warning"
+    ],
+    "kicad_version": "10.0.5",
+    "sheets": [
+        {
+            "path": "/",
+            "uuid_path": "/809671e0-4732-5c5f-886b-e8ce4bbd19f5",
+            "violations": [
+                {
+                    "description": "Label not connected",
+                    "items": [
+                        {
+                            "description": "Global Label 'eDP0'",
+                            "pos": {
+                                "x": 0.3,
+                                "y": 1.6
+                            },
+                            "uuid": "235a7de2-490a-5592-91f4-741c4e0c37fb"
+                        }
+                    ],
+                    "severity": "error",
+                    "type": "label_dangling"
+                },
+                {
+                    "description": "Label not connected",
+                    "items": [
+                        {
+                            "description": "Global Label 'eDP1'",
+                            "pos": {
+                                "x": 0.7,
+                                "y": 1.6
+                            },
+                            "uuid": "0908cd42-b7f9-58ff-b9e2-a0dcf4123d2c"
+                        }
+                    ],
+                    "severity": "error",
+                    "type": "label_dangling"
+                },
+                {
+                    "description": "Label not connected",
+                    "items": [
+                        {
+                            "description": "Global Label 'VSYS'",
+                            "pos": {
+                                "x": 1.1,
+                                "y": 1.6
+                            },
+                            "uuid": "19bb31a4-1d4f-5a90-a705-59c449d6ccc2"
+                        }
+                    ],
+                    "severity": "error",
+                    "type": "label_dangling"
+                },
+                {
+                    "description": "Label not connected",
+                    "items": [
+                        {
+                            "description": "Global Label 'BL_PWM_U'",
+                            "pos": {
+                                "x": 1.5,
+                                "y": 1.6
+                            },
+                            "uuid": "7da16daf-fd1f-5174-88cf-dbe7a4212353"
+                        }
+                    ],
+                    "severity": "error",
+                    "type": "label_dangling"
+                },
+                {
+                    "description": "Label not connected",
+                    "items": [
+                        {
+                            "description": "Global Label 'BL_PWM_L'",
+                            "pos": {
+                                "x": 1.9,
+                                "y": 1.6
+                            },
+                            "uuid": "d7efa759-d339-510c-9e0b-980c68183a4a"
+                        }
+                    ],
+                    "severity": "error",
+                    "type": "label_dangling"
+                }
+            ]
+        }
+    ],
+    "source": "ds_xl_coder.kicad_sch"
+}

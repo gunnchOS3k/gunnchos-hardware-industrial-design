@@ -2,7 +2,7 @@ device,subsystem,manufacturer,MPN,description,qty,preferred_or_alternate,approve
 Dock,USB4_TB4_controller,Intel,JHL8440,Goshen Ridge Thunderbolt 4 / USB4 peripheral dock controller 40G,1,preferred,VL108,FROZEN_ADR_HW_002,NOT TB5; corrects prior JHL9040-as-controller mislabel
 Dock,TB4_retimer,Intel,JHL9040R,Hayden Bridge Thunderbolt 4 retimer 40G SI,1,preferred,,FROZEN_ADR_HW_002,Retimer only — not Maple Ridge controller
 Dock,USB3DP_costdown,VIA Labs,VL108,USB3+DP Alt dock cost-down,1,alternate,JHL8440,SKU_OPTION,Handheld-first; no USB4 40G claim on this SKU
-Dock,PD,Texas Instruments,TPS65994,USB-C PD dual-port class,1,preferred,CYPD6227,FROZEN_BASELINE,
+Dock,PD,Texas Instruments,TPS65994ADFBRQ1,USB-C PD dual-port class,1,preferred,CYPD6227,FROZEN_BASELINE,
 Dock,Ethernet,Realtek,RTL8156,2.5GbE USB ethernet,1,preferred,RTL8153,FROZEN_BASELINE,
 Dock,USBHub,VIA Labs,VL817,USB 3.1 hub,1,preferred,VL822,FROZEN_BASELINE,
 Dock,BuckBoost,Texas Instruments,TPS55288RPMR,PD VBUS regulator,1,preferred,,FROZEN_BASELINE,

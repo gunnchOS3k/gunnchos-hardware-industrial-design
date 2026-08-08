@@ -1,0 +1,4 @@
+2026-08-08 16:04:33.197 kicad-cli[98160:10829168] Error retrieving source file attributes: Error Domain=NSCocoaErrorDomain Code=260 "The file “board.step” couldn’t be opened because there is no such file." UserInfo={NSFilePath=docs/full_product_family/evidence/kicad_cli/dock/board.step, NSURL=docs/full_product_family/evidence/kicad_cli/dock/board.step -- file:///Users/gunnchos/Downloads/gunnchos-7gc-research-product-spine/repos/gunnchos-hardware-industrial-design/docs/full_product_family/evidence/kicad_cli/dock/, NSUnderlyingError=0xb50c10300 {Error Domain=NSPOSIXErrorDomain Code=2 "No such file or directory"}}
+STEP file 'docs/full_product_family/evidence/kicad_cli/dock/board.step' created.
+
+Export time 0.262 s

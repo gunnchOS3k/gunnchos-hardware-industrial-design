@@ -1,0 +1,397 @@
+{
+    "$schema": "https://schemas.kicad.org/erc.v1.json",
+    "coordinate_units": "mm",
+    "date": "2026-08-08T16:00:45",
+    "ignored_checks": [
+        {
+            "description": "Global label only appears once in the schematic",
+            "key": "single_global_label"
+        },
+        {
+            "description": "Four connection points are joined together",
+            "key": "four_way_junction"
+        },
+        {
+            "description": "SPICE model issue",
+            "key": "simulation_model_issue"
+        },
+        {
+            "description": "Assigned footprint doesn't match footprint filters",
+            "key": "footprint_filter"
+        }
+    ],
+    "included_severities": [
+        "error",
+        "warning"
+    ],
+    "kicad_version": "10.0.5",
+    "sheets": [
+        {
+            "path": "/",
+            "uuid_path": "/e412308a-0977-e480-f94b-837df91762f5",
+            "violations": [
+                {
+                    "description": "Label not connected",
+                    "items": [
+                        {
+                            "description": "Global Label 'VBUS_UPSTREAM'",
+                            "pos": {
+                                "x": 0.25,
+                                "y": 1.8
+                            },
+                            "uuid": "3f3cb212-28c4-c85e-e9a3-bd40f13b9bb7"
+                        }
+                    ],
+                    "severity": "error",
+                    "type": "label_dangling"
+                },
+                {
+                    "description": "Label not connected",
+                    "items": [
+                        {
+                            "description": "Global Label 'SS_TX_UP'",
+                            "pos": {
+                                "x": 0.25,
+                                "y": 1.92
+                            },
+                            "uuid": "471df458-804a-a8c3-b530-4a46a89d2c99"
+                        }
+                    ],
+                    "severity": "error",
+                    "type": "label_dangling"
+                },
+                {
+                    "description": "Label not connected",
+                    "items": [
+                        {
+                            "description": "Global Label 'I2C_PD'",
+                            "pos": {
+                                "x": 0.25,
+                                "y": 2.04
+                            },
+                            "uuid": "b36b04a2-d020-ae4d-b3e2-8c069ff74386"
+                        }
+                    ],
+                    "severity": "error",
+                    "type": "label_dangling"
+                },
+                {
+                    "description": "Label not connected",
+                    "items": [
+                        {
+                            "description": "Global Label 'VBUS_DS1'",
+                            "pos": {
+                                "x": 0.55,
+                                "y": 1.8
+                            },
+                            "uuid": "596cb15e-baa2-c18b-9e00-12ff349bc624"
+                        }
+                    ],
+                    "severity": "error",
+                    "type": "label_dangling"
+                },
+                {
+                    "description": "Label not connected",
+                    "items": [
+                        {
+                            "description": "Global Label 'SS_RX_UP'",
+                            "pos": {
+                                "x": 0.55,
+                                "y": 1.92
+                            },
+                            "uuid": "571c3aaf-9517-bb60-95c3-2f5924f50293"
+                        }
+                    ],
+                    "severity": "error",
+                    "type": "label_dangling"
+                },
+                {
+                    "description": "Label not connected",
+                    "items": [
+                        {
+                            "description": "Global Label 'I2C_RETIMER'",
+                            "pos": {
+                                "x": 0.55,
+                                "y": 2.04
+                            },
+                            "uuid": "baeda458-8ac6-8f23-4251-db9cd88a59cc"
+                        }
+                    ],
+                    "severity": "error",
+                    "type": "label_dangling"
+                },
+                {
+                    "description": "Label not connected",
+                    "items": [
+                        {
+                            "description": "Global Label 'VBUS_DS2'",
+                            "pos": {
+                                "x": 0.85,
+                                "y": 1.8
+                            },
+                            "uuid": "6dc12c05-13b2-9016-be69-4d2aa6b3df5f"
+                        }
+                    ],
+                    "severity": "error",
+                    "type": "label_dangling"
+                },
+                {
+                    "description": "Label not connected",
+                    "items": [
+                        {
+                            "description": "Global Label 'SS_TX_DS1'",
+                            "pos": {
+                                "x": 0.85,
+                                "y": 1.92
+                            },
+                            "uuid": "478b5ac8-42d2-8e4b-7150-dc8e4261690c"
+                        }
+                    ],
+                    "severity": "error",
+                    "type": "label_dangling"
+                },
+                {
+                    "description": "Label not connected",
+                    "items": [
+                        {
+                            "description": "Global Label 'USB_A1'",
+                            "pos": {
+                                "x": 0.85,
+                                "y": 2.04
+                            },
+                            "uuid": "4907ec58-fb21-1fd5-b0d2-15e820f16df6"
+                        }
+                    ],
+                    "severity": "error",
+                    "type": "label_dangling"
+                },
+                {
+                    "description": "Label not connected",
+                    "items": [
+                        {
+                            "description": "Global Label 'VSYS_5V'",
+                            "pos": {
+                                "x": 1.15,
+                                "y": 1.8
+                            },
+                            "uuid": "75443b57-eefa-d8d0-6a2a-2ada1bfe9360"
+                        }
+                    ],
+                    "severity": "error",
+                    "type": "label_dangling"
+                },
+                {
+                    "description": "Label not connected",
+                    "items": [
+                        {
+                            "description": "Global Label 'SS_RX_DS1'",
+                            "pos": {
+                                "x": 1.15,
+                                "y": 1.92
+                            },
+                            "uuid": "99601d4f-cd38-7429-26bb-38e2a02433b0"
+                        }
+                    ],
+                    "severity": "error",
+                    "type": "label_dangling"
+                },
+                {
+                    "description": "Label not connected",
+                    "items": [
+                        {
+                            "description": "Global Label 'USB_A2'",
+                            "pos": {
+                                "x": 1.15,
+                                "y": 2.04
+                            },
+                            "uuid": "8233f316-cbc4-86e6-7327-302113588eb4"
+                        }
+                    ],
+                    "severity": "error",
+                    "type": "label_dangling"
+                },
+                {
+                    "description": "Label not connected",
+                    "items": [
+                        {
+                            "description": "Global Label 'VDD_3V3'",
+                            "pos": {
+                                "x": 1.45,
+                                "y": 1.8
+                            },
+                            "uuid": "734d2f7b-1fd0-dd25-5db2-5dcc081fc5e3"
+                        }
+                    ],
+                    "severity": "error",
+                    "type": "label_dangling"
+                },
+                {
+                    "description": "Label not connected",
+                    "items": [
+                        {
+                            "description": "Global Label 'SS_TX_DS2'",
+                            "pos": {
+                                "x": 1.45,
+                                "y": 1.92
+                            },
+                            "uuid": "52b6fc88-b57d-f92e-c09d-2d381fe8bc18"
+                        }
+                    ],
+                    "severity": "error",
+                    "type": "label_dangling"
+                },
+                {
+                    "description": "Label not connected",
+                    "items": [
+                        {
+                            "description": "Global Label 'MDI'",
+                            "pos": {
+                                "x": 1.45,
+                                "y": 2.04
+                            },
+                            "uuid": "a42b44b7-7711-8af3-9430-efeb1c64dd33"
+                        }
+                    ],
+                    "severity": "error",
+                    "type": "label_dangling"
+                },
+                {
+                    "description": "Label not connected",
+                    "items": [
+                        {
+                            "description": "Global Label 'VDD_1V8'",
+                            "pos": {
+                                "x": 1.75,
+                                "y": 1.8
+                            },
+                            "uuid": "4ea6f19f-7bef-91c3-8c8d-cda8343ecbf1"
+                        }
+                    ],
+                    "severity": "error",
+                    "type": "label_dangling"
+                },
+                {
+                    "description": "Label not connected",
+                    "items": [
+                        {
+                            "description": "Global Label 'SS_RX_DS2'",
+                            "pos": {
+                                "x": 1.75,
+                                "y": 1.92
+                            },
+                            "uuid": "7f8ae533-b56d-d6e3-3ddc-da173963e6db"
+                        }
+                    ],
+                    "severity": "error",
+                    "type": "label_dangling"
+                },
+                {
+                    "description": "Label not connected",
+                    "items": [
+                        {
+                            "description": "Global Label 'HDMI_TX'",
+                            "pos": {
+                                "x": 1.75,
+                                "y": 2.04
+                            },
+                            "uuid": "d8f35a69-f12e-798d-30cf-bd11ebc2b4a9"
+                        }
+                    ],
+                    "severity": "error",
+                    "type": "label_dangling"
+                },
+                {
+                    "description": "Label not connected",
+                    "items": [
+                        {
+                            "description": "Global Label 'SS_TX_HOST'",
+                            "pos": {
+                                "x": 2.05,
+                                "y": 1.8
+                            },
+                            "uuid": "da4c05ea-fae9-611d-4962-fbdca81a5b8b"
+                        }
+                    ],
+                    "severity": "error",
+                    "type": "label_dangling"
+                },
+                {
+                    "description": "Label not connected",
+                    "items": [
+                        {
+                            "description": "Global Label 'CC1'",
+                            "pos": {
+                                "x": 2.05,
+                                "y": 1.92
+                            },
+                            "uuid": "64464895-9907-c4ff-1ac6-7abcf9431c07"
+                        }
+                    ],
+                    "severity": "error",
+                    "type": "label_dangling"
+                },
+                {
+                    "description": "Label not connected",
+                    "items": [
+                        {
+                            "description": "Global Label 'RING_CHARGE_5V'",
+                            "pos": {
+                                "x": 2.05,
+                                "y": 2.04
+                            },
+                            "uuid": "0c333300-5130-008c-ab89-2ec46c95f4d8"
+                        }
+                    ],
+                    "severity": "error",
+                    "type": "label_dangling"
+                },
+                {
+                    "description": "Label not connected",
+                    "items": [
+                        {
+                            "description": "Global Label 'SS_RX_HOST'",
+                            "pos": {
+                                "x": 2.35,
+                                "y": 1.8
+                            },
+                            "uuid": "d0667131-dfbd-fc6b-42e2-fb48f216038a"
+                        }
+                    ],
+                    "severity": "error",
+                    "type": "label_dangling"
+                },
+                {
+                    "description": "Label not connected",
+                    "items": [
+                        {
+                            "description": "Global Label 'CC2'",
+                            "pos": {
+                                "x": 2.35,
+                                "y": 1.92
+                            },
+                            "uuid": "7da1451b-1a5a-d8fc-cef9-ff9eb8d64bf4"
+                        }
+                    ],
+                    "severity": "error",
+                    "type": "label_dangling"
+                },
+                {
+                    "description": "Label not connected",
+                    "items": [
+                        {
+                            "description": "Global Label 'SPI_UWB'",
+                            "pos": {
+                                "x": 2.35,
+                                "y": 2.04
+                            },
+                            "uuid": "4967927b-854a-0c47-5d81-4e581a297d17"
+                        }
+                    ],
+                    "severity": "error",
+                    "type": "label_dangling"
+                }
+            ]
+        }
+    ],
+    "source": "dock.kicad_sch"
+}

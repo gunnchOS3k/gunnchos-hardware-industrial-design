@@ -1,0 +1,157 @@
+{
+    "$schema": "https://schemas.kicad.org/drc.v1.json",
+    "coordinate_units": "mm",
+    "date": "2026-08-08T16:01:47",
+    "ignored_checks": [
+        {
+            "description": "Footprint has no courtyard defined",
+            "key": "missing_courtyard"
+        },
+        {
+            "description": "Track endpoint not centered on via",
+            "key": "track_not_centered_on_via"
+        },
+        {
+            "description": "Tuning profile track geometries",
+            "key": "tuning_profile_track_geometries"
+        },
+        {
+            "description": "Footprint doesn't match symbol's footprint filters",
+            "key": "footprint_filters_mismatch"
+        },
+        {
+            "description": "Footprint component type doesn't match footprint pads",
+            "key": "footprint_type_mismatch"
+        }
+    ],
+    "included_severities": [
+        "error",
+        "warning"
+    ],
+    "kicad_version": "10.0.5",
+    "schematic_parity": [],
+    "source": "student_14_5.kicad_pcb",
+    "unconnected_items": [],
+    "violations": [
+        {
+            "description": "The current configuration does not include the footprint library 'Package_DFN_QFN'",
+            "items": [
+                {
+                    "description": "Footprint UCOM1",
+                    "pos": {
+                        "x": 40.0,
+                        "y": 40.0
+                    },
+                    "uuid": "ffad1b6f-5349-54e1-9193-a5cad3481ddb"
+                }
+            ],
+            "severity": "warning",
+            "type": "lib_footprint_issues"
+        },
+        {
+            "description": "The current configuration does not include the footprint library 'Package_DFN_QFN'",
+            "items": [
+                {
+                    "description": "Footprint U_PD",
+                    "pos": {
+                        "x": 100.0,
+                        "y": 40.0
+                    },
+                    "uuid": "b30887f3-ac1b-5904-ade6-9b2ed328a1ec"
+                }
+            ],
+            "severity": "warning",
+            "type": "lib_footprint_issues"
+        },
+        {
+            "description": "The current configuration does not include the footprint library 'Package_DFN_QFN'",
+            "items": [
+                {
+                    "description": "Footprint U_CHG",
+                    "pos": {
+                        "x": 160.0,
+                        "y": 40.0
+                    },
+                    "uuid": "b9ae4076-7b18-5458-b7d5-c78f4636a4c5"
+                }
+            ],
+            "severity": "warning",
+            "type": "lib_footprint_issues"
+        },
+        {
+            "description": "The current configuration does not include the footprint library 'Package_DFN_QFN'",
+            "items": [
+                {
+                    "description": "Footprint U_WIFI",
+                    "pos": {
+                        "x": 220.0,
+                        "y": 40.0
+                    },
+                    "uuid": "9e2e681d-3c6e-5d9f-86c8-53090de5ea0b"
+                }
+            ],
+            "severity": "warning",
+            "type": "lib_footprint_issues"
+        },
+        {
+            "description": "The current configuration does not include the footprint library 'Package_DFN_QFN'",
+            "items": [
+                {
+                    "description": "Footprint U_WWAN",
+                    "pos": {
+                        "x": 40.0,
+                        "y": 100.0
+                    },
+                    "uuid": "ea08b48b-2618-55d1-87ff-804b99dba979"
+                }
+            ],
+            "severity": "warning",
+            "type": "lib_footprint_issues"
+        },
+        {
+            "description": "The current configuration does not include the footprint library 'Package_DFN_QFN'",
+            "items": [
+                {
+                    "description": "Footprint U_EC",
+                    "pos": {
+                        "x": 100.0,
+                        "y": 100.0
+                    },
+                    "uuid": "a45bdb80-95f1-564a-bdbe-18458bb76c44"
+                }
+            ],
+            "severity": "warning",
+            "type": "lib_footprint_issues"
+        },
+        {
+            "description": "The current configuration does not include the footprint library 'Package_DFN_QFN'",
+            "items": [
+                {
+                    "description": "Footprint SSD1",
+                    "pos": {
+                        "x": 160.0,
+                        "y": 100.0
+                    },
+                    "uuid": "01805140-d3ed-5988-b69f-800fb994ad01"
+                }
+            ],
+            "severity": "warning",
+            "type": "lib_footprint_issues"
+        },
+        {
+            "description": "The current configuration does not include the footprint library 'Package_DFN_QFN'",
+            "items": [
+                {
+                    "description": "Footprint U_TPM",
+                    "pos": {
+                        "x": 220.0,
+                        "y": 100.0
+                    },
+                    "uuid": "7850eac5-aa2c-59d0-89b6-9b1e2ceedff6"
+                }
+            ],
+            "severity": "warning",
+            "type": "lib_footprint_issues"
+        }
+    ]
+}

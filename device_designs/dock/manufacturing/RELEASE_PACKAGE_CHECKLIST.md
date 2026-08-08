@@ -1,16 +1,17 @@
-# Manufacturing digital package checklist — Dock
+# Manufacturing release package checklist — dock
 
-Updated: 2026-08-08T20:15:00Z
+Updated: 2026-08-08T20:58:59Z  
+PHYSICAL_EXECUTION_FREEZE — checklist is digital readiness only.
 
-- [x] Architecture freeze USB4/TB4 @ 40G (ADR-HW-002)
-- [x] Exact controller MPN: **JHL8440**
-- [x] Exact retimer MPN: **JHL9040R** (role corrected)
-- [x] TB5 MPNs explicitly rejected (JHL9480/JHL9580)
-- [x] Full PCB digital package beyond skeleton
-- [x] Stackup / netlist / fab notes / Gerber+STEP+PnP plans
-- [ ] kicad-cli Gerbers/drill/ERC/DRC
-- [ ] Vendor-accurate footprints
-- [ ] USB-IF / Thunderbolt / FCC (**not claimed**)
-- [ ] Purchase (**FORBIDDEN under freeze**)
+- [x] Assembly BOM with exact preferred MPNs
+- [x] Stackup YAML
+- [x] Fab notes
+- [x] Netlist JSON (Cont VI)
+- [x] Pick/place plan (plan-only coordinates OK under freeze)
+- [x] Gerber export plan (no fake gerbers)
+- [x] STEP export status (blocked on CLI/CAD where noted)
+- [x] ERC/DRC status JSON (NOT_RUN until kicad-cli)
+- [ ] Actual Gerber/drill/PnP/STEP from kicad-cli — **resume when CLI ready**
+- [ ] Fab PO / purchase — **FORBIDDEN under freeze**
 
-Token: `DOCK_HARDWARE_DESIGN_RELEASE_CANDIDATE` — not COMPLETE.
+Completeness token for this product: digital package deepened; fabrication exports pending CLI.

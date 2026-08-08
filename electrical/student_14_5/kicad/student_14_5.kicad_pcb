@@ -7,7 +7,7 @@
     (rev "0.2.0-dev")
     (company "gunnchOS3k")
     (comment 1 "DIGITAL PCB STRUCTURE — NOT fab-ready")
-    (comment 2 "kicad-cli ABSENT → EDMUND_ACTION_REQUIRED for ERC/DRC")
+    (comment 2 "Cont VI: kicad-cli 10.0.5 validation in artifacts/continuation_vi_kicad_validation")
     (comment 3 "PHYSICAL_EXECUTION_FREEZE ACTIVE — no fab, no purchase, draft digital only")
   )
   (layers
@@ -26,7 +26,7 @@
     (44 "Edge.Cuts" user)
     (45 "Margin" user)
   )
-  (setup (pad_to_mask_clearance 0.051) (allow_soldermask_bridges_in_thermal_pads no))
+  (setup (pad_to_mask_clearance 0.051) )
   (gr_rect (start 0 0) (end 280 190) (stroke (width 0.1) (type default)) (fill none) (layer "Edge.Cuts") (uuid 7ebc9aa2-4b4d-5697-a929-21d609b6c1a3))
   (footprint "Package_DFN_QFN:QFN-48-1EP_7x7mm_P0.5mm" (layer "F.Cu")
     (at 40 40) (uuid ffad1b6f-5349-54e1-9193-a5cad3481ddb)

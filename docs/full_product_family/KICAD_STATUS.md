@@ -1,37 +1,34 @@
-# KiCad status — Continuation V
+# KiCad status — Continuation VI
 
-Updated: 2026-08-08T20:15:00Z
+Updated: 2026-08-08T21:01:04Z
 
-## Environment probe
+## Environment probe (Cont VI mid-run)
 ```
-which kicad-cli → not found
-which kicad → not found
-ls /Applications/KiCad* → none
-brew info --cask kicad → 10.0.5 (not installed)
+/opt/homebrew/bin/kicad-cli → PRESENT (10.0.5)
 ```
+Earlier Cont V brew install was blocked; Cont VI resume found CLI available and executed family validation.
 
-## brew install attempt
-```
-brew install --cask kicad
-```
-**FAILED** — Homebrew prefixes not writable by user (`/opt/homebrew`, `~/Library/Logs/Homebrew`).  
-Evidence: `docs/full_product_family/evidence/BREW_KICAD_INSTALL_ATTEMPT.log`
-
-## EDMUND_ACTION_REQUIRED
+## Family CLI run
 ```bash
-sudo chown -R "$(whoami)" /opt/homebrew /Users/gunnchos/Library/Logs/Homebrew
-brew install --cask kicad
-export PATH="/Applications/KiCad/KiCad.app/Contents/MacOS:$PATH"
-which kicad-cli
+bash scripts/run_family_kicad_cli.sh
+# → KICAD_CLI_FAMILY_BEST_EFFORT
 ```
-Then per product:
-1. `kicad-cli sch erc`
-2. `kicad-cli pcb drc`
-3. Gerber / drill / pos / STEP per `device_designs/*/manufacturing/GERBER_EXPORT_PLAN.md`
-4. Replace `Device:R` placeholders with vendor symbols/footprints
+Evidence: `docs/full_product_family/evidence/kicad_cli/family_kicad_cli_meta.json`
 
-Work continued without stalling: mfg export plans + ERC/DRC blocker JSON checked in for all five.
+| Product | ERC JSON | DRC JSON | Gerbers | STEP |
+|---|---|---|---|---|
+| handheld_hybrid | yes (violations expected) | yes | 11 | yes |
+| dock | yes (violations expected) | no / failed | 0 | no |
+| edge_io_rings | yes | yes | 11 | yes |
+| student_14_5 | yes | yes | 17 | yes |
+| ds_xl_coder | yes | yes | 17 | yes |
+
+## Honesty
+- ERC reports contain violations — structural `Device:R` placeholders lack pin geometry.
+- **Not claimed:** `KICAD_CLI_ERC_PASS`, `KICAD_CLI_DRC_PASS`, `FULL_HARDWARE_DESIGN_RELEASE_COMPLETE`.
+- Student/DS-XL remain `*_BLOCKED_NDA` for pin-accurate COM-HPC nets regardless of CLI.
 
 ## Tokens
-- Claimed: `EDMUND_ACTION_REQUIRED_KICAD_BREW_ADMIN`
+- Claimed: `KICAD_CLI_RESUME_SCRIPTS_READY`, `KICAD_CLI_FAMILY_BEST_EFFORT_RAN`
+- Retained: `EDMUND_ACTION_REQUIRED_KICAD_BREW_ADMIN` historical note (install now present)
 - Not claimed: `KICAD_CLI_ERC_PASS`, `KICAD_CLI_DRC_PASS`

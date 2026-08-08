@@ -1,0 +1,12 @@
+### Footprint positions - created on 2026-08-08T16:01:54 ###
+### Printed by KiCad version 10.0.5
+## Unit = inches, Angle = deg.
+## Side : All
+# Ref     Val       Package                       PosX       PosY       Rot  Side
+J_EDP0    UPPER     QFN-48-1EP_7x7mm_P0.5mm     4.7244    -1.5748    0.0000  top
+J_EDP1    LOWER     QFN-48-1EP_7x7mm_P0.5mm     7.4803    -1.5748    0.0000  top
+UCOM1     COM       QFN-48-1EP_7x7mm_P0.5mm     1.9685    -1.5748    0.0000  top
+U_BRG     BRIDGE    QFN-48-1EP_7x7mm_P0.5mm    10.2362    -1.5748    0.0000  top
+U_PD      PD        QFN-48-1EP_7x7mm_P0.5mm     1.9685    -4.3307    0.0000  top
+U_WWAN    WWAN      QFN-48-1EP_7x7mm_P0.5mm     4.7244    -4.3307    0.0000  top
+## End

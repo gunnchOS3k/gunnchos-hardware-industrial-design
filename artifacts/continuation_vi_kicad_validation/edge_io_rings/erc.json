@@ -1,0 +1,142 @@
+{
+    "$schema": "https://schemas.kicad.org/erc.v1.json",
+    "coordinate_units": "mm",
+    "date": "2026-08-08T16:00:39",
+    "ignored_checks": [
+        {
+            "description": "Global label only appears once in the schematic",
+            "key": "single_global_label"
+        },
+        {
+            "description": "Four connection points are joined together",
+            "key": "four_way_junction"
+        },
+        {
+            "description": "SPICE model issue",
+            "key": "simulation_model_issue"
+        },
+        {
+            "description": "Assigned footprint doesn't match footprint filters",
+            "key": "footprint_filter"
+        }
+    ],
+    "included_severities": [
+        "error",
+        "warning"
+    ],
+    "kicad_version": "10.0.5",
+    "sheets": [
+        {
+            "path": "/",
+            "uuid_path": "/555f1b8c-8822-5ed4-9c45-77ee9e013c65",
+            "violations": [
+                {
+                    "description": "Label not connected",
+                    "items": [
+                        {
+                            "description": "Global Label 'VDD_3V3'",
+                            "pos": {
+                                "x": 0.3,
+                                "y": 1.6
+                            },
+                            "uuid": "fc5f281a-9fbf-5c67-be89-521a51770e94"
+                        }
+                    ],
+                    "severity": "error",
+                    "type": "label_dangling"
+                },
+                {
+                    "description": "Label not connected",
+                    "items": [
+                        {
+                            "description": "Global Label 'I2C_SDA'",
+                            "pos": {
+                                "x": 0.6,
+                                "y": 1.6
+                            },
+                            "uuid": "00d55ce5-5c85-50e3-a7fe-0444fc7c9608"
+                        }
+                    ],
+                    "severity": "error",
+                    "type": "label_dangling"
+                },
+                {
+                    "description": "Label not connected",
+                    "items": [
+                        {
+                            "description": "Global Label 'I2C_SCL'",
+                            "pos": {
+                                "x": 0.9,
+                                "y": 1.6
+                            },
+                            "uuid": "ad5b54b1-4d46-5190-add4-fb9f4982854b"
+                        }
+                    ],
+                    "severity": "error",
+                    "type": "label_dangling"
+                },
+                {
+                    "description": "Label not connected",
+                    "items": [
+                        {
+                            "description": "Global Label 'SPI_UWB'",
+                            "pos": {
+                                "x": 1.2,
+                                "y": 1.6
+                            },
+                            "uuid": "747c686a-62cc-5917-9981-d4ac378e6115"
+                        }
+                    ],
+                    "severity": "error",
+                    "type": "label_dangling"
+                },
+                {
+                    "description": "Label not connected",
+                    "items": [
+                        {
+                            "description": "Global Label 'IMU_INT'",
+                            "pos": {
+                                "x": 1.5,
+                                "y": 1.6
+                            },
+                            "uuid": "7dece3bc-7485-5bee-a4cd-85260ee90811"
+                        }
+                    ],
+                    "severity": "error",
+                    "type": "label_dangling"
+                },
+                {
+                    "description": "Label not connected",
+                    "items": [
+                        {
+                            "description": "Global Label 'CAP_RDY'",
+                            "pos": {
+                                "x": 1.8,
+                                "y": 1.6
+                            },
+                            "uuid": "0424032c-56be-5dcb-8d32-3e1bfe38cf79"
+                        }
+                    ],
+                    "severity": "error",
+                    "type": "label_dangling"
+                },
+                {
+                    "description": "The current configuration does not include the footprint library ''",
+                    "items": [
+                        {
+                            "description": "Symbol U4 [R]",
+                            "pos": {
+                                "x": 1.9,
+                                "y": 0.4
+                            },
+                            "uuid": "70f5f6e1-a49b-5a9d-8799-2402bb839a92"
+                        }
+                    ],
+                    "severity": "warning",
+                    "type": "footprint_link_issues"
+                }
+            ]
+        }
+    ],
+    "source": "edge_io_rings.kicad_sch"
+}

@@ -1,0 +1,95 @@
+{
+  "timestamp": "2026-08-08T21:04:47Z",
+  "status": "BEST_EFFORT",
+  "kicad_cli": "/opt/homebrew/bin/kicad-cli",
+  "version": "10.0.5",
+  "products": {
+    "handheld_hybrid": {
+      "dir": "docs/full_product_family/evidence/kicad_cli/handheld_hybrid",
+      "erc.json": true,
+      "drc.json": true,
+      "board.step": true,
+      "netlist.sexp": true,
+      "gerber_count": 11,
+      "erc_keys": [
+        "$schema",
+        "coordinate_units",
+        "date",
+        "ignored_checks",
+        "included_severities",
+        "kicad_version",
+        "sheets",
+        "source"
+      ],
+      "erc_mentions_violations": true
+    },
+    "dock": {
+      "dir": "docs/full_product_family/evidence/kicad_cli/dock",
+      "erc.json": true,
+      "drc.json": true,
+      "board.step": true,
+      "netlist.sexp": true,
+      "gerber_count": 11,
+      "note": "PCB layer stack fixed Cont VI; DRC/Gerber/STEP exported"
+    },
+    "edge_io_rings": {
+      "dir": "docs/full_product_family/evidence/kicad_cli/edge_io_rings",
+      "erc.json": true,
+      "drc.json": true,
+      "board.step": true,
+      "netlist.sexp": true,
+      "gerber_count": 11,
+      "erc_keys": [
+        "$schema",
+        "coordinate_units",
+        "date",
+        "ignored_checks",
+        "included_severities",
+        "kicad_version",
+        "sheets",
+        "source"
+      ],
+      "erc_mentions_violations": true
+    },
+    "student_14_5": {
+      "dir": "docs/full_product_family/evidence/kicad_cli/student_14_5",
+      "erc.json": true,
+      "drc.json": true,
+      "board.step": true,
+      "netlist.sexp": true,
+      "gerber_count": 17,
+      "erc_keys": [
+        "$schema",
+        "coordinate_units",
+        "date",
+        "ignored_checks",
+        "included_severities",
+        "kicad_version",
+        "sheets",
+        "source"
+      ],
+      "erc_mentions_violations": true
+    },
+    "ds_xl_coder": {
+      "dir": "docs/full_product_family/evidence/kicad_cli/ds_xl_coder",
+      "erc.json": true,
+      "drc.json": true,
+      "board.step": true,
+      "netlist.sexp": true,
+      "gerber_count": 17,
+      "erc_keys": [
+        "$schema",
+        "coordinate_units",
+        "date",
+        "ignored_checks",
+        "included_severities",
+        "kicad_version",
+        "sheets",
+        "source"
+      ],
+      "erc_mentions_violations": true
+    }
+  },
+  "physical_claim": false,
+  "note": "CLI ran; Device:R skeleton boards expected to ERC-fail until vendor libs. No FULL release claim."
+}

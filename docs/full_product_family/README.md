@@ -1,35 +1,22 @@
-# Full product hardware design release (Continuation V)
+# Full product hardware family — Continuation VI
 
-Branch: `cursor/full-product-continuation-v-hardware-release`  
-Base: `origin/main` @ `7e1658e63052e7baa2e9f4ab58113a91e4165c72` (#47)  
-Updated: 2026-08-08T20:15:00Z
+Branch: `cursor/full-product-continuation-vi-eda-closure`  
+Base: `origin/main` @ `38b37221074446730709af5682a06cb4cefd39fc` (#48)  
+Updated: 2026-08-08T20:58:59Z
 
 PHYSICAL_EXECUTION_FREEZE ACTIVE — no fab, no purchase, draft digital only
 
 ## Intent
-Close hardware design-release honesty gaps: **component truth**, COM/NX5 pinout classification, dock USB4/TB4 vs TB5 freeze, deepen native EDA/CAD/mfg packages, attempt KiCad install, ring BOM↔FW parity.
+EDA closure + public-engineerability: Option3 gate for Student/DS-XL, Radxa public-pinout Handheld carrier,
+Dock TB4 topology EDA, Ring DT parity notes, placeholder scan, mfg/cert digital prep, KiCad resume scripts.
 
-## Products (five)
-| Product | Hardware package | Exact compute MPN |
-|---|---|---|
-| Student 14.5 | `device_designs/student_14_5/` | ADLINK **COM-HPC-mMTL-155H-32G** + carrier |
-| DS-XL Coder | `device_designs/ds_xl_coder/` | Shared COM + dual-eDP carrier |
-| Handheld Hybrid | `device_designs/handheld_hybrid/` | Radxa NX5 **RM121-D8E32** + game carrier |
-| Edge I/O Rings | `device_designs/edge_io_rings/` + gate1 | **nRF52840-QIAA-R** + fusion BOM; Fusion CAD + FW parity matrix |
-| Dock | `device_designs/dock/` + gate1 | **JHL8440** + **JHL9040R** retimer (USB4/TB4 40G; **not TB5**) |
-
-## Cross-cutting index
-- Component truth verify: `COMPONENT_TRUTH_VERIFY_CONTINUATION_V.md`
-- Dock architecture freeze: `DOCK_ARCHITECTURE_FREEZE_USB4_TB4.md`
-- COM/NX5 feasibility: `COM_HPC_NX5_FEASIBILITY_PINOUT.md`
-- Exact MPN matrix: `EXACT_MPN_MATRIX.md`
-- Procurement/lifecycle: `PROCUREMENT_LIFECYCLE.md`
-- Release status (honest): `HARDWARE_DESIGN_RELEASE_STATUS.md`
-- Release COMPLETE criteria: `RELEASE_CRITERIA.md`
-- Driver classification: `DRIVER_CLASSIFICATION.md`
-- Modem freeze + public verify: `MODEM_ARCHITECTURE_FREEZE.md`, `MODEM_RM520N_GL_PUBLIC_VERIFY.md`
-- KiCad / EDMUND: `KICAD_STATUS.md`
-- ADRs: `docs/adr/ADR-HW-001-com-carrier-strategy.md`, `docs/adr/ADR-HW-002-dock-usb4-tb4-not-tb5.md`
+## Key Cont VI docs
+- `PUBLIC_ENGINEERABILITY_GATE.md` (Option 3 selected)
+- `OPEN_DOCUMENTATION_ALTERNATIVE_AUDIT.md`
+- `PLACEHOLDER_SCAN_CONTINUATION_VI.md`
+- `HARDWARE_DESIGN_RELEASE_STATUS.md` / `FAMILY_STATUS.md` / `TOKENS.md`
+- `KICAD_STATUS.md` / `CERT_DIGITAL_PREP.md`
+- Handheld pinout CSV: `device_designs/handheld_hybrid/docs/radxa_nx5_public_pinout_table.csv`
 
 ## Tokens
-See `TOKENS.md`. **No** `FULL_HARDWARE_DESIGN_RELEASE_COMPLETE` claimed.
+See `TOKENS.md`. **No** `FULL_HARDWARE_DESIGN_RELEASE_COMPLETE`.

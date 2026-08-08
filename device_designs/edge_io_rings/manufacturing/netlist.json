@@ -1,68 +1,113 @@
 {
   "device": "edge_io_rings",
-  "updated_at_utc": "2026-08-08T19:40:00Z",
+  "updated_at_utc": "2026-08-08T20:58:59Z",
   "evidence_class": "MODELED",
-  "compute_mpn": "nRF52840-QIAA-R",
+  "mcu": "nRF52840-QIAA-R",
   "nodes": [
     {
       "ref": "U1",
       "mpn": "nRF52840-QIAA-R",
       "nets": [
-        "VDD",
-        "SWD",
-        "I2C",
-        "SPI",
-        "ANT_BLE"
+        "VDD_3V3",
+        "I2C_SDA",
+        "I2C_SCL",
+        "SWDIO",
+        "SWDCLK"
       ]
     },
     {
       "ref": "U2",
       "mpn": "BMI270",
       "nets": [
-        "I2C",
-        "INT"
-      ]
+        "VDD_3V3",
+        "I2C_SDA",
+        "I2C_SCL",
+        "IMU_INT"
+      ],
+      "i2c_addr": "0x68"
     },
     {
       "ref": "U3",
       "mpn": "IQS7222A",
       "nets": [
-        "I2C"
-      ]
+        "VDD_3V3",
+        "I2C_SDA",
+        "I2C_SCL",
+        "CAP_RDY"
+      ],
+      "i2c_addr": "0x44"
     },
     {
       "ref": "U4",
       "mpn": "DWM3001C",
+      "dnp": true,
       "nets": [
-        "SPI_UWB",
-        "VDD"
-      ],
-      "dnp": true
-    },
-    {
-      "ref": "U5",
-      "mpn": "BHI360",
-      "nets": [
-        "SPI_OR_I2C"
-      ],
-      "dnp": true
-    },
-    {
-      "ref": "U6",
-      "mpn": "SE050C1HQ1",
-      "nets": [
-        "I2C_SE"
+        "VDD_3V3",
+        "SPI_UWB"
       ]
     },
     {
       "ref": "U7",
+      "mpn": "SE050C1HQ1",
+      "nets": [
+        "VDD_3V3",
+        "SE_I2C_SDA",
+        "SE_I2C_SCL"
+      ],
+      "i2c_addr": "0x48"
+    },
+    {
+      "ref": "U8",
+      "mpn": "DRV2605LDGSR",
+      "nets": [
+        "VDD_3V3",
+        "I2C_SDA",
+        "I2C_SCL",
+        "HAPTIC_TRIG"
+      ],
+      "i2c_addr": "0x5A"
+    },
+    {
+      "ref": "U9",
       "mpn": "npm1300-CAAA-R",
       "nets": [
         "VBAT",
-        "VDD",
-        "I2C_PMIC"
+        "VDD_3V3",
+        "CHG_STATUS",
+        "I2C_SDA",
+        "I2C_SCL"
+      ]
+    },
+    {
+      "ref": "U10",
+      "mpn": "TLV75533PDBVR",
+      "nets": [
+        "VBAT",
+        "VDD_3V3"
+      ]
+    },
+    {
+      "ref": "ANT1",
+      "mpn": "2450AT18A100",
+      "nets": [
+        "RF_ANT"
+      ]
+    },
+    {
+      "ref": "BT1",
+      "mpn": "LiPo_80to250mAh",
+      "nets": [
+        "VBAT",
+        "GND",
+        "NTC"
       ]
     }
   ],
-  "kicad_cli": "ABSENT"
+  "dt_baseline_gpios": {
+    "I2C_SDA": "P0.26",
+    "I2C_SCL": "P0.27",
+    "IMU_INT": "P0.11",
+    "CHG_STATUS": "P0.02"
+  },
+  "kicad_cli": "ABSENT_OR_RESUME"
 }

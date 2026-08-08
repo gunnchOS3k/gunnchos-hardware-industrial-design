@@ -1,15 +1,29 @@
 {
   "product": "dock",
-  "updated_at_utc": "2026-08-08T20:15:00Z",
-  "kicad_cli": "ABSENT",
-  "erc": {"status": "NOT_RUN", "reason": "EDMUND_ACTION_REQUIRED_brew_kicad"},
-  "drc": {"status": "NOT_RUN", "reason": "EDMUND_ACTION_REQUIRED_brew_kicad"},
-  "gerber": {"status": "NOT_EXPORTED"},
-  "pick_place": {"status": "PLAN_ONLY"},
-  "step": {"status": "NOT_EXPORTED"},
+  "updated_at_utc": "2026-08-08T21:04:47Z",
+  "kicad_cli": "/opt/homebrew/bin/kicad-cli",
+  "kicad_version": "10.0.5",
+  "erc": {
+    "status": "RAN_WITH_VIOLATIONS",
+    "report": "docs/full_product_family/evidence/kicad_cli/dock/erc.json"
+  },
+  "drc": {
+    "status": "RAN",
+    "report": "docs/full_product_family/evidence/kicad_cli/dock/drc.json"
+  },
+  "gerber": {
+    "status": "EXPORTED",
+    "count": 11
+  },
+  "pick_place": {
+    "status": "PLAN_ONLY"
+  },
+  "step": {
+    "status": "EXPORTED"
+  },
   "full_hardware_design_release_complete": false,
-  "architecture_freeze": "USB4_TB4_40G_NOT_TB5",
-  "controller_mpn": "JHL8440",
-  "retimer_mpn": "JHL9040R",
-  "forbidden_mpns": ["JHL9480", "JHL9580"]
+  "design_release_complete": false,
+  "kicad_cli_erc_pass": false,
+  "kicad_cli_drc_pass": false,
+  "note": "Device:R skeleton expected ERC violations; no PASS / COMPLETE claim"
 }

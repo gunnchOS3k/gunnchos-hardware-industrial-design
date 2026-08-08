@@ -1,0 +1,12 @@
+### Footprint positions - created on 2026-08-08T16:01:41 ###
+### Printed by KiCad version 10.0.5
+## Unit = inches, Angle = deg.
+## Side : All
+# Ref     Val       Package                       PosX       PosY       Rot  Side
+U1        nRF52840  QFN-48-1EP_7x7mm_P0.5mm     0.3150    -0.2362    0.0000  top
+U2        BMI270    QFN-48-1EP_7x7mm_P0.5mm     0.6299    -0.2362    0.0000  top
+U3        IQS7222A  QFN-48-1EP_7x7mm_P0.5mm     0.9449    -0.2362    0.0000  top
+U4        DWM3001C  QFN-48-1EP_7x7mm_P0.5mm     1.2598    -0.2362    0.0000  top
+U5        BHI360    QFN-48-1EP_7x7mm_P0.5mm     0.3150    -0.4724    0.0000  top
+U7        SE050     QFN-48-1EP_7x7mm_P0.5mm     0.6299    -0.4724    0.0000  top
+## End

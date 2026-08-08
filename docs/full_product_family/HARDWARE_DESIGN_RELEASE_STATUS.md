@@ -1,26 +1,26 @@
-# Hardware design release status matrix
+# Hardware design release status matrix — Continuation VI
 
-Updated: 2026-08-08T20:15:00Z  
-Branch: `cursor/full-product-continuation-v-hardware-release`  
-Base: `origin/main` @ `7e1658e63052e7baa2e9f4ab58113a91e4165c72`
+Updated: 2026-08-08T20:58:59Z  
+Branch: `cursor/full-product-continuation-vi-eda-closure`  
+Base: `origin/main` @ `38b37221074446730709af5682a06cb4cefd39fc` (#48)
 
 PHYSICAL_EXECUTION_FREEZE ACTIVE — no fab, no purchase, draft digital only.
 
-| Product | Exact compute MPN | EDA native package | Mfg package | Drivers | Battery/Thermal/RF | KiCad CLI | CAD | Status token |
-|---|---|---|---|---|---|---|---|---|
-| Student 14.5 | ADLINK **COM-HPC-mMTL-155H-32G** | Carrier sch/PCB + deepened mfg (Gerber/STEP/PnP plans) | Yes + ERC/DRC blocker JSON | Yes | Yes (MODELED) | ABSENT → EDMUND | OpenSCAD + STEP notes | `STUDENT_HARDWARE_DESIGN_RELEASE_CANDIDATE` — **not COMPLETE** |
-| DS-XL Coder | Shared **COM-HPC-mMTL-155H-32G** | Dual-eDP carrier + ICD + mfg deepen | Yes | Yes | Yes (MODELED) | ABSENT → EDMUND | OpenSCAD + STEP notes | `DS_XL_HARDWARE_DESIGN_RELEASE_CANDIDATE` — **not COMPLETE** |
-| Handheld Hybrid | Radxa NX5 **RM121-D8E32** | SoM carrier + PUBLIC_PINOUT feasibility | Yes | Yes | Sustained game models | ABSENT → EDMUND | OpenSCAD + Radxa STP ref | `HANDHELD_HARDWARE_DESIGN_RELEASE_CANDIDATE` — **not COMPLETE** |
-| Edge I/O Rings | Nordic **nRF52840-QIAA-R** | Fusion-BOM KiCad + BOM↔FW parity matrix | Yes | Yes | Wearable models | ABSENT → EDMUND | Fusion package + OpenSCAD twin | `RINGS_HARDWARE_DESIGN_RELEASE_CANDIDATE` — **not COMPLETE** |
-| Dock | **JHL8440** + **JHL9040R** retimer | Corrected USB4/TB4 PCB package | Yes | Yes | Thermal/power; RF UWB opt | ABSENT → EDMUND | Enclosure params + SCAD | `DOCK_HARDWARE_DESIGN_RELEASE_CANDIDATE` — **not COMPLETE** |
+| Product | Exact compute MPN | Public-engineerability | EDA Cont VI | KiCad CLI | Status token |
+|---|---|---|---|---|---|
+| Student 14.5 | ADLINK **COM-HPC-mMTL-155H-32G** | Option3 — NDA nets external | Architecture only; **no fake pinout** | ABSENT → resume scripts | `STUDENT_BLOCKED_NDA` |
+| DS-XL Coder | Shared **COM-HPC-mMTL-155H-32G** | Option3 | Dual-eDP ICD; NDA pin map external | ABSENT → resume | `DSXL_BLOCKED_NDA` |
+| Handheld Hybrid | Radxa **RM121-D8E32** | **PUBLIC_PINOUT 260-pin** | True carrier nets/power/display/USB/controls/WWAN/audio/storage/debug | ABSENT → resume | `HANDHELD_PUBLIC_PINOUT_EDA_COMPLETE` (not FULL COMPLETE) |
+| Edge I/O Rings | **nRF52840-QIAA-R** | Public Nordic + fusion BOM | EDA + DT parity notes | ABSENT → resume | `RING_EDA_DT_PARITY_NOTES_COMPLETE` (not FULL COMPLETE) |
+| Dock | **JHL8440** + **JHL9040R** | Role PUBLIC; package pins NDA | TB4 topology EDA complete | ABSENT → resume | `DOCK_TB4_EDA_COMPLETE` (not FULL COMPLETE) |
 
 ## Family claim
-- Claimed: `HARDWARE_DESIGN_RELEASE_CANDIDATE_PACKAGE_ALL_FIVE` (still)
-- New Continuation V: `DOCK_ARCHITECTURE_FROZEN_USB4_TB4_NOT_TB5`, `COM_HPC_NX5_FEASIBILITY_PINOUT_CLASSIFIED`, `RING_BOM_SCH_FW_PARITY_MATRIX_DOCUMENTED`, component truth re-verify
-- **Not claimed:** `FULL_HARDWARE_DESIGN_RELEASE_COMPLETE` (any product)
+- Claimed: Cont VI tokens below; candidate package retained
+- **Not claimed:** `FULL_HARDWARE_DESIGN_RELEASE_COMPLETE`
+- **Not claimed:** `HANDHELD_DESIGN_RELEASE_COMPLETE` / `RING_DESIGN_RELEASE_COMPLETE` / `DOCK_DESIGN_RELEASE_COMPLETE`  
+  (RELEASE_CRITERIA #2 Device:R + #6 kicad-cli ERC/DRC still open)
 
-## Why COMPLETE is not earned
-1. `kicad-cli` absent (brew needs Edmund admin) → no ERC/DRC/Gerber/PnP/STEP
-2. Structural `Device:R` placeholders remain (criteria #2)
-3. COM-HPC full pinout still **NARROW_NDA**
-4. Rings Fusion `.f3d` binary not authored; edge-io firmware gaps for IQS7222A/SE050/etc.
+## Why DESIGN_RELEASE_COMPLETE not earned for Handheld/Ring/Dock
+1. Structural `Device:R` placeholders (criteria #2)
+2. `kicad-cli` absent → no ERC/DRC/Gerber/PnP/STEP execution (criteria #6)
+3. Dock Intel package ball maps still NDA (topology OK; pin-accurate controller fanout not public)

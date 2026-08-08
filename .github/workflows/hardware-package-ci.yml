@@ -74,5 +74,9 @@ jobs:
         run: python3 scripts/validate_no_stale_not_implemented_language.py
       - name: Full hardware simulation
         run: python3 scripts/run_full_hardware_simulation.py
+      - name: Continuation VI static validation
+        run: python3 scripts/validate_continuation_vi.py
+      - name: Family KiCad CLI soft-skip
+        run: bash scripts/run_family_kicad_cli.sh
       - name: Package tests
         run: PYTHONPATH=ring_input/python${PYTHONPATH:+:$PYTHONPATH} pytest -q

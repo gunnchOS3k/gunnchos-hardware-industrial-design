@@ -1,0 +1,367 @@
+{
+    "$schema": "https://schemas.kicad.org/erc.v1.json",
+    "coordinate_units": "mm",
+    "date": "2026-08-08T16:01:06",
+    "ignored_checks": [
+        {
+            "description": "Global label only appears once in the schematic",
+            "key": "single_global_label"
+        },
+        {
+            "description": "Four connection points are joined together",
+            "key": "four_way_junction"
+        },
+        {
+            "description": "SPICE model issue",
+            "key": "simulation_model_issue"
+        },
+        {
+            "description": "Assigned footprint doesn't match footprint filters",
+            "key": "footprint_filter"
+        }
+    ],
+    "included_severities": [
+        "error",
+        "warning"
+    ],
+    "kicad_version": "10.0.5",
+    "sheets": [
+        {
+            "path": "/",
+            "uuid_path": "/2c3200c7-7d11-b0f4-feea-6390eaddc835",
+            "violations": [
+                {
+                    "description": "Label not connected",
+                    "items": [
+                        {
+                            "description": "Global Label 'VCC_SYSIN'",
+                            "pos": {
+                                "x": 0.3,
+                                "y": 2.0
+                            },
+                            "uuid": "b471e0fa-6b24-34bf-16c4-fd3a892e091e"
+                        }
+                    ],
+                    "severity": "error",
+                    "type": "label_dangling"
+                },
+                {
+                    "description": "Label not connected",
+                    "items": [
+                        {
+                            "description": "Global Label 'USB20_HOST0_DM'",
+                            "pos": {
+                                "x": 0.3,
+                                "y": 2.12
+                            },
+                            "uuid": "f3b63ee9-4000-d8a4-583e-e58070efbde3"
+                        }
+                    ],
+                    "severity": "error",
+                    "type": "label_dangling"
+                },
+                {
+                    "description": "Label not connected",
+                    "items": [
+                        {
+                            "description": "Global Label 'PCIE20_WWAN'",
+                            "pos": {
+                                "x": 0.3,
+                                "y": 2.24
+                            },
+                            "uuid": "acfab544-c266-ab26-c57a-0d3610333842"
+                        }
+                    ],
+                    "severity": "error",
+                    "type": "label_dangling"
+                },
+                {
+                    "description": "Label not connected",
+                    "items": [
+                        {
+                            "description": "Global Label 'GND'",
+                            "pos": {
+                                "x": 0.65,
+                                "y": 2.0
+                            },
+                            "uuid": "60ccd9d1-8d7c-c29d-91db-ed5bc2f4dbb0"
+                        }
+                    ],
+                    "severity": "error",
+                    "type": "label_dangling"
+                },
+                {
+                    "description": "Label not connected",
+                    "items": [
+                        {
+                            "description": "Global Label 'USB30_SS'",
+                            "pos": {
+                                "x": 0.65,
+                                "y": 2.12
+                            },
+                            "uuid": "07122b08-4c0c-cfc2-65f7-cbb0b79aca34"
+                        }
+                    ],
+                    "severity": "error",
+                    "type": "label_dangling"
+                },
+                {
+                    "description": "Label not connected",
+                    "items": [
+                        {
+                            "description": "Global Label 'VBUS_PD'",
+                            "pos": {
+                                "x": 0.65,
+                                "y": 2.24
+                            },
+                            "uuid": "3d89cc62-823a-216e-1093-c26c4e652cd6"
+                        }
+                    ],
+                    "severity": "error",
+                    "type": "label_dangling"
+                },
+                {
+                    "description": "Label not connected",
+                    "items": [
+                        {
+                            "description": "Global Label 'HDMI0_TX'",
+                            "pos": {
+                                "x": 1.0,
+                                "y": 2.0
+                            },
+                            "uuid": "d0310d42-1224-cae0-e4ef-bcdf1bbea9ca"
+                        }
+                    ],
+                    "severity": "error",
+                    "type": "label_dangling"
+                },
+                {
+                    "description": "Label not connected",
+                    "items": [
+                        {
+                            "description": "Global Label 'SDMMC'",
+                            "pos": {
+                                "x": 1.0,
+                                "y": 2.12
+                            },
+                            "uuid": "f8307eed-deca-4b46-c7e4-8be5324a5c99"
+                        }
+                    ],
+                    "severity": "error",
+                    "type": "label_dangling"
+                },
+                {
+                    "description": "Label not connected",
+                    "items": [
+                        {
+                            "description": "Global Label 'VBAT'",
+                            "pos": {
+                                "x": 1.0,
+                                "y": 2.24
+                            },
+                            "uuid": "47e2d2c4-f458-f170-d285-fbe9b8ab5123"
+                        }
+                    ],
+                    "severity": "error",
+                    "type": "label_dangling"
+                },
+                {
+                    "description": "Label not connected",
+                    "items": [
+                        {
+                            "description": "Global Label 'MIPI_DPHY_TX'",
+                            "pos": {
+                                "x": 1.35,
+                                "y": 2.0
+                            },
+                            "uuid": "db9843cc-33b9-aa48-d4a3-775ab63b247a"
+                        }
+                    ],
+                    "severity": "error",
+                    "type": "label_dangling"
+                },
+                {
+                    "description": "Label not connected",
+                    "items": [
+                        {
+                            "description": "Global Label 'I2C0_HID'",
+                            "pos": {
+                                "x": 1.35,
+                                "y": 2.12
+                            },
+                            "uuid": "84f9c128-8a80-c211-e0d3-ce5cd4f1436d"
+                        }
+                    ],
+                    "severity": "error",
+                    "type": "label_dangling"
+                },
+                {
+                    "description": "Label not connected",
+                    "items": [
+                        {
+                            "description": "Global Label 'CC1'",
+                            "pos": {
+                                "x": 1.35,
+                                "y": 2.24
+                            },
+                            "uuid": "739dbc11-cba1-df69-8a27-28045e77a073"
+                        }
+                    ],
+                    "severity": "error",
+                    "type": "label_dangling"
+                },
+                {
+                    "description": "Label not connected",
+                    "items": [
+                        {
+                            "description": "Global Label 'LCD_BL_PWM'",
+                            "pos": {
+                                "x": 1.7,
+                                "y": 2.0
+                            },
+                            "uuid": "fbb90c93-e670-a802-bb5b-7a56909c4cb9"
+                        }
+                    ],
+                    "severity": "error",
+                    "type": "label_dangling"
+                },
+                {
+                    "description": "Label not connected",
+                    "items": [
+                        {
+                            "description": "Global Label 'UART2_DBG'",
+                            "pos": {
+                                "x": 1.7,
+                                "y": 2.12
+                            },
+                            "uuid": "c789ecfd-5d5b-301b-c5f8-c54aaadb2a0e"
+                        }
+                    ],
+                    "severity": "error",
+                    "type": "label_dangling"
+                },
+                {
+                    "description": "Label not connected",
+                    "items": [
+                        {
+                            "description": "Global Label 'CC2'",
+                            "pos": {
+                                "x": 1.7,
+                                "y": 2.24
+                            },
+                            "uuid": "77e3a251-1004-3636-4be0-c484a4d59c2a"
+                        }
+                    ],
+                    "severity": "error",
+                    "type": "label_dangling"
+                },
+                {
+                    "description": "Label not connected",
+                    "items": [
+                        {
+                            "description": "Global Label 'LCD_RESET_L'",
+                            "pos": {
+                                "x": 2.05,
+                                "y": 2.0
+                            },
+                            "uuid": "563447f6-6717-19bc-7313-1d1177d0b92d"
+                        }
+                    ],
+                    "severity": "error",
+                    "type": "label_dangling"
+                },
+                {
+                    "description": "Label not connected",
+                    "items": [
+                        {
+                            "description": "Global Label 'I2S0'",
+                            "pos": {
+                                "x": 2.05,
+                                "y": 2.12
+                            },
+                            "uuid": "52b536a2-6455-3ce3-85ca-99c1197de979"
+                        }
+                    ],
+                    "severity": "error",
+                    "type": "label_dangling"
+                },
+                {
+                    "description": "The current configuration does not include the footprint library ''",
+                    "items": [
+                        {
+                            "description": "Symbol USOM1 [R]",
+                            "pos": {
+                                "x": 0.4,
+                                "y": 0.35
+                            },
+                            "uuid": "9d236180-c292-9e6e-b357-abee91a17765"
+                        }
+                    ],
+                    "severity": "warning",
+                    "type": "footprint_link_issues"
+                },
+                {
+                    "description": "The current configuration does not include the footprint library ''",
+                    "items": [
+                        {
+                            "description": "Symbol U_HID [R]",
+                            "pos": {
+                                "x": 0.4,
+                                "y": 0.75
+                            },
+                            "uuid": "6388843f-b89d-d5a6-782a-85e11cf96085"
+                        }
+                    ],
+                    "severity": "warning",
+                    "type": "footprint_link_issues"
+                },
+                {
+                    "description": "The current configuration does not include the footprint library ''",
+                    "items": [
+                        {
+                            "description": "Symbol J_USBC [R]",
+                            "pos": {
+                                "x": 0.4,
+                                "y": 1.15
+                            },
+                            "uuid": "a8c82237-c51f-d4d1-56ad-9c651f589322"
+                        }
+                    ],
+                    "severity": "warning",
+                    "type": "footprint_link_issues"
+                },
+                {
+                    "description": "The current configuration does not include the footprint library ''",
+                    "items": [
+                        {
+                            "description": "Symbol JSOM1 [R]",
+                            "pos": {
+                                "x": 0.85,
+                                "y": 0.35
+                            },
+                            "uuid": "d20915d0-055a-845f-6bd0-70293266b23c"
+                        }
+                    ],
+                    "severity": "warning",
+                    "type": "footprint_link_issues"
+                },
+                {
+                    "description": "The current configuration does not include the footprint library ''",
+                    "items": [
+                        {
+                            "description": "Symbol U_WWAN [R]",
+                            "pos": {
+                                "x": 2.2,
+                                "y": 0.35
+                            },
+                            "uuid": "13b123cf-3d44-db40-f6d5-0bf8c42f286d"
+                        }
+                    ],
+                    "severity": "warning",
+                    "type": "footprint_link_issues"
+                }
+            ]
+        }
+    ],
+    "source": "handheld_hybrid.kicad_sch"
+}

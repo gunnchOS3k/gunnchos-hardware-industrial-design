@@ -1,0 +1,68 @@
+(export
+	(version "E")
+	(design
+		(source "/Users/gunnchos/Downloads/gunnchos-7gc-research-product-spine/repos/gunnchos-hardware-industrial-design/electrical/ds_xl_coder/kicad/ds_xl_coder.kicad_sch")
+		(date "2026-08-08T16:00:21")
+		(tool "Eeschema 10.0.5")
+		(textvar
+			(name "EDMUND_ACTION_REQUIRED") "install_kicad_cli")
+		(textvar
+			(name "FAMILY_DEPTH") "1")
+		(textvar
+			(name "KICAD_CLI") "ABSENT")
+		(sheet
+			(number "1")
+			(name "/")
+			(tstamps "/")
+			(title_block
+				(title "DS-XL Coder Carrier — dual eDP")
+				(company "gunnchOS3k / HARDWARE DESIGN RELEASE")
+				(rev "0.2.0-dev")
+				(date "2026-08-08")
+				(source "ds_xl_coder.kicad_sch")
+				(comment
+					(number "1")
+					(value "Shared COM + second display ICD")
+				)
+				(comment
+					(number "2")
+					(value "ADR-FP-003 / ADR-HW-001")
+				)
+				(comment
+					(number "3")
+					(value "kicad-cli ABSENT → EDMUND_ACTION_REQUIRED")
+				)
+				(comment
+					(number "4")
+					(value "PHYSICAL_EXECUTION_FREEZE ACTIVE — no fab, no purchase, draft digital only")
+				)
+				(comment
+					(number "5")
+					(value "")
+				)
+				(comment
+					(number "6")
+					(value "")
+				)
+				(comment
+					(number "7")
+					(value "")
+				)
+				(comment
+					(number "8")
+					(value "")
+				)
+				(comment
+					(number "9")
+					(value "")
+				)
+			)
+		)
+	)
+	(components)
+	(groups)
+	(variants)
+	(libparts)
+	(libraries)
+	(nets)
+)

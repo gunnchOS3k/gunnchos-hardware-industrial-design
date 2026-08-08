@@ -1,46 +1,226 @@
 {
   "device": "dock",
-  "updated_at_utc": "2026-08-08T20:15:00Z",
+  "updated_at_utc": "2026-08-08T20:58:59Z",
   "evidence_class": "MODELED",
   "architecture_freeze": "USB4_TB4_40G_NOT_TB5",
   "adr": "ADR-HW-002",
+  "controller_mpn": "JHL8440",
+  "retimer_mpn": "JHL9040R",
+  "note": "Intel controller/retimer package pinouts remain NDA/design-kit; topology nets are architecture-truthful without fake ball maps",
   "nodes": [
     {
       "ref": "U1",
       "mpn": "JHL8440",
       "role": "USB4_TB4_DOCK_CONTROLLER",
-      "nets": ["VDD_3V3", "VBUS_UPSTREAM", "SS_TX", "SS_RX", "AUX", "PCIE_TUNNEL"],
-      "evidence": "PUBLIC_DOCS_role_only_pinout_NDA"
+      "evidence": "PUBLIC_DOCS_role",
+      "nets": [
+        "VDD_3V3",
+        "VBUS_UPSTREAM",
+        "SS_TX_UP",
+        "SS_RX_UP",
+        "SS_TX_DS1",
+        "SS_RX_DS1",
+        "SS_TX_DS2",
+        "SS_RX_DS2",
+        "AUX_UP",
+        "AUX_DS",
+        "I2C_PD",
+        "GPIO_HOTPLUG"
+      ]
     },
     {
       "ref": "U1R",
       "mpn": "JHL9040R",
       "role": "TB4_RETIMER",
-      "nets": ["SS_TX", "SS_RX", "VDD_1V8"],
-      "evidence": "PUBLIC_DOCS_retimer"
-    },
-    {
-      "ref": "U1A",
-      "mpn": "VL108",
-      "role": "USB3DP_COSTDOWN_SKU",
-      "dnp": true,
-      "nets": ["VBUS_UPSTREAM", "DP_TX", "USB3"]
+      "evidence": "PUBLIC_DOCS_role",
+      "nets": [
+        "VDD_1V8",
+        "SS_TX_UP",
+        "SS_RX_UP",
+        "SS_TX_HOST",
+        "SS_RX_HOST",
+        "I2C_RETIMER"
+      ]
     },
     {
       "ref": "U2",
-      "mpn": "TPS65994",
-      "nets": ["VBUS_UPSTREAM", "CC1", "CC2", "I2C_PD"]
+      "mpn": "TPS65994ADFBRQ1",
+      "role": "PD_CONTROLLER",
+      "nets": [
+        "VBUS_UPSTREAM",
+        "VBUS_DS1",
+        "VBUS_DS2",
+        "CC1",
+        "CC2",
+        "I2C_PD"
+      ]
     },
     {
       "ref": "U3",
       "mpn": "RTL8156",
-      "nets": ["VDD_3V3", "USB_HUB_DS", "MDI"]
+      "role": "ETHERNET_2G5",
+      "nets": [
+        "VDD_3V3",
+        "USB_HUB_DS",
+        "MDI0",
+        "MDI1",
+        "MDI2",
+        "MDI3"
+      ]
     },
     {
       "ref": "U4",
       "mpn": "VL817",
-      "nets": ["VDD_5V", "USB_UP", "USB_A1", "USB_A2"]
+      "role": "USB_HUB",
+      "nets": [
+        "VDD_5V",
+        "USB_UP",
+        "USB_A1",
+        "USB_A2",
+        "USB_C_UTIL"
+      ]
+    },
+    {
+      "ref": "U5",
+      "mpn": "TPS55288RPMR",
+      "role": "VBUS_BUCKBOOST",
+      "nets": [
+        "AC_ADAPTER_VBUS",
+        "VBUS_UPSTREAM",
+        "PG"
+      ]
+    },
+    {
+      "ref": "U6",
+      "mpn": "TPS62864",
+      "role": "BUCK_5V",
+      "nets": [
+        "VBUS_UPSTREAM",
+        "VSYS_5V"
+      ]
+    },
+    {
+      "ref": "U7",
+      "mpn": "TLV75533PDRVR",
+      "role": "LDO_3V3",
+      "nets": [
+        "VSYS_5V",
+        "VDD_3V3"
+      ]
+    },
+    {
+      "ref": "U8",
+      "mpn": "DWM3001C",
+      "role": "UWB_COMPANION",
+      "dnp": true,
+      "nets": [
+        "VDD_3V3",
+        "SPI_UWB",
+        "IRQ_UWB"
+      ]
+    },
+    {
+      "ref": "U9",
+      "mpn": "ALC4050",
+      "role": "USB_AUDIO_OPT",
+      "dnp": true,
+      "nets": [
+        "VDD_3V3",
+        "USB_AUDIO",
+        "HP_L",
+        "HP_R"
+      ]
+    },
+    {
+      "ref": "J1",
+      "mpn": "USB4085",
+      "role": "HOST_PORT_UPSTREAM",
+      "nets": [
+        "VBUS_UPSTREAM",
+        "CC1",
+        "CC2",
+        "SS_TX_HOST",
+        "SS_RX_HOST",
+        "USB2_D"
+      ]
+    },
+    {
+      "ref": "J2A",
+      "mpn": "USB4085",
+      "role": "DOWNSTREAM_C1",
+      "nets": [
+        "VBUS_DS1",
+        "SS_TX_DS1",
+        "SS_RX_DS1",
+        "CC_DS1"
+      ]
+    },
+    {
+      "ref": "J2B",
+      "mpn": "USB4085",
+      "role": "DOWNSTREAM_C2",
+      "nets": [
+        "VBUS_DS2",
+        "SS_TX_DS2",
+        "SS_RX_DS2",
+        "CC_DS2"
+      ]
+    },
+    {
+      "ref": "J3A",
+      "mpn": "USB3_A",
+      "role": "DOWNSTREAM_A1",
+      "nets": [
+        "USB_A1",
+        "VBUS_A"
+      ]
+    },
+    {
+      "ref": "J3B",
+      "mpn": "USB3_A",
+      "role": "DOWNSTREAM_A2",
+      "nets": [
+        "USB_A2",
+        "VBUS_A"
+      ]
+    },
+    {
+      "ref": "J4",
+      "mpn": "HDMI_TypeA",
+      "role": "VIDEO_EGRESS",
+      "nets": [
+        "HDMI_TX",
+        "HPD",
+        "DDC"
+      ]
+    },
+    {
+      "ref": "J5",
+      "mpn": "JK0-0136NL",
+      "role": "ETHERNET",
+      "nets": [
+        "MDI0",
+        "MDI1",
+        "MDI2",
+        "MDI3"
+      ]
+    },
+    {
+      "ref": "J6",
+      "mpn": "Mill-Max_pogo",
+      "role": "RING_CHARGE",
+      "nets": [
+        "RING_CHARGE_5V",
+        "GND",
+        "CHG_SENSE"
+      ]
     }
   ],
-  "forbidden": ["JHL9480", "JHL9580", "TB5_80G_claim"]
+  "forbidden": [
+    "JHL9480",
+    "JHL9580",
+    "TB5_80G_claim",
+    "fake_intel_ball_map"
+  ],
+  "kicad_cli": "ABSENT_OR_RESUME"
 }

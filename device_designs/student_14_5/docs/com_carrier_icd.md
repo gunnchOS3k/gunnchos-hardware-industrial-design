@@ -19,3 +19,6 @@ Module docs: https://docs.ipi.wiki/com-hpc/mini-type-meteor-lake/ModuleIntroduct
 Connector: COM-HPC Mini 400-pin. Exact mating connector MPN from ADLINK carrier design guide (**NARROW_NDA** — PICMG/ADLINK). **Purchase frozen.**
 
 Continuation V: full pin-by-pin netlist is **not** PUBLIC_DOCS. Carrier schematics must not invent pin numbers. See `docs/full_product_family/COM_HPC_NX5_FEASIBILITY_PINOUT.md`.
+
+
+Continuation VI: status token `STUDENT_BLOCKED_NDA` — Option 3 public-engineerability gate.
