@@ -591,8 +591,9 @@ def write_pcb_and_gerbers() -> dict:
     )
 
     drc = run_drc(placements, tracks, vias, width_mm, height_mm)
-    (reports / "drc_report.json").write_text(json.dumps(drc, indent=2) + "\n", encoding="utf-8")
-    (reports / "drc_report.md").write_text(
+    # Canonical uppercase name matches validate_digital_fab_package.py / ERC_REPORT.json
+    (reports / "DRC_REPORT.json").write_text(json.dumps(drc, indent=2) + "\n", encoding="utf-8")
+    (reports / "DRC_REPORT.md").write_text(
         f"# DRC Report — {BOARD}\n\n**Result:** {'PASS' if drc['pass'] else 'FAIL'}\n\n"
         + "\n".join(f"- ERR: {e}" for e in drc["errors"]) + "\n"
         + "\n".join(f"- WARN: {w}" for w in drc["warnings"]) + "\n",
