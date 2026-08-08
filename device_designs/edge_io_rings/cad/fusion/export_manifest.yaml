@@ -1,0 +1,13 @@
+updated_at_utc: "2026-08-08T19:40:00Z"
+exports:
+  - format: STEP
+    path: exports/edge_io_ring_size{US}.step
+    status: PENDING_FUSION_OR_OPENSCAD
+  - format: STL
+    path: exports/edge_io_ring_size{US}.stl
+    status: GATE1_OPENSCAD_PRESENT
+  - format: 3MF
+    path: exports/edge_io_ring_size{US}.3mf
+    status: PENDING
+openscad_twin_stl: gate1_digital_fabrication/edge_io_ring/mechanical/edge_io_ring.stl
+physical_execution_freeze: true

@@ -1,6 +1,6 @@
 # Student 14.5 — electrical architecture
 
-Updated: 2026-08-08T01:15:00Z  
+Updated: 2026-08-08T19:40:00Z  
 Evidence: MODELED / DIGITAL
 
 ## Strategy

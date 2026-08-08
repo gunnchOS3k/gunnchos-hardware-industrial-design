@@ -2,7 +2,7 @@ device_id: student_14_5
 evidence_class: MODELED
 strategy: COM_CARRIER
 adr: [ADR-FP-001, ADR-HW-001]
-updated_at_utc: "2026-08-08T01:15:00Z"
+updated_at_utc: "2026-08-08T19:40:00Z"
 battery_wh_modeled: 60
 battery_wh_range: [56, 72]
 rails:
@@ -15,3 +15,5 @@ rails:
   - {name: VDD_1V8, regulator_mpn: TPS62864YCPR, ldo_holdup_mpn: TLV75518PDRVR}
 forbidden:
   - bare_cpu_bga_vcore_invented_without_pdk
+com_mpn: COM-HPC-mMTL-155H-32G
+com_tdp_base_w: 28

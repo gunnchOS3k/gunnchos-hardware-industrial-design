@@ -1,7 +1,7 @@
 device_id: handheld_hybrid
 evidence_class: MODELED
 strategy: SOM_CARRIER
-updated_at_utc: "2026-08-08T01:15:00Z"
+updated_at_utc: "2026-08-08T19:40:00Z"
 battery_mah_modeled: 6000
 rails:
   - {name: VBAT, volts: 7.4, note: "2S nom; 1S2P alt 3.8V"}
@@ -10,3 +10,5 @@ rails:
   - {name: VDD_5V, regulator_mpn: TPS62864_class}
   - {name: VDD_3V3, regulator_mpn: TPS62864_class}
   - {name: VDD_DISPLAY_BL, note: "boost for LED backlight"}
+som_mpn: RM121-D8E32
+soc: RK3588S

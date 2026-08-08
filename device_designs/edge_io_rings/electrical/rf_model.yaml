@@ -1,0 +1,12 @@
+device_id: edge_io_rings
+updated_at_utc: "2026-08-08T19:40:00Z"
+evidence_class: MODELED
+radios:
+  - mpn: nRF52840-QIAA-R
+    type: ble_2g4
+    antenna: Johanson 2450AT18A100 or PCB IFA
+  - mpn: DWM3001C
+    type: uwb
+    populated: dnp_default
+    escape: UWB_ON_COMPANION
+non_claims: [no chamber measurement]

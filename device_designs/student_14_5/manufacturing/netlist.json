@@ -1,0 +1,100 @@
+{
+  "device": "student_14_5",
+  "updated_at_utc": "2026-08-08T19:40:00Z",
+  "evidence_class": "MODELED",
+  "compute_mpn": "COM-HPC-mMTL-155H-32G",
+  "nodes": [
+    {
+      "ref": "UCOM1",
+      "mpn": "COM-HPC-mMTL-155H-32G",
+      "nets": [
+        "COM_VIN",
+        "EDP0",
+        "USB4",
+        "PCIE_NVME",
+        "PCIE_WWAN",
+        "ESPI",
+        "HDA",
+        "CSI"
+      ]
+    },
+    {
+      "ref": "JCOM1",
+      "mpn": "COM-HPC-Mini-400pin",
+      "nets": [
+        "COM_VIN",
+        "EDP0",
+        "USB4",
+        "PCIE_NVME",
+        "PCIE_WWAN",
+        "ESPI",
+        "HDA",
+        "CSI"
+      ]
+    },
+    {
+      "ref": "U_EC",
+      "mpn": "ITE5570",
+      "nets": [
+        "ESPI",
+        "I2C_BAT",
+        "FAN",
+        "KB"
+      ]
+    },
+    {
+      "ref": "U_PD",
+      "mpn": "TPS65994ADFBRQ1",
+      "nets": [
+        "VBUS",
+        "CC1",
+        "CC2",
+        "I2C_PD"
+      ]
+    },
+    {
+      "ref": "U_CHG",
+      "mpn": "BQ25792RQMR",
+      "nets": [
+        "VBUS",
+        "VBAT",
+        "SYS"
+      ]
+    },
+    {
+      "ref": "U_FG",
+      "mpn": "BQ40Z50-R2",
+      "nets": [
+        "VBAT",
+        "SMB"
+      ]
+    },
+    {
+      "ref": "U_WIFI",
+      "mpn": "BE200",
+      "nets": [
+        "CNVI_OR_PCIE",
+        "VDD_3V3"
+      ]
+    },
+    {
+      "ref": "U_WWAN",
+      "mpn": "RM520N-GL",
+      "nets": [
+        "PCIE_OR_USB3",
+        "VDD_3V3",
+        "ANT"
+      ]
+    },
+    {
+      "ref": "U_TPM",
+      "mpn": "SLB9672XQ2.0",
+      "nets": [
+        "SPI_TPM",
+        "VDD_3V3"
+      ]
+    }
+  ],
+  "kicad_cli": "ABSENT",
+  "physical_execution_freeze": true
+}

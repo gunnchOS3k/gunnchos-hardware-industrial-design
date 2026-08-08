@@ -1,0 +1,10 @@
+device_id: dock
+updated_at_utc: "2026-08-08T19:40:00Z"
+evidence_class: MODELED
+radios:
+  - mpn: DWM3001C
+    type: uwb_companion
+    populated: optional
+    role: ADR-FP-008 escape for rings
+cellular: none
+non_claims: [no FCC logo claim]

@@ -1,21 +1,30 @@
-# ADR-HW-001 — COM / SoM + carrier strategy (no fake proprietary CPU BGA)
+# ADR-HW-001 — COM / SoM + carrier strategy (exact MPNs; no fake proprietary CPU BGA)
 
-- Status: **ACCEPTED (hardware engineering baseline)**
-- Date: 2026-08-08T01:15:00Z
-- Relates: field-kit ADR-FP-001 / ADR-FP-002 / ADR-FP-003 (compute freezes remain; **implementation form factor refined**)
+- Status: **ACCEPTED (amended — exact orderable MPNs)**
+- Date: 2026-08-08T19:40:00Z
+- Relates: field-kit ADR-FP-001 / ADR-FP-002 / ADR-FP-003; supersedes vague COM-class strings from family-depth pass
 
 ## Context
-Full-product electrical design must not invent proprietary Intel/AMD/Rockchip **CPU BGA fanout** without vendor PDK/NDA package files. Prior BOM lines saying “Application processor BGA (COM-like / soldered)” are ambiguous and risk false tokens.
+Full-product electrical design must not invent proprietary Intel/AMD/Rockchip **CPU BGA fanout** without vendor PDK/NDA package files. Vague BOM lines such as `COM-HPC-Mini-Ultra7-155H-32GB` are not orderable MPNs.
 
 ## Decision
-1. **Student 14.5 & DS-XL Coder:** purchase a commercial **COM-HPC Client Mini** (or equivalent documented Meteor Lake / Core Ultra 7 H-series COM) that already integrates CPU + LPDDR5x + critical high-speed power islands. gunnchOS designs the **carrier PCB** only: PD, EC, WWAN/Wi-Fi M.2, audio, sensors, display connectors, battery charger, I/O, dock USB-C.
-2. **Handheld Hybrid:** purchase an **RK3588S SoM** (industry SODIMM/board-to-board) and design the **game carrier** (display, controls, power, radios, USB-C/DP).
-3. Reject any schematic that places a bare `Core Ultra 7 155H` BGA with invented ball map.
+1. **Student 14.5 & DS-XL Coder — exact COM MPN:**
+   - **Primary:** ADLINK **`COM-HPC-mMTL-155H-32G`** (COM-HPC Mini, Intel Core Ultra 7 **155H**, 32GB LPDDR5x).
+   - **Approved alternate:** ADLINK **`COM-HPC-mMTL-155H-64G`** (64GB).
+   - Public docs: ADLINK COM-HPC Mini / iPi wiki COM-HPC-mMTL ModuleIntroduction / COM-HPC-mMTL spec PDF.
+   - gunnchOS designs the **carrier PCB only** (PD, EC, WWAN/Wi-Fi M.2, audio, sensors, display connectors, battery charger, I/O, dock USB-C).
+2. **Handheld Hybrid — exact SoM MPN:**
+   - **Primary:** Radxa NX5 **`RM121-D8E32`** (RK3588S, 8GB LPDDR4X, 32GB eMMC, 260-pin SODIMM).
+   - **Approved alternates:** `RM121-D8E16`, `RM121-D8E8`, `RM121-D8E0` (official brief table).
+   - Public docs: Radxa NX5 product brief Rev 1.1; Radxa Docs NX5. Lifecycle note: availability stated until ≥ Sep 2033.
+   - gunnchOS designs the **game carrier** only.
+3. Reject any schematic that places a bare `Core Ultra 7 155H` or bare `RK3588S` BGA with invented ball map.
+4. Do **not** freeze Congatec Panther Lake `conga-HPC/mPTL-*` as primary (different CPU generation vs ADR-FP-001 155H target).
 
 ## Consequences
-- Student/DS-XL KiCad projects are **carrier + COM connector** designs.
-- BOM lists COM as a **module line item** with vendor MPN class, not a fake die BGA.
-- Field-kit ADR-FP-001 compute freeze (Ultra 7 155H class) remains the performance target; this ADR freezes the **honest integration method**.
+- BOMs / KiCad values / ICDs use the exact MPNs above.
+- Procurement / lifecycle documented in `docs/full_product_family/PROCUREMENT_LIFECYCLE.md`.
+- Purchase remains **PHYSICAL_EXECUTION_FREEZE**.
 
 ## Non-claims
-No statement that a specific COM vendor is under contract. AVL quote required before purchase (purchase frozen anyway).
+No statement that ADLINK or Radxa is under contract. AVL quote required before any future purchase.

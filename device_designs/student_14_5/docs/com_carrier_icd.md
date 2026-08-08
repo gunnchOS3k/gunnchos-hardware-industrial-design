@@ -1,16 +1,19 @@
-# ICD — Student COM ↔ carrier
+# ICD — ADLINK COM-HPC-mMTL-155H-32G ↔ Student carrier
 
-Updated: 2026-08-08T01:15:00Z
+Updated: 2026-08-08T19:40:00Z  
+Module docs: https://docs.ipi.wiki/com-hpc/mini-type-meteor-lake/ModuleIntroduction.html
 
 | Group | Direction | Notes | Evidence |
 |---|---|---|---|
-| COM_VIN / VCC_RTC | carrier→COM | Carrier supplies module input rails per COM design guide | MODELED |
-| eDP0 | COM→panel | 14.5" eDP 1.4/1.5 | MODELED |
-| USB4/TBT | COM↔dock Type-C | 40 Gbps class; no 80G claim | MODELED |
-| PCIe M.2 | COM→NVMe / WWAN | NVMe ×4; WWAN per module | MODELED |
-| CNVi / PCIe Wi-Fi | COM→BE200 | Key E | MODELED |
+| VIN 8–20V / AT 12V±5% | carrier→COM | Single-rail per ADLINK COM-HPC-mMTL power section | PUBLIC_DOCS + MODELED carrier |
+| eDP 1.4b | COM→panel | 14.5" panel | MODELED |
+| USB4 (up to 3 muxed w/ DDI) | COM↔dock Type-C | Custom BIOS/re-timer/PD may be project support | PUBLIC_DOCS note |
+| PCIe Gen4 lanes | COM→NVMe / WWAN | Up to 16 lanes total; mux notes in wiki | PUBLIC_DOCS |
+| CNVi / PCIe Wi-Fi | COM→BE200 Key E | | MODELED |
+| Ethernet I226 | COM→optional / unused in laptop SKU | Available on module | PUBLIC_DOCS |
 | LPC/eSPI + I2C | COM↔EC | Keyboard, bat, thermals | MODELED |
-| HDA/I2S | COM↔codec | ALC256 class | MODELED |
-| MIPI CSI | COM←camera FPC | Dual cam candidate | MODELED |
+| HDA/I2S | COM↔codec on carrier | Realtek on carrier per ADLINK note | PUBLIC_DOCS |
+| MIPI CSI | COM←camera FPC | 2× on-module FFC option | PUBLIC_DOCS |
+| SEMA / fan | COM↔thermal | ADLINK SEMA board controller | PUBLIC_DOCS |
 
-Connector: vendor COM-HPC Client Mini (exact pinout from purchased module datasheet — **AVL quote pending**, purchase frozen).
+Connector: COM-HPC Mini 400-pin. Exact mating connector MPN from ADLINK carrier design guide (may require NDA). **Purchase frozen.**

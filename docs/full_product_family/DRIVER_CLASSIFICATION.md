@@ -1,54 +1,57 @@
-# Driver classification — five-product family
+# Driver / firmware matrix — five-product family
 
-Updated: 2026-08-08T01:15:00Z
+Updated: 2026-08-08T19:40:00Z
 
 Classes: `UPSTREAM` | `OPEN_VENDOR` | `BINARY_BLOB` | `NDA_ONLY` | `UNAVAILABLE`
 
-## Student 14.5 / DS-XL (Intel Core Ultra 7 155H class via COM)
-| Subsystem | MPN / class | Classification | Notes |
+## Student 14.5 / DS-XL — ADLINK COM-HPC-mMTL-155H-32G (Ultra 7 155H on-module)
+| Subsystem | Exact MPN / module | Classification | Firmware notes |
 |---|---|---|---|
-| CPU/iGPU/NPU | Ultra 7 155H on COM | `BINARY_BLOB` + `UPSTREAM` mix | i915/xe + firmware blobs (`linux-firmware`); NPU via intel_vpu + FW |
-| ME/CSE/CSME | on-module | `BINARY_BLOB` | Required for bring-up; no open replacement |
+| CPU/iGPU/NPU | Ultra 7 155H on COM-HPC-mMTL | `BINARY_BLOB` + `UPSTREAM` | i915/xe + `linux-firmware`; NPU intel_vpu + FW |
+| ME/CSE/CSME | on-module | `BINARY_BLOB` | Required; no open replacement |
+| COM board mgmt | ADLINK SEMA / AMI UEFI | `BINARY_BLOB` / `OPEN_VENDOR` tools | Vendor BIOS; dual-BIOS option |
 | Wi-Fi/BT | Intel BE200 | `BINARY_BLOB` + `UPSTREAM` | iwlwifi + FW |
-| WWAN | Quectel RM520N-GL | `OPEN_VENDOR` + `BINARY_BLOB` | MBIM/QMI open userspace; modem FW blob |
-| eSIM/eUICC | GSMA SGP.22 path | `OPEN_VENDOR` / `NDA_ONLY` carrier profiles | No compliance claim |
-| TPM | SLB9672 | `UPSTREAM` | tpm_tis_spi |
-| USB4 | JHL9040 / on-COM USB4 | `UPSTREAM` + `BINARY_BLOB` FW | thunderbolt stack |
-| Audio codec | ALC256/ALC245 class | `UPSTREAM` | SOF/HDA |
-| EC | ITE/NPCX class on carrier | `OPEN_VENDOR` / `UPSTREAM` | ChromeEC or vendor EC FW |
-| Touch | panel controller OEM | `BINARY_BLOB` or `OPEN_VENDOR` | HID |
-| Webcam ISP | MIPI → on-COM | `BINARY_BLOB` common | libcamera path preferred |
+| WWAN | Quectel RM520N-GL | `OPEN_VENDOR` + `BINARY_BLOB` | MBIM/QMI userspace; modem FW blob |
+| eSIM/eUICC | GSMA SGP.22 path | `OPEN_VENDOR` / `NDA_ONLY` profiles | No compliance claim |
+| TPM | SLB9672XQ2.0 | `UPSTREAM` | tpm_tis_spi |
+| USB4 | on-COM USB4 / dock JHL9040 | `UPSTREAM` + `BINARY_BLOB` FW | thunderbolt stack |
+| Audio | ALC256/ALC245 class | `UPSTREAM` | SOF/HDA |
+| EC | ITE5570 or NPCX9 class | `OPEN_VENDOR` / `UPSTREAM` | ChromeEC or vendor EC FW |
+| Touch / webcam | panel OEM / MIPI | `BINARY_BLOB` / `OPEN_VENDOR` | HID; libcamera preferred |
 
-## Handheld Hybrid (RK3588S SoM)
-| Subsystem | MPN / class | Classification | Notes |
+## Handheld Hybrid — Radxa NX5 RM121-D8E32 (RK3588S)
+| Subsystem | Exact MPN | Classification | Firmware notes |
 |---|---|---|---|
-| CPU/GPU/NPU | RK3588S | `OPEN_VENDOR` + `BINARY_BLOB` | Vendor kernel trees common; Mali blob; NPU vendor SDK |
-| Wi-Fi/BT | AP6275P / AIC8800D | `BINARY_BLOB` / `OPEN_VENDOR` | Module-dependent |
-| WWAN optional | RM520N-GL | same as Student | Thermal may force Wi-Fi-first SKU |
-| GPU Vulkan | Mali-G610 | `BINARY_BLOB` | Panfrost improving but not sole claim |
-| Gamepad MCU | STM32/nRF class | `UPSTREAM` | HID |
+| CPU/GPU/NPU | RK3588S on NX5 | `OPEN_VENDOR` + `BINARY_BLOB` | Radxa/vendor kernel; Mali blob; NPU vendor SDK |
+| Board FW | Radxa NX5 images | `OPEN_VENDOR` | Debian/Ubuntu/Android per Radxa Docs |
+| Wi-Fi/BT | AP6275P / AIC8800D class | `BINARY_BLOB` / `OPEN_VENDOR` | Module-dependent |
+| WWAN optional | RM520N-GL | same as Student | Thermal may force Wi-Fi-first |
+| GPU Vulkan | Mali-G610 | `BINARY_BLOB` | Panfrost tracked, not sole claim |
+| Gamepad MCU | STM32F103C8T6 class | `UPSTREAM` | HID |
+| SE | SE050C1HQ1 | `OPEN_VENDOR` | Plug & Trust |
 
 ## Edge I/O Rings
-| Subsystem | MPN | Classification | Notes |
+| Subsystem | Exact MPN | Classification | Firmware notes |
 |---|---|---|---|
-| BLE MCU | nRF52840 | `UPSTREAM` | Zephyr/NCS |
-| SoftDevice/controller | Nordic | `BINARY_BLOB` (if SoftDevice) / `UPSTREAM` (Zephyr controller) | Prefer Zephyr open controller |
+| BLE MCU | nRF52840-QIAA-R | `UPSTREAM` | Zephyr/NCS preferred |
+| SoftDevice (if used) | Nordic | `BINARY_BLOB` | Prefer Zephyr controller |
 | IMU | BMI270 | `UPSTREAM` | IIO |
-| Cap | IQS7222A | `OPEN_VENDOR` | Azoteq host lib; may need vendor notes |
-| UWB | DWM3001C | `OPEN_VENDOR` + `BINARY_BLOB` | Qorvo UWB stack portions |
-| BHI360 | BHI360 | `OPEN_VENDOR` | Bosch BSX / SH2 |
-| SE | SE050 | `OPEN_VENDOR` | Plug & Trust middleware |
+| Cap | IQS7222A | `OPEN_VENDOR` | Azoteq host notes |
+| UWB | DWM3001C | `OPEN_VENDOR` + `BINARY_BLOB` | Qorvo portions |
+| BHI360 | BHI360 | `OPEN_VENDOR` | BSX/SH2 |
+| SE | SE050C1HQ1 | `OPEN_VENDOR` | Plug & Trust |
+| PMIC | npm1300-CAAA-R | `OPEN_VENDOR` / `UPSTREAM` | Nordic nPM |
 
 ## Dock
-| Subsystem | MPN | Classification | Notes |
+| Subsystem | Exact MPN | Classification | Firmware notes |
 |---|---|---|---|
-| USB4 | JHL9040 | `BINARY_BLOB` + `UPSTREAM` host | Dock side mostly firmware-less silicon; host drivers matter |
-| PD | TPS65994 | `OPEN_VENDOR` | TI config tools; runtime mostly HW |
+| USB4 | JHL9040 | `BINARY_BLOB` + `UPSTREAM` host | Dock mostly HW; host drivers matter |
+| PD | TPS65994 | `OPEN_VENDOR` | TI config tools |
 | Ethernet | RTL8156 | `UPSTREAM` | r8152 |
 | USB hub | VL817 | n/a silicon | Host xHCI |
 | UWB companion | DWM3001C | same as ring | ADR-FP-008 escape |
 
-## Unavailable / rejected claims
-- Open-source Ultra 7 ME replacement: `UNAVAILABLE`
-- Fully open Mali-free game path as sole handheld GPU: `UNAVAILABLE` as sole strategy (Panfrost tracked as stretch)
-- 6G modem driver stack: `UNAVAILABLE` — not in architecture
+## Unavailable / rejected
+- Open Ultra 7 ME replacement: `UNAVAILABLE`
+- Fully open Mali-free sole GPU path: `UNAVAILABLE` as sole strategy
+- 6G / NTN modem driver stack on RM520N-GL: `UNAVAILABLE`

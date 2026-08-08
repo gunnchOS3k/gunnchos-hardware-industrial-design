@@ -1,0 +1,23 @@
+updated_at_utc: "2026-08-08T19:40:00Z"
+evidence_class: MODELED
+toolchain: Autodesk Fusion 360 (native) + OpenSCAD twin
+sizes_us: [6, 7, 8, 9, 10, 11, 12]
+inner_diameter_mm_by_us:
+  6: 16.45
+  7: 17.35
+  8: 18.15
+  9: 18.89
+  10: 19.84
+  11: 20.68
+  12: 21.49
+band_width_mm: 8.5
+band_thickness_mm: 2.8
+pcb_pocket:
+  length_mm: 18.0
+  width_mm: 10.5
+  depth_mm: 1.0
+pogo_faces: 2
+antenna_keepout_ble_mm: 4.0
+uwb_module: DWM3001C
+uwb_default: DNP
+mcu: nRF52840-QIAA-R

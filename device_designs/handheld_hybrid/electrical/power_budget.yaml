@@ -1,6 +1,6 @@
 device_id: handheld_hybrid
 evidence_class: MODELED
-updated_at_utc: "2026-08-08T01:15:00Z"
+updated_at_utc: "2026-08-08T19:40:00Z"
 scenarios:
   sustained_game:
     system_w_avg: 10.0
@@ -11,3 +11,5 @@ scenarios:
 battery_life_hours_modeled:
   sustained_game: 1.8
   study_2d: 5.0
+som_mpn: RM121-D8E32
+soc: RK3588S

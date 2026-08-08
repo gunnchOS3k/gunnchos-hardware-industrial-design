@@ -1,6 +1,6 @@
 device_id: student_14_5
 evidence_class: MODELED
-updated_at_utc: "2026-08-08T01:15:00Z"
+updated_at_utc: "2026-08-08T19:40:00Z"
 scenarios:
   idle_classroom:
     system_w_avg: 6.5
@@ -17,3 +17,5 @@ battery_life_hours_modeled:
   idle_classroom: 8.5
   sustained_learning: 4.0
 assumptions: [60Wh pack, 92% path efficiency modeled, MODELED not MEASURED]
+com_mpn: COM-HPC-mMTL-155H-32G
+com_tdp_base_w: 28
