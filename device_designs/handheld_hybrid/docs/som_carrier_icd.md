@@ -14,3 +14,5 @@ Docs: https://dl.radxa.com/nx5/radxa_nx5_product_brief.pdf · https://docs.radxa
 | Gigabit Ethernet PHY on SoM | optional unused in handheld | | PUBLIC_DOCS |
 
 Connector: **260-pin SODIMM**. No bare RK3588S BGA. Lifecycle: brief availability ≥ Sep 2033.
+
+Continuation V: pin-by-pin map is **PUBLIC_PINOUT** at https://dl.radxa.com/nx5/ (`radxa_nx5_260_pinout_v1100.xlsx`, `radxa_nx5_pinout_v1.1.xlsx`). Carrier nets must cite that table — no invented remux. Module STP: `radxa_nx5_v1.1_3d_stp.zip`. See `docs/full_product_family/COM_HPC_NX5_FEASIBILITY_PINOUT.md`.

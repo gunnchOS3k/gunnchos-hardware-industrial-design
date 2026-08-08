@@ -1,17 +1,30 @@
 {
   "device": "dock",
-  "updated_at_utc": "2026-08-08T01:15:00Z",
+  "updated_at_utc": "2026-08-08T20:15:00Z",
   "evidence_class": "MODELED",
+  "architecture_freeze": "USB4_TB4_40G_NOT_TB5",
+  "adr": "ADR-HW-002",
   "nodes": [
     {
       "ref": "U1",
-      "mpn": "JHL9040",
+      "mpn": "JHL8440",
+      "role": "USB4_TB4_DOCK_CONTROLLER",
       "nets": [
         "VDD_3V3",
         "VBUS_UPSTREAM",
         "SS_TX",
         "SS_RX",
         "AUX"
+      ]
+    },
+    {
+      "ref": "U1R",
+      "mpn": "JHL9040R",
+      "role": "TB4_RETIMER",
+      "nets": [
+        "SS_TX",
+        "SS_RX",
+        "VDD_1V8"
       ]
     },
     {
@@ -69,5 +82,6 @@
       ]
     }
   ],
+  "forbidden": ["JHL9480", "JHL9580", "TB5_80G_claim"],
   "kicad_cli": "ABSENT"
 }

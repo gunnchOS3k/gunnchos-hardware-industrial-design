@@ -1,11 +1,12 @@
 # Exact orderable MPN matrix — five-product family
 
-Updated: 2026-08-08T19:40:00Z  
-Branch: `cursor/full-product-hardware-design-release`  
-Base: `79b11aba3ca9d4db7051b6d5ccb3571e72503396`  
+Updated: 2026-08-08T20:15:00Z  
+Branch: `cursor/full-product-continuation-v-hardware-release`  
+Base: `7e1658e63052e7baa2e9f4ab58113a91e4165c72` (#47)  
 PHYSICAL_EXECUTION_FREEZE ACTIVE — MPNs frozen for **design**, not purchase.
 
-Evidence class: **PUBLIC_VENDOR_DOCS** for compute/modem MPNs below.
+Evidence class: **PUBLIC_VENDOR_DOCS** for compute/modem/dock role MPNs below.  
+Continuation V independently re-verified ADLINK / Radxa / Intel ARK pages.
 
 ## Compute / SoM / MCU (primary freezes)
 
@@ -15,21 +16,26 @@ Evidence class: **PUBLIC_VENDOR_DOCS** for compute/modem MPNs below.
 | DS-XL Coder | COM module (shared) | ADLINK | **COM-HPC-mMTL-155H-32G** | Same module as Student; dual-eDP is **carrier** differentiator |
 | Handheld Hybrid | SoM | Radxa | **RM121-D8E32** | Radxa NX5 RK3588S; 8GB LPDDR4X + 32GB eMMC; 260-pin SODIMM |
 | Edge I/O Rings | MCU | Nordic | **nRF52840-QIAA-R** | Already exact; aQFN-73 |
-| Dock | USB4 controller | Intel | **JHL9040** | Maple Ridge class; cost-down alt VL108 |
+| Dock | USB4/TB4 **controller** | Intel | **JHL8440** | Goshen Ridge peripheral/dock controller @ **40 Gbps** (ADR-HW-002) |
+| Dock | TB4 **retimer** | Intel | **JHL9040R** | Hayden Bridge retimer — **not** the dock controller; **not** Maple Ridge |
 
-## Approved alternates (compute)
+## Approved alternates (compute / dock)
 
 | Product | Alternate MPN | When |
 |---|---|---|
 | Student / DS-XL | ADLINK **COM-HPC-mMTL-155H-64G** | Higher memory SKU |
 | Handheld | Radxa **RM121-D8E16** / **RM121-D8E8** / **RM121-D8E0** | Same NX5 family; eMMC variants from official brief |
 | Handheld | Firefly **Core-3588SJD4** (SODIMM RK3588S) | Only if NX5 AVL fails — requires carrier pinout re-check ADR amendment |
+| Dock | VIA Labs **VL108** | Handheld-first USB3+DP Alt cost-down SKU (no USB4 40G claim) |
 
 ## Forbidden / rejected
 - Invented proprietary Intel/Rockchip **bare CPU BGA** fanout in-repo
 - Vague `COM-HPC-Mini-Ultra7-155H-32GB` class strings as if they were orderable MPNs
 - Vague `RK3588S-SoM-16GB` without vendor order code
 - Congatec Panther Lake `conga-HPC/mPTL-*` as primary (wrong CPU generation vs ADR-FP-001 Ultra 7 **155H**)
+- Labeling **JHL9040R** as Maple Ridge / dock controller
+- **Thunderbolt 5** dock silicon: **JHL9480** / **JHL9580** (Barlow Ridge) — out of normative 40G scope
+- Mislabeling TB4 as TB5 (or vice versa)
 
 ## Radios / power / security (cross-product exact where frozen)
 
@@ -49,3 +55,5 @@ Evidence class: **PUBLIC_VENDOR_DOCS** for compute/modem MPNs below.
 
 ## Honesty
 Distributor listings that advertise NX5 **16GB** configs without a matching row in Radxa NX5 product brief Rev 1.1 order table are **not** frozen here. Primary handheld freeze is **RM121-D8E32** (public brief).
+
+See also: `COMPONENT_TRUTH_VERIFY_CONTINUATION_V.md`, `DOCK_ARCHITECTURE_FREEZE_USB4_TB4.md`, `COM_HPC_NX5_FEASIBILITY_PINOUT.md`.

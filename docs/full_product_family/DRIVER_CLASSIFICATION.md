@@ -14,7 +14,7 @@ Classes: `UPSTREAM` | `OPEN_VENDOR` | `BINARY_BLOB` | `NDA_ONLY` | `UNAVAILABLE`
 | WWAN | Quectel RM520N-GL | `OPEN_VENDOR` + `BINARY_BLOB` | MBIM/QMI userspace; modem FW blob |
 | eSIM/eUICC | GSMA SGP.22 path | `OPEN_VENDOR` / `NDA_ONLY` profiles | No compliance claim |
 | TPM | SLB9672XQ2.0 | `UPSTREAM` | tpm_tis_spi |
-| USB4 | on-COM USB4 / dock JHL9040 | `UPSTREAM` + `BINARY_BLOB` FW | thunderbolt stack |
+| USB4 | on-COM USB4 / dock **JHL8440** (+ **JHL9040R** retimer) | `UPSTREAM` + `BINARY_BLOB` FW | thunderbolt stack @ **40G**; not TB5 |
 | Audio | ALC256/ALC245 class | `UPSTREAM` | SOF/HDA |
 | EC | ITE5570 or NPCX9 class | `OPEN_VENDOR` / `UPSTREAM` | ChromeEC or vendor EC FW |
 | Touch / webcam | panel OEM / MIPI | `BINARY_BLOB` / `OPEN_VENDOR` | HID; libcamera preferred |
@@ -45,7 +45,9 @@ Classes: `UPSTREAM` | `OPEN_VENDOR` | `BINARY_BLOB` | `NDA_ONLY` | `UNAVAILABLE`
 ## Dock
 | Subsystem | Exact MPN | Classification | Firmware notes |
 |---|---|---|---|
-| USB4 | JHL9040 | `BINARY_BLOB` + `UPSTREAM` host | Dock mostly HW; host drivers matter |
+| USB4/TB4 controller | **JHL8440** | `BINARY_BLOB` + `UPSTREAM` host | Goshen Ridge dock/peripheral @ 40G |
+| TB4 retimer | **JHL9040R** | `BINARY_BLOB` | Hayden Bridge SI — not the controller |
+| TB5 (rejected) | JHL9480 / JHL9580 | `UNAVAILABLE` for this freeze | Out of ADR-HW-002 scope |
 | PD | TPS65994 | `OPEN_VENDOR` | TI config tools |
 | Ethernet | RTL8156 | `UPSTREAM` | r8152 |
 | USB hub | VL817 | n/a silicon | Host xHCI |
