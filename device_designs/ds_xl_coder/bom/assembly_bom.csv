@@ -1,0 +1,13 @@
+device,subsystem,manufacturer,MPN,description,qty,status,notes
+DS-XL Coder,COM_MODULE,AVL_COM_VENDOR,COM-HPC-Mini-Ultra7-155H-32GB,Shared Student COM,1,FROZEN_BASELINE_MODULE,ADR-HW-001
+DS-XL Coder,CarrierPCB,gunnchOS3k,ds_xl_coder_carrier,Dual-eDP carrier,1,DESIGN_PENDING_CLI,
+DS-XL Coder,DisplayUpper,BOE/AUO,13_14_2560x1600_eDP,Upper touch panel,1,AVL_PENDING,
+DS-XL Coder,DisplayLower,BOE/AUO,13_14_1920x1200_eDP,Lower touch panel,1,AVL_PENDING,Second display ICD
+DS-XL Coder,eDPBridge,Lontium/Parade,LT8711-or-PS8625-class,Optional DP→eDP if single eDP COM,1,FOOTPRINT_OPTIONAL,
+DS-XL Coder,WiFi,Intel,BE200,Wi-Fi 7,1,FROZEN_BASELINE,
+DS-XL Coder,WWAN,Quectel,RM520N-GL,5G NR Sub-6,1,FROZEN_BASELINE,NOT 6G
+DS-XL Coder,PD,Texas Instruments,TPS65994ADFBRQ1,PD,1,FROZEN_BASELINE,
+DS-XL Coder,Charger,Texas Instruments,BQ25792RQMR,Charger,1,FROZEN_BASELINE,
+DS-XL Coder,FuelGauge,Texas Instruments,BQ40Z50-R2,Gauge,1,FROZEN_BASELINE,
+DS-XL Coder,NVMe,OEM,512GB_PCIe4,Storage,1,FROZEN_BASELINE,
+DS-XL Coder,Battery,OEM,4S1P-60Wh,Pack,1,FROZEN_BASELINE,

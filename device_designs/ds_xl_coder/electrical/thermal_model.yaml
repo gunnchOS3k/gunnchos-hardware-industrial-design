@@ -1,0 +1,5 @@
+device_id: ds_xl_coder
+evidence_class: MODELED
+updated_at_utc: "2026-08-08T01:15:00Z"
+notes: Dual panel raises display power; COM sustained TDP still ~15W target with shared Student cooling class.
+envelope: {sustained_skin_c_max: 45, ambient_c: 25}

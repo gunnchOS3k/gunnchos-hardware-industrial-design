@@ -1,0 +1,5 @@
+device_id: edge_io_rings
+evidence_class: MODELED
+updated_at_utc: "2026-08-08T01:15:00Z"
+envelope: {skin_c_max: 40, ambient_c: 25}
+notes: Wearable; UWB bursts dominate peak; duty-cycle limited.

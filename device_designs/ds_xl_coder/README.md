@@ -1,4 +1,7 @@
-# ds_xl_coder
+# DS-XL Coder — hardware package
 
-See field-kit `device_designs/ds_xl_coder/` for full digital definition.
-Status: REPRESENTATIVE_ENCLOSURE_PHYSICAL_PENDING
+Updated: 2026-08-08T01:15:00Z  
+Shares Student COM baseline (ADR-FP-003 + ADR-HW-001).  
+Differentiator: **dual eDP** + hinge + second-display ICD.
+
+PHYSICAL_EXECUTION_FREEZE ACTIVE — no fab, no purchase, draft digital only

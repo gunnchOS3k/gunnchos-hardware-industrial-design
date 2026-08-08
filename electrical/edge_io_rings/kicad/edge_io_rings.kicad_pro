@@ -1,0 +1,6 @@
+{
+  "meta": { "filename": "edge_io_rings.kicad_pro", "version": 1 },
+  "project": { "files": [ { "name": "edge_io_rings.kicad_sch", "type": "schematic" }, { "name": "edge_io_rings.kicad_pcb", "type": "pcb" } ] },
+  "sheets": [ [ "edge_io_rings.kicad_sch", "" ] ],
+  "text_variables": { "KICAD_CLI": "ABSENT", "EDMUND_ACTION_REQUIRED": "install_kicad_cli" }
+}

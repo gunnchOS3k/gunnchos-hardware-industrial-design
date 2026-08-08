@@ -1,0 +1,15 @@
+device,subsystem,manufacturer,MPN,description,qty,status,notes
+Handheld Hybrid,SoM,AVL_SOM_VENDOR,RK3588S-SoM-16GB,RK3588S SoM 16GB LPDDR4x,1,FROZEN_BASELINE_MODULE,ADR-HW-001 — not bare BGA
+Handheld Hybrid,CarrierPCB,gunnchOS3k,handheld_hybrid_carrier,Game carrier PCB,1,DESIGN_PENDING_CLI,
+Handheld Hybrid,Display,OEM,7in_1080p_120Hz_IPS,7 inch touch panel,1,AVL_PENDING,
+Handheld Hybrid,WiFiBT,Ampak/AIC,AP6275P-or-AIC8800D,Wi-Fi 6E + BT 5.3 module,1,FROZEN_BASELINE,
+Handheld Hybrid,WWAN_opt,Quectel,RM520N-GL,Optional 5G M.2,1,FOOTPRINT_OPTIONAL,Thermal-gated; NOT 6G
+Handheld Hybrid,HID_MCU,STMicro,STM32F103C8T6,Gamepad HID MCU class,1,FROZEN_BASELINE,alt nRF52840
+Handheld Hybrid,PD,Texas Instruments,TPS65987DDH or IP2726 class,USB-C PD,1,FROZEN_BASELINE,
+Handheld Hybrid,Charger,Texas Instruments,BQ25895 or BQ25792,Pack charger,1,FROZEN_BASELINE,topology-dependent
+Handheld Hybrid,FuelGauge,Texas Instruments,BQ27Z273,Fuel gauge,1,FROZEN_BASELINE,
+Handheld Hybrid,UFS_or_eMMC,Samsung/OEM,UFS3.1-256GB,Storage,1,FROZEN_BASELINE,on-SoM or carrier
+Handheld Hybrid,Battery,OEM,6000mAh_2S_or_1S2P,Game pack,1,FROZEN_BASELINE,MODELED
+Handheld Hybrid,Sticks,ALPS/OEM,RKJXV analog stick pair,Dual sticks,2,AVL_PENDING,
+Handheld Hybrid,Buttons,OEM,tactile_ABXY_LR_DPAD,Button set,1,AVL_PENDING,
+Handheld Hybrid,SE,NXP,SE050C1HQ1,Secure element footprint,1,FROZEN_BASELINE,

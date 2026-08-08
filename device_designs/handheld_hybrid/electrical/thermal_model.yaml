@@ -1,0 +1,9 @@
+device_id: handheld_hybrid
+evidence_class: MODELED
+updated_at_utc: "2026-08-08T01:15:00Z"
+sustained_game:
+  power_w: 10
+  skin_c_pred: 41
+  soc_c_pred: 82
+  cooling: graphite_heatpipe_optional_blower
+envelope: {skin_c_max: 45, ambient_c: 25}
