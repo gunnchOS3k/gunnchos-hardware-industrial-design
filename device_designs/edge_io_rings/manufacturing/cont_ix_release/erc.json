@@ -1,0 +1,443 @@
+{
+    "$schema": "https://schemas.kicad.org/erc.v1.json",
+    "coordinate_units": "mm",
+    "date": "2026-08-09T15:50:58",
+    "ignored_checks": [
+        {
+            "description": "Global label only appears once in the schematic",
+            "key": "single_global_label"
+        },
+        {
+            "description": "Four connection points are joined together",
+            "key": "four_way_junction"
+        },
+        {
+            "description": "SPICE model issue",
+            "key": "simulation_model_issue"
+        },
+        {
+            "description": "Assigned footprint doesn't match footprint filters",
+            "key": "footprint_filter"
+        }
+    ],
+    "included_severities": [
+        "error",
+        "warning",
+        "exclusion"
+    ],
+    "kicad_version": "10.0.5",
+    "sheets": [
+        {
+            "path": "/",
+            "uuid_path": "/be214b71-f386-13ce-46c3-b780517d3cc5",
+            "violations": [
+                {
+                    "description": "Label connected to only one pin",
+                    "items": [
+                        {
+                            "description": "Global Label 'SWDCLK'",
+                            "pos": {
+                                "x": 0.3048,
+                                "y": 1.3589
+                            },
+                            "uuid": "9b8fb502-f7b4-844a-3a76-1509ea3eb9ce"
+                        }
+                    ],
+                    "severity": "warning",
+                    "type": "isolated_pin_label"
+                },
+                {
+                    "description": "Label connected to only one pin",
+                    "items": [
+                        {
+                            "description": "Global Label 'USB_DM'",
+                            "pos": {
+                                "x": 0.3556,
+                                "y": 0.4445
+                            },
+                            "uuid": "744688c4-fadc-2bdd-15c9-b405592b0c7e"
+                        }
+                    ],
+                    "severity": "warning",
+                    "type": "isolated_pin_label"
+                },
+                {
+                    "description": "Label connected to only one pin",
+                    "items": [
+                        {
+                            "description": "Global Label 'RF_2G4'",
+                            "pos": {
+                                "x": 0.3556,
+                                "y": 1.8415
+                            },
+                            "uuid": "55543343-0c92-9929-a958-d73c82f03dbe"
+                        }
+                    ],
+                    "severity": "warning",
+                    "type": "isolated_pin_label"
+                },
+                {
+                    "description": "The current configuration does not include the symbol library ''",
+                    "items": [
+                        {
+                            "description": "Symbol JUSB1 [USB_C]",
+                            "pos": {
+                                "x": 0.508,
+                                "y": 0.4572
+                            },
+                            "uuid": "bda24c56-421a-31cb-edb6-39b3cc0298aa"
+                        }
+                    ],
+                    "severity": "warning",
+                    "type": "lib_symbol_issues"
+                },
+                {
+                    "description": "The current configuration does not include the symbol library ''",
+                    "items": [
+                        {
+                            "description": "Symbol C2 [C]",
+                            "pos": {
+                                "x": 0.508,
+                                "y": 0.9144
+                            },
+                            "uuid": "a551f86f-b51e-89c0-faef-811984ed8fd2"
+                        }
+                    ],
+                    "severity": "warning",
+                    "type": "lib_symbol_issues"
+                },
+                {
+                    "description": "The current configuration does not include the symbol library ''",
+                    "items": [
+                        {
+                            "description": "Symbol U1 [NRF52840]",
+                            "pos": {
+                                "x": 0.508,
+                                "y": 1.3716
+                            },
+                            "uuid": "a78665a3-e0b6-254a-ad36-156fd2e32c68"
+                        }
+                    ],
+                    "severity": "warning",
+                    "type": "lib_symbol_issues"
+                },
+                {
+                    "description": "The current configuration does not include the symbol library ''",
+                    "items": [
+                        {
+                            "description": "Symbol ANT1 [ANT]",
+                            "pos": {
+                                "x": 0.508,
+                                "y": 1.8288
+                            },
+                            "uuid": "d41e67cb-a928-acc3-68f8-fd469be982bb"
+                        }
+                    ],
+                    "severity": "warning",
+                    "type": "lib_symbol_issues"
+                },
+                {
+                    "description": "Label connected to only one pin",
+                    "items": [
+                        {
+                            "description": "Global Label 'USB_DP'",
+                            "pos": {
+                                "x": 0.6604,
+                                "y": 0.4572
+                            },
+                            "uuid": "faec4720-b582-c824-b606-43c38585829e"
+                        }
+                    ],
+                    "severity": "warning",
+                    "type": "isolated_pin_label"
+                },
+                {
+                    "description": "Label connected to only one pin",
+                    "items": [
+                        {
+                            "description": "Global Label 'SWDIO'",
+                            "pos": {
+                                "x": 0.7112,
+                                "y": 1.3843
+                            },
+                            "uuid": "7b87eaf3-477b-6e5e-6561-eee784a44a2f"
+                        }
+                    ],
+                    "severity": "warning",
+                    "type": "isolated_pin_label"
+                },
+                {
+                    "description": "The current configuration does not include the symbol library ''",
+                    "items": [
+                        {
+                            "description": "Symbol UPD1 [PD_CTRL]",
+                            "pos": {
+                                "x": 1.016,
+                                "y": 0.4572
+                            },
+                            "uuid": "8a5a19bd-73ca-490f-abaa-1595d58c26a9"
+                        }
+                    ],
+                    "severity": "warning",
+                    "type": "lib_symbol_issues"
+                },
+                {
+                    "description": "The current configuration does not include the symbol library ''",
+                    "items": [
+                        {
+                            "description": "Symbol R1 [R]",
+                            "pos": {
+                                "x": 1.016,
+                                "y": 0.9144
+                            },
+                            "uuid": "c132b0c9-7f1a-1e0b-2368-0b50ae80e76f"
+                        }
+                    ],
+                    "severity": "warning",
+                    "type": "lib_symbol_issues"
+                },
+                {
+                    "description": "The current configuration does not include the symbol library ''",
+                    "items": [
+                        {
+                            "description": "Symbol U2 [NPM1300]",
+                            "pos": {
+                                "x": 1.016,
+                                "y": 1.3716
+                            },
+                            "uuid": "840f82be-ed55-7188-3597-735efdd28b74"
+                        }
+                    ],
+                    "severity": "warning",
+                    "type": "lib_symbol_issues"
+                },
+                {
+                    "description": "The current configuration does not include the symbol library ''",
+                    "items": [
+                        {
+                            "description": "Symbol UWBDNP [UWB]",
+                            "pos": {
+                                "x": 1.016,
+                                "y": 1.8288
+                            },
+                            "uuid": "1d316335-05f4-93e4-5068-3befd7a22184"
+                        }
+                    ],
+                    "severity": "warning",
+                    "type": "lib_symbol_issues"
+                },
+                {
+                    "description": "The current configuration does not include the symbol library ''",
+                    "items": [
+                        {
+                            "description": "Symbol UCHG1 [CHARGER]",
+                            "pos": {
+                                "x": 1.524,
+                                "y": 0.4572
+                            },
+                            "uuid": "8d1f40de-a956-7e58-8a7a-44d6430216b0"
+                        }
+                    ],
+                    "severity": "warning",
+                    "type": "lib_symbol_issues"
+                },
+                {
+                    "description": "The current configuration does not include the symbol library ''",
+                    "items": [
+                        {
+                            "description": "Symbol R2 [R]",
+                            "pos": {
+                                "x": 1.524,
+                                "y": 0.9144
+                            },
+                            "uuid": "86a63b4d-220b-e913-3001-4852e7fc290f"
+                        }
+                    ],
+                    "severity": "warning",
+                    "type": "lib_symbol_issues"
+                },
+                {
+                    "description": "The current configuration does not include the symbol library ''",
+                    "items": [
+                        {
+                            "description": "Symbol U3 [IQS7222A]",
+                            "pos": {
+                                "x": 1.524,
+                                "y": 1.3716
+                            },
+                            "uuid": "96f759d6-e3ec-699b-5620-20f8359ba925"
+                        }
+                    ],
+                    "severity": "warning",
+                    "type": "lib_symbol_issues"
+                },
+                {
+                    "description": "The current configuration does not include the symbol library ''",
+                    "items": [
+                        {
+                            "description": "Symbol UHAP1 [HAP]",
+                            "pos": {
+                                "x": 1.524,
+                                "y": 1.8288
+                            },
+                            "uuid": "12c87fee-087a-a56a-75b4-c6b12c07e5f2"
+                        }
+                    ],
+                    "severity": "warning",
+                    "type": "lib_symbol_issues"
+                },
+                {
+                    "description": "Label connected to only one pin",
+                    "items": [
+                        {
+                            "description": "Global Label 'CAP_TX0'",
+                            "pos": {
+                                "x": 1.6764,
+                                "y": 1.3462
+                            },
+                            "uuid": "7862c1d5-72d8-aba0-8fb2-98d8a33e18b5"
+                        }
+                    ],
+                    "severity": "warning",
+                    "type": "isolated_pin_label"
+                },
+                {
+                    "description": "The current configuration does not include the symbol library ''",
+                    "items": [
+                        {
+                            "description": "Symbol U3V3 [BUCK]",
+                            "pos": {
+                                "x": 2.032,
+                                "y": 0.4572
+                            },
+                            "uuid": "0962ce93-d041-0653-da95-a1ea4ed4c7d5"
+                        }
+                    ],
+                    "severity": "warning",
+                    "type": "lib_symbol_issues"
+                },
+                {
+                    "description": "The current configuration does not include the symbol library ''",
+                    "items": [
+                        {
+                            "description": "Symbol D1 [LED]",
+                            "pos": {
+                                "x": 2.032,
+                                "y": 0.9144
+                            },
+                            "uuid": "cfb3aa38-22a6-3e43-ee36-16d4c3364c93"
+                        }
+                    ],
+                    "severity": "warning",
+                    "type": "lib_symbol_issues"
+                },
+                {
+                    "description": "The current configuration does not include the symbol library ''",
+                    "items": [
+                        {
+                            "description": "Symbol U4 [BMI270]",
+                            "pos": {
+                                "x": 2.032,
+                                "y": 1.3716
+                            },
+                            "uuid": "1f403d35-e36f-0de3-d0c0-ec2a23297918"
+                        }
+                    ],
+                    "severity": "warning",
+                    "type": "lib_symbol_issues"
+                },
+                {
+                    "description": "The current configuration does not include the symbol library ''",
+                    "items": [
+                        {
+                            "description": "Symbol JE1 [ELEC]",
+                            "pos": {
+                                "x": 2.032,
+                                "y": 1.8288
+                            },
+                            "uuid": "d70ec78d-acd0-c814-defd-35ef4f0d763d"
+                        }
+                    ],
+                    "severity": "warning",
+                    "type": "lib_symbol_issues"
+                },
+                {
+                    "description": "Label connected to only one pin",
+                    "items": [
+                        {
+                            "description": "Global Label 'IMU_INT1'",
+                            "pos": {
+                                "x": 2.1844,
+                                "y": 1.3462
+                            },
+                            "uuid": "ae1636e2-13d1-028e-edff-30a377fe688b"
+                        }
+                    ],
+                    "severity": "warning",
+                    "type": "isolated_pin_label"
+                },
+                {
+                    "description": "The current configuration does not include the symbol library ''",
+                    "items": [
+                        {
+                            "description": "Symbol C1 [C]",
+                            "pos": {
+                                "x": 2.54,
+                                "y": 0.4572
+                            },
+                            "uuid": "996ad7db-d38d-3fc0-244e-b26602ef4f7e"
+                        }
+                    ],
+                    "severity": "warning",
+                    "type": "lib_symbol_issues"
+                },
+                {
+                    "description": "The current configuration does not include the symbol library ''",
+                    "items": [
+                        {
+                            "description": "Symbol DESD1 [ESD]",
+                            "pos": {
+                                "x": 2.54,
+                                "y": 0.9144
+                            },
+                            "uuid": "27314f45-8f2b-a5a3-2f63-7e969109ec75"
+                        }
+                    ],
+                    "severity": "warning",
+                    "type": "lib_symbol_issues"
+                },
+                {
+                    "description": "The current configuration does not include the symbol library ''",
+                    "items": [
+                        {
+                            "description": "Symbol U5 [SE050]",
+                            "pos": {
+                                "x": 2.54,
+                                "y": 1.3716
+                            },
+                            "uuid": "812a2dbf-c1f9-e09a-5969-f005a28c7258"
+                        }
+                    ],
+                    "severity": "warning",
+                    "type": "lib_symbol_issues"
+                },
+                {
+                    "description": "The current configuration does not include the symbol library ''",
+                    "items": [
+                        {
+                            "description": "Symbol JP1 [CHGPOGO]",
+                            "pos": {
+                                "x": 2.54,
+                                "y": 1.8288
+                            },
+                            "uuid": "9f0cbef2-4584-817c-c91b-d26f42e564a0"
+                        }
+                    ],
+                    "severity": "warning",
+                    "type": "lib_symbol_issues"
+                }
+            ]
+        }
+    ],
+    "source": "edge_io_rings.kicad_sch"
+}

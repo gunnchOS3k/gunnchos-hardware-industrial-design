@@ -1,0 +1,4 @@
+location,material,mpn_or_spec,thickness_mm,cure,source,status
+battery_pad,3M 468MP class,3M 468MP,0.13,per_3M_PDS,3M PDS,GROUNDED
+com_heatspreader,TIM pad,EXTERNAL_ADLINK_HTS,1.0,EXTERNAL,ADLINK,EXTERNAL
+ring_band,medical acrylic,EXTERNAL_skin_contact,—,EXTERNAL,biocomp,EXTERNAL

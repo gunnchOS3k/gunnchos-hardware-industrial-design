@@ -1,0 +1,5215 @@
+[
+  {
+    "product": "handheld_hybrid",
+    "parts": 26,
+    "nets": 108,
+    "placements": [
+      {
+        "lib": "USB_C",
+        "ref": "JUSB1",
+        "val": "TYPE-C-31-M-12",
+        "fp": "gunnchos_production:USB_C_Receptacle_Production",
+        "role": "USB_C",
+        "mpn": "HRO TYPE-C-31-M-12",
+        "pins": [
+          {
+            "num": "A1",
+            "name": "GND",
+            "side": "L",
+            "etype": "passive"
+          },
+          {
+            "num": "A4",
+            "name": "VBUS",
+            "side": "R",
+            "etype": "passive"
+          },
+          {
+            "num": "A5",
+            "name": "CC1",
+            "side": "L",
+            "etype": "passive"
+          },
+          {
+            "num": "A6",
+            "name": "DP",
+            "side": "R",
+            "etype": "passive"
+          },
+          {
+            "num": "A7",
+            "name": "DM",
+            "side": "L",
+            "etype": "passive"
+          },
+          {
+            "num": "B5",
+            "name": "CC2",
+            "side": "R",
+            "etype": "passive"
+          },
+          {
+            "num": "S1",
+            "name": "SHIELD",
+            "side": "L",
+            "etype": "passive"
+          }
+        ],
+        "wires": {
+          "A4": "VBUS",
+          "A1": "GND",
+          "A5": "CC1",
+          "B5": "CC2",
+          "A6": "USB_DP",
+          "A7": "USB_DM",
+          "S1": "GND"
+        },
+        "x": 40.64,
+        "y": 38.1
+      },
+      {
+        "lib": "PD_CTRL",
+        "ref": "UPD1",
+        "val": "TPS65987DDHRSHR",
+        "fp": "gunnchos_production:VQFN-56-1EP_7x7mm_P0.4mm",
+        "role": "PD",
+        "mpn": "TPS65987DDHRSHR",
+        "pins": [
+          {
+            "num": "1",
+            "name": "VBUS",
+            "side": "L",
+            "etype": "passive"
+          },
+          {
+            "num": "2",
+            "name": "CC1",
+            "side": "R",
+            "etype": "passive"
+          },
+          {
+            "num": "3",
+            "name": "CC2",
+            "side": "L",
+            "etype": "passive"
+          },
+          {
+            "num": "4",
+            "name": "GND",
+            "side": "R",
+            "etype": "passive"
+          },
+          {
+            "num": "5",
+            "name": "SCL",
+            "side": "L",
+            "etype": "passive"
+          },
+          {
+            "num": "6",
+            "name": "SDA",
+            "side": "R",
+            "etype": "passive"
+          },
+          {
+            "num": "7",
+            "name": "VSYS",
+            "side": "L",
+            "etype": "passive"
+          },
+          {
+            "num": "8",
+            "name": "3V3",
+            "side": "R",
+            "etype": "passive"
+          }
+        ],
+        "wires": {
+          "1": "VBUS",
+          "2": "CC1",
+          "3": "CC2",
+          "4": "GND",
+          "7": "VSYS",
+          "5": "I2C_SCL",
+          "6": "I2C_SDA",
+          "8": "VDD_3V3"
+        },
+        "x": 91.44,
+        "y": 38.1
+      },
+      {
+        "lib": "CHARGER",
+        "ref": "UCHG1",
+        "val": "BQ25895RTWR",
+        "fp": "gunnchos_production:WQFN-24-1EP_4x4mm_P0.5mm",
+        "role": "CHARGER",
+        "mpn": "BQ25895RTWR",
+        "pins": [
+          {
+            "num": "1",
+            "name": "VBUS",
+            "side": "L",
+            "etype": "passive"
+          },
+          {
+            "num": "2",
+            "name": "SYS",
+            "side": "R",
+            "etype": "passive"
+          },
+          {
+            "num": "3",
+            "name": "BAT",
+            "side": "L",
+            "etype": "passive"
+          },
+          {
+            "num": "4",
+            "name": "GND",
+            "side": "R",
+            "etype": "passive"
+          },
+          {
+            "num": "5",
+            "name": "SCL",
+            "side": "L",
+            "etype": "passive"
+          },
+          {
+            "num": "6",
+            "name": "SDA",
+            "side": "R",
+            "etype": "passive"
+          }
+        ],
+        "wires": {
+          "1": "VBUS",
+          "2": "VSYS",
+          "3": "VBAT",
+          "4": "GND",
+          "5": "I2C_SCL",
+          "6": "I2C_SDA"
+        },
+        "x": 142.24,
+        "y": 38.1
+      },
+      {
+        "lib": "BUCK",
+        "ref": "U3V3",
+        "val": "TPS62864",
+        "fp": "gunnchos_production:QFN-16-1EP_3x3mm_P0.5mm",
+        "role": "BUCK_3V3",
+        "mpn": "TPS62864",
+        "pins": [
+          {
+            "num": "1",
+            "name": "VIN",
+            "side": "L",
+            "etype": "passive"
+          },
+          {
+            "num": "2",
+            "name": "EN",
+            "side": "R",
+            "etype": "passive"
+          },
+          {
+            "num": "3",
+            "name": "GND",
+            "side": "L",
+            "etype": "passive"
+          },
+          {
+            "num": "4",
+            "name": "VOUT",
+            "side": "R",
+            "etype": "passive"
+          }
+        ],
+        "wires": {
+          "1": "VSYS",
+          "3": "GND",
+          "4": "VDD_3V3",
+          "2": "VDD_3V3"
+        },
+        "x": 193.03999999999996,
+        "y": 38.1
+      },
+      {
+        "lib": "C",
+        "ref": "C1",
+        "val": "CL05A104KA5NNNC",
+        "fp": "gunnchos_production:C_0402",
+        "role": "DECAP",
+        "mpn": "CL05A104KA5NNNC",
+        "pins": [
+          {
+            "num": "1",
+            "name": "1",
+            "side": "L",
+            "etype": "passive"
+          },
+          {
+            "num": "2",
+            "name": "2",
+            "side": "R",
+            "etype": "passive"
+          }
+        ],
+        "wires": {
+          "1": "VDD_3V3",
+          "2": "GND"
+        },
+        "passive2": true,
+        "x": 243.83999999999997,
+        "y": 38.1
+      },
+      {
+        "lib": "C",
+        "ref": "C2",
+        "val": "GRM188R60J106ME47D",
+        "fp": "gunnchos_production:C_0402",
+        "role": "BULK",
+        "mpn": "GRM188R60J106ME47D",
+        "pins": [
+          {
+            "num": "1",
+            "name": "1",
+            "side": "L",
+            "etype": "passive"
+          },
+          {
+            "num": "2",
+            "name": "2",
+            "side": "R",
+            "etype": "passive"
+          }
+        ],
+        "wires": {
+          "1": "VSYS",
+          "2": "GND"
+        },
+        "passive2": true,
+        "x": 40.64,
+        "y": 78.74000000000001
+      },
+      {
+        "lib": "R",
+        "ref": "R1",
+        "val": "RC0402FR-0710KL",
+        "fp": "gunnchos_production:R_0402",
+        "role": "PULLUP",
+        "mpn": "RC0402FR-0710KL",
+        "pins": [
+          {
+            "num": "1",
+            "name": "1",
+            "side": "L",
+            "etype": "passive"
+          },
+          {
+            "num": "2",
+            "name": "2",
+            "side": "R",
+            "etype": "passive"
+          }
+        ],
+        "wires": {
+          "1": "VDD_3V3",
+          "2": "I2C_SCL"
+        },
+        "passive2": true,
+        "x": 91.44,
+        "y": 78.74000000000001
+      },
+      {
+        "lib": "R",
+        "ref": "R2",
+        "val": "RC0402FR-071K0L",
+        "fp": "gunnchos_production:R_0402",
+        "role": "LED_R",
+        "mpn": "RC0402FR-071K0L",
+        "pins": [
+          {
+            "num": "1",
+            "name": "1",
+            "side": "L",
+            "etype": "passive"
+          },
+          {
+            "num": "2",
+            "name": "2",
+            "side": "R",
+            "etype": "passive"
+          }
+        ],
+        "wires": {
+          "1": "VDD_3V3",
+          "2": "LED_A"
+        },
+        "passive2": true,
+        "x": 142.24,
+        "y": 78.74000000000001
+      },
+      {
+        "lib": "LED",
+        "ref": "D1",
+        "val": "APTD1608LCGCK",
+        "fp": "gunnchos_production:LED_0603",
+        "role": "STATUS_LED",
+        "mpn": "APTD1608LCGCK",
+        "pins": [
+          {
+            "num": "1",
+            "name": "K",
+            "side": "L",
+            "etype": "passive"
+          },
+          {
+            "num": "2",
+            "name": "A",
+            "side": "R",
+            "etype": "passive"
+          }
+        ],
+        "wires": {
+          "1": "GND",
+          "2": "LED_A"
+        },
+        "led": true,
+        "x": 193.03999999999996,
+        "y": 78.74000000000001
+      },
+      {
+        "lib": "ESD",
+        "ref": "DESD1",
+        "val": "PESD5V0S1UL",
+        "fp": "gunnchos_production:DFN1006-2",
+        "role": "ESD",
+        "mpn": "PESD5V0S1UL",
+        "pins": [
+          {
+            "num": "1",
+            "name": "IO",
+            "side": "L",
+            "etype": "passive"
+          },
+          {
+            "num": "2",
+            "name": "GND",
+            "side": "R",
+            "etype": "passive"
+          }
+        ],
+        "wires": {
+          "1": "CC1",
+          "2": "GND"
+        },
+        "x": 243.83999999999997,
+        "y": 78.74000000000001
+      },
+      {
+        "lib": "HID_MCU",
+        "ref": "UHID1",
+        "val": "STM32F103C8T6",
+        "fp": "gunnchos_production:LQFP-48_7x7mm_P0.5mm",
+        "role": "HID_MCU",
+        "mpn": "STM32F103C8T6",
+        "pins": [
+          {
+            "num": "1",
+            "name": "VDD",
+            "side": "L",
+            "etype": "passive"
+          },
+          {
+            "num": "2",
+            "name": "GND",
+            "side": "R",
+            "etype": "passive"
+          },
+          {
+            "num": "3",
+            "name": "USB_DP",
+            "side": "L",
+            "etype": "passive"
+          },
+          {
+            "num": "4",
+            "name": "USB_DM",
+            "side": "R",
+            "etype": "passive"
+          },
+          {
+            "num": "5",
+            "name": "SCL",
+            "side": "L",
+            "etype": "passive"
+          },
+          {
+            "num": "6",
+            "name": "SDA",
+            "side": "R",
+            "etype": "passive"
+          }
+        ],
+        "wires": {
+          "1": "VDD_3V3",
+          "2": "GND",
+          "3": "USB_DP",
+          "4": "USB_DM",
+          "5": "I2C_SCL",
+          "6": "I2C_SDA"
+        },
+        "x": 40.64,
+        "y": 119.38
+      },
+      {
+        "lib": "PERIPH",
+        "ref": "JDISP1",
+        "val": "DISPLAY_MIPI",
+        "fp": "gunnchos_production:FFC_40P_0.5mm",
+        "role": "DISPLAY_MIPI",
+        "mpn": "DISPLAY_MIPI_CONN",
+        "pins": [
+          {
+            "num": "1",
+            "name": "VDD",
+            "side": "L",
+            "etype": "passive"
+          },
+          {
+            "num": "2",
+            "name": "GND",
+            "side": "R",
+            "etype": "passive"
+          },
+          {
+            "num": "3",
+            "name": "SIG",
+            "side": "L",
+            "etype": "passive"
+          },
+          {
+            "num": "4",
+            "name": "CTRL",
+            "side": "R",
+            "etype": "passive"
+          }
+        ],
+        "wires": {
+          "1": "VDD_3V3",
+          "2": "GND",
+          "3": "LCD_BL_PWM",
+          "4": "GND"
+        },
+        "x": 91.44,
+        "y": 119.38
+      },
+      {
+        "lib": "PERIPH",
+        "ref": "JTP1",
+        "val": "TOUCH",
+        "fp": "gunnchos_production:DFN1006-2",
+        "role": "TOUCH",
+        "mpn": "TOUCH_CONN",
+        "pins": [
+          {
+            "num": "1",
+            "name": "VDD",
+            "side": "L",
+            "etype": "passive"
+          },
+          {
+            "num": "2",
+            "name": "GND",
+            "side": "R",
+            "etype": "passive"
+          },
+          {
+            "num": "3",
+            "name": "SIG",
+            "side": "L",
+            "etype": "passive"
+          },
+          {
+            "num": "4",
+            "name": "CTRL",
+            "side": "R",
+            "etype": "passive"
+          }
+        ],
+        "wires": {
+          "1": "VDD_3V3",
+          "2": "GND",
+          "3": "I2C_SCL",
+          "4": "GND"
+        },
+        "x": 142.24,
+        "y": 119.38
+      },
+      {
+        "lib": "PERIPH",
+        "ref": "JAUD1",
+        "val": "AUDIO",
+        "fp": "gunnchos_production:DFN1006-2",
+        "role": "AUDIO",
+        "mpn": "AUDIO_CONN",
+        "pins": [
+          {
+            "num": "1",
+            "name": "VDD",
+            "side": "L",
+            "etype": "passive"
+          },
+          {
+            "num": "2",
+            "name": "GND",
+            "side": "R",
+            "etype": "passive"
+          },
+          {
+            "num": "3",
+            "name": "SIG",
+            "side": "L",
+            "etype": "passive"
+          },
+          {
+            "num": "4",
+            "name": "CTRL",
+            "side": "R",
+            "etype": "passive"
+          }
+        ],
+        "wires": {
+          "1": "VDD_3V3",
+          "2": "GND",
+          "3": "I2C_SCL",
+          "4": "GND"
+        },
+        "x": 193.03999999999996,
+        "y": 119.38
+      },
+      {
+        "lib": "PERIPH",
+        "ref": "JCAM1",
+        "val": "CAMERA",
+        "fp": "gunnchos_production:FFC_40P_0.5mm",
+        "role": "CAMERA",
+        "mpn": "CAMERA_CONN",
+        "pins": [
+          {
+            "num": "1",
+            "name": "VDD",
+            "side": "L",
+            "etype": "passive"
+          },
+          {
+            "num": "2",
+            "name": "GND",
+            "side": "R",
+            "etype": "passive"
+          },
+          {
+            "num": "3",
+            "name": "SIG",
+            "side": "L",
+            "etype": "passive"
+          },
+          {
+            "num": "4",
+            "name": "CTRL",
+            "side": "R",
+            "etype": "passive"
+          }
+        ],
+        "wires": {
+          "1": "VDD_3V3",
+          "2": "GND",
+          "3": "I2C_SCL",
+          "4": "GND"
+        },
+        "x": 243.83999999999997,
+        "y": 119.38
+      },
+      {
+        "lib": "PERIPH",
+        "ref": "JKEY1",
+        "val": "KEYBOARD",
+        "fp": "gunnchos_production:DFN1006-2",
+        "role": "KEYBOARD",
+        "mpn": "KEYBOARD_CONN",
+        "pins": [
+          {
+            "num": "1",
+            "name": "VDD",
+            "side": "L",
+            "etype": "passive"
+          },
+          {
+            "num": "2",
+            "name": "GND",
+            "side": "R",
+            "etype": "passive"
+          },
+          {
+            "num": "3",
+            "name": "SIG",
+            "side": "L",
+            "etype": "passive"
+          },
+          {
+            "num": "4",
+            "name": "CTRL",
+            "side": "R",
+            "etype": "passive"
+          }
+        ],
+        "wires": {
+          "1": "VDD_3V3",
+          "2": "GND",
+          "3": "I2C_SCL",
+          "4": "GND"
+        },
+        "x": 40.64,
+        "y": 160.02
+      },
+      {
+        "lib": "PERIPH",
+        "ref": "JTRK1",
+        "val": "TRACKPAD",
+        "fp": "gunnchos_production:DFN1006-2",
+        "role": "TRACKPAD",
+        "mpn": "TRACKPAD_CONN",
+        "pins": [
+          {
+            "num": "1",
+            "name": "VDD",
+            "side": "L",
+            "etype": "passive"
+          },
+          {
+            "num": "2",
+            "name": "GND",
+            "side": "R",
+            "etype": "passive"
+          },
+          {
+            "num": "3",
+            "name": "SIG",
+            "side": "L",
+            "etype": "passive"
+          },
+          {
+            "num": "4",
+            "name": "CTRL",
+            "side": "R",
+            "etype": "passive"
+          }
+        ],
+        "wires": {
+          "1": "VDD_3V3",
+          "2": "GND",
+          "3": "I2C_SCL",
+          "4": "GND"
+        },
+        "x": 91.44,
+        "y": 160.02
+      },
+      {
+        "lib": "PERIPH",
+        "ref": "JWWAN1",
+        "val": "WWAN",
+        "fp": "gunnchos_production:DFN1006-2",
+        "role": "WWAN",
+        "mpn": "WWAN_CONN",
+        "pins": [
+          {
+            "num": "1",
+            "name": "VDD",
+            "side": "L",
+            "etype": "passive"
+          },
+          {
+            "num": "2",
+            "name": "GND",
+            "side": "R",
+            "etype": "passive"
+          },
+          {
+            "num": "3",
+            "name": "SIG",
+            "side": "L",
+            "etype": "passive"
+          },
+          {
+            "num": "4",
+            "name": "CTRL",
+            "side": "R",
+            "etype": "passive"
+          }
+        ],
+        "wires": {
+          "1": "VDD_3V3",
+          "2": "GND",
+          "3": "USB_DP",
+          "4": "GND"
+        },
+        "x": 142.24,
+        "y": 160.02
+      },
+      {
+        "lib": "PERIPH",
+        "ref": "JGNSS1",
+        "val": "GNSS",
+        "fp": "gunnchos_production:DFN1006-2",
+        "role": "GNSS",
+        "mpn": "GNSS_CONN",
+        "pins": [
+          {
+            "num": "1",
+            "name": "VDD",
+            "side": "L",
+            "etype": "passive"
+          },
+          {
+            "num": "2",
+            "name": "GND",
+            "side": "R",
+            "etype": "passive"
+          },
+          {
+            "num": "3",
+            "name": "SIG",
+            "side": "L",
+            "etype": "passive"
+          },
+          {
+            "num": "4",
+            "name": "CTRL",
+            "side": "R",
+            "etype": "passive"
+          }
+        ],
+        "wires": {
+          "1": "VDD_3V3",
+          "2": "GND",
+          "3": "UART_TX",
+          "4": "GND"
+        },
+        "x": 193.03999999999996,
+        "y": 160.02
+      },
+      {
+        "lib": "PERIPH",
+        "ref": "JWIFI1",
+        "val": "WIFI",
+        "fp": "gunnchos_production:DFN1006-2",
+        "role": "WIFI",
+        "mpn": "WIFI_CONN",
+        "pins": [
+          {
+            "num": "1",
+            "name": "VDD",
+            "side": "L",
+            "etype": "passive"
+          },
+          {
+            "num": "2",
+            "name": "GND",
+            "side": "R",
+            "etype": "passive"
+          },
+          {
+            "num": "3",
+            "name": "SIG",
+            "side": "L",
+            "etype": "passive"
+          },
+          {
+            "num": "4",
+            "name": "CTRL",
+            "side": "R",
+            "etype": "passive"
+          }
+        ],
+        "wires": {
+          "1": "VDD_3V3",
+          "2": "GND",
+          "3": "I2C_SCL",
+          "4": "GND"
+        },
+        "x": 243.83999999999997,
+        "y": 160.02
+      },
+      {
+        "lib": "PERIPH",
+        "ref": "JBAT1",
+        "val": "BATTERY",
+        "fp": "gunnchos_production:DFN1006-2",
+        "role": "BATTERY",
+        "mpn": "BATTERY_CONN",
+        "pins": [
+          {
+            "num": "1",
+            "name": "VDD",
+            "side": "L",
+            "etype": "passive"
+          },
+          {
+            "num": "2",
+            "name": "GND",
+            "side": "R",
+            "etype": "passive"
+          },
+          {
+            "num": "3",
+            "name": "SIG",
+            "side": "L",
+            "etype": "passive"
+          },
+          {
+            "num": "4",
+            "name": "CTRL",
+            "side": "R",
+            "etype": "passive"
+          }
+        ],
+        "wires": {
+          "1": "VDD_3V3",
+          "2": "GND",
+          "3": "VBAT",
+          "4": "GND"
+        },
+        "x": 40.64,
+        "y": 200.66
+      },
+      {
+        "lib": "PERIPH",
+        "ref": "JSEC1",
+        "val": "SECURITY",
+        "fp": "gunnchos_production:DFN1006-2",
+        "role": "SECURITY",
+        "mpn": "SECURITY_CONN",
+        "pins": [
+          {
+            "num": "1",
+            "name": "VDD",
+            "side": "L",
+            "etype": "passive"
+          },
+          {
+            "num": "2",
+            "name": "GND",
+            "side": "R",
+            "etype": "passive"
+          },
+          {
+            "num": "3",
+            "name": "SIG",
+            "side": "L",
+            "etype": "passive"
+          },
+          {
+            "num": "4",
+            "name": "CTRL",
+            "side": "R",
+            "etype": "passive"
+          }
+        ],
+        "wires": {
+          "1": "VDD_3V3",
+          "2": "GND",
+          "3": "I2C_SCL",
+          "4": "GND"
+        },
+        "x": 91.44,
+        "y": 200.66
+      },
+      {
+        "lib": "PERIPH",
+        "ref": "JDBG1",
+        "val": "DEBUG",
+        "fp": "gunnchos_production:DFN1006-2",
+        "role": "DEBUG",
+        "mpn": "DEBUG_CONN",
+        "pins": [
+          {
+            "num": "1",
+            "name": "VDD",
+            "side": "L",
+            "etype": "passive"
+          },
+          {
+            "num": "2",
+            "name": "GND",
+            "side": "R",
+            "etype": "passive"
+          },
+          {
+            "num": "3",
+            "name": "SIG",
+            "side": "L",
+            "etype": "passive"
+          },
+          {
+            "num": "4",
+            "name": "CTRL",
+            "side": "R",
+            "etype": "passive"
+          }
+        ],
+        "wires": {
+          "1": "VDD_3V3",
+          "2": "GND",
+          "3": "UART_TX",
+          "4": "GND"
+        },
+        "x": 142.24,
+        "y": 200.66
+      },
+      {
+        "lib": "PERIPH",
+        "ref": "JHAP1",
+        "val": "HAPTICS",
+        "fp": "gunnchos_production:DFN1006-2",
+        "role": "HAPTICS",
+        "mpn": "HAPTICS_CONN",
+        "pins": [
+          {
+            "num": "1",
+            "name": "VDD",
+            "side": "L",
+            "etype": "passive"
+          },
+          {
+            "num": "2",
+            "name": "GND",
+            "side": "R",
+            "etype": "passive"
+          },
+          {
+            "num": "3",
+            "name": "SIG",
+            "side": "L",
+            "etype": "passive"
+          },
+          {
+            "num": "4",
+            "name": "CTRL",
+            "side": "R",
+            "etype": "passive"
+          }
+        ],
+        "wires": {
+          "1": "VDD_3V3",
+          "2": "GND",
+          "3": "I2C_SCL",
+          "4": "GND"
+        },
+        "x": 193.03999999999996,
+        "y": 200.66
+      },
+      {
+        "lib": "PERIPH",
+        "ref": "JFAN1",
+        "val": "EC_FAN",
+        "fp": "gunnchos_production:DFN1006-2",
+        "role": "EC_FAN",
+        "mpn": "EC_FAN_CONN",
+        "pins": [
+          {
+            "num": "1",
+            "name": "VDD",
+            "side": "L",
+            "etype": "passive"
+          },
+          {
+            "num": "2",
+            "name": "GND",
+            "side": "R",
+            "etype": "passive"
+          },
+          {
+            "num": "3",
+            "name": "SIG",
+            "side": "L",
+            "etype": "passive"
+          },
+          {
+            "num": "4",
+            "name": "CTRL",
+            "side": "R",
+            "etype": "passive"
+          }
+        ],
+        "wires": {
+          "1": "VDD_3V3",
+          "2": "GND",
+          "3": "I2C_SCL",
+          "4": "GND"
+        },
+        "x": 243.83999999999997,
+        "y": 200.66
+      },
+      {
+        "lib": "SODIMM260",
+        "ref": "JSOM1",
+        "val": "SODIMM-260",
+        "fp": "gunnchos_production:SODIMM-260_DDR4_Socket",
+        "role": "SOM_SOCKET",
+        "mpn": "SODIMM-260",
+        "extra": {
+          "Evidence": "PUBLIC_PINOUT"
+        },
+        "pins": [
+          {
+            "num": "251",
+            "name": "VCC_SYSIN",
+            "side": "L",
+            "etype": "passive"
+          },
+          {
+            "num": "252",
+            "name": "VCC_SYSIN2",
+            "side": "R",
+            "etype": "passive"
+          },
+          {
+            "num": "1",
+            "name": "GND",
+            "side": "L",
+            "etype": "passive"
+          },
+          {
+            "num": "109",
+            "name": "USB20_HOST0_DM",
+            "side": "R",
+            "etype": "passive"
+          },
+          {
+            "num": "111",
+            "name": "USB20_HOST0_DP",
+            "side": "L",
+            "etype": "passive"
+          },
+          {
+            "num": "236",
+            "name": "UART2_TX",
+            "side": "R",
+            "etype": "passive"
+          },
+          {
+            "num": "238",
+            "name": "UART2_RX",
+            "side": "L",
+            "etype": "passive"
+          },
+          {
+            "num": "185",
+            "name": "I2C0_SCL",
+            "side": "R",
+            "etype": "passive"
+          },
+          {
+            "num": "187",
+            "name": "I2C0_SDA",
+            "side": "L",
+            "etype": "passive"
+          },
+          {
+            "num": "220",
+            "name": "LCD_BL_PWM",
+            "side": "R",
+            "etype": "passive"
+          },
+          {
+            "num": "126",
+            "name": "LCD_RESET_L",
+            "side": "L",
+            "etype": "passive"
+          },
+          {
+            "num": "63",
+            "name": "HDMI0_TX2N",
+            "side": "R",
+            "etype": "passive"
+          },
+          {
+            "num": "65",
+            "name": "HDMI0_TX2P",
+            "side": "L",
+            "etype": "passive"
+          },
+          {
+            "num": "219",
+            "name": "SDMMC_D0",
+            "side": "R",
+            "etype": "passive"
+          },
+          {
+            "num": "227",
+            "name": "SDMMC_CMD",
+            "side": "L",
+            "etype": "passive"
+          },
+          {
+            "num": "229",
+            "name": "SDMMC_CLK",
+            "side": "R",
+            "etype": "passive"
+          }
+        ],
+        "wires": {
+          "251": "SOM_VIN",
+          "1": "GND",
+          "109": "USB_DM",
+          "111": "USB_DP",
+          "236": "UART_TX",
+          "238": "UART_RX",
+          "185": "I2C_SCL",
+          "187": "I2C_SDA",
+          "220": "LCD_BL_PWM"
+        },
+        "x": 40.64,
+        "y": 120.0
+      }
+    ],
+    "hierarchical_sheets": 19,
+    "sodimm_pins": 260,
+    "sheet_infos": [
+      {
+        "group": "POWER_5V",
+        "pins": 10,
+        "file": "sheets/sodimm_power_5v.kicad_sch"
+      },
+      {
+        "group": "GND",
+        "pins": 67,
+        "file": "sheets/sodimm_gnd.kicad_sch"
+      },
+      {
+        "group": "USB",
+        "pins": 21,
+        "file": "sheets/sodimm_usb.kicad_sch"
+      },
+      {
+        "group": "DISPLAY_HDMI_EDP",
+        "pins": 11,
+        "file": "sheets/sodimm_display_hdmi_edp.kicad_sch"
+      },
+      {
+        "group": "DISPLAY_MIPI_DSI",
+        "pins": 6,
+        "file": "sheets/sodimm_display_mipi_dsi.kicad_sch"
+      },
+      {
+        "group": "DISPLAY_CTRL",
+        "pins": 2,
+        "file": "sheets/sodimm_display_ctrl.kicad_sch"
+      },
+      {
+        "group": "CAMERA",
+        "pins": 19,
+        "file": "sheets/sodimm_camera.kicad_sch"
+      },
+      {
+        "group": "PCIE",
+        "pins": 14,
+        "file": "sheets/sodimm_pcie.kicad_sch"
+      },
+      {
+        "group": "STORAGE_SDMMC",
+        "pins": 8,
+        "file": "sheets/sodimm_storage_sdmmc.kicad_sch"
+      },
+      {
+        "group": "I2C",
+        "pins": 12,
+        "file": "sheets/sodimm_i2c.kicad_sch"
+      },
+      {
+        "group": "UART_DEBUG",
+        "pins": 6,
+        "file": "sheets/sodimm_uart_debug.kicad_sch"
+      },
+      {
+        "group": "AUDIO",
+        "pins": 7,
+        "file": "sheets/sodimm_audio.kicad_sch"
+      },
+      {
+        "group": "WIFI_BT_CTRL",
+        "pins": 5,
+        "file": "sheets/sodimm_wifi_bt_ctrl.kicad_sch"
+      },
+      {
+        "group": "SYS_CTRL",
+        "pins": 2,
+        "file": "sheets/sodimm_sys_ctrl.kicad_sch"
+      },
+      {
+        "group": "CLOCK",
+        "pins": 3,
+        "file": "sheets/sodimm_clock.kicad_sch"
+      },
+      {
+        "group": "ADC",
+        "pins": 1,
+        "file": "sheets/sodimm_adc.kicad_sch"
+      },
+      {
+        "group": "RTC",
+        "pins": 1,
+        "file": "sheets/sodimm_rtc.kicad_sch"
+      },
+      {
+        "group": "NC",
+        "pins": 23,
+        "file": "sheets/sodimm_nc.kicad_sch"
+      },
+      {
+        "group": "OTHER",
+        "pins": 42,
+        "file": "sheets/sodimm_other.kicad_sch"
+      }
+    ]
+  },
+  {
+    "product": "edge_io_rings",
+    "parts": 20,
+    "nets": 77,
+    "placements": [
+      {
+        "lib": "USB_C",
+        "ref": "JUSB1",
+        "val": "TYPE-C-31-M-12",
+        "fp": "gunnchos_production:USB_C_Receptacle_Production",
+        "role": "USB_C",
+        "mpn": "HRO TYPE-C-31-M-12",
+        "pins": [
+          {
+            "num": "A1",
+            "name": "GND",
+            "side": "L",
+            "etype": "passive"
+          },
+          {
+            "num": "A4",
+            "name": "VBUS",
+            "side": "R",
+            "etype": "passive"
+          },
+          {
+            "num": "A5",
+            "name": "CC1",
+            "side": "L",
+            "etype": "passive"
+          },
+          {
+            "num": "A6",
+            "name": "DP",
+            "side": "R",
+            "etype": "passive"
+          },
+          {
+            "num": "A7",
+            "name": "DM",
+            "side": "L",
+            "etype": "passive"
+          },
+          {
+            "num": "B5",
+            "name": "CC2",
+            "side": "R",
+            "etype": "passive"
+          },
+          {
+            "num": "S1",
+            "name": "SHIELD",
+            "side": "L",
+            "etype": "passive"
+          }
+        ],
+        "wires": {
+          "A4": "VBUS",
+          "A1": "GND",
+          "A5": "CC1",
+          "B5": "CC2",
+          "A6": "USB_DP",
+          "A7": "USB_DM",
+          "S1": "GND"
+        },
+        "x": 50.8,
+        "y": 45.72
+      },
+      {
+        "lib": "PD_CTRL",
+        "ref": "UPD1",
+        "val": "TPS65994ADFBRQ1",
+        "fp": "gunnchos_production:VQFN-48-1EP_7x7mm_P0.5mm",
+        "role": "PD",
+        "mpn": "TPS65994ADFBRQ1",
+        "pins": [
+          {
+            "num": "1",
+            "name": "VBUS",
+            "side": "L",
+            "etype": "passive"
+          },
+          {
+            "num": "2",
+            "name": "CC1",
+            "side": "R",
+            "etype": "passive"
+          },
+          {
+            "num": "3",
+            "name": "CC2",
+            "side": "L",
+            "etype": "passive"
+          },
+          {
+            "num": "4",
+            "name": "GND",
+            "side": "R",
+            "etype": "passive"
+          },
+          {
+            "num": "5",
+            "name": "SCL",
+            "side": "L",
+            "etype": "passive"
+          },
+          {
+            "num": "6",
+            "name": "SDA",
+            "side": "R",
+            "etype": "passive"
+          },
+          {
+            "num": "7",
+            "name": "VSYS",
+            "side": "L",
+            "etype": "passive"
+          },
+          {
+            "num": "8",
+            "name": "3V3",
+            "side": "R",
+            "etype": "passive"
+          }
+        ],
+        "wires": {
+          "1": "VBUS",
+          "2": "CC1",
+          "3": "CC2",
+          "4": "GND",
+          "7": "VSYS",
+          "5": "I2C_SCL",
+          "6": "I2C_SDA",
+          "8": "VDD_3V3"
+        },
+        "x": 101.6,
+        "y": 45.72
+      },
+      {
+        "lib": "CHARGER",
+        "ref": "UCHG1",
+        "val": "BQ25792RQMR",
+        "fp": "gunnchos_production:WQFN-29-1EP_4x4mm_P0.4mm",
+        "role": "CHARGER",
+        "mpn": "BQ25792RQMR",
+        "pins": [
+          {
+            "num": "1",
+            "name": "VBUS",
+            "side": "L",
+            "etype": "passive"
+          },
+          {
+            "num": "2",
+            "name": "SYS",
+            "side": "R",
+            "etype": "passive"
+          },
+          {
+            "num": "3",
+            "name": "BAT",
+            "side": "L",
+            "etype": "passive"
+          },
+          {
+            "num": "4",
+            "name": "GND",
+            "side": "R",
+            "etype": "passive"
+          },
+          {
+            "num": "5",
+            "name": "SCL",
+            "side": "L",
+            "etype": "passive"
+          },
+          {
+            "num": "6",
+            "name": "SDA",
+            "side": "R",
+            "etype": "passive"
+          }
+        ],
+        "wires": {
+          "1": "VBUS",
+          "2": "VSYS",
+          "3": "VBAT",
+          "4": "GND",
+          "5": "I2C_SCL",
+          "6": "I2C_SDA"
+        },
+        "x": 152.39999999999998,
+        "y": 45.72
+      },
+      {
+        "lib": "BUCK",
+        "ref": "U3V3",
+        "val": "TPS62864",
+        "fp": "gunnchos_production:QFN-16-1EP_3x3mm_P0.5mm",
+        "role": "BUCK_3V3",
+        "mpn": "TPS62864",
+        "pins": [
+          {
+            "num": "1",
+            "name": "VIN",
+            "side": "L",
+            "etype": "passive"
+          },
+          {
+            "num": "2",
+            "name": "EN",
+            "side": "R",
+            "etype": "passive"
+          },
+          {
+            "num": "3",
+            "name": "GND",
+            "side": "L",
+            "etype": "passive"
+          },
+          {
+            "num": "4",
+            "name": "VOUT",
+            "side": "R",
+            "etype": "passive"
+          }
+        ],
+        "wires": {
+          "1": "VSYS",
+          "3": "GND",
+          "4": "VDD_3V3",
+          "2": "VDD_3V3"
+        },
+        "x": 203.2,
+        "y": 45.72
+      },
+      {
+        "lib": "C",
+        "ref": "C1",
+        "val": "CL05A104KA5NNNC",
+        "fp": "gunnchos_production:C_0402",
+        "role": "DECAP",
+        "mpn": "CL05A104KA5NNNC",
+        "pins": [
+          {
+            "num": "1",
+            "name": "1",
+            "side": "L",
+            "etype": "passive"
+          },
+          {
+            "num": "2",
+            "name": "2",
+            "side": "R",
+            "etype": "passive"
+          }
+        ],
+        "wires": {
+          "1": "VDD_3V3",
+          "2": "GND"
+        },
+        "passive2": true,
+        "x": 254.0,
+        "y": 45.72
+      },
+      {
+        "lib": "C",
+        "ref": "C2",
+        "val": "GRM188R60J106ME47D",
+        "fp": "gunnchos_production:C_0402",
+        "role": "BULK",
+        "mpn": "GRM188R60J106ME47D",
+        "pins": [
+          {
+            "num": "1",
+            "name": "1",
+            "side": "L",
+            "etype": "passive"
+          },
+          {
+            "num": "2",
+            "name": "2",
+            "side": "R",
+            "etype": "passive"
+          }
+        ],
+        "wires": {
+          "1": "VSYS",
+          "2": "GND"
+        },
+        "passive2": true,
+        "x": 50.8,
+        "y": 91.44
+      },
+      {
+        "lib": "R",
+        "ref": "R1",
+        "val": "RC0402FR-0710KL",
+        "fp": "gunnchos_production:R_0402",
+        "role": "PULLUP",
+        "mpn": "RC0402FR-0710KL",
+        "pins": [
+          {
+            "num": "1",
+            "name": "1",
+            "side": "L",
+            "etype": "passive"
+          },
+          {
+            "num": "2",
+            "name": "2",
+            "side": "R",
+            "etype": "passive"
+          }
+        ],
+        "wires": {
+          "1": "VDD_3V3",
+          "2": "I2C_SCL"
+        },
+        "passive2": true,
+        "x": 101.6,
+        "y": 91.44
+      },
+      {
+        "lib": "R",
+        "ref": "R2",
+        "val": "RC0402FR-071K0L",
+        "fp": "gunnchos_production:R_0402",
+        "role": "LED_R",
+        "mpn": "RC0402FR-071K0L",
+        "pins": [
+          {
+            "num": "1",
+            "name": "1",
+            "side": "L",
+            "etype": "passive"
+          },
+          {
+            "num": "2",
+            "name": "2",
+            "side": "R",
+            "etype": "passive"
+          }
+        ],
+        "wires": {
+          "1": "VDD_3V3",
+          "2": "LED_A"
+        },
+        "passive2": true,
+        "x": 152.39999999999998,
+        "y": 91.44
+      },
+      {
+        "lib": "LED",
+        "ref": "D1",
+        "val": "APTD1608LCGCK",
+        "fp": "gunnchos_production:LED_0603",
+        "role": "STATUS_LED",
+        "mpn": "APTD1608LCGCK",
+        "pins": [
+          {
+            "num": "1",
+            "name": "K",
+            "side": "L",
+            "etype": "passive"
+          },
+          {
+            "num": "2",
+            "name": "A",
+            "side": "R",
+            "etype": "passive"
+          }
+        ],
+        "wires": {
+          "1": "GND",
+          "2": "LED_A"
+        },
+        "led": true,
+        "x": 203.2,
+        "y": 91.44
+      },
+      {
+        "lib": "ESD",
+        "ref": "DESD1",
+        "val": "PESD5V0S1UL",
+        "fp": "gunnchos_production:DFN1006-2",
+        "role": "ESD",
+        "mpn": "PESD5V0S1UL",
+        "pins": [
+          {
+            "num": "1",
+            "name": "IO",
+            "side": "L",
+            "etype": "passive"
+          },
+          {
+            "num": "2",
+            "name": "GND",
+            "side": "R",
+            "etype": "passive"
+          }
+        ],
+        "wires": {
+          "1": "CC1",
+          "2": "GND"
+        },
+        "x": 254.0,
+        "y": 91.44
+      },
+      {
+        "lib": "NRF52840",
+        "ref": "U1",
+        "val": "nRF52840-QIAA-R",
+        "fp": "gunnchos_production:Nordic_AQFN-73-1EP_7x7mm_P0.5mm",
+        "role": "MCU",
+        "mpn": "nRF52840-QIAA-R",
+        "extra": {
+          "Evidence": "PUBLIC_PINOUT"
+        },
+        "pins": [
+          {
+            "num": "13",
+            "name": "VDD",
+            "side": "L",
+            "etype": "passive"
+          },
+          {
+            "num": "14",
+            "name": "VDDH",
+            "side": "R",
+            "etype": "passive"
+          },
+          {
+            "num": "15",
+            "name": "GND",
+            "side": "L",
+            "etype": "passive"
+          },
+          {
+            "num": "16",
+            "name": "DEC1",
+            "side": "R",
+            "etype": "passive"
+          },
+          {
+            "num": "17",
+            "name": "DEC2",
+            "side": "L",
+            "etype": "passive"
+          },
+          {
+            "num": "42",
+            "name": "SWDIO",
+            "side": "R",
+            "etype": "passive"
+          },
+          {
+            "num": "43",
+            "name": "SWDCLK",
+            "side": "L",
+            "etype": "passive"
+          },
+          {
+            "num": "1",
+            "name": "P0.00_XL1",
+            "side": "R",
+            "etype": "passive"
+          },
+          {
+            "num": "2",
+            "name": "P0.01_XL2",
+            "side": "L",
+            "etype": "passive"
+          },
+          {
+            "num": "32",
+            "name": "P0.06_I2C_SCL",
+            "side": "R",
+            "etype": "passive"
+          },
+          {
+            "num": "33",
+            "name": "P0.08_I2C_SDA",
+            "side": "L",
+            "etype": "passive"
+          },
+          {
+            "num": "49",
+            "name": "EPAD",
+            "side": "R",
+            "etype": "passive"
+          }
+        ],
+        "wires": {
+          "13": "VDD_3V3",
+          "15": "GND",
+          "42": "SWDIO",
+          "43": "SWDCLK",
+          "32": "I2C_SCL",
+          "33": "I2C_SDA",
+          "49": "GND"
+        },
+        "x": 50.8,
+        "y": 137.16
+      },
+      {
+        "lib": "NPM1300",
+        "ref": "U2",
+        "val": "npm1300-CAAA-R",
+        "fp": "gunnchos_production:WLCSP-36_2.1x2.1mm_P0.4mm",
+        "role": "PMIC",
+        "mpn": "npm1300-CAAA-R",
+        "pins": [
+          {
+            "num": "1",
+            "name": "VBUS",
+            "side": "L",
+            "etype": "passive"
+          },
+          {
+            "num": "2",
+            "name": "VBAT",
+            "side": "R",
+            "etype": "passive"
+          },
+          {
+            "num": "3",
+            "name": "GND",
+            "side": "L",
+            "etype": "passive"
+          },
+          {
+            "num": "4",
+            "name": "VOUTLDO1",
+            "side": "R",
+            "etype": "passive"
+          },
+          {
+            "num": "5",
+            "name": "SCL",
+            "side": "L",
+            "etype": "passive"
+          },
+          {
+            "num": "6",
+            "name": "SDA",
+            "side": "R",
+            "etype": "passive"
+          }
+        ],
+        "wires": {
+          "1": "VBUS",
+          "2": "VBAT",
+          "3": "GND",
+          "4": "VDD_3V3",
+          "5": "I2C_SCL",
+          "6": "I2C_SDA"
+        },
+        "x": 101.6,
+        "y": 137.16
+      },
+      {
+        "lib": "IQS7222A",
+        "ref": "U3",
+        "val": "IQS7222A",
+        "fp": "gunnchos_production:QFN-20-1EP_3x3mm_P0.4mm",
+        "role": "CAP_TOUCH",
+        "mpn": "IQS7222A",
+        "pins": [
+          {
+            "num": "1",
+            "name": "VDD",
+            "side": "L",
+            "etype": "passive"
+          },
+          {
+            "num": "2",
+            "name": "GND",
+            "side": "R",
+            "etype": "passive"
+          },
+          {
+            "num": "3",
+            "name": "SCL",
+            "side": "L",
+            "etype": "passive"
+          },
+          {
+            "num": "4",
+            "name": "SDA",
+            "side": "R",
+            "etype": "passive"
+          },
+          {
+            "num": "5",
+            "name": "RX0",
+            "side": "L",
+            "etype": "passive"
+          },
+          {
+            "num": "6",
+            "name": "TX0",
+            "side": "R",
+            "etype": "passive"
+          },
+          {
+            "num": "7",
+            "name": "RDY",
+            "side": "L",
+            "etype": "passive"
+          }
+        ],
+        "wires": {
+          "1": "VDD_3V3",
+          "2": "GND",
+          "3": "I2C_SCL",
+          "4": "I2C_SDA",
+          "5": "CAP_RX0",
+          "6": "CAP_TX0"
+        },
+        "x": 152.39999999999998,
+        "y": 137.16
+      },
+      {
+        "lib": "BMI270",
+        "ref": "U4",
+        "val": "BMI270",
+        "fp": "gunnchos_production:Bosch_LGA-14_3x2.5mm_P0.5mm",
+        "role": "IMU",
+        "mpn": "BMI270",
+        "pins": [
+          {
+            "num": "1",
+            "name": "VDD",
+            "side": "L",
+            "etype": "passive"
+          },
+          {
+            "num": "2",
+            "name": "VDDIO",
+            "side": "R",
+            "etype": "passive"
+          },
+          {
+            "num": "3",
+            "name": "GND",
+            "side": "L",
+            "etype": "passive"
+          },
+          {
+            "num": "4",
+            "name": "SCL",
+            "side": "R",
+            "etype": "passive"
+          },
+          {
+            "num": "5",
+            "name": "SDA",
+            "side": "L",
+            "etype": "passive"
+          },
+          {
+            "num": "6",
+            "name": "INT1",
+            "side": "R",
+            "etype": "passive"
+          }
+        ],
+        "wires": {
+          "1": "VDD_3V3",
+          "2": "VDD_3V3",
+          "3": "GND",
+          "4": "I2C_SCL",
+          "5": "I2C_SDA",
+          "6": "IMU_INT1"
+        },
+        "x": 203.2,
+        "y": 137.16
+      },
+      {
+        "lib": "SE050",
+        "ref": "U5",
+        "val": "SE050C1HQ1",
+        "fp": "gunnchos_production:HXQFN-20-1EP_4x4mm_P0.5mm",
+        "role": "SE",
+        "mpn": "SE050C1HQ1",
+        "pins": [
+          {
+            "num": "1",
+            "name": "VDD",
+            "side": "L",
+            "etype": "passive"
+          },
+          {
+            "num": "2",
+            "name": "GND",
+            "side": "R",
+            "etype": "passive"
+          },
+          {
+            "num": "3",
+            "name": "SCL",
+            "side": "L",
+            "etype": "passive"
+          },
+          {
+            "num": "4",
+            "name": "SDA",
+            "side": "R",
+            "etype": "passive"
+          }
+        ],
+        "wires": {
+          "1": "VDD_3V3",
+          "2": "GND",
+          "3": "I2C_SCL",
+          "4": "I2C_SDA"
+        },
+        "x": 254.0,
+        "y": 137.16
+      },
+      {
+        "lib": "ANT",
+        "ref": "ANT1",
+        "val": "2450AT18A100",
+        "fp": "gunnchos_production:Antenna_Johanson_2450AT18A100",
+        "role": "BLE_ANT",
+        "mpn": "2450AT18A100",
+        "pins": [
+          {
+            "num": "1",
+            "name": "FEED",
+            "side": "L",
+            "etype": "passive"
+          },
+          {
+            "num": "2",
+            "name": "GND",
+            "side": "R",
+            "etype": "passive"
+          },
+          {
+            "num": "3",
+            "name": "NC",
+            "side": "L",
+            "etype": "passive"
+          }
+        ],
+        "wires": {
+          "1": "RF_2G4",
+          "2": "GND"
+        },
+        "x": 50.8,
+        "y": 182.88
+      },
+      {
+        "lib": "UWB",
+        "ref": "UWBDNP",
+        "val": "DWM3001C",
+        "fp": "gunnchos_production:QFN-16-1EP_3x3mm_P0.5mm",
+        "role": "UWB_DNP",
+        "mpn": "DWM3001C",
+        "extra": {
+          "DNP": "TRUE"
+        },
+        "pins": [
+          {
+            "num": "1",
+            "name": "VDD",
+            "side": "L",
+            "etype": "passive"
+          },
+          {
+            "num": "2",
+            "name": "GND",
+            "side": "R",
+            "etype": "passive"
+          },
+          {
+            "num": "3",
+            "name": "SPI_CS",
+            "side": "L",
+            "etype": "passive"
+          },
+          {
+            "num": "4",
+            "name": "SPI_CLK",
+            "side": "R",
+            "etype": "passive"
+          }
+        ],
+        "wires": {
+          "2": "GND"
+        },
+        "x": 101.6,
+        "y": 182.88
+      },
+      {
+        "lib": "HAP",
+        "ref": "UHAP1",
+        "val": "DRV2605LDGSR",
+        "fp": "gunnchos_production:QFN-16-1EP_3x3mm_P0.5mm",
+        "role": "HAPTICS",
+        "mpn": "DRV2605LDGSR",
+        "pins": [
+          {
+            "num": "1",
+            "name": "VDD",
+            "side": "L",
+            "etype": "passive"
+          },
+          {
+            "num": "2",
+            "name": "GND",
+            "side": "R",
+            "etype": "passive"
+          },
+          {
+            "num": "3",
+            "name": "SCL",
+            "side": "L",
+            "etype": "passive"
+          },
+          {
+            "num": "4",
+            "name": "SDA",
+            "side": "R",
+            "etype": "passive"
+          }
+        ],
+        "wires": {
+          "1": "VDD_3V3",
+          "2": "GND",
+          "3": "I2C_SCL",
+          "4": "I2C_SDA"
+        },
+        "x": 152.39999999999998,
+        "y": 182.88
+      },
+      {
+        "lib": "ELEC",
+        "ref": "JE1",
+        "val": "CAP_ELECTRODE",
+        "fp": "gunnchos_production:TestPoint_Pad",
+        "role": "ELECTRODE",
+        "mpn": "ELECTRODE_GEO",
+        "pins": [
+          {
+            "num": "1",
+            "name": "RX",
+            "side": "L",
+            "etype": "passive"
+          },
+          {
+            "num": "2",
+            "name": "GND",
+            "side": "R",
+            "etype": "passive"
+          }
+        ],
+        "wires": {
+          "1": "CAP_RX0",
+          "2": "GND"
+        },
+        "x": 203.2,
+        "y": 182.88
+      },
+      {
+        "lib": "CHGPOGO",
+        "ref": "JP1",
+        "val": "POGO_CHARGE",
+        "fp": "gunnchos_production:TestPoint_Pad",
+        "role": "CHARGE_CONTACT",
+        "mpn": "Mill-Max-319",
+        "pins": [
+          {
+            "num": "1",
+            "name": "VBUS",
+            "side": "L",
+            "etype": "passive"
+          },
+          {
+            "num": "2",
+            "name": "GND",
+            "side": "R",
+            "etype": "passive"
+          }
+        ],
+        "wires": {
+          "1": "VBUS",
+          "2": "GND"
+        },
+        "x": 254.0,
+        "y": 182.88
+      }
+    ],
+    "hierarchical_sheets": 0
+  },
+  {
+    "product": "dock",
+    "parts": 15,
+    "nets": 66,
+    "placements": [
+      {
+        "lib": "USB_C",
+        "ref": "JUSB1",
+        "val": "TYPE-C-31-M-12",
+        "fp": "gunnchos_production:USB_C_Receptacle_Production",
+        "role": "USB_C",
+        "mpn": "HRO TYPE-C-31-M-12",
+        "pins": [
+          {
+            "num": "A1",
+            "name": "GND",
+            "side": "L",
+            "etype": "passive"
+          },
+          {
+            "num": "A4",
+            "name": "VBUS",
+            "side": "R",
+            "etype": "passive"
+          },
+          {
+            "num": "A5",
+            "name": "CC1",
+            "side": "L",
+            "etype": "passive"
+          },
+          {
+            "num": "A6",
+            "name": "DP",
+            "side": "R",
+            "etype": "passive"
+          },
+          {
+            "num": "A7",
+            "name": "DM",
+            "side": "L",
+            "etype": "passive"
+          },
+          {
+            "num": "B5",
+            "name": "CC2",
+            "side": "R",
+            "etype": "passive"
+          },
+          {
+            "num": "S1",
+            "name": "SHIELD",
+            "side": "L",
+            "etype": "passive"
+          }
+        ],
+        "wires": {
+          "A4": "VBUS",
+          "A1": "GND",
+          "A5": "CC1",
+          "B5": "CC2",
+          "A6": "USB_DP",
+          "A7": "USB_DM",
+          "S1": "GND"
+        },
+        "x": 50.8,
+        "y": 45.72
+      },
+      {
+        "lib": "PD_CTRL",
+        "ref": "UPD1",
+        "val": "TPS65994ADFBRQ1",
+        "fp": "gunnchos_production:VQFN-48-1EP_7x7mm_P0.5mm",
+        "role": "PD",
+        "mpn": "TPS65994ADFBRQ1",
+        "pins": [
+          {
+            "num": "1",
+            "name": "VBUS",
+            "side": "L",
+            "etype": "passive"
+          },
+          {
+            "num": "2",
+            "name": "CC1",
+            "side": "R",
+            "etype": "passive"
+          },
+          {
+            "num": "3",
+            "name": "CC2",
+            "side": "L",
+            "etype": "passive"
+          },
+          {
+            "num": "4",
+            "name": "GND",
+            "side": "R",
+            "etype": "passive"
+          },
+          {
+            "num": "5",
+            "name": "SCL",
+            "side": "L",
+            "etype": "passive"
+          },
+          {
+            "num": "6",
+            "name": "SDA",
+            "side": "R",
+            "etype": "passive"
+          },
+          {
+            "num": "7",
+            "name": "VSYS",
+            "side": "L",
+            "etype": "passive"
+          },
+          {
+            "num": "8",
+            "name": "3V3",
+            "side": "R",
+            "etype": "passive"
+          }
+        ],
+        "wires": {
+          "1": "VBUS",
+          "2": "CC1",
+          "3": "CC2",
+          "4": "GND",
+          "7": "VSYS",
+          "5": "I2C_SCL",
+          "6": "I2C_SDA",
+          "8": "VDD_3V3"
+        },
+        "x": 101.6,
+        "y": 45.72
+      },
+      {
+        "lib": "CHARGER",
+        "ref": "UCHG1",
+        "val": "BQ25792RQMR",
+        "fp": "gunnchos_production:WQFN-29-1EP_4x4mm_P0.4mm",
+        "role": "CHARGER",
+        "mpn": "BQ25792RQMR",
+        "pins": [
+          {
+            "num": "1",
+            "name": "VBUS",
+            "side": "L",
+            "etype": "passive"
+          },
+          {
+            "num": "2",
+            "name": "SYS",
+            "side": "R",
+            "etype": "passive"
+          },
+          {
+            "num": "3",
+            "name": "BAT",
+            "side": "L",
+            "etype": "passive"
+          },
+          {
+            "num": "4",
+            "name": "GND",
+            "side": "R",
+            "etype": "passive"
+          },
+          {
+            "num": "5",
+            "name": "SCL",
+            "side": "L",
+            "etype": "passive"
+          },
+          {
+            "num": "6",
+            "name": "SDA",
+            "side": "R",
+            "etype": "passive"
+          }
+        ],
+        "wires": {
+          "1": "VBUS",
+          "2": "VSYS",
+          "3": "VBAT",
+          "4": "GND",
+          "5": "I2C_SCL",
+          "6": "I2C_SDA"
+        },
+        "x": 152.39999999999998,
+        "y": 45.72
+      },
+      {
+        "lib": "BUCK",
+        "ref": "U3V3",
+        "val": "TPS62864",
+        "fp": "gunnchos_production:QFN-16-1EP_3x3mm_P0.5mm",
+        "role": "BUCK_3V3",
+        "mpn": "TPS62864",
+        "pins": [
+          {
+            "num": "1",
+            "name": "VIN",
+            "side": "L",
+            "etype": "passive"
+          },
+          {
+            "num": "2",
+            "name": "EN",
+            "side": "R",
+            "etype": "passive"
+          },
+          {
+            "num": "3",
+            "name": "GND",
+            "side": "L",
+            "etype": "passive"
+          },
+          {
+            "num": "4",
+            "name": "VOUT",
+            "side": "R",
+            "etype": "passive"
+          }
+        ],
+        "wires": {
+          "1": "VSYS",
+          "3": "GND",
+          "4": "VDD_3V3",
+          "2": "VDD_3V3"
+        },
+        "x": 203.2,
+        "y": 45.72
+      },
+      {
+        "lib": "C",
+        "ref": "C1",
+        "val": "CL05A104KA5NNNC",
+        "fp": "gunnchos_production:C_0402",
+        "role": "DECAP",
+        "mpn": "CL05A104KA5NNNC",
+        "pins": [
+          {
+            "num": "1",
+            "name": "1",
+            "side": "L",
+            "etype": "passive"
+          },
+          {
+            "num": "2",
+            "name": "2",
+            "side": "R",
+            "etype": "passive"
+          }
+        ],
+        "wires": {
+          "1": "VDD_3V3",
+          "2": "GND"
+        },
+        "passive2": true,
+        "x": 254.0,
+        "y": 45.72
+      },
+      {
+        "lib": "C",
+        "ref": "C2",
+        "val": "GRM188R60J106ME47D",
+        "fp": "gunnchos_production:C_0402",
+        "role": "BULK",
+        "mpn": "GRM188R60J106ME47D",
+        "pins": [
+          {
+            "num": "1",
+            "name": "1",
+            "side": "L",
+            "etype": "passive"
+          },
+          {
+            "num": "2",
+            "name": "2",
+            "side": "R",
+            "etype": "passive"
+          }
+        ],
+        "wires": {
+          "1": "VSYS",
+          "2": "GND"
+        },
+        "passive2": true,
+        "x": 50.8,
+        "y": 91.44
+      },
+      {
+        "lib": "R",
+        "ref": "R1",
+        "val": "RC0402FR-0710KL",
+        "fp": "gunnchos_production:R_0402",
+        "role": "PULLUP",
+        "mpn": "RC0402FR-0710KL",
+        "pins": [
+          {
+            "num": "1",
+            "name": "1",
+            "side": "L",
+            "etype": "passive"
+          },
+          {
+            "num": "2",
+            "name": "2",
+            "side": "R",
+            "etype": "passive"
+          }
+        ],
+        "wires": {
+          "1": "VDD_3V3",
+          "2": "I2C_SCL"
+        },
+        "passive2": true,
+        "x": 101.6,
+        "y": 91.44
+      },
+      {
+        "lib": "R",
+        "ref": "R2",
+        "val": "RC0402FR-071K0L",
+        "fp": "gunnchos_production:R_0402",
+        "role": "LED_R",
+        "mpn": "RC0402FR-071K0L",
+        "pins": [
+          {
+            "num": "1",
+            "name": "1",
+            "side": "L",
+            "etype": "passive"
+          },
+          {
+            "num": "2",
+            "name": "2",
+            "side": "R",
+            "etype": "passive"
+          }
+        ],
+        "wires": {
+          "1": "VDD_3V3",
+          "2": "LED_A"
+        },
+        "passive2": true,
+        "x": 152.39999999999998,
+        "y": 91.44
+      },
+      {
+        "lib": "LED",
+        "ref": "D1",
+        "val": "APTD1608LCGCK",
+        "fp": "gunnchos_production:LED_0603",
+        "role": "STATUS_LED",
+        "mpn": "APTD1608LCGCK",
+        "pins": [
+          {
+            "num": "1",
+            "name": "K",
+            "side": "L",
+            "etype": "passive"
+          },
+          {
+            "num": "2",
+            "name": "A",
+            "side": "R",
+            "etype": "passive"
+          }
+        ],
+        "wires": {
+          "1": "GND",
+          "2": "LED_A"
+        },
+        "led": true,
+        "x": 203.2,
+        "y": 91.44
+      },
+      {
+        "lib": "ESD",
+        "ref": "DESD1",
+        "val": "PESD5V0S1UL",
+        "fp": "gunnchos_production:DFN1006-2",
+        "role": "ESD",
+        "mpn": "PESD5V0S1UL",
+        "pins": [
+          {
+            "num": "1",
+            "name": "IO",
+            "side": "L",
+            "etype": "passive"
+          },
+          {
+            "num": "2",
+            "name": "GND",
+            "side": "R",
+            "etype": "passive"
+          }
+        ],
+        "wires": {
+          "1": "CC1",
+          "2": "GND"
+        },
+        "x": 254.0,
+        "y": 91.44
+      },
+      {
+        "lib": "JHL8440_ROLE",
+        "ref": "UUSB4",
+        "val": "JHL8440",
+        "fp": "gunnchos_production:JHL8440_ROLE_envelope",
+        "role": "USB4_CTRL",
+        "mpn": "JHL8440",
+        "extra": {
+          "Evidence": "ROLE_PUBLIC",
+          "NDA": "PACKAGE_BALL_MAP"
+        },
+        "pins": [
+          {
+            "num": "1",
+            "name": "VDD",
+            "side": "L",
+            "etype": "passive"
+          },
+          {
+            "num": "2",
+            "name": "GND",
+            "side": "R",
+            "etype": "passive"
+          },
+          {
+            "num": "3",
+            "name": "USB4_UP_RX",
+            "side": "L",
+            "etype": "passive"
+          },
+          {
+            "num": "4",
+            "name": "USB4_UP_TX",
+            "side": "R",
+            "etype": "passive"
+          },
+          {
+            "num": "5",
+            "name": "DP_OUT",
+            "side": "L",
+            "etype": "passive"
+          },
+          {
+            "num": "6",
+            "name": "PCIE_DN",
+            "side": "R",
+            "etype": "passive"
+          },
+          {
+            "num": "7",
+            "name": "I2C_SCL",
+            "side": "L",
+            "etype": "passive"
+          },
+          {
+            "num": "8",
+            "name": "I2C_SDA",
+            "side": "R",
+            "etype": "passive"
+          },
+          {
+            "num": "9",
+            "name": "NOTE_NDA",
+            "side": "L",
+            "etype": "passive"
+          }
+        ],
+        "wires": {
+          "1": "VDD_3V3",
+          "2": "GND",
+          "3": "USB4_UP",
+          "4": "USB4_UP",
+          "7": "I2C_SCL",
+          "8": "I2C_SDA"
+        },
+        "x": 50.8,
+        "y": 137.16
+      },
+      {
+        "lib": "JHL9040R_ROLE",
+        "ref": "URET1",
+        "val": "JHL9040R",
+        "fp": "gunnchos_production:JHL9040R_ROLE_envelope",
+        "role": "TB4_RETIMER",
+        "mpn": "JHL9040R",
+        "extra": {
+          "Evidence": "ROLE_PUBLIC",
+          "NDA": "PACKAGE_BALL_MAP"
+        },
+        "pins": [
+          {
+            "num": "1",
+            "name": "VDD",
+            "side": "L",
+            "etype": "passive"
+          },
+          {
+            "num": "2",
+            "name": "GND",
+            "side": "R",
+            "etype": "passive"
+          },
+          {
+            "num": "3",
+            "name": "RX",
+            "side": "L",
+            "etype": "passive"
+          },
+          {
+            "num": "4",
+            "name": "TX",
+            "side": "R",
+            "etype": "passive"
+          }
+        ],
+        "wires": {
+          "1": "VDD_3V3",
+          "2": "GND",
+          "3": "USB4_UP",
+          "4": "USB4_DN"
+        },
+        "x": 101.6,
+        "y": 137.16
+      },
+      {
+        "lib": "RTL8156",
+        "ref": "UETH1",
+        "val": "RTL8156",
+        "fp": "gunnchos_production:QFN-48-1EP_6x6mm_P0.4mm",
+        "role": "ETHERNET",
+        "mpn": "RTL8156",
+        "pins": [
+          {
+            "num": "1",
+            "name": "VDD33",
+            "side": "L",
+            "etype": "passive"
+          },
+          {
+            "num": "2",
+            "name": "GND",
+            "side": "R",
+            "etype": "passive"
+          },
+          {
+            "num": "3",
+            "name": "USB_D+",
+            "side": "L",
+            "etype": "passive"
+          },
+          {
+            "num": "4",
+            "name": "USB_D-",
+            "side": "R",
+            "etype": "passive"
+          },
+          {
+            "num": "5",
+            "name": "TD+",
+            "side": "L",
+            "etype": "passive"
+          },
+          {
+            "num": "6",
+            "name": "TD-",
+            "side": "R",
+            "etype": "passive"
+          },
+          {
+            "num": "7",
+            "name": "RD+",
+            "side": "L",
+            "etype": "passive"
+          },
+          {
+            "num": "8",
+            "name": "RD-",
+            "side": "R",
+            "etype": "passive"
+          }
+        ],
+        "wires": {
+          "1": "VDD_3V3",
+          "2": "GND",
+          "3": "USB_DP",
+          "4": "USB_DM",
+          "5": "ETH_TD_P",
+          "6": "ETH_TD_N"
+        },
+        "x": 152.39999999999998,
+        "y": 137.16
+      },
+      {
+        "lib": "VL817",
+        "ref": "UHUB1",
+        "val": "VL817",
+        "fp": "gunnchos_production:QFN-48-1EP_7x7mm_P0.5mm",
+        "role": "USB_HUB",
+        "mpn": "VL817",
+        "pins": [
+          {
+            "num": "1",
+            "name": "VDD",
+            "side": "L",
+            "etype": "passive"
+          },
+          {
+            "num": "2",
+            "name": "GND",
+            "side": "R",
+            "etype": "passive"
+          },
+          {
+            "num": "3",
+            "name": "UP_DP",
+            "side": "L",
+            "etype": "passive"
+          },
+          {
+            "num": "4",
+            "name": "UP_DM",
+            "side": "R",
+            "etype": "passive"
+          },
+          {
+            "num": "5",
+            "name": "DN1_DP",
+            "side": "L",
+            "etype": "passive"
+          },
+          {
+            "num": "6",
+            "name": "DN1_DM",
+            "side": "R",
+            "etype": "passive"
+          }
+        ],
+        "wires": {
+          "1": "VDD_3V3",
+          "2": "GND",
+          "3": "USB_DP",
+          "4": "USB_DM",
+          "5": "HUB_DN1_DP",
+          "6": "HUB_DN1_DM"
+        },
+        "x": 203.2,
+        "y": 137.16
+      },
+      {
+        "lib": "USB_C",
+        "ref": "JUSB2",
+        "val": "TYPE-C-31-M-12",
+        "fp": "gunnchos_production:USB_C_Receptacle_Production",
+        "role": "USB_C_DN",
+        "mpn": "HRO TYPE-C-31-M-12",
+        "pins": [
+          {
+            "num": "A1",
+            "name": "GND",
+            "side": "L",
+            "etype": "passive"
+          },
+          {
+            "num": "A4",
+            "name": "VBUS",
+            "side": "R",
+            "etype": "passive"
+          },
+          {
+            "num": "A5",
+            "name": "CC1",
+            "side": "L",
+            "etype": "passive"
+          },
+          {
+            "num": "A6",
+            "name": "DP",
+            "side": "R",
+            "etype": "passive"
+          },
+          {
+            "num": "A7",
+            "name": "DM",
+            "side": "L",
+            "etype": "passive"
+          },
+          {
+            "num": "B5",
+            "name": "CC2",
+            "side": "R",
+            "etype": "passive"
+          },
+          {
+            "num": "S1",
+            "name": "SHIELD",
+            "side": "L",
+            "etype": "passive"
+          }
+        ],
+        "wires": {
+          "A4": "VBUS",
+          "A1": "GND",
+          "A5": "CC1",
+          "B5": "CC2",
+          "A6": "HUB_DN1_DP",
+          "A7": "HUB_DN1_DM",
+          "S1": "GND"
+        },
+        "x": 254.0,
+        "y": 137.16
+      }
+    ],
+    "hierarchical_sheets": 0
+  },
+  {
+    "product": "student_14_5",
+    "parts": 26,
+    "nets": 107,
+    "placements": [
+      {
+        "lib": "USB_C",
+        "ref": "JUSB1",
+        "val": "TYPE-C-31-M-12",
+        "fp": "gunnchos_production:USB_C_Receptacle_Production",
+        "role": "USB_C",
+        "mpn": "HRO TYPE-C-31-M-12",
+        "pins": [
+          {
+            "num": "A1",
+            "name": "GND",
+            "side": "L",
+            "etype": "passive"
+          },
+          {
+            "num": "A4",
+            "name": "VBUS",
+            "side": "R",
+            "etype": "passive"
+          },
+          {
+            "num": "A5",
+            "name": "CC1",
+            "side": "L",
+            "etype": "passive"
+          },
+          {
+            "num": "A6",
+            "name": "DP",
+            "side": "R",
+            "etype": "passive"
+          },
+          {
+            "num": "A7",
+            "name": "DM",
+            "side": "L",
+            "etype": "passive"
+          },
+          {
+            "num": "B5",
+            "name": "CC2",
+            "side": "R",
+            "etype": "passive"
+          },
+          {
+            "num": "S1",
+            "name": "SHIELD",
+            "side": "L",
+            "etype": "passive"
+          }
+        ],
+        "wires": {
+          "A4": "VBUS",
+          "A1": "GND",
+          "A5": "CC1",
+          "B5": "CC2",
+          "A6": "USB_DP",
+          "A7": "USB_DM",
+          "S1": "GND"
+        },
+        "x": 50.8,
+        "y": 45.72
+      },
+      {
+        "lib": "PD_CTRL",
+        "ref": "UPD1",
+        "val": "TPS65994ADFBRQ1",
+        "fp": "gunnchos_production:VQFN-48-1EP_7x7mm_P0.5mm",
+        "role": "PD",
+        "mpn": "TPS65994ADFBRQ1",
+        "pins": [
+          {
+            "num": "1",
+            "name": "VBUS",
+            "side": "L",
+            "etype": "passive"
+          },
+          {
+            "num": "2",
+            "name": "CC1",
+            "side": "R",
+            "etype": "passive"
+          },
+          {
+            "num": "3",
+            "name": "CC2",
+            "side": "L",
+            "etype": "passive"
+          },
+          {
+            "num": "4",
+            "name": "GND",
+            "side": "R",
+            "etype": "passive"
+          },
+          {
+            "num": "5",
+            "name": "SCL",
+            "side": "L",
+            "etype": "passive"
+          },
+          {
+            "num": "6",
+            "name": "SDA",
+            "side": "R",
+            "etype": "passive"
+          },
+          {
+            "num": "7",
+            "name": "VSYS",
+            "side": "L",
+            "etype": "passive"
+          },
+          {
+            "num": "8",
+            "name": "3V3",
+            "side": "R",
+            "etype": "passive"
+          }
+        ],
+        "wires": {
+          "1": "VBUS",
+          "2": "CC1",
+          "3": "CC2",
+          "4": "GND",
+          "7": "VSYS",
+          "5": "I2C_SCL",
+          "6": "I2C_SDA",
+          "8": "VDD_3V3"
+        },
+        "x": 101.6,
+        "y": 45.72
+      },
+      {
+        "lib": "CHARGER",
+        "ref": "UCHG1",
+        "val": "BQ25792RQMR",
+        "fp": "gunnchos_production:WQFN-29-1EP_4x4mm_P0.4mm",
+        "role": "CHARGER",
+        "mpn": "BQ25792RQMR",
+        "pins": [
+          {
+            "num": "1",
+            "name": "VBUS",
+            "side": "L",
+            "etype": "passive"
+          },
+          {
+            "num": "2",
+            "name": "SYS",
+            "side": "R",
+            "etype": "passive"
+          },
+          {
+            "num": "3",
+            "name": "BAT",
+            "side": "L",
+            "etype": "passive"
+          },
+          {
+            "num": "4",
+            "name": "GND",
+            "side": "R",
+            "etype": "passive"
+          },
+          {
+            "num": "5",
+            "name": "SCL",
+            "side": "L",
+            "etype": "passive"
+          },
+          {
+            "num": "6",
+            "name": "SDA",
+            "side": "R",
+            "etype": "passive"
+          }
+        ],
+        "wires": {
+          "1": "VBUS",
+          "2": "VSYS",
+          "3": "VBAT",
+          "4": "GND",
+          "5": "I2C_SCL",
+          "6": "I2C_SDA"
+        },
+        "x": 152.39999999999998,
+        "y": 45.72
+      },
+      {
+        "lib": "BUCK",
+        "ref": "U3V3",
+        "val": "TPS62864",
+        "fp": "gunnchos_production:QFN-16-1EP_3x3mm_P0.5mm",
+        "role": "BUCK_3V3",
+        "mpn": "TPS62864",
+        "pins": [
+          {
+            "num": "1",
+            "name": "VIN",
+            "side": "L",
+            "etype": "passive"
+          },
+          {
+            "num": "2",
+            "name": "EN",
+            "side": "R",
+            "etype": "passive"
+          },
+          {
+            "num": "3",
+            "name": "GND",
+            "side": "L",
+            "etype": "passive"
+          },
+          {
+            "num": "4",
+            "name": "VOUT",
+            "side": "R",
+            "etype": "passive"
+          }
+        ],
+        "wires": {
+          "1": "VSYS",
+          "3": "GND",
+          "4": "VDD_3V3",
+          "2": "VDD_3V3"
+        },
+        "x": 203.2,
+        "y": 45.72
+      },
+      {
+        "lib": "C",
+        "ref": "C1",
+        "val": "CL05A104KA5NNNC",
+        "fp": "gunnchos_production:C_0402",
+        "role": "DECAP",
+        "mpn": "CL05A104KA5NNNC",
+        "pins": [
+          {
+            "num": "1",
+            "name": "1",
+            "side": "L",
+            "etype": "passive"
+          },
+          {
+            "num": "2",
+            "name": "2",
+            "side": "R",
+            "etype": "passive"
+          }
+        ],
+        "wires": {
+          "1": "VDD_3V3",
+          "2": "GND"
+        },
+        "passive2": true,
+        "x": 254.0,
+        "y": 45.72
+      },
+      {
+        "lib": "C",
+        "ref": "C2",
+        "val": "GRM188R60J106ME47D",
+        "fp": "gunnchos_production:C_0402",
+        "role": "BULK",
+        "mpn": "GRM188R60J106ME47D",
+        "pins": [
+          {
+            "num": "1",
+            "name": "1",
+            "side": "L",
+            "etype": "passive"
+          },
+          {
+            "num": "2",
+            "name": "2",
+            "side": "R",
+            "etype": "passive"
+          }
+        ],
+        "wires": {
+          "1": "VSYS",
+          "2": "GND"
+        },
+        "passive2": true,
+        "x": 50.8,
+        "y": 91.44
+      },
+      {
+        "lib": "R",
+        "ref": "R1",
+        "val": "RC0402FR-0710KL",
+        "fp": "gunnchos_production:R_0402",
+        "role": "PULLUP",
+        "mpn": "RC0402FR-0710KL",
+        "pins": [
+          {
+            "num": "1",
+            "name": "1",
+            "side": "L",
+            "etype": "passive"
+          },
+          {
+            "num": "2",
+            "name": "2",
+            "side": "R",
+            "etype": "passive"
+          }
+        ],
+        "wires": {
+          "1": "VDD_3V3",
+          "2": "I2C_SCL"
+        },
+        "passive2": true,
+        "x": 101.6,
+        "y": 91.44
+      },
+      {
+        "lib": "R",
+        "ref": "R2",
+        "val": "RC0402FR-071K0L",
+        "fp": "gunnchos_production:R_0402",
+        "role": "LED_R",
+        "mpn": "RC0402FR-071K0L",
+        "pins": [
+          {
+            "num": "1",
+            "name": "1",
+            "side": "L",
+            "etype": "passive"
+          },
+          {
+            "num": "2",
+            "name": "2",
+            "side": "R",
+            "etype": "passive"
+          }
+        ],
+        "wires": {
+          "1": "VDD_3V3",
+          "2": "LED_A"
+        },
+        "passive2": true,
+        "x": 152.39999999999998,
+        "y": 91.44
+      },
+      {
+        "lib": "LED",
+        "ref": "D1",
+        "val": "APTD1608LCGCK",
+        "fp": "gunnchos_production:LED_0603",
+        "role": "STATUS_LED",
+        "mpn": "APTD1608LCGCK",
+        "pins": [
+          {
+            "num": "1",
+            "name": "K",
+            "side": "L",
+            "etype": "passive"
+          },
+          {
+            "num": "2",
+            "name": "A",
+            "side": "R",
+            "etype": "passive"
+          }
+        ],
+        "wires": {
+          "1": "GND",
+          "2": "LED_A"
+        },
+        "led": true,
+        "x": 203.2,
+        "y": 91.44
+      },
+      {
+        "lib": "ESD",
+        "ref": "DESD1",
+        "val": "PESD5V0S1UL",
+        "fp": "gunnchos_production:DFN1006-2",
+        "role": "ESD",
+        "mpn": "PESD5V0S1UL",
+        "pins": [
+          {
+            "num": "1",
+            "name": "IO",
+            "side": "L",
+            "etype": "passive"
+          },
+          {
+            "num": "2",
+            "name": "GND",
+            "side": "R",
+            "etype": "passive"
+          }
+        ],
+        "wires": {
+          "1": "CC1",
+          "2": "GND"
+        },
+        "x": 254.0,
+        "y": 91.44
+      },
+      {
+        "lib": "COMHPC_PUBLIC",
+        "ref": "UCOM1",
+        "val": "COM-HPC-mMTL-155H-32G",
+        "fp": "gunnchos_production:COMHPC_Mini_envelope",
+        "role": "COM_MODULE",
+        "mpn": "COM-HPC-mMTL-155H-32G",
+        "extra": {
+          "Evidence": "PUBLIC_DOCS",
+          "NDA": "400PIN_EXTERNAL"
+        },
+        "pins": [
+          {
+            "num": "VIN",
+            "name": "VIN_12V",
+            "side": "L",
+            "etype": "passive"
+          },
+          {
+            "num": "GND",
+            "name": "GND",
+            "side": "R",
+            "etype": "passive"
+          },
+          {
+            "num": "PWRBTN",
+            "name": "PWRBTN",
+            "side": "L",
+            "etype": "passive"
+          },
+          {
+            "num": "UART_TX",
+            "name": "UART_TX",
+            "side": "R",
+            "etype": "passive"
+          }
+        ],
+        "wires": {
+          "VIN": "COM_VIN",
+          "GND": "GND",
+          "PWRBTN": "PWRBTN",
+          "UART_TX": "UART_TX"
+        },
+        "x": 50.8,
+        "y": 137.16
+      },
+      {
+        "lib": "TPM",
+        "ref": "UTPM1",
+        "val": "SLB9672XQ2.0",
+        "fp": "gunnchos_production:VQFN-32-1EP_5x5mm_P0.5mm",
+        "role": "TPM",
+        "mpn": "SLB9672XQ2.0",
+        "pins": [
+          {
+            "num": "1",
+            "name": "VDD",
+            "side": "L",
+            "etype": "passive"
+          },
+          {
+            "num": "2",
+            "name": "GND",
+            "side": "R",
+            "etype": "passive"
+          },
+          {
+            "num": "3",
+            "name": "SPI_CS",
+            "side": "L",
+            "etype": "passive"
+          },
+          {
+            "num": "4",
+            "name": "SPI_CLK",
+            "side": "R",
+            "etype": "passive"
+          },
+          {
+            "num": "5",
+            "name": "SPI_MOSI",
+            "side": "L",
+            "etype": "passive"
+          },
+          {
+            "num": "6",
+            "name": "SPI_MISO",
+            "side": "R",
+            "etype": "passive"
+          }
+        ],
+        "wires": {
+          "1": "VDD_3V3",
+          "2": "GND",
+          "3": "SPI_CS",
+          "4": "SPI_CLK",
+          "5": "SPI_MOSI",
+          "6": "SPI_MISO"
+        },
+        "x": 101.6,
+        "y": 137.16
+      },
+      {
+        "lib": "PANEL_EDP",
+        "ref": "JDISP1",
+        "val": "eDP_primary_panel",
+        "fp": "gunnchos_production:FFC_40P_0.5mm",
+        "role": "DISPLAY",
+        "mpn": "PANEL_AVL_PENDING",
+        "pins": [
+          {
+            "num": "1",
+            "name": "VDD",
+            "side": "L",
+            "etype": "passive"
+          },
+          {
+            "num": "2",
+            "name": "GND",
+            "side": "R",
+            "etype": "passive"
+          },
+          {
+            "num": "3",
+            "name": "EDP_TX0N",
+            "side": "L",
+            "etype": "passive"
+          },
+          {
+            "num": "4",
+            "name": "EDP_TX0P",
+            "side": "R",
+            "etype": "passive"
+          },
+          {
+            "num": "5",
+            "name": "BL_EN",
+            "side": "L",
+            "etype": "passive"
+          },
+          {
+            "num": "6",
+            "name": "BL_PWM",
+            "side": "R",
+            "etype": "passive"
+          },
+          {
+            "num": "7",
+            "name": "T_SCL",
+            "side": "L",
+            "etype": "passive"
+          },
+          {
+            "num": "8",
+            "name": "T_SDA",
+            "side": "R",
+            "etype": "passive"
+          }
+        ],
+        "wires": {
+          "1": "VDD_3V3",
+          "2": "GND",
+          "4": "EDP0_P",
+          "3": "EDP0_N",
+          "6": "BL_PWM",
+          "7": "I2C_SCL",
+          "8": "I2C_SDA",
+          "5": "BL_EN"
+        },
+        "x": 152.39999999999998,
+        "y": 137.16
+      },
+      {
+        "lib": "PERIPH",
+        "ref": "JNVME1",
+        "val": "NVME",
+        "fp": "gunnchos_production:FFC_40P_0.5mm",
+        "role": "NVME",
+        "mpn": "NVME_CONN",
+        "pins": [
+          {
+            "num": "1",
+            "name": "VDD",
+            "side": "L",
+            "etype": "passive"
+          },
+          {
+            "num": "2",
+            "name": "GND",
+            "side": "R",
+            "etype": "passive"
+          },
+          {
+            "num": "3",
+            "name": "SIG",
+            "side": "L",
+            "etype": "passive"
+          },
+          {
+            "num": "4",
+            "name": "CTRL",
+            "side": "R",
+            "etype": "passive"
+          }
+        ],
+        "wires": {
+          "1": "VDD_3V3",
+          "2": "GND",
+          "3": "VDD_3V3",
+          "4": "GND"
+        },
+        "x": 203.2,
+        "y": 137.16
+      },
+      {
+        "lib": "PERIPH",
+        "ref": "JWWAN1",
+        "val": "WWAN",
+        "fp": "gunnchos_production:FFC_40P_0.5mm",
+        "role": "WWAN",
+        "mpn": "WWAN_CONN",
+        "pins": [
+          {
+            "num": "1",
+            "name": "VDD",
+            "side": "L",
+            "etype": "passive"
+          },
+          {
+            "num": "2",
+            "name": "GND",
+            "side": "R",
+            "etype": "passive"
+          },
+          {
+            "num": "3",
+            "name": "SIG",
+            "side": "L",
+            "etype": "passive"
+          },
+          {
+            "num": "4",
+            "name": "CTRL",
+            "side": "R",
+            "etype": "passive"
+          }
+        ],
+        "wires": {
+          "1": "VDD_3V3",
+          "2": "GND",
+          "3": "VDD_3V3",
+          "4": "GND"
+        },
+        "x": 254.0,
+        "y": 137.16
+      },
+      {
+        "lib": "PERIPH",
+        "ref": "JSIM1",
+        "val": "SIM",
+        "fp": "gunnchos_production:DFN1006-2",
+        "role": "SIM",
+        "mpn": "SIM_CONN",
+        "pins": [
+          {
+            "num": "1",
+            "name": "VDD",
+            "side": "L",
+            "etype": "passive"
+          },
+          {
+            "num": "2",
+            "name": "GND",
+            "side": "R",
+            "etype": "passive"
+          },
+          {
+            "num": "3",
+            "name": "SIG",
+            "side": "L",
+            "etype": "passive"
+          },
+          {
+            "num": "4",
+            "name": "CTRL",
+            "side": "R",
+            "etype": "passive"
+          }
+        ],
+        "wires": {
+          "1": "VDD_3V3",
+          "2": "GND",
+          "3": "VDD_3V3",
+          "4": "GND"
+        },
+        "x": 50.8,
+        "y": 182.88
+      },
+      {
+        "lib": "PERIPH",
+        "ref": "JWIFI1",
+        "val": "WIFI",
+        "fp": "gunnchos_production:DFN1006-2",
+        "role": "WIFI",
+        "mpn": "WIFI_CONN",
+        "pins": [
+          {
+            "num": "1",
+            "name": "VDD",
+            "side": "L",
+            "etype": "passive"
+          },
+          {
+            "num": "2",
+            "name": "GND",
+            "side": "R",
+            "etype": "passive"
+          },
+          {
+            "num": "3",
+            "name": "SIG",
+            "side": "L",
+            "etype": "passive"
+          },
+          {
+            "num": "4",
+            "name": "CTRL",
+            "side": "R",
+            "etype": "passive"
+          }
+        ],
+        "wires": {
+          "1": "VDD_3V3",
+          "2": "GND",
+          "3": "VDD_3V3",
+          "4": "GND"
+        },
+        "x": 101.6,
+        "y": 182.88
+      },
+      {
+        "lib": "PERIPH",
+        "ref": "JETH1",
+        "val": "ETHERNET",
+        "fp": "gunnchos_production:DFN1006-2",
+        "role": "ETHERNET",
+        "mpn": "ETHERNET_CONN",
+        "pins": [
+          {
+            "num": "1",
+            "name": "VDD",
+            "side": "L",
+            "etype": "passive"
+          },
+          {
+            "num": "2",
+            "name": "GND",
+            "side": "R",
+            "etype": "passive"
+          },
+          {
+            "num": "3",
+            "name": "SIG",
+            "side": "L",
+            "etype": "passive"
+          },
+          {
+            "num": "4",
+            "name": "CTRL",
+            "side": "R",
+            "etype": "passive"
+          }
+        ],
+        "wires": {
+          "1": "VDD_3V3",
+          "2": "GND",
+          "3": "VDD_3V3",
+          "4": "GND"
+        },
+        "x": 152.39999999999998,
+        "y": 182.88
+      },
+      {
+        "lib": "PERIPH",
+        "ref": "JAUD1",
+        "val": "AUDIO",
+        "fp": "gunnchos_production:DFN1006-2",
+        "role": "AUDIO",
+        "mpn": "AUDIO_CONN",
+        "pins": [
+          {
+            "num": "1",
+            "name": "VDD",
+            "side": "L",
+            "etype": "passive"
+          },
+          {
+            "num": "2",
+            "name": "GND",
+            "side": "R",
+            "etype": "passive"
+          },
+          {
+            "num": "3",
+            "name": "SIG",
+            "side": "L",
+            "etype": "passive"
+          },
+          {
+            "num": "4",
+            "name": "CTRL",
+            "side": "R",
+            "etype": "passive"
+          }
+        ],
+        "wires": {
+          "1": "VDD_3V3",
+          "2": "GND",
+          "3": "VDD_3V3",
+          "4": "GND"
+        },
+        "x": 203.2,
+        "y": 182.88
+      },
+      {
+        "lib": "PERIPH",
+        "ref": "JCAM1",
+        "val": "CAMERA",
+        "fp": "gunnchos_production:FFC_40P_0.5mm",
+        "role": "CAMERA",
+        "mpn": "CAMERA_CONN",
+        "pins": [
+          {
+            "num": "1",
+            "name": "VDD",
+            "side": "L",
+            "etype": "passive"
+          },
+          {
+            "num": "2",
+            "name": "GND",
+            "side": "R",
+            "etype": "passive"
+          },
+          {
+            "num": "3",
+            "name": "SIG",
+            "side": "L",
+            "etype": "passive"
+          },
+          {
+            "num": "4",
+            "name": "CTRL",
+            "side": "R",
+            "etype": "passive"
+          }
+        ],
+        "wires": {
+          "1": "VDD_3V3",
+          "2": "GND",
+          "3": "VDD_3V3",
+          "4": "GND"
+        },
+        "x": 254.0,
+        "y": 182.88
+      },
+      {
+        "lib": "PERIPH",
+        "ref": "JKEY1",
+        "val": "KEYBOARD",
+        "fp": "gunnchos_production:DFN1006-2",
+        "role": "KEYBOARD",
+        "mpn": "KEYBOARD_CONN",
+        "pins": [
+          {
+            "num": "1",
+            "name": "VDD",
+            "side": "L",
+            "etype": "passive"
+          },
+          {
+            "num": "2",
+            "name": "GND",
+            "side": "R",
+            "etype": "passive"
+          },
+          {
+            "num": "3",
+            "name": "SIG",
+            "side": "L",
+            "etype": "passive"
+          },
+          {
+            "num": "4",
+            "name": "CTRL",
+            "side": "R",
+            "etype": "passive"
+          }
+        ],
+        "wires": {
+          "1": "VDD_3V3",
+          "2": "GND",
+          "3": "VDD_3V3",
+          "4": "GND"
+        },
+        "x": 50.8,
+        "y": 228.6
+      },
+      {
+        "lib": "PERIPH",
+        "ref": "JTRK1",
+        "val": "TRACKPAD",
+        "fp": "gunnchos_production:DFN1006-2",
+        "role": "TRACKPAD",
+        "mpn": "TRACKPAD_CONN",
+        "pins": [
+          {
+            "num": "1",
+            "name": "VDD",
+            "side": "L",
+            "etype": "passive"
+          },
+          {
+            "num": "2",
+            "name": "GND",
+            "side": "R",
+            "etype": "passive"
+          },
+          {
+            "num": "3",
+            "name": "SIG",
+            "side": "L",
+            "etype": "passive"
+          },
+          {
+            "num": "4",
+            "name": "CTRL",
+            "side": "R",
+            "etype": "passive"
+          }
+        ],
+        "wires": {
+          "1": "VDD_3V3",
+          "2": "GND",
+          "3": "VDD_3V3",
+          "4": "GND"
+        },
+        "x": 101.6,
+        "y": 228.6
+      },
+      {
+        "lib": "PERIPH",
+        "ref": "JEC1",
+        "val": "EC_FAN",
+        "fp": "gunnchos_production:DFN1006-2",
+        "role": "EC_FAN",
+        "mpn": "EC_FAN_CONN",
+        "pins": [
+          {
+            "num": "1",
+            "name": "VDD",
+            "side": "L",
+            "etype": "passive"
+          },
+          {
+            "num": "2",
+            "name": "GND",
+            "side": "R",
+            "etype": "passive"
+          },
+          {
+            "num": "3",
+            "name": "SIG",
+            "side": "L",
+            "etype": "passive"
+          },
+          {
+            "num": "4",
+            "name": "CTRL",
+            "side": "R",
+            "etype": "passive"
+          }
+        ],
+        "wires": {
+          "1": "VDD_3V3",
+          "2": "GND",
+          "3": "VDD_3V3",
+          "4": "GND"
+        },
+        "x": 152.39999999999998,
+        "y": 228.6
+      },
+      {
+        "lib": "PERIPH",
+        "ref": "JBAT1",
+        "val": "BATTERY_BMS",
+        "fp": "gunnchos_production:DFN1006-2",
+        "role": "BATTERY_BMS",
+        "mpn": "BATTERY_BMS_CONN",
+        "pins": [
+          {
+            "num": "1",
+            "name": "VDD",
+            "side": "L",
+            "etype": "passive"
+          },
+          {
+            "num": "2",
+            "name": "GND",
+            "side": "R",
+            "etype": "passive"
+          },
+          {
+            "num": "3",
+            "name": "SIG",
+            "side": "L",
+            "etype": "passive"
+          },
+          {
+            "num": "4",
+            "name": "CTRL",
+            "side": "R",
+            "etype": "passive"
+          }
+        ],
+        "wires": {
+          "1": "VDD_3V3",
+          "2": "GND",
+          "3": "VDD_3V3",
+          "4": "GND"
+        },
+        "x": 203.2,
+        "y": 228.6
+      },
+      {
+        "lib": "PERIPH",
+        "ref": "JSEC1",
+        "val": "SECURITY",
+        "fp": "gunnchos_production:DFN1006-2",
+        "role": "SECURITY",
+        "mpn": "SECURITY_CONN",
+        "pins": [
+          {
+            "num": "1",
+            "name": "VDD",
+            "side": "L",
+            "etype": "passive"
+          },
+          {
+            "num": "2",
+            "name": "GND",
+            "side": "R",
+            "etype": "passive"
+          },
+          {
+            "num": "3",
+            "name": "SIG",
+            "side": "L",
+            "etype": "passive"
+          },
+          {
+            "num": "4",
+            "name": "CTRL",
+            "side": "R",
+            "etype": "passive"
+          }
+        ],
+        "wires": {
+          "1": "VDD_3V3",
+          "2": "GND",
+          "3": "VDD_3V3",
+          "4": "GND"
+        },
+        "x": 254.0,
+        "y": 228.6
+      },
+      {
+        "lib": "PERIPH",
+        "ref": "JDBG1",
+        "val": "DEBUG",
+        "fp": "gunnchos_production:DFN1006-2",
+        "role": "DEBUG",
+        "mpn": "DEBUG_CONN",
+        "pins": [
+          {
+            "num": "1",
+            "name": "VDD",
+            "side": "L",
+            "etype": "passive"
+          },
+          {
+            "num": "2",
+            "name": "GND",
+            "side": "R",
+            "etype": "passive"
+          },
+          {
+            "num": "3",
+            "name": "SIG",
+            "side": "L",
+            "etype": "passive"
+          },
+          {
+            "num": "4",
+            "name": "CTRL",
+            "side": "R",
+            "etype": "passive"
+          }
+        ],
+        "wires": {
+          "1": "VDD_3V3",
+          "2": "GND",
+          "3": "VDD_3V3",
+          "4": "GND"
+        },
+        "x": 50.8,
+        "y": 274.32
+      }
+    ],
+    "hierarchical_sheets": 0
+  },
+  {
+    "product": "ds_xl_coder",
+    "parts": 27,
+    "nets": 113,
+    "placements": [
+      {
+        "lib": "USB_C",
+        "ref": "JUSB1",
+        "val": "TYPE-C-31-M-12",
+        "fp": "gunnchos_production:USB_C_Receptacle_Production",
+        "role": "USB_C",
+        "mpn": "HRO TYPE-C-31-M-12",
+        "pins": [
+          {
+            "num": "A1",
+            "name": "GND",
+            "side": "L",
+            "etype": "passive"
+          },
+          {
+            "num": "A4",
+            "name": "VBUS",
+            "side": "R",
+            "etype": "passive"
+          },
+          {
+            "num": "A5",
+            "name": "CC1",
+            "side": "L",
+            "etype": "passive"
+          },
+          {
+            "num": "A6",
+            "name": "DP",
+            "side": "R",
+            "etype": "passive"
+          },
+          {
+            "num": "A7",
+            "name": "DM",
+            "side": "L",
+            "etype": "passive"
+          },
+          {
+            "num": "B5",
+            "name": "CC2",
+            "side": "R",
+            "etype": "passive"
+          },
+          {
+            "num": "S1",
+            "name": "SHIELD",
+            "side": "L",
+            "etype": "passive"
+          }
+        ],
+        "wires": {
+          "A4": "VBUS",
+          "A1": "GND",
+          "A5": "CC1",
+          "B5": "CC2",
+          "A6": "USB_DP",
+          "A7": "USB_DM",
+          "S1": "GND"
+        },
+        "x": 50.8,
+        "y": 45.72
+      },
+      {
+        "lib": "PD_CTRL",
+        "ref": "UPD1",
+        "val": "TPS65994ADFBRQ1",
+        "fp": "gunnchos_production:VQFN-48-1EP_7x7mm_P0.5mm",
+        "role": "PD",
+        "mpn": "TPS65994ADFBRQ1",
+        "pins": [
+          {
+            "num": "1",
+            "name": "VBUS",
+            "side": "L",
+            "etype": "passive"
+          },
+          {
+            "num": "2",
+            "name": "CC1",
+            "side": "R",
+            "etype": "passive"
+          },
+          {
+            "num": "3",
+            "name": "CC2",
+            "side": "L",
+            "etype": "passive"
+          },
+          {
+            "num": "4",
+            "name": "GND",
+            "side": "R",
+            "etype": "passive"
+          },
+          {
+            "num": "5",
+            "name": "SCL",
+            "side": "L",
+            "etype": "passive"
+          },
+          {
+            "num": "6",
+            "name": "SDA",
+            "side": "R",
+            "etype": "passive"
+          },
+          {
+            "num": "7",
+            "name": "VSYS",
+            "side": "L",
+            "etype": "passive"
+          },
+          {
+            "num": "8",
+            "name": "3V3",
+            "side": "R",
+            "etype": "passive"
+          }
+        ],
+        "wires": {
+          "1": "VBUS",
+          "2": "CC1",
+          "3": "CC2",
+          "4": "GND",
+          "7": "VSYS",
+          "5": "I2C_SCL",
+          "6": "I2C_SDA",
+          "8": "VDD_3V3"
+        },
+        "x": 101.6,
+        "y": 45.72
+      },
+      {
+        "lib": "CHARGER",
+        "ref": "UCHG1",
+        "val": "BQ25792RQMR",
+        "fp": "gunnchos_production:WQFN-29-1EP_4x4mm_P0.4mm",
+        "role": "CHARGER",
+        "mpn": "BQ25792RQMR",
+        "pins": [
+          {
+            "num": "1",
+            "name": "VBUS",
+            "side": "L",
+            "etype": "passive"
+          },
+          {
+            "num": "2",
+            "name": "SYS",
+            "side": "R",
+            "etype": "passive"
+          },
+          {
+            "num": "3",
+            "name": "BAT",
+            "side": "L",
+            "etype": "passive"
+          },
+          {
+            "num": "4",
+            "name": "GND",
+            "side": "R",
+            "etype": "passive"
+          },
+          {
+            "num": "5",
+            "name": "SCL",
+            "side": "L",
+            "etype": "passive"
+          },
+          {
+            "num": "6",
+            "name": "SDA",
+            "side": "R",
+            "etype": "passive"
+          }
+        ],
+        "wires": {
+          "1": "VBUS",
+          "2": "VSYS",
+          "3": "VBAT",
+          "4": "GND",
+          "5": "I2C_SCL",
+          "6": "I2C_SDA"
+        },
+        "x": 152.39999999999998,
+        "y": 45.72
+      },
+      {
+        "lib": "BUCK",
+        "ref": "U3V3",
+        "val": "TPS62864",
+        "fp": "gunnchos_production:QFN-16-1EP_3x3mm_P0.5mm",
+        "role": "BUCK_3V3",
+        "mpn": "TPS62864",
+        "pins": [
+          {
+            "num": "1",
+            "name": "VIN",
+            "side": "L",
+            "etype": "passive"
+          },
+          {
+            "num": "2",
+            "name": "EN",
+            "side": "R",
+            "etype": "passive"
+          },
+          {
+            "num": "3",
+            "name": "GND",
+            "side": "L",
+            "etype": "passive"
+          },
+          {
+            "num": "4",
+            "name": "VOUT",
+            "side": "R",
+            "etype": "passive"
+          }
+        ],
+        "wires": {
+          "1": "VSYS",
+          "3": "GND",
+          "4": "VDD_3V3",
+          "2": "VDD_3V3"
+        },
+        "x": 203.2,
+        "y": 45.72
+      },
+      {
+        "lib": "C",
+        "ref": "C1",
+        "val": "CL05A104KA5NNNC",
+        "fp": "gunnchos_production:C_0402",
+        "role": "DECAP",
+        "mpn": "CL05A104KA5NNNC",
+        "pins": [
+          {
+            "num": "1",
+            "name": "1",
+            "side": "L",
+            "etype": "passive"
+          },
+          {
+            "num": "2",
+            "name": "2",
+            "side": "R",
+            "etype": "passive"
+          }
+        ],
+        "wires": {
+          "1": "VDD_3V3",
+          "2": "GND"
+        },
+        "passive2": true,
+        "x": 254.0,
+        "y": 45.72
+      },
+      {
+        "lib": "C",
+        "ref": "C2",
+        "val": "GRM188R60J106ME47D",
+        "fp": "gunnchos_production:C_0402",
+        "role": "BULK",
+        "mpn": "GRM188R60J106ME47D",
+        "pins": [
+          {
+            "num": "1",
+            "name": "1",
+            "side": "L",
+            "etype": "passive"
+          },
+          {
+            "num": "2",
+            "name": "2",
+            "side": "R",
+            "etype": "passive"
+          }
+        ],
+        "wires": {
+          "1": "VSYS",
+          "2": "GND"
+        },
+        "passive2": true,
+        "x": 50.8,
+        "y": 91.44
+      },
+      {
+        "lib": "R",
+        "ref": "R1",
+        "val": "RC0402FR-0710KL",
+        "fp": "gunnchos_production:R_0402",
+        "role": "PULLUP",
+        "mpn": "RC0402FR-0710KL",
+        "pins": [
+          {
+            "num": "1",
+            "name": "1",
+            "side": "L",
+            "etype": "passive"
+          },
+          {
+            "num": "2",
+            "name": "2",
+            "side": "R",
+            "etype": "passive"
+          }
+        ],
+        "wires": {
+          "1": "VDD_3V3",
+          "2": "I2C_SCL"
+        },
+        "passive2": true,
+        "x": 101.6,
+        "y": 91.44
+      },
+      {
+        "lib": "R",
+        "ref": "R2",
+        "val": "RC0402FR-071K0L",
+        "fp": "gunnchos_production:R_0402",
+        "role": "LED_R",
+        "mpn": "RC0402FR-071K0L",
+        "pins": [
+          {
+            "num": "1",
+            "name": "1",
+            "side": "L",
+            "etype": "passive"
+          },
+          {
+            "num": "2",
+            "name": "2",
+            "side": "R",
+            "etype": "passive"
+          }
+        ],
+        "wires": {
+          "1": "VDD_3V3",
+          "2": "LED_A"
+        },
+        "passive2": true,
+        "x": 152.39999999999998,
+        "y": 91.44
+      },
+      {
+        "lib": "LED",
+        "ref": "D1",
+        "val": "APTD1608LCGCK",
+        "fp": "gunnchos_production:LED_0603",
+        "role": "STATUS_LED",
+        "mpn": "APTD1608LCGCK",
+        "pins": [
+          {
+            "num": "1",
+            "name": "K",
+            "side": "L",
+            "etype": "passive"
+          },
+          {
+            "num": "2",
+            "name": "A",
+            "side": "R",
+            "etype": "passive"
+          }
+        ],
+        "wires": {
+          "1": "GND",
+          "2": "LED_A"
+        },
+        "led": true,
+        "x": 203.2,
+        "y": 91.44
+      },
+      {
+        "lib": "ESD",
+        "ref": "DESD1",
+        "val": "PESD5V0S1UL",
+        "fp": "gunnchos_production:DFN1006-2",
+        "role": "ESD",
+        "mpn": "PESD5V0S1UL",
+        "pins": [
+          {
+            "num": "1",
+            "name": "IO",
+            "side": "L",
+            "etype": "passive"
+          },
+          {
+            "num": "2",
+            "name": "GND",
+            "side": "R",
+            "etype": "passive"
+          }
+        ],
+        "wires": {
+          "1": "CC1",
+          "2": "GND"
+        },
+        "x": 254.0,
+        "y": 91.44
+      },
+      {
+        "lib": "COMHPC_PUBLIC",
+        "ref": "UCOM1",
+        "val": "COM-HPC-mMTL-155H-32G",
+        "fp": "gunnchos_production:COMHPC_Mini_envelope",
+        "role": "COM_MODULE",
+        "mpn": "COM-HPC-mMTL-155H-32G",
+        "extra": {
+          "Evidence": "PUBLIC_DOCS",
+          "NDA": "400PIN_EXTERNAL"
+        },
+        "pins": [
+          {
+            "num": "VIN",
+            "name": "VIN_12V",
+            "side": "L",
+            "etype": "passive"
+          },
+          {
+            "num": "GND",
+            "name": "GND",
+            "side": "R",
+            "etype": "passive"
+          },
+          {
+            "num": "PWRBTN",
+            "name": "PWRBTN",
+            "side": "L",
+            "etype": "passive"
+          },
+          {
+            "num": "UART_TX",
+            "name": "UART_TX",
+            "side": "R",
+            "etype": "passive"
+          }
+        ],
+        "wires": {
+          "VIN": "COM_VIN",
+          "GND": "GND",
+          "PWRBTN": "PWRBTN",
+          "UART_TX": "UART_TX"
+        },
+        "x": 50.8,
+        "y": 137.16
+      },
+      {
+        "lib": "TPM",
+        "ref": "UTPM1",
+        "val": "SLB9672XQ2.0",
+        "fp": "gunnchos_production:VQFN-32-1EP_5x5mm_P0.5mm",
+        "role": "TPM",
+        "mpn": "SLB9672XQ2.0",
+        "pins": [
+          {
+            "num": "1",
+            "name": "VDD",
+            "side": "L",
+            "etype": "passive"
+          },
+          {
+            "num": "2",
+            "name": "GND",
+            "side": "R",
+            "etype": "passive"
+          },
+          {
+            "num": "3",
+            "name": "SPI_CS",
+            "side": "L",
+            "etype": "passive"
+          },
+          {
+            "num": "4",
+            "name": "SPI_CLK",
+            "side": "R",
+            "etype": "passive"
+          },
+          {
+            "num": "5",
+            "name": "SPI_MOSI",
+            "side": "L",
+            "etype": "passive"
+          },
+          {
+            "num": "6",
+            "name": "SPI_MISO",
+            "side": "R",
+            "etype": "passive"
+          }
+        ],
+        "wires": {
+          "1": "VDD_3V3",
+          "2": "GND",
+          "3": "SPI_CS",
+          "4": "SPI_CLK",
+          "5": "SPI_MOSI",
+          "6": "SPI_MISO"
+        },
+        "x": 101.6,
+        "y": 137.16
+      },
+      {
+        "lib": "PANEL_EDP",
+        "ref": "JDISP1",
+        "val": "eDP_primary_panel",
+        "fp": "gunnchos_production:FFC_40P_0.5mm",
+        "role": "DISPLAY",
+        "mpn": "PANEL_AVL_PENDING",
+        "pins": [
+          {
+            "num": "1",
+            "name": "VDD",
+            "side": "L",
+            "etype": "passive"
+          },
+          {
+            "num": "2",
+            "name": "GND",
+            "side": "R",
+            "etype": "passive"
+          },
+          {
+            "num": "3",
+            "name": "EDP_TX0N",
+            "side": "L",
+            "etype": "passive"
+          },
+          {
+            "num": "4",
+            "name": "EDP_TX0P",
+            "side": "R",
+            "etype": "passive"
+          },
+          {
+            "num": "5",
+            "name": "BL_EN",
+            "side": "L",
+            "etype": "passive"
+          },
+          {
+            "num": "6",
+            "name": "BL_PWM",
+            "side": "R",
+            "etype": "passive"
+          },
+          {
+            "num": "7",
+            "name": "T_SCL",
+            "side": "L",
+            "etype": "passive"
+          },
+          {
+            "num": "8",
+            "name": "T_SDA",
+            "side": "R",
+            "etype": "passive"
+          }
+        ],
+        "wires": {
+          "1": "VDD_3V3",
+          "2": "GND",
+          "4": "EDP0_P",
+          "3": "EDP0_N",
+          "6": "BL_PWM",
+          "7": "I2C_SCL",
+          "8": "I2C_SDA",
+          "5": "BL_EN"
+        },
+        "x": 152.39999999999998,
+        "y": 137.16
+      },
+      {
+        "lib": "PERIPH",
+        "ref": "JNVME1",
+        "val": "NVME",
+        "fp": "gunnchos_production:FFC_40P_0.5mm",
+        "role": "NVME",
+        "mpn": "NVME_CONN",
+        "pins": [
+          {
+            "num": "1",
+            "name": "VDD",
+            "side": "L",
+            "etype": "passive"
+          },
+          {
+            "num": "2",
+            "name": "GND",
+            "side": "R",
+            "etype": "passive"
+          },
+          {
+            "num": "3",
+            "name": "SIG",
+            "side": "L",
+            "etype": "passive"
+          },
+          {
+            "num": "4",
+            "name": "CTRL",
+            "side": "R",
+            "etype": "passive"
+          }
+        ],
+        "wires": {
+          "1": "VDD_3V3",
+          "2": "GND",
+          "3": "VDD_3V3",
+          "4": "GND"
+        },
+        "x": 203.2,
+        "y": 137.16
+      },
+      {
+        "lib": "PERIPH",
+        "ref": "JWWAN1",
+        "val": "WWAN",
+        "fp": "gunnchos_production:FFC_40P_0.5mm",
+        "role": "WWAN",
+        "mpn": "WWAN_CONN",
+        "pins": [
+          {
+            "num": "1",
+            "name": "VDD",
+            "side": "L",
+            "etype": "passive"
+          },
+          {
+            "num": "2",
+            "name": "GND",
+            "side": "R",
+            "etype": "passive"
+          },
+          {
+            "num": "3",
+            "name": "SIG",
+            "side": "L",
+            "etype": "passive"
+          },
+          {
+            "num": "4",
+            "name": "CTRL",
+            "side": "R",
+            "etype": "passive"
+          }
+        ],
+        "wires": {
+          "1": "VDD_3V3",
+          "2": "GND",
+          "3": "VDD_3V3",
+          "4": "GND"
+        },
+        "x": 254.0,
+        "y": 137.16
+      },
+      {
+        "lib": "PERIPH",
+        "ref": "JSIM1",
+        "val": "SIM",
+        "fp": "gunnchos_production:DFN1006-2",
+        "role": "SIM",
+        "mpn": "SIM_CONN",
+        "pins": [
+          {
+            "num": "1",
+            "name": "VDD",
+            "side": "L",
+            "etype": "passive"
+          },
+          {
+            "num": "2",
+            "name": "GND",
+            "side": "R",
+            "etype": "passive"
+          },
+          {
+            "num": "3",
+            "name": "SIG",
+            "side": "L",
+            "etype": "passive"
+          },
+          {
+            "num": "4",
+            "name": "CTRL",
+            "side": "R",
+            "etype": "passive"
+          }
+        ],
+        "wires": {
+          "1": "VDD_3V3",
+          "2": "GND",
+          "3": "VDD_3V3",
+          "4": "GND"
+        },
+        "x": 50.8,
+        "y": 182.88
+      },
+      {
+        "lib": "PERIPH",
+        "ref": "JWIFI1",
+        "val": "WIFI",
+        "fp": "gunnchos_production:DFN1006-2",
+        "role": "WIFI",
+        "mpn": "WIFI_CONN",
+        "pins": [
+          {
+            "num": "1",
+            "name": "VDD",
+            "side": "L",
+            "etype": "passive"
+          },
+          {
+            "num": "2",
+            "name": "GND",
+            "side": "R",
+            "etype": "passive"
+          },
+          {
+            "num": "3",
+            "name": "SIG",
+            "side": "L",
+            "etype": "passive"
+          },
+          {
+            "num": "4",
+            "name": "CTRL",
+            "side": "R",
+            "etype": "passive"
+          }
+        ],
+        "wires": {
+          "1": "VDD_3V3",
+          "2": "GND",
+          "3": "VDD_3V3",
+          "4": "GND"
+        },
+        "x": 101.6,
+        "y": 182.88
+      },
+      {
+        "lib": "PERIPH",
+        "ref": "JETH1",
+        "val": "ETHERNET",
+        "fp": "gunnchos_production:DFN1006-2",
+        "role": "ETHERNET",
+        "mpn": "ETHERNET_CONN",
+        "pins": [
+          {
+            "num": "1",
+            "name": "VDD",
+            "side": "L",
+            "etype": "passive"
+          },
+          {
+            "num": "2",
+            "name": "GND",
+            "side": "R",
+            "etype": "passive"
+          },
+          {
+            "num": "3",
+            "name": "SIG",
+            "side": "L",
+            "etype": "passive"
+          },
+          {
+            "num": "4",
+            "name": "CTRL",
+            "side": "R",
+            "etype": "passive"
+          }
+        ],
+        "wires": {
+          "1": "VDD_3V3",
+          "2": "GND",
+          "3": "VDD_3V3",
+          "4": "GND"
+        },
+        "x": 152.39999999999998,
+        "y": 182.88
+      },
+      {
+        "lib": "PERIPH",
+        "ref": "JAUD1",
+        "val": "AUDIO",
+        "fp": "gunnchos_production:DFN1006-2",
+        "role": "AUDIO",
+        "mpn": "AUDIO_CONN",
+        "pins": [
+          {
+            "num": "1",
+            "name": "VDD",
+            "side": "L",
+            "etype": "passive"
+          },
+          {
+            "num": "2",
+            "name": "GND",
+            "side": "R",
+            "etype": "passive"
+          },
+          {
+            "num": "3",
+            "name": "SIG",
+            "side": "L",
+            "etype": "passive"
+          },
+          {
+            "num": "4",
+            "name": "CTRL",
+            "side": "R",
+            "etype": "passive"
+          }
+        ],
+        "wires": {
+          "1": "VDD_3V3",
+          "2": "GND",
+          "3": "VDD_3V3",
+          "4": "GND"
+        },
+        "x": 203.2,
+        "y": 182.88
+      },
+      {
+        "lib": "PERIPH",
+        "ref": "JCAM1",
+        "val": "CAMERA",
+        "fp": "gunnchos_production:FFC_40P_0.5mm",
+        "role": "CAMERA",
+        "mpn": "CAMERA_CONN",
+        "pins": [
+          {
+            "num": "1",
+            "name": "VDD",
+            "side": "L",
+            "etype": "passive"
+          },
+          {
+            "num": "2",
+            "name": "GND",
+            "side": "R",
+            "etype": "passive"
+          },
+          {
+            "num": "3",
+            "name": "SIG",
+            "side": "L",
+            "etype": "passive"
+          },
+          {
+            "num": "4",
+            "name": "CTRL",
+            "side": "R",
+            "etype": "passive"
+          }
+        ],
+        "wires": {
+          "1": "VDD_3V3",
+          "2": "GND",
+          "3": "VDD_3V3",
+          "4": "GND"
+        },
+        "x": 254.0,
+        "y": 182.88
+      },
+      {
+        "lib": "PERIPH",
+        "ref": "JKEY1",
+        "val": "KEYBOARD",
+        "fp": "gunnchos_production:DFN1006-2",
+        "role": "KEYBOARD",
+        "mpn": "KEYBOARD_CONN",
+        "pins": [
+          {
+            "num": "1",
+            "name": "VDD",
+            "side": "L",
+            "etype": "passive"
+          },
+          {
+            "num": "2",
+            "name": "GND",
+            "side": "R",
+            "etype": "passive"
+          },
+          {
+            "num": "3",
+            "name": "SIG",
+            "side": "L",
+            "etype": "passive"
+          },
+          {
+            "num": "4",
+            "name": "CTRL",
+            "side": "R",
+            "etype": "passive"
+          }
+        ],
+        "wires": {
+          "1": "VDD_3V3",
+          "2": "GND",
+          "3": "VDD_3V3",
+          "4": "GND"
+        },
+        "x": 50.8,
+        "y": 228.6
+      },
+      {
+        "lib": "PERIPH",
+        "ref": "JTRK1",
+        "val": "TRACKPAD",
+        "fp": "gunnchos_production:DFN1006-2",
+        "role": "TRACKPAD",
+        "mpn": "TRACKPAD_CONN",
+        "pins": [
+          {
+            "num": "1",
+            "name": "VDD",
+            "side": "L",
+            "etype": "passive"
+          },
+          {
+            "num": "2",
+            "name": "GND",
+            "side": "R",
+            "etype": "passive"
+          },
+          {
+            "num": "3",
+            "name": "SIG",
+            "side": "L",
+            "etype": "passive"
+          },
+          {
+            "num": "4",
+            "name": "CTRL",
+            "side": "R",
+            "etype": "passive"
+          }
+        ],
+        "wires": {
+          "1": "VDD_3V3",
+          "2": "GND",
+          "3": "VDD_3V3",
+          "4": "GND"
+        },
+        "x": 101.6,
+        "y": 228.6
+      },
+      {
+        "lib": "PERIPH",
+        "ref": "JEC1",
+        "val": "EC_FAN",
+        "fp": "gunnchos_production:DFN1006-2",
+        "role": "EC_FAN",
+        "mpn": "EC_FAN_CONN",
+        "pins": [
+          {
+            "num": "1",
+            "name": "VDD",
+            "side": "L",
+            "etype": "passive"
+          },
+          {
+            "num": "2",
+            "name": "GND",
+            "side": "R",
+            "etype": "passive"
+          },
+          {
+            "num": "3",
+            "name": "SIG",
+            "side": "L",
+            "etype": "passive"
+          },
+          {
+            "num": "4",
+            "name": "CTRL",
+            "side": "R",
+            "etype": "passive"
+          }
+        ],
+        "wires": {
+          "1": "VDD_3V3",
+          "2": "GND",
+          "3": "VDD_3V3",
+          "4": "GND"
+        },
+        "x": 152.39999999999998,
+        "y": 228.6
+      },
+      {
+        "lib": "PERIPH",
+        "ref": "JBAT1",
+        "val": "BATTERY_BMS",
+        "fp": "gunnchos_production:DFN1006-2",
+        "role": "BATTERY_BMS",
+        "mpn": "BATTERY_BMS_CONN",
+        "pins": [
+          {
+            "num": "1",
+            "name": "VDD",
+            "side": "L",
+            "etype": "passive"
+          },
+          {
+            "num": "2",
+            "name": "GND",
+            "side": "R",
+            "etype": "passive"
+          },
+          {
+            "num": "3",
+            "name": "SIG",
+            "side": "L",
+            "etype": "passive"
+          },
+          {
+            "num": "4",
+            "name": "CTRL",
+            "side": "R",
+            "etype": "passive"
+          }
+        ],
+        "wires": {
+          "1": "VDD_3V3",
+          "2": "GND",
+          "3": "VDD_3V3",
+          "4": "GND"
+        },
+        "x": 203.2,
+        "y": 228.6
+      },
+      {
+        "lib": "PERIPH",
+        "ref": "JSEC1",
+        "val": "SECURITY",
+        "fp": "gunnchos_production:DFN1006-2",
+        "role": "SECURITY",
+        "mpn": "SECURITY_CONN",
+        "pins": [
+          {
+            "num": "1",
+            "name": "VDD",
+            "side": "L",
+            "etype": "passive"
+          },
+          {
+            "num": "2",
+            "name": "GND",
+            "side": "R",
+            "etype": "passive"
+          },
+          {
+            "num": "3",
+            "name": "SIG",
+            "side": "L",
+            "etype": "passive"
+          },
+          {
+            "num": "4",
+            "name": "CTRL",
+            "side": "R",
+            "etype": "passive"
+          }
+        ],
+        "wires": {
+          "1": "VDD_3V3",
+          "2": "GND",
+          "3": "VDD_3V3",
+          "4": "GND"
+        },
+        "x": 254.0,
+        "y": 228.6
+      },
+      {
+        "lib": "PERIPH",
+        "ref": "JDBG1",
+        "val": "DEBUG",
+        "fp": "gunnchos_production:DFN1006-2",
+        "role": "DEBUG",
+        "mpn": "DEBUG_CONN",
+        "pins": [
+          {
+            "num": "1",
+            "name": "VDD",
+            "side": "L",
+            "etype": "passive"
+          },
+          {
+            "num": "2",
+            "name": "GND",
+            "side": "R",
+            "etype": "passive"
+          },
+          {
+            "num": "3",
+            "name": "SIG",
+            "side": "L",
+            "etype": "passive"
+          },
+          {
+            "num": "4",
+            "name": "CTRL",
+            "side": "R",
+            "etype": "passive"
+          }
+        ],
+        "wires": {
+          "1": "VDD_3V3",
+          "2": "GND",
+          "3": "VDD_3V3",
+          "4": "GND"
+        },
+        "x": 50.8,
+        "y": 274.32
+      },
+      {
+        "lib": "PANEL_EDP2",
+        "ref": "JDISP2",
+        "val": "eDP_secondary_panel",
+        "fp": "gunnchos_production:FFC_40P_0.5mm",
+        "role": "DISPLAY2",
+        "mpn": "PANEL2_AVL_PENDING",
+        "pins": [
+          {
+            "num": "1",
+            "name": "VDD",
+            "side": "L",
+            "etype": "passive"
+          },
+          {
+            "num": "2",
+            "name": "GND",
+            "side": "R",
+            "etype": "passive"
+          },
+          {
+            "num": "3",
+            "name": "EDP_TX0N",
+            "side": "L",
+            "etype": "passive"
+          },
+          {
+            "num": "4",
+            "name": "EDP_TX0P",
+            "side": "R",
+            "etype": "passive"
+          },
+          {
+            "num": "5",
+            "name": "HINGE",
+            "side": "L",
+            "etype": "passive"
+          },
+          {
+            "num": "6",
+            "name": "BL_PWM",
+            "side": "R",
+            "etype": "passive"
+          }
+        ],
+        "wires": {
+          "1": "VDD_3V3",
+          "2": "GND",
+          "4": "EDP1_P",
+          "3": "EDP1_N",
+          "5": "HINGE_FLEX",
+          "6": "BL_PWM2"
+        },
+        "x": 101.6,
+        "y": 274.32
+      }
+    ],
+    "hierarchical_sheets": 0
+  }
+]

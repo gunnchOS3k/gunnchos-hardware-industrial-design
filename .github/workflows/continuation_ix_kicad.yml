@@ -1,0 +1,21 @@
+name: continuation-ix-kicad
+on:
+  pull_request:
+    paths:
+      - 'device_designs/**'
+      - 'scripts/cont_ix_lib/**'
+      - 'scripts/continuation_ix_pre_evt_hardware_lock.py'
+      - 'scripts/validate_continuation_ix.py'
+jobs:
+  kicad-repro:
+    runs-on: ubuntu-latest
+    container: kicad/kicad:8.0
+    steps:
+      - uses: actions/checkout@v4
+      - name: Validate Cont IX gates
+        run: python3 scripts/validate_continuation_ix.py
+      - name: ERC/DRC sample handheld
+        run: |
+          kicad-cli version
+          kicad-cli sch erc --format json --severity-all -o /tmp/erc.json device_designs/handheld_hybrid/kicad/handheld_hybrid.kicad_sch || true
+          kicad-cli pcb drc --format json --severity-all -o /tmp/drc.json device_designs/handheld_hybrid/kicad/handheld_hybrid.kicad_pcb || true

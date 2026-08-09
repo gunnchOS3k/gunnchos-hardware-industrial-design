@@ -1,11 +1,5 @@
-# Impedance / SI design note — dock
+# Impedance / SI — dock (Cont IX)
 
-Cont VIII encodes stackup + target impedances in KiCad PCB stackup + this note.
+Net classes encoded in PCB for USB2/USB3/USB4/TB4, PCIe, eDP, Ethernet, MIPI.
 
-**No SI simulation was performed.** Do not claim simulated eye diagrams or extracted S-parameters.
-
-Targets (design intent):
-- USB2 DP: 90 Ω differential
-- USB3 / USB4: ~85–90 Ω differential
-- eDP: 100 Ω differential
-- Intra-pair skew: ≤ 5 mil (design rule intent)
+**No SI simulation was performed.**

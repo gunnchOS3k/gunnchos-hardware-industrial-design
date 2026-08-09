@@ -1,0 +1,27 @@
+{
+  "updated_at_utc": "2026-08-09T20:50:52Z",
+  "continuation": "IX",
+  "section": 10,
+  "final_decision": "OPTION_B_KEEP_ADLINK_ACCEPT_NARROW_EXTERNAL_BLOCK",
+  "PRODUCTION_ARCHITECTURE": "ADLINK",
+  "VENDOR_COLLATERAL_REQUIRED": true,
+  "PUBLIC_HARDWARE_REPRODUCTION": "LIMITED",
+  "SOFTWARE_ADOPTION": "FULLY_SUPPORTED",
+  "trade_study": {
+    "requirements": [
+      "Ultra 7 155H",
+      "COM-HPC Mini",
+      "Linux/display/AI/USB4/PCIe",
+      "lifecycle"
+    ],
+    "public_alternatives_audited": [
+      "Radxa NX5 (Handheld only \u2014 wrong CPU class)",
+      "LattePanda/N100/CM5-class (perf/AI/display regression)",
+      "Congatec Panther Lake (wrong CPU generation vs ADR)"
+    ],
+    "material_regression_if_migrate": true,
+    "migrate_merely_for_tokens": false,
+    "retain_adlink": true
+  },
+  "dock_freeze": "USB4/TB4 (JHL8440+JHL9040R), not TB5"
+}

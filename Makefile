@@ -86,3 +86,11 @@ continuation-viii:
 	$(PYTHON) scripts/continuation_viii_manufacturer_release.py
 validate-continuation-viii:
 	$(PYTHON) scripts/validate_continuation_viii.py
+
+.PHONY: continuation-ix validate-continuation-ix release
+continuation-ix:
+	$(PYTHON) scripts/continuation_ix_pre_evt_hardware_lock.py
+validate-continuation-ix:
+	$(PYTHON) scripts/validate_continuation_ix.py
+release: continuation-ix
+	@echo Cont IX release artifacts in artifacts/continuation_ix_pre_evt/

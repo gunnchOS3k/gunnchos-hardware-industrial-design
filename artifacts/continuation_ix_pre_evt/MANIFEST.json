@@ -1,0 +1,1081 @@
+{
+  "updated_at_utc": "2026-08-09T20:50:52Z",
+  "branch": "continuation-ix/pre-evt-hardware-lock",
+  "base_sha": "a710f35559252f36f0e6af7e025a5958df0906e3",
+  "files": [
+    {
+      "path": "artifacts/continuation_ix_pre_evt/BLOCKERS_CONT_IX.json",
+      "sha256": "6f5c4c19ffaa49a56fb697be093c29c870a9d8136a67078c7d2b8650f2dd3a9d",
+      "bytes": 7050
+    },
+    {
+      "path": "artifacts/continuation_ix_pre_evt/CLI_RESULTS.json",
+      "sha256": "8b15f2f8a84f748554e9d4d21bea348d693ed04bc017e0ca17c92c28cb20708a",
+      "bytes": 3746
+    },
+    {
+      "path": "artifacts/continuation_ix_pre_evt/COM_HPC_FINAL_DECISION_CONT_IX.json",
+      "sha256": "1ee136e7f59566497af552e35d8e39263daa6cfe48d0d5b0fbb4bf9010c6fd69",
+      "bytes": 869
+    },
+    {
+      "path": "artifacts/continuation_ix_pre_evt/EXTERNAL_VENDOR_COLLATERAL_REQUIRED.json",
+      "sha256": "2bc22273d9a6594a49fca588c976601558b6a736982ff5284d67efd9b13d01ea",
+      "bytes": 2532
+    },
+    {
+      "path": "artifacts/continuation_ix_pre_evt/EXTERNAL_VENDOR_COLLATERAL_REQUIRED.md",
+      "sha256": "eae1f9d84c7b97bf4c411b88c7d3f2b44b1d1064b57fbecfcc2bd11884c7c35f",
+      "bytes": 1994
+    },
+    {
+      "path": "artifacts/continuation_ix_pre_evt/FOOTPRINT_LEDGER_STATUS.json",
+      "sha256": "89568836efdf620ad0316a5c7314f309a0faa9a39cb1e9f77796f858bc920013",
+      "bytes": 302
+    },
+    {
+      "path": "artifacts/continuation_ix_pre_evt/FOOTPRINT_VERIFICATION_LEDGER.csv",
+      "sha256": "284c7f1a0b50fea791604c82c083488ef91b326f959e2564c97dc87eaccaf08f",
+      "bytes": 5895
+    },
+    {
+      "path": "artifacts/continuation_ix_pre_evt/MANIFEST.json",
+      "sha256": "c2ec59573507706d6c9ab022985a031391a99b372a387d861d8b5b05e72a5f4d",
+      "bytes": 42592
+    },
+    {
+      "path": "artifacts/continuation_ix_pre_evt/MECHANICAL_ASSEMBLY_STEP.md",
+      "sha256": "3838e69459caa65d77fd964d010beb57878cce1edba05e0769d070bf41d5615b",
+      "bytes": 619
+    },
+    {
+      "path": "artifacts/continuation_ix_pre_evt/PCB_INFO.json",
+      "sha256": "f73258ddbf72e1ce735083d247a91520b7a3ad4f2b0865e615a3dd059606a6bc",
+      "bytes": 6885
+    },
+    {
+      "path": "artifacts/continuation_ix_pre_evt/READINESS_SCORECARDS.json",
+      "sha256": "aef3958c2d24386389b547673076244b8d977171ee8352107bb68749452db4a6",
+      "bytes": 3688
+    },
+    {
+      "path": "artifacts/continuation_ix_pre_evt/ROUTING_COMPLETENESS.json",
+      "sha256": "72c6937cfcd93fbf13ebbe73ed239d364076c99ee3b623efc9c7ecc8f7ce53d0",
+      "bytes": 7449
+    },
+    {
+      "path": "artifacts/continuation_ix_pre_evt/ROUTING_COMPLETENESS.md",
+      "sha256": "8182f4eb79c2490b968bde5799cae5dde8cc667b7df00f6a3e332ed63b9762cf",
+      "bytes": 343
+    },
+    {
+      "path": "artifacts/continuation_ix_pre_evt/SCH_INFO.json",
+      "sha256": "a90bcf877f5e105ab42e6c557663e3299aace0cdaf737d6fde0b1bac201d197d",
+      "bytes": 115649
+    },
+    {
+      "path": "artifacts/continuation_ix_pre_evt/SI_NET_CLASSES.md",
+      "sha256": "d1e676d04904baad76cb91a4b6e6db91e3ca086b345651ee3ac738301185b909",
+      "bytes": 594
+    },
+    {
+      "path": "artifacts/continuation_ix_pre_evt/SUMMARY.md",
+      "sha256": "e85bf009efe415340ad5c7994e1b43a0d54e0af85a5bfa63e387c054ff6ebe22",
+      "bytes": 1002
+    },
+    {
+      "path": "artifacts/continuation_ix_pre_evt/THIRD_PARTY_EDA_REPRO.md",
+      "sha256": "1c5b2bc730d1ef1b91f90661b1f6b143168d266f9672aff203e5be22e6401a93",
+      "bytes": 376
+    },
+    {
+      "path": "artifacts/continuation_ix_pre_evt/TOKENS_CONT_IX.json",
+      "sha256": "a90c57de7942e6aad4ffa09e6d2cb59ebbaf2d470080e2af7e56e64c44d3e87b",
+      "bytes": 2149
+    },
+    {
+      "path": "artifacts/continuation_ix_pre_evt/evt/EVT_ISSUE_TEMPLATE.md",
+      "sha256": "0886426b3b7c70a4b7190c10d224639d9788015038bf842895a582b27f7b6ad7",
+      "bytes": 315
+    },
+    {
+      "path": "artifacts/continuation_ix_pre_evt/evt/EVT_PHYSICAL_TEST_BOOK.md",
+      "sha256": "6b28c0968641eb06040d5c64f9cf13ceeed6b0b8a7a7dc52e16fd9df689bbf33",
+      "bytes": 697
+    },
+    {
+      "path": "artifacts/continuation_ix_pre_evt/kicad_cli/dock/board.step",
+      "sha256": "7ca92b43ba251869499305e4630cf15128ab53be07adb9f8c1c39f16c4f16028",
+      "bytes": 14806
+    },
+    {
+      "path": "artifacts/continuation_ix_pre_evt/kicad_cli/dock/drc.json",
+      "sha256": "e6f31ce732af0c2e203a2bba505f3b5955d51ca14a1b10abb21b1fb635b4f517",
+      "bytes": 21584
+    },
+    {
+      "path": "artifacts/continuation_ix_pre_evt/kicad_cli/dock/drc.log",
+      "sha256": "304d343b0b46ec3e253f92640e04fc3912bc79d2c7e102bfbb56a74111465d8f",
+      "bytes": 229
+    },
+    {
+      "path": "artifacts/continuation_ix_pre_evt/kicad_cli/dock/drill/dock.drl",
+      "sha256": "b8dddba6bd34d958d084030fefff31d24340643b9854eea968d50334faba4582",
+      "bytes": 378
+    },
+    {
+      "path": "artifacts/continuation_ix_pre_evt/kicad_cli/dock/drill.log",
+      "sha256": "9936c1cb34c1206dd793e7d7af65f1acd52572e0f8abf5625d5f210220077583",
+      "bytes": 190
+    },
+    {
+      "path": "artifacts/continuation_ix_pre_evt/kicad_cli/dock/erc.json",
+      "sha256": "ba4b43262d7bab7722c29beb6977b8517ced286c8394b0414dd7372c165a2a93",
+      "bytes": 12938
+    },
+    {
+      "path": "artifacts/continuation_ix_pre_evt/kicad_cli/dock/erc.log",
+      "sha256": "b8a420e1bfb99853caf6de750e30e21c84248e850deaa83c77486fb7d4471f2c",
+      "bytes": 203
+    },
+    {
+      "path": "artifacts/continuation_ix_pre_evt/kicad_cli/dock/gerber.log",
+      "sha256": "bab8ef21cf874b914816a476e1844024f3a4ae9a1fc3027d65970e4e5d11db55",
+      "bytes": 3092
+    },
+    {
+      "path": "artifacts/continuation_ix_pre_evt/kicad_cli/dock/gerbers/dock-B_Courtyard.gbr",
+      "sha256": "6fbea391501b5b3256385b9ecd196d05646f68da032bbc6b996e8aa439b4173b",
+      "bytes": 431
+    },
+    {
+      "path": "artifacts/continuation_ix_pre_evt/kicad_cli/dock/gerbers/dock-B_Cu.gbl",
+      "sha256": "da1b1023bc5c553a34c2cfb8c2ed6d3a40a877f78611f806217a8d9713a91507",
+      "bytes": 683
+    },
+    {
+      "path": "artifacts/continuation_ix_pre_evt/kicad_cli/dock/gerbers/dock-B_Mask.gbs",
+      "sha256": "bc4636d5da935f21aaae659c80fad961dffb10ac371d35edee16e559b63c39d9",
+      "bytes": 655
+    },
+    {
+      "path": "artifacts/continuation_ix_pre_evt/kicad_cli/dock/gerbers/dock-B_Paste.gbp",
+      "sha256": "020ab8c4443fa3f172ce2ba3509530067d0311882941284b410ba9a9e3ca3141",
+      "bytes": 458
+    },
+    {
+      "path": "artifacts/continuation_ix_pre_evt/kicad_cli/dock/gerbers/dock-B_Silkscreen.gbo",
+      "sha256": "7a191bb5fd4ea0e08d8911b63bf3d12558966bf55c92e46f23e6608b3bdcde93",
+      "bytes": 459
+    },
+    {
+      "path": "artifacts/continuation_ix_pre_evt/kicad_cli/dock/gerbers/dock-Edge_Cuts.gm1",
+      "sha256": "5e335e9ae9272c18d5c753031e78545f9fc39d098e1a3af2f95d64cc8cda425d",
+      "bytes": 567
+    },
+    {
+      "path": "artifacts/continuation_ix_pre_evt/kicad_cli/dock/gerbers/dock-F_Courtyard.gbr",
+      "sha256": "a81daf2a480974f6cbee0760b1c1f813c60c50018b7effabbdb8e088238a1a07",
+      "bytes": 2484
+    },
+    {
+      "path": "artifacts/continuation_ix_pre_evt/kicad_cli/dock/gerbers/dock-F_Cu.gtl",
+      "sha256": "675602a8be4c5c89948fd29d157ebb90c53edeba19bbadc39f9299ca3bb252e1",
+      "bytes": 2754
+    },
+    {
+      "path": "artifacts/continuation_ix_pre_evt/kicad_cli/dock/gerbers/dock-F_Mask.gts",
+      "sha256": "e390855cb9fe5c2701bd859f78cb79125796ba091294277102689661a28c72bd",
+      "bytes": 1621
+    },
+    {
+      "path": "artifacts/continuation_ix_pre_evt/kicad_cli/dock/gerbers/dock-F_Paste.gtp",
+      "sha256": "f475b1c9f615a9ff8769c2e5b71cddd7bbdccd54655831ca198bd202528771e2",
+      "bytes": 1140
+    },
+    {
+      "path": "artifacts/continuation_ix_pre_evt/kicad_cli/dock/gerbers/dock-F_Silkscreen.gto",
+      "sha256": "e95d52f2f9d096dc2bb6b70a8ea7445c94884758f391caf4bcc94b1f8e5ff656",
+      "bytes": 11040
+    },
+    {
+      "path": "artifacts/continuation_ix_pre_evt/kicad_cli/dock/gerbers/dock-In1_Cu.g1",
+      "sha256": "4a263c0b0e1448360e37788b4e513e2c81236fbe468d7203ad1f2d132a62b9e7",
+      "bytes": 462
+    },
+    {
+      "path": "artifacts/continuation_ix_pre_evt/kicad_cli/dock/gerbers/dock-In2_Cu.g2",
+      "sha256": "2f41a5bf306cac409ecf50c363860456355f969441dd663e455d7b42822117b8",
+      "bytes": 462
+    },
+    {
+      "path": "artifacts/continuation_ix_pre_evt/kicad_cli/dock/gerbers/dock-Margin.gbr",
+      "sha256": "6fbea391501b5b3256385b9ecd196d05646f68da032bbc6b996e8aa439b4173b",
+      "bytes": 431
+    },
+    {
+      "path": "artifacts/continuation_ix_pre_evt/kicad_cli/dock/gerbers/dock-User_Comments.gbr",
+      "sha256": "634da3169224ae3bdaf93297849392bcd21e22629a49caebca603bd01ea61545",
+      "bytes": 98099
+    },
+    {
+      "path": "artifacts/continuation_ix_pre_evt/kicad_cli/dock/gerbers/dock-User_Drawings.gbr",
+      "sha256": "afaece79fb314fb6b77a19e526052f1b90ced849a72e71c9145761e84275dcfb",
+      "bytes": 40898
+    },
+    {
+      "path": "artifacts/continuation_ix_pre_evt/kicad_cli/dock/gerbers/dock-job.gbrjob",
+      "sha256": "f85652e13e3487717bc552e6ae50677d1dbb96ff95c452be0e2c739d107a4ff0",
+      "bytes": 3739
+    },
+    {
+      "path": "artifacts/continuation_ix_pre_evt/kicad_cli/dock/netlist.log",
+      "sha256": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b",
+      "bytes": 1
+    },
+    {
+      "path": "artifacts/continuation_ix_pre_evt/kicad_cli/dock/netlist.sexp",
+      "sha256": "8a001fe9deabb1501839b2b301bffc9916fc12e7d5f25ae0392274c2bd859a13",
+      "bytes": 35037
+    },
+    {
+      "path": "artifacts/continuation_ix_pre_evt/kicad_cli/dock/pdf.log",
+      "sha256": "1cead9c4e3bcd47ca19d5f10bacdb1389a75c3a76505bfc38e0138fced9f4a5f",
+      "bytes": 188
+    },
+    {
+      "path": "artifacts/continuation_ix_pre_evt/kicad_cli/dock/pos/pick_place.csv",
+      "sha256": "1e5ccb7b96be136b1658b34b75be15903705af3556da6cac7f9c66286ca6ffe8",
+      "bytes": 2240
+    },
+    {
+      "path": "artifacts/continuation_ix_pre_evt/kicad_cli/dock/pos.log",
+      "sha256": "55cc8c186c38e87c53ffd3bad8abef571b8c9bdd8ea545a32caa853c6d53a62a",
+      "bytes": 199
+    },
+    {
+      "path": "artifacts/continuation_ix_pre_evt/kicad_cli/dock/schematic.pdf",
+      "sha256": "beb8387146e8557def45d13e987c87d3dec3a6558c087c8e172d618a7695b5b2",
+      "bytes": 129483
+    },
+    {
+      "path": "artifacts/continuation_ix_pre_evt/kicad_cli/dock/step.log",
+      "sha256": "603fa6893f26e977ba96b4c9954e341a4706f02314388fe8a2b99461d1ccfe73",
+      "bytes": 883
+    },
+    {
+      "path": "artifacts/continuation_ix_pre_evt/kicad_cli/ds_xl_coder/board.step",
+      "sha256": "32c5e62d8de897344237c667f8ed095538c156538bb052e75418b7ba05801a05",
+      "bytes": 14820
+    },
+    {
+      "path": "artifacts/continuation_ix_pre_evt/kicad_cli/ds_xl_coder/drc.json",
+      "sha256": "e4d6abecdb575f281cc62cd436f9c26ddd56c9c1424df8951f24a8ddee2e5047",
+      "bytes": 27848
+    },
+    {
+      "path": "artifacts/continuation_ix_pre_evt/kicad_cli/ds_xl_coder/drc.log",
+      "sha256": "313ad74a772e692167222bf5de686e121749510f75ed9d732d062f1849bc6e7a",
+      "bytes": 236
+    },
+    {
+      "path": "artifacts/continuation_ix_pre_evt/kicad_cli/ds_xl_coder/drill/ds_xl_coder.drl",
+      "sha256": "85a65d9fd4b7f65446a837c202c9b10b5cd7c9aa138ccef6e0d7016c91ffda18",
+      "bytes": 378
+    },
+    {
+      "path": "artifacts/continuation_ix_pre_evt/kicad_cli/ds_xl_coder/drill.log",
+      "sha256": "609bf86dd5aae8cdd322d2d35937c805ff9fbaa13575470febaf73ad01d334b5",
+      "bytes": 204
+    },
+    {
+      "path": "artifacts/continuation_ix_pre_evt/kicad_cli/ds_xl_coder/erc.json",
+      "sha256": "15dc6884fc81d92a781e90faa2d394ed01239ec7a0d2196f518c899660ce29d1",
+      "bytes": 29049
+    },
+    {
+      "path": "artifacts/continuation_ix_pre_evt/kicad_cli/ds_xl_coder/erc.log",
+      "sha256": "349c8dd5aa14e339011c48963fcce579db2076a9fae431838a0450b21edcb76b",
+      "bytes": 210
+    },
+    {
+      "path": "artifacts/continuation_ix_pre_evt/kicad_cli/ds_xl_coder/gerber.log",
+      "sha256": "8d6519b2826c6e01023f27474c096a593a7daa47aeadea741834e0cb7bf3fa16",
+      "bytes": 3316
+    },
+    {
+      "path": "artifacts/continuation_ix_pre_evt/kicad_cli/ds_xl_coder/gerbers/ds_xl_coder-B_Courtyard.gbr",
+      "sha256": "422b27f5939a31cf541b72e713b6e87c964ae972abbac6b9a5ab4caa3e17f686",
+      "bytes": 438
+    },
+    {
+      "path": "artifacts/continuation_ix_pre_evt/kicad_cli/ds_xl_coder/gerbers/ds_xl_coder-B_Cu.gbl",
+      "sha256": "f6c8fb232aa50a50329951abf7b6bb387b8ef5994b5116e9e0c0c91cf3c2e960",
+      "bytes": 692
+    },
+    {
+      "path": "artifacts/continuation_ix_pre_evt/kicad_cli/ds_xl_coder/gerbers/ds_xl_coder-B_Mask.gbs",
+      "sha256": "c7f48a1217e5f45064bd048fcbb258d80dff5697192818fd76e2cd45c0e2c616",
+      "bytes": 662
+    },
+    {
+      "path": "artifacts/continuation_ix_pre_evt/kicad_cli/ds_xl_coder/gerbers/ds_xl_coder-B_Paste.gbp",
+      "sha256": "2b3f3c6f0c737da95ba8bb6fb1e1295e9a125aa9d1ec4c92e0dcdb69f28ce72b",
+      "bytes": 465
+    },
+    {
+      "path": "artifacts/continuation_ix_pre_evt/kicad_cli/ds_xl_coder/gerbers/ds_xl_coder-B_Silkscreen.gbo",
+      "sha256": "ae503b658ced39654d97ef1144e8ac27bc01b10ec318f92bfb382dd6830e9420",
+      "bytes": 466
+    },
+    {
+      "path": "artifacts/continuation_ix_pre_evt/kicad_cli/ds_xl_coder/gerbers/ds_xl_coder-Edge_Cuts.gm1",
+      "sha256": "bbd47d571532d93742132a3220c95830fc51206a1416440296af698c62aabd3d",
+      "bytes": 574
+    },
+    {
+      "path": "artifacts/continuation_ix_pre_evt/kicad_cli/ds_xl_coder/gerbers/ds_xl_coder-F_Courtyard.gbr",
+      "sha256": "8660c16c7e8dea59f9107d7421cd49c8fe75878a7cd78c7590bf7c299c11c737",
+      "bytes": 4163
+    },
+    {
+      "path": "artifacts/continuation_ix_pre_evt/kicad_cli/ds_xl_coder/gerbers/ds_xl_coder-F_Cu.gtl",
+      "sha256": "fc1ec0ec6ae341dee059319ce4d54693e778fb58dd963f257996a3fb33e96645",
+      "bytes": 3483
+    },
+    {
+      "path": "artifacts/continuation_ix_pre_evt/kicad_cli/ds_xl_coder/gerbers/ds_xl_coder-F_Mask.gts",
+      "sha256": "3d51f5f9adb937d7b5d4ce93bd3450e702ba6ddebcfb7efc81f3d927efaff381",
+      "bytes": 2172
+    },
+    {
+      "path": "artifacts/continuation_ix_pre_evt/kicad_cli/ds_xl_coder/gerbers/ds_xl_coder-F_Paste.gtp",
+      "sha256": "ac54f66cdd6b533b4637be362c3fd39d1c3be025bf3c01f791df51f866f7a2dc",
+      "bytes": 1691
+    },
+    {
+      "path": "artifacts/continuation_ix_pre_evt/kicad_cli/ds_xl_coder/gerbers/ds_xl_coder-F_Silkscreen.gto",
+      "sha256": "a4320c25f7d376276901f4a5303ed89fb8d1f2c27594c3f9bfeea6ae21dbfc9d",
+      "bytes": 14507
+    },
+    {
+      "path": "artifacts/continuation_ix_pre_evt/kicad_cli/ds_xl_coder/gerbers/ds_xl_coder-In1_Cu.g1",
+      "sha256": "0b1bdddb84fea26f0f1bd1e95912e6e8d6260fb11d4160c3411501f23030b904",
+      "bytes": 469
+    },
+    {
+      "path": "artifacts/continuation_ix_pre_evt/kicad_cli/ds_xl_coder/gerbers/ds_xl_coder-In2_Cu.g2",
+      "sha256": "04dde6390b6be542ddf88cbd6cfe8e7a945c77db5c6a89f52ef5d677d809b7e3",
+      "bytes": 469
+    },
+    {
+      "path": "artifacts/continuation_ix_pre_evt/kicad_cli/ds_xl_coder/gerbers/ds_xl_coder-Margin.gbr",
+      "sha256": "422b27f5939a31cf541b72e713b6e87c964ae972abbac6b9a5ab4caa3e17f686",
+      "bytes": 438
+    },
+    {
+      "path": "artifacts/continuation_ix_pre_evt/kicad_cli/ds_xl_coder/gerbers/ds_xl_coder-User_Comments.gbr",
+      "sha256": "6b734e3147621fe7546e3a93e4f368bf5e63197225d1bf54f001727145339cbf",
+      "bytes": 98106
+    },
+    {
+      "path": "artifacts/continuation_ix_pre_evt/kicad_cli/ds_xl_coder/gerbers/ds_xl_coder-User_Drawings.gbr",
+      "sha256": "f581a634f3bb5e9be9171146cfecfa38646f7e8d444b592da4a6f66b28421fd1",
+      "bytes": 40905
+    },
+    {
+      "path": "artifacts/continuation_ix_pre_evt/kicad_cli/ds_xl_coder/gerbers/ds_xl_coder-job.gbrjob",
+      "sha256": "eaf75808b9a4e65e61440c42ff2095f1acb9369642cea929484446d61caa1d69",
+      "bytes": 3837
+    },
+    {
+      "path": "artifacts/continuation_ix_pre_evt/kicad_cli/ds_xl_coder/netlist.log",
+      "sha256": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b",
+      "bytes": 1
+    },
+    {
+      "path": "artifacts/continuation_ix_pre_evt/kicad_cli/ds_xl_coder/netlist.sexp",
+      "sha256": "69cf3ae6477166a31812b26031bd476d60aa343ad4b2ce1bacb271367619c9a5",
+      "bytes": 52712
+    },
+    {
+      "path": "artifacts/continuation_ix_pre_evt/kicad_cli/ds_xl_coder/pdf.log",
+      "sha256": "9ddce95485dc2f28b38023f6455184a85904110eb89cff72c86c23b1b3bc56e2",
+      "bytes": 195
+    },
+    {
+      "path": "artifacts/continuation_ix_pre_evt/kicad_cli/ds_xl_coder/pos/pick_place.csv",
+      "sha256": "66d1ded56bbfc8cd37f88fd1b960ff26983d0150f422c47b04ebf3a2c552ccc0",
+      "bytes": 3482
+    },
+    {
+      "path": "artifacts/continuation_ix_pre_evt/kicad_cli/ds_xl_coder/pos.log",
+      "sha256": "fb85dce9f5b0e0b4846ca072bc6f098bd1cb42e0b9f946e2c60c89231b7fc6a6",
+      "bytes": 206
+    },
+    {
+      "path": "artifacts/continuation_ix_pre_evt/kicad_cli/ds_xl_coder/schematic.pdf",
+      "sha256": "7b22132e95b67aa875683dfb630b6eea3c82c7b6dd0f8527e8005b685cbeb1d3",
+      "bytes": 165515
+    },
+    {
+      "path": "artifacts/continuation_ix_pre_evt/kicad_cli/ds_xl_coder/step.log",
+      "sha256": "2a5f13639aaceb99c189268fa1e493b653972822765bf4d88cb3415303b0a755",
+      "bytes": 904
+    },
+    {
+      "path": "artifacts/continuation_ix_pre_evt/kicad_cli/edge_io_rings/board.step",
+      "sha256": "7192661c8f97875ebbe4259d03cb116531076f5f6b30fb60dfa98dffbdb98932",
+      "bytes": 14776
+    },
+    {
+      "path": "artifacts/continuation_ix_pre_evt/kicad_cli/edge_io_rings/drc.json",
+      "sha256": "120131ef75eead1a452d84504c9a345debc7867f03fddc0a391fdf712641eb72",
+      "bytes": 12605
+    },
+    {
+      "path": "artifacts/continuation_ix_pre_evt/kicad_cli/edge_io_rings/drc.log",
+      "sha256": "bf4434e02fc71e539162acfe9ac314541ddcfc2f7f3a6998224a0675b0ec06b9",
+      "bytes": 238
+    },
+    {
+      "path": "artifacts/continuation_ix_pre_evt/kicad_cli/edge_io_rings/drill/edge_io_rings.drl",
+      "sha256": "2c95c69612acd5cb9828e9dee3cb77005196dca467a59485b8dd71cc22333190",
+      "bytes": 374
+    },
+    {
+      "path": "artifacts/continuation_ix_pre_evt/kicad_cli/edge_io_rings/drill.log",
+      "sha256": "53c6be18ee34c64bd934a961bc97547678236903c8f570edf2293671e2b3539d",
+      "bytes": 208
+    },
+    {
+      "path": "artifacts/continuation_ix_pre_evt/kicad_cli/edge_io_rings/erc.json",
+      "sha256": "3278a81245b53100ad63a92fb540d40dcec7f51c354d0ef33a626cd92e6a29a5",
+      "bytes": 17903
+    },
+    {
+      "path": "artifacts/continuation_ix_pre_evt/kicad_cli/edge_io_rings/erc.log",
+      "sha256": "4e49d0d1f4d0f7433c768b3b31bd57d53646776e227b8f4eae5df6c80eca791e",
+      "bytes": 212
+    },
+    {
+      "path": "artifacts/continuation_ix_pre_evt/kicad_cli/edge_io_rings/gerber.log",
+      "sha256": "c540422db4269e7def12fa56070e012a209438876d33998e56c90512bdfe09b1",
+      "bytes": 3380
+    },
+    {
+      "path": "artifacts/continuation_ix_pre_evt/kicad_cli/edge_io_rings/gerbers/edge_io_rings-B_Courtyard.gbr",
+      "sha256": "c9cb4fac58735a798e498ee44af92d1f907fceeca76146dd4fa066a7b807946c",
+      "bytes": 440
+    },
+    {
+      "path": "artifacts/continuation_ix_pre_evt/kicad_cli/edge_io_rings/gerbers/edge_io_rings-B_Cu.gbl",
+      "sha256": "a4a439da396d8bfd2566e24b66c9e8840f783949c5e36a5aedecd44a2a399954",
+      "bytes": 689
+    },
+    {
+      "path": "artifacts/continuation_ix_pre_evt/kicad_cli/edge_io_rings/gerbers/edge_io_rings-B_Mask.gbs",
+      "sha256": "180436fcf74dfb1fb5ac56995ae9802e31a86faf0f9bd81242f3565c1c9658a5",
+      "bytes": 660
+    },
+    {
+      "path": "artifacts/continuation_ix_pre_evt/kicad_cli/edge_io_rings/gerbers/edge_io_rings-B_Paste.gbp",
+      "sha256": "c4f9190a7f571e85bfdab6df4694e99cffaec6e74d782384a14523cfe14cbc59",
+      "bytes": 467
+    },
+    {
+      "path": "artifacts/continuation_ix_pre_evt/kicad_cli/edge_io_rings/gerbers/edge_io_rings-B_Silkscreen.gbo",
+      "sha256": "5937215675a0d7a67e7bbee64ff333f2e8eff95794c4e32aca67684fe93dc7f4",
+      "bytes": 468
+    },
+    {
+      "path": "artifacts/continuation_ix_pre_evt/kicad_cli/edge_io_rings/gerbers/edge_io_rings-Edge_Cuts.gm1",
+      "sha256": "60e552d31cb719ef4f818e95e0b03a6b22e4fedcd426ebd0e7eea3cfadc72c81",
+      "bytes": 572
+    },
+    {
+      "path": "artifacts/continuation_ix_pre_evt/kicad_cli/edge_io_rings/gerbers/edge_io_rings-F_Courtyard.gbr",
+      "sha256": "5fdd7a1e5cfccb73c1b0eeebdb6cfdaafb4efd7e0db3fa8dc788704e8d9e9b8a",
+      "bytes": 737
+    },
+    {
+      "path": "artifacts/continuation_ix_pre_evt/kicad_cli/edge_io_rings/gerbers/edge_io_rings-F_Cu.gtl",
+      "sha256": "611508408e405ce6a4098abad9e3de9634da280630d5f09c58bccba57fde6c6b",
+      "bytes": 1773
+    },
+    {
+      "path": "artifacts/continuation_ix_pre_evt/kicad_cli/edge_io_rings/gerbers/edge_io_rings-F_Mask.gts",
+      "sha256": "14e59a86d40da8778aa5124aa23bd95cee9ac68cd51f85418c3b8b65d71272c8",
+      "bytes": 888
+    },
+    {
+      "path": "artifacts/continuation_ix_pre_evt/kicad_cli/edge_io_rings/gerbers/edge_io_rings-F_Paste.gtp",
+      "sha256": "0d25a9f2e3fca38663a5929e44d1bea7986c684a5f1c24b5fcc16168c716b35a",
+      "bytes": 587
+    },
+    {
+      "path": "artifacts/continuation_ix_pre_evt/kicad_cli/edge_io_rings/gerbers/edge_io_rings-F_Silkscreen.gto",
+      "sha256": "e18f8818a68eb6eae0111dc4623ceae7f23c4eb2116cc3ca8a63a11d7862484a",
+      "bytes": 7384
+    },
+    {
+      "path": "artifacts/continuation_ix_pre_evt/kicad_cli/edge_io_rings/gerbers/edge_io_rings-In1_Cu.g1",
+      "sha256": "803e5af2ff049472fa85ed56c3a6392e082a0098c2dacc21c93a811743ad3e98",
+      "bytes": 471
+    },
+    {
+      "path": "artifacts/continuation_ix_pre_evt/kicad_cli/edge_io_rings/gerbers/edge_io_rings-In2_Cu.g2",
+      "sha256": "2945aa07ee9e14210a4aef5c48f80ff1390220417a34592b8dac06be923824e6",
+      "bytes": 471
+    },
+    {
+      "path": "artifacts/continuation_ix_pre_evt/kicad_cli/edge_io_rings/gerbers/edge_io_rings-Margin.gbr",
+      "sha256": "c9cb4fac58735a798e498ee44af92d1f907fceeca76146dd4fa066a7b807946c",
+      "bytes": 440
+    },
+    {
+      "path": "artifacts/continuation_ix_pre_evt/kicad_cli/edge_io_rings/gerbers/edge_io_rings-User_Comments.gbr",
+      "sha256": "f9874cb062c5fb8e3c05587a42c44b8aec27df35beaec4a5a7132b8eee9cde6c",
+      "bytes": 96930
+    },
+    {
+      "path": "artifacts/continuation_ix_pre_evt/kicad_cli/edge_io_rings/gerbers/edge_io_rings-User_Drawings.gbr",
+      "sha256": "5a3f1eb64338df391a4def76d1154db71857e77e1ffc4899f9edf6b9d397bbd8",
+      "bytes": 40907
+    },
+    {
+      "path": "artifacts/continuation_ix_pre_evt/kicad_cli/edge_io_rings/gerbers/edge_io_rings-job.gbrjob",
+      "sha256": "d6a88fafae658aad226ff816ea96a9c2f9d8639e392c06cfcedf639c4bc67c71",
+      "bytes": 3863
+    },
+    {
+      "path": "artifacts/continuation_ix_pre_evt/kicad_cli/edge_io_rings/netlist.log",
+      "sha256": "01b4d40ce483d0cbe52fbef19938c1335b81bffe9d1873712899f985b693a58a",
+      "bytes": 87
+    },
+    {
+      "path": "artifacts/continuation_ix_pre_evt/kicad_cli/edge_io_rings/netlist.sexp",
+      "sha256": "e41f97d41331f1ddfd9446a0df7bade4e32ac8548d4ea1d5ecec76c6747df4c0",
+      "bytes": 45774
+    },
+    {
+      "path": "artifacts/continuation_ix_pre_evt/kicad_cli/edge_io_rings/pdf.log",
+      "sha256": "4dc105061b58c24078afa3900b830b350aa719c7155ae1e8fad536f05cb566dc",
+      "bytes": 197
+    },
+    {
+      "path": "artifacts/continuation_ix_pre_evt/kicad_cli/edge_io_rings/pos/pick_place.csv",
+      "sha256": "57205653e24564a3d7c6d4420a008d50bf0af5051106090c9873969c0bb97214",
+      "bytes": 610
+    },
+    {
+      "path": "artifacts/continuation_ix_pre_evt/kicad_cli/edge_io_rings/pos.log",
+      "sha256": "143f9417cba2698a4b9bddb627ce8e8c63639cf389a55fc8fbb39d7574a4ba4c",
+      "bytes": 208
+    },
+    {
+      "path": "artifacts/continuation_ix_pre_evt/kicad_cli/edge_io_rings/schematic.pdf",
+      "sha256": "6f1700158393d92fee09b1af05776bc988d2bdde2dfc0f070317c50d3bd5b062",
+      "bytes": 139592
+    },
+    {
+      "path": "artifacts/continuation_ix_pre_evt/kicad_cli/edge_io_rings/step.log",
+      "sha256": "f74c0623f9dec1d40d433048bc7824b2fb620a5eb2cde040bdb98ab21d8859a1",
+      "bytes": 910
+    },
+    {
+      "path": "artifacts/continuation_ix_pre_evt/kicad_cli/handheld_hybrid/board.step",
+      "sha256": "389e9cc956fba2eec3d1597f181bcf45fe8b9c7456e3c6104f8f006e2c155de4",
+      "bytes": 14828
+    },
+    {
+      "path": "artifacts/continuation_ix_pre_evt/kicad_cli/handheld_hybrid/drc.json",
+      "sha256": "962228f8127b0612a76fff29ee172e799fbf1df3c0ae3e98a489d00529e36445",
+      "bytes": 27307
+    },
+    {
+      "path": "artifacts/continuation_ix_pre_evt/kicad_cli/handheld_hybrid/drc.log",
+      "sha256": "9b0d598c87832899297d781e72991baa3ddf59f5c7d798d3ddb32006ca070d5c",
+      "bytes": 240
+    },
+    {
+      "path": "artifacts/continuation_ix_pre_evt/kicad_cli/handheld_hybrid/drill/handheld_hybrid.drl",
+      "sha256": "f5be6fa0dd43647e57f6bede2fb0c4eb337bb2e0580d4c7e1704da0305b7001c",
+      "bytes": 378
+    },
+    {
+      "path": "artifacts/continuation_ix_pre_evt/kicad_cli/handheld_hybrid/drill.log",
+      "sha256": "adbdaef2fc170e28e5e514039647ab105b04013373dc58d76fc62428aad2d9bd",
+      "bytes": 212
+    },
+    {
+      "path": "artifacts/continuation_ix_pre_evt/kicad_cli/handheld_hybrid/erc.json",
+      "sha256": "2433e9b657e387901df27f8cf9c2ac3a8c990660ee3051a4d91b5a22d2d5beec",
+      "bytes": 294433
+    },
+    {
+      "path": "artifacts/continuation_ix_pre_evt/kicad_cli/handheld_hybrid/erc.log",
+      "sha256": "26d348f63c943e34d91b50c151432acee2f7a5df982e658b7be51e27051d8f90",
+      "bytes": 215
+    },
+    {
+      "path": "artifacts/continuation_ix_pre_evt/kicad_cli/handheld_hybrid/gerber.log",
+      "sha256": "e7c11fe5960a553979e591fc2f4199ca5b5b8fa2eff89fa827f465f1e6fe0674",
+      "bytes": 3444
+    },
+    {
+      "path": "artifacts/continuation_ix_pre_evt/kicad_cli/handheld_hybrid/gerbers/handheld_hybrid-B_Courtyard.gbr",
+      "sha256": "cadf2506cb0cb156e876d1fc0aeea20116fb09086546ac1729ea16827e7103c7",
+      "bytes": 442
+    },
+    {
+      "path": "artifacts/continuation_ix_pre_evt/kicad_cli/handheld_hybrid/gerbers/handheld_hybrid-B_Cu.gbl",
+      "sha256": "af23064d1644f692ca9ca7a4b52b3b42a75281123abf45bf080b3623e85a624e",
+      "bytes": 694
+    },
+    {
+      "path": "artifacts/continuation_ix_pre_evt/kicad_cli/handheld_hybrid/gerbers/handheld_hybrid-B_Mask.gbs",
+      "sha256": "f203997d047bfc2d22a6564a06b473d242942719cf5b0950200a307f4a01defa",
+      "bytes": 666
+    },
+    {
+      "path": "artifacts/continuation_ix_pre_evt/kicad_cli/handheld_hybrid/gerbers/handheld_hybrid-B_Paste.gbp",
+      "sha256": "c818712948e60567bf29f53cf3c82789e9517c833b4b45d81e89e7e2645029c5",
+      "bytes": 469
+    },
+    {
+      "path": "artifacts/continuation_ix_pre_evt/kicad_cli/handheld_hybrid/gerbers/handheld_hybrid-B_Silkscreen.gbo",
+      "sha256": "0510149b763800c08547612125c0ca528d3c6ad8e96302c00a0cf00bbcb36e15",
+      "bytes": 470
+    },
+    {
+      "path": "artifacts/continuation_ix_pre_evt/kicad_cli/handheld_hybrid/gerbers/handheld_hybrid-Edge_Cuts.gm1",
+      "sha256": "654c1791969e340f1e929f7457b75b2619d82abbdbb321516fb9e21eaa250e05",
+      "bytes": 578
+    },
+    {
+      "path": "artifacts/continuation_ix_pre_evt/kicad_cli/handheld_hybrid/gerbers/handheld_hybrid-F_Courtyard.gbr",
+      "sha256": "caeb9528cdbc4f11f2d8bf6e4389a803dad1b655e35113b48908c788426debba",
+      "bytes": 4006
+    },
+    {
+      "path": "artifacts/continuation_ix_pre_evt/kicad_cli/handheld_hybrid/gerbers/handheld_hybrid-F_Cu.gtl",
+      "sha256": "bca3a085ff1344b9cc5049e4e0ee9848ac123d3d223ed54cd3588e9fc9a0c798",
+      "bytes": 3412
+    },
+    {
+      "path": "artifacts/continuation_ix_pre_evt/kicad_cli/handheld_hybrid/gerbers/handheld_hybrid-F_Mask.gts",
+      "sha256": "94d91efbbd2ed8f927387cb464299be1a4c0259b8363a52ce9d2f718624aa937",
+      "bytes": 2125
+    },
+    {
+      "path": "artifacts/continuation_ix_pre_evt/kicad_cli/handheld_hybrid/gerbers/handheld_hybrid-F_Paste.gtp",
+      "sha256": "02da07a174b9e40f6d2f51c10cbe657a2b4533f607690949b1bbbd2352057a14",
+      "bytes": 1644
+    },
+    {
+      "path": "artifacts/continuation_ix_pre_evt/kicad_cli/handheld_hybrid/gerbers/handheld_hybrid-F_Silkscreen.gto",
+      "sha256": "f294196460218b69d264f3db1df7fb82dff32c5c66ae06cce9907dae0074d728",
+      "bytes": 14177
+    },
+    {
+      "path": "artifacts/continuation_ix_pre_evt/kicad_cli/handheld_hybrid/gerbers/handheld_hybrid-In1_Cu.g1",
+      "sha256": "239c016fad0b1b0d5c23e143e82b00617261f37dcdbcb50a36a5f1eb1a8f3279",
+      "bytes": 473
+    },
+    {
+      "path": "artifacts/continuation_ix_pre_evt/kicad_cli/handheld_hybrid/gerbers/handheld_hybrid-In2_Cu.g2",
+      "sha256": "060a2daa37e288664ff95398f41d73e0006bf6e9fae1aa69a737b6b3e4ad21d3",
+      "bytes": 473
+    },
+    {
+      "path": "artifacts/continuation_ix_pre_evt/kicad_cli/handheld_hybrid/gerbers/handheld_hybrid-Margin.gbr",
+      "sha256": "cadf2506cb0cb156e876d1fc0aeea20116fb09086546ac1729ea16827e7103c7",
+      "bytes": 442
+    },
+    {
+      "path": "artifacts/continuation_ix_pre_evt/kicad_cli/handheld_hybrid/gerbers/handheld_hybrid-User_Comments.gbr",
+      "sha256": "d682e05dca4b25b6a6a889d291ef46affbe9c09131dceb9f73804190d77caab2",
+      "bytes": 98110
+    },
+    {
+      "path": "artifacts/continuation_ix_pre_evt/kicad_cli/handheld_hybrid/gerbers/handheld_hybrid-User_Drawings.gbr",
+      "sha256": "57a13a1b8e23c556e57b37c58a76da8cdec29ff9ffb49edd938a227b76dab3d6",
+      "bytes": 40909
+    },
+    {
+      "path": "artifacts/continuation_ix_pre_evt/kicad_cli/handheld_hybrid/gerbers/handheld_hybrid-job.gbrjob",
+      "sha256": "312ac59ff3e5392c0cbed30c58cbe805a8750a9ca05ba1fc9eb446207a641db1",
+      "bytes": 3893
+    },
+    {
+      "path": "artifacts/continuation_ix_pre_evt/kicad_cli/handheld_hybrid/netlist.log",
+      "sha256": "01b4d40ce483d0cbe52fbef19938c1335b81bffe9d1873712899f985b693a58a",
+      "bytes": 87
+    },
+    {
+      "path": "artifacts/continuation_ix_pre_evt/kicad_cli/handheld_hybrid/netlist.sexp",
+      "sha256": "4e1c6be29fe5d058b7cacf6b465675d2e1cb30f216cf8ad8e0dc102b7eb0691b",
+      "bytes": 169876
+    },
+    {
+      "path": "artifacts/continuation_ix_pre_evt/kicad_cli/handheld_hybrid/pdf.log",
+      "sha256": "fdcae028a72d814f58fac9c77179d4011eaa65308491565565d559598fabfacb",
+      "bytes": 199
+    },
+    {
+      "path": "artifacts/continuation_ix_pre_evt/kicad_cli/handheld_hybrid/pos/pick_place.csv",
+      "sha256": "ae3b4588f45915ab187f9a1c910520e7bff93b11db2a9a37cf3d831323ae281b",
+      "bytes": 3285
+    },
+    {
+      "path": "artifacts/continuation_ix_pre_evt/kicad_cli/handheld_hybrid/pos.log",
+      "sha256": "3afcedef3862900abe2f786b09c8fa53ac25dde8ff16f714d40b62552e30bc95",
+      "bytes": 210
+    },
+    {
+      "path": "artifacts/continuation_ix_pre_evt/kicad_cli/handheld_hybrid/schematic.pdf",
+      "sha256": "a7ca8d48d62d30d19dafab0e1c89488b3a6f917cb54188d44f16594bd916d6af",
+      "bytes": 393123
+    },
+    {
+      "path": "artifacts/continuation_ix_pre_evt/kicad_cli/handheld_hybrid/step.log",
+      "sha256": "55311049c03f8c3d8df77c54fc91699341cc282f8316422704a2dffcc6e16e77",
+      "bytes": 916
+    },
+    {
+      "path": "artifacts/continuation_ix_pre_evt/kicad_cli/student_14_5/board.step",
+      "sha256": "6b1bb3b1a5eba20eb1212fae81f2af4c0c7380845d58eb8956646ae7f9a67af9",
+      "bytes": 14822
+    },
+    {
+      "path": "artifacts/continuation_ix_pre_evt/kicad_cli/student_14_5/drc.json",
+      "sha256": "7efff193fb602e80313c67cbe08dcf94061ac9f3b71ccbeb0a35748f0a1fe86d",
+      "bytes": 27321
+    },
+    {
+      "path": "artifacts/continuation_ix_pre_evt/kicad_cli/student_14_5/drc.log",
+      "sha256": "3e5a531ee8b8bd4189b18c55135a9c5fe5e2e82ed71537c268e880cad2e7560d",
+      "bytes": 237
+    },
+    {
+      "path": "artifacts/continuation_ix_pre_evt/kicad_cli/student_14_5/drill/student_14_5.drl",
+      "sha256": "d6cf66450fd5a7805fa7ca60b34e84070ca031fdc0f8bb95f5d9527fdad066f0",
+      "bytes": 378
+    },
+    {
+      "path": "artifacts/continuation_ix_pre_evt/kicad_cli/student_14_5/drill.log",
+      "sha256": "c99483098a861ebf4c083710ee5f7111fbbd1d622810354cb25cc97e56001072",
+      "bytes": 206
+    },
+    {
+      "path": "artifacts/continuation_ix_pre_evt/kicad_cli/student_14_5/erc.json",
+      "sha256": "ad0c2ae5a149bfd6ffa9229b19cec855cdc26390503da137e2f6c620f8dd328e",
+      "bytes": 25984
+    },
+    {
+      "path": "artifacts/continuation_ix_pre_evt/kicad_cli/student_14_5/erc.log",
+      "sha256": "452477f3e00458c87790bf45fe0de757d67292ef26289d7facf56dc251eb9688",
+      "bytes": 211
+    },
+    {
+      "path": "artifacts/continuation_ix_pre_evt/kicad_cli/student_14_5/gerber.log",
+      "sha256": "20488bd965cc35c17c7b8d06aca83375d32f2345d7920f92f4526267b54942fb",
+      "bytes": 3348
+    },
+    {
+      "path": "artifacts/continuation_ix_pre_evt/kicad_cli/student_14_5/gerbers/student_14_5-B_Courtyard.gbr",
+      "sha256": "856c29ae1c03b54c808a9da9b1de32f0057288db77b2fab48ecfde9b5b0b2e52",
+      "bytes": 439
+    },
+    {
+      "path": "artifacts/continuation_ix_pre_evt/kicad_cli/student_14_5/gerbers/student_14_5-B_Cu.gbl",
+      "sha256": "1e6642455a34650c92804963a6936167bc7d3d5afff9331f5452246cd6ebb4f5",
+      "bytes": 691
+    },
+    {
+      "path": "artifacts/continuation_ix_pre_evt/kicad_cli/student_14_5/gerbers/student_14_5-B_Mask.gbs",
+      "sha256": "8c3f0644fedd2e86fd1a44667a21a7f312e3ac1d3767b797090618297f3c2df9",
+      "bytes": 663
+    },
+    {
+      "path": "artifacts/continuation_ix_pre_evt/kicad_cli/student_14_5/gerbers/student_14_5-B_Paste.gbp",
+      "sha256": "65028e1aa7e2443273d02efbca5e561d9b7bd10199df0294990012b4faa89712",
+      "bytes": 466
+    },
+    {
+      "path": "artifacts/continuation_ix_pre_evt/kicad_cli/student_14_5/gerbers/student_14_5-B_Silkscreen.gbo",
+      "sha256": "f1f829865bbd51a557ab06863bac5a73f9a0ecb85d2027e777bea30497d8c922",
+      "bytes": 467
+    },
+    {
+      "path": "artifacts/continuation_ix_pre_evt/kicad_cli/student_14_5/gerbers/student_14_5-Edge_Cuts.gm1",
+      "sha256": "bdb3a3fdf27149033d340c43baace67ec5c470c99f6dd551389f7ac8b5671ed6",
+      "bytes": 575
+    },
+    {
+      "path": "artifacts/continuation_ix_pre_evt/kicad_cli/student_14_5/gerbers/student_14_5-F_Courtyard.gbr",
+      "sha256": "b195308b9c07e9bedbf021c1bb20452463092f3b787f4e31c6476ff3b17f017e",
+      "bytes": 4024
+    },
+    {
+      "path": "artifacts/continuation_ix_pre_evt/kicad_cli/student_14_5/gerbers/student_14_5-F_Cu.gtl",
+      "sha256": "7d19f7107da5672f609ce5124e283fb46550e25d173e407e09b9a349e151efa7",
+      "bytes": 3416
+    },
+    {
+      "path": "artifacts/continuation_ix_pre_evt/kicad_cli/student_14_5/gerbers/student_14_5-F_Mask.gts",
+      "sha256": "5fc20aa5cbf5a35e7520079c3ac15d70774c8d5b25b6e20a084fffe325e979e9",
+      "bytes": 2127
+    },
+    {
+      "path": "artifacts/continuation_ix_pre_evt/kicad_cli/student_14_5/gerbers/student_14_5-F_Paste.gtp",
+      "sha256": "3ce777d07a3771d5bff6efac51a6d40ff09db0d077aa895b017b628da36ea712",
+      "bytes": 1646
+    },
+    {
+      "path": "artifacts/continuation_ix_pre_evt/kicad_cli/student_14_5/gerbers/student_14_5-F_Silkscreen.gto",
+      "sha256": "27ac7463057aef3646bb1aff983ba5b5b3a1d3098a1cbb0ba47be49251bee3e8",
+      "bytes": 14219
+    },
+    {
+      "path": "artifacts/continuation_ix_pre_evt/kicad_cli/student_14_5/gerbers/student_14_5-In1_Cu.g1",
+      "sha256": "d739b377c03d905401a8b46334a715acae9c03cc614bca14eb3a97fe5e99a5ea",
+      "bytes": 470
+    },
+    {
+      "path": "artifacts/continuation_ix_pre_evt/kicad_cli/student_14_5/gerbers/student_14_5-In2_Cu.g2",
+      "sha256": "2c40b0637dd37850375d43e9f9a62a8b5777320876247082663a3d6c0d36a41e",
+      "bytes": 470
+    },
+    {
+      "path": "artifacts/continuation_ix_pre_evt/kicad_cli/student_14_5/gerbers/student_14_5-Margin.gbr",
+      "sha256": "856c29ae1c03b54c808a9da9b1de32f0057288db77b2fab48ecfde9b5b0b2e52",
+      "bytes": 439
+    },
+    {
+      "path": "artifacts/continuation_ix_pre_evt/kicad_cli/student_14_5/gerbers/student_14_5-User_Comments.gbr",
+      "sha256": "06138003dc47fd0cc4cb02efeb124f32f8b05928383b7afb31eaadbde48265fb",
+      "bytes": 98107
+    },
+    {
+      "path": "artifacts/continuation_ix_pre_evt/kicad_cli/student_14_5/gerbers/student_14_5-User_Drawings.gbr",
+      "sha256": "bc511a8721fa60277adabcf30d3dc8295d37fe70593a847c8370395a661c2067",
+      "bytes": 40906
+    },
+    {
+      "path": "artifacts/continuation_ix_pre_evt/kicad_cli/student_14_5/gerbers/student_14_5-job.gbrjob",
+      "sha256": "2075b60d730ae2bcda4786527ef2b66badcb5c856c855046503089a797dff4a3",
+      "bytes": 3851
+    },
+    {
+      "path": "artifacts/continuation_ix_pre_evt/kicad_cli/student_14_5/netlist.log",
+      "sha256": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b",
+      "bytes": 1
+    },
+    {
+      "path": "artifacts/continuation_ix_pre_evt/kicad_cli/student_14_5/netlist.sexp",
+      "sha256": "9e7cc993b2a2ad62d9790123de786c4feab660d75cfb078ff7a85ace2762ec32",
+      "bytes": 49947
+    },
+    {
+      "path": "artifacts/continuation_ix_pre_evt/kicad_cli/student_14_5/pdf.log",
+      "sha256": "c19b2ba08e1362c6aaf530bcf81157faf9b4f8756cea7155cdc78cfa97551d78",
+      "bytes": 196
+    },
+    {
+      "path": "artifacts/continuation_ix_pre_evt/kicad_cli/student_14_5/pos/pick_place.csv",
+      "sha256": "a57d11858290dbf3a4df9f9f05f37fa110fbe87f3f15c80b378d368a899291de",
+      "bytes": 3384
+    },
+    {
+      "path": "artifacts/continuation_ix_pre_evt/kicad_cli/student_14_5/pos.log",
+      "sha256": "7b498e061419329fc3a99141415826b032e14066dde3159f5e2d3f948aa584eb",
+      "bytes": 207
+    },
+    {
+      "path": "artifacts/continuation_ix_pre_evt/kicad_cli/student_14_5/schematic.pdf",
+      "sha256": "f96b348b2e44e44802e27da9a8f26fa4e18884de1d7b7425c9e011cbce9385ff",
+      "bytes": 162228
+    },
+    {
+      "path": "artifacts/continuation_ix_pre_evt/kicad_cli/student_14_5/step.log",
+      "sha256": "a97658c2658269cd202a26f28950297b98ae981eea76ad31ef736c400ec87c0e",
+      "bytes": 907
+    }
+  ],
+  "cli": [
+    {
+      "product": "handheld_hybrid",
+      "kicad_cli": "/opt/homebrew/bin/kicad-cli",
+      "version": "10.0.5",
+      "erc_rc": 0,
+      "drc_rc": 0,
+      "gerber_rc": 0,
+      "drill_rc": 0,
+      "pos_rc": 0,
+      "step_rc": 0,
+      "pdf_rc": 0,
+      "netlist_rc": 0,
+      "gerber_count": 17,
+      "step_bytes": 14828,
+      "erc": {
+        "present": true,
+        "errors": 0,
+        "warnings": 461,
+        "by_type": {
+          "warning:endpoint_off_grid": 266,
+          "warning:isolated_pin_label": 146,
+          "warning:lib_symbol_issues": 45,
+          "warning:multiple_net_names": 4
+        }
+      },
+      "drc": {
+        "present": true,
+        "errors": 0,
+        "warnings": 50,
+        "by_type": {
+          "warning:track_dangling": 10,
+          "warning:lib_footprint_mismatch": 39,
+          "warning:silk_over_copper": 1
+        }
+      }
+    },
+    {
+      "product": "edge_io_rings",
+      "kicad_cli": "/opt/homebrew/bin/kicad-cli",
+      "version": "10.0.5",
+      "erc_rc": 0,
+      "drc_rc": 0,
+      "gerber_rc": 0,
+      "drill_rc": 0,
+      "pos_rc": 0,
+      "step_rc": 0,
+      "pdf_rc": 0,
+      "netlist_rc": 0,
+      "gerber_count": 17,
+      "step_bytes": 14776,
+      "erc": {
+        "present": true,
+        "errors": 0,
+        "warnings": 27,
+        "by_type": {
+          "warning:isolated_pin_label": 7,
+          "warning:lib_symbol_issues": 20
+        }
+      },
+      "drc": {
+        "present": true,
+        "errors": 0,
+        "warnings": 22,
+        "by_type": {
+          "warning:track_dangling": 10,
+          "warning:lib_footprint_mismatch": 11,
+          "warning:silk_over_copper": 1
+        }
+      }
+    },
+    {
+      "product": "dock",
+      "kicad_cli": "/opt/homebrew/bin/kicad-cli",
+      "version": "10.0.5",
+      "erc_rc": 0,
+      "drc_rc": 0,
+      "gerber_rc": 0,
+      "drill_rc": 0,
+      "pos_rc": 0,
+      "step_rc": 0,
+      "pdf_rc": 0,
+      "netlist_rc": 0,
+      "gerber_count": 17,
+      "step_bytes": 14806,
+      "erc": {
+        "present": true,
+        "errors": 0,
+        "warnings": 19,
+        "by_type": {
+          "warning:lib_symbol_issues": 15,
+          "warning:isolated_pin_label": 4
+        }
+      },
+      "drc": {
+        "present": true,
+        "errors": 0,
+        "warnings": 39,
+        "by_type": {
+          "warning:track_dangling": 10,
+          "warning:lib_footprint_mismatch": 28,
+          "warning:silk_over_copper": 1
+        }
+      }
+    },
+    {
+      "product": "student_14_5",
+      "kicad_cli": "/opt/homebrew/bin/kicad-cli",
+      "version": "10.0.5",
+      "erc_rc": 0,
+      "drc_rc": 0,
+      "gerber_rc": 0,
+      "drill_rc": 0,
+      "pos_rc": 0,
+      "step_rc": 0,
+      "pdf_rc": 0,
+      "netlist_rc": 0,
+      "gerber_count": 17,
+      "step_bytes": 14822,
+      "erc": {
+        "present": true,
+        "errors": 0,
+        "warnings": 40,
+        "by_type": {
+          "warning:isolated_pin_label": 14,
+          "warning:lib_symbol_issues": 26
+        }
+      },
+      "drc": {
+        "present": true,
+        "errors": 0,
+        "warnings": 50,
+        "by_type": {
+          "warning:track_dangling": 10,
+          "warning:lib_footprint_mismatch": 39,
+          "warning:silk_over_copper": 1
+        }
+      }
+    },
+    {
+      "product": "ds_xl_coder",
+      "kicad_cli": "/opt/homebrew/bin/kicad-cli",
+      "version": "10.0.5",
+      "erc_rc": 0,
+      "drc_rc": 0,
+      "gerber_rc": 0,
+      "drill_rc": 0,
+      "pos_rc": 0,
+      "step_rc": 0,
+      "pdf_rc": 0,
+      "netlist_rc": 0,
+      "gerber_count": 17,
+      "step_bytes": 14820,
+      "erc": {
+        "present": true,
+        "errors": 0,
+        "warnings": 45,
+        "by_type": {
+          "warning:isolated_pin_label": 18,
+          "warning:lib_symbol_issues": 27
+        }
+      },
+      "drc": {
+        "present": true,
+        "errors": 0,
+        "warnings": 51,
+        "by_type": {
+          "warning:track_dangling": 10,
+          "warning:lib_footprint_mismatch": 40,
+          "warning:silk_over_copper": 1
+        }
+      }
+    }
+  ]
+}

@@ -1,0 +1,3 @@
+joint,fastener,qty,material,notes
+pcb_standoff,M3x0.5_hex,4,SS,ISO
+display_bracket,M2x0.4,EXTERNAL_OEM_QTY,SS,EXTERNAL

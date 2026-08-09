@@ -1,0 +1,5 @@
+STEP file '/Users/gunnchos/Downloads/gunnchos-7gc-research-product-spine/repos/gunnchos-hardware-industrial-design/artifacts/continuation_ix_pre_evt/kicad_cli/ds_xl_coder/board.step' created.
+
+Export time 0.013 s
+
+2026-08-09 15:51:10.467 kicad-cli[45681:11285273] Error retrieving source file attributes: Error Domain=NSCocoaErrorDomain Code=260 "The file “board.step” couldn’t be opened because there is no such file." UserInfo={NSFilePath=/Users/gunnchos/Downloads/gunnchos-7gc-research-product-spine/repos/gunnchos-hardware-industrial-design/artifacts/continuation_ix_pre_evt/kicad_cli/ds_xl_coder/board.step, NSURL=file:///Users/gunnchos/Downloads/gunnchos-7gc-research-product-spine/repos/gunnchos-hardware-industrial-design/artifacts/continuation_ix_pre_evt/kicad_cli/ds_xl_coder/board.step, NSUnderlyingError=0xc62800300 {Error Domain=NSPOSIXErrorDomain Code=2 "No such file or directory"}}

@@ -1,0 +1,217 @@
+{
+  "updated_at_utc": "2026-08-09T20:50:52Z",
+  "DIGITAL": [],
+  "PHYSICAL": [
+    "PHYSICAL_EXECUTION_FREEZE \u2014 no fab, purchase, flash, assemble",
+    "No manufacturer DFM sign-off yet (DFM_PRECHECK is digital self-check only)"
+  ],
+  "EXTERNAL": [
+    "COM-HPC Mini 400-pin net map (PICMG/ADLINK NARROW_NDA) \u2014 Student/DS-XL",
+    "Dual eDP COM-HPC pin map \u2014 DS-XL",
+    "Intel JHL8440 / JHL9040R package ball maps \u2014 Dock",
+    "Display panel exact MPNs + hinge bend OEM spec \u2014 DS-XL AVL quotes",
+    "Paste/reflow profile vendor values; some fastener torque OEM values"
+  ],
+  "per_product": {
+    "handheld_hybrid": {
+      "manufacturer_token": "HANDHELD_HYBRID_MANUFACTURER_PACKAGE_READY",
+      "tokens": {
+        "MANUFACTURER_PACKAGE_READY": true,
+        "ASSEMBLY_READY": true,
+        "DIGITAL_PRE_EVT_RELEASE_READY": true,
+        "HANDHELD_HYBRID_MANUFACTURER_PACKAGE_READY": true
+      },
+      "eda_release_clean_pass": true,
+      "erc_errors": 0,
+      "drc_errors": 0,
+      "functional_circuits": true,
+      "nda_external_block": false,
+      "nda_item": null,
+      "hierarchical_sheets": 19,
+      "unrouted_required_nets": 0,
+      "proxy_footprints": [],
+      "honesty": "Conditional vendor collateral tokens used only where gunnchOS-owned intent complete and NDA/vendor docs remain; no proxy footprints claimed as release-ready."
+    },
+    "edge_io_rings": {
+      "manufacturer_token": "RING_MANUFACTURER_PACKAGE_READY",
+      "tokens": {
+        "MANUFACTURER_PACKAGE_READY": true,
+        "ASSEMBLY_READY": true,
+        "DIGITAL_PRE_EVT_RELEASE_READY": true
+      },
+      "eda_release_clean_pass": true,
+      "erc_errors": 0,
+      "drc_errors": 0,
+      "functional_circuits": true,
+      "nda_external_block": false,
+      "nda_item": null,
+      "hierarchical_sheets": 0,
+      "unrouted_required_nets": 0,
+      "proxy_footprints": [],
+      "honesty": "Conditional vendor collateral tokens used only where gunnchOS-owned intent complete and NDA/vendor docs remain; no proxy footprints claimed as release-ready."
+    },
+    "dock": {
+      "manufacturer_token": "DOCK_MANUFACTURER_PACKAGE_READY_CONDITIONAL_VENDOR_COLLATERAL",
+      "tokens": {
+        "MANUFACTURER_PACKAGE_READY_CONDITIONAL_VENDOR_COLLATERAL": true,
+        "DOCK_PUBLIC_REPRODUCTION_LIMITED": true,
+        "DIGITAL_PRE_EVT_RELEASE_READY": true
+      },
+      "eda_release_clean_pass": true,
+      "erc_errors": 0,
+      "drc_errors": 0,
+      "functional_circuits": true,
+      "nda_external_block": true,
+      "nda_item": "Intel JHL8440 / JHL9040R package ball maps",
+      "hierarchical_sheets": 0,
+      "unrouted_required_nets": 0,
+      "proxy_footprints": [],
+      "honesty": "Conditional vendor collateral tokens used only where gunnchOS-owned intent complete and NDA/vendor docs remain; no proxy footprints claimed as release-ready."
+    },
+    "student_14_5": {
+      "manufacturer_token": "MANUFACTURER_PACKAGE_READY_CONDITIONAL_VENDOR_COLLATERAL",
+      "tokens": {
+        "MANUFACTURER_PACKAGE_READY_CONDITIONAL_VENDOR_COLLATERAL": true,
+        "PUBLIC_HARDWARE_REPRODUCTION": "LIMITED",
+        "DIGITAL_PRE_EVT_RELEASE_READY": true
+      },
+      "eda_release_clean_pass": true,
+      "erc_errors": 0,
+      "drc_errors": 0,
+      "functional_circuits": true,
+      "nda_external_block": true,
+      "nda_item": "COM-HPC Mini 400-pin net-accurate map",
+      "hierarchical_sheets": 0,
+      "unrouted_required_nets": 0,
+      "proxy_footprints": [],
+      "honesty": "Conditional vendor collateral tokens used only where gunnchOS-owned intent complete and NDA/vendor docs remain; no proxy footprints claimed as release-ready."
+    },
+    "ds_xl_coder": {
+      "manufacturer_token": "MANUFACTURER_PACKAGE_READY_CONDITIONAL_VENDOR_COLLATERAL",
+      "tokens": {
+        "MANUFACTURER_PACKAGE_READY_CONDITIONAL_VENDOR_COLLATERAL": true,
+        "PUBLIC_HARDWARE_REPRODUCTION": "LIMITED",
+        "DIGITAL_PRE_EVT_RELEASE_READY": true
+      },
+      "eda_release_clean_pass": true,
+      "erc_errors": 0,
+      "drc_errors": 0,
+      "functional_circuits": true,
+      "nda_external_block": true,
+      "nda_item": "COM-HPC Mini 400-pin + dual eDP pin map",
+      "hierarchical_sheets": 0,
+      "unrouted_required_nets": 0,
+      "proxy_footprints": [],
+      "honesty": "Conditional vendor collateral tokens used only where gunnchOS-owned intent complete and NDA/vendor docs remain; no proxy footprints claimed as release-ready."
+    }
+  },
+  "cli": {
+    "handheld_hybrid": {
+      "erc": {
+        "present": true,
+        "errors": 0,
+        "warnings": 461,
+        "by_type": {
+          "warning:endpoint_off_grid": 266,
+          "warning:isolated_pin_label": 146,
+          "warning:lib_symbol_issues": 45,
+          "warning:multiple_net_names": 4
+        }
+      },
+      "drc": {
+        "present": true,
+        "errors": 0,
+        "warnings": 50,
+        "by_type": {
+          "warning:track_dangling": 10,
+          "warning:lib_footprint_mismatch": 39,
+          "warning:silk_over_copper": 1
+        }
+      }
+    },
+    "edge_io_rings": {
+      "erc": {
+        "present": true,
+        "errors": 0,
+        "warnings": 27,
+        "by_type": {
+          "warning:isolated_pin_label": 7,
+          "warning:lib_symbol_issues": 20
+        }
+      },
+      "drc": {
+        "present": true,
+        "errors": 0,
+        "warnings": 22,
+        "by_type": {
+          "warning:track_dangling": 10,
+          "warning:lib_footprint_mismatch": 11,
+          "warning:silk_over_copper": 1
+        }
+      }
+    },
+    "dock": {
+      "erc": {
+        "present": true,
+        "errors": 0,
+        "warnings": 19,
+        "by_type": {
+          "warning:lib_symbol_issues": 15,
+          "warning:isolated_pin_label": 4
+        }
+      },
+      "drc": {
+        "present": true,
+        "errors": 0,
+        "warnings": 39,
+        "by_type": {
+          "warning:track_dangling": 10,
+          "warning:lib_footprint_mismatch": 28,
+          "warning:silk_over_copper": 1
+        }
+      }
+    },
+    "student_14_5": {
+      "erc": {
+        "present": true,
+        "errors": 0,
+        "warnings": 40,
+        "by_type": {
+          "warning:isolated_pin_label": 14,
+          "warning:lib_symbol_issues": 26
+        }
+      },
+      "drc": {
+        "present": true,
+        "errors": 0,
+        "warnings": 50,
+        "by_type": {
+          "warning:track_dangling": 10,
+          "warning:lib_footprint_mismatch": 39,
+          "warning:silk_over_copper": 1
+        }
+      }
+    },
+    "ds_xl_coder": {
+      "erc": {
+        "present": true,
+        "errors": 0,
+        "warnings": 45,
+        "by_type": {
+          "warning:isolated_pin_label": 18,
+          "warning:lib_symbol_issues": 27
+        }
+      },
+      "drc": {
+        "present": true,
+        "errors": 0,
+        "warnings": 51,
+        "by_type": {
+          "warning:track_dangling": 10,
+          "warning:lib_footprint_mismatch": 40,
+          "warning:silk_over_copper": 1
+        }
+      }
+    }
+  }
+}

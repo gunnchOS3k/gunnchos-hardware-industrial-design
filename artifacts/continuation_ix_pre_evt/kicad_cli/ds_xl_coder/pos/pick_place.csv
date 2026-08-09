@@ -1,0 +1,39 @@
+### Footprint positions - created on 2026-08-09T15:51:10 ###
+### Printed by KiCad version 10.0.5
+## Unit = inches, Angle = deg.
+## Side : All
+# Ref     Val                    Package                           PosX       PosY       Rot  Side
+C1        CL05A104KA5NNNC        C_0402                          5.4331    -1.7323    0.0000  top
+C2        GRM188R60J106ME47D     C_0402                          6.3780    -1.7323    0.0000  top
+D1        APTD1608LCGCK          LED_0603                        9.2126    -1.7323    0.0000  top
+DESD1     PESD5V0S1UL            DFN1006-2                      10.1575    -1.7323    0.0000  top
+JAUD1     AUDIO                  DFN1006-2                       9.2126    -2.6772    0.0000  top
+JBAT1     BATTERY_BMS            DFN1006-2                       4.4882    -3.6220    0.0000  top
+JCAM1     CAMERA                 FFC_40P_0.5mm                  10.1575    -2.6772    0.0000  top
+JDBG1     DEBUG                  DFN1006-2                       6.3780    -3.6220    0.0000  top
+JDISP1    eDP_primary_panel      FFC_40P_0.5mm                   3.5433    -2.6772    0.0000  top
+JDISP2    eDP_secondary_panel    FFC_40P_0.5mm                   7.3228    -3.6220    0.0000  top
+JEC1      EC_FAN                 DFN1006-2                       3.5433    -3.6220    0.0000  top
+JETH1     ETHERNET               DFN1006-2                       8.2677    -2.6772    0.0000  top
+JKEY1     KEYBOARD               DFN1006-2                       1.6535    -3.6220    0.0000  top
+JNVME1    NVME                   FFC_40P_0.5mm                   4.4882    -2.6772    0.0000  top
+JSEC1     SECURITY               DFN1006-2                       5.4331    -3.6220    0.0000  top
+JSIM1     SIM                    DFN1006-2                       6.3780    -2.6772    0.0000  top
+JTRK1     TRACKPAD               DFN1006-2                       2.5984    -3.6220    0.0000  top
+JUSB1     TYPE-C-31-M-12         USB_C_Receptacle_Production     1.6535    -1.7323    0.0000  top
+JWIFI1    WIFI                   DFN1006-2                       7.3228    -2.6772    0.0000  top
+JWWAN1    WWAN                   FFC_40P_0.5mm                   5.4331    -2.6772    0.0000  top
+R1        RC0402FR-0710KL        R_0402                          7.3228    -1.7323    0.0000  top
+R2        RC0402FR-071K0L        R_0402                          8.2677    -1.7323    0.0000  top
+TP1       GND                    TestPoint_Pad                   1.6535    -7.7165    0.0000  top
+TP2       VDD_3V3                TestPoint_Pad                   2.3622    -7.7165    0.0000  top
+TP3       VBUS                   TestPoint_Pad                   3.0709    -7.7165    0.0000  top
+TP4       VSYS                   TestPoint_Pad                   3.7795    -7.7165    0.0000  top
+TP5       USB_DP                 TestPoint_Pad                   4.4882    -7.7165    0.0000  top
+TP6       USB_DM                 TestPoint_Pad                   5.1969    -7.7165    0.0000  top
+U3V3      TPS62864               QFN-16-1EP_3x3mm_P0.5mm         4.4882    -1.7323    0.0000  top
+UCHG1     BQ25792RQMR            WQFN-29-1EP_4x4mm_P0.4mm        3.5433    -1.7323    0.0000  top
+UCOM1     COM-HPC-mMTL-155H-32G  COMHPC_Mini_envelope            1.6535    -2.6772    0.0000  top
+UPD1      TPS65994ADFBRQ1        VQFN-48-1EP_7x7mm_P0.5mm        2.5984    -1.7323    0.0000  top
+UTPM1     SLB9672XQ2.0           VQFN-32-1EP_5x5mm_P0.5mm        2.5984    -2.6772    0.0000  top
+## End

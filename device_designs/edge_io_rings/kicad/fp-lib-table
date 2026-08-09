@@ -1,4 +1,4 @@
 (fp_lib_table
   (version 7)
-  (lib (name "gunnchos_functional")(type "KiCad")(uri "/Users/gunnchos/Downloads/gunnchos-7gc-research-product-spine/repos/gunnchos-hardware-industrial-design/device_designs/_shared_kicad/gunnchos_functional.pretty")(options "")(descr "Cont VIII functional footprints"))
+  (lib (name "gunnchos_production")(type "KiCad")(uri "/Users/gunnchos/Downloads/gunnchos-7gc-research-product-spine/repos/gunnchos-hardware-industrial-design/device_designs/_shared_kicad/gunnchos_production.pretty")(options "")(descr "Cont IX JEDEC/vendor production footprints"))
 )
