@@ -1,0 +1,262 @@
+{
+    "$schema": "https://schemas.kicad.org/erc.v1.json",
+    "coordinate_units": "mm",
+    "date": "2026-08-09T12:16:22",
+    "ignored_checks": [
+        {
+            "description": "Global label only appears once in the schematic",
+            "key": "single_global_label"
+        },
+        {
+            "description": "Four connection points are joined together",
+            "key": "four_way_junction"
+        },
+        {
+            "description": "SPICE model issue",
+            "key": "simulation_model_issue"
+        },
+        {
+            "description": "Assigned footprint doesn't match footprint filters",
+            "key": "footprint_filter"
+        }
+    ],
+    "included_severities": [
+        "error",
+        "warning"
+    ],
+    "kicad_version": "10.0.5",
+    "sheets": [
+        {
+            "path": "/",
+            "uuid_path": "/7957bc12-25c6-587e-0ba6-f25ee2ffa037",
+            "violations": [
+                {
+                    "description": "The current configuration does not include the symbol library ''",
+                    "items": [
+                        {
+                            "description": "Symbol UCOM1 [FuncBlock]",
+                            "pos": {
+                                "x": 0.508,
+                                "y": 0.508
+                            },
+                            "uuid": "8b75a06a-7cf0-e9f6-c56e-fbbe287dd7b1"
+                        }
+                    ],
+                    "severity": "warning",
+                    "type": "lib_symbol_issues"
+                },
+                {
+                    "description": "Label connected to only one pin",
+                    "items": [
+                        {
+                            "description": "Global Label 'eDP0'",
+                            "pos": {
+                                "x": 0.508,
+                                "y": 0.5969
+                            },
+                            "uuid": "30c9ae8d-9964-617b-55ad-3688b76e8a12"
+                        }
+                    ],
+                    "severity": "warning",
+                    "type": "isolated_pin_label"
+                },
+                {
+                    "description": "The current configuration does not include the symbol library ''",
+                    "items": [
+                        {
+                            "description": "Symbol U_WIFI [FuncBlock]",
+                            "pos": {
+                                "x": 0.508,
+                                "y": 0.762
+                            },
+                            "uuid": "1a648bc6-324e-e3d2-5c0b-c08d19038077"
+                        }
+                    ],
+                    "severity": "warning",
+                    "type": "lib_symbol_issues"
+                },
+                {
+                    "description": "The current configuration does not include the symbol library ''",
+                    "items": [
+                        {
+                            "description": "Symbol J_EDP0 [FuncBlock]",
+                            "pos": {
+                                "x": 0.762,
+                                "y": 0.508
+                            },
+                            "uuid": "e2e14d2a-44ff-b8ca-57cb-4fbf2d3032e1"
+                        }
+                    ],
+                    "severity": "warning",
+                    "type": "lib_symbol_issues"
+                },
+                {
+                    "description": "Label connected to only one pin",
+                    "items": [
+                        {
+                            "description": "Global Label 'eDP1'",
+                            "pos": {
+                                "x": 0.762,
+                                "y": 0.5969
+                            },
+                            "uuid": "9de5c0fe-7f66-8382-2267-781f90a5e3a3"
+                        }
+                    ],
+                    "severity": "warning",
+                    "type": "isolated_pin_label"
+                },
+                {
+                    "description": "The current configuration does not include the symbol library ''",
+                    "items": [
+                        {
+                            "description": "Symbol U_WWAN [FuncBlock]",
+                            "pos": {
+                                "x": 0.762,
+                                "y": 0.762
+                            },
+                            "uuid": "c7b886e5-d6ec-7d73-669d-81e9a2754586"
+                        }
+                    ],
+                    "severity": "warning",
+                    "type": "lib_symbol_issues"
+                },
+                {
+                    "description": "The current configuration does not include the symbol library ''",
+                    "items": [
+                        {
+                            "description": "Symbol J_EDP1 [FuncBlock]",
+                            "pos": {
+                                "x": 1.016,
+                                "y": 0.508
+                            },
+                            "uuid": "9c2b70a1-1d20-4339-03d8-708af1bdbdc2"
+                        }
+                    ],
+                    "severity": "warning",
+                    "type": "lib_symbol_issues"
+                },
+                {
+                    "description": "Label connected to only one pin",
+                    "items": [
+                        {
+                            "description": "Global Label 'VSYS'",
+                            "pos": {
+                                "x": 1.016,
+                                "y": 0.5969
+                            },
+                            "uuid": "ba78d958-5f1f-86e9-165b-04d055172664"
+                        }
+                    ],
+                    "severity": "warning",
+                    "type": "isolated_pin_label"
+                },
+                {
+                    "description": "The current configuration does not include the symbol library ''",
+                    "items": [
+                        {
+                            "description": "Symbol U_EC [FuncBlock]",
+                            "pos": {
+                                "x": 1.016,
+                                "y": 0.762
+                            },
+                            "uuid": "b290df5a-f089-12c4-af83-cf656b217589"
+                        }
+                    ],
+                    "severity": "warning",
+                    "type": "lib_symbol_issues"
+                },
+                {
+                    "description": "The current configuration does not include the symbol library ''",
+                    "items": [
+                        {
+                            "description": "Symbol U_BRG [FuncBlock]",
+                            "pos": {
+                                "x": 1.27,
+                                "y": 0.508
+                            },
+                            "uuid": "2dfca221-7961-90c4-d5a2-052524ba0403"
+                        }
+                    ],
+                    "severity": "warning",
+                    "type": "lib_symbol_issues"
+                },
+                {
+                    "description": "Label connected to only one pin",
+                    "items": [
+                        {
+                            "description": "Global Label 'BL_PWM_U'",
+                            "pos": {
+                                "x": 1.27,
+                                "y": 0.5969
+                            },
+                            "uuid": "8296a689-b4f1-4518-0cde-948bb130bff9"
+                        }
+                    ],
+                    "severity": "warning",
+                    "type": "isolated_pin_label"
+                },
+                {
+                    "description": "The current configuration does not include the symbol library ''",
+                    "items": [
+                        {
+                            "description": "Symbol J_HINGE [FuncBlock]",
+                            "pos": {
+                                "x": 1.27,
+                                "y": 0.762
+                            },
+                            "uuid": "bba2dc81-69d3-40ca-4513-587a54bf7c01"
+                        }
+                    ],
+                    "severity": "warning",
+                    "type": "lib_symbol_issues"
+                },
+                {
+                    "description": "The current configuration does not include the symbol library ''",
+                    "items": [
+                        {
+                            "description": "Symbol U_PD [FuncBlock]",
+                            "pos": {
+                                "x": 1.524,
+                                "y": 0.508
+                            },
+                            "uuid": "5a2c79c5-a2b9-29f7-010e-d070b8fce683"
+                        }
+                    ],
+                    "severity": "warning",
+                    "type": "lib_symbol_issues"
+                },
+                {
+                    "description": "Label connected to only one pin",
+                    "items": [
+                        {
+                            "description": "Global Label 'BL_PWM_L'",
+                            "pos": {
+                                "x": 1.524,
+                                "y": 0.5969
+                            },
+                            "uuid": "8bddd9ab-e87c-14a5-e477-9f96c7f8eef5"
+                        }
+                    ],
+                    "severity": "warning",
+                    "type": "isolated_pin_label"
+                },
+                {
+                    "description": "The current configuration does not include the symbol library ''",
+                    "items": [
+                        {
+                            "description": "Symbol U_CHG [FuncBlock]",
+                            "pos": {
+                                "x": 1.778,
+                                "y": 0.508
+                            },
+                            "uuid": "c267a83e-2d72-edf1-69fe-5677978f615b"
+                        }
+                    ],
+                    "severity": "warning",
+                    "type": "lib_symbol_issues"
+                }
+            ]
+        }
+    ],
+    "source": "ds_xl_coder.kicad_sch"
+}

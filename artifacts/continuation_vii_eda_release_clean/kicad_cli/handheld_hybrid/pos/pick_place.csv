@@ -1,0 +1,25 @@
+### Footprint positions - created on 2026-08-09T12:16:26 ###
+### Printed by KiCad version 10.0.5
+## Unit = inches, Angle = deg.
+## Side : All
+# Ref     Val                   Package                PosX       PosY       Rot  Side
+BT1       6000mAh_pack          Block_SMD_10x10      2.5984    -1.3386    0.0000  top
+JS1       RKJXV122400D          Block_SMD_10x10      3.8583    -1.3386    0.0000  top
+JS2       RKJXV122400D          Block_SMD_10x10      4.4882    -1.3386    0.0000  top
+JSOM1     SODIMM-260            Block_SMD_10x10      1.9685    -0.7087    0.0000  top
+J_AUDIO   I2S_HP_codec          Block_SMD_10x10      1.3386    -1.3386    0.0000  top
+J_DBG     UART2_3pin            Block_SMD_10x10      1.9685    -1.3386    0.0000  top
+J_DISP    7in_1080p_120Hz_IPS   Block_SMD_10x10      2.5984    -0.7087    0.0000  top
+J_USBC    USB_C_receptacle      Block_SMD_10x10      7.6378    -0.7087    0.0000  top
+J_USD     microSD_socket        Block_SMD_10x10      0.7087    -1.3386    0.0000  top
+SW_ABXY   tactile_ABXY_LR_DPAD  Block_SMD_10x10      3.2283    -1.3386    0.0000  top
+U         FuncBlock             Block_SMD_10x10      0.7087    -0.7087    0.0000  top
+USOM1     RM121-D8E32           Block_SMD_10x10      1.3386    -0.7087    0.0000  top
+U_CHG     BQ25895RTWR           Block_SMD_10x10      5.7480    -0.7087    0.0000  top
+U_FG      BQ27Z561YPHR          Block_SMD_10x10      6.3780    -0.7087    0.0000  top
+U_HID     STM32F103C8T6         Block_SMD_10x10      4.4882    -0.7087    0.0000  top
+U_PD      TPS65987DDHRSHR       Block_SMD_10x10      5.1181    -0.7087    0.0000  top
+U_SE      SE050C1HQ1            Block_SMD_10x10      7.0079    -0.7087    0.0000  top
+U_WIFI    AP6275P               Block_SMD_10x10      3.2283    -0.7087    0.0000  top
+U_WWAN    RM520N-GL             Block_SMD_10x10      3.8583    -0.7087    0.0000  top
+## End

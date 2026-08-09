@@ -1,0 +1,157 @@
+[
+  {
+    "product": "student_14_5",
+    "kicad_cli": "/opt/homebrew/bin/kicad-cli",
+    "version": "10.0.5",
+    "erc_rc": 0,
+    "drc_rc": 0,
+    "gerber_rc": 0,
+    "drill_rc": 0,
+    "pos_rc": 0,
+    "step_rc": 0,
+    "netlist_rc": 0,
+    "gerber_count": 17,
+    "step_bytes": 14798,
+    "erc": {
+      "present": true,
+      "errors": 0,
+      "warnings": 22,
+      "by_type": {
+        "warning:lib_symbol_issues": 16,
+        "warning:isolated_pin_label": 6
+      },
+      "violation_entries": 22
+    },
+    "drc": {
+      "present": true,
+      "errors": 0,
+      "warnings": 0,
+      "by_type": {},
+      "violation_entries": 0
+    }
+  },
+  {
+    "product": "ds_xl_coder",
+    "kicad_cli": "/opt/homebrew/bin/kicad-cli",
+    "version": "10.0.5",
+    "erc_rc": 0,
+    "drc_rc": 0,
+    "gerber_rc": 0,
+    "drill_rc": 0,
+    "pos_rc": 0,
+    "step_rc": 0,
+    "netlist_rc": 0,
+    "gerber_count": 17,
+    "step_bytes": 14796,
+    "erc": {
+      "present": true,
+      "errors": 0,
+      "warnings": 15,
+      "by_type": {
+        "warning:lib_symbol_issues": 10,
+        "warning:isolated_pin_label": 5
+      },
+      "violation_entries": 15
+    },
+    "drc": {
+      "present": true,
+      "errors": 0,
+      "warnings": 0,
+      "by_type": {},
+      "violation_entries": 0
+    }
+  },
+  {
+    "product": "handheld_hybrid",
+    "kicad_cli": "/opt/homebrew/bin/kicad-cli",
+    "version": "10.0.5",
+    "erc_rc": 0,
+    "drc_rc": 0,
+    "gerber_rc": 0,
+    "drill_rc": 0,
+    "pos_rc": 0,
+    "step_rc": 0,
+    "netlist_rc": 0,
+    "gerber_count": 17,
+    "step_bytes": 14804,
+    "erc": {
+      "present": true,
+      "errors": 0,
+      "warnings": 35,
+      "by_type": {
+        "warning:lib_symbol_issues": 18,
+        "warning:isolated_pin_label": 17
+      },
+      "violation_entries": 35
+    },
+    "drc": {
+      "present": true,
+      "errors": 0,
+      "warnings": 0,
+      "by_type": {},
+      "violation_entries": 0
+    }
+  },
+  {
+    "product": "edge_io_rings",
+    "kicad_cli": "/opt/homebrew/bin/kicad-cli",
+    "version": "10.0.5",
+    "erc_rc": 0,
+    "drc_rc": 0,
+    "gerber_rc": 0,
+    "drill_rc": 0,
+    "pos_rc": 0,
+    "step_rc": 0,
+    "netlist_rc": 0,
+    "gerber_count": 17,
+    "step_bytes": 14752,
+    "erc": {
+      "present": true,
+      "errors": 0,
+      "warnings": 22,
+      "by_type": {
+        "warning:lib_symbol_issues": 12,
+        "warning:isolated_pin_label": 10
+      },
+      "violation_entries": 22
+    },
+    "drc": {
+      "present": true,
+      "errors": 0,
+      "warnings": 0,
+      "by_type": {},
+      "violation_entries": 0
+    }
+  },
+  {
+    "product": "dock",
+    "kicad_cli": "/opt/homebrew/bin/kicad-cli",
+    "version": "10.0.5",
+    "erc_rc": 0,
+    "drc_rc": 0,
+    "gerber_rc": 0,
+    "drill_rc": 0,
+    "pos_rc": 0,
+    "step_rc": 0,
+    "netlist_rc": 0,
+    "gerber_count": 17,
+    "step_bytes": 14782,
+    "erc": {
+      "present": true,
+      "errors": 0,
+      "warnings": 45,
+      "by_type": {
+        "warning:isolated_pin_label": 24,
+        "warning:lib_symbol_issues": 21
+      },
+      "violation_entries": 45
+    },
+    "drc": {
+      "present": true,
+      "errors": 0,
+      "warnings": 0,
+      "by_type": {},
+      "violation_entries": 0
+    }
+  }
+]

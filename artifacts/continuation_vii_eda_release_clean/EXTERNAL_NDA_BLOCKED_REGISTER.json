@@ -1,0 +1,23 @@
+{
+  "updated_at_utc": "2026-08-09T17:16:18Z",
+  "entries": [
+    {
+      "board": "student_14_5",
+      "item": "COM-HPC Mini 400-pin net-accurate carrier",
+      "status": "EXTERNAL_NDA_BLOCKED",
+      "decision": "KEEP_ADLINK_AND_ACCEPT_NARROW_EXTERNAL_BLOCK"
+    },
+    {
+      "board": "ds_xl_coder",
+      "item": "COM-HPC Mini 400-pin net-accurate carrier + dual eDP pin map",
+      "status": "EXTERNAL_NDA_BLOCKED",
+      "decision": "KEEP_ADLINK_AND_ACCEPT_NARROW_EXTERNAL_BLOCK"
+    },
+    {
+      "board": "dock",
+      "item": "Intel JHL8440 / JHL9040R package pin-accurate fanout",
+      "status": "EXTERNAL_NDA_BLOCKED",
+      "note": "Topology nets digital; package pins not invented"
+    }
+  ]
+}

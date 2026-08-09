@@ -1,29 +1,25 @@
 {
   "product": "edge_io_rings",
-  "updated_at_utc": "2026-08-08T21:04:47Z",
-  "kicad_cli": "/opt/homebrew/bin/kicad-cli",
-  "kicad_version": "10.0.5",
+  "updated_at_utc": "2026-08-09T17:16:18Z",
+  "continuation": "VII",
+  "kicad_cli_execution": true,
   "erc": {
-    "status": "RAN_WITH_VIOLATIONS",
-    "report": "docs/full_product_family/evidence/kicad_cli/edge_io_rings/erc.json"
+    "present": true,
+    "errors": 0,
+    "warnings": 22,
+    "by_type": {
+      "warning:lib_symbol_issues": 12,
+      "warning:isolated_pin_label": 10
+    },
+    "violation_entries": 22
   },
   "drc": {
-    "status": "RAN",
-    "report": "docs/full_product_family/evidence/kicad_cli/edge_io_rings/drc.json"
+    "present": true,
+    "errors": 0,
+    "warnings": 0,
+    "by_type": {},
+    "violation_entries": 0
   },
-  "gerber": {
-    "status": "EXPORTED",
-    "count": 11
-  },
-  "pick_place": {
-    "status": "EXPORTED"
-  },
-  "step": {
-    "status": "EXPORTED"
-  },
-  "full_hardware_design_release_complete": false,
-  "design_release_complete": false,
-  "kicad_cli_erc_pass": false,
-  "kicad_cli_drc_pass": false,
-  "note": "Device:R skeleton expected ERC violations; no PASS / COMPLETE claim"
+  "eda_release_clean_pass": false,
+  "note": "Cont VII fixed Cont VI dangling-label ERC and fp-lib DRC warnings via FuncBlock wiring + local footprints. Boards remain structural; EDA_RELEASE_CLEAN_PASS not claimed."
 }

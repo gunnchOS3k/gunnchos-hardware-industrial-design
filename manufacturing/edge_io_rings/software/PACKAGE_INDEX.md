@@ -1,0 +1,8 @@
+# edge_io_rings — software package pointer
+
+| Item | Status |
+|---|---|
+| Device profile | device_designs / shared_contracts |
+| Drivers | OS compatibility evidence |
+| Image compatibility | hardware_os_validation |
+| Recovery | firmware descriptors |
