@@ -1,7 +1,7 @@
 # Public-engineerability gate — Student 14.5 / DS-XL Coder
 
-Updated: 2026-08-08T20:58:59Z  
-Branch: `cursor/full-product-continuation-vi-eda-closure`  
+Updated: 2026-08-09T17:16:18Z  
+Branch: `cursor/full-product-continuation-vii-eda-release-clean`  
 Base: `origin/main` @ `38b37221074446730709af5682a06cb4cefd39fc` (#48)
 
 PHYSICAL_EXECUTION_FREEZE ACTIVE — decision is digital/process only.
@@ -44,3 +44,7 @@ Keep **COM-HPC-mMTL-155H-32G** as frozen compute MPN.
 
 ## Token
 `PUBLIC_ENGINEERABILITY_GATE_OPTION3_ADLINK_NDA_EXTERNAL`
+
+## Continuation VII reaffirmation
+
+Re-audited 2026-08-09T17:11:27Z. Decision unchanged: `KEEP_ADLINK_AND_ACCEPT_NARROW_EXTERNAL_BLOCK`.

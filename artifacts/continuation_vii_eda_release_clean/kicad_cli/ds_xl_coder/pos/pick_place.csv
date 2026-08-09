@@ -1,0 +1,17 @@
+### Footprint positions - created on 2026-08-09T12:16:23 ###
+### Printed by KiCad version 10.0.5
+## Unit = inches, Angle = deg.
+## Side : All
+# Ref     Val                    Package                PosX       PosY       Rot  Side
+J_EDP0    UPPER_eDP_2560x1600    Block_SMD_10x10      1.9685    -0.7087    0.0000  top
+J_EDP1    LOWER_eDP_1920x1200    Block_SMD_10x10      2.5984    -0.7087    0.0000  top
+J_HINGE   HINGE_FLEX             Block_SMD_10x10      7.0079    -0.7087    0.0000  top
+U         FuncBlock              Block_SMD_10x10      0.7087    -0.7087    0.0000  top
+UCOM1     COM-HPC-mMTL-155H-32G  Block_SMD_10x10      1.3386    -0.7087    0.0000  top
+U_BRG     LT8711_or_PS8625       Block_SMD_10x10      3.2283    -0.7087    0.0000  top
+U_CHG     BQ25792                Block_SMD_10x10      4.4882    -0.7087    0.0000  top
+U_EC      EC_NPCX_or_ITE         Block_SMD_10x10      6.3780    -0.7087    0.0000  top
+U_PD      TPS65994               Block_SMD_10x10      3.8583    -0.7087    0.0000  top
+U_WIFI    BE200                  Block_SMD_10x10      5.1181    -0.7087    0.0000  top
+U_WWAN    RM520N-GL              Block_SMD_10x10      5.7480    -0.7087    0.0000  top
+## End

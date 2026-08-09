@@ -61,12 +61,19 @@ gate6-dry-run:
 
 # Continuation VI — EDA closure / KiCad resume
 .PHONY: continuation-vi validate-continuation-vi kicad-validate-family placeholder-scan-vi
+.PHONY: continuation-vii validate-continuation-vii
 
 continuation-vi:
 	$(PYTHON) scripts/continuation_vi_eda_closure.py
 
 validate-continuation-vi:
 	$(PYTHON) scripts/validate_continuation_vi.py
+
+continuation-vii:
+	$(PYTHON) scripts/continuation_vii_eda_release_clean.py
+
+validate-continuation-vii:
+	$(PYTHON) scripts/validate_continuation_vii.py
 
 kicad-validate-family:
 	bash scripts/run_family_kicad_cli.sh

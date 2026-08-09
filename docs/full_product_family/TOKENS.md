@@ -33,3 +33,8 @@ Branch: `cursor/full-product-continuation-vi-eda-closure`
 - Fab / purchase / physical prototype
 - Thunderbolt 5 dock
 - Fake COM-HPC or Intel package pinouts
+
+## Continuation VII
+
+See `TOKENS_CONT_VII.md` / `RELEASE_CLEAN_TOKENS_CONT_VII.json` (updated 2026-08-09T17:16:18Z).
+Key: `KICAD_CLI_EXECUTION_PASS` ≠ `*_EDA_RELEASE_CLEAN_PASS` (all release-clean tokens currently FALSE — structural PCB).

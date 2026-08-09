@@ -1,0 +1,26 @@
+### Footprint positions - created on 2026-08-09T12:16:31 ###
+### Printed by KiCad version 10.0.5
+## Unit = inches, Angle = deg.
+## Side : All
+# Ref     Val              Package                PosX       PosY       Rot  Side
+J1        USB4085          Block_SMD_10x10      1.9685    -1.3386    0.0000  top
+J2A       USB4085          Block_SMD_10x10      2.5984    -1.3386    0.0000  top
+J2B       USB4085          Block_SMD_10x10      3.2283    -1.3386    0.0000  top
+J3A       USB3_A           Block_SMD_10x10      3.8583    -1.3386    0.0000  top
+J3B       USB3_A           Block_SMD_10x10      4.4882    -1.3386    0.0000  top
+J4        HDMI_TypeA       Block_SMD_10x10      5.1181    -1.3386    0.0000  top
+J5        JK0-0136NL       Block_SMD_10x10      5.7480    -1.3386    0.0000  top
+J6        Mill-Max_pogo    Block_SMD_10x10      6.3780    -1.3386    0.0000  top
+U         FuncBlock        Block_SMD_10x10      0.7087    -0.7087    0.0000  top
+U1        JHL8440          Block_SMD_10x10      1.3386    -0.7087    0.0000  top
+U1A       VL108            Block_SMD_10x10      2.5984    -0.7087    0.0000  top
+U1R       JHL9040R         Block_SMD_10x10      1.9685    -0.7087    0.0000  top
+U2        TPS65994ADFBRQ1  Block_SMD_10x10      3.2283    -0.7087    0.0000  top
+U3        RTL8156          Block_SMD_10x10      3.8583    -0.7087    0.0000  top
+U4        VL817            Block_SMD_10x10      4.4882    -0.7087    0.0000  top
+U5        TPS55288RPMR     Block_SMD_10x10      5.1181    -0.7087    0.0000  top
+U6        TPS62864         Block_SMD_10x10      5.7480    -0.7087    0.0000  top
+U7        TLV75533PDRVR    Block_SMD_10x10      6.3780    -0.7087    0.0000  top
+U8        DWM3001C         Block_SMD_10x10      0.7087    -1.3386    0.0000  top
+U9        ALC4050          Block_SMD_10x10      1.3386    -1.3386    0.0000  top
+## End

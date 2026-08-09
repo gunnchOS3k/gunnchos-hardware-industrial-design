@@ -1,0 +1,18 @@
+{
+  "updated_at_utc": "2026-08-09T17:16:18Z",
+  "decision": "KEEP_ADLINK_AND_ACCEPT_NARROW_EXTERNAL_BLOCK",
+  "token": "PUBLIC_ENGINEERABILITY_GATE_OPTION3_ADLINK_NDA_EXTERNAL",
+  "rationale": [
+    "ADR-HW-001 / ADR-FP-001 require Ultra 7 155H Meteor Lake on COM-HPC Mini.",
+    "No public 400-pin COM-HPC Mini pinout available without NDA.",
+    "Radxa NX5 public pinout remains Handheld-only (wrong CPU/form-factor for Student/DS-XL).",
+    "Cont VII re-audit: migrating to a public SoM would break accepted product ADRs."
+  ],
+  "student_token": "STUDENT_BLOCKED_NDA",
+  "dsxl_token": "DSXL_BLOCKED_NDA",
+  "not_blocking": [
+    "handheld_hybrid",
+    "edge_io_rings",
+    "dock"
+  ]
+}
