@@ -1,0 +1,9 @@
+{
+  "updated_at_utc": "2026-08-09T20:50:52Z",
+  "ledger": "docs/release/FOOTPRINT_VERIFICATION_LEDGER.csv",
+  "entries": 25,
+  "production_entries": 21,
+  "external_entries": 4,
+  "proxy_hits_in_pcb": [],
+  "bom_sch_fp_crosscheck": "MPN properties on schematic + ledger package map + production lib"
+}

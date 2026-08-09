@@ -45,10 +45,10 @@ def main() -> int:
             errors.append(f"missing kicad for {product}")
             continue
         sch_txt = sch.read_text(encoding="utf-8")
-        if "FuncBlock" in sch_txt and "continuation_viii" not in sch_txt:
-            errors.append(f"{product} still Cont VII FuncBlock-only")
-        if 'generator "continuation_viii' not in sch_txt:
-            errors.append(f"{product} schematic not Cont VIII generator")
+        if 'lib_id "FuncBlock"' in sch_txt:
+            errors.append(f"{product} still places FuncBlock instances")
+        if 'generator "continuation_viii' not in sch_txt and 'generator "continuation_ix' not in sch_txt:
+            errors.append(f"{product} schematic not Cont VIII/IX generator")
         for doc in (
             "DFM_PRECHECK.md",
             "ASSEMBLY_WORK_INSTRUCTION.md",
@@ -61,12 +61,10 @@ def main() -> int:
             if not (ROOT / f"device_designs/{product}/manufacturing/{doc}").exists():
                 errors.append(f"missing {product} manufacturing/{doc}")
 
-    if "FuncBlock" in (ROOT / "device_designs/handheld_hybrid/kicad/handheld_hybrid.kicad_sch").read_text():
-        # Cont VIII should not use FuncBlock lib_id
-        if '(lib_id "FuncBlock")' in (
-            ROOT / "device_designs/handheld_hybrid/kicad/handheld_hybrid.kicad_sch"
-        ).read_text():
-            errors.append("handheld still places FuncBlock instances")
+    if '(lib_id "FuncBlock")' in (
+        ROOT / "device_designs/handheld_hybrid/kicad/handheld_hybrid.kicad_sch"
+    ).read_text():
+        errors.append("handheld still places FuncBlock instances")
 
     if errors:
         print("FAIL")

@@ -50,6 +50,7 @@ def test_cont_viii_schematics_functional_not_funcblock():
         )
         assert "(wire " in sch
         assert 'lib_id "FuncBlock"' not in sch
+        assert "continuation_viii" in sch or "continuation_ix" in sch
         for sym in REQUIRED_SYMBOLS[prod]:
             assert f'lib_id "{sym}"' in sch, f"{prod} missing {sym}"
 
@@ -70,4 +71,5 @@ def test_cont_viii_blockers_buckets_only():
     for key in ("DIGITAL", "PHYSICAL", "EXTERNAL"):
         assert key in blockers
         assert isinstance(blockers[key], list)
-    assert blockers["DIGITAL"], "expected residual digital packaging work"
+    # Cont VIII residual DIGITAL may be closed by Cont IX; artifacts remain historical.
+    assert isinstance(blockers["DIGITAL"], list)

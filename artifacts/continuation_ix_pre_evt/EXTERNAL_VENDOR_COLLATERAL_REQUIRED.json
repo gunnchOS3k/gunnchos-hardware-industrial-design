@@ -1,0 +1,59 @@
+{
+  "updated_at_utc": "2026-08-09T20:50:52Z",
+  "requests": [
+    {
+      "part": "COM-HPC-mMTL-155H-32G / COM-HPC Mini connector",
+      "document_needed": "PICMG COM-HPC Mini 400-pin net-accurate pin map + ADLINK carrier design guide",
+      "why": "Student/DS-XL carrier pin-accurate fanout cannot be completed from public docs",
+      "portal": "PICMG member portal / ADLINK NDA portal",
+      "format": "PDF + pin table CSV under NARROW_NDA",
+      "board": "student_14_5,ds_xl_coder",
+      "readiness_token": "EXTERNAL_VENDOR_COLLATERAL_REQUIRED"
+    },
+    {
+      "part": "COM-HPC dual eDP lane map",
+      "document_needed": "Dual eDP pin mapping on COM-HPC Mini for DS-XL secondary panel",
+      "why": "DS-XL dual display differentiator blocked without pin-accurate eDP2",
+      "portal": "ADLINK NDA portal",
+      "format": "PDF pin map",
+      "board": "ds_xl_coder",
+      "readiness_token": "EXTERNAL_VENDOR_COLLATERAL_REQUIRED"
+    },
+    {
+      "part": "Intel JHL8440",
+      "document_needed": "Package ball map + reference schematic",
+      "why": "Dock USB4 controller production fanout",
+      "portal": "Intel Resource & Documentation Center (NDA)",
+      "format": "BGA ball map PDF + IBIS optional",
+      "board": "dock",
+      "readiness_token": "EXTERNAL_VENDOR_COLLATERAL_REQUIRED"
+    },
+    {
+      "part": "Intel JHL9040R",
+      "document_needed": "Package ball map + retimer placement guide",
+      "why": "Dock TB4 retimer production fanout (not TB5)",
+      "portal": "Intel Resource & Documentation Center (NDA)",
+      "format": "BGA ball map PDF",
+      "board": "dock",
+      "readiness_token": "EXTERNAL_VENDOR_COLLATERAL_REQUIRED"
+    },
+    {
+      "part": "Display panels + hinge flex",
+      "document_needed": "Exact panel MPNs, eDP connector pinout, hinge bend OEM spec",
+      "why": "DS-XL AVL quotes + bend radius for manufacturing drawings",
+      "portal": "Panel OEM / hinge ODMs under NDA or quote",
+      "format": "Datasheet + mechanical STEP + bend drawing",
+      "board": "ds_xl_coder",
+      "readiness_token": "EXTERNAL_VENDOR_COLLATERAL_REQUIRED"
+    },
+    {
+      "part": "Solder paste / reflow + fastener torque OEM",
+      "document_needed": "Paste MPN + reflow profile; OEM torque for display/hinge fasteners",
+      "why": "Assembly package must not invent cure/torque values",
+      "portal": "Paste vendor + mechanical OEM",
+      "format": "PDS + torque table",
+      "board": "all",
+      "readiness_token": "EXTERNAL_VENDOR_COLLATERAL_REQUIRED"
+    }
+  ]
+}

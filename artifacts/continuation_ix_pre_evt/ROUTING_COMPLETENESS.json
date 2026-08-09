@@ -1,0 +1,256 @@
+{
+  "updated_at_utc": "2026-08-09T20:50:52Z",
+  "boards": [
+    {
+      "product": "handheld_hybrid",
+      "outline_mm": [
+        240.0,
+        130.0
+      ],
+      "footprints": 39,
+      "tracks": 15,
+      "vias": 0,
+      "zones": 0,
+      "fiducials": 3,
+      "test_points": 6,
+      "mounting_holes": 4,
+      "diff_pair_intent_tracks": true,
+      "required_nets": [
+        "GND",
+        "VBUS",
+        "VDD_3V3",
+        "VSYS"
+      ],
+      "routed_required_nets": [
+        "GND",
+        "VBUS",
+        "VDD_3V3",
+        "VSYS"
+      ],
+      "unrouted_required_nets": 0,
+      "production_footprints": [
+        "gunnchos_production:USB_C_Receptacle_Production",
+        "gunnchos_production:VQFN-56-1EP_7x7mm_P0.4mm",
+        "gunnchos_production:WQFN-24-1EP_4x4mm_P0.5mm",
+        "gunnchos_production:QFN-16-1EP_3x3mm_P0.5mm",
+        "gunnchos_production:C_0402",
+        "gunnchos_production:C_0402",
+        "gunnchos_production:R_0402",
+        "gunnchos_production:R_0402",
+        "gunnchos_production:LED_0603",
+        "gunnchos_production:DFN1006-2",
+        "gunnchos_production:LQFP-48_7x7mm_P0.5mm",
+        "gunnchos_production:FFC_40P_0.5mm",
+        "gunnchos_production:DFN1006-2",
+        "gunnchos_production:DFN1006-2",
+        "gunnchos_production:FFC_40P_0.5mm",
+        "gunnchos_production:DFN1006-2",
+        "gunnchos_production:DFN1006-2",
+        "gunnchos_production:DFN1006-2",
+        "gunnchos_production:DFN1006-2",
+        "gunnchos_production:DFN1006-2",
+        "gunnchos_production:DFN1006-2",
+        "gunnchos_production:DFN1006-2",
+        "gunnchos_production:DFN1006-2",
+        "gunnchos_production:DFN1006-2",
+        "gunnchos_production:DFN1006-2",
+        "gunnchos_production:SODIMM-260_DDR4_Socket"
+      ],
+      "proxy_footprints": []
+    },
+    {
+      "product": "edge_io_rings",
+      "outline_mm": [
+        90.0,
+        70.0
+      ],
+      "footprints": 15,
+      "tracks": 15,
+      "vias": 0,
+      "zones": 0,
+      "fiducials": 3,
+      "test_points": 6,
+      "mounting_holes": 4,
+      "diff_pair_intent_tracks": true,
+      "required_nets": [
+        "GND",
+        "VBUS",
+        "VDD_3V3",
+        "VSYS"
+      ],
+      "routed_required_nets": [
+        "GND",
+        "VBUS",
+        "VDD_3V3",
+        "VSYS"
+      ],
+      "unrouted_required_nets": 0,
+      "production_footprints": [
+        "gunnchos_production:USB_C_Receptacle_Production",
+        "gunnchos_production:VQFN-48-1EP_7x7mm_P0.5mm"
+      ],
+      "proxy_footprints": []
+    },
+    {
+      "product": "dock",
+      "outline_mm": [
+        200.0,
+        140.0
+      ],
+      "footprints": 28,
+      "tracks": 15,
+      "vias": 0,
+      "zones": 0,
+      "fiducials": 3,
+      "test_points": 6,
+      "mounting_holes": 4,
+      "diff_pair_intent_tracks": true,
+      "required_nets": [
+        "GND",
+        "VBUS",
+        "VDD_3V3",
+        "VSYS"
+      ],
+      "routed_required_nets": [
+        "GND",
+        "VBUS",
+        "VDD_3V3",
+        "VSYS"
+      ],
+      "unrouted_required_nets": 0,
+      "production_footprints": [
+        "gunnchos_production:USB_C_Receptacle_Production",
+        "gunnchos_production:VQFN-48-1EP_7x7mm_P0.5mm",
+        "gunnchos_production:WQFN-29-1EP_4x4mm_P0.4mm",
+        "gunnchos_production:QFN-16-1EP_3x3mm_P0.5mm",
+        "gunnchos_production:C_0402",
+        "gunnchos_production:C_0402",
+        "gunnchos_production:R_0402",
+        "gunnchos_production:R_0402",
+        "gunnchos_production:LED_0603",
+        "gunnchos_production:DFN1006-2",
+        "gunnchos_production:JHL8440_ROLE_envelope",
+        "gunnchos_production:JHL9040R_ROLE_envelope",
+        "gunnchos_production:QFN-48-1EP_6x6mm_P0.4mm",
+        "gunnchos_production:QFN-48-1EP_7x7mm_P0.5mm",
+        "gunnchos_production:USB_C_Receptacle_Production"
+      ],
+      "proxy_footprints": []
+    },
+    {
+      "product": "student_14_5",
+      "outline_mm": [
+        300.0,
+        200.0
+      ],
+      "footprints": 39,
+      "tracks": 15,
+      "vias": 0,
+      "zones": 0,
+      "fiducials": 3,
+      "test_points": 6,
+      "mounting_holes": 4,
+      "diff_pair_intent_tracks": true,
+      "required_nets": [
+        "GND",
+        "VBUS",
+        "VDD_3V3",
+        "VSYS"
+      ],
+      "routed_required_nets": [
+        "GND",
+        "VBUS",
+        "VDD_3V3",
+        "VSYS"
+      ],
+      "unrouted_required_nets": 0,
+      "production_footprints": [
+        "gunnchos_production:USB_C_Receptacle_Production",
+        "gunnchos_production:VQFN-48-1EP_7x7mm_P0.5mm",
+        "gunnchos_production:WQFN-29-1EP_4x4mm_P0.4mm",
+        "gunnchos_production:QFN-16-1EP_3x3mm_P0.5mm",
+        "gunnchos_production:C_0402",
+        "gunnchos_production:C_0402",
+        "gunnchos_production:R_0402",
+        "gunnchos_production:R_0402",
+        "gunnchos_production:LED_0603",
+        "gunnchos_production:DFN1006-2",
+        "gunnchos_production:COMHPC_Mini_envelope",
+        "gunnchos_production:VQFN-32-1EP_5x5mm_P0.5mm",
+        "gunnchos_production:FFC_40P_0.5mm",
+        "gunnchos_production:FFC_40P_0.5mm",
+        "gunnchos_production:FFC_40P_0.5mm",
+        "gunnchos_production:DFN1006-2",
+        "gunnchos_production:DFN1006-2",
+        "gunnchos_production:DFN1006-2",
+        "gunnchos_production:DFN1006-2",
+        "gunnchos_production:FFC_40P_0.5mm",
+        "gunnchos_production:DFN1006-2",
+        "gunnchos_production:DFN1006-2",
+        "gunnchos_production:DFN1006-2",
+        "gunnchos_production:DFN1006-2",
+        "gunnchos_production:DFN1006-2",
+        "gunnchos_production:DFN1006-2"
+      ],
+      "proxy_footprints": []
+    },
+    {
+      "product": "ds_xl_coder",
+      "outline_mm": [
+        320.0,
+        220.0
+      ],
+      "footprints": 40,
+      "tracks": 15,
+      "vias": 0,
+      "zones": 0,
+      "fiducials": 3,
+      "test_points": 6,
+      "mounting_holes": 4,
+      "diff_pair_intent_tracks": true,
+      "required_nets": [
+        "GND",
+        "VBUS",
+        "VDD_3V3",
+        "VSYS"
+      ],
+      "routed_required_nets": [
+        "GND",
+        "VBUS",
+        "VDD_3V3",
+        "VSYS"
+      ],
+      "unrouted_required_nets": 0,
+      "production_footprints": [
+        "gunnchos_production:USB_C_Receptacle_Production",
+        "gunnchos_production:VQFN-48-1EP_7x7mm_P0.5mm",
+        "gunnchos_production:WQFN-29-1EP_4x4mm_P0.4mm",
+        "gunnchos_production:QFN-16-1EP_3x3mm_P0.5mm",
+        "gunnchos_production:C_0402",
+        "gunnchos_production:C_0402",
+        "gunnchos_production:R_0402",
+        "gunnchos_production:R_0402",
+        "gunnchos_production:LED_0603",
+        "gunnchos_production:DFN1006-2",
+        "gunnchos_production:COMHPC_Mini_envelope",
+        "gunnchos_production:VQFN-32-1EP_5x5mm_P0.5mm",
+        "gunnchos_production:FFC_40P_0.5mm",
+        "gunnchos_production:FFC_40P_0.5mm",
+        "gunnchos_production:FFC_40P_0.5mm",
+        "gunnchos_production:DFN1006-2",
+        "gunnchos_production:DFN1006-2",
+        "gunnchos_production:DFN1006-2",
+        "gunnchos_production:DFN1006-2",
+        "gunnchos_production:FFC_40P_0.5mm",
+        "gunnchos_production:DFN1006-2",
+        "gunnchos_production:DFN1006-2",
+        "gunnchos_production:DFN1006-2",
+        "gunnchos_production:DFN1006-2",
+        "gunnchos_production:DFN1006-2",
+        "gunnchos_production:DFN1006-2",
+        "gunnchos_production:FFC_40P_0.5mm"
+      ],
+      "proxy_footprints": []
+    }
+  ]
+}

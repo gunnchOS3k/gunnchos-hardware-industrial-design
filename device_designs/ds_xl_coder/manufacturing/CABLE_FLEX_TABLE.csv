@@ -1,0 +1,3 @@
+cable,type,mpn_or_class,bend_radius,source,status
+display_edp,FFC_40P_0.5mm,Hirose_FH12_class,>=10x_thickness_IPC-2223,IPC guidance,MODELED
+hinge_flex,custom_FFC,EXTERNAL_OEM,EXTERNAL_OEM_bend,DS-XL OEM,EXTERNAL
