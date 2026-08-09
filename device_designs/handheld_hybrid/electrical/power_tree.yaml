@@ -1,14 +1,20 @@
 device_id: handheld_hybrid
-evidence_class: MODELED
-strategy: SOM_CARRIER
-updated_at_utc: "2026-08-08T19:40:00Z"
-battery_mah_modeled: 6000
+evidence_class: PUBLIC_PINOUT+MODELED
 rails:
-  - {name: VBAT, volts: 7.4, note: "2S nom; 1S2P alt 3.8V"}
-  - {name: VSYS, regulator_mpn: BQ25895_or_BQ25792}
-  - {name: SOM_VIN, source: VSYS}
-  - {name: VDD_5V, regulator_mpn: TPS62864_class}
-  - {name: VDD_3V3, regulator_mpn: TPS62864_class}
-  - {name: VDD_DISPLAY_BL, note: "boost for LED backlight"}
-som_mpn: RM121-D8E32
-soc: RK3588S
+- name: VBUS
+  volts: 5.0
+  source: USB-C PD
+- name: VSYS
+  volts: 3.8
+  regulator_mpn: BQ25895RTWR
+- name: SOM_VIN
+  volts: 5.0
+  note: VCC_SYSIN pins 251-260 PUBLIC_PINOUT
+- name: VDD_3V3
+  volts: 3.3
+  regulator_mpn: TPS62864
+- name: VDD_DISPLAY_BL
+  volts: 12.0
+  note: boost modeled
+updated_at_utc: '2026-08-09T19:46:44Z'
+cont: VIII

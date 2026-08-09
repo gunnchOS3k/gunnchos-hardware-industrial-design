@@ -1,0 +1,23 @@
+{
+  "device_id": "edge_io_rings",
+  "evidence_class": "PUBLIC_DOCS",
+  "rails": [
+    {
+      "name": "VBUS_CRADLE",
+      "volts": 5.0,
+      "source": "pogo cradle"
+    },
+    {
+      "name": "VBAT",
+      "volts": 3.7,
+      "note": "LiPo 250mAh candidate"
+    },
+    {
+      "name": "VDD",
+      "volts": 3.0,
+      "regulator_mpn": "npm1300-CAAA-R"
+    }
+  ],
+  "updated_at_utc": "2026-08-09T19:46:44Z",
+  "cont": "VIII"
+}

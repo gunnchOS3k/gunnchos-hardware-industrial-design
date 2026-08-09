@@ -1,0 +1,54 @@
+{
+  "updated_at_utc": "2026-08-09T19:46:44Z",
+  "continuation": "VIII",
+  "final_decision": "OPTION_B_KEEP_ADLINK_ACCEPT_NARROW_EXTERNAL_BLOCK",
+  "option_labels": {
+    "A": "Keep ADLINK only for sunk cost / wait indefinitely without completing public side",
+    "B": "Keep ADLINK COM-HPC-mMTL-155H-32G; accept narrow EXTERNAL NDA block; manufacturer_ready=conditional",
+    "C": "Migrate Student/DS-XL to publicly engineerable module"
+  },
+  "evaluation": {
+    "C_preferred_if": [
+      "performance",
+      "Linux",
+      "display",
+      "AI",
+      "connectivity",
+      "lifecycle"
+    ],
+    "C_feasible": false,
+    "C_rationale": [
+      "No audited public-pinout module simultaneously matches Ultra 7 155H + COM-HPC Mini form factor.",
+      "Radxa NX5 PUBLIC_PINOUT fails CPU class / laptop ADR (RK3588S SODIMM) \u2014 Handheld only.",
+      "LattePanda/N100/CM5-class modules fail performance/AI/display ADR envelope for Student/DS-XL.",
+      "Migrating solely to avoid NDA paperwork would break ADR-HW-001 / ADR-FP-001 without meeting requirements."
+    ],
+    "A_rejected_because": "Would preserve ADLINK only for sunk cost without completing digitally doable public-side carrier work.",
+    "B_selected_because": [
+      "Preserves normative Ultra 7 155H Meteor Lake COM-HPC Mini compute MPN.",
+      "Completes all digitally doable public-side circuits (power, PD, TPM, display connectors as feature groups).",
+      "Honest tokens: manufacturer_ready=conditional; adopter_ready=limited; reproducible_ready=limited.",
+      "Narrow EXTERNAL blocker explicitly listed: PICMG/ADLINK 400-pin map (+ dual eDP for DS-XL)."
+    ]
+  },
+  "student_token": "STUDENT_BLOCKED_NDA",
+  "dsxl_token": "DSXL_BLOCKED_NDA",
+  "readiness": {
+    "student_14_5": {
+      "manufacturer_ready": "conditional",
+      "adopter_ready": "limited",
+      "reproducible_ready": "limited"
+    },
+    "ds_xl_coder": {
+      "manufacturer_ready": "conditional",
+      "adopter_ready": "limited",
+      "reproducible_ready": "limited"
+    }
+  },
+  "not_blocking": [
+    "handheld_hybrid",
+    "edge_io_rings",
+    "dock"
+  ],
+  "dock_freeze": "USB4/TB4 (not TB5)"
+}

@@ -1,11 +1,15 @@
-board: student_14_5_carrier
 product: student_14_5
-layers: 8
-updated_at_utc: "2026-08-08T19:40:00Z"
-compute_mpn: "ADLINK COM-HPC-mMTL-155H-32G"
-evidence_class: MODELED
-cli_status: EDMUND_ACTION_REQUIRED
-physical_execution_freeze: true
-stackup_notes: >
-  Target stackup for digital package. Final dielectric thicknesses and
-  impedance coupons to be confirmed with fab house after freeze lifts.
+layers: 4
+thickness_mm: 1.6
+cont: VIII
+updated_at_utc: "2026-08-09T19:46:44Z"
+impedance_design_notes:
+  usb2_dp_ohm: 90
+  usb3_ss_ohm: 85
+  edp_ohm: 100
+  usb4_ohm: 85
+  skew_mil_max: 5
+  si_simulation_performed: false
+copper_oz: 1
+material: FR4
+tg: 150

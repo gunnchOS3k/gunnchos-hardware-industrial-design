@@ -1,0 +1,72 @@
+{
+  "handheld_hybrid": {
+    "manufacturer_ready": "conditional",
+    "adopter_ready": "limited",
+    "reproducible_ready": "limited",
+    "eda_release_clean_pass": true,
+    "hardware_design_release_complete": false,
+    "digital_premanufacturing_release_ready": true,
+    "erc_errors": 0,
+    "drc_errors": 0,
+    "functional_circuits": true,
+    "nda_external_block": false,
+    "nda_item": null,
+    "honesty": "manufacturer_ready is not true while proxy packages / NDA / incomplete hierarchical pin expansion remain"
+  },
+  "edge_io_rings": {
+    "manufacturer_ready": "conditional",
+    "adopter_ready": "limited",
+    "reproducible_ready": "limited",
+    "eda_release_clean_pass": true,
+    "hardware_design_release_complete": false,
+    "digital_premanufacturing_release_ready": true,
+    "erc_errors": 0,
+    "drc_errors": 0,
+    "functional_circuits": true,
+    "nda_external_block": false,
+    "nda_item": null,
+    "honesty": "manufacturer_ready is not true while proxy packages / NDA / incomplete hierarchical pin expansion remain"
+  },
+  "dock": {
+    "manufacturer_ready": "conditional",
+    "adopter_ready": "limited",
+    "reproducible_ready": "limited",
+    "eda_release_clean_pass": true,
+    "hardware_design_release_complete": false,
+    "digital_premanufacturing_release_ready": true,
+    "erc_errors": 0,
+    "drc_errors": 0,
+    "functional_circuits": true,
+    "nda_external_block": true,
+    "nda_item": "Intel JHL8440 / JHL9040R package ball maps",
+    "honesty": "manufacturer_ready is not true while proxy packages / NDA / incomplete hierarchical pin expansion remain"
+  },
+  "student_14_5": {
+    "manufacturer_ready": "conditional",
+    "adopter_ready": "limited",
+    "reproducible_ready": "limited",
+    "eda_release_clean_pass": true,
+    "hardware_design_release_complete": false,
+    "digital_premanufacturing_release_ready": false,
+    "erc_errors": 0,
+    "drc_errors": 0,
+    "functional_circuits": true,
+    "nda_external_block": true,
+    "nda_item": "COM-HPC Mini 400-pin net-accurate map",
+    "honesty": "manufacturer_ready is not true while proxy packages / NDA / incomplete hierarchical pin expansion remain"
+  },
+  "ds_xl_coder": {
+    "manufacturer_ready": "conditional",
+    "adopter_ready": "limited",
+    "reproducible_ready": "limited",
+    "eda_release_clean_pass": true,
+    "hardware_design_release_complete": false,
+    "digital_premanufacturing_release_ready": false,
+    "erc_errors": 0,
+    "drc_errors": 0,
+    "functional_circuits": true,
+    "nda_external_block": true,
+    "nda_item": "COM-HPC Mini 400-pin + dual eDP pin map",
+    "honesty": "manufacturer_ready is not true while proxy packages / NDA / incomplete hierarchical pin expansion remain"
+  }
+}

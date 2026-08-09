@@ -1,25 +1,27 @@
 {
   "product": "ds_xl_coder",
-  "updated_at_utc": "2026-08-09T17:16:18Z",
-  "continuation": "VII",
-  "kicad_cli_execution": true,
+  "updated_at_utc": "2026-08-09T19:46:44Z",
+  "cont": "VIII",
   "erc": {
     "present": true,
     "errors": 0,
-    "warnings": 15,
+    "warnings": 30,
     "by_type": {
-      "warning:lib_symbol_issues": 10,
-      "warning:isolated_pin_label": 5
-    },
-    "violation_entries": 15
+      "warning:isolated_pin_label": 16,
+      "warning:lib_symbol_issues": 14
+    }
   },
   "drc": {
     "present": true,
     "errors": 0,
-    "warnings": 0,
-    "by_type": {},
-    "violation_entries": 0
+    "warnings": 14,
+    "by_type": {
+      "warning:track_dangling": 10,
+      "warning:lib_footprint_mismatch": 3,
+      "warning:silk_over_copper": 1
+    }
   },
-  "eda_release_clean_pass": false,
-  "note": "Cont VII fixed Cont VI dangling-label ERC and fp-lib DRC warnings via FuncBlock wiring + local footprints. Boards remain structural; EDA_RELEASE_CLEAN_PASS not claimed."
+  "gerber_count": 19,
+  "step_bytes": 14820,
+  "note": "Cont VIII functional expansion beyond FuncBlock; see readiness scorecard for manufacturer_ready honesty."
 }

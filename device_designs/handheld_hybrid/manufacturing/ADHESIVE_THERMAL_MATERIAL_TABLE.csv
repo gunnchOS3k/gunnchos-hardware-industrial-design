@@ -1,0 +1,5 @@
+location,material,mpn_or_spec,thickness_mm,source,status
+com_heatspreader,TIM pad,EXTERNAL_BLOCKER_ADLINK_HTS,1.0,ADLINK HTS-mMTL-B,EXTERNAL
+soc_spreader,graphite_or_TIM,Panasonic EYG-S or equiv,0.5,vendor catalog,MODELED
+battery_pad,3M 468MP class,3M 468MP,0.13,3M PDS,GROUNDED
+ring_band,medical acrylic,EXTERNAL_BLOCKER_skin_contact,—,biocompatibility cert,EXTERNAL

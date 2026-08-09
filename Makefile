@@ -80,3 +80,9 @@ kicad-validate-family:
 
 placeholder-scan-vi:
 	$(PYTHON) scripts/continuation_vi_eda_closure.py
+
+.PHONY: continuation-viii validate-continuation-viii
+continuation-viii:
+	$(PYTHON) scripts/continuation_viii_manufacturer_release.py
+validate-continuation-viii:
+	$(PYTHON) scripts/validate_continuation_viii.py

@@ -1,0 +1,24 @@
+### Footprint positions - created on 2026-08-09T14:47:00 ###
+### Printed by KiCad version 10.0.5
+## Unit = inches, Angle = deg.
+## Side : All
+# Ref     Val                    Package                PosX       PosY       Rot  Side
+C1        CL05A104KA5NNNC        Block_SMD_safe       5.2756    -1.4961    0.0000  top
+C2        GRM188R60J106ME47D     Block_SMD_safe       6.2205    -1.4961    0.0000  top
+D1        APTD1608LCGCK          Block_SMD_safe       8.1102    -1.4961    0.0000  top
+DESD1     PESD5V0S1UL            Block_SMD_safe      10.0000    -1.4961    0.0000  top
+JDISP1    eDP_primary_panel      Block_SMD_safe       3.3858    -2.4409    0.0000  top
+JDISP2    eDP_secondary_panel    Block_SMD_safe       4.3307    -2.4409    0.0000  top
+JUSB1     TYPE-C-31-M-12         Block_SMD_safe       1.4961    -1.4961    0.0000  top
+R1        RC0402FR-0710KL        Block_SMD_safe       7.1654    -1.4961    0.0000  top
+R2        RC0402FR-071K0L        Block_SMD_safe       9.0551    -1.4961    0.0000  top
+TP1       GND                    TestPoint_Pad        1.7717    -6.9291    0.0000  top
+TP2       VDD_3V3                TestPoint_Pad        2.6378    -6.9291    0.0000  top
+TP3       VBUS                   TestPoint_Pad        3.5039    -6.9291    0.0000  top
+TP4       VSYS                   TestPoint_Pad        4.3701    -6.9291    0.0000  top
+U3V3      TPS62864               Block_SMD_safe       4.3307    -1.4961    0.0000  top
+UCHG1     BQ25792RQMR            Block_SMD_safe       3.3858    -1.4961    0.0000  top
+UCOM1     COM-HPC-mMTL-155H-32G  Block_SMD_safe       1.4961    -2.4409    0.0000  top
+UPD1      TPS65994ADFBRQ1        Block_SMD_safe       2.4409    -1.4961    0.0000  top
+UTPM1     SLB9672XQ2.0           Block_SMD_safe       2.4409    -2.4409    0.0000  top
+## End

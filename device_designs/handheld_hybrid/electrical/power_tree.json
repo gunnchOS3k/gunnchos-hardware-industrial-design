@@ -1,0 +1,33 @@
+{
+  "device_id": "handheld_hybrid",
+  "evidence_class": "PUBLIC_PINOUT+MODELED",
+  "rails": [
+    {
+      "name": "VBUS",
+      "volts": 5.0,
+      "source": "USB-C PD"
+    },
+    {
+      "name": "VSYS",
+      "volts": 3.8,
+      "regulator_mpn": "BQ25895RTWR"
+    },
+    {
+      "name": "SOM_VIN",
+      "volts": 5.0,
+      "note": "VCC_SYSIN pins 251-260 PUBLIC_PINOUT"
+    },
+    {
+      "name": "VDD_3V3",
+      "volts": 3.3,
+      "regulator_mpn": "TPS62864"
+    },
+    {
+      "name": "VDD_DISPLAY_BL",
+      "volts": 12.0,
+      "note": "boost modeled"
+    }
+  ],
+  "updated_at_utc": "2026-08-09T19:46:44Z",
+  "cont": "VIII"
+}

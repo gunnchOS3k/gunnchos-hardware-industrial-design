@@ -1,0 +1,10 @@
+### Footprint positions - created on 2026-08-09T14:46:50 ###
+### Printed by KiCad version 10.0.5
+## Unit = inches, Angle = deg.
+## Side : All
+# Ref     Val       Package                PosX       PosY       Rot  Side
+TP1       GND       TestPoint_Pad        1.7717    -1.4173    0.0000  top
+TP2       VDD_3V3   TestPoint_Pad        2.6378    -1.4173    0.0000  top
+TP3       VBUS      TestPoint_Pad        3.5039    -1.4173    0.0000  top
+TP4       VSYS      TestPoint_Pad        4.3701    -1.4173    0.0000  top
+## End

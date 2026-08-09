@@ -1,0 +1,27 @@
+[
+  {
+    "product": "handheld_hybrid",
+    "parts": 12,
+    "nets": 47
+  },
+  {
+    "product": "edge_io_rings",
+    "parts": 14,
+    "nets": 57
+  },
+  {
+    "product": "dock",
+    "parts": 14,
+    "nets": 54
+  },
+  {
+    "product": "student_14_5",
+    "parts": 13,
+    "nets": 50
+  },
+  {
+    "product": "ds_xl_coder",
+    "parts": 14,
+    "nets": 56
+  }
+]

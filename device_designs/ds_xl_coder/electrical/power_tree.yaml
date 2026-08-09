@@ -1,11 +1,18 @@
 device_id: ds_xl_coder
-evidence_class: MODELED
-strategy: COM_CARRIER_DUAL_EDP
-updated_at_utc: "2026-08-08T19:40:00Z"
-inherits_power_from: student_14_5
-deltas:
-  - extra_panel_backlight_w_avg: 3.5
-  - hinge_electronics_w: 0.3
-battery_wh_modeled: 60
-com_mpn: COM-HPC-mMTL-155H-32G
-com_tdp_base_w: 28
+evidence_class: PUBLIC_DOCS
+rails:
+- name: ADAPTER_19V
+  volts: 19.0
+- name: COM_VIN
+  volts: 12.0
+  note: "AT 12V\xB15% PUBLIC_DOCS"
+- name: VDD_3V3
+  volts: 3.3
+- name: BL_MAIN
+  volts: 12.0
+  note: primary panel backlight
+- name: BL_SECONDARY
+  volts: 12.0
+  note: secondary panel + hinge flex
+updated_at_utc: '2026-08-09T19:46:44Z'
+cont: VIII

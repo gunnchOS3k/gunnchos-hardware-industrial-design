@@ -1,0 +1,31 @@
+{
+  "device_id": "ds_xl_coder",
+  "evidence_class": "PUBLIC_DOCS",
+  "rails": [
+    {
+      "name": "ADAPTER_19V",
+      "volts": 19.0
+    },
+    {
+      "name": "COM_VIN",
+      "volts": 12.0,
+      "note": "AT 12V\u00b15% PUBLIC_DOCS"
+    },
+    {
+      "name": "VDD_3V3",
+      "volts": 3.3
+    },
+    {
+      "name": "BL_MAIN",
+      "volts": 12.0,
+      "note": "primary panel backlight"
+    },
+    {
+      "name": "BL_SECONDARY",
+      "volts": 12.0,
+      "note": "secondary panel + hinge flex"
+    }
+  ],
+  "updated_at_utc": "2026-08-09T19:46:44Z",
+  "cont": "VIII"
+}

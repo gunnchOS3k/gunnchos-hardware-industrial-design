@@ -1,0 +1,256 @@
+{
+    "$schema": "https://schemas.kicad.org/drc.v1.json",
+    "coordinate_units": "mm",
+    "date": "2026-08-09T14:46:46",
+    "ignored_checks": [
+        {
+            "description": "Footprint has no courtyard defined",
+            "key": "missing_courtyard"
+        },
+        {
+            "description": "Track endpoint not centered on via",
+            "key": "track_not_centered_on_via"
+        },
+        {
+            "description": "Tuning profile track geometries",
+            "key": "tuning_profile_track_geometries"
+        },
+        {
+            "description": "Footprint doesn't match symbol's footprint filters",
+            "key": "footprint_filters_mismatch"
+        },
+        {
+            "description": "Footprint component type doesn't match footprint pads",
+            "key": "footprint_type_mismatch"
+        }
+    ],
+    "included_severities": [
+        "error",
+        "warning",
+        "exclusion"
+    ],
+    "kicad_version": "10.0.5",
+    "schematic_parity": [],
+    "source": "handheld_hybrid.kicad_pcb",
+    "unconnected_items": [],
+    "violations": [
+        {
+            "description": "Track has unconnected end",
+            "items": [
+                {
+                    "description": "Track [<no net>] on F.Cu, length 37.6000 mm",
+                    "pos": {
+                        "x": 35.0,
+                        "y": 16.0
+                    },
+                    "uuid": "9d7a4dea-01fc-34e4-e2b5-6f08573b58c0"
+                }
+            ],
+            "severity": "warning",
+            "type": "track_dangling"
+        },
+        {
+            "description": "Track has unconnected end",
+            "items": [
+                {
+                    "description": "Track [<no net>] on F.Cu, length 39.8000 mm",
+                    "pos": {
+                        "x": 145.2,
+                        "y": 16.0
+                    },
+                    "uuid": "7a6d983b-e600-7923-3ee9-0f96ddc40691"
+                }
+            ],
+            "severity": "warning",
+            "type": "track_dangling"
+        },
+        {
+            "description": "Track has unconnected end",
+            "items": [
+                {
+                    "description": "Track [<no net>] on B.Cu, length 37.6000 mm",
+                    "pos": {
+                        "x": 35.0,
+                        "y": 20.0
+                    },
+                    "uuid": "169d6289-876a-ee57-a612-d7bb26bf50da"
+                }
+            ],
+            "severity": "warning",
+            "type": "track_dangling"
+        },
+        {
+            "description": "Track has unconnected end",
+            "items": [
+                {
+                    "description": "Track [<no net>] on B.Cu, length 39.8000 mm",
+                    "pos": {
+                        "x": 145.2,
+                        "y": 20.0
+                    },
+                    "uuid": "092326df-0bf8-23c9-565e-a4a1c8824e27"
+                }
+            ],
+            "severity": "warning",
+            "type": "track_dangling"
+        },
+        {
+            "description": "Track has unconnected end",
+            "items": [
+                {
+                    "description": "Track [<no net>] on F.Cu, length 37.6000 mm",
+                    "pos": {
+                        "x": 35.0,
+                        "y": 24.0
+                    },
+                    "uuid": "3ea5497c-1d75-74ac-b4ef-dd3b5c7f992d"
+                }
+            ],
+            "severity": "warning",
+            "type": "track_dangling"
+        },
+        {
+            "description": "Track has unconnected end",
+            "items": [
+                {
+                    "description": "Track [<no net>] on F.Cu, length 39.8000 mm",
+                    "pos": {
+                        "x": 145.2,
+                        "y": 24.0
+                    },
+                    "uuid": "c1d164a1-df54-197d-07d8-64b811f2b547"
+                }
+            ],
+            "severity": "warning",
+            "type": "track_dangling"
+        },
+        {
+            "description": "Track has unconnected end",
+            "items": [
+                {
+                    "description": "Track [<no net>] on F.Cu, length 37.6000 mm",
+                    "pos": {
+                        "x": 35.0,
+                        "y": 28.0
+                    },
+                    "uuid": "10b6c526-832c-e042-9b1e-0983eb914e67"
+                }
+            ],
+            "severity": "warning",
+            "type": "track_dangling"
+        },
+        {
+            "description": "Track has unconnected end",
+            "items": [
+                {
+                    "description": "Track [<no net>] on F.Cu, length 39.8000 mm",
+                    "pos": {
+                        "x": 145.2,
+                        "y": 28.0
+                    },
+                    "uuid": "c771fd71-cabb-4f54-0650-b31af38a7560"
+                }
+            ],
+            "severity": "warning",
+            "type": "track_dangling"
+        },
+        {
+            "description": "Track has unconnected end",
+            "items": [
+                {
+                    "description": "Track [<no net>] on F.Cu, length 37.6000 mm",
+                    "pos": {
+                        "x": 35.0,
+                        "y": 32.0
+                    },
+                    "uuid": "5ae003d5-9a57-0b34-ab7d-ed7765716fe3"
+                }
+            ],
+            "severity": "warning",
+            "type": "track_dangling"
+        },
+        {
+            "description": "Track has unconnected end",
+            "items": [
+                {
+                    "description": "Track [<no net>] on F.Cu, length 39.8000 mm",
+                    "pos": {
+                        "x": 145.2,
+                        "y": 32.0
+                    },
+                    "uuid": "41a05b2a-6e76-e449-8ab4-e8c991ad63c3"
+                }
+            ],
+            "severity": "warning",
+            "type": "track_dangling"
+        },
+        {
+            "description": "Footprint 'Fiducial_1mm' does not match copy in library 'gunnchos_functional'",
+            "items": [
+                {
+                    "description": "Footprint FID1",
+                    "pos": {
+                        "x": 110.0,
+                        "y": 10.0
+                    },
+                    "uuid": "a9c4749f-ab0c-0749-5126-883a64c91f81"
+                }
+            ],
+            "severity": "warning",
+            "type": "lib_footprint_mismatch"
+        },
+        {
+            "description": "Footprint 'Fiducial_1mm' does not match copy in library 'gunnchos_functional'",
+            "items": [
+                {
+                    "description": "Footprint FID2",
+                    "pos": {
+                        "x": 25.0,
+                        "y": 55.0
+                    },
+                    "uuid": "03b1be22-0a9e-66c8-93a6-e3bded8a0736"
+                }
+            ],
+            "severity": "warning",
+            "type": "lib_footprint_mismatch"
+        },
+        {
+            "description": "Footprint 'Fiducial_1mm' does not match copy in library 'gunnchos_functional'",
+            "items": [
+                {
+                    "description": "Footprint FID3",
+                    "pos": {
+                        "x": 195.0,
+                        "y": 55.0
+                    },
+                    "uuid": "63dcef4b-11d2-e29d-4aa1-a222d7da2761"
+                }
+            ],
+            "severity": "warning",
+            "type": "lib_footprint_mismatch"
+        },
+        {
+            "description": "Silkscreen clipped by solder mask",
+            "items": [
+                {
+                    "description": "PCB text 'REV 0.5.0-cont-viii' on F.Silkscreen",
+                    "pos": {
+                        "x": 12.0,
+                        "y": 10.0
+                    },
+                    "uuid": "afc38cab-8753-b30d-2d40-8403a62ad226"
+                },
+                {
+                    "description": "NPTH pad of H1",
+                    "pos": {
+                        "x": 10.0,
+                        "y": 10.0
+                    },
+                    "uuid": "f7b516e4-fba5-425e-87e4-3262fcdf75bb"
+                }
+            ],
+            "severity": "warning",
+            "type": "silk_over_copper"
+        }
+    ]
+}
