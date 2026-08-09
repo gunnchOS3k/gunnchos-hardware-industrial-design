@@ -16,6 +16,7 @@ def test_continuation_vii_validator():
 
 
 def test_cont_vii_schematics_have_wires():
+    """Cont VII required wired schematics. Cont VIII retired FuncBlock placeholders."""
     for prod in (
         "student_14_5",
         "ds_xl_coder",
@@ -27,7 +28,8 @@ def test_cont_vii_schematics_have_wires():
             encoding="utf-8"
         )
         assert "(wire " in sch
-        assert 'lib_id "FuncBlock"' in sch
+        # Cont VIII manufacturer release: structural FuncBlock symbols must not remain.
+        assert 'lib_id "FuncBlock"' not in sch
 
 
 def test_cont_vii_ledger_statuses_only_allowed():
