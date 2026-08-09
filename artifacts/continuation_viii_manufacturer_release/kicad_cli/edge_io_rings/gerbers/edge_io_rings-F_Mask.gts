@@ -1,0 +1,43 @@
+%TF.GenerationSoftware,KiCad,Pcbnew,10.0.5*%
+%TF.CreationDate,2026-08-09T14:46:49-05:00*%
+%TF.ProjectId,edge_io_rings,65646765-5f69-46f5-9f72-696e67732e6b,0.5.0-cont-viii*%
+%TF.SameCoordinates,Original*%
+%TF.FileFunction,Soldermask,Top*%
+%TF.FilePolarity,Negative*%
+%FSLAX46Y46*%
+G04 Gerber Fmt 4.6, Leading zero omitted, Abs format (unit mm)*
+G04 Created by KiCad (PCBNEW 10.0.5) date 2026-08-09 14:46:49*
+%MOMM*%
+%LPD*%
+G01*
+G04 APERTURE LIST*
+%ADD10C,3.200000*%
+%ADD11C,1.500000*%
+G04 APERTURE END LIST*
+D10*
+%TO.C,H1*%
+X10000000Y-10000000D03*
+%TD*%
+%TO.C,H2*%
+X70000000Y-10000000D03*
+%TD*%
+%TO.C,H3*%
+X10000000Y-50000000D03*
+%TD*%
+%TO.C,H4*%
+X70000000Y-50000000D03*
+%TD*%
+D11*
+%TO.C,TP1*%
+X45000000Y-36000000D03*
+%TD*%
+%TO.C,TP2*%
+X67000000Y-36000000D03*
+%TD*%
+%TO.C,TP3*%
+X89000000Y-36000000D03*
+%TD*%
+%TO.C,TP4*%
+X111000000Y-36000000D03*
+%TD*%
+M02*

@@ -1,0 +1,67 @@
+[
+  {
+    "product": "handheld_hybrid",
+    "outline_mm": [
+      220.0,
+      110.0
+    ],
+    "footprints": 23,
+    "tracks": 15,
+    "zones": 0,
+    "fiducials": 3,
+    "test_points": 4,
+    "mounting_holes": 4
+  },
+  {
+    "product": "edge_io_rings",
+    "outline_mm": [
+      80.0,
+      60.0
+    ],
+    "footprints": 11,
+    "tracks": 15,
+    "zones": 0,
+    "fiducials": 3,
+    "test_points": 4,
+    "mounting_holes": 4
+  },
+  {
+    "product": "dock",
+    "outline_mm": [
+      180.0,
+      120.0
+    ],
+    "footprints": 21,
+    "tracks": 15,
+    "zones": 0,
+    "fiducials": 3,
+    "test_points": 4,
+    "mounting_holes": 4
+  },
+  {
+    "product": "student_14_5",
+    "outline_mm": [
+      280.0,
+      180.0
+    ],
+    "footprints": 24,
+    "tracks": 15,
+    "zones": 0,
+    "fiducials": 3,
+    "test_points": 4,
+    "mounting_holes": 4
+  },
+  {
+    "product": "ds_xl_coder",
+    "outline_mm": [
+      300.0,
+      200.0
+    ],
+    "footprints": 25,
+    "tracks": 15,
+    "zones": 0,
+    "fiducials": 3,
+    "test_points": 4,
+    "mounting_holes": 4
+  }
+]

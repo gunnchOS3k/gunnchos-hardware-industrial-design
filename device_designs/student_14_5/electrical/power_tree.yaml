@@ -1,19 +1,16 @@
 device_id: student_14_5
-evidence_class: MODELED
-strategy: COM_CARRIER
-adr: [ADR-FP-001, ADR-HW-001]
-updated_at_utc: "2026-08-08T19:40:00Z"
-battery_wh_modeled: 60
-battery_wh_range: [56, 72]
+evidence_class: PUBLIC_DOCS
 rails:
-  - {name: VBAT, volts: 14.8, gauge_mpn: BQ40Z50-R2}
-  - {name: VSYS, regulator_mpn: BQ25792RQMR, alternate_mpn: BQ25798}
-  - {name: VBUS_PD, regulator_mpn: TPS65994ADFBRQ1, alternate_mpn: CYPD6227-96LQXIT}
-  - {name: COM_VIN, source: VSYS, note: "Carrier feeds COM module input — on-module IMVP for VCORE/GT"}
-  - {name: VDD_5V_SYS, regulator_mpn: TPS51396AJYYR, alternate_mpn: TPS62175}
-  - {name: VDD_3V3, regulator_mpn: TPS62864YCPR, ldo_holdup_mpn: TLV75533PDRVR}
-  - {name: VDD_1V8, regulator_mpn: TPS62864YCPR, ldo_holdup_mpn: TLV75518PDRVR}
-forbidden:
-  - bare_cpu_bga_vcore_invented_without_pdk
-com_mpn: COM-HPC-mMTL-155H-32G
-com_tdp_base_w: 28
+- name: ADAPTER_19V
+  volts: 19.0
+- name: COM_VIN
+  volts: 12.0
+  note: "AT 12V\xB15% PUBLIC_DOCS"
+- name: VDD_3V3
+  volts: 3.3
+  regulator_mpn: TPS62864
+- name: VBAT
+  volts: 7.6
+  regulator_mpn: BQ25792RQMR
+updated_at_utc: '2026-08-09T19:46:44Z'
+cont: VIII

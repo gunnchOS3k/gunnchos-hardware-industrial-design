@@ -38,3 +38,7 @@ Branch: `cursor/full-product-continuation-vi-eda-closure`
 
 See `TOKENS_CONT_VII.md` / `RELEASE_CLEAN_TOKENS_CONT_VII.json` (updated 2026-08-09T17:16:18Z).
 Key: `KICAD_CLI_EXECUTION_PASS` ≠ `*_EDA_RELEASE_CLEAN_PASS` (all release-clean tokens currently FALSE — structural PCB).
+
+## Continuation VIII
+
+See `TOKENS_CONT_VIII.md` (updated 2026-08-09T19:29:22Z).
