@@ -1,0 +1,14 @@
+{
+  "schema": "gunnchos.hardware.phase_xv.npi_package_index.v1",
+  "generated_at": "2026-08-10T13:20:00Z",
+  "PHYSICAL_EXECUTION_FREEZE": "ACTIVE",
+  "package": "npi/phase_xv/handheld_storage_headroom",
+  "files": [
+    "npi/phase_xv/handheld_storage_headroom/README.md",
+    "npi/phase_xv/handheld_storage_headroom/NPI_DEFECT-HANDHELD-STORAGE-HEADROOM-001.json",
+    "npi/phase_xv/handheld_storage_headroom/HANDHELD_STORAGE_DECISION.json",
+    "npi/phase_xv/handheld_storage_headroom/HANDHELD_STORAGE_HEADROOM_RECOMMENDATION.json"
+  ],
+  "selected_recommendation": "OPT-C-SYSTEM-EMMC-PLUS-EXTERNAL-MEDIA-POLICY",
+  "field_kit_companion_pr": "https://github.com/gunnchOS3k/gunnchos-7gc-ai-ran-field-kit/pull/54"
+}
