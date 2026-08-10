@@ -1,0 +1,287 @@
+{
+  "schema": "gunnchos.evt0_risk_test_traceability.v1",
+  "work_packet": "WP-010",
+  "generated_at_utc": "2026-08-10T20:56:48Z",
+  "source_risk_register": "program/operating_model/06_RISK_UNKNOWN_SUPPLY/RISK_REGISTER.json",
+  "traces": [
+    {
+      "risk_id": "RISK-001",
+      "tests": [
+        "EVT-PWR-000",
+        "EVT-PWR-001",
+        "EVT-PWR-002",
+        "EVT-PWR-003",
+        "EVT-BOOT-001",
+        "EVT-BOOT-002",
+        "EVT-THERM-001"
+      ],
+      "instruments": [
+        "INST-BENCH-PSU",
+        "INST-CURR-PROBE",
+        "INST-DIM-ESD",
+        "INST-DMM",
+        "INST-LA",
+        "INST-SCOPE",
+        "INST-TC-LOG",
+        "INST-THERM-CAM"
+      ],
+      "fixtures": [
+        "FIX-PROG-DEBUG",
+        "FIX-PWR-CURR",
+        "FIX-SERIAL",
+        "FIX-THERM-MAP",
+        "FIX-TP-HARNESS"
+      ],
+      "defect_outcome_field": "defect_id on EVT0EvidenceRecord",
+      "evidence_schema": "EVT0_EVIDENCE_SCHEMA.json",
+      "physical_status": "PHYSICAL_PENDING"
+    },
+    {
+      "risk_id": "RISK-002",
+      "tests": [
+        "EVT-DOCK-001",
+        "EVT-DOCK-002",
+        "EVT-DOCK-003",
+        "EVT-DOCK-004",
+        "EVT-RF-002",
+        "EVT-BATT-002",
+        "EVT-GJ-004"
+      ],
+      "instruments": [
+        "INST-AUDIO",
+        "INST-CURR-PROBE",
+        "INST-NET-TRAFFIC",
+        "INST-SCOPE",
+        "INST-USB-PD",
+        "INST-USB4-TB"
+      ],
+      "fixtures": [
+        "FIX-BATT",
+        "FIX-DOCK-LOOP"
+      ],
+      "defect_outcome_field": "defect_id on EVT0EvidenceRecord",
+      "evidence_schema": "EVT0_EVIDENCE_SCHEMA.json",
+      "physical_status": "PHYSICAL_PENDING"
+    },
+    {
+      "risk_id": "RISK-003",
+      "tests": [
+        "EVT-PWR-000",
+        "EVT-DISP-002",
+        "EVT-DISP-003",
+        "EVT-GJ-006"
+      ],
+      "instruments": [
+        "INST-DIM-ESD",
+        "INST-DMM"
+      ],
+      "fixtures": [
+        "FIX-DSXL-CYCLE",
+        "FIX-TP-HARNESS"
+      ],
+      "defect_outcome_field": "defect_id on EVT0EvidenceRecord",
+      "evidence_schema": "EVT0_EVIDENCE_SCHEMA.json",
+      "physical_status": "PHYSICAL_PENDING"
+    },
+    {
+      "risk_id": "RISK-004",
+      "tests": [
+        "EVT-BOOT-002"
+      ],
+      "instruments": [
+        "INST-LA"
+      ],
+      "fixtures": [
+        "FIX-PROG-DEBUG"
+      ],
+      "defect_outcome_field": "defect_id on EVT0EvidenceRecord",
+      "evidence_schema": "EVT0_EVIDENCE_SCHEMA.json",
+      "physical_status": "PHYSICAL_PENDING"
+    },
+    {
+      "risk_id": "RISK-005",
+      "tests": [
+        "EVT-PWR-002",
+        "EVT-PWR-004",
+        "EVT-DOCK-001",
+        "EVT-THERM-001",
+        "EVT-THERM-002",
+        "EVT-BATT-001",
+        "EVT-BATT-002",
+        "EVT-BATT-003",
+        "EVT-AI-002",
+        "EVT-AI-003",
+        "EVT-GJ-001"
+      ],
+      "instruments": [
+        "INST-BATT-CYC",
+        "INST-BENCH-PSU",
+        "INST-CURR-PROBE",
+        "INST-ELOAD",
+        "INST-SCOPE",
+        "INST-TC-LOG",
+        "INST-THERM-CAM",
+        "INST-USB-PD"
+      ],
+      "fixtures": [
+        "FIX-BATT",
+        "FIX-DOCK-LOOP",
+        "FIX-PWR-CURR",
+        "FIX-SERIAL",
+        "FIX-THERM-MAP"
+      ],
+      "defect_outcome_field": "defect_id on EVT0EvidenceRecord",
+      "evidence_schema": "EVT0_EVIDENCE_SCHEMA.json",
+      "physical_status": "PHYSICAL_PENDING"
+    },
+    {
+      "risk_id": "RISK-006",
+      "tests": [
+        "EVT-RF-001",
+        "EVT-RF-003"
+      ],
+      "instruments": [
+        "INST-NET-TRAFFIC",
+        "INST-SHIELD",
+        "INST-SPEC",
+        "INST-VNA",
+        "INST-WIFI-AP"
+      ],
+      "fixtures": [
+        "FIX-RF-COND"
+      ],
+      "defect_outcome_field": "defect_id on EVT0EvidenceRecord",
+      "evidence_schema": "EVT0_EVIDENCE_SCHEMA.json",
+      "physical_status": "PHYSICAL_PENDING"
+    },
+    {
+      "risk_id": "RISK-007",
+      "tests": [
+        "EVT-RING-001",
+        "EVT-RING-002",
+        "EVT-RING-003",
+        "EVT-RING-004",
+        "EVT-RING-005",
+        "EVT-GJ-007"
+      ],
+      "instruments": [
+        "INST-BENCH-PSU",
+        "INST-CURR-PROBE",
+        "INST-MOTION-REF",
+        "INST-NET-TRAFFIC"
+      ],
+      "fixtures": [
+        "FIX-PROG-DEBUG",
+        "FIX-RING-CAL",
+        "FIX-RING-POSE"
+      ],
+      "defect_outcome_field": "defect_id on EVT0EvidenceRecord",
+      "evidence_schema": "EVT0_EVIDENCE_SCHEMA.json",
+      "physical_status": "PHYSICAL_PENDING"
+    },
+    {
+      "risk_id": "RISK-008",
+      "tests": [
+        "EVT-PWR-004",
+        "EVT-THERM-002",
+        "EVT-AI-001",
+        "EVT-AI-002",
+        "EVT-AI-003",
+        "EVT-GJ-001"
+      ],
+      "instruments": [
+        "INST-BENCH-PSU",
+        "INST-CURR-PROBE",
+        "INST-ELOAD",
+        "INST-TC-LOG"
+      ],
+      "fixtures": [
+        "FIX-BATT",
+        "FIX-PWR-CURR",
+        "FIX-THERM-MAP"
+      ],
+      "defect_outcome_field": "defect_id on EVT0EvidenceRecord",
+      "evidence_schema": "EVT0_EVIDENCE_SCHEMA.json",
+      "physical_status": "PHYSICAL_PENDING"
+    },
+    {
+      "risk_id": "RISK-009",
+      "tests": [
+        "EVT-DISP-001",
+        "EVT-DISP-002",
+        "EVT-DOCK-003",
+        "EVT-THERM-002",
+        "EVT-GAME-001",
+        "EVT-GJ-006"
+      ],
+      "instruments": [
+        "INST-CURR-PROBE",
+        "INST-ELOAD",
+        "INST-SCOPE",
+        "INST-TC-LOG"
+      ],
+      "fixtures": [
+        "FIX-DOCK-LOOP",
+        "FIX-DSXL-CYCLE",
+        "FIX-PWR-CURR",
+        "FIX-THERM-MAP"
+      ],
+      "defect_outcome_field": "defect_id on EVT0EvidenceRecord",
+      "evidence_schema": "EVT0_EVIDENCE_SCHEMA.json",
+      "physical_status": "PHYSICAL_PENDING"
+    },
+    {
+      "risk_id": "RISK-010",
+      "tests": [
+        "EVT-GAME-002",
+        "EVT-GJ-004"
+      ],
+      "instruments": [
+        "INST-AUDIO",
+        "INST-LA",
+        "INST-NET-TRAFFIC",
+        "INST-USB-PD"
+      ],
+      "fixtures": [
+        "FIX-DOCK-LOOP"
+      ],
+      "defect_outcome_field": "defect_id on EVT0EvidenceRecord",
+      "evidence_schema": "EVT0_EVIDENCE_SCHEMA.json",
+      "physical_status": "PHYSICAL_PENDING"
+    },
+    {
+      "risk_id": "RISK-011",
+      "tests": [
+        "EVT-RF-004"
+      ],
+      "instruments": [
+        "INST-CELL",
+        "INST-RF-GEN",
+        "INST-SPEC"
+      ],
+      "fixtures": [
+        "FIX-RF-COND"
+      ],
+      "defect_outcome_field": "defect_id on EVT0EvidenceRecord",
+      "evidence_schema": "EVT0_EVIDENCE_SCHEMA.json",
+      "physical_status": "PHYSICAL_PENDING"
+    },
+    {
+      "risk_id": "RISK-012",
+      "tests": [
+        "EVT-GJ-001"
+      ],
+      "instruments": [
+        "INST-CURR-PROBE",
+        "INST-TC-LOG"
+      ],
+      "fixtures": [
+        "FIX-BATT",
+        "FIX-THERM-MAP"
+      ],
+      "defect_outcome_field": "defect_id on EVT0EvidenceRecord",
+      "evidence_schema": "EVT0_EVIDENCE_SCHEMA.json",
+      "physical_status": "PHYSICAL_PENDING"
+    }
+  ]
+}

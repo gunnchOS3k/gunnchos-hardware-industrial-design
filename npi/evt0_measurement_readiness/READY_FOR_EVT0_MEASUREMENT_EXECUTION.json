@@ -1,0 +1,40 @@
+{
+  "schema": "gunnchos.wp010_readiness_token.v1",
+  "work_packet": "WP-010",
+  "role": "IMPLEMENTER",
+  "generated_at_utc": "2026-08-10T20:56:48Z",
+  "READY_FOR_EVT0_MEASUREMENT_EXECUTION": true,
+  "PHYSICALLY_VALIDATED": false,
+  "self_certified_v1": false,
+  "verifier_packet": "VP-010",
+  "hardware_rev_baseline": "0.6.0-cont-ix",
+  "artifacts": {
+    "master_test_matrix": "npi/evt0_measurement_readiness/EVT0_MASTER_TEST_MATRIX.json",
+    "instrument_matrix": "npi/evt0_measurement_readiness/EVT0_INSTRUMENT_MATRIX.json",
+    "fixture_register": "npi/evt0_measurement_readiness/EVT0_FIXTURE_REGISTER.json",
+    "bringup_sequence": "npi/evt0_measurement_readiness/EVT0_BRINGUP_SEQUENCE.md",
+    "evidence_schema": "npi/evt0_measurement_readiness/EVT0_EVIDENCE_SCHEMA.json",
+    "safety_plan": "npi/evt0_measurement_readiness/EVT0_SAFETY_PLAN.md",
+    "calibration_bridge_schema": "npi/evt0_measurement_readiness/DEVICE_LAB_CALIBRATION_BRIDGE_SCHEMA.json",
+    "acquisition_action_list": "npi/evt0_measurement_readiness/EVT0_ACQUISITION_ACTION_LIST.json",
+    "e5_golden_map": "npi/evt0_measurement_readiness/EVT0_E5_GOLDEN_JOURNEY_MEASUREMENT_MAP.json",
+    "risk_traceability": "npi/evt0_measurement_readiness/EVT0_RISK_TEST_TRACEABILITY.json"
+  },
+  "honesty": {
+    "PHYSICAL_EXECUTION_FREEZE": true,
+    "VF4": "PHYSICAL_PENDING",
+    "VF5": "PHYSICAL_PENDING",
+    "VF6": "PHYSICAL_PENDING",
+    "no_prepopulated_physical_pass": true,
+    "purchase_fab_run": false
+  },
+  "remaining_physical_human_blockers": [
+    "No EVT0 hardware units exist yet",
+    "PHYSICAL_EXECUTION_FREEZE \u2014 no purchase/fab/run",
+    "WP-001 configuration freeze not yet executed",
+    "Vendor NDA/SI collateral for Dock USB4/TB4 and COM-HPC",
+    "Rental/lab booking for SA/VNA/USB4 SI/MoCap",
+    "Human operators + calibrated instrument serials",
+    "WP-008 NFR numeric thresholds (consume when frozen)"
+  ]
+}

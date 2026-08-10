@@ -1,0 +1,217 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://gunnchos.org/schemas/evt0_evidence_record.schema.json",
+  "title": "EVT0EvidenceRecord",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "evidence_id",
+    "configuration_id",
+    "serial",
+    "hardware_rev",
+    "firmware_sha",
+    "os_sha",
+    "ai_sha",
+    "game_sha",
+    "test_id",
+    "operator",
+    "timestamp_utc",
+    "instrument_id",
+    "instrument_serial",
+    "calibration_status",
+    "calibration_date",
+    "setup_revision",
+    "environment",
+    "raw_artifacts",
+    "unit",
+    "measurement",
+    "uncertainty",
+    "pass_fail",
+    "defect_id",
+    "claim_boundary",
+    "physical_execution_status"
+  ],
+  "properties": {
+    "evidence_id": {
+      "type": "string",
+      "minLength": 1
+    },
+    "configuration_id": {
+      "type": "string",
+      "enum": [
+        "STUDENT145-EVT0-R0",
+        "DSXL-EVT0-R0",
+        "HANDHELD-EVT0-R0",
+        "RING-EVT0-R0",
+        "DOCK-EVT0-R0"
+      ]
+    },
+    "serial": {
+      "type": "string"
+    },
+    "hardware_rev": {
+      "type": "string"
+    },
+    "firmware_sha": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "os_sha": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "ai_sha": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "game_sha": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "test_id": {
+      "type": "string",
+      "pattern": "^EVT-[A-Z]+-[0-9]{3}$"
+    },
+    "operator": {
+      "type": "string"
+    },
+    "timestamp_utc": {
+      "type": "string"
+    },
+    "instrument_id": {
+      "type": "string"
+    },
+    "instrument_serial": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "calibration_status": {
+      "type": "string",
+      "enum": [
+        "VALID",
+        "EXPIRED",
+        "UNKNOWN",
+        "NOT_APPLICABLE",
+        "PENDING_PHYSICAL"
+      ]
+    },
+    "calibration_date": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "setup_revision": {
+      "type": "string"
+    },
+    "environment": {
+      "type": "object",
+      "required": [
+        "ambient_c",
+        "notes"
+      ],
+      "properties": {
+        "ambient_c": {
+          "type": [
+            "number",
+            "null"
+          ]
+        },
+        "humidity_pct": {
+          "type": [
+            "number",
+            "null"
+          ]
+        },
+        "notes": {
+          "type": "string"
+        }
+      }
+    },
+    "raw_artifacts": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "unit": {
+      "type": "string"
+    },
+    "measurement": {},
+    "uncertainty": {
+      "type": [
+        "number",
+        "string",
+        "null"
+      ]
+    },
+    "pass_fail": {
+      "type": "string",
+      "enum": [
+        "PASS",
+        "FAIL",
+        "DATA_ONLY",
+        "BLOCKED",
+        "NOT_RUN"
+      ]
+    },
+    "defect_id": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "claim_boundary": {
+      "type": "string",
+      "enum": [
+        "DESIGN_ONLY",
+        "HARDWARE_PROTOTYPE_PENDING",
+        "PHYSICAL_MEASURED"
+      ]
+    },
+    "physical_execution_status": {
+      "type": "string",
+      "enum": [
+        "PHYSICAL_PENDING",
+        "PHYSICAL_EXECUTED"
+      ]
+    },
+    "virtual_run_id": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "metric_id": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "golden_journey_refs": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "risk_refs": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "notes": {
+      "type": "string"
+    }
+  }
+}
