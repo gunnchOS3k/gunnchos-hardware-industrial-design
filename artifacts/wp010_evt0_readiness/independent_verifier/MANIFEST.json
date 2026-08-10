@@ -1,0 +1,9 @@
+{
+  "schema": "gunnchos.wp010_independent_verifier_manifest.v1",
+  "work_package": "VP-010",
+  "result": "FAIL",
+  "READY_FOR_EVT0_MEASUREMENT_EXECUTION": false,
+  "result_path": "npi/evt0_measurement_readiness/independent_verifier/VP-010-RESULT.json",
+  "hardware_tip_sha": "611d51d253390cf379428ced704f4d847f7bd105",
+  "device_os_tip_sha": "d5ff4eaeedb1e7eb7be248573d393ae3573cfeb5"
+}

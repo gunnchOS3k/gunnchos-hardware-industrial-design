@@ -19,6 +19,7 @@
 | E5 Golden Journey map | `EVT0_E5_GOLDEN_JOURNEY_MEASUREMENT_MAP.json` |
 | Risk↔test traceability | `EVT0_RISK_TEST_TRACEABILITY.json` |
 | Readiness token (implementer) | `READY_FOR_EVT0_MEASUREMENT_EXECUTION.json` |
+| Independent VP-010 result | `independent_verifier/VP-010-RESULT.json` |
 
 ## Hardware baseline
 
@@ -29,7 +30,7 @@ Accepted Cont IX silk/rev: `0.6.0-cont-ix` (five-product family).
 - No pre-populated physical PASS.
 - VF4/VF5/VF6 remain PHYSICAL_PENDING (Device Lab).
 - Expensive RF/SI gear classified RENT / EXTERNAL_LAB / VENDOR_DFM — not assumed purchased.
-- Independent verifier owns V1 / VP-010-RESULT.json.
+- Independent verifier owns V1 / `independent_verifier/VP-010-RESULT.json` (implementer must not self-certify V1).
 
 ## Validate
 
