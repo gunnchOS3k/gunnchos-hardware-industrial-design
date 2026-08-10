@@ -1,0 +1,204 @@
+{
+  "schema": "gunnchos.operating_cycle_2.vp010_evt0_fixture_instrument_readiness_result.v1",
+  "verifier_role": "INDEPENDENT_VERIFIER_AGENT",
+  "work_package": "VP-010",
+  "cycle": 2,
+  "generated_at_utc": "2026-08-10T21:23:00Z",
+  "result": "PASS",
+  "rerun_of": "VP-010 after WP-010R1 remediation",
+  "supersedes": {
+    "prior_result": "FAIL",
+    "prior_pr": 57,
+    "prior_result_path": "npi/evt0_measurement_readiness/independent_verifier/VP-010-RESULT.json",
+    "prior_hardware_tip_sha": "611d51d253390cf379428ced704f4d847f7bd105",
+    "closed_defects": [
+      "DEFECT-VP010-001",
+      "DEFECT-VP010-002",
+      "DEFECT-VP010-003"
+    ]
+  },
+  "evidence_level": "E4",
+  "evidence_level_note": "Digital readiness package review only. No physical energization, calibration, purchase, fab, or measurement execution. PHYSICAL_EXECUTION_FREEZE remains. Not PHYSICALLY_VALIDATED.",
+  "independent_question": "If an EVT0 unit arrived tomorrow, could a competent engineer safely and reproducibly test the highest-risk subsystems and create decision-grade evidence?",
+  "answer": "YES for digital measurement-execution readiness. WP-010R1 restored the network→audio→dock bring-up gate and added onboard EVT-AUD/CAM plus keyboard/controls IDs with instrument/risk/E5 bindings. Remaining blockers are physical (units, freeze, fab, cal, operators) — not missing critical digital measurement IDs from the prior FAIL.",
+  "READY_FOR_EVT0_MEASUREMENT_EXECUTION": true,
+  "PHYSICALLY_VALIDATED": false,
+  "PHYSICAL_EXECUTION_FREEZE": true,
+  "purchase_fab_run_authorized": false,
+  "verified_against": {
+    "hardware_pr": 58,
+    "hardware_pr_title": "WP-010R1: Close DEFECT-VP010-001..003 (audio gate + AUD/CAM/KEY)",
+    "hardware_pr_head_sha_claimed": "125386e08b3afc3b5344e96d7b71de8a50529c83",
+    "hardware_pr_head_sha_observed": "125386e08b3afc3b5344e96d7b71de8a50529c83",
+    "hardware_pr_was_draft_at_verification": true,
+    "hardware_pr_state_at_verification": "OPEN",
+    "prior_wp010_base_merge": "9877b3c33c94716729181f74bf749261306093d1",
+    "device_os_pr": 90,
+    "device_os_pr_head_sha_claimed": "d5ff4eaeedb1e7eb7be248573d393ae3573cfeb5",
+    "device_os_pr_head_sha_observed": "d5ff4eaeedb1e7eb7be248573d393ae3573cfeb5",
+    "device_os_pr_state_at_verification": "MERGED",
+    "ci_on_hardware_tip": "GREEN",
+    "ci_on_device_os_tip": "GREEN_AT_MERGE",
+    "hardware_rev_baseline_observed": "0.6.0-cont-ix",
+    "local_pytest_wp010_readiness": "9 passed"
+  },
+  "acceptance_sources_derived_before_implementer_matrices": [
+    "gunnchOS3k_Operating_Cycle_2 copy/VP-010_EVT0_FIXTURE_INSTRUMENT_READINESS.md",
+    "gunnchOS3k_Operating_Cycle_2 copy/WP-010_EVT0_FIXTURE_INSTRUMENT_READINESS.md",
+    "gunnchOS3k_Operating_Cycle_2 copy/CYCLE_2_EXPECTED_OUTPUT.md",
+    "program/operating_model/10_EVT_PHYSICAL/EVT_PHILOSOPHY.md",
+    "program/operating_model/06_RISK_UNKNOWN_SUPPLY/RISK_REGISTER.json (RISK-001..012)",
+    "program/operating_model/02_QUALITY_USERS/GOLDEN_JOURNEYS.json (GOLDEN-01..10 E5 gaps)",
+    "prior independent FAIL on PR #57 (DEFECT-VP010-001..003)",
+    "device-os Device Lab VF4 calibration needs (LAB-FUTURE-007 schemas; VF4/5/6 PHYSICAL_PENDING)"
+  ],
+  "counts": {
+    "master_tests": 41,
+    "instruments": 23,
+    "fixtures": 11,
+    "risks_traced": 12,
+    "golden_journeys_mapped": 10,
+    "blocking_defects": 0,
+    "closed_defects": 3,
+    "observations": 4
+  },
+  "defect_closure": [
+    {
+      "id": "DEFECT-VP010-001",
+      "status": "CLOSED",
+      "severity": "S1",
+      "evidence": "EVT0_MASTER_TEST_MATRIX.json bringup_order is network→audio→dock; EVT0_BRINGUP_SEQUENCE.md step 8 audio binds EVT-AUD-001/EVT-CAM-001 before dock; damaging-order prohibitions forbid skipping audio gate."
+    },
+    {
+      "id": "DEFECT-VP010-002",
+      "status": "CLOSED",
+      "severity": "S1",
+      "evidence": "EVT-AUD-001 and EVT-CAM-001 present for student_14_5/handheld_hybrid/ds_xl_coder with P1 priority, acceptance criteria, units, PHYSICAL_PENDING, INST-AUDIO / INST-CAM-HOST wiring; RISK-009 and E5 GOLDEN-01/03/05 maps updated."
+    },
+    {
+      "id": "DEFECT-VP010-003",
+      "status": "CLOSED",
+      "severity": "S2",
+      "evidence": "EVT-KEY-001 (Student/DS-XL keyboard HID) and EVT-KEY-002 (Handheld controls) under display_input with acceptance criteria; Rings remain EVT-RING-* only."
+    }
+  ],
+  "checks": [
+    {
+      "id": 1,
+      "name": "risk_traceability_RISK_001_to_012",
+      "result": "PASS",
+      "notes": "All RISK-001..012 traced; RISK-009 now includes EVT-AUD-001/EVT-CAM-001/EVT-KEY-001/EVT-KEY-002 plus prior DISP/GAME/GJ tests. All physical_status=PHYSICAL_PENDING."
+    },
+    {
+      "id": 2,
+      "name": "exit_artifacts_present",
+      "result": "PASS",
+      "notes": "WP-010 exit set present under npi/evt0_measurement_readiness/ including E5 map and risk traceability."
+    },
+    {
+      "id": 3,
+      "name": "evidence_schema_adequacy",
+      "result": "PASS",
+      "notes": "EVT0_EVIDENCE_SCHEMA.json retains required identity/instrument/calibration/raw/units/uncertainty/pass_fail/defect fields; claim_boundary constrained."
+    },
+    {
+      "id": 4,
+      "name": "safety_and_bringup_present",
+      "result": "PASS",
+      "notes": "Safety plan retained. Bring-up order matches WP-010 mandatory sequence including audio between network and dock; JSON and MD aligned."
+    },
+    {
+      "id": 5,
+      "name": "acquisition_purchase_authorized_false",
+      "result": "PASS",
+      "notes": "EVT0_ACQUISITION_ACTION_LIST.json purchase_authorized=false; physical_execution_freeze=true; all actions PLAN_ONLY."
+    },
+    {
+      "id": 6,
+      "name": "device_lab_interfaces_only_vf_pending",
+      "result": "PASS",
+      "notes": "device-os #90 remains interfaces-only on main. VF4/VF5/VF6=PHYSICAL_PENDING; CALIBRATED_EVT0=false; bridge schema vf_status const PHYSICAL_PENDING."
+    },
+    {
+      "id": 7,
+      "name": "e5_golden_journey_measurement_map",
+      "result": "PASS",
+      "notes": "GOLDEN-01..10 mapped; AUD/CAM/KEY companions appear on relevant journeys; doctrine digital≠physical; vf4_vf5_vf6 PHYSICAL_PENDING."
+    },
+    {
+      "id": 8,
+      "name": "highest_risk_subsystem_measurement_coverage",
+      "result": "PASS",
+      "notes": "Prior gaps closed: onboard audio/camera + keyboard/controls IDs exist with acceptance criteria and instrument links. Numeric SPL/camera MPNs remain TARGET_TBD (honest residual under WP-008 freeze) — not a token blocker for digital readiness."
+    },
+    {
+      "id": 9,
+      "name": "instrument_fixture_classification_and_refs",
+      "result": "PASS",
+      "notes": "INST-AUDIO tests include EVT-AUD-001; INST-CAM-HOST added for EVT-CAM-001; all test instrument/fixture IDs resolve; fixtures NOT_FABRICATED / DIGITALLY_COMPLETE."
+    },
+    {
+      "id": 10,
+      "name": "calibration_bridge_metric_identity",
+      "result": "PASS",
+      "notes": "Hardware + device-os bridge schemas still require metric identity fields with vf_status PHYSICAL_PENDING. Dual AI metrics observation from prior run remains low-severity non-blocker."
+    },
+    {
+      "id": 11,
+      "name": "no_physical_pass_or_purchase_authorization",
+      "result": "PASS",
+      "notes": "All 41 tests PHYSICAL_PENDING; no PHYSICAL_MEASURED claim; implementer self_certified_v1=false; PHYSICALLY_VALIDATED false; purchase_authorized false."
+    },
+    {
+      "id": 12,
+      "name": "ci_green_on_tips",
+      "result": "PASS",
+      "notes": "Hardware #58 tip 125386e: CAD CI / EVT-1 package CI / Gate1 / Portfolio hardening all SUCCESS. Local pytest tests/test_wp010_evt0_readiness.py: 9 passed. device-os #90 merge tip d5ff4ea was green at merge."
+    },
+    {
+      "id": 13,
+      "name": "token_ready_for_evt0_measurement_execution",
+      "result": "PASS",
+      "notes": "Independent grant: READY_FOR_EVT0_MEASUREMENT_EXECUTION=true for digital readiness planning only. Does NOT authorize purchase/fab/run and does NOT claim PHYSICALLY_VALIDATED."
+    }
+  ],
+  "defects": [],
+  "observations": [
+    {
+      "severity": "info",
+      "note": "This PASS supersedes FAIL DRAFT #57. Keep both DRAFT until Edmund decides merge order; do not treat #57 FAIL artifact as current."
+    },
+    {
+      "severity": "low",
+      "note": "EVT-AUD-001/EVT-CAM-001 numeric thresholds and camera module MPN remain TARGET_TBD — consume WP-008 frozen NFRs when available; smoke acceptance is sufficient for EVT0 digital readiness."
+    },
+    {
+      "severity": "low",
+      "note": "lab.ai.tokens_per_s dual-metric observation on EVT-AI-001 from prior VP-010 run remains open as planner clarity (non-blocking)."
+    },
+    {
+      "severity": "process",
+      "note": "WP-010R1 tip #58 is DRAFT at verification. Token grant is digital readiness only; Edmund may merge #58 after review without lifting PHYSICAL_EXECUTION_FREEZE."
+    }
+  ],
+  "edmund_merge_recommendation": {
+    "merge_verifier_result_on_pr_58": "DRAFT_OK_THEN_MERGE_AFTER_REVIEW",
+    "supersede_pr_57_fail_artifact": true,
+    "do_not_merge_pr_57_as_current_result": true,
+    "grant_READY_FOR_EVT0_MEASUREMENT_EXECUTION": true,
+    "authorize_purchase_fab_or_run": false,
+    "claim_PHYSICALLY_VALIDATED": false,
+    "next_action": "Merge WP-010R1 tip #58 (with this independent PASS RESULT) when satisfied. Keep PHYSICAL_EXECUTION_FREEZE. Close or mark #57 superseded. Do not start purchase/fab/run; VF4/5/6 remain PHYSICAL_PENDING. Proceed to configuration freeze / later physical packets only under separate authorization."
+  },
+  "remaining_physical_blockers": [
+    "No EVT0 hardware units",
+    "PHYSICAL_EXECUTION_FREEZE — no purchase/fab/run",
+    "WP-001 configuration freeze not executed",
+    "Vendor NDA/SI collateral for Dock USB4/TB4 and COM-HPC",
+    "Rental/lab booking for SA/VNA/USB4 SI/MoCap after freeze lift",
+    "Human operators + calibrated instrument serials",
+    "Fixture physical fab (currently NOT_FABRICATED)",
+    "VF4/VF5/VF6 remain PHYSICAL_PENDING — no CALIBRATED_EVT0",
+    "WP-008 NFR numeric thresholds for audio SPL / camera module where still TARGET_TBD"
+  ]
+}

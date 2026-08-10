@@ -1,0 +1,21 @@
+{
+  "schema": "gunnchos.wp010_independent_verifier_manifest.v1",
+  "work_package": "VP-010",
+  "result": "PASS",
+  "rerun": "WP-010R1",
+  "READY_FOR_EVT0_MEASUREMENT_EXECUTION": true,
+  "PHYSICALLY_VALIDATED": false,
+  "purchase_fab_run_authorized": false,
+  "result_path": "npi/evt0_measurement_readiness/independent_verifier/VP-010-RESULT.json",
+  "hardware_pr": 58,
+  "hardware_tip_sha": "125386e08b3afc3b5344e96d7b71de8a50529c83",
+  "device_os_pr": 90,
+  "device_os_tip_sha": "d5ff4eaeedb1e7eb7be248573d393ae3573cfeb5",
+  "supersedes_pr": 57,
+  "closed_defects": [
+    "DEFECT-VP010-001",
+    "DEFECT-VP010-002",
+    "DEFECT-VP010-003"
+  ],
+  "generated_at_utc": "2026-08-10T21:23:00Z"
+}
