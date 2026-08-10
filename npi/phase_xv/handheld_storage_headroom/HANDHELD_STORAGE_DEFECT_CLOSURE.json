@@ -1,0 +1,56 @@
+{
+  "schema": "gunnchos.wp002.handheld_storage_defect_closure.v1",
+  "generated_at": "2026-08-10T14:30:00Z",
+  "work_package": "WP-002",
+  "defect_id": "NPI_DEFECT-HANDHELD-STORAGE-HEADROOM-001",
+  "sku": "handheld_hybrid",
+  "PHYSICAL_EXECUTION_FREEZE": "ACTIVE",
+  "evidence_class": "E4_DIGITAL",
+  "decision_outcome": "A",
+  "decision_outcome_title": "32GB_SYSTEM_ONLY_PLUS_SUPPORTED_EXPANSION",
+  "status": "CLOSED_OUTCOME_A_PENDING_V1",
+  "baselines_accepted": {
+    "hardware_main": "8705f5a25065e02c7513e990a43e4762967906c5",
+    "hardware_pr": 53,
+    "device_os_main": "42128e4472fc2f40046100a062e6677633d62f7b",
+    "device_os_pr": 77
+  },
+  "options": {
+    "A": {
+      "selected": true,
+      "summary": "Keep RM121-D8E32 32GB eMMC as system/recovery; require microSD for games/models/offline/user media; enforce reserves/reclamation.",
+      "architecture_change": false
+    },
+    "B": {
+      "selected": false,
+      "summary": "Larger onboard eMMC/UFS SKU",
+      "rejected_reason": "No ≥64GB NX5 order code in EXACT_MPN_MATRIX / verified brief. Approved alternates are smaller or zero eMMC. Inventing RM121-D8E64 is forbidden."
+    },
+    "C": {
+      "selected": false,
+      "summary": "Class E architecture defect / CR+ADR",
+      "not_required_because": "Supported expansion (microSD) already exists in ICD/netlist and yields operationally safe digital margins under Outcome A policy.",
+      "deferred_spike_only": "Carrier NVMe remux remains optional future Class E spike — not opened as the closure path."
+    }
+  },
+  "margins_summary_gb": {
+    "onboard_usable": 29.76,
+    "onboard_claimed_with_reserves": 24.976,
+    "onboard_operational_slack": 4.784,
+    "min_free_reserve": 2.976,
+    "update_reserve": 2.0,
+    "emergency_save_reserve": 0.5,
+    "expansion_claimed_day0": 29.25,
+    "expansion_slack_day0_on_64gb_card": 30.27
+  },
+  "artifacts": [
+    "HANDHELD_STORAGE_CAPACITY_MODEL.json",
+    "HANDHELD_STORAGE_POLICY.md",
+    "HANDHELD_STORAGE_GROWTH_30_90_180.json",
+    "HANDHELD_STORAGE_DEFECT_CLOSURE.json",
+    "NPI_DEFECT-HANDHELD-STORAGE-HEADROOM-001.json"
+  ],
+  "class_e_cr": null,
+  "v1_certification": "NOT_SELF_CERTIFIED — independent verifier owns VP-002-RESULT.json",
+  "claim_boundary": "Digital closure under Outcome A. Physical endurance remains PHYSICAL_PENDING."
+}

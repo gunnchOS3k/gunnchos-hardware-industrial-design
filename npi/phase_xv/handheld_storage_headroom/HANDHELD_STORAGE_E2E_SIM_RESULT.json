@@ -1,0 +1,1289 @@
+{
+  "schema": "gunnchos.wp002.handheld_storage_e2e_sim_bundle.v1",
+  "decision_outcome": "A",
+  "with_expansion": {
+    "schema": "gunnchos.wp002.handheld_storage_e2e_sim.v1",
+    "decision_outcome": "A",
+    "expansion_mounted": true,
+    "ok": true,
+    "silent_data_loss": false,
+    "onboard": {
+      "usable_gb": 29.76,
+      "used_gb": 24.25,
+      "free_gb": 5.51,
+      "used": {
+        "slot_a": 5.0,
+        "slot_b": 5.0,
+        "recovery": 2.0,
+        "boot_firmware": 0.25,
+        "gunnchos_apps_core": 2.0,
+        "ai_nano_core": 2.0,
+        "vision_speech_stub": 0.25,
+        "embeddings_stub": 0.25,
+        "logs": 6.75,
+        "crash_dumps": 0.25,
+        "user_micro_workspace": 0.5
+      }
+    },
+    "expansion": {
+      "usable_gb": 59.52,
+      "mounted": true,
+      "used_gb": 23.9,
+      "free_gb": 35.62,
+      "used": {
+        "game_0": 1.5,
+        "game_1": 1.5,
+        "game_2": 1.5,
+        "game_3": 1.5,
+        "game_patches": 1.5,
+        "ai_fast_pro": 3.0,
+        "vision_speech_full": 1.0,
+        "embeddings_reranker": 0.75,
+        "waike_offline_pack": 1.5,
+        "archive_playable_data": 2.0,
+        "user_documents": 2.05,
+        "screenshots_captures": 1.0,
+        "save_data": 0.55,
+        "flatpak_runtime_overhead": 4.0,
+        "project_indexes": 0.5,
+        "ai_memory": 0.05
+      }
+    },
+    "margins": {
+      "min_free_gb": 2.9760000000000004,
+      "update_reserve_gb": 2.0,
+      "emergency_save_gb": 0.5,
+      "warning_free_gb": 3.5
+    },
+    "steps": [
+      {
+        "step": "fresh_install",
+        "onboard_used_gb": 18.0,
+        "onboard_free_gb": 11.76,
+        "meets_reserves": true
+      },
+      {
+        "step": "write_ok",
+        "volume": "expansion",
+        "key": "game_0",
+        "kind": "game_install",
+        "gb": 1.5,
+        "free_gb": 58.02
+      },
+      {
+        "step": "write_ok",
+        "volume": "expansion",
+        "key": "game_1",
+        "kind": "game_install",
+        "gb": 1.5,
+        "free_gb": 56.52
+      },
+      {
+        "step": "write_ok",
+        "volume": "expansion",
+        "key": "game_2",
+        "kind": "game_install",
+        "gb": 1.5,
+        "free_gb": 55.02
+      },
+      {
+        "step": "write_ok",
+        "volume": "expansion",
+        "key": "game_3",
+        "kind": "game_install",
+        "gb": 1.5,
+        "free_gb": 53.52
+      },
+      {
+        "step": "write_ok",
+        "volume": "expansion",
+        "key": "game_patches",
+        "kind": "game_patch",
+        "gb": 1.5,
+        "free_gb": 52.02
+      },
+      {
+        "step": "write_ok",
+        "volume": "expansion",
+        "key": "shader_caches",
+        "kind": "cache",
+        "gb": 1.0,
+        "free_gb": 51.02
+      },
+      {
+        "step": "write_ok",
+        "volume": "expansion",
+        "key": "ai_fast_pro",
+        "kind": "ai_model",
+        "gb": 3.0,
+        "free_gb": 48.02
+      },
+      {
+        "step": "write_ok",
+        "volume": "expansion",
+        "key": "vision_speech_full",
+        "kind": "ai_model",
+        "gb": 1.0,
+        "free_gb": 47.02
+      },
+      {
+        "step": "write_ok",
+        "volume": "expansion",
+        "key": "embeddings_reranker",
+        "kind": "ai_model",
+        "gb": 0.75,
+        "free_gb": 46.27
+      },
+      {
+        "step": "write_ok",
+        "volume": "expansion",
+        "key": "ai_model_update_overlap",
+        "kind": "cache",
+        "gb": 1.0,
+        "free_gb": 45.27
+      },
+      {
+        "step": "write_ok",
+        "volume": "expansion",
+        "key": "waike_offline_pack",
+        "kind": "offline_pack",
+        "gb": 1.5,
+        "free_gb": 43.77
+      },
+      {
+        "step": "write_ok",
+        "volume": "expansion",
+        "key": "archive_playable_data",
+        "kind": "archive",
+        "gb": 2.0,
+        "free_gb": 41.77
+      },
+      {
+        "step": "write_ok",
+        "volume": "expansion",
+        "key": "user_documents",
+        "kind": "user_documents",
+        "gb": 2.0,
+        "free_gb": 39.77
+      },
+      {
+        "step": "write_ok",
+        "volume": "expansion",
+        "key": "screenshots_captures",
+        "kind": "cache",
+        "gb": 1.0,
+        "free_gb": 38.77
+      },
+      {
+        "step": "write_ok",
+        "volume": "expansion",
+        "key": "save_data",
+        "kind": "save_data",
+        "gb": 0.5,
+        "free_gb": 38.27
+      },
+      {
+        "step": "write_ok",
+        "volume": "expansion",
+        "key": "browser_cache",
+        "kind": "cache",
+        "gb": 1.0,
+        "free_gb": 37.27
+      },
+      {
+        "step": "write_ok",
+        "volume": "expansion",
+        "key": "messaging_media_cache",
+        "kind": "cache",
+        "gb": 1.0,
+        "free_gb": 36.27
+      },
+      {
+        "step": "write_ok",
+        "volume": "expansion",
+        "key": "flatpak_runtime_overhead",
+        "kind": "runtime",
+        "gb": 4.0,
+        "free_gb": 32.27
+      },
+      {
+        "step": "write_ok",
+        "volume": "expansion",
+        "key": "project_indexes",
+        "kind": "index",
+        "gb": 0.5,
+        "free_gb": 31.77
+      },
+      {
+        "step": "write_ok",
+        "volume": "expansion",
+        "key": "download_cache",
+        "kind": "cache",
+        "gb": 1.0,
+        "free_gb": 30.77
+      },
+      {
+        "step": "write_ok",
+        "volume": "expansion",
+        "key": "download_cache",
+        "kind": "cache",
+        "gb": 1.0,
+        "free_gb": 29.77
+      },
+      {
+        "step": "write_ok",
+        "volume": "expansion",
+        "key": "download_cache",
+        "kind": "cache",
+        "gb": 1.0,
+        "free_gb": 28.77
+      },
+      {
+        "step": "write_ok",
+        "volume": "expansion",
+        "key": "download_cache",
+        "kind": "cache",
+        "gb": 1.0,
+        "free_gb": 27.77
+      },
+      {
+        "step": "write_ok",
+        "volume": "expansion",
+        "key": "download_cache",
+        "kind": "cache",
+        "gb": 1.0,
+        "free_gb": 26.77
+      },
+      {
+        "step": "write_ok",
+        "volume": "expansion",
+        "key": "download_cache",
+        "kind": "cache",
+        "gb": 1.0,
+        "free_gb": 25.77
+      },
+      {
+        "step": "write_ok",
+        "volume": "expansion",
+        "key": "download_cache",
+        "kind": "cache",
+        "gb": 1.0,
+        "free_gb": 24.77
+      },
+      {
+        "step": "write_ok",
+        "volume": "expansion",
+        "key": "download_cache",
+        "kind": "cache",
+        "gb": 1.0,
+        "free_gb": 23.77
+      },
+      {
+        "step": "write_ok",
+        "volume": "expansion",
+        "key": "download_cache",
+        "kind": "cache",
+        "gb": 1.0,
+        "free_gb": 22.77
+      },
+      {
+        "step": "write_ok",
+        "volume": "expansion",
+        "key": "download_cache",
+        "kind": "cache",
+        "gb": 1.0,
+        "free_gb": 21.77
+      },
+      {
+        "step": "write_ok",
+        "volume": "expansion",
+        "key": "download_cache",
+        "kind": "cache",
+        "gb": 1.0,
+        "free_gb": 20.77
+      },
+      {
+        "step": "write_ok",
+        "volume": "expansion",
+        "key": "download_cache",
+        "kind": "cache",
+        "gb": 1.0,
+        "free_gb": 19.77
+      },
+      {
+        "step": "write_ok",
+        "volume": "expansion",
+        "key": "download_cache",
+        "kind": "cache",
+        "gb": 1.0,
+        "free_gb": 18.77
+      },
+      {
+        "step": "write_ok",
+        "volume": "expansion",
+        "key": "download_cache",
+        "kind": "cache",
+        "gb": 1.0,
+        "free_gb": 17.77
+      },
+      {
+        "step": "write_ok",
+        "volume": "expansion",
+        "key": "download_cache",
+        "kind": "cache",
+        "gb": 1.0,
+        "free_gb": 16.77
+      },
+      {
+        "step": "write_ok",
+        "volume": "expansion",
+        "key": "download_cache",
+        "kind": "cache",
+        "gb": 1.0,
+        "free_gb": 15.77
+      },
+      {
+        "step": "write_ok",
+        "volume": "expansion",
+        "key": "download_cache",
+        "kind": "cache",
+        "gb": 1.0,
+        "free_gb": 14.77
+      },
+      {
+        "step": "write_ok",
+        "volume": "expansion",
+        "key": "download_cache",
+        "kind": "cache",
+        "gb": 1.0,
+        "free_gb": 13.77
+      },
+      {
+        "step": "write_ok",
+        "volume": "expansion",
+        "key": "download_cache",
+        "kind": "cache",
+        "gb": 1.0,
+        "free_gb": 12.77
+      },
+      {
+        "step": "write_ok",
+        "volume": "expansion",
+        "key": "download_cache",
+        "kind": "cache",
+        "gb": 1.0,
+        "free_gb": 11.77
+      },
+      {
+        "step": "write_ok",
+        "volume": "expansion",
+        "key": "download_cache",
+        "kind": "cache",
+        "gb": 1.0,
+        "free_gb": 10.77
+      },
+      {
+        "step": "write_ok",
+        "volume": "expansion",
+        "key": "download_cache",
+        "kind": "cache",
+        "gb": 1.0,
+        "free_gb": 9.77
+      },
+      {
+        "step": "write_ok",
+        "volume": "expansion",
+        "key": "download_cache",
+        "kind": "cache",
+        "gb": 1.0,
+        "free_gb": 8.77
+      },
+      {
+        "step": "write_ok",
+        "volume": "expansion",
+        "key": "download_cache",
+        "kind": "cache",
+        "gb": 1.0,
+        "free_gb": 7.77
+      },
+      {
+        "step": "write_ok",
+        "volume": "onboard",
+        "key": "update_temp",
+        "kind": "os_update",
+        "gb": 1.0,
+        "free_gb": 10.76
+      },
+      {
+        "step": "update_commit_and_cleanup",
+        "onboard_free_gb": 11.76
+      },
+      {
+        "step": "write_ok",
+        "volume": "onboard",
+        "key": "logs",
+        "kind": "cache",
+        "gb": 0.25,
+        "free_gb": 11.51
+      },
+      {
+        "step": "write_ok",
+        "volume": "onboard",
+        "key": "logs",
+        "kind": "cache",
+        "gb": 0.25,
+        "free_gb": 11.26
+      },
+      {
+        "step": "write_ok",
+        "volume": "onboard",
+        "key": "logs",
+        "kind": "cache",
+        "gb": 0.25,
+        "free_gb": 11.01
+      },
+      {
+        "step": "write_ok",
+        "volume": "onboard",
+        "key": "logs",
+        "kind": "cache",
+        "gb": 0.25,
+        "free_gb": 10.76
+      },
+      {
+        "step": "write_ok",
+        "volume": "onboard",
+        "key": "logs",
+        "kind": "cache",
+        "gb": 0.25,
+        "free_gb": 10.51
+      },
+      {
+        "step": "write_ok",
+        "volume": "onboard",
+        "key": "logs",
+        "kind": "cache",
+        "gb": 0.25,
+        "free_gb": 10.26
+      },
+      {
+        "step": "write_ok",
+        "volume": "onboard",
+        "key": "logs",
+        "kind": "cache",
+        "gb": 0.25,
+        "free_gb": 10.01
+      },
+      {
+        "step": "write_ok",
+        "volume": "onboard",
+        "key": "logs",
+        "kind": "cache",
+        "gb": 0.25,
+        "free_gb": 9.76
+      },
+      {
+        "step": "write_ok",
+        "volume": "onboard",
+        "key": "logs",
+        "kind": "cache",
+        "gb": 0.25,
+        "free_gb": 9.51
+      },
+      {
+        "step": "write_ok",
+        "volume": "onboard",
+        "key": "logs",
+        "kind": "cache",
+        "gb": 0.25,
+        "free_gb": 9.26
+      },
+      {
+        "step": "write_ok",
+        "volume": "onboard",
+        "key": "logs",
+        "kind": "cache",
+        "gb": 0.25,
+        "free_gb": 9.01
+      },
+      {
+        "step": "write_ok",
+        "volume": "onboard",
+        "key": "logs",
+        "kind": "cache",
+        "gb": 0.25,
+        "free_gb": 8.76
+      },
+      {
+        "step": "write_ok",
+        "volume": "onboard",
+        "key": "logs",
+        "kind": "cache",
+        "gb": 0.25,
+        "free_gb": 8.51
+      },
+      {
+        "step": "write_ok",
+        "volume": "onboard",
+        "key": "logs",
+        "kind": "cache",
+        "gb": 0.25,
+        "free_gb": 8.26
+      },
+      {
+        "step": "write_ok",
+        "volume": "onboard",
+        "key": "logs",
+        "kind": "cache",
+        "gb": 0.25,
+        "free_gb": 8.01
+      },
+      {
+        "step": "write_ok",
+        "volume": "onboard",
+        "key": "logs",
+        "kind": "cache",
+        "gb": 0.25,
+        "free_gb": 7.76
+      },
+      {
+        "step": "write_ok",
+        "volume": "onboard",
+        "key": "logs",
+        "kind": "cache",
+        "gb": 0.25,
+        "free_gb": 7.51
+      },
+      {
+        "step": "write_ok",
+        "volume": "onboard",
+        "key": "logs",
+        "kind": "cache",
+        "gb": 0.25,
+        "free_gb": 7.26
+      },
+      {
+        "step": "write_ok",
+        "volume": "onboard",
+        "key": "logs",
+        "kind": "cache",
+        "gb": 0.25,
+        "free_gb": 7.01
+      },
+      {
+        "step": "write_ok",
+        "volume": "onboard",
+        "key": "logs",
+        "kind": "cache",
+        "gb": 0.25,
+        "free_gb": 6.76
+      },
+      {
+        "step": "write_ok",
+        "volume": "onboard",
+        "key": "logs",
+        "kind": "cache",
+        "gb": 0.25,
+        "free_gb": 6.51
+      },
+      {
+        "step": "write_ok",
+        "volume": "onboard",
+        "key": "logs",
+        "kind": "cache",
+        "gb": 0.25,
+        "free_gb": 6.26
+      },
+      {
+        "step": "write_ok",
+        "volume": "onboard",
+        "key": "logs",
+        "kind": "cache",
+        "gb": 0.25,
+        "free_gb": 6.01
+      },
+      {
+        "step": "write_ok",
+        "volume": "onboard",
+        "key": "logs",
+        "kind": "cache",
+        "gb": 0.25,
+        "free_gb": 5.76
+      },
+      {
+        "step": "write_ok",
+        "volume": "onboard",
+        "key": "logs",
+        "kind": "cache",
+        "gb": 0.25,
+        "free_gb": 5.51
+      },
+      {
+        "step": "write_ok",
+        "volume": "expansion",
+        "key": "save_data",
+        "kind": "save_data",
+        "gb": 0.05,
+        "free_gb": 7.72
+      },
+      {
+        "step": "write_ok",
+        "volume": "expansion",
+        "key": "user_documents",
+        "kind": "user_documents",
+        "gb": 0.05,
+        "free_gb": 7.67
+      },
+      {
+        "step": "write_ok",
+        "volume": "expansion",
+        "key": "ai_memory",
+        "kind": "ai_memory",
+        "gb": 0.05,
+        "free_gb": 7.62
+      },
+      {
+        "step": "cleanup",
+        "protected_onboard_unchanged": true,
+        "protected_expansion_unchanged": true,
+        "onboard_free_gb": 5.51,
+        "expansion_free_gb": 35.62
+      },
+      {
+        "step": "rollback_slots_intact",
+        "ok": true
+      }
+    ],
+    "failures": [],
+    "claim_boundary": "Digital E2E simulation only. No physical media endurance claim. Independent V1 verifier owns VP-002-RESULT.json."
+  },
+  "without_expansion": {
+    "schema": "gunnchos.wp002.handheld_storage_e2e_sim.v1",
+    "decision_outcome": "A",
+    "expansion_mounted": false,
+    "ok": true,
+    "silent_data_loss": false,
+    "onboard": {
+      "usable_gb": 29.76,
+      "used_gb": 24.4,
+      "free_gb": 5.36,
+      "used": {
+        "slot_a": 5.0,
+        "slot_b": 5.0,
+        "recovery": 2.0,
+        "boot_firmware": 0.25,
+        "gunnchos_apps_core": 2.0,
+        "ai_nano_core": 2.0,
+        "vision_speech_stub": 0.25,
+        "embeddings_stub": 0.25,
+        "logs": 6.75,
+        "crash_dumps": 0.25,
+        "user_micro_workspace": 0.5,
+        "save_data": 0.05,
+        "user_documents": 0.05,
+        "ai_memory": 0.05
+      }
+    },
+    "expansion": {
+      "usable_gb": 59.52,
+      "mounted": false,
+      "used_gb": 0.0,
+      "free_gb": null,
+      "used": {}
+    },
+    "margins": {
+      "min_free_gb": 2.9760000000000004,
+      "update_reserve_gb": 2.0,
+      "emergency_save_gb": 0.5,
+      "warning_free_gb": 3.5
+    },
+    "steps": [
+      {
+        "step": "fresh_install",
+        "onboard_used_gb": 18.0,
+        "onboard_free_gb": 11.76,
+        "meets_reserves": true
+      },
+      {
+        "step": "write_denied",
+        "ok": false,
+        "error": "volume_unmounted",
+        "volume": "expansion",
+        "key": "game_0",
+        "kind": "game_install",
+        "gb": 1.5
+      },
+      {
+        "step": "write_denied",
+        "ok": false,
+        "error": "volume_unmounted",
+        "volume": "expansion",
+        "key": "game_1",
+        "kind": "game_install",
+        "gb": 1.5
+      },
+      {
+        "step": "write_denied",
+        "ok": false,
+        "error": "volume_unmounted",
+        "volume": "expansion",
+        "key": "game_2",
+        "kind": "game_install",
+        "gb": 1.5
+      },
+      {
+        "step": "write_denied",
+        "ok": false,
+        "error": "volume_unmounted",
+        "volume": "expansion",
+        "key": "game_3",
+        "kind": "game_install",
+        "gb": 1.5
+      },
+      {
+        "step": "write_denied",
+        "ok": false,
+        "error": "volume_unmounted",
+        "volume": "expansion",
+        "key": "game_patches",
+        "kind": "game_patch",
+        "gb": 1.5
+      },
+      {
+        "step": "write_denied",
+        "ok": false,
+        "error": "volume_unmounted",
+        "volume": "expansion",
+        "key": "shader_caches",
+        "kind": "cache",
+        "gb": 1.0
+      },
+      {
+        "step": "write_denied",
+        "ok": false,
+        "error": "volume_unmounted",
+        "volume": "expansion",
+        "key": "ai_fast_pro",
+        "kind": "ai_model",
+        "gb": 3.0
+      },
+      {
+        "step": "write_denied",
+        "ok": false,
+        "error": "volume_unmounted",
+        "volume": "expansion",
+        "key": "vision_speech_full",
+        "kind": "ai_model",
+        "gb": 1.0
+      },
+      {
+        "step": "write_denied",
+        "ok": false,
+        "error": "volume_unmounted",
+        "volume": "expansion",
+        "key": "embeddings_reranker",
+        "kind": "ai_model",
+        "gb": 0.75
+      },
+      {
+        "step": "write_denied",
+        "ok": false,
+        "error": "volume_unmounted",
+        "volume": "expansion",
+        "key": "ai_model_update_overlap",
+        "kind": "cache",
+        "gb": 1.0
+      },
+      {
+        "step": "write_denied",
+        "ok": false,
+        "error": "volume_unmounted",
+        "volume": "expansion",
+        "key": "waike_offline_pack",
+        "kind": "offline_pack",
+        "gb": 1.5
+      },
+      {
+        "step": "write_denied",
+        "ok": false,
+        "error": "volume_unmounted",
+        "volume": "expansion",
+        "key": "archive_playable_data",
+        "kind": "archive",
+        "gb": 2.0
+      },
+      {
+        "step": "write_denied",
+        "ok": false,
+        "error": "volume_unmounted",
+        "volume": "expansion",
+        "key": "user_documents",
+        "kind": "user_documents",
+        "gb": 2.0
+      },
+      {
+        "step": "write_denied",
+        "ok": false,
+        "error": "volume_unmounted",
+        "volume": "expansion",
+        "key": "screenshots_captures",
+        "kind": "cache",
+        "gb": 1.0
+      },
+      {
+        "step": "write_denied",
+        "ok": false,
+        "error": "volume_unmounted",
+        "volume": "expansion",
+        "key": "save_data",
+        "kind": "save_data",
+        "gb": 0.5
+      },
+      {
+        "step": "write_denied",
+        "ok": false,
+        "error": "volume_unmounted",
+        "volume": "expansion",
+        "key": "browser_cache",
+        "kind": "cache",
+        "gb": 1.0
+      },
+      {
+        "step": "write_denied",
+        "ok": false,
+        "error": "volume_unmounted",
+        "volume": "expansion",
+        "key": "messaging_media_cache",
+        "kind": "cache",
+        "gb": 1.0
+      },
+      {
+        "step": "write_denied",
+        "ok": false,
+        "error": "volume_unmounted",
+        "volume": "expansion",
+        "key": "flatpak_runtime_overhead",
+        "kind": "runtime",
+        "gb": 4.0
+      },
+      {
+        "step": "write_denied",
+        "ok": false,
+        "error": "volume_unmounted",
+        "volume": "expansion",
+        "key": "project_indexes",
+        "kind": "index",
+        "gb": 0.5
+      },
+      {
+        "step": "write_ok",
+        "volume": "onboard",
+        "key": "update_temp",
+        "kind": "os_update",
+        "gb": 1.0,
+        "free_gb": 10.76
+      },
+      {
+        "step": "update_commit_and_cleanup",
+        "onboard_free_gb": 11.76
+      },
+      {
+        "step": "write_ok",
+        "volume": "onboard",
+        "key": "logs",
+        "kind": "cache",
+        "gb": 0.25,
+        "free_gb": 11.51
+      },
+      {
+        "step": "write_ok",
+        "volume": "onboard",
+        "key": "logs",
+        "kind": "cache",
+        "gb": 0.25,
+        "free_gb": 11.26
+      },
+      {
+        "step": "write_ok",
+        "volume": "onboard",
+        "key": "logs",
+        "kind": "cache",
+        "gb": 0.25,
+        "free_gb": 11.01
+      },
+      {
+        "step": "write_ok",
+        "volume": "onboard",
+        "key": "logs",
+        "kind": "cache",
+        "gb": 0.25,
+        "free_gb": 10.76
+      },
+      {
+        "step": "write_ok",
+        "volume": "onboard",
+        "key": "logs",
+        "kind": "cache",
+        "gb": 0.25,
+        "free_gb": 10.51
+      },
+      {
+        "step": "write_ok",
+        "volume": "onboard",
+        "key": "logs",
+        "kind": "cache",
+        "gb": 0.25,
+        "free_gb": 10.26
+      },
+      {
+        "step": "write_ok",
+        "volume": "onboard",
+        "key": "logs",
+        "kind": "cache",
+        "gb": 0.25,
+        "free_gb": 10.01
+      },
+      {
+        "step": "write_ok",
+        "volume": "onboard",
+        "key": "logs",
+        "kind": "cache",
+        "gb": 0.25,
+        "free_gb": 9.76
+      },
+      {
+        "step": "write_ok",
+        "volume": "onboard",
+        "key": "logs",
+        "kind": "cache",
+        "gb": 0.25,
+        "free_gb": 9.51
+      },
+      {
+        "step": "write_ok",
+        "volume": "onboard",
+        "key": "logs",
+        "kind": "cache",
+        "gb": 0.25,
+        "free_gb": 9.26
+      },
+      {
+        "step": "write_ok",
+        "volume": "onboard",
+        "key": "logs",
+        "kind": "cache",
+        "gb": 0.25,
+        "free_gb": 9.01
+      },
+      {
+        "step": "write_ok",
+        "volume": "onboard",
+        "key": "logs",
+        "kind": "cache",
+        "gb": 0.25,
+        "free_gb": 8.76
+      },
+      {
+        "step": "write_ok",
+        "volume": "onboard",
+        "key": "logs",
+        "kind": "cache",
+        "gb": 0.25,
+        "free_gb": 8.51
+      },
+      {
+        "step": "write_ok",
+        "volume": "onboard",
+        "key": "logs",
+        "kind": "cache",
+        "gb": 0.25,
+        "free_gb": 8.26
+      },
+      {
+        "step": "write_ok",
+        "volume": "onboard",
+        "key": "logs",
+        "kind": "cache",
+        "gb": 0.25,
+        "free_gb": 8.01
+      },
+      {
+        "step": "write_ok",
+        "volume": "onboard",
+        "key": "logs",
+        "kind": "cache",
+        "gb": 0.25,
+        "free_gb": 7.76
+      },
+      {
+        "step": "write_ok",
+        "volume": "onboard",
+        "key": "logs",
+        "kind": "cache",
+        "gb": 0.25,
+        "free_gb": 7.51
+      },
+      {
+        "step": "write_ok",
+        "volume": "onboard",
+        "key": "logs",
+        "kind": "cache",
+        "gb": 0.25,
+        "free_gb": 7.26
+      },
+      {
+        "step": "write_ok",
+        "volume": "onboard",
+        "key": "logs",
+        "kind": "cache",
+        "gb": 0.25,
+        "free_gb": 7.01
+      },
+      {
+        "step": "write_ok",
+        "volume": "onboard",
+        "key": "logs",
+        "kind": "cache",
+        "gb": 0.25,
+        "free_gb": 6.76
+      },
+      {
+        "step": "write_ok",
+        "volume": "onboard",
+        "key": "logs",
+        "kind": "cache",
+        "gb": 0.25,
+        "free_gb": 6.51
+      },
+      {
+        "step": "write_ok",
+        "volume": "onboard",
+        "key": "logs",
+        "kind": "cache",
+        "gb": 0.25,
+        "free_gb": 6.26
+      },
+      {
+        "step": "write_ok",
+        "volume": "onboard",
+        "key": "logs",
+        "kind": "cache",
+        "gb": 0.25,
+        "free_gb": 6.01
+      },
+      {
+        "step": "write_ok",
+        "volume": "onboard",
+        "key": "logs",
+        "kind": "cache",
+        "gb": 0.25,
+        "free_gb": 5.76
+      },
+      {
+        "step": "write_ok",
+        "volume": "onboard",
+        "key": "logs",
+        "kind": "cache",
+        "gb": 0.25,
+        "free_gb": 5.51
+      },
+      {
+        "step": "write_ok",
+        "volume": "onboard",
+        "key": "save_data",
+        "kind": "save_data",
+        "gb": 0.05,
+        "free_gb": 5.46
+      },
+      {
+        "step": "write_ok",
+        "volume": "onboard",
+        "key": "user_documents",
+        "kind": "user_documents",
+        "gb": 0.05,
+        "free_gb": 5.41
+      },
+      {
+        "step": "write_ok",
+        "volume": "onboard",
+        "key": "ai_memory",
+        "kind": "ai_memory",
+        "gb": 0.05,
+        "free_gb": 5.36
+      },
+      {
+        "step": "cleanup",
+        "protected_onboard_unchanged": true,
+        "protected_expansion_unchanged": true,
+        "onboard_free_gb": 5.36,
+        "expansion_free_gb": null
+      },
+      {
+        "step": "rollback_slots_intact",
+        "ok": true
+      },
+      {
+        "step": "expansion_absent_fail_closed",
+        "denied_count": 19
+      }
+    ],
+    "failures": [
+      {
+        "ok": false,
+        "error": "volume_unmounted",
+        "volume": "expansion",
+        "key": "game_0",
+        "kind": "game_install",
+        "gb": 1.5
+      },
+      {
+        "ok": false,
+        "error": "volume_unmounted",
+        "volume": "expansion",
+        "key": "game_1",
+        "kind": "game_install",
+        "gb": 1.5
+      },
+      {
+        "ok": false,
+        "error": "volume_unmounted",
+        "volume": "expansion",
+        "key": "game_2",
+        "kind": "game_install",
+        "gb": 1.5
+      },
+      {
+        "ok": false,
+        "error": "volume_unmounted",
+        "volume": "expansion",
+        "key": "game_3",
+        "kind": "game_install",
+        "gb": 1.5
+      },
+      {
+        "ok": false,
+        "error": "volume_unmounted",
+        "volume": "expansion",
+        "key": "game_patches",
+        "kind": "game_patch",
+        "gb": 1.5
+      },
+      {
+        "ok": false,
+        "error": "volume_unmounted",
+        "volume": "expansion",
+        "key": "shader_caches",
+        "kind": "cache",
+        "gb": 1.0
+      },
+      {
+        "ok": false,
+        "error": "volume_unmounted",
+        "volume": "expansion",
+        "key": "ai_fast_pro",
+        "kind": "ai_model",
+        "gb": 3.0
+      },
+      {
+        "ok": false,
+        "error": "volume_unmounted",
+        "volume": "expansion",
+        "key": "vision_speech_full",
+        "kind": "ai_model",
+        "gb": 1.0
+      },
+      {
+        "ok": false,
+        "error": "volume_unmounted",
+        "volume": "expansion",
+        "key": "embeddings_reranker",
+        "kind": "ai_model",
+        "gb": 0.75
+      },
+      {
+        "ok": false,
+        "error": "volume_unmounted",
+        "volume": "expansion",
+        "key": "ai_model_update_overlap",
+        "kind": "cache",
+        "gb": 1.0
+      },
+      {
+        "ok": false,
+        "error": "volume_unmounted",
+        "volume": "expansion",
+        "key": "waike_offline_pack",
+        "kind": "offline_pack",
+        "gb": 1.5
+      },
+      {
+        "ok": false,
+        "error": "volume_unmounted",
+        "volume": "expansion",
+        "key": "archive_playable_data",
+        "kind": "archive",
+        "gb": 2.0
+      },
+      {
+        "ok": false,
+        "error": "volume_unmounted",
+        "volume": "expansion",
+        "key": "user_documents",
+        "kind": "user_documents",
+        "gb": 2.0
+      },
+      {
+        "ok": false,
+        "error": "volume_unmounted",
+        "volume": "expansion",
+        "key": "screenshots_captures",
+        "kind": "cache",
+        "gb": 1.0
+      },
+      {
+        "ok": false,
+        "error": "volume_unmounted",
+        "volume": "expansion",
+        "key": "save_data",
+        "kind": "save_data",
+        "gb": 0.5
+      },
+      {
+        "ok": false,
+        "error": "volume_unmounted",
+        "volume": "expansion",
+        "key": "browser_cache",
+        "kind": "cache",
+        "gb": 1.0
+      },
+      {
+        "ok": false,
+        "error": "volume_unmounted",
+        "volume": "expansion",
+        "key": "messaging_media_cache",
+        "kind": "cache",
+        "gb": 1.0
+      },
+      {
+        "ok": false,
+        "error": "volume_unmounted",
+        "volume": "expansion",
+        "key": "flatpak_runtime_overhead",
+        "kind": "runtime",
+        "gb": 4.0
+      },
+      {
+        "ok": false,
+        "error": "volume_unmounted",
+        "volume": "expansion",
+        "key": "project_indexes",
+        "kind": "index",
+        "gb": 0.5
+      }
+    ],
+    "claim_boundary": "Digital E2E simulation only. No physical media endurance claim. Independent V1 verifier owns VP-002-RESULT.json."
+  },
+  "ok": true,
+  "PHYSICAL_EXECUTION_FREEZE": "ACTIVE",
+  "evidence_class": "E4_DIGITAL"
+}

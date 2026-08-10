@@ -1,0 +1,105 @@
+{
+  "schema": "gunnchos.wp002.handheld_storage_growth_30_90_180.v1",
+  "generated_at": "2026-08-10T14:30:00Z",
+  "work_package": "WP-002",
+  "defect_id": "NPI_DEFECT-HANDHELD-STORAGE-HEADROOM-001",
+  "sku": "handheld_hybrid",
+  "decision_outcome": "A",
+  "units": "GiB",
+  "assumption": "Reasonable field growth with Outcome A placement: system churn stays on eMMC; user/game/AI/offline growth lands on mounted microSD (or USB tertiary).",
+  "baselines": {
+    "onboard_usable_gb": 29.76,
+    "onboard_claimed_at_day0_gb": 24.976,
+    "onboard_slack_day0_gb": 4.784,
+    "expansion_usable_gb_assumed": 59.52,
+    "expansion_claimed_at_day0_gb": 29.25,
+    "expansion_slack_day0_gb": 30.27
+  },
+  "growth_increments_gb": {
+    "day_30": {
+      "onboard": {
+        "logs_and_crash_growth": 0.25,
+        "update_residue_cleanup_fail_budget": 0.25,
+        "ai_nano_delta": 0.25,
+        "total": 0.75
+      },
+      "expansion": {
+        "game_patches": 0.75,
+        "shader_cache": 0.5,
+        "ai_model_deltas": 0.75,
+        "waike_extra_lessons": 0.5,
+        "user_docs_captures": 1.0,
+        "browser_messaging_cache": 0.75,
+        "total": 4.25
+      }
+    },
+    "day_90": {
+      "onboard": {
+        "logs_and_crash_growth": 0.5,
+        "update_residue_cleanup_fail_budget": 0.35,
+        "ai_nano_delta": 0.5,
+        "total": 1.35
+      },
+      "expansion": {
+        "game_patches": 2.0,
+        "shader_cache": 1.0,
+        "ai_model_deltas": 2.0,
+        "waike_extra_lessons": 1.0,
+        "archive_playable_growth": 1.5,
+        "user_docs_captures": 3.0,
+        "browser_messaging_cache": 1.5,
+        "project_indexes": 0.5,
+        "total": 12.5
+      }
+    },
+    "day_180": {
+      "onboard": {
+        "logs_and_crash_growth": 0.75,
+        "update_residue_cleanup_fail_budget": 0.5,
+        "ai_nano_delta": 0.75,
+        "total": 2.0
+      },
+      "expansion": {
+        "game_patches": 3.5,
+        "shader_cache": 1.5,
+        "ai_model_deltas": 3.5,
+        "waike_extra_lessons": 1.5,
+        "archive_playable_growth": 3.0,
+        "user_docs_captures": 5.0,
+        "browser_messaging_cache": 2.5,
+        "project_indexes": 1.0,
+        "save_data_growth": 0.5,
+        "total": 22.0
+      }
+    }
+  },
+  "projected_slack_gb": {
+    "day_30": {
+      "onboard_slack_gb": 4.034,
+      "expansion_slack_gb": 26.02,
+      "onboard_still_meets_reserves": true,
+      "expansion_still_positive": true
+    },
+    "day_90": {
+      "onboard_slack_gb": 3.434,
+      "expansion_slack_gb": 17.77,
+      "onboard_still_meets_reserves": true,
+      "expansion_still_positive": true
+    },
+    "day_180": {
+      "onboard_slack_gb": 2.784,
+      "expansion_slack_gb": 8.27,
+      "onboard_still_meets_reserves": true,
+      "expansion_still_positive": true,
+      "note": "At day 180, onboard slack approaches the 2.976 GiB floor if cleanup fails; policy must reclaim logs/caches before installs."
+    }
+  },
+  "policy_triggers": {
+    "onboard_warning_if_slack_below_gb": 3.5,
+    "force_reclamation_if_slack_below_gb": 2.976,
+    "block_nonessential_onboard_writes_if_slack_below_gb": 2.976,
+    "expansion_warning_if_slack_below_gb": 8.0,
+    "expansion_block_large_install_if_slack_below_gb": 4.0
+  },
+  "claim_boundary": "Digital growth projection for WP-002 E4. Not a field telemetry claim."
+}
