@@ -15,10 +15,11 @@
     "npi/phase_xv/handheld_storage_headroom/HANDHELD_STORAGE_GROWTH_30_90_180.json",
     "npi/phase_xv/handheld_storage_headroom/HANDHELD_STORAGE_DEFECT_CLOSURE.json",
     "npi/phase_xv/handheld_storage_headroom/simulate_handheld_storage_e2e.py",
-    "npi/phase_xv/handheld_storage_headroom/HANDHELD_STORAGE_E2E_SIM_RESULT.json"
+    "npi/phase_xv/handheld_storage_headroom/HANDHELD_STORAGE_E2E_SIM_RESULT.json",
+    "npi/phase_xv/handheld_storage_headroom/VP-002-RESULT.json"
   ],
   "selected_recommendation": "OPT-C-SYSTEM-EMMC-PLUS-EXTERNAL-MEDIA-POLICY",
   "wp002_maps_recommendation_to_outcome": "A",
   "field_kit_companion_pr": "https://github.com/gunnchOS3k/gunnchos-7gc-ai-ran-field-kit/pull/54",
-  "v1_certification": "NOT_SELF_CERTIFIED"
+  "v1_certification": "VP-002-RESULT.json PASS (independent verifier; pending Edmund acceptance)"
 }
