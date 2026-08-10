@@ -90,7 +90,9 @@
     "secondary": "OPT-D-FURTHER-REDUCE-PROFILE",
     "architecture_followup": "OPT-B-EXPAND-STORAGE-ARCHITECTURE",
     "rejected": ["OPT-A-LARGER-MODULE-EMMC"],
-    "rationale": "Current architecture already exposes microSD and freezes 32GB on-module eMMC. Realistic EVT0 headroom is policy + profile, not an invented larger Radxa eMMC SKU. Carrier NVMe remains a deferred redesign, not a purchase action under PHYSICAL_EXECUTION_FREEZE."
+    "wp002_outcome": "A",
+    "wp002_status": "CLOSED_OUTCOME_A_PENDING_V1",
+    "rationale": "Current architecture already exposes microSD and freezes 32GB on-module eMMC. Realistic EVT0 headroom is policy + profile, not an invented larger Radxa eMMC SKU. Carrier NVMe remains a deferred redesign, not a purchase action under PHYSICAL_EXECUTION_FREEZE. WP-002 implements Outcome A capacity model, policy, growth, and E2E simulation."
   },
   "evt0_guidance": {
     "keep_preferred_som": "RM121-D8E32",

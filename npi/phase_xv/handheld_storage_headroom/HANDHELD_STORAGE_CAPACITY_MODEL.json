@@ -1,0 +1,128 @@
+{
+  "schema": "gunnchos.wp002.handheld_storage_capacity_model.v1",
+  "generated_at": "2026-08-10T14:30:00Z",
+  "work_package": "WP-002",
+  "defect_id": "NPI_DEFECT-HANDHELD-STORAGE-HEADROOM-001",
+  "sku": "handheld_hybrid",
+  "PHYSICAL_EXECUTION_FREEZE": "ACTIVE",
+  "evidence_class": "E4_DIGITAL",
+  "decision_outcome": "A",
+  "decision_outcome_title": "32GB_SYSTEM_ONLY_PLUS_SUPPORTED_EXPANSION",
+  "hardware_truth": {
+    "preferred_som_mpn": "RM121-D8E32",
+    "onboard_storage": {
+      "type": "on_module_emmc",
+      "marketed_gb": 32.0,
+      "usable_fraction": 0.93,
+      "usable_gb": 29.76,
+      "source": [
+        "docs/full_product_family/EXACT_MPN_MATRIX.md",
+        "docs/full_product_family/COMPONENT_TRUTH_VERIFY_CONTINUATION_V.md",
+        "device_designs/handheld_hybrid/docs/som_carrier_icd.md"
+      ]
+    },
+    "supported_expansion": {
+      "microsd": {
+        "supported": true,
+        "interface": "SDMMC",
+        "icd_pins": [88, 208, 219, 221, 223, 225, 227, 229],
+        "required_for_mlp_user_content": true,
+        "representative_media_gb": 64.0,
+        "note": "Existing carrier ICD/netlist path. Not an invented module SKU."
+      },
+      "usb_attached": {
+        "supported": true,
+        "interface": "USB-C / USB3 SS pins as frozen",
+        "required_for_mlp": false,
+        "role": "optional_tertiary_archive_and_import"
+      },
+      "nvme_carrier": {
+        "supported_in_current_freeze": false,
+        "status": "DEFERRED_CLASS_E_SPIKE_ONLY",
+        "note": "Would require PCIe remux ADR vs WWAN/USB3. Not silently implemented."
+      },
+      "larger_onboard_emmc_sku": {
+        "available_in_exact_mpn_matrix": false,
+        "approved_alternates": ["RM121-D8E16", "RM121-D8E8", "RM121-D8E0"],
+        "note": "Alternates are smaller or zero eMMC. Do not invent RM121-D8E64."
+      }
+    }
+  },
+  "units": "GiB",
+  "onboard_emmc_placement": {
+    "role": "system_recovery_update_ai_nano_core",
+    "line_items": {
+      "slot_a": 5.0,
+      "slot_b": 5.0,
+      "recovery": 2.0,
+      "boot_firmware": 0.25,
+      "gunnchos_apps_core": 2.0,
+      "ai_nano_core": 2.0,
+      "vision_speech_stub": 0.25,
+      "embeddings_stub": 0.25,
+      "logs": 0.5,
+      "crash_dumps": 0.25,
+      "update_temp": 1.0,
+      "user_micro_workspace": 0.5
+    },
+    "line_items_total_gb": 19.0,
+    "reserves_that_must_remain_free_gb": {
+      "update_rollback_reserve": 2.0,
+      "emergency_save_reserve": 0.5,
+      "min_absolute_or_percent_free": 2.976,
+      "wear_leveling_extra": 0.5,
+      "total_reserves_gb": 5.976
+    },
+    "onboard_claimed_gb": 24.976,
+    "onboard_usable_gb": 29.76,
+    "onboard_operational_slack_gb": 4.784,
+    "meets_min_absolute_free_2gb": true,
+    "meets_min_percent_free_10pct": true,
+    "unsafe_if_all_mlp_content_onboard": true
+  },
+  "expansion_microsd_placement": {
+    "role": "games_ai_offline_user_media",
+    "required_mounted": true,
+    "line_items": {
+      "four_first_party_game_installs": 6.0,
+      "representative_game_patches": 1.5,
+      "shader_caches": 1.0,
+      "flatpak_runtime_overhead": 4.0,
+      "ai_fast_pro_tiers": 3.0,
+      "vision_speech_full": 1.0,
+      "embeddings_reranker": 0.75,
+      "ai_model_update_overlap": 1.0,
+      "project_indexes": 0.5,
+      "waike_offline_pack": 1.5,
+      "archive_playable_data": 2.0,
+      "user_documents": 2.0,
+      "screenshots_captures": 1.0,
+      "save_data": 0.5,
+      "browser_cache": 1.0,
+      "messaging_media_cache": 1.0
+    },
+    "line_items_total_gb": 27.75,
+    "filesystem_overhead_gb": 1.5,
+    "expansion_claimed_gb": 29.25,
+    "representative_media_usable_gb_assumed": 59.52,
+    "expansion_operational_slack_gb": 30.27,
+    "note": "Representative 64GB microSD usable≈93%. Capacity is policy-sized; users may use larger cards."
+  },
+  "margins": {
+    "minimum_free_space_reserve_onboard_gb": 2.976,
+    "minimum_free_space_rule": "max(2.0 GiB, 10% of onboard usable)",
+    "update_reserve_gb": 2.0,
+    "emergency_save_reserve_gb": 0.5,
+    "low_space_warning_onboard_gb": 3.5,
+    "low_space_warning_onboard_pct": 0.15,
+    "do_not_accept_required_lt_nominal": true,
+    "required_bytes_must_be_lt_usable_bytes": true
+  },
+  "combined_mlp_fit": {
+    "onboard_safe_under_outcome_a": true,
+    "expansion_required": true,
+    "without_expansion_verdict": "OPERATIONALY_UNSAFE",
+    "with_expansion_verdict": "OPERATIONALY_SAFE_DIGITAL"
+  },
+  "claim_boundary": "Digital E4 capacity model only. Media endurance and physical insert/eject remain E5/PHYSICAL_PENDING. No invented storage SKUs."
+}
