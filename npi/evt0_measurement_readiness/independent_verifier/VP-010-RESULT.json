@@ -20,7 +20,7 @@
   "evidence_level": "E4",
   "evidence_level_note": "Digital readiness package review only. No physical energization, calibration, purchase, fab, or measurement execution. PHYSICAL_EXECUTION_FREEZE remains. Not PHYSICALLY_VALIDATED.",
   "independent_question": "If an EVT0 unit arrived tomorrow, could a competent engineer safely and reproducibly test the highest-risk subsystems and create decision-grade evidence?",
-  "answer": "YES for digital measurement-execution readiness. WP-010R1 restored the network→audio→dock bring-up gate and added onboard EVT-AUD/CAM plus keyboard/controls IDs with instrument/risk/E5 bindings. Remaining blockers are physical (units, freeze, fab, cal, operators) — not missing critical digital measurement IDs from the prior FAIL.",
+  "answer": "YES for digital measurement-execution readiness. WP-010R1 restored the network\u2192audio\u2192dock bring-up gate and added onboard EVT-AUD/CAM plus keyboard/controls IDs with instrument/risk/E5 bindings. Remaining blockers are physical (units, freeze, fab, cal, operators) \u2014 not missing critical digital measurement IDs from the prior FAIL.",
   "READY_FOR_EVT0_MEASUREMENT_EXECUTION": true,
   "PHYSICALLY_VALIDATED": false,
   "PHYSICAL_EXECUTION_FREEZE": true,
@@ -67,7 +67,7 @@
       "id": "DEFECT-VP010-001",
       "status": "CLOSED",
       "severity": "S1",
-      "evidence": "EVT0_MASTER_TEST_MATRIX.json bringup_order is network→audio→dock; EVT0_BRINGUP_SEQUENCE.md step 8 audio binds EVT-AUD-001/EVT-CAM-001 before dock; damaging-order prohibitions forbid skipping audio gate."
+      "evidence": "EVT0_MASTER_TEST_MATRIX.json bringup_order is network\u2192audio\u2192dock; EVT0_BRINGUP_SEQUENCE.md step 8 audio binds EVT-AUD-001/EVT-CAM-001 before dock; damaging-order prohibitions forbid skipping audio gate."
     },
     {
       "id": "DEFECT-VP010-002",
@@ -123,13 +123,13 @@
       "id": 7,
       "name": "e5_golden_journey_measurement_map",
       "result": "PASS",
-      "notes": "GOLDEN-01..10 mapped; AUD/CAM/KEY companions appear on relevant journeys; doctrine digital≠physical; vf4_vf5_vf6 PHYSICAL_PENDING."
+      "notes": "GOLDEN-01..10 mapped; AUD/CAM/KEY companions appear on relevant journeys; doctrine digital\u2260physical; vf4_vf5_vf6 PHYSICAL_PENDING."
     },
     {
       "id": 8,
       "name": "highest_risk_subsystem_measurement_coverage",
       "result": "PASS",
-      "notes": "Prior gaps closed: onboard audio/camera + keyboard/controls IDs exist with acceptance criteria and instrument links. Numeric SPL/camera MPNs remain TARGET_TBD (honest residual under WP-008 freeze) — not a token blocker for digital readiness."
+      "notes": "Prior gaps closed: onboard audio/camera + keyboard/controls IDs exist with acceptance criteria and instrument links. Numeric SPL/camera MPNs remain TARGET_TBD (honest residual under WP-008 freeze) \u2014 not a token blocker for digital readiness."
     },
     {
       "id": 9,
@@ -170,7 +170,7 @@
     },
     {
       "severity": "low",
-      "note": "EVT-AUD-001/EVT-CAM-001 numeric thresholds and camera module MPN remain TARGET_TBD — consume WP-008 frozen NFRs when available; smoke acceptance is sufficient for EVT0 digital readiness."
+      "note": "EVT-AUD-001/EVT-CAM-001 numeric thresholds and camera module MPN remain TARGET_TBD \u2014 consume WP-008 frozen NFRs when available; smoke acceptance is sufficient for EVT0 digital readiness."
     },
     {
       "severity": "low",
@@ -192,13 +192,18 @@
   },
   "remaining_physical_blockers": [
     "No EVT0 hardware units",
-    "PHYSICAL_EXECUTION_FREEZE — no purchase/fab/run",
+    "PHYSICAL_EXECUTION_FREEZE \u2014 no purchase/fab/run",
     "WP-001 configuration freeze not executed",
     "Vendor NDA/SI collateral for Dock USB4/TB4 and COM-HPC",
     "Rental/lab booking for SA/VNA/USB4 SI/MoCap after freeze lift",
     "Human operators + calibrated instrument serials",
     "Fixture physical fab (currently NOT_FABRICATED)",
-    "VF4/VF5/VF6 remain PHYSICAL_PENDING — no CALIBRATED_EVT0",
+    "VF4/VF5/VF6 remain PHYSICAL_PENDING \u2014 no CALIBRATED_EVT0",
     "WP-008 NFR numeric thresholds for audio SPL / camera module where still TARGET_TBD"
-  ]
+  ],
+  "merge_resolution_note": {
+    "conflict_with": "main after PR #57 FAIL merge e594e9e",
+    "resolution": "Kept WP-010R1 independent PASS from PR #58; superseded FAIL artifact from #57",
+    "resolved_at_utc": "2026-08-10T21:48:05Z"
+  }
 }

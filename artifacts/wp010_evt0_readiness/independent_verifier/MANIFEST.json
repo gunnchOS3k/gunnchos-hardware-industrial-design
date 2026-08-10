@@ -17,5 +17,6 @@
     "DEFECT-VP010-002",
     "DEFECT-VP010-003"
   ],
-  "generated_at_utc": "2026-08-10T21:23:00Z"
+  "generated_at_utc": "2026-08-10T21:48:05Z",
+  "merge_conflict_resolution": "supersedes PR #57 FAIL after main merge e594e9e"
 }
