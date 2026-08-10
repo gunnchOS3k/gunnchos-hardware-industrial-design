@@ -2,7 +2,7 @@
   "schema": "gunnchos.wp010_readiness_token.v1",
   "work_packet": "WP-010",
   "role": "IMPLEMENTER",
-  "generated_at_utc": "2026-08-10T20:56:48Z",
+  "generated_at_utc": "2026-08-10T21:30:00Z",
   "READY_FOR_EVT0_MEASUREMENT_EXECUTION": true,
   "PHYSICALLY_VALIDATED": false,
   "self_certified_v1": false,
@@ -30,11 +30,23 @@
   },
   "remaining_physical_human_blockers": [
     "No EVT0 hardware units exist yet",
-    "PHYSICAL_EXECUTION_FREEZE \u2014 no purchase/fab/run",
+    "PHYSICAL_EXECUTION_FREEZE — no purchase/fab/run",
     "WP-001 configuration freeze not yet executed",
     "Vendor NDA/SI collateral for Dock USB4/TB4 and COM-HPC",
     "Rental/lab booking for SA/VNA/USB4 SI/MoCap",
     "Human operators + calibrated instrument serials",
-    "WP-008 NFR numeric thresholds (consume when frozen)"
-  ]
+    "Fixture physical fab (NOT_FABRICATED)",
+    "VF4/VF5/VF6 remain PHYSICAL_PENDING — no CALIBRATED_EVT0",
+    "WP-008 NFR numeric thresholds (consume when frozen)",
+    "Independent VP-010 re-run required after WP-010R1 remediation"
+  ],
+  "remediation_wp010r1": {
+    "closes_defects": [
+      "DEFECT-VP010-001",
+      "DEFECT-VP010-002",
+      "DEFECT-VP010-003"
+    ],
+    "awaiting": "independent VP-010 re-run",
+    "note": "Implementer prepares digital readiness claim only; verifier grants or withholds token."
+  }
 }

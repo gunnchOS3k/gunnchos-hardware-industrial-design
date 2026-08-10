@@ -1,7 +1,7 @@
 {
   "schema": "gunnchos.evt0_risk_test_traceability.v1",
   "work_packet": "WP-010",
-  "generated_at_utc": "2026-08-10T20:56:48Z",
+  "generated_at_utc": "2026-08-10T21:30:00Z",
   "source_risk_register": "program/operating_model/06_RISK_UNKNOWN_SUPPLY/RISK_REGISTER.json",
   "traces": [
     {
@@ -207,14 +207,20 @@
     {
       "risk_id": "RISK-009",
       "tests": [
+        "EVT-AUD-001",
+        "EVT-CAM-001",
         "EVT-DISP-001",
         "EVT-DISP-002",
         "EVT-DOCK-003",
-        "EVT-THERM-002",
         "EVT-GAME-001",
-        "EVT-GJ-006"
+        "EVT-GJ-006",
+        "EVT-KEY-001",
+        "EVT-KEY-002",
+        "EVT-THERM-002"
       ],
       "instruments": [
+        "INST-AUDIO",
+        "INST-CAM-HOST",
         "INST-CURR-PROBE",
         "INST-ELOAD",
         "INST-SCOPE",

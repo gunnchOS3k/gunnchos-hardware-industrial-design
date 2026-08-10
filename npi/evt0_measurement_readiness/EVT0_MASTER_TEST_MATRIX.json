@@ -1,7 +1,7 @@
 {
   "schema": "gunnchos.evt0_master_test_matrix.v1",
   "work_packet": "WP-010",
-  "generated_at_utc": "2026-08-10T20:56:48Z",
+  "generated_at_utc": "2026-08-10T21:30:00Z",
   "hardware_rev_baseline": "0.6.0-cont-ix",
   "physical_execution_freeze": true,
   "claim": "DIGITAL_READINESS_ONLY",
@@ -16,6 +16,7 @@
     "storage",
     "display_input",
     "network",
+    "audio",
     "dock",
     "thermal",
     "battery",
@@ -506,6 +507,87 @@
       "claim_boundary": "HARDWARE_PROTOTYPE_PENDING"
     },
     {
+      "unknown_refs": [],
+      "fixture_ids": [],
+      "setup_revision": "EVT0-SETUP-R0",
+      "hardware_rev_target": "0.6.0-cont-ix",
+      "mfg_test_plan_refs": [
+        "manufacturing/EVT_DVT_PVT_PLAN.md",
+        "manufacturing/PRODUCTION_TEST_FIXTURE_PLAN.md"
+      ],
+      "e4_to_e5_evidence_required": [
+        "EVT0EvidenceRecord with physical_execution_status=PHYSICAL_EXECUTED",
+        "raw artifacts + units + uncertainty",
+        "pass_fail against acceptance_criterion",
+        "defect_id if FAIL"
+      ],
+      "physical_execution_status": "PHYSICAL_PENDING",
+      "claim_boundary": "HARDWARE_PROTOTYPE_PENDING",
+      "test_id": "EVT-KEY-001",
+      "name": "Keyboard / conventional HID input smoke",
+      "priority": "P1",
+      "products": [
+        "student_14_5",
+        "ds_xl_coder"
+      ],
+      "risk_refs": [
+        "RISK-009"
+      ],
+      "instrument_ids": [],
+      "golden_journey_refs": [
+        "GOLDEN-01",
+        "GOLDEN-03"
+      ],
+      "metric": "keyboard_hid_events",
+      "unit": "bool",
+      "acceptance_criterion": "Keyboard HID enumerates; key events observed in OS input path (no invented key matrix MPNs)",
+      "bringup_order_gate": "display_input",
+      "configuration_ids": [
+        "STUDENT145-EVT0-R0",
+        "DSXL-EVT0-R0"
+      ],
+      "notes": "Student/DS-XL conventional keyboard/input. Numeric layout TARGET_TBD until WP-001 freeze."
+    },
+    {
+      "unknown_refs": [],
+      "fixture_ids": [],
+      "setup_revision": "EVT0-SETUP-R0",
+      "hardware_rev_target": "0.6.0-cont-ix",
+      "mfg_test_plan_refs": [
+        "manufacturing/EVT_DVT_PVT_PLAN.md",
+        "manufacturing/PRODUCTION_TEST_FIXTURE_PLAN.md"
+      ],
+      "e4_to_e5_evidence_required": [
+        "EVT0EvidenceRecord with physical_execution_status=PHYSICAL_EXECUTED",
+        "raw artifacts + units + uncertainty",
+        "pass_fail against acceptance_criterion",
+        "defect_id if FAIL"
+      ],
+      "physical_execution_status": "PHYSICAL_PENDING",
+      "claim_boundary": "HARDWARE_PROTOTYPE_PENDING",
+      "test_id": "EVT-KEY-002",
+      "name": "Handheld controls HID matrix smoke",
+      "priority": "P1",
+      "products": [
+        "handheld_hybrid"
+      ],
+      "risk_refs": [
+        "RISK-009"
+      ],
+      "instrument_ids": [],
+      "golden_journey_refs": [
+        "GOLDEN-05"
+      ],
+      "metric": "controls_hid_events",
+      "unit": "bool",
+      "acceptance_criterion": "HID MCU path enumerates; sticks/buttons/D-pad report events (Ring coverage remains EVT-RING-*)",
+      "bringup_order_gate": "display_input",
+      "configuration_ids": [
+        "HANDHELD-EVT0-R0"
+      ],
+      "notes": "Handheld controls — not a full QWERTY keyboard claim. Do not invent additional physical input hardware."
+    },
+    {
       "test_id": "EVT-DOCK-001",
       "name": "Dock PD negotiation",
       "priority": "P3",
@@ -886,6 +968,98 @@
       ],
       "physical_execution_status": "PHYSICAL_PENDING",
       "claim_boundary": "HARDWARE_PROTOTYPE_PENDING"
+    },
+    {
+      "unknown_refs": [],
+      "fixture_ids": [],
+      "setup_revision": "EVT0-SETUP-R0",
+      "hardware_rev_target": "0.6.0-cont-ix",
+      "mfg_test_plan_refs": [
+        "manufacturing/EVT_DVT_PVT_PLAN.md",
+        "manufacturing/PRODUCTION_TEST_FIXTURE_PLAN.md"
+      ],
+      "e4_to_e5_evidence_required": [
+        "EVT0EvidenceRecord with physical_execution_status=PHYSICAL_EXECUTED",
+        "raw artifacts + units + uncertainty",
+        "pass_fail against acceptance_criterion",
+        "defect_id if FAIL"
+      ],
+      "physical_execution_status": "PHYSICAL_PENDING",
+      "claim_boundary": "HARDWARE_PROTOTYPE_PENDING",
+      "test_id": "EVT-AUD-001",
+      "name": "Onboard audio codec enum + loopback/level smoke",
+      "priority": "P1",
+      "products": [
+        "student_14_5",
+        "handheld_hybrid",
+        "ds_xl_coder"
+      ],
+      "risk_refs": [
+        "RISK-009"
+      ],
+      "instrument_ids": [
+        "INST-AUDIO"
+      ],
+      "golden_journey_refs": [
+        "GOLDEN-01",
+        "GOLDEN-05"
+      ],
+      "metric": "audio_loopback_ok",
+      "unit": "bool_or_dBFS",
+      "acceptance_criterion": "Onboard codec/I2S path enumerates; loopback or playback+capture smoke passes; SPL/level numeric thresholds TARGET_TBD",
+      "bringup_order_gate": "audio",
+      "configuration_ids": [
+        "STUDENT145-EVT0-R0",
+        "HANDHELD-EVT0-R0",
+        "DSXL-EVT0-R0"
+      ],
+      "notes": "Student ALC256 / Handheld I2S / DS-XL Student-family audio. Distinct from dock peripheral enum (EVT-DOCK-002)."
+    },
+    {
+      "unknown_refs": [],
+      "fixture_ids": [],
+      "setup_revision": "EVT0-SETUP-R0",
+      "hardware_rev_target": "0.6.0-cont-ix",
+      "mfg_test_plan_refs": [
+        "manufacturing/EVT_DVT_PVT_PLAN.md",
+        "manufacturing/PRODUCTION_TEST_FIXTURE_PLAN.md"
+      ],
+      "e4_to_e5_evidence_required": [
+        "EVT0EvidenceRecord with physical_execution_status=PHYSICAL_EXECUTED",
+        "raw artifacts + units + uncertainty",
+        "pass_fail against acceptance_criterion",
+        "defect_id if FAIL"
+      ],
+      "physical_execution_status": "PHYSICAL_PENDING",
+      "claim_boundary": "HARDWARE_PROTOTYPE_PENDING",
+      "test_id": "EVT-CAM-001",
+      "name": "Onboard camera enumerate + capture smoke",
+      "priority": "P1",
+      "products": [
+        "student_14_5",
+        "handheld_hybrid",
+        "ds_xl_coder"
+      ],
+      "risk_refs": [
+        "RISK-009"
+      ],
+      "instrument_ids": [
+        "INST-CAM-HOST"
+      ],
+      "golden_journey_refs": [
+        "GOLDEN-01",
+        "GOLDEN-03"
+      ],
+      "metric": "camera_capture_ok",
+      "unit": "bool",
+      "acceptance_criterion": "Camera path enumerates (UVC/V4L/MIPI as applicable); single-frame or short capture succeeds; module MPN/resolution TARGET_TBD if unfrozen",
+      "bringup_order_gate": "audio",
+      "configuration_ids": [
+        "STUDENT145-EVT0-R0",
+        "HANDHELD-EVT0-R0",
+        "DSXL-EVT0-R0"
+      ],
+      "notes": "Student webcam FPC; Handheld MIPI CSI (JS_CAMERA); DS-XL inherits Student-family camera checks. No invented sensor specs."
     },
     {
       "test_id": "EVT-THERM-001",
@@ -1796,5 +1970,14 @@
     "RISK-011",
     "RISK-012"
   ],
-  "test_count": 37
+  "test_count": 37,
+  "remediation": {
+    "id": "WP-010R1",
+    "closes": [
+      "DEFECT-VP010-001",
+      "DEFECT-VP010-002",
+      "DEFECT-VP010-003"
+    ],
+    "note": "Audio bring-up gate + onboard AUD/CAM/KEY EVT IDs. READY token remains for independent VP-010 re-run; self_certify_v1=false."
+  }
 }

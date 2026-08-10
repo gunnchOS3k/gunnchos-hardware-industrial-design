@@ -12,6 +12,8 @@ Canonical JSON: `EVT0_MASTER_TEST_MATRIX.json`.
 | EVT-DISP-001 | P1 | Primary display + touch | RISK-009 | GOLDEN-01, GOLDEN-06 |
 | EVT-DISP-002 | P1 | DS-XL dual-display enumeration | RISK-003, RISK-009 | GOLDEN-06 |
 | EVT-DISP-003 | P1 | DS-XL flex/hinge continuity + cycle plan start | RISK-003 | GOLDEN-06 |
+| EVT-KEY-001 | P1 | Keyboard / conventional HID input smoke | RISK-009 | GOLDEN-01, GOLDEN-03 |
+| EVT-KEY-002 | P1 | Handheld controls HID matrix smoke | RISK-009 | GOLDEN-05 |
 | EVT-DOCK-001 | P3 | Dock PD negotiation | RISK-002, RISK-005 | GOLDEN-04, GOLDEN-05 |
 | EVT-DOCK-002 | P3 | Dock USB/Ethernet/audio enumerate | RISK-002 | GOLDEN-04, GOLDEN-05 |
 | EVT-DOCK-003 | P3 | Dock display hotplug | RISK-002, RISK-009 | GOLDEN-04, GOLDEN-05 |
@@ -20,6 +22,8 @@ Canonical JSON: `EVT0_MASTER_TEST_MATRIX.json`.
 | EVT-RF-002 | P2 | Ethernet docking path | RISK-002 | GOLDEN-04 |
 | EVT-RF-003 | P2 | Antenna/RF coexistence pre-scan | RISK-006 | GOLDEN-02, GOLDEN-07 |
 | EVT-RF-004 | P2 | RM520N-GL modem attach smoke | RISK-011 | GOLDEN-02 |
+| EVT-AUD-001 | P1 | Onboard audio codec enum + loopback/level smoke | RISK-009 | GOLDEN-01, GOLDEN-05 |
+| EVT-CAM-001 | P1 | Onboard camera enumerate + capture smoke | RISK-009 | GOLDEN-01, GOLDEN-03 |
 | EVT-THERM-001 | P5 | Idle/office thermal map | RISK-005, RISK-001 | GOLDEN-01, GOLDEN-04, GOLDEN-06 |
 | EVT-THERM-002 | P5 | AI+game combined thermal/power | RISK-005, RISK-008, RISK-009 | GOLDEN-01, GOLDEN-05, GOLDEN-08 |
 | EVT-BATT-001 | P5 | Battery discharge under office profile | RISK-005 | GOLDEN-01 |

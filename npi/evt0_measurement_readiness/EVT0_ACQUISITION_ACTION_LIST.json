@@ -15,7 +15,7 @@
     {
       "action_id": "ACQ-002",
       "class": "GOOD_TO_OWN",
-      "item": "\u2265200 MHz scope, thermal camera, Wi-Fi AP, audio loopback, electronic load, logic analyzer",
+      "item": "\u2265200 MHz scope, thermal camera, Wi-Fi AP, audio loopback, host camera capture tools, electronic load, logic analyzer",
       "status": "PLAN_ONLY",
       "blocker": "PHYSICAL_EXECUTION_FREEZE"
     },

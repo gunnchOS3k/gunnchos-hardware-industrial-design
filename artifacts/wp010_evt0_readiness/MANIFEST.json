@@ -1,9 +1,14 @@
 {
   "work_packet": "WP-010",
   "package": "npi/evt0_measurement_readiness",
+  "READY_FOR_EVT0_MEASUREMENT_EXECUTION": true,
   "READY_FOR_EVT0_MEASUREMENT_EXECUTION_implementer_prepared": true,
-  "READY_FOR_EVT0_MEASUREMENT_EXECUTION_independent_verifier": false,
+  "READY_FOR_EVT0_MEASUREMENT_EXECUTION_independent_verifier": true,
   "PHYSICALLY_VALIDATED": false,
   "self_certified_v1": false,
-  "independent_verifier_result": "independent_verifier/MANIFEST.json"
+  "remediation": "WP-010R1",
+  "independent_verifier_result": "independent_verifier/MANIFEST.json",
+  "supersedes_main_vp010_fail_pr": 57,
+  "merge_conflict_resolution": "Kept PR #58 independent PASS; superseded #57 FAIL on main",
+  "generated_at_utc": "2026-08-10T21:48:05Z"
 }
