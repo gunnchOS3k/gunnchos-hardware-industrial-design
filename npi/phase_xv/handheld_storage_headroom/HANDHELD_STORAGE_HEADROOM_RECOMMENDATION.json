@@ -1,0 +1,103 @@
+{
+  "schema": "gunnchos.hardware.phase_xv.handheld_storage_headroom_recommendation.v1",
+  "generated_at": "2026-08-10T13:20:00Z",
+  "defect_id": "NPI_DEFECT-HANDHELD-STORAGE-HEADROOM-001",
+  "sku": "handheld_hybrid",
+  "PHYSICAL_EXECUTION_FREEZE": "ACTIVE",
+  "purchase_authorized": false,
+  "rfq_external_send_authorized": false,
+  "problem": {
+    "preferred_som_mpn": "RM121-D8E32",
+    "marketed_emmc_gb": 32.0,
+    "profile_required_gb": 31.5,
+    "estimated_usable_gb": 29.76,
+    "usable_free_gb": -1.74,
+    "verdict_from_field_kit": "OPERATIONALY_UNSAFE",
+    "min_absolute_free_gb": 2.0,
+    "min_percent_free": 0.1
+  },
+  "evidence_basis": [
+    {
+      "path": "docs/full_product_family/EXACT_MPN_MATRIX.md",
+      "fact": "Primary Handheld SoM freeze is RM121-D8E32 (8GB LPDDR4X + 32GB eMMC). Approved NX5 alternates are RM121-D8E16 / RM121-D8E8 / RM121-D8E0 only (smaller or zero eMMC)."
+    },
+    {
+      "path": "docs/full_product_family/COMPONENT_TRUTH_VERIFY_CONTINUATION_V.md",
+      "fact": "Public Radxa NX5 brief Rev 1.1 verifies RM121-D8E32 memory/storage as 8GB + 32GB eMMC; do not invent undocumented SKUs."
+    },
+    {
+      "path": "device_designs/handheld_hybrid/docs/som_carrier_icd.md",
+      "fact": "Frozen storage architecture is on-module eMMC plus SoM↔µSD via SDMMC pins; WWAN optional on PCIe; USB3 SS pins mux with PCIe/SATA — no invented remux."
+    },
+    {
+      "path": "device_designs/handheld_hybrid/pcb/netlist.json",
+      "fact": "Carrier BOM/netlist models microSD (STORAGE_SDMMC) and records on_module_emmc as 32GB on RM121-D8E32 — not carrier BGA."
+    },
+    {
+      "path": "npi/phase_xv/handheld_storage_headroom/HANDHELD_STORAGE_DECISION.json",
+      "fact": "Field-kit Phase XV operational decision: OPERATIONALY_UNSAFE (usable_free=-1.74GB)."
+    }
+  ],
+  "options_evaluated": [
+    {
+      "id": "OPT-A-LARGER-MODULE-EMMC",
+      "title": "Module SKU with more eMMC (≥64GB)",
+      "status": "NOT_AVAILABLE_IN_CURRENT_ARCHITECTURE_DOCS",
+      "detail": "EXACT_MPN_MATRIX lists only RM121-D8E32 (32GB) as primary and smaller eMMC variants as approved alternates. No RM121-D8E64 / UFS / larger NX5 eMMC order code is frozen or verified in-repo. Do not invent unavailable Radxa variants.",
+      "recommendation": "REJECT_FOR_NOW",
+      "blocks_purchase": false
+    },
+    {
+      "id": "OPT-B-EXPAND-STORAGE-ARCHITECTURE",
+      "title": "Expand carrier storage architecture (NVMe/SATA via PCIe remux)",
+      "status": "FEASIBLE_ONLY_WITH_ADR_AND_MUX_REDESIGN",
+      "detail": "Radxa Func columns allow USB3/PCIe/SATA mux on shared SS pins; optional WWAN already claims PCIe2.0. Selecting carrier NVMe would require an explicit remux ADR, Type-C SS / WWAN trade study, mechanical bay, and BOM — not present in current Handheld ICD storage row.",
+      "recommendation": "DEFER_ARCHITECTURE_SPIKE",
+      "blocks_purchase": false,
+      "note": "Aligns with older PRD/NVMe intent but is not the current PUBLIC_PINOUT storage freeze."
+    },
+    {
+      "id": "OPT-C-SYSTEM-EMMC-PLUS-EXTERNAL-MEDIA-POLICY",
+      "title": "System-only eMMC + enforced external/user-media policy",
+      "status": "SUPPORTED_BY_CURRENT_ARCHITECTURE",
+      "detail": "Keep RM121-D8E32 eMMC for OS slots/recovery/update/AI nano core. Move games_local_cache and project_indexes (and optionally large Flatpak caches) to microSD/user media already present in ICD/netlist. Enforce onboard free ≥2.0GB and ≥10% usable.",
+      "profile_offload_candidates_gb": {
+        "games_local_cache": 6,
+        "project_indexes": 0.5,
+        "apps_flatpak_optional": 4
+      },
+      "headroom_if_games_and_projects_offloaded": {
+        "onboard_required_gb_approx": 25.0,
+        "estimated_usable_gb": 29.76,
+        "usable_free_gb_approx": 4.76,
+        "meets_min_absolute_free": true,
+        "meets_min_percent_free": true
+      },
+      "recommendation": "SELECT_FOR_EVT0_DIGITAL_POLICY",
+      "blocks_purchase": false
+    },
+    {
+      "id": "OPT-D-FURTHER-REDUCE-PROFILE",
+      "title": "Further reduce handheld OS/AI/games profile footprint",
+      "status": "OWNER_DEVICE_OS_AND_CONTROL_PLANE",
+      "detail": "Complementary to OPT-C. Device-os / field-kit may shrink AI nano or games cache until usable_free≥2GB and ≥10% even without media. Not a hardware MPN change.",
+      "recommendation": "PARALLEL_SOFTWARE_MITIGATION",
+      "blocks_purchase": false
+    }
+  ],
+  "selected_recommendation": {
+    "primary": "OPT-C-SYSTEM-EMMC-PLUS-EXTERNAL-MEDIA-POLICY",
+    "secondary": "OPT-D-FURTHER-REDUCE-PROFILE",
+    "architecture_followup": "OPT-B-EXPAND-STORAGE-ARCHITECTURE",
+    "rejected": ["OPT-A-LARGER-MODULE-EMMC"],
+    "rationale": "Current architecture already exposes microSD and freezes 32GB on-module eMMC. Realistic EVT0 headroom is policy + profile, not an invented larger Radxa eMMC SKU. Carrier NVMe remains a deferred redesign, not a purchase action under PHYSICAL_EXECUTION_FREEZE."
+  },
+  "evt0_guidance": {
+    "keep_preferred_som": "RM121-D8E32",
+    "do_not_purchase": true,
+    "do_not_fab": true,
+    "require_onboard_reserve_policy": true,
+    "external_media_required_for": ["games_local_cache", "project_indexes"],
+    "optional_external_media_for": ["apps_flatpak"]
+  }
+}
