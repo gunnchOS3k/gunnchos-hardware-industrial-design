@@ -1,0 +1,254 @@
+{
+  "schema": "gunnchos.operating_cycle_1.vp002_handheld_storage_result.v1",
+  "verifier_role": "INDEPENDENT_VERIFIER_AGENT",
+  "work_package": "VP-002",
+  "cycle": 1,
+  "generated_at_utc": "2026-08-10T14:45:00Z",
+  "result": "PASS",
+  "evidence_level": "E4",
+  "evidence_level_honesty": {
+    "claimed": "E4",
+    "accepted": true,
+    "note": "Digital architecture/policy/capacity/E2E simulation only. Media endurance, microSD qualification, insert/eject wear, and field telemetry remain E5 / PHYSICAL_PENDING. No physical headroom claim."
+  },
+  "independent_question": "Can the accepted Handheld storage architecture support the MLP outcome—gaming + communication/AI + offline use + real docked work + continuity—without an operationally unsafe capacity margin?",
+  "answer": "YES under Outcome A (32GB system-only eMMC + required microSD expansion with explicit reserves/reclamation). NO if full Phase XIV reduced MLP profile is forced entirely onboard usable eMMC.",
+  "verified_against": {
+    "hardware_pr": 54,
+    "hardware_pr_head_sha_claimed": "1d81c51d57d81cb355f7704a3aac133d6a7d5e68",
+    "hardware_pr_head_sha_observed": "1d81c51d57d81cb355f7704a3aac133d6a7d5e68",
+    "hardware_pr_merge_commit": "f379590f05b690179dc5a9088c5d60d901474dc0",
+    "hardware_baseline_main_pre_wp002": "8705f5a25065e02c7513e990a43e4762967906c5",
+    "device_os_pr": 78,
+    "device_os_pr_head_sha_claimed": "72751a9cac3cbe2eff50d8caf82225f371e4ffb4",
+    "device_os_pr_head_sha_observed": "72751a9cac3cbe2eff50d8caf82225f371e4ffb4",
+    "device_os_pr_merge_commit": "c7e76913970fa31f40d929d52d41f44cb0440189",
+    "phase_xiv_budget": "gunnchos-7gc-ai-ran-field-kit/program/frontier_parity/phase_xiv/BUDGET_RECHECK.json"
+  },
+  "architecture_reality_check": {
+    "result": "PASS",
+    "onboard": {
+      "mpn": "RM121-D8E32",
+      "type": "on_module_emmc",
+      "marketed_gb": 32.0,
+      "evidence": [
+        "docs/full_product_family/EXACT_MPN_MATRIX.md",
+        "docs/full_product_family/COMPONENT_TRUTH_VERIFY_CONTINUATION_V.md",
+        "device_designs/handheld_hybrid/manufacturing/ASSEMBLY_BOM.csv",
+        "device_designs/handheld_hybrid/pcb/netlist.json (on_module_emmc 32GB)"
+      ]
+    },
+    "expansion": {
+      "microsd": {
+        "supported": true,
+        "invented": false,
+        "interface": "SDMMC",
+        "icd_pins": [88, 208, 219, 221, 223, 225, 227, 229],
+        "evidence": [
+          "device_designs/handheld_hybrid/docs/som_carrier_icd.md (Storage SoM↔µSD)",
+          "device_designs/handheld_hybrid/pcb/netlist.json STORAGE_SDMMC / J_USD microSD"
+        ],
+        "required_for_mlp_user_content": true
+      },
+      "usb_attached": {
+        "supported": true,
+        "required_for_mlp": false,
+        "role": "optional_tertiary"
+      },
+      "nvme_carrier": {
+        "supported_in_current_freeze": false,
+        "invented_in_wp002": false
+      },
+      "larger_onboard_emmc_sku": {
+        "available_in_exact_mpn_matrix": false,
+        "approved_alternates_only": ["RM121-D8E16", "RM121-D8E8", "RM121-D8E0"],
+        "invented_rm121_d8e64": false
+      }
+    }
+  },
+  "class_e_silent_change_check": {
+    "result": "PASS",
+    "baseline": "8705f5a25065e02c7513e990a43e4762967906c5",
+    "tip": "1d81c51d57d81cb355f7704a3aac133d6a7d5e68",
+    "diff_scope": "npi/phase_xv/handheld_storage_headroom artifacts + package index + RISK_REGISTER + tests only",
+    "bom_schematic_netlist_icd_mpn_changed": false,
+    "carrier_nvme_remux_implemented": false,
+    "larger_emmc_mpn_invented": false,
+    "note": "Outcome A is Class B policy/placement. Class E NVMe remux correctly deferred, not silently implemented."
+  },
+  "independent_margins_gb": {
+    "units": "GiB",
+    "usable_fraction_assumed": 0.93,
+    "onboard_marketed": 32.0,
+    "onboard_usable": 29.76,
+    "min_free_floor_rule": "max(2.0, 10% of usable)",
+    "min_free_floor": 2.976,
+    "legacy_all_onboard_phase_xiv_reduced_required": 31.5,
+    "legacy_usable_free": -1.74,
+    "legacy_verdict": "OPERATIONALY_UNSAFE",
+    "outcome_a_onboard_content": 19.0,
+    "outcome_a_onboard_reserves_additive": {
+      "update_rollback_reserve": 2.0,
+      "emergency_save_reserve": 0.5,
+      "min_absolute_or_percent_free": 2.976,
+      "wear_leveling_extra": 0.5,
+      "total": 5.976
+    },
+    "outcome_a_onboard_claimed_with_reserves": 24.976,
+    "outcome_a_onboard_operational_slack": 4.784,
+    "outcome_a_onboard_safe": true,
+    "expansion_representative_marketed": 64.0,
+    "expansion_representative_usable": 59.52,
+    "expansion_claimed_day0": 29.25,
+    "expansion_operational_slack_day0": 30.27,
+    "outcome_a_expansion_safe": true,
+    "growth_projected_slack": {
+      "day_30": {"onboard": 4.034, "expansion": 26.02, "meets_reserves": true},
+      "day_90": {"onboard": 3.434, "expansion": 17.77, "meets_reserves": true},
+      "day_180": {"onboard": 2.784, "expansion": 8.27, "meets_reserves": true}
+    },
+    "matches_implementer_capacity_model": true,
+    "note": "Margins independently recomputed from Phase XIV BUDGET_RECHECK + WP-002 required capacity list + accepted hardware usable fraction; then compared to implementer HANDHELD_STORAGE_CAPACITY_MODEL.json."
+  },
+  "system_image_ab_recovery": {
+    "result": "PASS",
+    "slot_a_gb": 5.0,
+    "slot_b_gb": 5.0,
+    "recovery_gb": 2.0,
+    "update_rollback_reserve_gb": 2.0,
+    "placement": "onboard_emmc_only",
+    "policy": "Updates stage within update reserve; rollback slot kept intact; near-full path blocks update rather than deleting user/immutable data."
+  },
+  "mlp_workflow_support": {
+    "result": "PASS",
+    "gaming": "four first-party installs + patches + shaders on microSD",
+    "communication_ai": "Nano core on eMMC; Fast/Pro + full vision/speech/embeddings on microSD",
+    "offline_use": "WAIKE + Archive + offline essentials on microSD; Nano stubs remain if unmounted",
+    "docked_work": "USB tertiary + dock path unchanged; continuity docs/indexes on expansion",
+    "continuity": "saves/docs prefer expansion; emergency eMMC reserve for pressure commits",
+    "condition": "microSD must be present/mounted for full MLP user content"
+  },
+  "failure_cases_independent": [
+    {
+      "id": "update_near_full",
+      "result": "PASS",
+      "behavior": "block_update_fail_closed",
+      "silent_data_loss": false
+    },
+    {
+      "id": "game_patch_plus_ai_model_update_overlap",
+      "result": "PASS",
+      "behavior": "deny_if_expansion_insufficient; allow when overlap budget fits",
+      "silent_data_loss": false
+    },
+    {
+      "id": "user_document_save_low_space",
+      "result": "PASS",
+      "behavior": "prefer expansion; else emergency eMMC commit if free>emergency_reserve; else deny_write",
+      "silent_data_loss": false
+    },
+    {
+      "id": "save_game_low_space",
+      "result": "PASS",
+      "behavior": "same as document emergency path; never silent truncate",
+      "silent_data_loss": false
+    },
+    {
+      "id": "waike_offline_pack_download",
+      "result": "PASS",
+      "behavior": "deny if microSD absent/unmounted; install only to expansion when mounted",
+      "silent_data_loss": false
+    },
+    {
+      "id": "removable_expansion_absent_unmounted",
+      "result": "PASS",
+      "behavior": "OS/recovery/Nano boot allowed; games/Fast-Pro/WAIKE/Archive denied",
+      "silent_data_loss": false
+    },
+    {
+      "id": "cache_cleanup_failure",
+      "result": "PASS",
+      "behavior": "block_update_after_cleanup_fail; no immutable eviction",
+      "silent_data_loss": false
+    },
+    {
+      "id": "storage_policy_misroutes_immutable_system_data",
+      "result": "PASS",
+      "behavior": "reject sole-copy move of slot_a/b/recovery/nano/saves/docs off eMMC",
+      "silent_data_loss": false
+    }
+  ],
+  "pass_criteria": {
+    "architecture_is_real": true,
+    "margins_are_explicit": true,
+    "user_can_complete_handheld_mlp_workflows_under_policy": true,
+    "update_recovery_remains_safe": true,
+    "no_invented_expansion_device_module": true,
+    "class_e_change_not_silently_implemented": true
+  },
+  "defects": [],
+  "observations": [
+    {
+      "severity": "medium",
+      "id": "OBS-VP002-PREMATURE-MERGE",
+      "note": "Hardware PR #54 and device-os PR #78 were merged to main before this independent VP-002-RESULT.json existed. Closure artifacts correctly stated NOT_SELF_CERTIFIED / PENDING_V1, but process guidance was Keep DRAFT until V1. Substance of Outcome A still independently PASSes; this is a process observation, not an architecture FAIL."
+    },
+    {
+      "severity": "low",
+      "id": "OBS-VP002-MICROSD-REQUIRED",
+      "note": "Full Handheld MLP (games/AI Fast-Pro/WAIKE/Archive/user media) requires mounted microSD. Product packaging/SKU must treat a qualified card as required accessory or bundled media; absent card correctly degrades to system-only mode."
+    },
+    {
+      "severity": "info",
+      "id": "OBS-VP002-DAY180-SLACK",
+      "note": "Independent growth recompute leaves onboard slack 2.784 GiB at day 180 (still above reserved floor when reserves are held). Policy must reclaim logs/caches before nonessential onboard writes as slack approaches warning/floor."
+    }
+  ],
+  "npi_defect": {
+    "id": "NPI_DEFECT-HANDHELD-STORAGE-HEADROOM-001",
+    "may_close_pending_edmund_acceptance": true,
+    "closure_basis": "Outcome A digital closure independently verified PASS at E4. Physical endurance remains PHYSICAL_PENDING and does not block digital defect closure.",
+    "code_already_merged": true,
+    "edmund_action": "Accept V1 PASS and mark defect CLOSED_OUTCOME_A; keep E5 endurance as separate physical track."
+  },
+  "ci": {
+    "hardware_pr_54": {
+      "state": "MERGED",
+      "checks": "all observed SUCCESS (CAD CI validate, EVT-1 validate, Gate1, Portfolio hardening)"
+    },
+    "device_os_pr_78": {
+      "state": "MERGED",
+      "checks": "all observed SUCCESS including CI test, files-storage, prove-phase-xv, continuity, recovery, atomic-update-rollback"
+    },
+    "local_reproof": {
+      "hardware_tests_test_wp002_handheld_storage": "5 passed",
+      "device_os_tests_test_wp002_handheld_storage_policy": "3 passed"
+    }
+  },
+  "tokens": {
+    "VP002_INDEPENDENT_PASS": true,
+    "NPI_DEFECT_HANDHELD_STORAGE_HEADROOM_001_MAY_CLOSE": true,
+    "PHYSICAL_EXECUTION_FREEZE": "ACTIVE",
+    "EVIDENCE_E4_ONLY": true,
+    "CLASS_E_NOT_IMPLEMENTED": true
+  },
+  "verdict_summary": "Independent V1 PASS. Accepted RM121-D8E32 32GB eMMC + real microSD (SDMMC) architecture supports Handheld MLP under Outcome A with explicit margins (onboard usable 29.76, claimed+reserves 24.976, slack 4.784; expansion day0 slack 30.27 on representative 64GB card). Legacy all-onboard remains unsafe (−1.74). No invented SKU; no silent Class E NVMe remux. Defect may close pending Edmund acceptance of this V1.",
+  "verifier_independence_attestation": {
+    "did_not_begin_from_implementer_tests_as_design_source": true,
+    "derived_checks_from": [
+      "VP-002_HANDHELD_STORAGE_HEADROOM contract",
+      "WP-002 required capacity list",
+      "Phase XIV BUDGET_RECHECK handheld_reduced profile",
+      "Accepted hardware EXACT_MPN_MATRIX / ICD / netlist / BOM",
+      "MLP Handheld promises (gaming, communication/AI, offline, docked work, continuity)"
+    ],
+    "independent_methods": [
+      "Recomputed usable eMMC and Outcome A placement/reserves/growth without trusting implementer checklist alone",
+      "Diffed tip 1d81c51 vs baseline 8705f5a for Class E silent-change scope",
+      "Exercised eight failure cases against published policy fail-closed semantics",
+      "Cross-checked device-os profile + hardware_storage_policy expansion gates after independent derivation",
+      "Confirmed CI via gh; local pytest reproof after independent derivation"
+    ],
+    "implementer_must_not_self_certify_v1": true
+  }
+}
