@@ -3,5 +3,7 @@
   "package": "npi/evt0_measurement_readiness",
   "READY_FOR_EVT0_MEASUREMENT_EXECUTION": true,
   "PHYSICALLY_VALIDATED": false,
-  "self_certified_v1": false
+  "self_certified_v1": false,
+  "remediation": "WP-010R1",
+  "generated_at_utc": "2026-08-10T21:30:00Z"
 }

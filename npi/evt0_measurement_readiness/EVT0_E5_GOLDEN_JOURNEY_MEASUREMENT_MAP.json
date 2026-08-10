@@ -1,7 +1,7 @@
 {
   "schema": "gunnchos.evt0_e5_golden_journey_measurement_map.v1",
   "work_packet": "WP-010",
-  "generated_at_utc": "2026-08-10T20:56:48Z",
+  "generated_at_utc": "2026-08-10T21:30:00Z",
   "doctrine": {
     "digital_pass_is_not_physical_pass": true,
     "vf4_vf5_vf6": "PHYSICAL_PENDING",
@@ -17,10 +17,13 @@
         "EVT-BATT-001",
         "EVT-GAME-001",
         "EVT-GAME-002",
-        "EVT-GJ-001"
+        "EVT-GJ-001",
+        "EVT-AUD-001",
+        "EVT-CAM-001",
+        "EVT-KEY-001"
       ],
       "e4_to_e5_required": [
-        "physical EvidenceRecords for assignment\u2192recreation path on target HW",
+        "physical EvidenceRecords for assignment→recreation path on target HW",
         "battery/thermal under school-day profile",
         "resume integrity"
       ],
@@ -43,7 +46,9 @@
       "e5_measurements": [
         "EVT-DISP-002",
         "EVT-AI-001",
-        "EVT-GJ-006"
+        "EVT-GJ-006",
+        "EVT-CAM-001",
+        "EVT-KEY-001"
       ],
       "e4_to_e5_required": [
         "build/test on DS-XL or Student physical panels"
@@ -72,7 +77,9 @@
         "EVT-DOCK-001",
         "EVT-GAME-002",
         "EVT-THERM-002",
-        "EVT-GJ-004"
+        "EVT-GJ-004",
+        "EVT-AUD-001",
+        "EVT-KEY-002"
       ],
       "e5_note": "handheld dock/undock continuity",
       "e4_to_e5_required": [
@@ -143,7 +150,7 @@
         "EVT-BOOT-001"
       ],
       "e4_to_e5_required": [
-        "revoke/SE smoke on physical device \u2014 security WP-007 owns depth"
+        "revoke/SE smoke on physical device — security WP-007 owns depth"
       ],
       "physical_gap": "E5 pending"
     }

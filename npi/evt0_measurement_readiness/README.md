@@ -2,7 +2,8 @@
 
 **Role:** Implementer package (not VP-010 verifier).  
 **Claim boundary:** DIGITAL readiness only. `PHYSICALLY_VALIDATED=false`.  
-**Freeze:** `PHYSICAL_EXECUTION_FREEZE` — do not purchase, fab, or run physical EVT.
+**Freeze:** `PHYSICAL_EXECUTION_FREEZE` — do not purchase, fab, or run physical EVT.  
+**WP-010R1:** Closes DEFECT-VP010-001..003 (audio bring-up gate; onboard AUD/CAM; KEY/controls). Token grant awaits independent VP-010 re-run (`self_certified_v1=false`).
 
 ## Exit artifacts
 

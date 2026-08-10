@@ -1,7 +1,7 @@
 {
   "schema": "gunnchos.evt0_instrument_matrix.v1",
   "work_packet": "WP-010",
-  "generated_at_utc": "2026-08-10T20:56:48Z",
+  "generated_at_utc": "2026-08-10T21:30:00Z",
   "classification_enum": [
     "REQUIRED_OWN",
     "GOOD_TO_OWN",
@@ -17,7 +17,7 @@
       "id": "INST-BENCH-PSU",
       "name": "Bench PSU (current-limited)",
       "class": "REQUIRED_OWN",
-      "bandwidth_or_range": "0\u201360 V / 0\u201310 A, CC mode",
+      "bandwidth_or_range": "0–60 V / 0–10 A, CC mode",
       "products": [
         "ALL"
       ],
@@ -51,9 +51,9 @@
     },
     {
       "id": "INST-SCOPE",
-      "name": "Oscilloscope \u2265200 MHz",
+      "name": "Oscilloscope ≥200 MHz",
       "class": "GOOD_TO_OWN",
-      "bandwidth_or_range": "\u2265200 MHz, 4 ch",
+      "bandwidth_or_range": "≥200 MHz, 4 ch",
       "products": [
         "ALL"
       ],
@@ -71,7 +71,7 @@
       "id": "INST-CURR-PROBE",
       "name": "Current probe / shunt",
       "class": "REQUIRED_OWN",
-      "bandwidth_or_range": "mA\u2013tens A",
+      "bandwidth_or_range": "mA–tens A",
       "products": [
         "ALL"
       ],
@@ -90,7 +90,7 @@
       "id": "INST-LA",
       "name": "Logic analyzer",
       "class": "GOOD_TO_OWN",
-      "bandwidth_or_range": "\u2265100 MHz digital",
+      "bandwidth_or_range": "≥100 MHz digital",
       "products": [
         "ALL"
       ],
@@ -145,7 +145,7 @@
       "id": "INST-ELOAD",
       "name": "Electronic load",
       "class": "GOOD_TO_OWN",
-      "bandwidth_or_range": "CC/CV to \u2265100 W",
+      "bandwidth_or_range": "CC/CV to ≥100 W",
       "products": [
         "ALL"
       ],
@@ -180,7 +180,7 @@
       "id": "INST-TC-LOG",
       "name": "Thermocouple logger",
       "class": "REQUIRED_OWN",
-      "bandwidth_or_range": "\u22658 ch K-type",
+      "bandwidth_or_range": "≥8 ch K-type",
       "products": [
         "ALL"
       ],
@@ -199,7 +199,7 @@
       "id": "INST-THERM-CAM",
       "name": "Thermal camera",
       "class": "GOOD_TO_OWN",
-      "bandwidth_or_range": "\u2265160\u00d7120 IR",
+      "bandwidth_or_range": "≥160×120 IR",
       "products": [
         "ALL"
       ],
@@ -259,9 +259,29 @@
         "RISK-009"
       ],
       "tests": [
+        "EVT-AUD-001",
+        "EVT-DOCK-002",
         "EVT-GJ-004"
       ],
-      "rationale": "Office dock / voice paths"
+      "rationale": "Onboard audio loopback (Student/Handheld/DS-XL) + dock/office voice paths"
+    },
+    {
+      "id": "INST-CAM-HOST",
+      "name": "Host camera capture tools + chart",
+      "class": "GOOD_TO_OWN",
+      "bandwidth_or_range": "UVC/V4L host tools; gray chart optional",
+      "products": [
+        "student_14_5",
+        "handheld_hybrid",
+        "ds_xl_coder"
+      ],
+      "risks": [
+        "RISK-009"
+      ],
+      "tests": [
+        "EVT-CAM-001"
+      ],
+      "rationale": "Enumerate/capture smoke only; do not purchase specialized camera lab gear for EVT0"
     },
     {
       "id": "INST-VNA",

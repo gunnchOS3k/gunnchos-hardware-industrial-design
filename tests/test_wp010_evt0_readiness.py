@@ -40,7 +40,9 @@ def test_risk_coverage_complete():
         assert t["pass_fail"] if False else True
         assert t["acceptance_criterion"]
         assert t["unit"]
-        assert t["instrument_ids"] or t["test_id"].startswith("EVT-DISP") or t["test_id"].startswith("EVT-GAME") or t["test_id"].startswith("EVT-GJ") or t["test_id"].startswith("EVT-AI")
+        assert t["instrument_ids"] or t["test_id"].startswith(
+            ("EVT-DISP", "EVT-KEY", "EVT-GAME", "EVT-GJ", "EVT-AI")
+        )
     for i in range(1, 13):
         assert f"RISK-{i:03d}" in covered
 
@@ -117,3 +119,52 @@ def test_fixtures_digitally_complete_not_fabbed():
     assert reg["physical_fab_status"] == "NOT_FABRICATED"
     for fx in reg["fixtures"]:
         assert fx["status"] == "DIGITALLY_COMPLETE"
+
+
+def test_wp010r1_audio_gate_and_av_input_ids():
+    """DEFECT-VP010-001..003: audio gate + onboard AUD/CAM/KEY coverage."""
+    matrix = _load("EVT0_MASTER_TEST_MATRIX.json")
+    order = matrix["bringup_order"]
+    assert "audio" in order
+    assert order.index("network") + 1 == order.index("audio")
+    assert order.index("audio") + 1 == order.index("dock")
+
+    by_id = {t["test_id"]: t for t in matrix["tests"]}
+    for tid in ("EVT-AUD-001", "EVT-CAM-001", "EVT-KEY-001", "EVT-KEY-002"):
+        assert tid in by_id, tid
+        t = by_id[tid]
+        assert t["physical_execution_status"] == "PHYSICAL_PENDING"
+        assert t["acceptance_criterion"]
+        assert t["unit"]
+        assert t["priority"].startswith("P")
+
+    assert by_id["EVT-AUD-001"]["bringup_order_gate"] == "audio"
+    assert by_id["EVT-CAM-001"]["bringup_order_gate"] == "audio"
+    assert by_id["EVT-KEY-001"]["bringup_order_gate"] == "display_input"
+    assert by_id["EVT-KEY-002"]["bringup_order_gate"] == "display_input"
+    assert "INST-AUDIO" in by_id["EVT-AUD-001"]["instrument_ids"]
+    assert "student_14_5" in by_id["EVT-AUD-001"]["products"]
+    assert "handheld_hybrid" in by_id["EVT-AUD-001"]["products"]
+    assert "ds_xl_coder" in by_id["EVT-AUD-001"]["products"]
+    assert "INST-CAM-HOST" in by_id["EVT-CAM-001"]["instrument_ids"]
+    assert "student_14_5" in by_id["EVT-KEY-001"]["products"]
+    assert "ds_xl_coder" in by_id["EVT-KEY-001"]["products"]
+    assert by_id["EVT-KEY-002"]["products"] == ["handheld_hybrid"]
+
+    bringup = (PKG / "EVT0_BRINGUP_SEQUENCE.md").read_text()
+    assert "**audio**" in bringup
+    assert "EVT-AUD-001" in bringup
+    assert "EVT-CAM-001" in bringup
+    assert "EVT-KEY-001" in bringup
+
+    inst = _load("EVT0_INSTRUMENT_MATRIX.json")
+    inst_ids = {row["id"] for row in inst["instruments"]}
+    assert "INST-AUDIO" in inst_ids
+    assert "INST-CAM-HOST" in inst_ids
+    audio = next(r for r in inst["instruments"] if r["id"] == "INST-AUDIO")
+    assert "EVT-AUD-001" in audio["tests"]
+
+    ready = _load("READY_FOR_EVT0_MEASUREMENT_EXECUTION.json")
+    assert ready["self_certified_v1"] is False
+    assert ready["PHYSICALLY_VALIDATED"] is False
+    assert ready["honesty"]["PHYSICAL_EXECUTION_FREEZE"] is True
