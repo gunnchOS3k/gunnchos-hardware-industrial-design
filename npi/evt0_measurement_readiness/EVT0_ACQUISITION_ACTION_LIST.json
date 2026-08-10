@@ -1,0 +1,59 @@
+{
+  "schema": "gunnchos.evt0_acquisition_action_list.v1",
+  "work_packet": "WP-010",
+  "generated_at_utc": "2026-08-10T20:56:48Z",
+  "physical_execution_freeze": true,
+  "purchase_authorized": false,
+  "actions": [
+    {
+      "action_id": "ACQ-001",
+      "class": "REQUIRED_OWN",
+      "item": "Bench PSU + DMM + current sense + thermocouple logger + ESD kit + USB/PD analyzer",
+      "status": "PLAN_ONLY",
+      "blocker": "PHYSICAL_EXECUTION_FREEZE"
+    },
+    {
+      "action_id": "ACQ-002",
+      "class": "GOOD_TO_OWN",
+      "item": "\u2265200 MHz scope, thermal camera, Wi-Fi AP, audio loopback, electronic load, logic analyzer",
+      "status": "PLAN_ONLY",
+      "blocker": "PHYSICAL_EXECUTION_FREEZE"
+    },
+    {
+      "action_id": "ACQ-003",
+      "class": "RENT",
+      "item": "USB4/TB SI tooling, spectrum analyzer, RF gen, shield box, battery cycler",
+      "status": "PLAN_ONLY",
+      "blocker": "PHYSICAL_EXECUTION_FREEZE + rental vendor selection"
+    },
+    {
+      "action_id": "ACQ-004",
+      "class": "BORROW",
+      "item": "Motion-reference / MoCap for Rings",
+      "status": "PLAN_ONLY",
+      "blocker": "lab access agreement"
+    },
+    {
+      "action_id": "ACQ-005",
+      "class": "VENDOR_DFM",
+      "item": "COM-HPC + Dock SI collateral; RM520N-GL cellular test path",
+      "status": "PLAN_ONLY",
+      "blocker": "vendor NDA/collateral (EXTERNAL)"
+    },
+    {
+      "action_id": "ACQ-006",
+      "class": "EXTERNAL_LAB",
+      "item": "VNA antenna / radiated coexistence as needed",
+      "status": "PLAN_ONLY",
+      "blocker": "lab booking after freeze lift"
+    },
+    {
+      "action_id": "ACQ-007",
+      "class": "FIXTURE_FAB",
+      "item": "Fab FIX-* digitally complete fixtures after freeze lift + WP-001 config freeze",
+      "status": "PLAN_ONLY",
+      "blocker": "PHYSICAL_EXECUTION_FREEZE; WP-001 not started"
+    }
+  ],
+  "note": "Do not buy/fab/run physical EVT under current freeze. This list is readiness planning only."
+}

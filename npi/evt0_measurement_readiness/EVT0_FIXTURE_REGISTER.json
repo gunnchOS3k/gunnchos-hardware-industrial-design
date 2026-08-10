@@ -1,0 +1,193 @@
+{
+  "schema": "gunnchos.evt0_fixture_register.v1",
+  "work_packet": "WP-010",
+  "generated_at_utc": "2026-08-10T20:56:48Z",
+  "physical_fab_status": "NOT_FABRICATED",
+  "fixtures": [
+    {
+      "id": "FIX-PROG-DEBUG",
+      "name": "Programming/debug harness",
+      "status": "DIGITALLY_COMPLETE",
+      "products": [
+        "ALL"
+      ],
+      "tests": [
+        "EVT-BOOT-001",
+        "EVT-BOOT-002"
+      ],
+      "design_artifacts": [
+        "npi/evt0_measurement_readiness/fixtures/PROG_DEBUG_HARNESS.md"
+      ],
+      "notes": "SWD/JTAG + UART breakout concept"
+    },
+    {
+      "id": "FIX-PWR-CURR",
+      "name": "Power/current fixture",
+      "status": "DIGITALLY_COMPLETE",
+      "products": [
+        "ALL"
+      ],
+      "tests": [
+        "EVT-PWR-002",
+        "EVT-PWR-004"
+      ],
+      "design_artifacts": [
+        "npi/evt0_measurement_readiness/fixtures/POWER_CURRENT_FIXTURE.md"
+      ],
+      "notes": "Sense resistor + Kelvin + current-limit interlock"
+    },
+    {
+      "id": "FIX-SERIAL",
+      "name": "Serial/console breakout",
+      "status": "DIGITALLY_COMPLETE",
+      "products": [
+        "ALL"
+      ],
+      "tests": [
+        "EVT-BOOT-001"
+      ],
+      "design_artifacts": [
+        "npi/evt0_measurement_readiness/fixtures/SERIAL_CONSOLE_BREAKOUT.md"
+      ],
+      "notes": "3.3V UART + level notes"
+    },
+    {
+      "id": "FIX-TP-HARNESS",
+      "name": "Board test-point harness",
+      "status": "DIGITALLY_COMPLETE",
+      "products": [
+        "ALL"
+      ],
+      "tests": [
+        "EVT-PWR-001",
+        "EVT-PWR-003"
+      ],
+      "design_artifacts": [
+        "npi/evt0_measurement_readiness/fixtures/TESTPOINT_HARNESS.md"
+      ],
+      "notes": "Maps manufacturing/*/test_points.csv where present"
+    },
+    {
+      "id": "FIX-DOCK-LOOP",
+      "name": "Dock breakout/loopback",
+      "status": "DIGITALLY_COMPLETE",
+      "products": [
+        "dock",
+        "handheld_hybrid"
+      ],
+      "tests": [
+        "EVT-DOCK-001",
+        "EVT-DOCK-002",
+        "EVT-DOCK-004"
+      ],
+      "design_artifacts": [
+        "npi/evt0_measurement_readiness/fixtures/DOCK_BREAKOUT_LOOPBACK.md"
+      ],
+      "notes": "PD/USB/ETH/DP loopback concept; SI still RENT tooling"
+    },
+    {
+      "id": "FIX-RING-CAL",
+      "name": "Ring programming/calibration fixture",
+      "status": "DIGITALLY_COMPLETE",
+      "products": [
+        "edge_io_rings"
+      ],
+      "tests": [
+        "EVT-RING-001",
+        "EVT-RING-002",
+        "EVT-RING-003"
+      ],
+      "design_artifacts": [
+        "device_designs/edge_io_rings/docs/CALIBRATION_FIXTURE.md",
+        "npi/evt0_measurement_readiness/fixtures/RING_CAL_FIXTURE.md"
+      ],
+      "notes": "Programming + repeatable pose nest"
+    },
+    {
+      "id": "FIX-RING-POSE",
+      "name": "Repeatable positioning fixture",
+      "status": "DIGITALLY_COMPLETE",
+      "products": [
+        "edge_io_rings"
+      ],
+      "tests": [
+        "EVT-RING-003",
+        "EVT-RING-004",
+        "EVT-RING-005"
+      ],
+      "design_artifacts": [
+        "npi/evt0_measurement_readiness/fixtures/RING_POSITIONING.md"
+      ],
+      "notes": "Datum surfaces for drift/wrong-target"
+    },
+    {
+      "id": "FIX-THERM-MAP",
+      "name": "Thermal sensor placement map",
+      "status": "DIGITALLY_COMPLETE",
+      "products": [
+        "ALL"
+      ],
+      "tests": [
+        "EVT-THERM-001",
+        "EVT-THERM-002"
+      ],
+      "design_artifacts": [
+        "npi/evt0_measurement_readiness/fixtures/THERMAL_SENSOR_MAP.md"
+      ],
+      "notes": "SOC/skin/battery/hinge points"
+    },
+    {
+      "id": "FIX-BATT",
+      "name": "Battery harness",
+      "status": "DIGITALLY_COMPLETE",
+      "products": [
+        "student_14_5",
+        "handheld_hybrid",
+        "ds_xl_coder"
+      ],
+      "tests": [
+        "EVT-BATT-001",
+        "EVT-BATT-002",
+        "EVT-BATT-003"
+      ],
+      "design_artifacts": [
+        "npi/evt0_measurement_readiness/fixtures/BATTERY_HARNESS.md"
+      ],
+      "notes": "Fused, polarity-keyed, emergency disconnect"
+    },
+    {
+      "id": "FIX-RF-COND",
+      "name": "RF conducted test breakout/test mode",
+      "status": "DIGITALLY_COMPLETE",
+      "products": [
+        "student_14_5",
+        "handheld_hybrid",
+        "edge_io_rings"
+      ],
+      "tests": [
+        "EVT-RF-003",
+        "EVT-RF-004"
+      ],
+      "design_artifacts": [
+        "npi/evt0_measurement_readiness/fixtures/RF_CONDUCTED_BREAKOUT.md"
+      ],
+      "notes": "Conducted path concept; radiated EXTERNAL_LAB"
+    },
+    {
+      "id": "FIX-DSXL-CYCLE",
+      "name": "DS-XL mechanical cycle fixture concept",
+      "status": "DIGITALLY_COMPLETE",
+      "products": [
+        "ds_xl_coder"
+      ],
+      "tests": [
+        "EVT-DISP-003",
+        "EVT-GJ-006"
+      ],
+      "design_artifacts": [
+        "npi/evt0_measurement_readiness/fixtures/DSXL_HINGE_CYCLE.md"
+      ],
+      "notes": "Hinge cycle + flex continuity; not fabbed"
+    }
+  ]
+}

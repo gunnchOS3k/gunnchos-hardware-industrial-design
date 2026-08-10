@@ -1,0 +1,151 @@
+{
+  "schema": "gunnchos.evt0_e5_golden_journey_measurement_map.v1",
+  "work_packet": "WP-010",
+  "generated_at_utc": "2026-08-10T20:56:48Z",
+  "doctrine": {
+    "digital_pass_is_not_physical_pass": true,
+    "vf4_vf5_vf6": "PHYSICAL_PENDING",
+    "frontier_parity": false
+  },
+  "mappings": [
+    {
+      "golden_journey": "GOLDEN-01",
+      "e5_measurements": [
+        "EVT-BOOT-002",
+        "EVT-DISP-001",
+        "EVT-THERM-001",
+        "EVT-BATT-001",
+        "EVT-GAME-001",
+        "EVT-GAME-002",
+        "EVT-GJ-001"
+      ],
+      "e4_to_e5_required": [
+        "physical EvidenceRecords for assignment\u2192recreation path on target HW",
+        "battery/thermal under school-day profile",
+        "resume integrity"
+      ],
+      "physical_gap": "E5 target hardware pending"
+    },
+    {
+      "golden_journey": "GOLDEN-02",
+      "e5_measurements": [
+        "EVT-RF-001",
+        "EVT-RF-004",
+        "EVT-GJ-001"
+      ],
+      "e4_to_e5_required": [
+        "Wi-Fi/modem physical smoke + offline sync on device"
+      ],
+      "physical_gap": "E5 radio/Wi-Fi lab pending"
+    },
+    {
+      "golden_journey": "GOLDEN-03",
+      "e5_measurements": [
+        "EVT-DISP-002",
+        "EVT-AI-001",
+        "EVT-GJ-006"
+      ],
+      "e4_to_e5_required": [
+        "build/test on DS-XL or Student physical panels"
+      ],
+      "physical_gap": "E5 DS-XL / Student pending"
+    },
+    {
+      "golden_journey": "GOLDEN-04",
+      "e5_measurements": [
+        "EVT-DOCK-001",
+        "EVT-DOCK-002",
+        "EVT-DOCK-003",
+        "EVT-DOCK-004",
+        "EVT-RF-002",
+        "EVT-GJ-004"
+      ],
+      "e4_to_e5_required": [
+        "physical dock PD/USB/ETH/display/audio + SI evidence",
+        "no digital-only PASS promoted"
+      ],
+      "physical_gap": "E5 physical dock SI pending"
+    },
+    {
+      "golden_journey": "GOLDEN-05",
+      "e5_measurements": [
+        "EVT-DOCK-001",
+        "EVT-GAME-002",
+        "EVT-THERM-002",
+        "EVT-GJ-004"
+      ],
+      "e5_note": "handheld dock/undock continuity",
+      "e4_to_e5_required": [
+        "suspend/resume + dock lifecycle on Handheld HW"
+      ],
+      "physical_gap": "E5 handheld/dock SI pending"
+    },
+    {
+      "golden_journey": "GOLDEN-06",
+      "e5_measurements": [
+        "EVT-DISP-002",
+        "EVT-DISP-003",
+        "EVT-THERM-001",
+        "EVT-GJ-006"
+      ],
+      "e4_to_e5_required": [
+        "dual panel enum + layout persistence physical",
+        "hinge/flex continuity"
+      ],
+      "physical_gap": "E5 DS-XL pending"
+    },
+    {
+      "golden_journey": "GOLDEN-07",
+      "e5_measurements": [
+        "EVT-RING-001",
+        "EVT-RING-002",
+        "EVT-RING-003",
+        "EVT-RING-004",
+        "EVT-RING-005",
+        "EVT-GJ-007"
+      ],
+      "e4_to_e5_required": [
+        "pose/drift/confidence physical with fixture or MoCap",
+        "packet latency/loss"
+      ],
+      "physical_gap": "E5 ring hardware pending"
+    },
+    {
+      "golden_journey": "GOLDEN-08",
+      "e5_measurements": [
+        "EVT-AI-001",
+        "EVT-AI-002",
+        "EVT-AI-003",
+        "EVT-THERM-002",
+        "EVT-GJ-001"
+      ],
+      "e4_to_e5_required": [
+        "TTFT/tok/s/RAM/power/thermal on target SoC",
+        "model SHA pinned"
+      ],
+      "physical_gap": "E5 HW perf pending"
+    },
+    {
+      "golden_journey": "GOLDEN-09",
+      "e5_measurements": [
+        "EVT-BOOT-002",
+        "EVT-GAME-002"
+      ],
+      "e4_to_e5_required": [
+        "update rollback on physical image; data integrity"
+      ],
+      "physical_gap": "E5 pending"
+    },
+    {
+      "golden_journey": "GOLDEN-10",
+      "e5_measurements": [
+        "EVT-RING-005",
+        "EVT-BOOT-001"
+      ],
+      "e4_to_e5_required": [
+        "revoke/SE smoke on physical device \u2014 security WP-007 owns depth"
+      ],
+      "physical_gap": "E5 pending"
+    }
+  ]
+}

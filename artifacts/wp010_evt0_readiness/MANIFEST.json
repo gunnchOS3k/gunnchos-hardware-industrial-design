@@ -1,0 +1,7 @@
+{
+  "work_packet": "WP-010",
+  "package": "npi/evt0_measurement_readiness",
+  "READY_FOR_EVT0_MEASUREMENT_EXECUTION": true,
+  "PHYSICALLY_VALIDATED": false,
+  "self_certified_v1": false
+}

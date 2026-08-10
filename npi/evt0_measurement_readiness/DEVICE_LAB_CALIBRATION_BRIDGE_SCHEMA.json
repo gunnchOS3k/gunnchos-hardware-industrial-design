@@ -1,0 +1,87 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://gunnchos.org/schemas/device_lab_calibration_bridge.schema.json",
+  "title": "DeviceLabCalibrationBridgeRecord",
+  "description": "Prediction\u2194measurement bridge only. Does NOT promote VF4. No CALIBRATED_* tokens allowed pre-EVT.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "bridge_id",
+    "virtual_run_id",
+    "physical_test_id",
+    "metric_id",
+    "prediction",
+    "measurement",
+    "error",
+    "relative_error",
+    "uncertainty",
+    "calibration_version",
+    "vf_status",
+    "claim_boundary"
+  ],
+  "properties": {
+    "bridge_id": {
+      "type": "string"
+    },
+    "virtual_run_id": {
+      "type": "string"
+    },
+    "physical_test_id": {
+      "type": "string",
+      "pattern": "^EVT-[A-Z]+-[0-9]{3}$"
+    },
+    "metric_id": {
+      "type": "string"
+    },
+    "prediction": {},
+    "measurement": {},
+    "error": {
+      "type": [
+        "number",
+        "null"
+      ]
+    },
+    "relative_error": {
+      "type": [
+        "number",
+        "null"
+      ]
+    },
+    "uncertainty": {
+      "type": [
+        "number",
+        "string",
+        "null"
+      ]
+    },
+    "calibration_version": {
+      "type": "string"
+    },
+    "vf_status": {
+      "type": "string",
+      "const": "PHYSICAL_PENDING"
+    },
+    "claim_boundary": {
+      "type": "string",
+      "enum": [
+        "HARDWARE_PROTOTYPE_PENDING",
+        "PHYSICAL_MEASURED"
+      ]
+    },
+    "evidence_id": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "instrument_id": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "notes": {
+      "type": "string"
+    }
+  }
+}

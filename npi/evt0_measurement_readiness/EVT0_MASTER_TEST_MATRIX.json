@@ -1,0 +1,1800 @@
+{
+  "schema": "gunnchos.evt0_master_test_matrix.v1",
+  "work_packet": "WP-010",
+  "generated_at_utc": "2026-08-10T20:56:48Z",
+  "hardware_rev_baseline": "0.6.0-cont-ix",
+  "physical_execution_freeze": true,
+  "claim": "DIGITAL_READINESS_ONLY",
+  "self_certify_v1": false,
+  "success_token_prepared": "READY_FOR_EVT0_MEASUREMENT_EXECUTION",
+  "success_token_certified": false,
+  "bringup_order": [
+    "pre_power",
+    "rail_resistance",
+    "current_limited_power",
+    "boot_debug",
+    "storage",
+    "display_input",
+    "network",
+    "dock",
+    "thermal",
+    "battery",
+    "rings",
+    "game_ai",
+    "golden_journeys"
+  ],
+  "tests": [
+    {
+      "test_id": "EVT-PWR-000",
+      "name": "Pre-power inspection + ESD/dimensional",
+      "priority": "P0",
+      "products": [
+        "student_14_5",
+        "ds_xl_coder",
+        "handheld_hybrid",
+        "edge_io_rings",
+        "dock"
+      ],
+      "risk_refs": [
+        "RISK-001",
+        "RISK-003"
+      ],
+      "unknown_refs": [
+        "UNK-001"
+      ],
+      "instrument_ids": [
+        "INST-DIM-ESD",
+        "INST-DMM"
+      ],
+      "fixture_ids": [
+        "FIX-TP-HARNESS"
+      ],
+      "golden_journey_refs": [],
+      "metric": "inspection_complete",
+      "unit": "bool",
+      "acceptance_criterion": "No shorts/wrong-rev; silk matches 0.6.0-cont-ix",
+      "setup_revision": "EVT0-SETUP-R0",
+      "bringup_order_gate": "pre_power",
+      "hardware_rev_target": "0.6.0-cont-ix",
+      "configuration_ids": [
+        "STUDENT145-EVT0-R0",
+        "DSXL-EVT0-R0",
+        "HANDHELD-EVT0-R0",
+        "RING-EVT0-R0",
+        "DOCK-EVT0-R0"
+      ],
+      "mfg_test_plan_refs": [
+        "manufacturing/EVT_DVT_PVT_PLAN.md",
+        "manufacturing/PRODUCTION_TEST_FIXTURE_PLAN.md"
+      ],
+      "e4_to_e5_evidence_required": [
+        "EVT0EvidenceRecord with physical_execution_status=PHYSICAL_EXECUTED",
+        "raw artifacts + units + uncertainty",
+        "pass_fail against acceptance_criterion",
+        "defect_id if FAIL"
+      ],
+      "physical_execution_status": "PHYSICAL_PENDING",
+      "claim_boundary": "HARDWARE_PROTOTYPE_PENDING"
+    },
+    {
+      "test_id": "EVT-PWR-001",
+      "name": "Rail resistance / short screen",
+      "priority": "P0",
+      "products": [
+        "student_14_5",
+        "ds_xl_coder",
+        "handheld_hybrid",
+        "edge_io_rings",
+        "dock"
+      ],
+      "risk_refs": [
+        "RISK-001"
+      ],
+      "unknown_refs": [
+        "UNK-001"
+      ],
+      "instrument_ids": [
+        "INST-DMM"
+      ],
+      "fixture_ids": [
+        "FIX-TP-HARNESS"
+      ],
+      "golden_journey_refs": [],
+      "metric": "rail_resistance",
+      "unit": "ohm",
+      "acceptance_criterion": "No hard short vs GND on primary rails; within board-note limits",
+      "setup_revision": "EVT0-SETUP-R0",
+      "bringup_order_gate": "rail_resistance",
+      "hardware_rev_target": "0.6.0-cont-ix",
+      "configuration_ids": [
+        "STUDENT145-EVT0-R0",
+        "DSXL-EVT0-R0",
+        "HANDHELD-EVT0-R0",
+        "RING-EVT0-R0",
+        "DOCK-EVT0-R0"
+      ],
+      "mfg_test_plan_refs": [
+        "manufacturing/student_14_5/factory_test/README.md",
+        "manufacturing/ds_xl_coder/test_points.csv"
+      ],
+      "e4_to_e5_evidence_required": [
+        "EVT0EvidenceRecord with physical_execution_status=PHYSICAL_EXECUTED",
+        "raw artifacts + units + uncertainty",
+        "pass_fail against acceptance_criterion",
+        "defect_id if FAIL"
+      ],
+      "physical_execution_status": "PHYSICAL_PENDING",
+      "claim_boundary": "HARDWARE_PROTOTYPE_PENDING"
+    },
+    {
+      "test_id": "EVT-PWR-002",
+      "name": "Current-limited first power",
+      "priority": "P0",
+      "products": [
+        "student_14_5",
+        "ds_xl_coder",
+        "handheld_hybrid",
+        "edge_io_rings",
+        "dock"
+      ],
+      "risk_refs": [
+        "RISK-001",
+        "RISK-005"
+      ],
+      "unknown_refs": [
+        "UNK-001"
+      ],
+      "instrument_ids": [
+        "INST-BENCH-PSU",
+        "INST-CURR-PROBE",
+        "INST-SCOPE"
+      ],
+      "fixture_ids": [
+        "FIX-PWR-CURR",
+        "FIX-SERIAL"
+      ],
+      "golden_journey_refs": [],
+      "metric": "iin_idle",
+      "unit": "A",
+      "acceptance_criterion": "Boots within current limit; no thermal runaway in 60s",
+      "setup_revision": "EVT0-SETUP-R0",
+      "bringup_order_gate": "current_limited_power",
+      "hardware_rev_target": "0.6.0-cont-ix",
+      "configuration_ids": [
+        "STUDENT145-EVT0-R0",
+        "DSXL-EVT0-R0",
+        "HANDHELD-EVT0-R0",
+        "RING-EVT0-R0",
+        "DOCK-EVT0-R0"
+      ],
+      "mfg_test_plan_refs": [
+        "manufacturing/EVT_DVT_PVT_PLAN.md",
+        "manufacturing/PRODUCTION_TEST_FIXTURE_PLAN.md"
+      ],
+      "e4_to_e5_evidence_required": [
+        "EVT0EvidenceRecord with physical_execution_status=PHYSICAL_EXECUTED",
+        "raw artifacts + units + uncertainty",
+        "pass_fail against acceptance_criterion",
+        "defect_id if FAIL"
+      ],
+      "physical_execution_status": "PHYSICAL_PENDING",
+      "claim_boundary": "HARDWARE_PROTOTYPE_PENDING"
+    },
+    {
+      "test_id": "EVT-PWR-003",
+      "name": "Rail voltage sequence",
+      "priority": "P0",
+      "products": [
+        "student_14_5",
+        "ds_xl_coder",
+        "handheld_hybrid",
+        "dock"
+      ],
+      "risk_refs": [
+        "RISK-001"
+      ],
+      "unknown_refs": [],
+      "instrument_ids": [
+        "INST-DMM",
+        "INST-SCOPE"
+      ],
+      "fixture_ids": [
+        "FIX-TP-HARNESS"
+      ],
+      "golden_journey_refs": [],
+      "metric": "rail_voltage",
+      "unit": "V",
+      "acceptance_criterion": "Rails within design tolerance and order",
+      "setup_revision": "EVT0-SETUP-R0",
+      "bringup_order_gate": "current_limited_power",
+      "hardware_rev_target": "0.6.0-cont-ix",
+      "configuration_ids": [
+        "STUDENT145-EVT0-R0",
+        "DSXL-EVT0-R0",
+        "HANDHELD-EVT0-R0",
+        "DOCK-EVT0-R0"
+      ],
+      "mfg_test_plan_refs": [
+        "manufacturing/EVT_DVT_PVT_PLAN.md",
+        "manufacturing/PRODUCTION_TEST_FIXTURE_PLAN.md"
+      ],
+      "e4_to_e5_evidence_required": [
+        "EVT0EvidenceRecord with physical_execution_status=PHYSICAL_EXECUTED",
+        "raw artifacts + units + uncertainty",
+        "pass_fail against acceptance_criterion",
+        "defect_id if FAIL"
+      ],
+      "physical_execution_status": "PHYSICAL_PENDING",
+      "claim_boundary": "HARDWARE_PROTOTYPE_PENDING"
+    },
+    {
+      "test_id": "EVT-PWR-004",
+      "name": "Idle vs load input power",
+      "priority": "P1",
+      "products": [
+        "student_14_5",
+        "ds_xl_coder",
+        "handheld_hybrid"
+      ],
+      "risk_refs": [
+        "RISK-005",
+        "RISK-008"
+      ],
+      "unknown_refs": [
+        "UNK-006",
+        "UNK-007"
+      ],
+      "instrument_ids": [
+        "INST-CURR-PROBE",
+        "INST-BENCH-PSU"
+      ],
+      "fixture_ids": [
+        "FIX-PWR-CURR"
+      ],
+      "golden_journey_refs": [
+        "GOLDEN-08"
+      ],
+      "metric": "pin",
+      "unit": "W",
+      "acceptance_criterion": "DATA_ONLY vs WP-008 targets when frozen; record uncertainty",
+      "setup_revision": "EVT0-SETUP-R0",
+      "bringup_order_gate": "thermal",
+      "hardware_rev_target": "0.6.0-cont-ix",
+      "configuration_ids": [
+        "STUDENT145-EVT0-R0",
+        "DSXL-EVT0-R0",
+        "HANDHELD-EVT0-R0"
+      ],
+      "mfg_test_plan_refs": [
+        "manufacturing/EVT_DVT_PVT_PLAN.md",
+        "manufacturing/PRODUCTION_TEST_FIXTURE_PLAN.md"
+      ],
+      "e4_to_e5_evidence_required": [
+        "EVT0EvidenceRecord with physical_execution_status=PHYSICAL_EXECUTED",
+        "raw artifacts + units + uncertainty",
+        "pass_fail against acceptance_criterion",
+        "defect_id if FAIL"
+      ],
+      "physical_execution_status": "PHYSICAL_PENDING",
+      "claim_boundary": "HARDWARE_PROTOTYPE_PENDING"
+    },
+    {
+      "test_id": "EVT-BOOT-001",
+      "name": "Bootloader + serial console",
+      "priority": "P0",
+      "products": [
+        "student_14_5",
+        "ds_xl_coder",
+        "handheld_hybrid",
+        "edge_io_rings",
+        "dock"
+      ],
+      "risk_refs": [
+        "RISK-001"
+      ],
+      "unknown_refs": [],
+      "instrument_ids": [
+        "INST-LA"
+      ],
+      "fixture_ids": [
+        "FIX-PROG-DEBUG",
+        "FIX-SERIAL"
+      ],
+      "golden_journey_refs": [],
+      "metric": "boot_success",
+      "unit": "bool",
+      "acceptance_criterion": "Console reaches bootloader/OS prompt; FW SHA recorded",
+      "setup_revision": "EVT0-SETUP-R0",
+      "bringup_order_gate": "boot_debug",
+      "hardware_rev_target": "0.6.0-cont-ix",
+      "configuration_ids": [
+        "STUDENT145-EVT0-R0",
+        "DSXL-EVT0-R0",
+        "HANDHELD-EVT0-R0",
+        "RING-EVT0-R0",
+        "DOCK-EVT0-R0"
+      ],
+      "mfg_test_plan_refs": [
+        "manufacturing/EVT_DVT_PVT_PLAN.md",
+        "manufacturing/PRODUCTION_TEST_FIXTURE_PLAN.md"
+      ],
+      "e4_to_e5_evidence_required": [
+        "EVT0EvidenceRecord with physical_execution_status=PHYSICAL_EXECUTED",
+        "raw artifacts + units + uncertainty",
+        "pass_fail against acceptance_criterion",
+        "defect_id if FAIL"
+      ],
+      "physical_execution_status": "PHYSICAL_PENDING",
+      "claim_boundary": "HARDWARE_PROTOTYPE_PENDING"
+    },
+    {
+      "test_id": "EVT-BOOT-002",
+      "name": "Storage enumerate + OS image boot",
+      "priority": "P0",
+      "products": [
+        "student_14_5",
+        "ds_xl_coder",
+        "handheld_hybrid"
+      ],
+      "risk_refs": [
+        "RISK-001",
+        "RISK-004"
+      ],
+      "unknown_refs": [
+        "UNK-005"
+      ],
+      "instrument_ids": [
+        "INST-LA"
+      ],
+      "fixture_ids": [
+        "FIX-PROG-DEBUG"
+      ],
+      "golden_journey_refs": [
+        "GOLDEN-01",
+        "GOLDEN-05"
+      ],
+      "metric": "boot_to_os",
+      "unit": "bool",
+      "acceptance_criterion": "OS boots; storage present; Handheld microSD path exercised",
+      "setup_revision": "EVT0-SETUP-R0",
+      "bringup_order_gate": "storage",
+      "hardware_rev_target": "0.6.0-cont-ix",
+      "configuration_ids": [
+        "STUDENT145-EVT0-R0",
+        "DSXL-EVT0-R0",
+        "HANDHELD-EVT0-R0"
+      ],
+      "mfg_test_plan_refs": [
+        "manufacturing/EVT_DVT_PVT_PLAN.md",
+        "manufacturing/PRODUCTION_TEST_FIXTURE_PLAN.md"
+      ],
+      "e4_to_e5_evidence_required": [
+        "EVT0EvidenceRecord with physical_execution_status=PHYSICAL_EXECUTED",
+        "raw artifacts + units + uncertainty",
+        "pass_fail against acceptance_criterion",
+        "defect_id if FAIL"
+      ],
+      "physical_execution_status": "PHYSICAL_PENDING",
+      "claim_boundary": "HARDWARE_PROTOTYPE_PENDING"
+    },
+    {
+      "test_id": "EVT-DISP-001",
+      "name": "Primary display + touch",
+      "priority": "P1",
+      "products": [
+        "student_14_5",
+        "ds_xl_coder",
+        "handheld_hybrid"
+      ],
+      "risk_refs": [
+        "RISK-009"
+      ],
+      "unknown_refs": [],
+      "instrument_ids": [],
+      "fixture_ids": [],
+      "golden_journey_refs": [
+        "GOLDEN-01",
+        "GOLDEN-06"
+      ],
+      "metric": "display_up",
+      "unit": "bool",
+      "acceptance_criterion": "Panel lights; touch path reports events",
+      "setup_revision": "EVT0-SETUP-R0",
+      "bringup_order_gate": "display_input",
+      "hardware_rev_target": "0.6.0-cont-ix",
+      "configuration_ids": [
+        "STUDENT145-EVT0-R0",
+        "DSXL-EVT0-R0",
+        "HANDHELD-EVT0-R0"
+      ],
+      "mfg_test_plan_refs": [
+        "manufacturing/EVT_DVT_PVT_PLAN.md",
+        "manufacturing/PRODUCTION_TEST_FIXTURE_PLAN.md"
+      ],
+      "e4_to_e5_evidence_required": [
+        "EVT0EvidenceRecord with physical_execution_status=PHYSICAL_EXECUTED",
+        "raw artifacts + units + uncertainty",
+        "pass_fail against acceptance_criterion",
+        "defect_id if FAIL"
+      ],
+      "physical_execution_status": "PHYSICAL_PENDING",
+      "claim_boundary": "HARDWARE_PROTOTYPE_PENDING"
+    },
+    {
+      "test_id": "EVT-DISP-002",
+      "name": "DS-XL dual-display enumeration",
+      "priority": "P1",
+      "products": [
+        "ds_xl_coder"
+      ],
+      "risk_refs": [
+        "RISK-003",
+        "RISK-009"
+      ],
+      "unknown_refs": [
+        "UNK-008"
+      ],
+      "instrument_ids": [],
+      "fixture_ids": [],
+      "golden_journey_refs": [
+        "GOLDEN-06"
+      ],
+      "metric": "dual_display_enum",
+      "unit": "count",
+      "acceptance_criterion": "Both panels enumerate; layout objects placeable",
+      "setup_revision": "EVT0-SETUP-R0",
+      "bringup_order_gate": "display_input",
+      "hardware_rev_target": "0.6.0-cont-ix",
+      "configuration_ids": [
+        "DSXL-EVT0-R0"
+      ],
+      "mfg_test_plan_refs": [
+        "manufacturing/EVT_DVT_PVT_PLAN.md",
+        "manufacturing/PRODUCTION_TEST_FIXTURE_PLAN.md"
+      ],
+      "e4_to_e5_evidence_required": [
+        "EVT0EvidenceRecord with physical_execution_status=PHYSICAL_EXECUTED",
+        "raw artifacts + units + uncertainty",
+        "pass_fail against acceptance_criterion",
+        "defect_id if FAIL"
+      ],
+      "physical_execution_status": "PHYSICAL_PENDING",
+      "claim_boundary": "HARDWARE_PROTOTYPE_PENDING"
+    },
+    {
+      "test_id": "EVT-DISP-003",
+      "name": "DS-XL flex/hinge continuity + cycle plan start",
+      "priority": "P1",
+      "products": [
+        "ds_xl_coder"
+      ],
+      "risk_refs": [
+        "RISK-003"
+      ],
+      "unknown_refs": [
+        "UNK-008"
+      ],
+      "instrument_ids": [
+        "INST-DMM"
+      ],
+      "fixture_ids": [
+        "FIX-DSXL-CYCLE"
+      ],
+      "golden_journey_refs": [
+        "GOLDEN-06"
+      ],
+      "metric": "flex_continuity",
+      "unit": "ohm_or_cycle_count",
+      "acceptance_criterion": "Continuity OK through open/close; cycle plan logged (N TBD)",
+      "setup_revision": "EVT0-SETUP-R0",
+      "bringup_order_gate": "display_input",
+      "hardware_rev_target": "0.6.0-cont-ix",
+      "configuration_ids": [
+        "DSXL-EVT0-R0"
+      ],
+      "mfg_test_plan_refs": [
+        "manufacturing/EVT_DVT_PVT_PLAN.md",
+        "manufacturing/PRODUCTION_TEST_FIXTURE_PLAN.md"
+      ],
+      "e4_to_e5_evidence_required": [
+        "EVT0EvidenceRecord with physical_execution_status=PHYSICAL_EXECUTED",
+        "raw artifacts + units + uncertainty",
+        "pass_fail against acceptance_criterion",
+        "defect_id if FAIL"
+      ],
+      "physical_execution_status": "PHYSICAL_PENDING",
+      "claim_boundary": "HARDWARE_PROTOTYPE_PENDING"
+    },
+    {
+      "test_id": "EVT-DOCK-001",
+      "name": "Dock PD negotiation",
+      "priority": "P3",
+      "products": [
+        "dock",
+        "handheld_hybrid",
+        "student_14_5"
+      ],
+      "risk_refs": [
+        "RISK-002",
+        "RISK-005"
+      ],
+      "unknown_refs": [
+        "UNK-002"
+      ],
+      "instrument_ids": [
+        "INST-USB-PD"
+      ],
+      "fixture_ids": [
+        "FIX-DOCK-LOOP"
+      ],
+      "golden_journey_refs": [
+        "GOLDEN-04",
+        "GOLDEN-05"
+      ],
+      "metric": "pd_contract",
+      "unit": "W",
+      "acceptance_criterion": "Negotiates expected PDO without fault",
+      "setup_revision": "EVT0-SETUP-R0",
+      "bringup_order_gate": "dock",
+      "hardware_rev_target": "0.6.0-cont-ix",
+      "configuration_ids": [
+        "DOCK-EVT0-R0",
+        "HANDHELD-EVT0-R0",
+        "STUDENT145-EVT0-R0"
+      ],
+      "mfg_test_plan_refs": [
+        "manufacturing/EVT_DVT_PVT_PLAN.md",
+        "manufacturing/PRODUCTION_TEST_FIXTURE_PLAN.md"
+      ],
+      "e4_to_e5_evidence_required": [
+        "EVT0EvidenceRecord with physical_execution_status=PHYSICAL_EXECUTED",
+        "raw artifacts + units + uncertainty",
+        "pass_fail against acceptance_criterion",
+        "defect_id if FAIL"
+      ],
+      "physical_execution_status": "PHYSICAL_PENDING",
+      "claim_boundary": "HARDWARE_PROTOTYPE_PENDING"
+    },
+    {
+      "test_id": "EVT-DOCK-002",
+      "name": "Dock USB/Ethernet/audio enumerate",
+      "priority": "P3",
+      "products": [
+        "dock",
+        "handheld_hybrid"
+      ],
+      "risk_refs": [
+        "RISK-002"
+      ],
+      "unknown_refs": [
+        "UNK-002"
+      ],
+      "instrument_ids": [
+        "INST-NET-TRAFFIC",
+        "INST-AUDIO"
+      ],
+      "fixture_ids": [
+        "FIX-DOCK-LOOP"
+      ],
+      "golden_journey_refs": [
+        "GOLDEN-04",
+        "GOLDEN-05"
+      ],
+      "metric": "peripheral_enum",
+      "unit": "bool",
+      "acceptance_criterion": "USB/ETH/audio devices appear; no surprise disconnect",
+      "setup_revision": "EVT0-SETUP-R0",
+      "bringup_order_gate": "dock",
+      "hardware_rev_target": "0.6.0-cont-ix",
+      "configuration_ids": [
+        "DOCK-EVT0-R0",
+        "HANDHELD-EVT0-R0"
+      ],
+      "mfg_test_plan_refs": [
+        "manufacturing/EVT_DVT_PVT_PLAN.md",
+        "manufacturing/PRODUCTION_TEST_FIXTURE_PLAN.md"
+      ],
+      "e4_to_e5_evidence_required": [
+        "EVT0EvidenceRecord with physical_execution_status=PHYSICAL_EXECUTED",
+        "raw artifacts + units + uncertainty",
+        "pass_fail against acceptance_criterion",
+        "defect_id if FAIL"
+      ],
+      "physical_execution_status": "PHYSICAL_PENDING",
+      "claim_boundary": "HARDWARE_PROTOTYPE_PENDING"
+    },
+    {
+      "test_id": "EVT-DOCK-003",
+      "name": "Dock display hotplug",
+      "priority": "P3",
+      "products": [
+        "dock",
+        "handheld_hybrid",
+        "student_14_5"
+      ],
+      "risk_refs": [
+        "RISK-002",
+        "RISK-009"
+      ],
+      "unknown_refs": [],
+      "instrument_ids": [
+        "INST-SCOPE"
+      ],
+      "fixture_ids": [
+        "FIX-DOCK-LOOP"
+      ],
+      "golden_journey_refs": [
+        "GOLDEN-04",
+        "GOLDEN-05"
+      ],
+      "metric": "hotplug_reconnect_ms",
+      "unit": "ms",
+      "acceptance_criterion": "Reconnect within TARGET_TO_CONFIRM (WP-008)",
+      "setup_revision": "EVT0-SETUP-R0",
+      "bringup_order_gate": "dock",
+      "hardware_rev_target": "0.6.0-cont-ix",
+      "configuration_ids": [
+        "DOCK-EVT0-R0",
+        "HANDHELD-EVT0-R0",
+        "STUDENT145-EVT0-R0"
+      ],
+      "mfg_test_plan_refs": [
+        "manufacturing/EVT_DVT_PVT_PLAN.md",
+        "manufacturing/PRODUCTION_TEST_FIXTURE_PLAN.md"
+      ],
+      "e4_to_e5_evidence_required": [
+        "EVT0EvidenceRecord with physical_execution_status=PHYSICAL_EXECUTED",
+        "raw artifacts + units + uncertainty",
+        "pass_fail against acceptance_criterion",
+        "defect_id if FAIL"
+      ],
+      "physical_execution_status": "PHYSICAL_PENDING",
+      "claim_boundary": "HARDWARE_PROTOTYPE_PENDING"
+    },
+    {
+      "test_id": "EVT-DOCK-004",
+      "name": "Dock high-speed link integrity",
+      "priority": "P3",
+      "products": [
+        "dock",
+        "handheld_hybrid"
+      ],
+      "risk_refs": [
+        "RISK-002"
+      ],
+      "unknown_refs": [
+        "UNK-002"
+      ],
+      "instrument_ids": [
+        "INST-USB4-TB",
+        "INST-SCOPE"
+      ],
+      "fixture_ids": [
+        "FIX-DOCK-LOOP"
+      ],
+      "golden_journey_refs": [
+        "GOLDEN-04",
+        "GOLDEN-05"
+      ],
+      "metric": "link_margin",
+      "unit": "dB_or_ber",
+      "acceptance_criterion": "SI margin DATA_ONLY or vendor/lab report; no fake PASS",
+      "setup_revision": "EVT0-SETUP-R0",
+      "bringup_order_gate": "dock",
+      "hardware_rev_target": "0.6.0-cont-ix",
+      "configuration_ids": [
+        "DOCK-EVT0-R0",
+        "HANDHELD-EVT0-R0"
+      ],
+      "mfg_test_plan_refs": [
+        "manufacturing/EVT_DVT_PVT_PLAN.md",
+        "manufacturing/PRODUCTION_TEST_FIXTURE_PLAN.md"
+      ],
+      "e4_to_e5_evidence_required": [
+        "EVT0EvidenceRecord with physical_execution_status=PHYSICAL_EXECUTED",
+        "raw artifacts + units + uncertainty",
+        "pass_fail against acceptance_criterion",
+        "defect_id if FAIL"
+      ],
+      "physical_execution_status": "PHYSICAL_PENDING",
+      "claim_boundary": "HARDWARE_PROTOTYPE_PENDING"
+    },
+    {
+      "test_id": "EVT-RF-001",
+      "name": "Wi-Fi/BT association + throughput smoke",
+      "priority": "P2",
+      "products": [
+        "student_14_5",
+        "handheld_hybrid",
+        "ds_xl_coder"
+      ],
+      "risk_refs": [
+        "RISK-006"
+      ],
+      "unknown_refs": [],
+      "instrument_ids": [
+        "INST-WIFI-AP",
+        "INST-NET-TRAFFIC"
+      ],
+      "fixture_ids": [],
+      "golden_journey_refs": [
+        "GOLDEN-02"
+      ],
+      "metric": "tcp_throughput",
+      "unit": "Mbps",
+      "acceptance_criterion": "Associates; smoke throughput recorded (not cert)",
+      "setup_revision": "EVT0-SETUP-R0",
+      "bringup_order_gate": "network",
+      "hardware_rev_target": "0.6.0-cont-ix",
+      "configuration_ids": [
+        "STUDENT145-EVT0-R0",
+        "HANDHELD-EVT0-R0",
+        "DSXL-EVT0-R0"
+      ],
+      "mfg_test_plan_refs": [
+        "manufacturing/EVT_DVT_PVT_PLAN.md",
+        "manufacturing/PRODUCTION_TEST_FIXTURE_PLAN.md"
+      ],
+      "e4_to_e5_evidence_required": [
+        "EVT0EvidenceRecord with physical_execution_status=PHYSICAL_EXECUTED",
+        "raw artifacts + units + uncertainty",
+        "pass_fail against acceptance_criterion",
+        "defect_id if FAIL"
+      ],
+      "physical_execution_status": "PHYSICAL_PENDING",
+      "claim_boundary": "HARDWARE_PROTOTYPE_PENDING"
+    },
+    {
+      "test_id": "EVT-RF-002",
+      "name": "Ethernet docking path",
+      "priority": "P2",
+      "products": [
+        "dock",
+        "handheld_hybrid",
+        "student_14_5"
+      ],
+      "risk_refs": [
+        "RISK-002"
+      ],
+      "unknown_refs": [],
+      "instrument_ids": [
+        "INST-NET-TRAFFIC"
+      ],
+      "fixture_ids": [
+        "FIX-DOCK-LOOP"
+      ],
+      "golden_journey_refs": [
+        "GOLDEN-04"
+      ],
+      "metric": "eth_link",
+      "unit": "bool",
+      "acceptance_criterion": "Link up + iperf smoke",
+      "setup_revision": "EVT0-SETUP-R0",
+      "bringup_order_gate": "network",
+      "hardware_rev_target": "0.6.0-cont-ix",
+      "configuration_ids": [
+        "DOCK-EVT0-R0",
+        "HANDHELD-EVT0-R0",
+        "STUDENT145-EVT0-R0"
+      ],
+      "mfg_test_plan_refs": [
+        "manufacturing/EVT_DVT_PVT_PLAN.md",
+        "manufacturing/PRODUCTION_TEST_FIXTURE_PLAN.md"
+      ],
+      "e4_to_e5_evidence_required": [
+        "EVT0EvidenceRecord with physical_execution_status=PHYSICAL_EXECUTED",
+        "raw artifacts + units + uncertainty",
+        "pass_fail against acceptance_criterion",
+        "defect_id if FAIL"
+      ],
+      "physical_execution_status": "PHYSICAL_PENDING",
+      "claim_boundary": "HARDWARE_PROTOTYPE_PENDING"
+    },
+    {
+      "test_id": "EVT-RF-003",
+      "name": "Antenna/RF coexistence pre-scan",
+      "priority": "P2",
+      "products": [
+        "student_14_5",
+        "handheld_hybrid",
+        "edge_io_rings"
+      ],
+      "risk_refs": [
+        "RISK-006"
+      ],
+      "unknown_refs": [
+        "UNK-001"
+      ],
+      "instrument_ids": [
+        "INST-SPEC",
+        "INST-SHIELD",
+        "INST-VNA"
+      ],
+      "fixture_ids": [
+        "FIX-RF-COND"
+      ],
+      "golden_journey_refs": [
+        "GOLDEN-02",
+        "GOLDEN-07"
+      ],
+      "metric": "coexistence_notes",
+      "unit": "qualitative+dBm",
+      "acceptance_criterion": "Conducted/rental/lab scan logged; EXTERNAL_LAB OK",
+      "setup_revision": "EVT0-SETUP-R0",
+      "bringup_order_gate": "network",
+      "hardware_rev_target": "0.6.0-cont-ix",
+      "configuration_ids": [
+        "STUDENT145-EVT0-R0",
+        "HANDHELD-EVT0-R0",
+        "RING-EVT0-R0"
+      ],
+      "mfg_test_plan_refs": [
+        "manufacturing/EVT_DVT_PVT_PLAN.md",
+        "manufacturing/PRODUCTION_TEST_FIXTURE_PLAN.md"
+      ],
+      "e4_to_e5_evidence_required": [
+        "EVT0EvidenceRecord with physical_execution_status=PHYSICAL_EXECUTED",
+        "raw artifacts + units + uncertainty",
+        "pass_fail against acceptance_criterion",
+        "defect_id if FAIL"
+      ],
+      "physical_execution_status": "PHYSICAL_PENDING",
+      "claim_boundary": "HARDWARE_PROTOTYPE_PENDING"
+    },
+    {
+      "test_id": "EVT-RF-004",
+      "name": "RM520N-GL modem attach smoke",
+      "priority": "P2",
+      "products": [
+        "student_14_5",
+        "handheld_hybrid"
+      ],
+      "risk_refs": [
+        "RISK-011"
+      ],
+      "unknown_refs": [],
+      "instrument_ids": [
+        "INST-CELL",
+        "INST-RF-GEN",
+        "INST-SPEC"
+      ],
+      "fixture_ids": [
+        "FIX-RF-COND"
+      ],
+      "golden_journey_refs": [
+        "GOLDEN-02"
+      ],
+      "metric": "modem_attach",
+      "unit": "bool",
+      "acceptance_criterion": "Module enumerates; attach smoke or lab path; not carrier cert",
+      "setup_revision": "EVT0-SETUP-R0",
+      "bringup_order_gate": "network",
+      "hardware_rev_target": "0.6.0-cont-ix",
+      "configuration_ids": [
+        "STUDENT145-EVT0-R0",
+        "HANDHELD-EVT0-R0"
+      ],
+      "mfg_test_plan_refs": [
+        "manufacturing/EVT_DVT_PVT_PLAN.md",
+        "manufacturing/PRODUCTION_TEST_FIXTURE_PLAN.md"
+      ],
+      "e4_to_e5_evidence_required": [
+        "EVT0EvidenceRecord with physical_execution_status=PHYSICAL_EXECUTED",
+        "raw artifacts + units + uncertainty",
+        "pass_fail against acceptance_criterion",
+        "defect_id if FAIL"
+      ],
+      "physical_execution_status": "PHYSICAL_PENDING",
+      "claim_boundary": "HARDWARE_PROTOTYPE_PENDING"
+    },
+    {
+      "test_id": "EVT-THERM-001",
+      "name": "Idle/office thermal map",
+      "priority": "P5",
+      "products": [
+        "student_14_5",
+        "ds_xl_coder",
+        "handheld_hybrid",
+        "dock"
+      ],
+      "risk_refs": [
+        "RISK-005",
+        "RISK-001"
+      ],
+      "unknown_refs": [
+        "UNK-001",
+        "UNK-007"
+      ],
+      "instrument_ids": [
+        "INST-TC-LOG",
+        "INST-THERM-CAM"
+      ],
+      "fixture_ids": [
+        "FIX-THERM-MAP"
+      ],
+      "golden_journey_refs": [
+        "GOLDEN-01",
+        "GOLDEN-04",
+        "GOLDEN-06"
+      ],
+      "metric": "skin_temp",
+      "unit": "C",
+      "acceptance_criterion": "Temps logged; compare to WP-008 limits when frozen",
+      "setup_revision": "EVT0-SETUP-R0",
+      "bringup_order_gate": "thermal",
+      "hardware_rev_target": "0.6.0-cont-ix",
+      "configuration_ids": [
+        "STUDENT145-EVT0-R0",
+        "DSXL-EVT0-R0",
+        "HANDHELD-EVT0-R0",
+        "DOCK-EVT0-R0"
+      ],
+      "mfg_test_plan_refs": [
+        "manufacturing/EVT_DVT_PVT_PLAN.md",
+        "manufacturing/PRODUCTION_TEST_FIXTURE_PLAN.md"
+      ],
+      "e4_to_e5_evidence_required": [
+        "EVT0EvidenceRecord with physical_execution_status=PHYSICAL_EXECUTED",
+        "raw artifacts + units + uncertainty",
+        "pass_fail against acceptance_criterion",
+        "defect_id if FAIL"
+      ],
+      "physical_execution_status": "PHYSICAL_PENDING",
+      "claim_boundary": "HARDWARE_PROTOTYPE_PENDING"
+    },
+    {
+      "test_id": "EVT-THERM-002",
+      "name": "AI+game combined thermal/power",
+      "priority": "P5",
+      "products": [
+        "student_14_5",
+        "handheld_hybrid",
+        "ds_xl_coder"
+      ],
+      "risk_refs": [
+        "RISK-005",
+        "RISK-008",
+        "RISK-009"
+      ],
+      "unknown_refs": [
+        "UNK-006",
+        "UNK-007"
+      ],
+      "instrument_ids": [
+        "INST-TC-LOG",
+        "INST-CURR-PROBE",
+        "INST-ELOAD"
+      ],
+      "fixture_ids": [
+        "FIX-THERM-MAP",
+        "FIX-PWR-CURR"
+      ],
+      "golden_journey_refs": [
+        "GOLDEN-01",
+        "GOLDEN-05",
+        "GOLDEN-08"
+      ],
+      "metric": "skin_temp_load",
+      "unit": "C",
+      "acceptance_criterion": "No thermal shutdown unexpected; DATA_ONLY vs targets",
+      "setup_revision": "EVT0-SETUP-R0",
+      "bringup_order_gate": "thermal",
+      "hardware_rev_target": "0.6.0-cont-ix",
+      "configuration_ids": [
+        "STUDENT145-EVT0-R0",
+        "HANDHELD-EVT0-R0",
+        "DSXL-EVT0-R0"
+      ],
+      "mfg_test_plan_refs": [
+        "manufacturing/EVT_DVT_PVT_PLAN.md",
+        "manufacturing/PRODUCTION_TEST_FIXTURE_PLAN.md"
+      ],
+      "e4_to_e5_evidence_required": [
+        "EVT0EvidenceRecord with physical_execution_status=PHYSICAL_EXECUTED",
+        "raw artifacts + units + uncertainty",
+        "pass_fail against acceptance_criterion",
+        "defect_id if FAIL"
+      ],
+      "physical_execution_status": "PHYSICAL_PENDING",
+      "claim_boundary": "HARDWARE_PROTOTYPE_PENDING"
+    },
+    {
+      "test_id": "EVT-BATT-001",
+      "name": "Battery discharge under office profile",
+      "priority": "P5",
+      "products": [
+        "student_14_5",
+        "handheld_hybrid",
+        "ds_xl_coder"
+      ],
+      "risk_refs": [
+        "RISK-005"
+      ],
+      "unknown_refs": [
+        "UNK-007"
+      ],
+      "instrument_ids": [
+        "INST-CURR-PROBE",
+        "INST-ELOAD",
+        "INST-TC-LOG"
+      ],
+      "fixture_ids": [
+        "FIX-BATT"
+      ],
+      "golden_journey_refs": [
+        "GOLDEN-01"
+      ],
+      "metric": "runtime",
+      "unit": "h",
+      "acceptance_criterion": "Runtime DATA_ONLY; Li-ion safety plan followed",
+      "setup_revision": "EVT0-SETUP-R0",
+      "bringup_order_gate": "battery",
+      "hardware_rev_target": "0.6.0-cont-ix",
+      "configuration_ids": [
+        "STUDENT145-EVT0-R0",
+        "HANDHELD-EVT0-R0",
+        "DSXL-EVT0-R0"
+      ],
+      "mfg_test_plan_refs": [
+        "manufacturing/EVT_DVT_PVT_PLAN.md",
+        "manufacturing/PRODUCTION_TEST_FIXTURE_PLAN.md"
+      ],
+      "e4_to_e5_evidence_required": [
+        "EVT0EvidenceRecord with physical_execution_status=PHYSICAL_EXECUTED",
+        "raw artifacts + units + uncertainty",
+        "pass_fail against acceptance_criterion",
+        "defect_id if FAIL"
+      ],
+      "physical_execution_status": "PHYSICAL_PENDING",
+      "claim_boundary": "HARDWARE_PROTOTYPE_PENDING"
+    },
+    {
+      "test_id": "EVT-BATT-002",
+      "name": "Charge + PD charge path",
+      "priority": "P5",
+      "products": [
+        "student_14_5",
+        "handheld_hybrid",
+        "ds_xl_coder",
+        "dock"
+      ],
+      "risk_refs": [
+        "RISK-005",
+        "RISK-002"
+      ],
+      "unknown_refs": [],
+      "instrument_ids": [
+        "INST-USB-PD",
+        "INST-CURR-PROBE"
+      ],
+      "fixture_ids": [
+        "FIX-BATT",
+        "FIX-DOCK-LOOP"
+      ],
+      "golden_journey_refs": [
+        "GOLDEN-04"
+      ],
+      "metric": "charge_rate",
+      "unit": "W",
+      "acceptance_criterion": "Charges without fault; temps logged",
+      "setup_revision": "EVT0-SETUP-R0",
+      "bringup_order_gate": "battery",
+      "hardware_rev_target": "0.6.0-cont-ix",
+      "configuration_ids": [
+        "STUDENT145-EVT0-R0",
+        "HANDHELD-EVT0-R0",
+        "DSXL-EVT0-R0",
+        "DOCK-EVT0-R0"
+      ],
+      "mfg_test_plan_refs": [
+        "manufacturing/EVT_DVT_PVT_PLAN.md",
+        "manufacturing/PRODUCTION_TEST_FIXTURE_PLAN.md"
+      ],
+      "e4_to_e5_evidence_required": [
+        "EVT0EvidenceRecord with physical_execution_status=PHYSICAL_EXECUTED",
+        "raw artifacts + units + uncertainty",
+        "pass_fail against acceptance_criterion",
+        "defect_id if FAIL"
+      ],
+      "physical_execution_status": "PHYSICAL_PENDING",
+      "claim_boundary": "HARDWARE_PROTOTYPE_PENDING"
+    },
+    {
+      "test_id": "EVT-BATT-003",
+      "name": "Limited cycle characterization",
+      "priority": "P5",
+      "products": [
+        "student_14_5",
+        "handheld_hybrid"
+      ],
+      "risk_refs": [
+        "RISK-005"
+      ],
+      "unknown_refs": [],
+      "instrument_ids": [
+        "INST-BATT-CYC"
+      ],
+      "fixture_ids": [
+        "FIX-BATT"
+      ],
+      "golden_journey_refs": [],
+      "metric": "cycle_delta_capacity",
+      "unit": "pct",
+      "acceptance_criterion": "Rent cycler; DATA_ONLY; damaged-pack procedure ready",
+      "setup_revision": "EVT0-SETUP-R0",
+      "bringup_order_gate": "battery",
+      "hardware_rev_target": "0.6.0-cont-ix",
+      "configuration_ids": [
+        "STUDENT145-EVT0-R0",
+        "HANDHELD-EVT0-R0"
+      ],
+      "mfg_test_plan_refs": [
+        "manufacturing/EVT_DVT_PVT_PLAN.md",
+        "manufacturing/PRODUCTION_TEST_FIXTURE_PLAN.md"
+      ],
+      "e4_to_e5_evidence_required": [
+        "EVT0EvidenceRecord with physical_execution_status=PHYSICAL_EXECUTED",
+        "raw artifacts + units + uncertainty",
+        "pass_fail against acceptance_criterion",
+        "defect_id if FAIL"
+      ],
+      "physical_execution_status": "PHYSICAL_PENDING",
+      "claim_boundary": "HARDWARE_PROTOTYPE_PENDING"
+    },
+    {
+      "test_id": "EVT-RING-001",
+      "name": "Ring power/current + FW program",
+      "priority": "P6",
+      "products": [
+        "edge_io_rings"
+      ],
+      "risk_refs": [
+        "RISK-007"
+      ],
+      "unknown_refs": [],
+      "instrument_ids": [
+        "INST-CURR-PROBE",
+        "INST-BENCH-PSU"
+      ],
+      "fixture_ids": [
+        "FIX-RING-CAL",
+        "FIX-PROG-DEBUG"
+      ],
+      "golden_journey_refs": [
+        "GOLDEN-07"
+      ],
+      "metric": "iq_active",
+      "unit": "mA",
+      "acceptance_criterion": "Programs; current within draft budget",
+      "setup_revision": "EVT0-SETUP-R0",
+      "bringup_order_gate": "rings",
+      "hardware_rev_target": "0.6.0-cont-ix",
+      "configuration_ids": [
+        "RING-EVT0-R0"
+      ],
+      "mfg_test_plan_refs": [
+        "manufacturing/EVT_DVT_PVT_PLAN.md",
+        "manufacturing/PRODUCTION_TEST_FIXTURE_PLAN.md"
+      ],
+      "e4_to_e5_evidence_required": [
+        "EVT0EvidenceRecord with physical_execution_status=PHYSICAL_EXECUTED",
+        "raw artifacts + units + uncertainty",
+        "pass_fail against acceptance_criterion",
+        "defect_id if FAIL"
+      ],
+      "physical_execution_status": "PHYSICAL_PENDING",
+      "claim_boundary": "HARDWARE_PROTOTYPE_PENDING"
+    },
+    {
+      "test_id": "EVT-RING-002",
+      "name": "Packet transport latency/loss",
+      "priority": "P6",
+      "products": [
+        "edge_io_rings"
+      ],
+      "risk_refs": [
+        "RISK-007"
+      ],
+      "unknown_refs": [
+        "UNK-003"
+      ],
+      "instrument_ids": [
+        "INST-NET-TRAFFIC"
+      ],
+      "fixture_ids": [
+        "FIX-RING-CAL"
+      ],
+      "golden_journey_refs": [
+        "GOLDEN-07"
+      ],
+      "metric": "e2e_latency",
+      "unit": "ms",
+      "acceptance_criterion": "Latency/loss recorded; confidence gating exercised",
+      "setup_revision": "EVT0-SETUP-R0",
+      "bringup_order_gate": "rings",
+      "hardware_rev_target": "0.6.0-cont-ix",
+      "configuration_ids": [
+        "RING-EVT0-R0"
+      ],
+      "mfg_test_plan_refs": [
+        "manufacturing/EVT_DVT_PVT_PLAN.md",
+        "manufacturing/PRODUCTION_TEST_FIXTURE_PLAN.md"
+      ],
+      "e4_to_e5_evidence_required": [
+        "EVT0EvidenceRecord with physical_execution_status=PHYSICAL_EXECUTED",
+        "raw artifacts + units + uncertainty",
+        "pass_fail against acceptance_criterion",
+        "defect_id if FAIL"
+      ],
+      "physical_execution_status": "PHYSICAL_PENDING",
+      "claim_boundary": "HARDWARE_PROTOTYPE_PENDING"
+    },
+    {
+      "test_id": "EVT-RING-003",
+      "name": "Spatial drift vs reference pose",
+      "priority": "P6",
+      "products": [
+        "edge_io_rings"
+      ],
+      "risk_refs": [
+        "RISK-007"
+      ],
+      "unknown_refs": [
+        "UNK-003"
+      ],
+      "instrument_ids": [
+        "INST-MOTION-REF"
+      ],
+      "fixture_ids": [
+        "FIX-RING-POSE",
+        "FIX-RING-CAL"
+      ],
+      "golden_journey_refs": [
+        "GOLDEN-07"
+      ],
+      "metric": "pose_error",
+      "unit": "mm_or_deg",
+      "acceptance_criterion": "Drift over session logged; no PASS without ref",
+      "setup_revision": "EVT0-SETUP-R0",
+      "bringup_order_gate": "rings",
+      "hardware_rev_target": "0.6.0-cont-ix",
+      "configuration_ids": [
+        "RING-EVT0-R0"
+      ],
+      "mfg_test_plan_refs": [
+        "manufacturing/EVT_DVT_PVT_PLAN.md",
+        "manufacturing/PRODUCTION_TEST_FIXTURE_PLAN.md"
+      ],
+      "e4_to_e5_evidence_required": [
+        "EVT0EvidenceRecord with physical_execution_status=PHYSICAL_EXECUTED",
+        "raw artifacts + units + uncertainty",
+        "pass_fail against acceptance_criterion",
+        "defect_id if FAIL"
+      ],
+      "physical_execution_status": "PHYSICAL_PENDING",
+      "claim_boundary": "HARDWARE_PROTOTYPE_PENDING"
+    },
+    {
+      "test_id": "EVT-RING-004",
+      "name": "Wrong-target / low-confidence rejection",
+      "priority": "P6",
+      "products": [
+        "edge_io_rings"
+      ],
+      "risk_refs": [
+        "RISK-007"
+      ],
+      "unknown_refs": [
+        "UNK-003"
+      ],
+      "instrument_ids": [
+        "INST-MOTION-REF"
+      ],
+      "fixture_ids": [
+        "FIX-RING-POSE"
+      ],
+      "golden_journey_refs": [
+        "GOLDEN-07"
+      ],
+      "metric": "false_delivery_rate",
+      "unit": "pct",
+      "acceptance_criterion": "Low-confidence not delivered to app",
+      "setup_revision": "EVT0-SETUP-R0",
+      "bringup_order_gate": "rings",
+      "hardware_rev_target": "0.6.0-cont-ix",
+      "configuration_ids": [
+        "RING-EVT0-R0"
+      ],
+      "mfg_test_plan_refs": [
+        "manufacturing/EVT_DVT_PVT_PLAN.md",
+        "manufacturing/PRODUCTION_TEST_FIXTURE_PLAN.md"
+      ],
+      "e4_to_e5_evidence_required": [
+        "EVT0EvidenceRecord with physical_execution_status=PHYSICAL_EXECUTED",
+        "raw artifacts + units + uncertainty",
+        "pass_fail against acceptance_criterion",
+        "defect_id if FAIL"
+      ],
+      "physical_execution_status": "PHYSICAL_PENDING",
+      "claim_boundary": "HARDWARE_PROTOTYPE_PENDING"
+    },
+    {
+      "test_id": "EVT-RING-005",
+      "name": "Long-session runtime + SE/provisioning smoke",
+      "priority": "P6",
+      "products": [
+        "edge_io_rings"
+      ],
+      "risk_refs": [
+        "RISK-007"
+      ],
+      "unknown_refs": [
+        "UNK-003"
+      ],
+      "instrument_ids": [
+        "INST-CURR-PROBE"
+      ],
+      "fixture_ids": [
+        "FIX-RING-CAL"
+      ],
+      "golden_journey_refs": [
+        "GOLDEN-07"
+      ],
+      "metric": "session_duration",
+      "unit": "h",
+      "acceptance_criterion": "2h session without unsafe targeting; SE smoke only",
+      "setup_revision": "EVT0-SETUP-R0",
+      "bringup_order_gate": "rings",
+      "hardware_rev_target": "0.6.0-cont-ix",
+      "configuration_ids": [
+        "RING-EVT0-R0"
+      ],
+      "mfg_test_plan_refs": [
+        "manufacturing/EVT_DVT_PVT_PLAN.md",
+        "manufacturing/PRODUCTION_TEST_FIXTURE_PLAN.md"
+      ],
+      "e4_to_e5_evidence_required": [
+        "EVT0EvidenceRecord with physical_execution_status=PHYSICAL_EXECUTED",
+        "raw artifacts + units + uncertainty",
+        "pass_fail against acceptance_criterion",
+        "defect_id if FAIL"
+      ],
+      "physical_execution_status": "PHYSICAL_PENDING",
+      "claim_boundary": "HARDWARE_PROTOTYPE_PENDING"
+    },
+    {
+      "test_id": "EVT-AI-001",
+      "name": "Local AI TTFT / tokens-s",
+      "priority": "P7",
+      "products": [
+        "student_14_5",
+        "ds_xl_coder",
+        "handheld_hybrid"
+      ],
+      "risk_refs": [
+        "RISK-008"
+      ],
+      "unknown_refs": [
+        "UNK-006"
+      ],
+      "instrument_ids": [
+        "INST-CURR-PROBE"
+      ],
+      "fixture_ids": [],
+      "golden_journey_refs": [
+        "GOLDEN-08",
+        "GOLDEN-03"
+      ],
+      "metric": "ttft",
+      "unit": "ms",
+      "acceptance_criterion": "TTFT + tok/s recorded on target HW; WP-008 thresholds apply when frozen",
+      "setup_revision": "EVT0-SETUP-R0",
+      "bringup_order_gate": "game_ai",
+      "hardware_rev_target": "0.6.0-cont-ix",
+      "configuration_ids": [
+        "STUDENT145-EVT0-R0",
+        "DSXL-EVT0-R0",
+        "HANDHELD-EVT0-R0"
+      ],
+      "mfg_test_plan_refs": [
+        "manufacturing/EVT_DVT_PVT_PLAN.md",
+        "manufacturing/PRODUCTION_TEST_FIXTURE_PLAN.md"
+      ],
+      "e4_to_e5_evidence_required": [
+        "EVT0EvidenceRecord with physical_execution_status=PHYSICAL_EXECUTED",
+        "raw artifacts + units + uncertainty",
+        "pass_fail against acceptance_criterion",
+        "defect_id if FAIL"
+      ],
+      "physical_execution_status": "PHYSICAL_PENDING",
+      "claim_boundary": "HARDWARE_PROTOTYPE_PENDING"
+    },
+    {
+      "test_id": "EVT-AI-002",
+      "name": "Local AI RAM/power under tutoring",
+      "priority": "P7",
+      "products": [
+        "student_14_5",
+        "ds_xl_coder"
+      ],
+      "risk_refs": [
+        "RISK-008",
+        "RISK-005"
+      ],
+      "unknown_refs": [
+        "UNK-006"
+      ],
+      "instrument_ids": [
+        "INST-CURR-PROBE",
+        "INST-TC-LOG"
+      ],
+      "fixture_ids": [
+        "FIX-THERM-MAP"
+      ],
+      "golden_journey_refs": [
+        "GOLDEN-08"
+      ],
+      "metric": "pin_ai",
+      "unit": "W",
+      "acceptance_criterion": "Power/RAM logged with model SHA",
+      "setup_revision": "EVT0-SETUP-R0",
+      "bringup_order_gate": "game_ai",
+      "hardware_rev_target": "0.6.0-cont-ix",
+      "configuration_ids": [
+        "STUDENT145-EVT0-R0",
+        "DSXL-EVT0-R0"
+      ],
+      "mfg_test_plan_refs": [
+        "manufacturing/EVT_DVT_PVT_PLAN.md",
+        "manufacturing/PRODUCTION_TEST_FIXTURE_PLAN.md"
+      ],
+      "e4_to_e5_evidence_required": [
+        "EVT0EvidenceRecord with physical_execution_status=PHYSICAL_EXECUTED",
+        "raw artifacts + units + uncertainty",
+        "pass_fail against acceptance_criterion",
+        "defect_id if FAIL"
+      ],
+      "physical_execution_status": "PHYSICAL_PENDING",
+      "claim_boundary": "HARDWARE_PROTOTYPE_PENDING"
+    },
+    {
+      "test_id": "EVT-AI-003",
+      "name": "AI thermal under sustained tutoring",
+      "priority": "P7",
+      "products": [
+        "student_14_5",
+        "ds_xl_coder"
+      ],
+      "risk_refs": [
+        "RISK-008",
+        "RISK-005"
+      ],
+      "unknown_refs": [],
+      "instrument_ids": [
+        "INST-TC-LOG"
+      ],
+      "fixture_ids": [
+        "FIX-THERM-MAP"
+      ],
+      "golden_journey_refs": [
+        "GOLDEN-08"
+      ],
+      "metric": "skin_temp_ai",
+      "unit": "C",
+      "acceptance_criterion": "No unexpected throttle/shutdown; DATA_ONLY",
+      "setup_revision": "EVT0-SETUP-R0",
+      "bringup_order_gate": "game_ai",
+      "hardware_rev_target": "0.6.0-cont-ix",
+      "configuration_ids": [
+        "STUDENT145-EVT0-R0",
+        "DSXL-EVT0-R0"
+      ],
+      "mfg_test_plan_refs": [
+        "manufacturing/EVT_DVT_PVT_PLAN.md",
+        "manufacturing/PRODUCTION_TEST_FIXTURE_PLAN.md"
+      ],
+      "e4_to_e5_evidence_required": [
+        "EVT0EvidenceRecord with physical_execution_status=PHYSICAL_EXECUTED",
+        "raw artifacts + units + uncertainty",
+        "pass_fail against acceptance_criterion",
+        "defect_id if FAIL"
+      ],
+      "physical_execution_status": "PHYSICAL_PENDING",
+      "claim_boundary": "HARDWARE_PROTOTYPE_PENDING"
+    },
+    {
+      "test_id": "EVT-GAME-001",
+      "name": "GPU/game profile FPS + frame time",
+      "priority": "P7",
+      "products": [
+        "handheld_hybrid",
+        "student_14_5"
+      ],
+      "risk_refs": [
+        "RISK-009"
+      ],
+      "unknown_refs": [
+        "UNK-009"
+      ],
+      "instrument_ids": [],
+      "fixture_ids": [],
+      "golden_journey_refs": [
+        "GOLDEN-01",
+        "GOLDEN-05"
+      ],
+      "metric": "fps_p95_frametime",
+      "unit": "fps_ms",
+      "acceptance_criterion": "FPS/p95 recorded; no fabricated competitor scores",
+      "setup_revision": "EVT0-SETUP-R0",
+      "bringup_order_gate": "game_ai",
+      "hardware_rev_target": "0.6.0-cont-ix",
+      "configuration_ids": [
+        "HANDHELD-EVT0-R0",
+        "STUDENT145-EVT0-R0"
+      ],
+      "mfg_test_plan_refs": [
+        "manufacturing/EVT_DVT_PVT_PLAN.md",
+        "manufacturing/PRODUCTION_TEST_FIXTURE_PLAN.md"
+      ],
+      "e4_to_e5_evidence_required": [
+        "EVT0EvidenceRecord with physical_execution_status=PHYSICAL_EXECUTED",
+        "raw artifacts + units + uncertainty",
+        "pass_fail against acceptance_criterion",
+        "defect_id if FAIL"
+      ],
+      "physical_execution_status": "PHYSICAL_PENDING",
+      "claim_boundary": "HARDWARE_PROTOTYPE_PENDING"
+    },
+    {
+      "test_id": "EVT-GAME-002",
+      "name": "Suspend/resume soak",
+      "priority": "P7",
+      "products": [
+        "handheld_hybrid",
+        "student_14_5"
+      ],
+      "risk_refs": [
+        "RISK-010"
+      ],
+      "unknown_refs": [
+        "UNK-004"
+      ],
+      "instrument_ids": [
+        "INST-LA"
+      ],
+      "fixture_ids": [],
+      "golden_journey_refs": [
+        "GOLDEN-01",
+        "GOLDEN-05"
+      ],
+      "metric": "resume_success_rate",
+      "unit": "pct",
+      "acceptance_criterion": "N cycles without save loss; resume latency logged",
+      "setup_revision": "EVT0-SETUP-R0",
+      "bringup_order_gate": "game_ai",
+      "hardware_rev_target": "0.6.0-cont-ix",
+      "configuration_ids": [
+        "HANDHELD-EVT0-R0",
+        "STUDENT145-EVT0-R0"
+      ],
+      "mfg_test_plan_refs": [
+        "manufacturing/EVT_DVT_PVT_PLAN.md",
+        "manufacturing/PRODUCTION_TEST_FIXTURE_PLAN.md"
+      ],
+      "e4_to_e5_evidence_required": [
+        "EVT0EvidenceRecord with physical_execution_status=PHYSICAL_EXECUTED",
+        "raw artifacts + units + uncertainty",
+        "pass_fail against acceptance_criterion",
+        "defect_id if FAIL"
+      ],
+      "physical_execution_status": "PHYSICAL_PENDING",
+      "claim_boundary": "HARDWARE_PROTOTYPE_PENDING"
+    },
+    {
+      "test_id": "EVT-GJ-001",
+      "name": "Golden Student Day physical companion",
+      "priority": "P7",
+      "products": [
+        "student_14_5"
+      ],
+      "risk_refs": [
+        "RISK-005",
+        "RISK-008",
+        "RISK-012"
+      ],
+      "unknown_refs": [
+        "UNK-007"
+      ],
+      "instrument_ids": [
+        "INST-TC-LOG",
+        "INST-CURR-PROBE"
+      ],
+      "fixture_ids": [
+        "FIX-THERM-MAP",
+        "FIX-BATT"
+      ],
+      "golden_journey_refs": [
+        "GOLDEN-01",
+        "GOLDEN-02",
+        "GOLDEN-08"
+      ],
+      "metric": "journey_pass_physical",
+      "unit": "bool",
+      "acceptance_criterion": "E5 requires physical artifacts for G01/G02/G08 paths exercised",
+      "setup_revision": "EVT0-SETUP-R0",
+      "bringup_order_gate": "golden_journeys",
+      "hardware_rev_target": "0.6.0-cont-ix",
+      "configuration_ids": [
+        "STUDENT145-EVT0-R0"
+      ],
+      "mfg_test_plan_refs": [
+        "manufacturing/EVT_DVT_PVT_PLAN.md",
+        "manufacturing/PRODUCTION_TEST_FIXTURE_PLAN.md"
+      ],
+      "e4_to_e5_evidence_required": [
+        "EVT0EvidenceRecord with physical_execution_status=PHYSICAL_EXECUTED",
+        "raw artifacts + units + uncertainty",
+        "pass_fail against acceptance_criterion",
+        "defect_id if FAIL"
+      ],
+      "physical_execution_status": "PHYSICAL_PENDING",
+      "claim_boundary": "HARDWARE_PROTOTYPE_PENDING"
+    },
+    {
+      "test_id": "EVT-GJ-004",
+      "name": "Office dock Golden physical companion",
+      "priority": "P7",
+      "products": [
+        "handheld_hybrid",
+        "dock"
+      ],
+      "risk_refs": [
+        "RISK-002",
+        "RISK-010"
+      ],
+      "unknown_refs": [
+        "UNK-002"
+      ],
+      "instrument_ids": [
+        "INST-USB-PD",
+        "INST-AUDIO",
+        "INST-NET-TRAFFIC"
+      ],
+      "fixture_ids": [
+        "FIX-DOCK-LOOP"
+      ],
+      "golden_journey_refs": [
+        "GOLDEN-04",
+        "GOLDEN-05"
+      ],
+      "metric": "journey_pass_physical",
+      "unit": "bool",
+      "acceptance_criterion": "Physical dock SI + workflow evidence for E5",
+      "setup_revision": "EVT0-SETUP-R0",
+      "bringup_order_gate": "golden_journeys",
+      "hardware_rev_target": "0.6.0-cont-ix",
+      "configuration_ids": [
+        "HANDHELD-EVT0-R0",
+        "DOCK-EVT0-R0"
+      ],
+      "mfg_test_plan_refs": [
+        "manufacturing/EVT_DVT_PVT_PLAN.md",
+        "manufacturing/PRODUCTION_TEST_FIXTURE_PLAN.md"
+      ],
+      "e4_to_e5_evidence_required": [
+        "EVT0EvidenceRecord with physical_execution_status=PHYSICAL_EXECUTED",
+        "raw artifacts + units + uncertainty",
+        "pass_fail against acceptance_criterion",
+        "defect_id if FAIL"
+      ],
+      "physical_execution_status": "PHYSICAL_PENDING",
+      "claim_boundary": "HARDWARE_PROTOTYPE_PENDING"
+    },
+    {
+      "test_id": "EVT-GJ-006",
+      "name": "DS-XL dual-screen Golden physical companion",
+      "priority": "P7",
+      "products": [
+        "ds_xl_coder"
+      ],
+      "risk_refs": [
+        "RISK-003",
+        "RISK-009"
+      ],
+      "unknown_refs": [
+        "UNK-008"
+      ],
+      "instrument_ids": [],
+      "fixture_ids": [
+        "FIX-DSXL-CYCLE"
+      ],
+      "golden_journey_refs": [
+        "GOLDEN-06",
+        "GOLDEN-03"
+      ],
+      "metric": "journey_pass_physical",
+      "unit": "bool",
+      "acceptance_criterion": "Both panels + layout persistence physical evidence",
+      "setup_revision": "EVT0-SETUP-R0",
+      "bringup_order_gate": "golden_journeys",
+      "hardware_rev_target": "0.6.0-cont-ix",
+      "configuration_ids": [
+        "DSXL-EVT0-R0"
+      ],
+      "mfg_test_plan_refs": [
+        "manufacturing/EVT_DVT_PVT_PLAN.md",
+        "manufacturing/PRODUCTION_TEST_FIXTURE_PLAN.md"
+      ],
+      "e4_to_e5_evidence_required": [
+        "EVT0EvidenceRecord with physical_execution_status=PHYSICAL_EXECUTED",
+        "raw artifacts + units + uncertainty",
+        "pass_fail against acceptance_criterion",
+        "defect_id if FAIL"
+      ],
+      "physical_execution_status": "PHYSICAL_PENDING",
+      "claim_boundary": "HARDWARE_PROTOTYPE_PENDING"
+    },
+    {
+      "test_id": "EVT-GJ-007",
+      "name": "Ring real-input Golden physical companion",
+      "priority": "P7",
+      "products": [
+        "edge_io_rings",
+        "student_14_5"
+      ],
+      "risk_refs": [
+        "RISK-007"
+      ],
+      "unknown_refs": [
+        "UNK-003"
+      ],
+      "instrument_ids": [
+        "INST-MOTION-REF"
+      ],
+      "fixture_ids": [
+        "FIX-RING-POSE",
+        "FIX-RING-CAL"
+      ],
+      "golden_journey_refs": [
+        "GOLDEN-07"
+      ],
+      "metric": "journey_pass_physical",
+      "unit": "bool",
+      "acceptance_criterion": "Pose/drift/confidence physical evidence for E5/E6 path",
+      "setup_revision": "EVT0-SETUP-R0",
+      "bringup_order_gate": "golden_journeys",
+      "hardware_rev_target": "0.6.0-cont-ix",
+      "configuration_ids": [
+        "RING-EVT0-R0",
+        "STUDENT145-EVT0-R0"
+      ],
+      "mfg_test_plan_refs": [
+        "manufacturing/EVT_DVT_PVT_PLAN.md",
+        "manufacturing/PRODUCTION_TEST_FIXTURE_PLAN.md"
+      ],
+      "e4_to_e5_evidence_required": [
+        "EVT0EvidenceRecord with physical_execution_status=PHYSICAL_EXECUTED",
+        "raw artifacts + units + uncertainty",
+        "pass_fail against acceptance_criterion",
+        "defect_id if FAIL"
+      ],
+      "physical_execution_status": "PHYSICAL_PENDING",
+      "claim_boundary": "HARDWARE_PROTOTYPE_PENDING"
+    }
+  ],
+  "risk_coverage": [
+    "RISK-001",
+    "RISK-002",
+    "RISK-003",
+    "RISK-004",
+    "RISK-005",
+    "RISK-006",
+    "RISK-007",
+    "RISK-008",
+    "RISK-009",
+    "RISK-010",
+    "RISK-011",
+    "RISK-012"
+  ],
+  "test_count": 37
+}

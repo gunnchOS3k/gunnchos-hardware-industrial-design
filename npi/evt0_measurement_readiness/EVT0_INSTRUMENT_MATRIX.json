@@ -1,0 +1,402 @@
+{
+  "schema": "gunnchos.evt0_instrument_matrix.v1",
+  "work_packet": "WP-010",
+  "generated_at_utc": "2026-08-10T20:56:48Z",
+  "classification_enum": [
+    "REQUIRED_OWN",
+    "GOOD_TO_OWN",
+    "RENT",
+    "BORROW",
+    "VENDOR_DFM",
+    "EXTERNAL_LAB",
+    "NOT_NEEDED_EVT0"
+  ],
+  "do_not_purchase_under_freeze": true,
+  "instruments": [
+    {
+      "id": "INST-BENCH-PSU",
+      "name": "Bench PSU (current-limited)",
+      "class": "REQUIRED_OWN",
+      "bandwidth_or_range": "0\u201360 V / 0\u201310 A, CC mode",
+      "products": [
+        "ALL"
+      ],
+      "risks": [
+        "RISK-001",
+        "RISK-005"
+      ],
+      "tests": [
+        "EVT-PWR-001",
+        "EVT-PWR-002",
+        "EVT-BOOT-001"
+      ],
+      "rationale": "Core bring-up; buy once for all products"
+    },
+    {
+      "id": "INST-DMM",
+      "name": "True-RMS DMM",
+      "class": "REQUIRED_OWN",
+      "bandwidth_or_range": "V/I/R, continuity",
+      "products": [
+        "ALL"
+      ],
+      "risks": [
+        "RISK-001"
+      ],
+      "tests": [
+        "EVT-PWR-001",
+        "EVT-PWR-003"
+      ],
+      "rationale": "Rail/resistance checks"
+    },
+    {
+      "id": "INST-SCOPE",
+      "name": "Oscilloscope \u2265200 MHz",
+      "class": "GOOD_TO_OWN",
+      "bandwidth_or_range": "\u2265200 MHz, 4 ch",
+      "products": [
+        "ALL"
+      ],
+      "risks": [
+        "RISK-001",
+        "RISK-002"
+      ],
+      "tests": [
+        "EVT-PWR-002",
+        "EVT-DOCK-003"
+      ],
+      "rationale": "Own mid-range; rent higher BW for SI"
+    },
+    {
+      "id": "INST-CURR-PROBE",
+      "name": "Current probe / shunt",
+      "class": "REQUIRED_OWN",
+      "bandwidth_or_range": "mA\u2013tens A",
+      "products": [
+        "ALL"
+      ],
+      "risks": [
+        "RISK-005",
+        "RISK-008"
+      ],
+      "tests": [
+        "EVT-PWR-004",
+        "EVT-BATT-001",
+        "EVT-AI-002"
+      ],
+      "rationale": "Power/thermal characterization"
+    },
+    {
+      "id": "INST-LA",
+      "name": "Logic analyzer",
+      "class": "GOOD_TO_OWN",
+      "bandwidth_or_range": "\u2265100 MHz digital",
+      "products": [
+        "ALL"
+      ],
+      "risks": [
+        "RISK-001",
+        "RISK-010"
+      ],
+      "tests": [
+        "EVT-BOOT-002"
+      ],
+      "rationale": "Debug buses / suspend"
+    },
+    {
+      "id": "INST-USB-PD",
+      "name": "USB/PD analyzer",
+      "class": "REQUIRED_OWN",
+      "bandwidth_or_range": "PD 3.x sink/source decode",
+      "products": [
+        "student_14_5",
+        "handheld_hybrid",
+        "dock",
+        "ds_xl_coder"
+      ],
+      "risks": [
+        "RISK-002",
+        "RISK-005"
+      ],
+      "tests": [
+        "EVT-DOCK-001",
+        "EVT-BATT-002"
+      ],
+      "rationale": "Dock/PD is P0 risk"
+    },
+    {
+      "id": "INST-USB4-TB",
+      "name": "USB4/TB link/SI tooling",
+      "class": "RENT",
+      "bandwidth_or_range": "USB4 Gen2/3 / TB4",
+      "products": [
+        "dock",
+        "handheld_hybrid"
+      ],
+      "risks": [
+        "RISK-002"
+      ],
+      "tests": [
+        "EVT-DOCK-004"
+      ],
+      "rationale": "Expensive; rent/vendor DFM for EVT0 SI questions"
+    },
+    {
+      "id": "INST-ELOAD",
+      "name": "Electronic load",
+      "class": "GOOD_TO_OWN",
+      "bandwidth_or_range": "CC/CV to \u2265100 W",
+      "products": [
+        "ALL"
+      ],
+      "risks": [
+        "RISK-005"
+      ],
+      "tests": [
+        "EVT-BATT-001",
+        "EVT-THERM-002"
+      ],
+      "rationale": "Battery/adapter load steps"
+    },
+    {
+      "id": "INST-BATT-CYC",
+      "name": "Battery cycler",
+      "class": "RENT",
+      "bandwidth_or_range": "Li-ion multi-cell",
+      "products": [
+        "student_14_5",
+        "handheld_hybrid",
+        "ds_xl_coder"
+      ],
+      "risks": [
+        "RISK-005"
+      ],
+      "tests": [
+        "EVT-BATT-003"
+      ],
+      "rationale": "Rent for EVT0 cycle characterization"
+    },
+    {
+      "id": "INST-TC-LOG",
+      "name": "Thermocouple logger",
+      "class": "REQUIRED_OWN",
+      "bandwidth_or_range": "\u22658 ch K-type",
+      "products": [
+        "ALL"
+      ],
+      "risks": [
+        "RISK-005",
+        "RISK-001"
+      ],
+      "tests": [
+        "EVT-THERM-001",
+        "EVT-THERM-002",
+        "EVT-AI-003"
+      ],
+      "rationale": "Skin/SOC thermal map"
+    },
+    {
+      "id": "INST-THERM-CAM",
+      "name": "Thermal camera",
+      "class": "GOOD_TO_OWN",
+      "bandwidth_or_range": "\u2265160\u00d7120 IR",
+      "products": [
+        "ALL"
+      ],
+      "risks": [
+        "RISK-005"
+      ],
+      "tests": [
+        "EVT-THERM-001"
+      ],
+      "rationale": "Hotspot survey; borrow acceptable"
+    },
+    {
+      "id": "INST-NET-TRAFFIC",
+      "name": "Network traffic tools",
+      "class": "REQUIRED_OWN",
+      "bandwidth_or_range": "iperf3/wireshark host",
+      "products": [
+        "ALL"
+      ],
+      "risks": [
+        "RISK-006",
+        "RISK-011"
+      ],
+      "tests": [
+        "EVT-RF-001",
+        "EVT-RF-002"
+      ],
+      "rationale": "Host laptop + OSS"
+    },
+    {
+      "id": "INST-WIFI-AP",
+      "name": "Controlled Wi-Fi test AP",
+      "class": "GOOD_TO_OWN",
+      "bandwidth_or_range": "Wi-Fi 6 AP, known config",
+      "products": [
+        "student_14_5",
+        "handheld_hybrid",
+        "ds_xl_coder"
+      ],
+      "risks": [
+        "RISK-006"
+      ],
+      "tests": [
+        "EVT-RF-001"
+      ],
+      "rationale": "Repeatable RF environment"
+    },
+    {
+      "id": "INST-AUDIO",
+      "name": "Audio loopback/analyzer",
+      "class": "GOOD_TO_OWN",
+      "bandwidth_or_range": "loopback + SPL meter",
+      "products": [
+        "ALL"
+      ],
+      "risks": [
+        "RISK-009"
+      ],
+      "tests": [
+        "EVT-GJ-004"
+      ],
+      "rationale": "Office dock / voice paths"
+    },
+    {
+      "id": "INST-VNA",
+      "name": "VNA",
+      "class": "EXTERNAL_LAB",
+      "bandwidth_or_range": "antenna/S-params",
+      "products": [
+        "student_14_5",
+        "handheld_hybrid",
+        "ring",
+        "dock"
+      ],
+      "risks": [
+        "RISK-006"
+      ],
+      "tests": [
+        "EVT-RF-003"
+      ],
+      "rationale": "Do not purchase for EVT0; lab/vendor"
+    },
+    {
+      "id": "INST-SPEC",
+      "name": "Spectrum analyzer",
+      "class": "RENT",
+      "bandwidth_or_range": "to 6 GHz+",
+      "products": [
+        "ALL"
+      ],
+      "risks": [
+        "RISK-006",
+        "RISK-011"
+      ],
+      "tests": [
+        "EVT-RF-003",
+        "EVT-RF-004"
+      ],
+      "rationale": "Rent for coexistence pre-scan"
+    },
+    {
+      "id": "INST-RF-GEN",
+      "name": "RF generator",
+      "class": "RENT",
+      "bandwidth_or_range": "cellular/Wi-Fi bands",
+      "products": [
+        "student_14_5",
+        "handheld_hybrid"
+      ],
+      "risks": [
+        "RISK-011"
+      ],
+      "tests": [
+        "EVT-RF-004"
+      ],
+      "rationale": "Pair with rent SA"
+    },
+    {
+      "id": "INST-SHIELD",
+      "name": "Shield box / conducted fixtures",
+      "class": "RENT",
+      "bandwidth_or_range": "conducted RF",
+      "products": [
+        "ALL"
+      ],
+      "risks": [
+        "RISK-006"
+      ],
+      "tests": [
+        "EVT-RF-003"
+      ],
+      "rationale": "Rent or EXTERNAL_LAB"
+    },
+    {
+      "id": "INST-CELL",
+      "name": "Cellular test path",
+      "class": "VENDOR_DFM",
+      "bandwidth_or_range": "RM520N-GL + SIM/lab",
+      "products": [
+        "student_14_5",
+        "handheld_hybrid"
+      ],
+      "risks": [
+        "RISK-011"
+      ],
+      "tests": [
+        "EVT-RF-004"
+      ],
+      "rationale": "Carrier/lab path; not buy network emulator yet"
+    },
+    {
+      "id": "INST-HS-CAM",
+      "name": "High-speed camera",
+      "class": "NOT_NEEDED_EVT0",
+      "bandwidth_or_range": "n/a",
+      "products": [
+        "ds_xl_coder"
+      ],
+      "risks": [
+        "RISK-003"
+      ],
+      "tests": [],
+      "rationale": "Hinge cycle can use slow video + encoder"
+    },
+    {
+      "id": "INST-MOTION-REF",
+      "name": "Motion-reference system (Rings)",
+      "class": "BORROW",
+      "bandwidth_or_range": "optical/IMU ref pose",
+      "products": [
+        "edge_io_rings"
+      ],
+      "risks": [
+        "RISK-007"
+      ],
+      "tests": [
+        "EVT-RING-003",
+        "EVT-RING-004",
+        "EVT-RING-005"
+      ],
+      "rationale": "Borrow university/lab MoCap if available; else fixture+encoder"
+    },
+    {
+      "id": "INST-DIM-ESD",
+      "name": "Dimensional / ESD tools",
+      "class": "REQUIRED_OWN",
+      "bandwidth_or_range": "calipers, ESD mat/strap, ionizer optional",
+      "products": [
+        "ALL"
+      ],
+      "risks": [
+        "RISK-003"
+      ],
+      "tests": [
+        "EVT-PWR-000"
+      ],
+      "rationale": "Incoming inspection + safety"
+    }
+  ]
+}
