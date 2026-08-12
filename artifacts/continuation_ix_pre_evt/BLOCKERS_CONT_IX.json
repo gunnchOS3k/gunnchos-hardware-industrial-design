@@ -1,10 +1,10 @@
 {
-  "updated_at_utc": "2026-08-12T19:25:00Z",
+  "updated_at_utc": "2026-08-12T20:10:00Z",
   "DIGITAL": [
-    "NPI_DEFECT-HANDHELD-IMAGE-SLOT-FIT-001 OPEN \u2014 production A/B image fit unproven (STREAM C)",
-    "Ring RING_ZEPHYR_WEST_BUILD_PASS not earned (edge-io soft-skip)",
-    "Dock/edge harness manifests were missing prior to STREAM C stubs \u2014 on-target firmware still open",
-    "ERC/DRC errors=0 but residual warnings remain \u2014 not digital exhaustion"
+    "NPI_DEFECT-HANDHELD-IMAGE-SLOT-FIT-001 OPEN — production A/B image fit unproven (STREAM C); digital capacity model execution failure pending measured production slot images",
+    "Ring RING_ZEPHYR_WEST_BUILD_PASS not earned (edge-io soft-skip); west build execution failure / soft-skip",
+    "Dock/edge harness manifests were missing prior to STREAM C stubs — on-target firmware still open; prior harness execution failure",
+    "ERC/DRC errors=0 but residual warnings remain — digital exhaustion execution failure (lib_footprint_mismatch / track_dangling / silk)"
   ],
   "PHYSICAL": [
     "PHYSICAL_EXECUTION_FREEZE \u2014 no fab, purchase, flash, assemble",
