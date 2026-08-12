@@ -1,0 +1,139 @@
+{
+  "schema": "gunnchos.hw002.independent_verifier_result.v1",
+  "item": "HW-002",
+  "verifier_role": "INDEPENDENT_VERIFIER_AGENT",
+  "did_not_implement": true,
+  "did_not_merge": true,
+  "pr": {
+    "number": 62,
+    "url": "https://github.com/gunnchOS3k/gunnchos-hardware-industrial-design/pull/62",
+    "draft": true,
+    "branch": "stream-c/hw002-defect-closure",
+    "title": "HW-002: image-fit OPEN + Zephyr west PASS + handheld EDA closure"
+  },
+  "claimed_tip": "6976da7d9dec514755344c42977a8425aa6c8ef6",
+  "claimed_tip_live_confirmed": true,
+  "verified_tip": "f61fa9bd0151072d52503ce2f0096a2d8a551165",
+  "base_main": "4ba876d42f59f03d4b5c5ef0ca776e1253da814d",
+  "base_main_confirmed": true,
+  "generated_at_utc": "2026-08-12T21:14:30Z",
+  "VP_HW002_INDEPENDENT_RESULT": "PASS",
+  "READY_FOR_EDMUND_MERGE": true,
+  "HW002_READY_FOR_EDMUND_MERGE": true,
+  "challenges": {
+    "ci_green_on_tip": {
+      "verdict": "PASS",
+      "claimed_tip_6976da7": {
+        "continuation-ix-kicad": "failure",
+        "failure_class": "INFRA_CHECKOUT_EACCES_IN_KICAD_CONTAINER",
+        "note": "actions/checkout@v4 EACCES writing /__w/_temp/_runner_file_commands inside non-root kicad/kicad:8.0 — not a PCB/DRC regression"
+      },
+      "remediation": {
+        "commit": "f61fa9bd0151072d52503ce2f0096a2d8a551165",
+        "change": ".github/workflows/continuation_ix_kicad.yml container options --user root",
+        "scope": "HW-002 CI unblock (device_designs path triggers this workflow)"
+      },
+      "verified_tip_f61fa9b": {
+        "ALL_REQUIRED_CI": "GREEN",
+        "workflow_runs": [
+          {"name": "CAD CI", "conclusion": "success"},
+          {"name": "Portfolio hardening CI", "conclusion": "success"},
+          {"name": "Gate 1 post-merge integrity", "conclusion": "success"},
+          {"name": "EVT-1 hardware package CI", "conclusion": "success"},
+          {"name": "continuation-ix-kicad", "conclusion": "success"}
+        ],
+        "check_runs": [
+          {"name": "validate", "conclusion": "success"},
+          {"name": "gate1-ring", "conclusion": "success"},
+          {"name": "kicad-repro", "conclusion": "success"}
+        ]
+      }
+    },
+    "ring_zephyr_west": {
+      "verdict": "PASS",
+      "soft_skip": false,
+      "manifest_only_pass": false,
+      "physical_boot_claimed": false,
+      "workspace": "firmware/edge_io_rings/zephyr_west/",
+      "script": "firmware/edge_io_rings/zephyr_west/scripts/require_west_build.sh",
+      "independent_reproduce": {
+        "ran": true,
+        "rc": 0,
+        "board": "nrf52840dk/nrf52840",
+        "app": "firmware/edge_io_rings/zephyr_west/zephyr_app",
+        "zephyr_base": "/Users/gunnchos/zephyr-workspace/zephyr",
+        "sdk": "/Users/gunnchos/zephyr-workspace/zephyr-sdk-0.16.8",
+        "west_bin": "/Users/gunnchos/Downloads/gunnchos-7gc-research-product-spine/repos/edge-io-measurement-node/gate1_digital_fabrication/ring_firmware/.toolchain/west-venv/bin/west",
+        "elf_bytes": 1078404,
+        "elf_file": "ELF 32-bit LSB executable, ARM, EABI5",
+        "sha256_match_committed_evidence": true,
+        "sha256sums": [
+          "7986129fb6072b3f9ac983784495487f105d80a5c1de2ae8351f882618833d82  hw002_ring_zephyr_nrf52840.bin",
+          "9f5bf523d5b6254793af4a47bd065c2824b9db149b79219dd9ff12c3dd9eb4a4  hw002_ring_zephyr_nrf52840.elf",
+          "20132154eadcc05bc0624e277ce0fd1bc2697e204b3edc687a5e53253ab67da8  hw002_ring_zephyr_nrf52840.hex"
+        ],
+        "evidence_tmpdir": "/tmp/hw002_vp_zephyr_west"
+      },
+      "tokens_allowed": ["RING_ZEPHYR_WEST_BUILD_PASS"],
+      "tokens_not_claimed": ["RING_PHYSICAL_BOOT", "HW_FIRMWARE_DIGITAL_PACKAGE_COMPLETE"]
+    },
+    "npi_image_slot": {
+      "verdict": "PASS_HONEST_OPEN",
+      "defect": "NPI_DEFECT-HANDHELD-IMAGE-SLOT-FIT-001",
+      "status": "OPEN",
+      "production_image_fit_verdict": "FAIL",
+      "outcome_a_retained": true,
+      "larger_emmc_sku_invented": false,
+      "device_os_cross_check": {
+        "accepted_main_tip": "3858e760295ad35828ff141919681f2bb8685cf0",
+        "local_head_tip": "91e1ed0c22808787c9b28d4d9aac34baffe7f206",
+        "IMAGE_STATUS": "not_started — installable image not proven",
+        "production_shipping_image_definition": "NOT_RELEASED",
+        "observed_outputs": [
+          "DEV/QEMU bootable_reference (vmlinuz-virt + initramfs)",
+          "stage2 system.img.tar / recovery.img.tar 10 KiB stubs",
+          "slot_a/slot_b overlay dirs only — not production slot images"
+        ],
+        "production_ab_recovery_images_present": false
+      },
+      "honesty": "OPEN remains correct; do not close NPI on proxy/stub sizes; Outcome A 32GB eMMC + microSD retained."
+    },
+    "eda_dangling_silk": {
+      "verdict": "PASS",
+      "defect": "NPI_DEFECT-HANDHELD-EDA-DANGLING-SILK-001",
+      "status": "CLOSED",
+      "sku": "handheld_hybrid",
+      "committed_report": {
+        "path": "artifacts/hw002/eda/handheld_hybrid_drc_after.json",
+        "track_dangling": 0,
+        "silk_over_copper": 0,
+        "lib_footprint_mismatch": 39,
+        "drc_errors": 0
+      },
+      "independent_kicad_cli_drc": {
+        "ran": true,
+        "kicad_cli_version": "10.0.5",
+        "track_dangling": 0,
+        "silk_over_copper": 0,
+        "lib_footprint_mismatch": 39,
+        "total_violations": 39
+      },
+      "physical_fab_claimed": false
+    },
+    "hw_firmware_digital_package_complete": {
+      "verdict": "PASS",
+      "HW_FIRMWARE_DIGITAL_PACKAGE_COMPLETE": false,
+      "sources_checked": [
+        "artifacts/charter_exhaustion/HW_FIRMWARE_DIGITAL_PACKAGE_COMPLETE.json",
+        "artifacts/hw002/HW002_PACKET_SUMMARY.json",
+        "artifacts/continuation_ix_pre_evt/BLOCKERS_CONT_IX.json"
+      ]
+    }
+  },
+  "local_validators": {
+    "tests/test_hw002_packet.py": "4 passed",
+    "scripts/validate_continuation_ix.py": "PASS"
+  },
+  "claim_boundary": "Digital-only independent verification. No physical boot, fab, assembly, RF, or production OS image PASS. DIGITAL package remains incomplete while image-slot NPI is OPEN and residual footprint warnings / NDA maps / physical firmware remain.",
+  "verdict_summary": "HW-002 DRAFT #62 independently PASS after CI container remediaiton. Zephyr west real build reproduced (SHA match). NPI image-slot honestly OPEN under Outcome A. Handheld DRC track_dangling=0 silk_over_copper=0. HW_FIRMWARE_DIGITAL_PACKAGE_COMPLETE=false."
+}
