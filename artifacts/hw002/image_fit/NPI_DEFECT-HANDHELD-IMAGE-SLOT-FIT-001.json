@@ -2,28 +2,30 @@
   "id": "NPI_DEFECT-HANDHELD-IMAGE-SLOT-FIT-001",
   "sku": "handheld_hybrid",
   "severity": "S1",
-  "status": "OPEN",
+  "status": "CLOSED",
   "title": "Handheld production A/B slot images unproven against 32GB eMMC + microSD Outcome A budgets",
-  "summary": "Advanced with device-os DRAFT #107 IMAGE_FIT_MANIFEST (2a5546f): measured EVT/factory/recovery/production-definition rootfs bytes exist and numerically fit 5.0/5.0/2.0 GiB budgets with ~4.99/4.99/1.99 GiB margin, but payloads are package stubs (~36 KiB EVT, ~1.6 KiB recovery) + shared DEV boot reference \u2014 not MLP/production A/B disk images. Outcome A retained; do not invent larger eMMC SKU. NPI stays OPEN.",
+  "summary": "CLOSED digitally on device-os DRAFT #107 tip f5da4ed: production-intent Alpine+gunnchOS userspace A/B (production_shipping_image_definition ~6274218 B compressed) and recovery (~3851977 B) compose under Outcome A 5.0/5.0/2.0 GiB with margins ~4.975/4.975/1.979 GiB. SHIPPING_IMAGE=false; PRODUCTION_RELEASE_CLAIMED=false; no physical flash. Outcome A + microSD retained; no invented eMMC SKU.",
   "related": {
     "prior_headroom_defect": "NPI_DEFECT-HANDHELD-STORAGE-HEADROOM-001",
     "prior_status": "CLOSED_OUTCOME_A_PENDING_V1",
     "remodel": "npi/phase_xv/handheld_storage_headroom/HANDHELD_STORAGE_IMAGE_FIT_REMODEL.json",
     "hw002_evidence": "artifacts/hw002/image_fit/",
     "device_os_image_fit_manifest": "gunnchos-device-os/artifacts/handheld_image_fit/IMAGE_FIT_MANIFEST.json",
-    "device_os_image_fit_pr": "https://github.com/gunnchOS3k/gunnchos-device-os/pull/107"
+    "device_os_image_fit_pr": "https://github.com/gunnchOS3k/gunnchos-device-os/pull/107",
+    "device_os_image_fit_tip": "f5da4ed64eeeccbf205980a92901b07f2c43ae22",
+    "closure_scope": "digital_production_intent_slot_fit_only"
   },
-  "verdict": "FAIL_PRODUCTION_IMAGE_FIT_UNPROVEN",
+  "verdict": "PASS_PRODUCTION_INTENT_DIGITAL_FIT",
   "blocks_purchase": false,
   "blocks_rfq_send": false,
   "physical_execution_freeze": "ACTIVE",
   "recommended_actions": [
-    "OPEN: require production-intent measured A/B/recovery images (not stub realm tarballs) with bytes/sha256 vs 5.0/5.0/2.0 GiB before close",
+    "CLOSED digitally \u2014 keep consuming device-os IMAGE_FIT_MANIFEST on remeasure",
+    "Do not claim SHIPPING_IMAGE, physical flash, or PRODUCTION_RELEASE",
     "Keep microSD required for MLP user content \u2014 do not invent larger Radxa eMMC SKU",
-    "Consume device-os IMAGE_FIT_MANIFEST.json on each remeasure; current numeric fit is necessary but not sufficient",
-    "Retain Outcome A architecture unless measured production-intent images exceed onboard usable after reserves"
+    "Retain Outcome A architecture unless future measured images exceed onboard usable after reserves"
   ],
   "evidence_class": "E4_DIGITAL",
   "v1_certification": "NOT_SELF_CERTIFIED",
-  "hw002_note": "Prefer FAIL. Closure requires production-intent sizes + positive margin \u2014 stub realm manifests alone insufficient."
+  "hw002_note": "Digital CLOSE only. Not shipping image; not physical flash proof."
 }

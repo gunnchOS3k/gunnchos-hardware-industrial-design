@@ -1,16 +1,16 @@
 {
-  "schema": "gunnchos.hw002.handheld_storage_image_fit_remodel.v3",
-  "generated_at_utc": "2026-08-12T22:12:52Z",
+  "schema": "gunnchos.hw002.handheld_storage_image_fit_remodel.v4",
+  "generated_at_utc": "2026-08-12T22:22:29Z",
   "item": "HW-002",
   "hardware_baseline_tip": "bd117918945f377bac389df6f8178995f5899504",
   "sku": "handheld_hybrid",
   "device_os": {
     "repo": "gunnchos-device-os",
     "accepted_main_tip": "3858e760295ad35828ff141919681f2bb8685cf0",
-    "image_fit_draft_tip": "2a5546f708741473adda1310c1d5624bec31a129",
+    "image_fit_draft_tip": "f5da4ed64eeeccbf205980a92901b07f2c43ae22",
     "image_fit_manifest": "gunnchos-device-os/artifacts/handheld_image_fit/IMAGE_FIT_MANIFEST.json",
     "image_fit_pr": "https://github.com/gunnchOS3k/gunnchos-device-os/pull/107",
-    "note": "Consumes measured WP-013 realm rootfs manifests from device-os DRAFT #107 (baa1289) on top of accepted main #104 (3858e76). Stub payloads \u2014 not MLP/production disk images."
+    "note": "Consumes production-intent digital IMAGE_FIT_MANIFEST from device-os DRAFT #107 (f5da4ed) on accepted main #104 (3858e76). Alpine+userspace payloads; unsigned; not shipping."
   },
   "hardware_truth": {
     "som_mpn": "RM121-D8E32",
@@ -32,7 +32,7 @@
     "title": "32GB_SYSTEM_ONLY_PLUS_SUPPORTED_MICROSD",
     "onboard_role": "A/B slots + recovery + boot/firmware + apps/AI nano core + logs/update temp + reserves",
     "microsd_role": "games / AI Fast-Pro / WAIKE / user media / caches",
-    "hw002_architecture_honesty": "Outcome A retained. No invented 64GB eMMC SKU. No silent NVMe remux. Measured realm stub sizes fit budgets numerically; NPI stays OPEN until production-intent MLP images exist."
+    "hw002_architecture_honesty": "Outcome A retained. No invented 64GB eMMC SKU. No silent NVMe remux. Production-intent digital A/B/recovery fit budgets with positive margin \u2014 NPI CLOSED digitally."
   },
   "slot_budgets_gib": {
     "slot_a": 5.0,
@@ -76,43 +76,56 @@
     "note": "Policy-sized against representative 64GB microSD usable\u224893%. Users may use larger cards; endurance PHYSICAL_PENDING."
   },
   "measured_device_os_outputs": {
-    "source_manifest": "artifacts/handheld_image_fit/IMAGE_FIT_MANIFEST.json@2a5546f",
+    "source_manifest": "artifacts/handheld_image_fit/IMAGE_FIT_MANIFEST.json@f5da4ed",
     "PRODUCTION_RELEASE_CLAIMED": false,
+    "SHIPPING_IMAGE": false,
     "evt_engineering_image_rootfs": {
-      "compressed_bytes": 36481,
-      "compressed_gib": 3.3976e-05,
-      "file_count": 41,
+      "compressed_bytes": 6312546,
+      "compressed_gib": 0.005879017,
+      "file_count": 554,
       "path": "os_build/realm_images/evt_engineering_image/artifacts/rootfs.tar.gz",
-      "sha256": "6cadf59506c85cf67c95e31d3221b3cba5fd6c74f317ae4c0872f66b57beaf96",
-      "uncompressed_file_bytes": 149320,
-      "uncompressed_file_gib": 0.000139065
+      "sha256": "800fe3b7d0a41edbf02e46eacd1be4a0f7006023a6863bf5f8ad40d4c6b99718",
+      "uncompressed_file_bytes": 12564322,
+      "uncompressed_file_gib": 0.011701437,
+      "payload_class": "production_intent_digital",
+      "production_intent_digital": true,
+      "stub_like": false
     },
     "factory_provisioning_image_rootfs": {
-      "compressed_bytes": 1952,
-      "compressed_gib": 1.818e-06,
-      "file_count": 15,
+      "compressed_bytes": 4325755,
+      "compressed_gib": 0.004028673,
+      "file_count": 488,
       "path": "os_build/realm_images/factory_provisioning_image/artifacts/rootfs.tar.gz",
-      "sha256": "97402964dbad48784a8cef4426c7669bf9f5df876bf9cb5d5a270e007409e0ad",
-      "uncompressed_file_bytes": 5979,
-      "uncompressed_file_gib": 5.568e-06
+      "sha256": "c54d02bde4a4ef34af847fb909bcc41ec7f3316438872c30713a9928958d9909",
+      "uncompressed_file_bytes": 10175410,
+      "uncompressed_file_gib": 0.009476589,
+      "payload_class": "production_intent_digital",
+      "production_intent_digital": true,
+      "stub_like": false
     },
     "recovery_image_rootfs": {
-      "compressed_bytes": 1636,
-      "compressed_gib": 1.524e-06,
-      "file_count": 10,
+      "compressed_bytes": 3851977,
+      "compressed_gib": 0.003587433,
+      "file_count": 98,
       "path": "os_build/realm_images/recovery_image/artifacts/rootfs.tar.gz",
-      "sha256": "8aaeb1b6ec7c74590f6e7abd8c2dddd22b9a34199504a44ed47350c8c1a950aa",
-      "uncompressed_file_bytes": 4043,
-      "uncompressed_file_gib": 3.765e-06
+      "sha256": "871b573e9f2a62a52b76f3eaf878995af65ed4bcfb731ca62697277930e31de2",
+      "uncompressed_file_bytes": 8174162,
+      "uncompressed_file_gib": 0.007612782,
+      "payload_class": "production_intent_digital",
+      "production_intent_digital": true,
+      "stub_like": false
     },
     "production_shipping_image_definition_rootfs": {
-      "compressed_bytes": 2278,
-      "compressed_gib": 2.122e-06,
-      "file_count": 21,
+      "compressed_bytes": 6274218,
+      "compressed_gib": 0.005843321,
+      "file_count": 533,
       "path": "os_build/realm_images/production_shipping_image_definition/artifacts/rootfs.tar.gz",
-      "sha256": "dcb7ef351eac5376a5870ee63de0e96910475b9902f7e3e0957b474def41118d",
-      "uncompressed_file_bytes": 7512,
-      "uncompressed_file_gib": 6.996e-06
+      "sha256": "633dde1fa148908b001d0b714a279e9217e5db2a414fc4d1a0cf1160e573b2f4",
+      "uncompressed_file_bytes": 12400168,
+      "uncompressed_file_gib": 0.011548556,
+      "payload_class": "production_intent_digital",
+      "production_intent_digital": true,
+      "stub_like": false
     },
     "shared_bootable_reference": {
       "kernel": {
@@ -134,85 +147,93 @@
     },
     "composed_slot_proxies": {
       "slot_a": {
-        "composed_bytes": 14289504,
-        "composed_gib": 0.013308138,
-        "margin_bytes": 5354419616,
-        "margin_gib": 4.986691862,
+        "composed_bytes": 26540352,
+        "composed_gib": 0.024717629,
+        "margin_bytes": 5342168768,
+        "margin_gib": 4.975282371,
         "fits_budget": true,
         "budget_gib": 5.0,
-        "realm_id": "EVT_ENGINEERING_IMAGE"
+        "realm_id": "PRODUCTION_SHIPPING_IMAGE_DEFINITION",
+        "production_intent_digital": true,
+        "payload_class": "production_intent_digital"
       },
       "slot_b": {
-        "composed_bytes": 14289504,
-        "composed_gib": 0.013308138,
-        "margin_bytes": 5354419616,
-        "margin_gib": 4.986691862,
+        "composed_bytes": 26540352,
+        "composed_gib": 0.024717629,
+        "margin_bytes": 5342168768,
+        "margin_gib": 4.975282371,
         "fits_budget": true,
         "budget_gib": 5.0,
-        "realm_id": "EVT_ENGINEERING_IMAGE"
+        "realm_id": "PRODUCTION_SHIPPING_IMAGE_DEFINITION",
+        "production_intent_digital": true,
+        "payload_class": "production_intent_digital"
       },
       "recovery": {
-        "composed_bytes": 14144227,
-        "composed_gib": 0.013172838,
-        "margin_bytes": 2133339421,
-        "margin_gib": 1.986827162,
+        "composed_bytes": 22314346,
+        "composed_gib": 0.020781854,
+        "margin_bytes": 2125169302,
+        "margin_gib": 1.979218146,
         "fits_budget": true,
         "budget_gib": 2.0,
-        "realm_id": "RECOVERY_IMAGE"
+        "realm_id": "RECOVERY_IMAGE",
+        "production_intent_digital": true,
+        "payload_class": "production_intent_digital"
       }
     },
     "legacy_bootable_reference_proxy_gib": 0.024336,
-    "stage2_stubs_note": "stage2 10 KiB system/recovery tars remain non-production; superseded as primary evidence by realm IMAGE_FIT_MANIFEST"
+    "stage2_stubs_note": "stage2 10 KiB system/recovery tars remain non-production; superseded as primary evidence by production-intent realm IMAGE_FIT_MANIFEST"
   },
   "fit_assessment": {
-    "production_ab_slot_images_present": false,
+    "production_ab_slot_images_present": true,
     "production_mlp_rootfs_present": false,
+    "production_intent_digital_present": true,
     "production_shipping_binary_present": false,
     "realm_rootfs_artifacts_present": true,
     "current_digital_realm_numeric_fit": true,
-    "stub_like_rootfs_payloads": true,
-    "dev_harness_proxy_size_gib": 0.013308138,
+    "stub_like_rootfs_payloads": false,
+    "dev_harness_proxy_size_gib": 0.024717629,
     "dev_harness_fits_single_5gib_slot": true,
     "dev_harness_is_mlp_or_production_image": false,
     "stage2_stubs_are_production_images": false,
     "legacy_all_onboard_31_5_vs_usable_29_76": "DOES_NOT_FIT",
     "outcome_a_budget_math": "DIGITALLY_SAFE_WITH_MICROSD",
-    "production_image_fit_verdict": "FAIL",
-    "production_image_fit_reason": "device-os DRAFT #107 publishes measured EVT/factory/recovery/production-definition rootfs sizes with positive margin vs 5.0/5.0/2.0 GiB, but payloads remain package-stub tarballs (EVT\u224836 KiB compressed; recovery\u22481.6 KiB) plus shared DEV/QEMU boot reference (~0.013 GiB composed). Not MLP/production A/B disk images. Prefer FAIL \u2014 keep NPI OPEN.",
+    "production_image_fit_verdict": "PASS",
+    "production_image_fit_reason": "Production-intent digital A/B (production_shipping_image_definition) and recovery rootfs tarballs embed Alpine minirootfs + gunnchOS userspace, exceed stub ceiling, and compose with shared boot reference under Outcome A 5.0/5.0/2.0 GiB budgets with positive margin. Propose NPI NPI_DEFECT-HANDHELD-IMAGE-SLOT-FIT-001 CLOSE for digital slot-fit only. SHIPPING_IMAGE=false; PRODUCTION_RELEASE_CLAIMED=false; no physical flash.",
     "sizes_summary_gib": {
-      "evt_rootfs_compressed": 3.3976e-05,
-      "evt_rootfs_uncompressed": 0.000139065,
-      "factory_rootfs_compressed": 1.818e-06,
-      "production_def_rootfs_compressed": 2.122e-06,
-      "recovery_composed": 0.013172838,
-      "recovery_margin": 1.986827162,
-      "recovery_rootfs_compressed": 1.524e-06,
+      "evt_rootfs_compressed": 0.005879017,
+      "evt_rootfs_uncompressed": 0.011701437,
+      "factory_rootfs_compressed": 0.004028673,
+      "production_def_rootfs_compressed": 0.005843321,
+      "production_def_rootfs_uncompressed": 0.011548556,
+      "recovery_composed": 0.020781854,
+      "recovery_margin": 1.979218146,
+      "recovery_rootfs_compressed": 0.003587433,
       "shared_boot_combined": 0.013169073,
-      "slot_a_composed": 0.013308138,
-      "slot_a_margin": 4.986691862,
-      "slot_b_composed": 0.013308138,
-      "slot_b_margin": 4.986691862
+      "slot_a_composed": 0.024717629,
+      "slot_a_margin": 4.975282371,
+      "slot_b_composed": 0.024717629,
+      "slot_b_margin": 4.975282371
     }
   },
   "revised_plan_while_open": [
-    "device-os: grow realm builder toward production-intent userspace payload; remeasure IMAGE_FIT_MANIFEST.json",
-    "Refuse CLOSE without production-intent measured images + margin_gib > 0 vs 5.0/5.0/2.0 GiB",
+    "NPI CLOSED digitally \u2014 remeasure if realm builder payload grows materially",
+    "Do not claim SHIPPING_IMAGE / physical flash / PRODUCTION_RELEASE",
     "Keep microSD required accessory policy for MLP content \u2014 do not invent RM121-D8E64",
-    "Do not treat package-stub realm tarballs or stage2 10KiB stubs as factory MLP proof",
-    "Hardware keeps Outcome A capacity model; reopen architecture only if measured production-intent images exceed onboard usable after reserves"
+    "HW_FIRMWARE_DIGITAL_PACKAGE_COMPLETE remains false until other digital opens clear"
   ],
   "architecture_change_proposal": {
     "invent_larger_emmc_sku": false,
     "microsd_required_for_mlp_user_content": true,
+    "architecture_change_required": false,
     "next_steps": [
-      "Grow realm builder toward production-intent rootfs (real userspace payload, not service-unit stubs alone) and remeasure",
-      "Publish refreshed IMAGE_FIT_MANIFEST.json with margin_gib > 0 for slot_a/slot_b/recovery",
-      "Hardware remodel may CLOSE only when production-intent measured images exist \u2014 contracts/stubs insufficient",
-      "If measured production-intent images exceed onboard usable after reserves, reopen architecture (still without inventing eMMC SKUs)"
+      "Hardware may CLOSE NPI_DEFECT-HANDHELD-IMAGE-SLOT-FIT-001 on digital evidence when consuming this IMAGE_FIT_MANIFEST (margin_gib > 0, production_intent)",
+      "Do not claim SHIPPING_IMAGE, physical flash, or PRODUCTION_RELEASE",
+      "Retain Outcome A (32GB system + microSD for MLP user content); no invented eMMC SKU",
+      "Optional: refresh EVT/factory comparison sizes on subsequent remeasures"
     ],
     "retain_outcome_a": true
   },
   "npi_defect": "NPI_DEFECT-HANDHELD-IMAGE-SLOT-FIT-001",
-  "npi_status": "OPEN",
-  "claim_boundary": "Digital remodel + measured cross-repo realm sizes only. No physical flash/endurance PASS. No invented MOQ/price/stock. PRODUCTION_RELEASE_CLAIMED=false."
+  "npi_status": "CLOSED",
+  "claim_boundary": "Digital remodel + measured cross-repo production-intent realm sizes only. No physical flash/endurance PASS. No invented MOQ/price/stock. SHIPPING_IMAGE=false; PRODUCTION_RELEASE_CLAIMED=false."
 }
