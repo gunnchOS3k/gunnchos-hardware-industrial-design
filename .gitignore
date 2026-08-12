@@ -8,3 +8,10 @@ physical_evidence/GATE6_DRY_RUN_REPORT.json
 # Gate 1 runtime evidence outputs
 gate1/evidence/out/**
 !gate1/evidence/out/**/.gitkeep
+
+# Zephyr west local build trees (evidence hashes live under artifacts/hw002/)
+firmware/edge_io_rings/zephyr_west/build/
+firmware/edge_io_rings/zephyr_west/.toolchain/
+artifacts/hw002/zephyr_west/out/*.elf
+artifacts/hw002/zephyr_west/out/*.bin
+artifacts/hw002/zephyr_west/out/*.hex

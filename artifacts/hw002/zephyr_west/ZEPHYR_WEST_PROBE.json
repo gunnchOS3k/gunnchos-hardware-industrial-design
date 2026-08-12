@@ -1,0 +1,18 @@
+{
+  "generated_at_utc": "2026-08-12T21:03:52Z",
+  "west_build_pass": true,
+  "soft_skip": false,
+  "board": "nrf52840dk/nrf52840",
+  "app": "firmware/edge_io_rings/zephyr_west/zephyr_app",
+  "zephyr_base": "/Users/gunnchos/zephyr-workspace/zephyr",
+  "sdk": "/Users/gunnchos/zephyr-workspace/zephyr-sdk-0.16.8",
+  "elf_bytes": 1078404,
+  "tokens": [
+    "RING_ZEPHYR_WEST_BUILD_PASS"
+  ],
+  "not_claimed": [
+    "RING_PHYSICAL_BOOT",
+    "HW_FIRMWARE_DIGITAL_PACKAGE_COMPLETE"
+  ],
+  "blockers": []
+}

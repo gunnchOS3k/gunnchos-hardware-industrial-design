@@ -1,0 +1,17 @@
+{
+  "defect_id": "NPI_DEFECT-HANDHELD-EDA-DANGLING-SILK-001",
+  "sku": "handheld_hybrid",
+  "status": "CLOSED",
+  "closure": "Removed Cont IX orphan net-0 stub tracks (track_dangling) and moved REV silk clear of H1 NPTH (silk_over_copper).",
+  "drc_after": {
+    "lib_footprint_mismatch": 39
+  },
+  "drc_errors": 0,
+  "track_dangling": 0,
+  "silk_over_copper": 0,
+  "remaining_warning_classes": {
+    "lib_footprint_mismatch": 39
+  },
+  "physical_pass": false,
+  "claim_boundary": "Digital DRC warning closure only. No physical fab/assembly claim. lib_footprint_mismatch warnings may remain."
+}
