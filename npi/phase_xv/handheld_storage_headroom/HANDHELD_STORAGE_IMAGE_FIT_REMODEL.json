@@ -1,0 +1,71 @@
+{
+  "schema": "gunnchos.hw001.handheld_storage_image_fit_remodel.v1",
+  "generated_at_utc": "2026-08-12T19:25:00Z",
+  "hardware_tip": "a05afa64fdca32f62f9d10eb29d80e279fce7323",
+  "sku": "handheld_hybrid",
+  "hardware_truth": {
+    "som_mpn": "RM121-D8E32",
+    "on_module_emmc_marketed_gib": 32.0,
+    "on_module_emmc_usable_gib": 29.76,
+    "microsd": {
+      "supported": true,
+      "interface": "SDMMC",
+      "required_for_mlp_user_content": true
+    },
+    "larger_emmc_sku_invented": false,
+    "nvme_carrier_in_freeze": false
+  },
+  "outcome_a_capacity_model_ref": "npi/phase_xv/handheld_storage_headroom/HANDHELD_STORAGE_CAPACITY_MODEL.json",
+  "slot_budgets_gib": {
+    "slot_a": 5.0,
+    "slot_b": 5.0,
+    "recovery": 2.0
+  },
+  "measured_images": {
+    "gunnchos_ref_initramfs_cpio_gz": {
+      "bytes": 4514072,
+      "path": "gunnchos-device-os/os_build/bootable_reference/artifacts/gunnchos-ref-initramfs.cpio.gz",
+      "gib": 0.004204
+    },
+    "vmlinuz_virt": {
+      "bytes": 9626112,
+      "path": "gunnchos-device-os/os_build/bootable_reference/artifacts/vmlinuz-virt",
+      "gib": 0.008965
+    },
+    "bootable_reference_rootfs_tree": {
+      "bytes": 11990749,
+      "path": "gunnchos-device-os/os_build/bootable_reference/work/rootfs",
+      "gib": 0.011167
+    },
+    "alpine_minirootfs_tar_gz": {
+      "bytes": 3850365,
+      "path": "gunnchos-device-os/os_build/bootable_reference/cache/alpine-minirootfs-aarch64.tar.gz",
+      "gib": 0.003586
+    },
+    "alpine_virt_iso": {
+      "bytes": 79204352,
+      "path": "gunnchos-device-os/os_build/device_lab_interactive_guest/cache/alpine-virt-3.21.3-aarch64.iso",
+      "note": "QEMU guest ISO \u2014 not handheld factory slot image",
+      "gib": 0.073765
+    },
+    "debian_genericcloud_qcow2": {
+      "bytes": 341901312,
+      "path": "gunnchos-device-os/os_build/device_lab_interactive_guest/cache/debian-12-genericcloud-arm64.qcow2",
+      "note": "Lab guest disk \u2014 not handheld factory slot image",
+      "gib": 0.31842
+    }
+  },
+  "fit_assessment": {
+    "production_ab_slot_images_present": false,
+    "production_mlp_rootfs_present": false,
+    "dev_harness_proxy_size_gib": 0.024336,
+    "dev_harness_fits_single_5gib_slot": true,
+    "dev_harness_is_mlp_image": false,
+    "legacy_all_onboard_31_5_vs_usable_29_76": "DOES_NOT_FIT",
+    "outcome_a_budget_math": "DIGITALLY_SAFE_WITH_MICROSD",
+    "production_image_fit_verdict": "FAIL",
+    "production_image_fit_reason": "No measured production A/B slot images exist that implement Outcome A slot_a/slot_b 5.0 GiB budgets or MLP system content. DEV bootable_reference (~0.024 GiB kernel+initramfs+rootfs tree) fits by size but is explicitly QEMU/DEV-realm only and must not be treated as handheld factory image proof."
+  },
+  "npi_defect": "NPI_DEFECT-HANDHELD-IMAGE-SLOT-FIT-001",
+  "claim_boundary": "Digital remodel only. No physical flash/endurance claim. Do not invent MOQ/price/stock."
+}

@@ -1,0 +1,313 @@
+{
+  "schema": "gunnchos.driver_classification.v1",
+  "updated_at_utc": "2026-08-12T19:25:00Z",
+  "source_md": "docs/full_product_family/DRIVER_CLASSIFICATION.md",
+  "classes": [
+    "UPSTREAM",
+    "OPEN_VENDOR",
+    "BINARY_BLOB",
+    "NDA_ONLY",
+    "UNAVAILABLE"
+  ],
+  "products": {
+    "student_14_5": {
+      "compute_mpn": "COM-HPC-mMTL-155H-32G",
+      "subsystems": [
+        {
+          "id": "cpu_igpu_npu",
+          "mpn": "Ultra 7 155H on COM-HPC-mMTL",
+          "risk": [
+            "BINARY_BLOB",
+            "UPSTREAM"
+          ]
+        },
+        {
+          "id": "me_csme",
+          "mpn": "on-module",
+          "risk": [
+            "BINARY_BLOB"
+          ]
+        },
+        {
+          "id": "com_board_mgmt",
+          "mpn": "ADLINK SEMA / AMI UEFI",
+          "risk": [
+            "BINARY_BLOB",
+            "OPEN_VENDOR"
+          ]
+        },
+        {
+          "id": "wifi_bt",
+          "mpn": "BE200",
+          "risk": [
+            "BINARY_BLOB",
+            "UPSTREAM"
+          ]
+        },
+        {
+          "id": "wwan",
+          "mpn": "RM520N-GL",
+          "risk": [
+            "OPEN_VENDOR",
+            "BINARY_BLOB"
+          ],
+          "not": [
+            "6G",
+            "NTN"
+          ]
+        },
+        {
+          "id": "esim_euicc",
+          "mpn": "GSMA SGP.22 path",
+          "risk": [
+            "OPEN_VENDOR",
+            "NDA_ONLY"
+          ]
+        },
+        {
+          "id": "tpm",
+          "mpn": "SLB9672XQ2.0",
+          "risk": [
+            "UPSTREAM"
+          ]
+        },
+        {
+          "id": "usb4",
+          "mpn": "on-COM USB4",
+          "risk": [
+            "UPSTREAM",
+            "BINARY_BLOB"
+          ],
+          "not": [
+            "TB5"
+          ]
+        },
+        {
+          "id": "audio",
+          "mpn": "ALC256/ALC245 class",
+          "risk": [
+            "UPSTREAM"
+          ]
+        },
+        {
+          "id": "ec",
+          "mpn": "ITE5570 or NPCX9 class",
+          "risk": [
+            "OPEN_VENDOR",
+            "UPSTREAM"
+          ]
+        },
+        {
+          "id": "touch_webcam",
+          "mpn": "panel OEM / MIPI",
+          "risk": [
+            "BINARY_BLOB",
+            "OPEN_VENDOR"
+          ]
+        }
+      ]
+    },
+    "ds_xl_coder": {
+      "compute_mpn": "COM-HPC-mMTL-155H-32G",
+      "note": "Shared COM with Student; dual-eDP is carrier differentiator",
+      "inherits_driver_matrix_from": "student_14_5",
+      "subsystems": "same_as_student_14_5"
+    },
+    "handheld_hybrid": {
+      "compute_mpn": "RM121-D8E32",
+      "subsystems": [
+        {
+          "id": "cpu_gpu_npu",
+          "mpn": "RK3588S on NX5",
+          "risk": [
+            "OPEN_VENDOR",
+            "BINARY_BLOB"
+          ]
+        },
+        {
+          "id": "board_fw",
+          "mpn": "Radxa NX5 images",
+          "risk": [
+            "OPEN_VENDOR"
+          ]
+        },
+        {
+          "id": "wifi_bt",
+          "mpn": "AP6275P / AIC8800D class",
+          "risk": [
+            "BINARY_BLOB",
+            "OPEN_VENDOR"
+          ]
+        },
+        {
+          "id": "wwan_optional",
+          "mpn": "RM520N-GL",
+          "risk": [
+            "OPEN_VENDOR",
+            "BINARY_BLOB"
+          ],
+          "not": [
+            "6G",
+            "NTN"
+          ]
+        },
+        {
+          "id": "gpu_vulkan",
+          "mpn": "Mali-G610",
+          "risk": [
+            "BINARY_BLOB"
+          ]
+        },
+        {
+          "id": "gamepad_mcu",
+          "mpn": "STM32F103C8T6 class",
+          "risk": [
+            "UPSTREAM"
+          ]
+        },
+        {
+          "id": "se",
+          "mpn": "SE050C1HQ1",
+          "risk": [
+            "OPEN_VENDOR"
+          ]
+        }
+      ]
+    },
+    "edge_io_rings": {
+      "compute_mpn": "nRF52840-QIAA-R",
+      "subsystems": [
+        {
+          "id": "ble_mcu",
+          "mpn": "nRF52840-QIAA-R",
+          "risk": [
+            "UPSTREAM"
+          ]
+        },
+        {
+          "id": "softdevice_if_used",
+          "mpn": "Nordic SoftDevice",
+          "risk": [
+            "BINARY_BLOB"
+          ]
+        },
+        {
+          "id": "imu",
+          "mpn": "BMI270",
+          "risk": [
+            "UPSTREAM"
+          ]
+        },
+        {
+          "id": "cap_touch",
+          "mpn": "IQS7222A",
+          "risk": [
+            "OPEN_VENDOR"
+          ]
+        },
+        {
+          "id": "uwb",
+          "mpn": "DWM3001C",
+          "risk": [
+            "OPEN_VENDOR",
+            "BINARY_BLOB"
+          ]
+        },
+        {
+          "id": "bhi360",
+          "mpn": "BHI360",
+          "risk": [
+            "OPEN_VENDOR"
+          ]
+        },
+        {
+          "id": "se",
+          "mpn": "SE050C1HQ1",
+          "risk": [
+            "OPEN_VENDOR"
+          ]
+        },
+        {
+          "id": "pmic",
+          "mpn": "npm1300-CAAA-R",
+          "risk": [
+            "OPEN_VENDOR",
+            "UPSTREAM"
+          ]
+        }
+      ]
+    },
+    "dock": {
+      "controller_mpn": "JHL8440",
+      "retimer_mpn": "JHL9040R",
+      "subsystems": [
+        {
+          "id": "usb4_tb4_controller",
+          "mpn": "JHL8440",
+          "risk": [
+            "BINARY_BLOB",
+            "UPSTREAM"
+          ],
+          "claim": "TB4_40G_NOT_TB5"
+        },
+        {
+          "id": "tb4_retimer",
+          "mpn": "JHL9040R",
+          "risk": [
+            "BINARY_BLOB"
+          ]
+        },
+        {
+          "id": "tb5_rejected",
+          "mpn": "JHL9480 / JHL9580",
+          "risk": [
+            "UNAVAILABLE"
+          ]
+        },
+        {
+          "id": "pd",
+          "mpn": "TPS65994",
+          "risk": [
+            "OPEN_VENDOR"
+          ]
+        },
+        {
+          "id": "ethernet",
+          "mpn": "RTL8156",
+          "risk": [
+            "UPSTREAM"
+          ]
+        },
+        {
+          "id": "usb_hub",
+          "mpn": "VL817",
+          "risk": [
+            "UPSTREAM"
+          ]
+        },
+        {
+          "id": "uwb_companion",
+          "mpn": "DWM3001C",
+          "risk": [
+            "OPEN_VENDOR",
+            "BINARY_BLOB"
+          ]
+        }
+      ]
+    }
+  },
+  "unavailable_rejected": [
+    {
+      "item": "Open Ultra 7 ME replacement",
+      "risk": "UNAVAILABLE"
+    },
+    {
+      "item": "Fully open Mali-free sole GPU path",
+      "risk": "UNAVAILABLE"
+    },
+    {
+      "item": "6G / NTN modem driver stack on RM520N-GL",
+      "risk": "UNAVAILABLE"
+    }
+  ]
+}

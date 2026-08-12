@@ -1,0 +1,31 @@
+device_id: dock
+device_name: Dock
+firmware_target: gunnchos_compat_harness_v1
+firmware_version: 0.1.0-harness
+boot_model: dock_mcu_pd_usb4_harness
+supported_boot_paths:
+- pd_controller_config_stub
+- hub_enum_stub
+hardware_interfaces:
+  usb4_tb4:
+    controller_mpn: JHL8440
+    retimer_mpn: JHL9040R
+    generation: TB4_40G
+    tb5: false
+  pd:
+    mpn_class: TPS65994
+  ethernet:
+    mpn: RTL8156
+  usb_hub:
+    mpn: VL817
+capsule_update:
+  supported: false
+  simulated_only: true
+os_compatibility:
+  required_os_profile: handheld_docked_or_student_docked
+claim_boundary: >-
+  Harness manifest only. Intel JHL8440/JHL9040R package ball maps remain
+  EXTERNAL/NDA. No physical dock SI, flash, or TB5 claim.
+digital_implementation_open:
+- NDA ball maps for JHL8440 / JHL9040R
+- Retimer BINARY_BLOB firmware correlation

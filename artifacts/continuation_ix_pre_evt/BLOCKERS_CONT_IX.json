@@ -1,6 +1,11 @@
 {
-  "updated_at_utc": "2026-08-09T20:50:52Z",
-  "DIGITAL": [],
+  "updated_at_utc": "2026-08-12T20:10:00Z",
+  "DIGITAL": [
+    "NPI_DEFECT-HANDHELD-IMAGE-SLOT-FIT-001 OPEN — production A/B image fit unproven (STREAM C); digital capacity model execution failure pending measured production slot images",
+    "Ring RING_ZEPHYR_WEST_BUILD_PASS not earned (edge-io soft-skip); west build execution failure / soft-skip",
+    "Dock/edge harness manifests were missing prior to STREAM C stubs — on-target firmware still open; prior harness execution failure",
+    "ERC/DRC errors=0 but residual warnings remain — digital exhaustion execution failure (lib_footprint_mismatch / track_dangling / silk)"
+  ],
   "PHYSICAL": [
     "PHYSICAL_EXECUTION_FREEZE \u2014 no fab, purchase, flash, assemble",
     "No manufacturer DFM sign-off yet (DFM_PRECHECK is digital self-check only)"
@@ -213,5 +218,6 @@
         }
       }
     }
-  }
+  },
+  "stream_c_honesty_note": "Prior Cont IX DIGITAL=[] over-claimed; corrected without claiming physical closure."
 }

@@ -63,9 +63,15 @@ def test_cont_ix_handheld_hierarchical_260():
 def test_cont_ix_digital_blockers_empty_or_explained():
     blockers = json.loads((ART / "BLOCKERS_CONT_IX.json").read_text())
     assert "DIGITAL" in blockers and "PHYSICAL" in blockers and "EXTERNAL" in blockers
-    # Prefer empty DIGITAL; if non-empty must mention execution failure
+    # Prefer empty DIGITAL; if non-empty must be an explained digital gap
+    # (execution failure, proxy/hierarchical layout, or tracked NPI_DEFECT OPEN).
     for item in blockers["DIGITAL"]:
-        assert "execution failure" in item or "proxy" in item or "hierarchical" in item
+        assert (
+            "execution failure" in item
+            or "proxy" in item
+            or "hierarchical" in item
+            or ("NPI_DEFECT" in item and "OPEN" in item)
+        )
 
 
 def test_cont_viii_funcblock_retirement_stays():
