@@ -32,10 +32,17 @@ def test_hw002_image_fit_stays_open():
     remodel = json.loads(
         (ROOT / "npi/phase_xv/handheld_storage_headroom/HANDHELD_STORAGE_IMAGE_FIT_REMODEL.json").read_text()
     )
+    dos = json.loads((HW002 / "image_fit" / "DEVICE_OS_IMAGE_FIT_MANIFEST.json").read_text())
     assert defect["status"] == "OPEN"
     assert remodel["npi_status"] == "OPEN"
     assert remodel["fit_assessment"]["production_image_fit_verdict"] == "FAIL"
+    assert remodel["fit_assessment"]["realm_rootfs_artifacts_present"] is True
+    assert remodel["fit_assessment"]["current_digital_realm_numeric_fit"] is True
+    assert remodel["fit_assessment"]["stub_like_rootfs_payloads"] is True
     assert remodel["hardware_truth"]["larger_emmc_sku_invented"] is False
+    assert dos["PRODUCTION_RELEASE_CLAIMED"] is False
+    assert dos["npi"]["recommended_status"] == "OPEN"
+    assert dos["npi"]["closure_gate_met"] is False
 
 
 def test_hw002_west_script_forbids_soft_skip():

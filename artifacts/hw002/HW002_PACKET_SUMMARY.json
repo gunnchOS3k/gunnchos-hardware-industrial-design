@@ -1,7 +1,7 @@
 {
   "schema": "gunnchos.hw002.packet_summary.v1",
   "item": "HW-002",
-  "generated_at_utc": "2026-08-12T21:06:41Z",
+  "generated_at_utc": "2026-08-12T22:12:52Z",
   "baseline_main_tip": "4ba876d42f59f03d4b5c5ef0ca776e1253da814d",
   "HW_FIRMWARE_DIGITAL_PACKAGE_COMPLETE": false,
   "physical_pass": false,
@@ -32,10 +32,28 @@
   "image_fit": {
     "verdict": "FAIL_PRODUCTION_IMAGE_FIT_UNPROVEN",
     "status": "OPEN",
-    "architecture": "Outcome A retained (32GB eMMC system + microSD)"
+    "architecture": "Outcome A retained (32GB eMMC system + microSD)",
+    "device_os_image_fit_tip": "2a5546f708741473adda1310c1d5624bec31a129",
+    "device_os_image_fit_pr": "https://github.com/gunnchOS3k/gunnchos-device-os/pull/107",
+    "current_digital_realm_numeric_fit": true,
+    "stub_like_rootfs_payloads": true,
+    "sizes_summary_gib": {
+      "evt_rootfs_compressed": 3.3976e-05,
+      "evt_rootfs_uncompressed": 0.000139065,
+      "factory_rootfs_compressed": 1.818e-06,
+      "production_def_rootfs_compressed": 2.122e-06,
+      "recovery_composed": 0.013172838,
+      "recovery_margin": 1.986827162,
+      "recovery_rootfs_compressed": 1.524e-06,
+      "shared_boot_combined": 0.013169073,
+      "slot_a_composed": 0.013308138,
+      "slot_a_margin": 4.986691862,
+      "slot_b_composed": 0.013308138,
+      "slot_b_margin": 4.986691862
+    }
   },
   "remaining_digital_opens": [
-    "NPI_DEFECT-HANDHELD-IMAGE-SLOT-FIT-001 OPEN \u2014 no measured production A/B/recovery images",
+    "NPI_DEFECT-HANDHELD-IMAGE-SLOT-FIT-001 OPEN \u2014 measured stub realm sizes fit numerically; MLP/production A/B disk images still absent",
     "lib_footprint_mismatch residual warnings (handheld + family)",
     "COM-HPC Mini / dual-eDP pin maps (EXTERNAL/NDA)",
     "Dock JHL8440/JHL9040R ball maps + TB4 SI (EXTERNAL/NDA + BINARY_BLOB)",
