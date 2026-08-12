@@ -9,7 +9,11 @@ on:
 jobs:
   kicad-repro:
     runs-on: ubuntu-latest
-    container: kicad/kicad:8.0
+    # kicad/kicad image defaults to non-root; checkout@v4 needs write to runner
+    # _temp/_runner_file_commands (EACCES without --user root).
+    container:
+      image: kicad/kicad:8.0
+      options: --user root
     steps:
       - uses: actions/checkout@v4
       - name: Validate Cont IX gates
