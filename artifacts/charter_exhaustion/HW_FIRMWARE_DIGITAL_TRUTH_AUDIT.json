@@ -1,0 +1,451 @@
+{
+  "schema": "gunnchos.hw001.hw_firmware_digital_truth_audit.v1",
+  "stream": "C",
+  "item": "HW-001",
+  "generated_at_utc": "2026-08-12T19:25:00Z",
+  "hardware_repo": "gunnchos-hardware-industrial-design",
+  "hardware_tip": "a05afa64fdca32f62f9d10eb29d80e279fce7323",
+  "cross_repos": [
+    "gunnchos-device-os",
+    "edge-io-measurement-node",
+    "gunnchos-7gc-ai-ran-field-kit"
+  ],
+  "policy": {
+    "prefer_fail": true,
+    "cursor_never_merges": true,
+    "no_readme_campaign": true,
+    "no_invented_moq_price_stock": true,
+    "no_physical_validation_claim": true
+  },
+  "overall_verdict": "FAIL",
+  "overall_reason": "Highest digital risks remain open: COM-HPC/Dock NDA pin-accurate fanout (EXTERNAL), Dock TB4 SI BINARY_BLOB/NDA, Handheld production A/B image fit FAIL/OPEN, Ring Zephyr west full build soft-skip, Cont IX DIGITAL=[] was dishonest vs residual digital work.",
+  "mpn_truth_global": {
+    "student_dsxl_com": {
+      "historical_and_current": "ADLINK COM-HPC-mMTL-155H-32G",
+      "status": "CONFIRMED_IN_EXACT_MPN_MATRIX"
+    },
+    "handheld_som": {
+      "historical_and_current": "Radxa NX5 RM121-D8E32",
+      "status": "CONFIRMED_IN_EXACT_MPN_MATRIX",
+      "emmc_marketed_gib": 32
+    },
+    "wwan": {
+      "mpn": "RM520N-GL",
+      "is_ntn": false,
+      "is_6g": false,
+      "truth": "5G NR Sub-6 + LTE only; 6G/NTN stack UNAVAILABLE"
+    },
+    "dock": {
+      "controller": "JHL8440",
+      "retimer": "JHL9040R",
+      "tb_generation": "TB4_40G",
+      "tb5": false
+    },
+    "rings": {
+      "mcu": "nRF52840-QIAA-R",
+      "imu": "BMI270",
+      "cap": "IQS7222A",
+      "uwb": "DWM3001C",
+      "se": "SE050C1HQ1"
+    }
+  },
+  "devices": {
+    "student_14_5": {
+      "claimed_digital_design": [
+        "KiCad sch/pcb",
+        "cont_ix manufacturer package",
+        "COM carrier ICD",
+        "radios.md",
+        "firmware ACPI/DT/manifest",
+        "driver README"
+      ],
+      "actual_digital_artifacts_present": {
+        "claimed": "Full public pin-accurate COM-HPC carrier + clean manufacturer release",
+        "present": true,
+        "paths": [
+          "device_designs/student_14_5/kicad/student_14_5.kicad_sch",
+          "device_designs/student_14_5/kicad/student_14_5.kicad_pcb",
+          "device_designs/student_14_5/manufacturing/cont_ix_release/",
+          "device_designs/student_14_5/docs/com_carrier_icd.md",
+          "device_designs/student_14_5/docs/radios.md",
+          "firmware/manifests/student_14_5_firmware_manifest.yaml",
+          "firmware/descriptors/acpi/student_14_5_dsdt.dsl",
+          "firmware/descriptors/devicetree/student_14_5.dts"
+        ],
+        "notes": "Artifacts present but pin-accurate COM-HPC nets NDA-blocked (STUDENT_BLOCKED_NDA). ERC/DRC errors=0 with warnings remaining. manufacturer_ready=conditional."
+      },
+      "mpn_truth_vs_historical": {
+        "com": "COM-HPC-mMTL-155H-32G",
+        "wifi": "BE200",
+        "wwan": "RM520N-GL (not NTN/6G)",
+        "drift": "NONE_VS_EXACT_MPN_MATRIX"
+      },
+      "driver_silicon_risk": [
+        "BINARY_BLOB",
+        "UPSTREAM",
+        "OPEN_VENDOR",
+        "NDA_ONLY"
+      ],
+      "highest_risk_class_per_subsystem": {
+        "me_csme": "BINARY_BLOB",
+        "wifi_bt": "BINARY_BLOB",
+        "wwan": "BINARY_BLOB",
+        "com_pin_map": "NDA_ONLY",
+        "open_me_replacement": "UNAVAILABLE"
+      },
+      "digital_work_still_possible": [
+        "Keep public-side ICD/BOM/mfg package honest under NDA wall",
+        "Harness firmware/ACPI/DT deepen without claiming pin-accurate COM nets",
+        "OS driver policy mapping to DRIVER_CLASSIFICATION.json"
+      ],
+      "highest_s0_s1_risks": [
+        {
+          "id": "RISK-001",
+          "severity": "S0",
+          "title": "COM-HPC carrier integration/vendor collateral",
+          "score": 75
+        },
+        {
+          "id": "RISK-011",
+          "severity": "S1",
+          "title": "Modem/carrier/certification (RM520N-GL)",
+          "score": 100
+        },
+        {
+          "id": "RISK-005",
+          "severity": "S1",
+          "title": "Battery/thermal under AI + gaming",
+          "score": 100
+        }
+      ],
+      "digital_implementation_open": [
+        "COM-HPC Mini 400-pin net-accurate map (EXTERNAL/NDA \u2014 not digitally closable)",
+        "Production OS image + firmware on-target (PHYSICAL + BINARY_BLOB)"
+      ]
+    },
+    "ds_xl_coder": {
+      "claimed_digital_design": [
+        "Shared COM + dual-eDP carrier ICD",
+        "KiCad",
+        "cont_ix package",
+        "dual display docs"
+      ],
+      "actual_digital_artifacts_present": {
+        "claimed": "Pin-accurate dual-eDP COM-HPC carrier complete",
+        "present": true,
+        "paths": [
+          "device_designs/ds_xl_coder/kicad/",
+          "device_designs/ds_xl_coder/docs/dual_edp_icd.md",
+          "device_designs/ds_xl_coder/docs/second_display_icd.md",
+          "device_designs/ds_xl_coder/manufacturing/cont_ix_release/",
+          "firmware/manifests/ds_xl_coder_firmware_manifest.yaml"
+        ],
+        "notes": "Present but dual-eDP COM-HPC pin map EXTERNAL/NDA. Panel exact MPN AVL still EXTERNAL."
+      },
+      "mpn_truth_vs_historical": {
+        "com": "COM-HPC-mMTL-155H-32G (shared)",
+        "differentiator": "carrier dual-eDP / hinge \u2014 not alternate COM MPN",
+        "drift": "NONE_VS_EXACT_MPN_MATRIX"
+      },
+      "driver_silicon_risk": [
+        "BINARY_BLOB",
+        "UPSTREAM",
+        "OPEN_VENDOR",
+        "NDA_ONLY"
+      ],
+      "digital_work_still_possible": [
+        "Dual-display software contracts without claiming OEM panel freeze",
+        "Hinge cycle fixture concept deepening (digital only)"
+      ],
+      "highest_s0_s1_risks": [
+        {
+          "id": "RISK-003",
+          "severity": "S0",
+          "title": "DS-XL dual-display hinge/flex",
+          "score": 80
+        },
+        {
+          "id": "RISK-001",
+          "severity": "S0",
+          "title": "COM-HPC collateral",
+          "score": 75
+        },
+        {
+          "id": "RISK-009",
+          "severity": "S1",
+          "title": "Graphics/compositor/AV/input",
+          "score": 60
+        }
+      ],
+      "digital_implementation_open": [
+        "Dual eDP COM-HPC pin map (EXTERNAL/NDA)",
+        "Display panel exact MPNs + hinge bend OEM spec (EXTERNAL)"
+      ]
+    },
+    "handheld_hybrid": {
+      "claimed_digital_design": [
+        "Public NX5 SODIMM carrier",
+        "32GB eMMC + microSD",
+        "KiCad hierarchical sheets",
+        "storage Outcome A"
+      ],
+      "actual_digital_artifacts_present": {
+        "claimed": "Public pinout EDA complete + MLP images fit 32GB eMMC alone",
+        "present": true,
+        "paths": [
+          "device_designs/handheld_hybrid/kicad/",
+          "device_designs/handheld_hybrid/docs/som_carrier_icd.md",
+          "device_designs/handheld_hybrid/pcb/netlist.json",
+          "npi/phase_xv/handheld_storage_headroom/",
+          "firmware/manifests/handheld_hybrid_firmware_manifest.yaml"
+        ],
+        "notes": "Public pinout path is the strongest digital completeness in family. MLP-all-onboard does NOT fit usable eMMC; Outcome A + microSD required. Production A/B image fit FAIL/OPEN."
+      },
+      "mpn_truth_vs_historical": {
+        "som": "RM121-D8E32",
+        "emmc": "32GB on-module (not invented 64GB)",
+        "wwan_opt": "RM520N-GL not NTN/6G",
+        "drift": "NONE_VS_EXACT_MPN_MATRIX"
+      },
+      "driver_silicon_risk": [
+        "OPEN_VENDOR",
+        "BINARY_BLOB",
+        "UPSTREAM"
+      ],
+      "highest_risk_class_per_subsystem": {
+        "mali_g610": "BINARY_BLOB",
+        "wifi_bt_module": "BINARY_BLOB",
+        "mali_free_sole_gpu": "UNAVAILABLE"
+      },
+      "digital_work_still_possible": [
+        "Sized A/B/recovery image manifests vs Outcome A budgets (device-os)",
+        "Storage policy enforcement tests",
+        "Radxa/vendor kernel integration contracts (not physical flash)"
+      ],
+      "highest_s0_s1_risks": [
+        {
+          "id": "NPI_DEFECT-HANDHELD-IMAGE-SLOT-FIT-001",
+          "severity": "S1",
+          "title": "Production A/B image fit unproven",
+          "status": "OPEN"
+        },
+        {
+          "id": "RISK-004",
+          "severity": "S1",
+          "title": "Handheld 32GB storage headroom (Outcome A digital; physical endurance pending)",
+          "score": 48
+        },
+        {
+          "id": "RISK-008",
+          "severity": "S1",
+          "title": "Local AI target performance",
+          "score": 64
+        }
+      ],
+      "digital_implementation_open": [
+        "Production A/B/recovery images measured against 5.0 GiB slot budgets",
+        "Mali/NPU vendor SDK integration beyond harness",
+        "microSD packaging/SKU policy as required accessory (product \u2014 not invented stock)"
+      ],
+      "storage_remodel_summary": {
+        "production_ab_slot_images_present": false,
+        "production_mlp_rootfs_present": false,
+        "dev_harness_proxy_size_gib": 0.024336,
+        "dev_harness_fits_single_5gib_slot": true,
+        "dev_harness_is_mlp_image": false,
+        "legacy_all_onboard_31_5_vs_usable_29_76": "DOES_NOT_FIT",
+        "outcome_a_budget_math": "DIGITALLY_SAFE_WITH_MICROSD",
+        "production_image_fit_verdict": "FAIL",
+        "production_image_fit_reason": "No measured production A/B slot images exist that implement Outcome A slot_a/slot_b 5.0 GiB budgets or MLP system content. DEV bootable_reference (~0.024 GiB kernel+initramfs+rootfs tree) fits by size but is explicitly QEMU/DEV-realm only and must not be treated as handheld factory image proof."
+      }
+    },
+    "edge_io_rings": {
+      "claimed_digital_design": [
+        "nRF52840 + BMI270 KiCad",
+        "Zephyr firmware",
+        "sensor fusion",
+        "Gate1 digital fab"
+      ],
+      "actual_digital_artifacts_present": {
+        "claimed": "Full Zephyr west production firmware + physical boot",
+        "present": true,
+        "paths": [
+          "device_designs/edge_io_rings/kicad/",
+          "device_designs/edge_io_rings/docs/FIRMWARE_HOOKS.md",
+          "device_designs/edge_io_rings/docs/SENSOR_PLACEMENT_RATIONALE.md",
+          "edge-io-measurement-node/gate1_digital_fabrication/ring_firmware/",
+          "firmware/manifests/edge_io_rings_firmware_manifest.yaml"
+        ],
+        "notes": "Hardware KiCad + edge-io freestanding ARM clang/MCUboot digital path present. ZEPHYR_WEST full build soft-skip; physical boot pending. SoftDevice path BINARY_BLOB if used."
+      },
+      "mpn_truth_vs_historical": {
+        "mcu": "nRF52840-QIAA-R",
+        "imu": "BMI270",
+        "cap": "IQS7222A",
+        "uwb": "DWM3001C",
+        "drift": "NONE_VS_EXACT_MPN_MATRIX"
+      },
+      "driver_silicon_risk": [
+        "UPSTREAM",
+        "OPEN_VENDOR",
+        "BINARY_BLOB"
+      ],
+      "digital_work_still_possible": [
+        "Continue freestanding firmware digital tests",
+        "Host BLE/E2E sims in edge-io",
+        "Optional west build when ZEPHYR_BASE/SDK available (large download \u2014 policy)"
+      ],
+      "highest_s0_s1_risks": [
+        {
+          "id": "RISK-007",
+          "severity": "S0",
+          "title": "Ring spatial drift/wrong-target",
+          "score": 125
+        },
+        {
+          "id": "RING_ZEPHYR_WEST_BUILD_SOFT_SKIP",
+          "severity": "S1",
+          "title": "Full Zephyr west build not claimed"
+        }
+      ],
+      "digital_implementation_open": [
+        "RING_ZEPHYR_WEST_BUILD_PASS not earned",
+        "Physical multimodal tracking (PHYSICAL)",
+        "UWB Qorvo BINARY_BLOB portions"
+      ]
+    },
+    "dock": {
+      "claimed_digital_design": [
+        "USB4/TB4 dock (not TB5)",
+        "JHL8440 + JHL9040R",
+        "KiCad",
+        "ICD"
+      ],
+      "actual_digital_artifacts_present": {
+        "claimed": "Public ball-accurate TB4 retimer/controller fanout complete",
+        "present": true,
+        "paths": [
+          "device_designs/dock/kicad/",
+          "device_designs/dock/pcb/netlist.json",
+          "device_designs/dock/docs/interface_control_document.md",
+          "docs/full_product_family/EXACT_MPN_MATRIX.md",
+          "firmware/manifests/dock_firmware_manifest.yaml"
+        ],
+        "notes": "Architecture freeze USB4/TB4 confirmed. Intel package ball maps EXTERNAL/NDA. Retimer FW BINARY_BLOB. TB5 explicitly UNAVAILABLE/rejected."
+      },
+      "mpn_truth_vs_historical": {
+        "controller": "JHL8440",
+        "retimer": "JHL9040R",
+        "tb5_rejected": [
+          "JHL9480",
+          "JHL9580"
+        ],
+        "drift": "NONE \u2014 TB4 not TB5"
+      },
+      "driver_silicon_risk": [
+        "BINARY_BLOB",
+        "UPSTREAM",
+        "OPEN_VENDOR",
+        "NDA_ONLY",
+        "UNAVAILABLE"
+      ],
+      "digital_work_still_possible": [
+        "Public ICD/hub/PD/Ethernet digital package deepen",
+        "Host thunderbolt stack contracts @40G",
+        "Cannot complete ball-accurate fanout without NDA"
+      ],
+      "highest_s0_s1_risks": [
+        {
+          "id": "RISK-002",
+          "severity": "S0",
+          "title": "Dock USB4/TB4 SI / restricted collateral",
+          "score": 100
+        },
+        {
+          "id": "RISK-006",
+          "severity": "S1",
+          "title": "Antenna/RF coexistence (docked paths)",
+          "score": 100
+        }
+      ],
+      "digital_implementation_open": [
+        "Intel JHL8440 / JHL9040R package ball maps (EXTERNAL/NDA)",
+        "TB4 retimer firmware blob + SI correlation (BINARY_BLOB + PHYSICAL)"
+      ]
+    }
+  },
+  "handheld_storage": {
+    "prior_defect": "NPI_DEFECT-HANDHELD-STORAGE-HEADROOM-001",
+    "prior_status": "CLOSED_OUTCOME_A_PENDING_V1",
+    "new_defect": "NPI_DEFECT-HANDHELD-IMAGE-SLOT-FIT-001",
+    "new_status": "OPEN",
+    "remodel_path": "npi/phase_xv/handheld_storage_headroom/HANDHELD_STORAGE_IMAGE_FIT_REMODEL.json",
+    "verdict": "FAIL_PRODUCTION_IMAGE_FIT_UNPROVEN"
+  },
+  "top_risks_family": [
+    {
+      "id": "RISK-007",
+      "severity": "S0",
+      "score": 125,
+      "title": "Ring spatial drift/wrong-target"
+    },
+    {
+      "id": "RISK-002",
+      "severity": "S0",
+      "score": 100,
+      "title": "Dock USB4/TB4 SI / restricted collateral"
+    },
+    {
+      "id": "RISK-005",
+      "severity": "S0",
+      "score": 100,
+      "title": "Battery/thermal under AI + gaming"
+    },
+    {
+      "id": "RISK-006",
+      "severity": "S0",
+      "score": 100,
+      "title": "Antenna/RF coexistence"
+    },
+    {
+      "id": "RISK-011",
+      "severity": "S0",
+      "score": 100,
+      "title": "Modem/carrier/certification"
+    },
+    {
+      "id": "RISK-003",
+      "severity": "S0",
+      "score": 80,
+      "title": "DS-XL dual-display hinge/flex"
+    },
+    {
+      "id": "RISK-001",
+      "severity": "S0",
+      "score": 75,
+      "title": "COM-HPC carrier integration/vendor collateral"
+    },
+    {
+      "id": "NPI_DEFECT-HANDHELD-IMAGE-SLOT-FIT-001",
+      "severity": "S1",
+      "title": "Handheld production image slot fit",
+      "status": "OPEN"
+    }
+  ],
+  "digital_implementation_open_summary": [
+    "COM-HPC Mini 400-pin + dual-eDP maps (NDA_ONLY / EXTERNAL)",
+    "Dock JHL8440/JHL9040R ball maps + TB4 SI (NDA_ONLY / BINARY_BLOB)",
+    "Handheld production A/B/recovery images vs Outcome A budgets (OPEN defect)",
+    "Ring full Zephyr west build PASS not earned",
+    "RM520N-GL 6G/NTN stack UNAVAILABLE \u2014 do not claim",
+    "Open ME / Mali-free sole GPU UNAVAILABLE",
+    "All physical bring-up / flash / RF / endurance PHYSICAL_PENDING"
+  ],
+  "closures_in_this_draft": [
+    "Machine-readable DRIVER_CLASSIFICATION.json",
+    "HW_FIRMWARE_DIGITAL_TRUTH_AUDIT.json",
+    "HANDHELD_STORAGE_IMAGE_FIT_REMODEL.json + OPEN NPI_DEFECT-HANDHELD-IMAGE-SLOT-FIT-001",
+    "BLOCKERS_CONT_IX DIGITAL honesty correction",
+    "dock + edge_io_rings firmware harness manifests (previously missing)"
+  ]
+}

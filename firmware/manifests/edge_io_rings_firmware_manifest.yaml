@@ -1,0 +1,31 @@
+device_id: edge_io_rings
+device_name: Edge I/O Rings
+firmware_target: gunnchos_ring_digital_harness_v1
+firmware_version: 0.1.0-harness
+boot_model: nrf52840_freestanding_or_zephyr
+supported_boot_paths:
+- freestanding_arm_clang_mcuboot_dev
+- zephyr_west_soft_skip
+hardware_interfaces:
+  ble_mcu:
+    mpn: nRF52840-QIAA-R
+  imu:
+    mpn: BMI270
+  cap_touch:
+    mpn: IQS7222A
+  uwb:
+    mpn: DWM3001C
+  se:
+    mpn: SE050C1HQ1
+primary_firmware_repo: edge-io-measurement-node
+primary_firmware_path: gate1_digital_fabrication/ring_firmware/
+capsule_update:
+  supported: true
+  simulated_only: true
+claim_boundary: >-
+  Digital harness cross-link only. Authoritative ring firmware digital path is
+  edge-io freestanding ARM clang + MCUboot DEVELOPMENT. RING_ZEPHYR_WEST_BUILD_PASS
+  not claimed. Physical flash/boot pending.
+digital_implementation_open:
+- ZEPHYR_WEST full build (soft-skip)
+- Physical multimodal tracking

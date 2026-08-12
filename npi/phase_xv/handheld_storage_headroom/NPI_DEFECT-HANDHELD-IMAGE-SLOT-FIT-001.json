@@ -1,0 +1,24 @@
+{
+  "id": "NPI_DEFECT-HANDHELD-IMAGE-SLOT-FIT-001",
+  "sku": "handheld_hybrid",
+  "severity": "S1",
+  "status": "OPEN",
+  "title": "Handheld production A/B slot images unproven against 32GB eMMC + microSD Outcome A budgets",
+  "summary": "RM121-D8E32 truth remains 32GB marketed / ~29.76 GiB usable eMMC + microSD. WP-002 Outcome A capacity math stays digitally safe only with microSD for MLP content. STREAM C remodel FAILS production image fit: device-os has no measured production slot_a/slot_b images sized to the 5.0 GiB budgets; only DEV/QEMU bootable_reference (~24 MiB combined kernel+initramfs+rootfs tree) and lab guest disks. Prefer FAIL \u2014 do not claim images fit MLP slots.",
+  "related": {
+    "prior_headroom_defect": "NPI_DEFECT-HANDHELD-STORAGE-HEADROOM-001",
+    "prior_status": "CLOSED_OUTCOME_A_PENDING_V1",
+    "remodel": "npi/phase_xv/handheld_storage_headroom/HANDHELD_STORAGE_IMAGE_FIT_REMODEL.json"
+  },
+  "verdict": "FAIL_PRODUCTION_IMAGE_FIT_UNPROVEN",
+  "blocks_purchase": false,
+  "blocks_rfq_send": false,
+  "physical_execution_freeze": "ACTIVE",
+  "recommended_actions": [
+    "OPEN: Produce sized A/B/recovery image manifests with measured bytes against Outcome A onboard placement",
+    "Keep microSD required for MLP user content \u2014 do not invent larger Radxa eMMC SKU",
+    "Do not treat alpine/debian lab guest disks as handheld factory images"
+  ],
+  "evidence_class": "E4_DIGITAL",
+  "v1_certification": "NOT_SELF_CERTIFIED"
+}

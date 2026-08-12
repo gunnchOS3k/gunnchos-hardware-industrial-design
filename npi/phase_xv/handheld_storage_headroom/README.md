@@ -35,3 +35,9 @@ Preferred SoM **RM121-D8E32** (32GB marketed eMMC) is operationally unsafe if th
 - Frozen Handheld storage path is **on-module eMMC + microSD**, not carrier NVMe.
 - This package does **not** authorize purchase or lift the freeze.
 - Implementer does **not** self-certify V1 (`VP-002-RESULT.json` is verifier-owned).
+
+## STREAM C (2026-08-12)
+
+- Remodel: `HANDHELD_STORAGE_IMAGE_FIT_REMODEL.json`
+- New OPEN defect: `NPI_DEFECT-HANDHELD-IMAGE-SLOT-FIT-001` (production A/B image fit FAIL/unproven)
+- Family audit: `artifacts/charter_exhaustion/HW_FIRMWARE_DIGITAL_TRUTH_AUDIT.json`

@@ -1,6 +1,8 @@
 # Driver / firmware matrix — five-product family
 
-Updated: 2026-08-08T19:40:00Z
+Updated: 2026-08-12T19:25:00Z
+
+Machine-readable twin: `DRIVER_CLASSIFICATION.json` (STREAM C HW-001).
 
 Classes: `UPSTREAM` | `OPEN_VENDOR` | `BINARY_BLOB` | `NDA_ONLY` | `UNAVAILABLE`
 
