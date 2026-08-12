@@ -1,0 +1,173 @@
+{
+  "schema": "gunnchos.hw001.vp_hw001_truth_audit_acceptance.v1",
+  "stream": "C",
+  "item": "HW-001",
+  "verifier_role": "INDEPENDENT_AUDITOR_ACCEPTANCE_VERIFIER",
+  "generated_at_utc": "2026-08-12T20:50:00Z",
+  "hardware_repo": "gunnchos-hardware-industrial-design",
+  "pr": {
+    "number": 60,
+    "url": "https://github.com/gunnchOS3k/gunnchos-hardware-industrial-design/pull/60",
+    "branch": "stream-c/hw-firmware-digital-truth-audit",
+    "expected_tip": "82dbbc2d87eb544675b33b0d99b1795712b7d54d",
+    "observed_tip": "82dbbc2d87eb544675b33b0d99b1795712b7d54d",
+    "tip_match": true,
+    "state_at_verification": "MERGED",
+    "merge_commit_on_main": "4ba876d42f59f03d4b5c5ef0ca776e1253da814d"
+  },
+  "ci": {
+    "tip_sha": "82dbbc2d87eb544675b33b0d99b1795712b7d54d",
+    "all_required_checks_green": true,
+    "checks": [
+      {"workflow": "CAD CI", "name": "validate", "conclusion": "SUCCESS"},
+      {"workflow": "EVT-1 hardware package CI", "name": "validate", "conclusion": "SUCCESS"},
+      {"workflow": "Gate 1 post-merge integrity", "name": "gate1-ring", "conclusion": "SUCCESS"},
+      {"workflow": "Portfolio hardening CI", "name": "validate", "conclusion": "SUCCESS"}
+    ],
+    "local_pytest": {
+      "tests/test_continuation_ix.py": "6 passed"
+    }
+  },
+  "tokens": {
+    "HW001_TRUTH_AUDIT_ACCEPTANCE_PASS": true,
+    "HW_FIRMWARE_DIGITAL_PACKAGE_COMPLETE": false,
+    "HARDWARE_60_READY_FOR_EDMUND_MERGE_AS_TRUTH_BASELINE": true
+  },
+  "token_separation_note": "HW001_TRUTH_AUDIT_ACCEPTANCE_PASS accepts the audit as an accurate FAIL/truth baseline. HW_FIRMWARE_DIGITAL_PACKAGE_COMPLETE MUST remain false while NDA pin maps, production Handheld A/B images, Ring Zephyr west PASS, and on-target firmware gaps remain open. Do not equate audit acceptance with digital package completion.",
+  "audit_under_review": {
+    "path": "artifacts/charter_exhaustion/HW_FIRMWARE_DIGITAL_TRUTH_AUDIT.json",
+    "overall_verdict_claimed": "FAIL",
+    "overall_verdict_accepted": true,
+    "reason": "Audit correctly refuses digital-complete / firmware-complete claims while documenting residual EXTERNAL/NDA, OPEN NPI, and harness-only firmware boundaries."
+  },
+  "independent_reproductions": {
+    "mpn_truth": {
+      "result": "PASS",
+      "confirmed": {
+        "student_dsxl_com": "ADLINK COM-HPC-mMTL-155H-32G",
+        "handheld_som": "Radxa NX5 RM121-D8E32 (32GB eMMC marketed)",
+        "wwan": "Quectel RM520N-GL — not NTN/6G (stack UNAVAILABLE)",
+        "dock": "JHL8440 controller + JHL9040R retimer — TB4_40G, not TB5",
+        "rings": {
+          "mcu": "nRF52840-QIAA-R",
+          "imu": "BMI270",
+          "cap": "IQS7222A",
+          "se": "SE050C1HQ1",
+          "pmic": "npm1300-CAAA-R",
+          "uwb": "DWM3001C"
+        }
+      },
+      "evidence": [
+        "docs/full_product_family/EXACT_MPN_MATRIX.md",
+        "docs/full_product_family/DRIVER_CLASSIFICATION.md",
+        "docs/full_product_family/DRIVER_CLASSIFICATION.json",
+        "firmware/manifests/dock_firmware_manifest.yaml",
+        "firmware/manifests/edge_io_rings_firmware_manifest.yaml"
+      ]
+    },
+    "driver_support_classifications_grounded": {
+      "result": "PASS",
+      "note": "UPSTREAM / OPEN_VENDOR / BINARY_BLOB / NDA_ONLY / UNAVAILABLE classes match subsystem reality (ME, Mali, SoftDevice, TB4 FW blobs, COM/Dock NDA maps, RM520N 6G/NTN UNAVAILABLE).",
+      "evidence": [
+        "docs/full_product_family/DRIVER_CLASSIFICATION.json",
+        "docs/full_product_family/DRIVER_CLASSIFICATION.md"
+      ]
+    },
+    "handheld_slot_fit_npi_defect_real": {
+      "result": "PASS_DEFECT_CONFIRMED_OPEN",
+      "defect_id": "NPI_DEFECT-HANDHELD-IMAGE-SLOT-FIT-001",
+      "status": "OPEN",
+      "production_ab_slot_images_present": false,
+      "device_os_measured_bytes_match_remodel": true,
+      "handheld_production_image_candidates_found": 0,
+      "evidence": [
+        "npi/phase_xv/handheld_storage_headroom/NPI_DEFECT-HANDHELD-IMAGE-SLOT-FIT-001.json",
+        "npi/phase_xv/handheld_storage_headroom/HANDHELD_STORAGE_IMAGE_FIT_REMODEL.json",
+        "gunnchos-device-os/os_build/bootable_reference/artifacts/* (DEV/QEMU only)"
+      ]
+    },
+    "unresolved_firmware_eda_gaps_real": {
+      "result": "PASS_GAPS_CONFIRMED",
+      "confirmed_open": [
+        "COM-HPC Mini 400-pin + dual-eDP maps EXTERNAL/NDA (Student/DS-XL)",
+        "Dock JHL8440/JHL9040R package ball maps EXTERNAL/NDA",
+        "Ring RING_ZEPHYR_WEST_BUILD_PASS not earned (soft-skip)",
+        "Cont IX DIGITAL blockers non-empty (honesty correction)",
+        "ERC/DRC errors=0 with residual warnings — not digitally exhausted"
+      ],
+      "evidence": [
+        "artifacts/continuation_ix_pre_evt/BLOCKERS_CONT_IX.json",
+        "docs/full_product_family/BLOCKERS_CONT_IX.md",
+        "device_designs/dock/kicad/dock.kicad_sch (ROLE envelopes + EXTERNAL_NDA_BLOCKED text)"
+      ]
+    },
+    "no_fabricated_vendor_pin_maps": {
+      "result": "PASS",
+      "note": "Dock uses JHL8440_ROLE / JHL9040R_ROLE_envelope placeholders with NDA=PACKAGE_BALL_MAP; netlist explicitly rejects fake_intel_ball_map.",
+      "evidence": [
+        "device_designs/dock/pcb/netlist.json",
+        "device_designs/dock/kicad/dock.kicad_sch",
+        "device_designs/dock/manufacturing/STEP_EXPORT_STATUS.md"
+      ]
+    },
+    "no_physical_validation_claimed": {
+      "result": "PASS",
+      "note": "Audit policy no_physical_validation_claim=true; PHYSICAL_EXECUTION_FREEZE ACTIVE; manifests claim harness/digital only.",
+      "evidence": [
+        "artifacts/charter_exhaustion/HW_FIRMWARE_DIGITAL_TRUTH_AUDIT.json",
+        "artifacts/continuation_ix_pre_evt/BLOCKERS_CONT_IX.json",
+        "firmware/manifests/*.yaml claim_boundary fields"
+      ]
+    },
+    "firmware_manifests_not_masquerading_as_built": {
+      "result": "PASS",
+      "note": "All family manifests are 0.1.0-harness / simulated_only / claim_boundary harness-only; dock+rings stubs explicitly deny built/on-target firmware.",
+      "evidence": [
+        "firmware/manifests/dock_firmware_manifest.yaml",
+        "firmware/manifests/edge_io_rings_firmware_manifest.yaml",
+        "firmware/manifests/student_14_5_firmware_manifest.yaml",
+        "firmware/manifests/ds_xl_coder_firmware_manifest.yaml",
+        "firmware/manifests/handheld_hybrid_firmware_manifest.yaml"
+      ]
+    }
+  },
+  "key_defects_confirmed": [
+    {
+      "id": "NPI_DEFECT-HANDHELD-IMAGE-SLOT-FIT-001",
+      "status": "OPEN",
+      "severity": "S1",
+      "summary": "Production A/B/recovery images unproven vs Outcome A 5.0 GiB slot budgets; DEV/QEMU reference sizes only."
+    },
+    {
+      "id": "COM-HPC_NDA_PINMAP",
+      "status": "EXTERNAL",
+      "summary": "Student/DS-XL COM-HPC Mini net-accurate / dual-eDP maps remain NDA-blocked."
+    },
+    {
+      "id": "DOCK_TB4_NDA_BALLMAP_SI",
+      "status": "EXTERNAL",
+      "summary": "JHL8440/JHL9040R ball maps + TB4 SI remain NDA/BINARY_BLOB; TB5 correctly rejected."
+    },
+    {
+      "id": "RING_ZEPHYR_WEST_BUILD_SOFT_SKIP",
+      "status": "OPEN",
+      "summary": "Full Zephyr west build PASS not earned; freestanding digital harness only."
+    },
+    {
+      "id": "RM520N-GL_6G_NTN_UNAVAILABLE",
+      "status": "UNAVAILABLE",
+      "summary": "Modem is 5G NR Sub-6 + LTE; do not claim NTN/6G."
+    }
+  ],
+  "honesty_gate": {
+    "does_not_require_HW_FIRMWARE_DIGITAL_PACKAGE_PASS": true,
+    "audit_fail_is_acceptable_truth_baseline": true,
+    "claims_hardware_digitally_complete": false
+  },
+  "verdict": {
+    "HW001_TRUTH_AUDIT_ACCEPTANCE_PASS": true,
+    "HW_FIRMWARE_DIGITAL_PACKAGE_COMPLETE": false,
+    "HARDWARE_60_READY_FOR_EDMUND_MERGE_AS_TRUTH_BASELINE": true,
+    "summary": "Independent acceptance PASS for #60 as a truthful FAIL baseline. CI green on tip 82dbbc2. Firmware/digital package remains incomplete — token split enforced."
+  }
+}
