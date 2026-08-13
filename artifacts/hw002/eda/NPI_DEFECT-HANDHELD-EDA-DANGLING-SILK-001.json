@@ -1,0 +1,38 @@
+{
+  "schema": "gunnchos.hw002.eda_defect_closure.v1",
+  "generated_at_utc": "2026-08-12T21:05:00Z",
+  "defect_id": "NPI_DEFECT-HANDHELD-EDA-DANGLING-SILK-001",
+  "title": "Handheld Cont IX orphan net-0 dangling tracks + REV silk over H1 NPTH",
+  "sku": "handheld_hybrid",
+  "severity": "S1",
+  "status": "CLOSED",
+  "selected_as": "highest_risk_non_NDA_digital_EDA_gap_for_HW002",
+  "why_selected": "Late-discovery Cont IX residual DRC warnings: floating net-0 copper stubs (fab risk) and silk clipped by mounting hole. Closable without inventing NDA pin maps.",
+  "actions": [
+    "Deleted 12 orphan (net 0) stub segments that produced track_dangling warnings",
+    "Moved F.SilkS REV text from (12,10) to (20,6) clear of H1 NPTH; rev stamp 0.6.1-hw002"
+  ],
+  "drc_before_warning_counts": {
+    "track_dangling": 10,
+    "lib_footprint_mismatch": 39,
+    "silk_over_copper": 1
+  },
+  "drc_after_warning_counts": {
+    "lib_footprint_mismatch": 39
+  },
+  "closed_warning_types": [
+    "track_dangling",
+    "silk_over_copper"
+  ],
+  "remaining_warning_types": {
+    "lib_footprint_mismatch": 39
+  },
+  "drc_errors": 0,
+  "evidence": [
+    "artifacts/hw002/eda/handheld_hybrid_drc_after.json",
+    "artifacts/hw002/eda/HANDHELD_DRC_CLOSURE.json",
+    "device_designs/handheld_hybrid/kicad/handheld_hybrid.kicad_pcb"
+  ],
+  "physical_pass": false,
+  "claim_boundary": "Digital DRC warning closure only. No physical PASS. lib_footprint_mismatch remains open digital hygiene."
+}

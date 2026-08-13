@@ -1,0 +1,6 @@
+{
+  "HW_FIRMWARE_DIGITAL_PACKAGE_COMPLETE": false,
+  "updated_at_utc": "2026-08-12T21:06:41Z",
+  "reason": "HW-002 closed EDA dangling/silk + earned Ring Zephyr west PASS, but production Handheld A/B images, NDA pin maps, residual footprint warnings, and physical firmware gaps remain.",
+  "item": "HW-002"
+}

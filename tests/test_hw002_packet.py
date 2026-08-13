@@ -1,0 +1,60 @@
+"""HW-002 packet honesty gates."""
+from __future__ import annotations
+
+import json
+from pathlib import Path
+
+ROOT = Path(__file__).resolve().parents[1]
+HW002 = ROOT / "artifacts" / "hw002"
+
+
+def test_hw002_package_complete_remains_false():
+    summary = json.loads((HW002 / "HW002_PACKET_SUMMARY.json").read_text())
+    assert summary["HW_FIRMWARE_DIGITAL_PACKAGE_COMPLETE"] is False
+    assert summary["physical_pass"] is False
+    assert summary["npi"]["NPI_DEFECT-HANDHELD-IMAGE-SLOT-FIT-001"] == "CLOSED"
+    assert summary["npi"]["NPI_DEFECT-HANDHELD-EDA-DANGLING-SILK-001"] == "CLOSED"
+    assert summary["zephyr_west"]["west_build_pass"] is True
+    assert summary["zephyr_west"]["soft_skip"] is False
+    assert summary["image_fit"]["SHIPPING_IMAGE"] is False
+    assert summary["image_fit"]["PRODUCTION_RELEASE_CLAIMED"] is False
+
+
+def test_hw002_west_probe_no_soft_skip():
+    probe = json.loads((HW002 / "zephyr_west" / "ZEPHYR_WEST_PROBE.json").read_text())
+    assert probe["west_build_pass"] is True
+    assert probe["soft_skip"] is False
+    assert probe["blockers"] == []
+
+
+def test_hw002_image_fit_closed_digitally():
+    defect = json.loads(
+        (ROOT / "npi/phase_xv/handheld_storage_headroom/NPI_DEFECT-HANDHELD-IMAGE-SLOT-FIT-001.json").read_text()
+    )
+    remodel = json.loads(
+        (ROOT / "npi/phase_xv/handheld_storage_headroom/HANDHELD_STORAGE_IMAGE_FIT_REMODEL.json").read_text()
+    )
+    dos = json.loads((HW002 / "image_fit" / "DEVICE_OS_IMAGE_FIT_MANIFEST.json").read_text())
+    assert defect["status"] == "CLOSED"
+    assert remodel["npi_status"] == "CLOSED"
+    assert remodel["fit_assessment"]["production_image_fit_verdict"] == "PASS"
+    assert remodel["fit_assessment"]["realm_rootfs_artifacts_present"] is True
+    assert remodel["fit_assessment"]["current_digital_realm_numeric_fit"] is True
+    assert remodel["fit_assessment"]["stub_like_rootfs_payloads"] is False
+    assert remodel["fit_assessment"]["production_intent_digital_present"] is True
+    assert remodel["hardware_truth"]["larger_emmc_sku_invented"] is False
+    assert dos["PRODUCTION_RELEASE_CLAIMED"] is False
+    assert dos.get("SHIPPING_IMAGE") is False
+    assert dos["npi"]["recommended_status"] == "CLOSE"
+    assert dos["npi"]["closure_gate_met"] is True
+    assert dos["fit_assessment"]["production_image_fit_verdict"] == "PASS_PRODUCTION_INTENT_DIGITAL_FIT"
+    for slot in ("slot_a", "slot_b", "recovery"):
+        assert dos["slot_fit"][slot]["margin_gib"] > 0
+        assert dos["slot_fit"][slot]["production_intent_digital"] is True
+
+
+def test_hw002_west_script_forbids_soft_skip():
+    script = (ROOT / "firmware/edge_io_rings/zephyr_west/scripts/require_west_build.sh").read_text()
+    assert "soft-skip" in script.lower() or "soft_skip" in script.lower()
+    assert "exit 1" in script
+    assert "RING_ZEPHYR_WEST_BUILD_FAIL" in script

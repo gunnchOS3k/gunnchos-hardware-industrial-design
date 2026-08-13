@@ -1,14 +1,14 @@
 {
-  "updated_at_utc": "2026-08-12T20:10:00Z",
+  "updated_at_utc": "2026-08-12T21:05:00Z",
   "DIGITAL": [
-    "NPI_DEFECT-HANDHELD-IMAGE-SLOT-FIT-001 OPEN — production A/B image fit unproven (STREAM C); digital capacity model execution failure pending measured production slot images",
-    "Ring RING_ZEPHYR_WEST_BUILD_PASS not earned (edge-io soft-skip); west build execution failure / soft-skip",
-    "Dock/edge harness manifests were missing prior to STREAM C stubs — on-target firmware still open; prior harness execution failure",
-    "ERC/DRC errors=0 but residual warnings remain — digital exhaustion execution failure (lib_footprint_mismatch / track_dangling / silk)"
+    "NPI_DEFECT-HANDHELD-IMAGE-SLOT-FIT-001 OPEN \u2014 production A/B image fit unproven (HW-002 remeasure); digital capacity model execution failure pending measured production slot images",
+    "lib_footprint_mismatch residual warnings remain on Cont IX boards \u2014 digital exhaustion execution failure (footprint filter/courtyard hygiene)",
+    "Dock/Student/DS-XL on-target firmware + NDA pin-accurate fanout still open; harness-only digital path \u2014 prior on-target execution failure"
   ],
   "PHYSICAL": [
     "PHYSICAL_EXECUTION_FREEZE \u2014 no fab, purchase, flash, assemble",
-    "No manufacturer DFM sign-off yet (DFM_PRECHECK is digital self-check only)"
+    "No manufacturer DFM sign-off yet (DFM_PRECHECK is digital self-check only)",
+    "Ring physical boot pending despite RING_ZEPHYR_WEST_BUILD_PASS (digital only)"
   ],
   "EXTERNAL": [
     "COM-HPC Mini 400-pin net map (PICMG/ADLINK NARROW_NDA) \u2014 Student/DS-XL",
@@ -17,6 +17,12 @@
     "Display panel exact MPNs + hinge bend OEM spec \u2014 DS-XL AVL quotes",
     "Paste/reflow profile vendor values; some fastener torque OEM values"
   ],
+  "hw002_closures": {
+    "NPI_DEFECT-HANDHELD-EDA-DANGLING-SILK-001": "CLOSED \u2014 track_dangling=0 silk_over_copper=0 on handheld_hybrid (digital DRC only)",
+    "RING_ZEPHYR_WEST_BUILD_PASS": "EARNED \u2014 real west build in firmware/edge_io_rings/zephyr_west (soft-skip forbidden); physical boot NOT claimed",
+    "NPI_DEFECT-HANDHELD-IMAGE-SLOT-FIT-001": "OPEN \u2014 prefer FAIL; no production slot images",
+    "HW_FIRMWARE_DIGITAL_PACKAGE_COMPLETE": false
+  },
   "per_product": {
     "handheld_hybrid": {
       "manufacturer_token": "HANDHELD_HYBRID_MANUFACTURER_PACKAGE_READY",
@@ -35,6 +41,7 @@
       "hierarchical_sheets": 19,
       "unrouted_required_nets": 0,
       "proxy_footprints": [],
+      "hw002_drc_note": "track_dangling and silk_over_copper closed; lib_footprint_mismatch=39 remains",
       "honesty": "Conditional vendor collateral tokens used only where gunnchOS-owned intent complete and NDA/vendor docs remain; no proxy footprints claimed as release-ready."
     },
     "edge_io_rings": {
@@ -42,7 +49,8 @@
       "tokens": {
         "MANUFACTURER_PACKAGE_READY": true,
         "ASSEMBLY_READY": true,
-        "DIGITAL_PRE_EVT_RELEASE_READY": true
+        "DIGITAL_PRE_EVT_RELEASE_READY": true,
+        "RING_ZEPHYR_WEST_BUILD_PASS": true
       },
       "eda_release_clean_pass": true,
       "erc_errors": 0,
@@ -53,7 +61,7 @@
       "hierarchical_sheets": 0,
       "unrouted_required_nets": 0,
       "proxy_footprints": [],
-      "honesty": "Conditional vendor collateral tokens used only where gunnchOS-owned intent complete and NDA/vendor docs remain; no proxy footprints claimed as release-ready."
+      "honesty": "Zephyr west digital PASS earned in hardware-repo workspace; physical flash/boot pending. Full fusion drivers remain in edge-io."
     },
     "dock": {
       "manufacturer_token": "DOCK_MANUFACTURER_PACKAGE_READY_CONDITIONAL_VENDOR_COLLATERAL",
@@ -126,11 +134,13 @@
       "drc": {
         "present": true,
         "errors": 0,
-        "warnings": 50,
+        "warnings": 39,
         "by_type": {
-          "warning:track_dangling": 10,
-          "warning:lib_footprint_mismatch": 39,
-          "warning:silk_over_copper": 1
+          "warning:lib_footprint_mismatch": 39
+        },
+        "hw002_closed": {
+          "warning:track_dangling": 0,
+          "warning:silk_over_copper": 0
         }
       }
     },
@@ -219,5 +229,5 @@
       }
     }
   },
-  "stream_c_honesty_note": "Prior Cont IX DIGITAL=[] over-claimed; corrected without claiming physical closure."
+  "stream_c_honesty_note": "HW-002 closed handheld dangling/silk DRC + earned Ring Zephyr west PASS. DIGITAL remains non-empty; HW_FIRMWARE_DIGITAL_PACKAGE_COMPLETE=false."
 }

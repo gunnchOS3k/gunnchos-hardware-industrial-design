@@ -1,0 +1,25 @@
+# HW-002 Ring Zephyr west workspace (hardware repo).
+# Zephyr modules are external (ZEPHYR_BASE / shared workspace) — not vendored here.
+manifest:
+  version: "0.13"
+  remotes:
+    - name: zephyrproject-rtos
+      url-base: https://github.com/zephyrproject-rtos
+  defaults:
+    remote: zephyrproject-rtos
+  projects:
+    - name: zephyr
+      revision: v3.7.1
+      west-commands: scripts/west-commands.yml
+      import:
+        name-allowlist:
+          - cmsis
+          - cmsis_6
+          - hal_nordic
+          - mbedtls
+          - mcuboot
+          - nordic-softdevice
+          - segger
+          - tinycrypt
+  self:
+    path: .

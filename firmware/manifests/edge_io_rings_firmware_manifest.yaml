@@ -1,11 +1,11 @@
 device_id: edge_io_rings
 device_name: Edge I/O Rings
 firmware_target: gunnchos_ring_digital_harness_v1
-firmware_version: 0.1.0-harness
+firmware_version: 0.2.0-hw002-west
 boot_model: nrf52840_freestanding_or_zephyr
 supported_boot_paths:
 - freestanding_arm_clang_mcuboot_dev
-- zephyr_west_soft_skip
+- zephyr_west_hard_gate
 hardware_interfaces:
   ble_mcu:
     mpn: nRF52840-QIAA-R
@@ -19,13 +19,22 @@ hardware_interfaces:
     mpn: SE050C1HQ1
 primary_firmware_repo: edge-io-measurement-node
 primary_firmware_path: gate1_digital_fabrication/ring_firmware/
+hardware_west_workspace: firmware/edge_io_rings/zephyr_west/
+west_build:
+  required: true
+  soft_skip_allowed: false
+  script: firmware/edge_io_rings/zephyr_west/scripts/require_west_build.sh
+  evidence: artifacts/hw002/zephyr_west/ZEPHYR_WEST_PROBE.json
+  token: RING_ZEPHYR_WEST_BUILD_PASS
 capsule_update:
   supported: true
   simulated_only: true
 claim_boundary: >-
-  Digital harness cross-link only. Authoritative ring firmware digital path is
-  edge-io freestanding ARM clang + MCUboot DEVELOPMENT. RING_ZEPHYR_WEST_BUILD_PASS
-  not claimed. Physical flash/boot pending.
+  HW-002: hardware-repo Zephyr west workspace requires real `west build`
+  (soft-skip forbidden). RING_ZEPHYR_WEST_BUILD_PASS is digital-only.
+  Full fusion drivers remain in edge-io. Physical flash/boot pending.
+  HW_FIRMWARE_DIGITAL_PACKAGE_COMPLETE remains false.
 digital_implementation_open:
-- ZEPHYR_WEST full build (soft-skip)
-- Physical multimodal tracking
+- Physical multimodal tracking / flash
+- Full fusion west app parity continuously synced from edge-io
+- UWB Qorvo BINARY_BLOB portions

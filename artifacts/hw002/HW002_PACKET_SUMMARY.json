@@ -1,0 +1,71 @@
+{
+  "schema": "gunnchos.hw002.packet_summary.v1",
+  "item": "HW-002",
+  "generated_at_utc": "2026-08-12T22:22:29Z",
+  "baseline_main_tip": "4ba876d42f59f03d4b5c5ef0ca776e1253da814d",
+  "HW_FIRMWARE_DIGITAL_PACKAGE_COMPLETE": false,
+  "physical_pass": false,
+  "npi": {
+    "NPI_DEFECT-HANDHELD-IMAGE-SLOT-FIT-001": "CLOSED",
+    "NPI_DEFECT-HANDHELD-EDA-DANGLING-SILK-001": "CLOSED"
+  },
+  "zephyr_west": {
+    "status": "RING_ZEPHYR_WEST_BUILD_PASS",
+    "soft_skip": false,
+    "west_build_pass": true,
+    "board": "nrf52840dk/nrf52840",
+    "elf_bytes": 1078404,
+    "sha256sums": [
+      "7986129fb6072b3f9ac983784495487f105d80a5c1de2ae8351f882618833d82  hw002_ring_zephyr_nrf52840.bin",
+      "9f5bf523d5b6254793af4a47bd065c2824b9db149b79219dd9ff12c3dd9eb4a4  hw002_ring_zephyr_nrf52840.elf",
+      "20132154eadcc05bc0624e277ce0fd1bc2697e204b3edc687a5e53253ab67da8  hw002_ring_zephyr_nrf52840.hex"
+    ]
+  },
+  "eda_closure": {
+    "defect": "NPI_DEFECT-HANDHELD-EDA-DANGLING-SILK-001",
+    "track_dangling": 0,
+    "silk_over_copper": 0,
+    "remaining": {
+      "lib_footprint_mismatch": 39
+    }
+  },
+  "image_fit": {
+    "verdict": "PASS_PRODUCTION_INTENT_DIGITAL_FIT",
+    "status": "CLOSED",
+    "architecture": "Outcome A retained (32GB eMMC system + microSD)",
+    "device_os_image_fit_tip": "f5da4ed64eeeccbf205980a92901b07f2c43ae22",
+    "device_os_image_fit_pr": "https://github.com/gunnchOS3k/gunnchos-device-os/pull/107",
+    "current_digital_realm_numeric_fit": true,
+    "stub_like_rootfs_payloads": false,
+    "production_intent_digital_present": true,
+    "SHIPPING_IMAGE": false,
+    "PRODUCTION_RELEASE_CLAIMED": false,
+    "sizes_summary_gib": {
+      "evt_rootfs_compressed": 0.005879017,
+      "evt_rootfs_uncompressed": 0.011701437,
+      "factory_rootfs_compressed": 0.004028673,
+      "production_def_rootfs_compressed": 0.005843321,
+      "production_def_rootfs_uncompressed": 0.011548556,
+      "recovery_composed": 0.020781854,
+      "recovery_margin": 1.979218146,
+      "recovery_rootfs_compressed": 0.003587433,
+      "shared_boot_combined": 0.013169073,
+      "slot_a_composed": 0.024717629,
+      "slot_a_margin": 4.975282371,
+      "slot_b_composed": 0.024717629,
+      "slot_b_margin": 4.975282371
+    }
+  },
+  "remaining_digital_opens": [
+    "lib_footprint_mismatch residual warnings (handheld + family)",
+    "COM-HPC Mini / dual-eDP pin maps (EXTERNAL/NDA)",
+    "Dock JHL8440/JHL9040R ball maps + TB4 SI (EXTERNAL/NDA + BINARY_BLOB)",
+    "Ring physical boot / multimodal tracking (PHYSICAL)",
+    "On-target Student/DS-XL/Dock firmware (PHYSICAL + BINARY_BLOB)"
+  ],
+  "evidence_roots": [
+    "artifacts/hw002/image_fit/",
+    "artifacts/hw002/zephyr_west/",
+    "artifacts/hw002/eda/"
+  ]
+}
