@@ -1,0 +1,73 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://gunnchos.local/schemas/supply_chain_fields.v1.json",
+  "title": "gunnchOS supply-chain machine-readable fields",
+  "type": "object",
+  "required": [
+    "schema",
+    "sku",
+    "PRODUCTION_RELEASE_CLAIMED",
+    "rfq_purchase_fab",
+    "claim_boundary",
+    "parts"
+  ],
+  "properties": {
+    "schema": { "type": "string", "const": "gunnchos.supply_chain.fields.v1" },
+    "sku": { "type": "string" },
+    "source_bom": { "type": "string" },
+    "PRODUCTION_RELEASE_CLAIMED": { "type": "boolean", "const": false },
+    "rfq_purchase_fab": { "type": "string", "const": "NOT_THIS_STREAM" },
+    "claim_boundary": { "type": "string", "minLength": 20 },
+    "parts": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "mpn",
+          "manufacturer",
+          "qty",
+          "preferred_or_alternate",
+          "alternate_mpn",
+          "avl",
+          "sole_source",
+          "lifecycle_status",
+          "lead_time_weeks",
+          "moq",
+          "unit_price",
+          "stock_qty"
+        ],
+        "properties": {
+          "mpn": { "type": "string" },
+          "manufacturer": { "type": "string" },
+          "description": { "type": "string" },
+          "qty": { "type": ["integer", "string"] },
+          "preferred_or_alternate": { "type": "string" },
+          "alternate_mpn": { "type": "string" },
+          "avl": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "required": ["vendor", "qualification"],
+              "properties": {
+                "vendor": { "type": "string" },
+                "qualification": {
+                  "type": "string",
+                  "enum": ["CANDIDATE", "AVL_PENDING", "UNKNOWN"]
+                }
+              }
+            }
+          },
+          "sole_source": { "type": ["boolean", "string"] },
+          "lifecycle_status": {
+            "type": "string",
+            "enum": ["ACTIVE", "NRND", "EOL", "UNKNOWN"]
+          },
+          "lead_time_weeks": {},
+          "moq": {},
+          "unit_price": {},
+          "stock_qty": {}
+        }
+      }
+    }
+  }
+}

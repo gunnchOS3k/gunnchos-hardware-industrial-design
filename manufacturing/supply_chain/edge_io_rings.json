@@ -1,0 +1,539 @@
+{
+  "PRODUCTION_RELEASE_CLAIMED": false,
+  "claim_boundary": "Machine-readable supply-chain fields compiled from existing BOM CSVs. Stock, unit price, lead time, and MOQ stay UNKNOWN unless a cited supplier quote exists (none in this STREAM). RFQ/purchase/fab NOT_THIS_STREAM. PRODUCTION_RELEASE_CLAIMED=false.",
+  "parts": [
+    {
+      "alternate_mpn": "nRF52833-QIAA-R",
+      "avl": [
+        {
+          "qualification": "CANDIDATE",
+          "vendor": "Nordic Semiconductor"
+        }
+      ],
+      "bom_status": "BLE + USB + sufficient flash for DFU+protocol",
+      "description": "Bluetooth 5.3 SoC Cortex-M4F 1MB/256KB",
+      "lead_time_weeks": "UNKNOWN",
+      "lifecycle_status": "UNKNOWN",
+      "manufacturer": "Nordic Semiconductor",
+      "moq": "UNKNOWN",
+      "mpn": "nRF52840-QIAA-R",
+      "notes": "BLE + USB + sufficient flash for DFU+protocol",
+      "preferred_or_alternate": "preferred",
+      "qty": 1,
+      "sole_source": false,
+      "stock_qty": "UNKNOWN",
+      "subsystem": "MCU",
+      "unit_price": "UNKNOWN"
+    },
+    {
+      "alternate_mpn": "ICM-42670-P",
+      "avl": [
+        {
+          "qualification": "CANDIDATE",
+          "vendor": "Bosch Sensortec"
+        }
+      ],
+      "bom_status": "Low-power IMU with wrist/gesture friendly config",
+      "description": "6-axis IMU with gesture features",
+      "lead_time_weeks": "UNKNOWN",
+      "lifecycle_status": "UNKNOWN",
+      "manufacturer": "Bosch Sensortec",
+      "moq": "UNKNOWN",
+      "mpn": "BMI270",
+      "notes": "Low-power IMU with wrist/gesture friendly config",
+      "preferred_or_alternate": "preferred",
+      "qty": 1,
+      "sole_source": false,
+      "stock_qty": "UNKNOWN",
+      "subsystem": "IMU",
+      "unit_price": "UNKNOWN"
+    },
+    {
+      "alternate_mpn": "MAX77654",
+      "avl": [
+        {
+          "qualification": "CANDIDATE",
+          "vendor": "Nordic Semiconductor"
+        }
+      ],
+      "bom_status": "Integrated charging + LDOs for coin/LiPo wearables",
+      "description": "PMIC charger+regulators+fuel gauge for nRF",
+      "lead_time_weeks": "UNKNOWN",
+      "lifecycle_status": "UNKNOWN",
+      "manufacturer": "Nordic Semiconductor",
+      "moq": "UNKNOWN",
+      "mpn": "npm1300-CAAA-R",
+      "notes": "Integrated charging + LDOs for coin/LiPo wearables",
+      "preferred_or_alternate": "preferred",
+      "qty": 1,
+      "sole_source": false,
+      "stock_qty": "UNKNOWN",
+      "subsystem": "PMIC",
+      "unit_price": "UNKNOWN"
+    },
+    {
+      "alternate_mpn": "LP402025-200mAh",
+      "avl": [
+        {
+          "qualification": "CANDIDATE",
+          "vendor": "Jauch / generic LiPo"
+        }
+      ],
+      "bom_status": "Size fit for ring band cavity; LIVE quote required",
+      "description": "LiPo 3.7V 250mAh candidate cell",
+      "lead_time_weeks": "UNKNOWN",
+      "lifecycle_status": "UNKNOWN",
+      "manufacturer": "Jauch / generic LiPo",
+      "moq": "UNKNOWN",
+      "mpn": "LP502030-3.7V-250mAh",
+      "notes": "Size fit for ring band cavity; LIVE quote required",
+      "preferred_or_alternate": "preferred",
+      "qty": 1,
+      "sole_source": false,
+      "stock_qty": "UNKNOWN",
+      "subsystem": "Battery",
+      "unit_price": "UNKNOWN"
+    },
+    {
+      "alternate_mpn": "CUI PJ-002AH",
+      "avl": [
+        {
+          "qualification": "CANDIDATE",
+          "vendor": "Mill-Max"
+        }
+      ],
+      "bom_status": "Charging/debug access on ring ID surface",
+      "description": "Pogo/spring contact pair for dock charge",
+      "lead_time_weeks": "UNKNOWN",
+      "lifecycle_status": "UNKNOWN",
+      "manufacturer": "Mill-Max",
+      "moq": "UNKNOWN",
+      "mpn": "319-10-102-00-001000",
+      "notes": "Charging/debug access on ring ID surface",
+      "preferred_or_alternate": "preferred",
+      "qty": 2,
+      "sole_source": false,
+      "stock_qty": "UNKNOWN",
+      "subsystem": "Charger contact",
+      "unit_price": "UNKNOWN"
+    },
+    {
+      "alternate_mpn": "NCP167BMX330TBG",
+      "avl": [
+        {
+          "qualification": "CANDIDATE",
+          "vendor": "Texas Instruments"
+        }
+      ],
+      "bom_status": "Always-on rail if PMIC rail partitioned",
+      "description": "3.3V 500mA LDO backup rail",
+      "lead_time_weeks": "UNKNOWN",
+      "lifecycle_status": "UNKNOWN",
+      "manufacturer": "Texas Instruments",
+      "moq": "UNKNOWN",
+      "mpn": "TLV75533PDBVR",
+      "notes": "Always-on rail if PMIC rail partitioned",
+      "preferred_or_alternate": "preferred",
+      "qty": 1,
+      "sole_source": false,
+      "stock_qty": "UNKNOWN",
+      "subsystem": "LDO aux",
+      "unit_price": "UNKNOWN"
+    },
+    {
+      "alternate_mpn": "PESD3V3S1UL",
+      "avl": [
+        {
+          "qualification": "CANDIDATE",
+          "vendor": "Nexperia"
+        }
+      ],
+      "bom_status": "IEC 61000-4-2 on exposed contacts",
+      "description": "ESD protection for charge contacts",
+      "lead_time_weeks": "UNKNOWN",
+      "lifecycle_status": "UNKNOWN",
+      "manufacturer": "Nexperia",
+      "moq": "UNKNOWN",
+      "mpn": "PESD5V0S1UL",
+      "notes": "IEC 61000-4-2 on exposed contacts",
+      "preferred_or_alternate": "preferred",
+      "qty": 2,
+      "sole_source": false,
+      "stock_qty": "UNKNOWN",
+      "subsystem": "ESD USB/CHG",
+      "unit_price": "UNKNOWN"
+    },
+    {
+      "alternate_mpn": "\u2014",
+      "avl": [
+        {
+          "qualification": "CANDIDATE",
+          "vendor": "Nexperia"
+        }
+      ],
+      "bom_status": "RF path protection where applicable",
+      "description": "ESD for antenna feed if needed",
+      "lead_time_weeks": "UNKNOWN",
+      "lifecycle_status": "UNKNOWN",
+      "manufacturer": "Nexperia",
+      "moq": "UNKNOWN",
+      "mpn": "PESD5V0X1UB",
+      "notes": "RF path protection where applicable",
+      "preferred_or_alternate": "preferred",
+      "qty": 1,
+      "sole_source": false,
+      "stock_qty": "UNKNOWN",
+      "subsystem": "ESD RF",
+      "unit_price": "UNKNOWN"
+    },
+    {
+      "alternate_mpn": "PCB inverted-F",
+      "avl": [
+        {
+          "qualification": "CANDIDATE",
+          "vendor": "Johanson Technology"
+        }
+      ],
+      "bom_status": "2.4 GHz BLE; keepout per datasheet",
+      "description": "2.4GHz chip antenna",
+      "lead_time_weeks": "UNKNOWN",
+      "lifecycle_status": "UNKNOWN",
+      "manufacturer": "Johanson Technology",
+      "moq": "UNKNOWN",
+      "mpn": "2450AT18A100",
+      "notes": "2.4 GHz BLE; keepout per datasheet",
+      "preferred_or_alternate": "preferred",
+      "qty": 1,
+      "sole_source": false,
+      "stock_qty": "UNKNOWN",
+      "subsystem": "Antenna",
+      "unit_price": "UNKNOWN"
+    },
+    {
+      "alternate_mpn": "\u2014",
+      "avl": [
+        {
+          "qualification": "CANDIDATE",
+          "vendor": "Winbond"
+        }
+      ],
+      "bom_status": "Optional factory log / larger DFU staging",
+      "description": "16Mbit SPI flash optional logging",
+      "lead_time_weeks": "UNKNOWN",
+      "lifecycle_status": "UNKNOWN",
+      "manufacturer": "Winbond",
+      "moq": "UNKNOWN",
+      "mpn": "W25Q16JVSSIQ",
+      "notes": "Optional factory log / larger DFU staging",
+      "preferred_or_alternate": "alternate",
+      "qty": 1,
+      "sole_source": false,
+      "stock_qty": "UNKNOWN",
+      "subsystem": "Flash (opt)",
+      "unit_price": "UNKNOWN"
+    },
+    {
+      "alternate_mpn": "Vybronem VLV101040A",
+      "avl": [
+        {
+          "qualification": "CANDIDATE",
+          "vendor": "Jinlong Machinery"
+        }
+      ],
+      "bom_status": "Haptic confirmation for pairing/calibration",
+      "description": "Coin vibration motor 10mm",
+      "lead_time_weeks": "UNKNOWN",
+      "lifecycle_status": "UNKNOWN",
+      "manufacturer": "Jinlong Machinery",
+      "moq": "UNKNOWN",
+      "mpn": "C1026B002F",
+      "notes": "Haptic confirmation for pairing/calibration",
+      "preferred_or_alternate": "preferred",
+      "qty": 1,
+      "sole_source": false,
+      "stock_qty": "UNKNOWN",
+      "subsystem": "Haptic",
+      "unit_price": "UNKNOWN"
+    },
+    {
+      "alternate_mpn": "GPIO+MOSFET",
+      "avl": [
+        {
+          "qualification": "CANDIDATE",
+          "vendor": "Texas Instruments"
+        }
+      ],
+      "bom_status": "Closed-loop haptic effects",
+      "description": "Haptic driver with library",
+      "lead_time_weeks": "UNKNOWN",
+      "lifecycle_status": "UNKNOWN",
+      "manufacturer": "Texas Instruments",
+      "moq": "UNKNOWN",
+      "mpn": "DRV2605LDGSR",
+      "notes": "Closed-loop haptic effects",
+      "preferred_or_alternate": "preferred",
+      "qty": 1,
+      "sole_source": false,
+      "stock_qty": "UNKNOWN",
+      "subsystem": "Haptic driver",
+      "unit_price": "UNKNOWN"
+    },
+    {
+      "alternate_mpn": "APA1606CGCK",
+      "avl": [
+        {
+          "qualification": "CANDIDATE",
+          "vendor": "Kingbright"
+        }
+      ],
+      "bom_status": "Pairing/battery status",
+      "description": "Green 0603 LED",
+      "lead_time_weeks": "UNKNOWN",
+      "lifecycle_status": "UNKNOWN",
+      "manufacturer": "Kingbright",
+      "moq": "UNKNOWN",
+      "mpn": "APTD1608LCGCK",
+      "notes": "Pairing/battery status",
+      "preferred_or_alternate": "preferred",
+      "qty": 1,
+      "sole_source": false,
+      "stock_qty": "UNKNOWN",
+      "subsystem": "Status LED",
+      "unit_price": "UNKNOWN"
+    },
+    {
+      "alternate_mpn": "2x3 1.27mm hdr",
+      "avl": [
+        {
+          "qualification": "CANDIDATE",
+          "vendor": "Tag-Connect"
+        }
+      ],
+      "bom_status": "SWD programming/debug without tall header",
+      "description": "SWD 6-pin no-legs footprint",
+      "lead_time_weeks": "UNKNOWN",
+      "lifecycle_status": "UNKNOWN",
+      "manufacturer": "Tag-Connect",
+      "moq": "UNKNOWN",
+      "mpn": "TC2030-IDC-NL",
+      "notes": "SWD programming/debug without tall header",
+      "preferred_or_alternate": "preferred",
+      "qty": 1,
+      "sole_source": false,
+      "stock_qty": "UNKNOWN",
+      "subsystem": "Debug",
+      "unit_price": "UNKNOWN"
+    },
+    {
+      "alternate_mpn": "NCP18XH103F03RB",
+      "avl": [
+        {
+          "qualification": "CANDIDATE",
+          "vendor": "Murata"
+        }
+      ],
+      "bom_status": "Charge safety temperature sense",
+      "description": "10k NTC for battery temp",
+      "lead_time_weeks": "UNKNOWN",
+      "lifecycle_status": "UNKNOWN",
+      "manufacturer": "Murata",
+      "moq": "UNKNOWN",
+      "mpn": "NCP15XH103F03RC",
+      "notes": "Charge safety temperature sense",
+      "preferred_or_alternate": "preferred",
+      "qty": 1,
+      "sole_source": false,
+      "stock_qty": "UNKNOWN",
+      "subsystem": "NTC",
+      "unit_price": "UNKNOWN"
+    },
+    {
+      "alternate_mpn": "GRM155R61A104KA01D",
+      "avl": [
+        {
+          "qualification": "CANDIDATE",
+          "vendor": "Samsung Electro-Mechanics"
+        }
+      ],
+      "bom_status": "Local decoupling MCU/IMU/PMIC",
+      "description": "100nF 0402 X5R",
+      "lead_time_weeks": "UNKNOWN",
+      "lifecycle_status": "UNKNOWN",
+      "manufacturer": "Samsung Electro-Mechanics",
+      "moq": "UNKNOWN",
+      "mpn": "CL05A104KA5NNNC",
+      "notes": "Local decoupling MCU/IMU/PMIC",
+      "preferred_or_alternate": "preferred",
+      "qty": 12,
+      "sole_source": false,
+      "stock_qty": "UNKNOWN",
+      "subsystem": "Decoupling",
+      "unit_price": "UNKNOWN"
+    },
+    {
+      "alternate_mpn": "CL10A106MQ8NNNC",
+      "avl": [
+        {
+          "qualification": "CANDIDATE",
+          "vendor": "Murata"
+        }
+      ],
+      "bom_status": "Bulk on VBAT/3V3",
+      "description": "10uF 0603",
+      "lead_time_weeks": "UNKNOWN",
+      "lifecycle_status": "UNKNOWN",
+      "manufacturer": "Murata",
+      "moq": "UNKNOWN",
+      "mpn": "GRM188R60J106ME47D",
+      "notes": "Bulk on VBAT/3V3",
+      "preferred_or_alternate": "preferred",
+      "qty": 4,
+      "sole_source": false,
+      "stock_qty": "UNKNOWN",
+      "subsystem": "Bulk cap",
+      "unit_price": "UNKNOWN"
+    },
+    {
+      "alternate_mpn": "ERJ-2RKF1002X",
+      "avl": [
+        {
+          "qualification": "CANDIDATE",
+          "vendor": "Yageo"
+        }
+      ],
+      "bom_status": "Pull-ups I2C/config",
+      "description": "10k 0402 1%",
+      "lead_time_weeks": "UNKNOWN",
+      "lifecycle_status": "UNKNOWN",
+      "manufacturer": "Yageo",
+      "moq": "UNKNOWN",
+      "mpn": "RC0402FR-0710KL",
+      "notes": "Pull-ups I2C/config",
+      "preferred_or_alternate": "preferred",
+      "qty": 8,
+      "sole_source": false,
+      "stock_qty": "UNKNOWN",
+      "subsystem": "Series R",
+      "unit_price": "UNKNOWN"
+    },
+    {
+      "alternate_mpn": "IQS550",
+      "avl": [
+        {
+          "qualification": "CANDIDATE",
+          "vendor": "Azoteq"
+        }
+      ],
+      "bom_status": "ADR-FP-008 contact modality",
+      "description": "Capacitive touch/proximity controller",
+      "lead_time_weeks": "UNKNOWN",
+      "lifecycle_status": "UNKNOWN",
+      "manufacturer": "Azoteq",
+      "moq": "UNKNOWN",
+      "mpn": "IQS7222A",
+      "notes": "ADR-FP-008 contact modality",
+      "preferred_or_alternate": "preferred",
+      "qty": 1,
+      "sole_source": false,
+      "stock_qty": "UNKNOWN",
+      "subsystem": "Capacitive",
+      "unit_price": "UNKNOWN"
+    },
+    {
+      "alternate_mpn": "DW3000+balun",
+      "avl": [
+        {
+          "qualification": "CANDIDATE",
+          "vendor": "Qorvo"
+        }
+      ],
+      "bom_status": "Spatial ranging assist; DNP\u2192UWB_ON_COMPANION",
+      "description": "UWB module DW3000-class",
+      "lead_time_weeks": "UNKNOWN",
+      "lifecycle_status": "UNKNOWN",
+      "manufacturer": "Qorvo",
+      "moq": "UNKNOWN",
+      "mpn": "DWM3001C",
+      "notes": "Spatial ranging assist; DNP\u2192UWB_ON_COMPANION",
+      "preferred_or_alternate": "preferred",
+      "qty": 1,
+      "sole_source": false,
+      "stock_qty": "UNKNOWN",
+      "subsystem": "UWB",
+      "unit_price": "UNKNOWN"
+    },
+    {
+      "alternate_mpn": "BHI260AP",
+      "avl": [
+        {
+          "qualification": "CANDIDATE",
+          "vendor": "Bosch Sensortec"
+        }
+      ],
+      "bom_status": "Optional offload when standalone spatial demos required",
+      "description": "IMU+fusion coprocessor optional",
+      "lead_time_weeks": "UNKNOWN",
+      "lifecycle_status": "UNKNOWN",
+      "manufacturer": "Bosch Sensortec",
+      "moq": "UNKNOWN",
+      "mpn": "BHI360",
+      "notes": "Optional offload when standalone spatial demos required",
+      "preferred_or_alternate": "alternate",
+      "qty": 1,
+      "sole_source": false,
+      "stock_qty": "UNKNOWN",
+      "subsystem": "SensorHub",
+      "unit_price": "UNKNOWN"
+    },
+    {
+      "alternate_mpn": "BMM150",
+      "avl": [
+        {
+          "qualification": "CANDIDATE",
+          "vendor": "Bosch Sensortec"
+        }
+      ],
+      "bom_status": "Heading assist DNP OK",
+      "description": "3-axis mag optional",
+      "lead_time_weeks": "UNKNOWN",
+      "lifecycle_status": "UNKNOWN",
+      "manufacturer": "Bosch Sensortec",
+      "moq": "UNKNOWN",
+      "mpn": "BMM350",
+      "notes": "Heading assist DNP OK",
+      "preferred_or_alternate": "preferred",
+      "qty": 1,
+      "sole_source": false,
+      "stock_qty": "UNKNOWN",
+      "subsystem": "Magnetometer",
+      "unit_price": "UNKNOWN"
+    },
+    {
+      "alternate_mpn": "ATECC608B",
+      "avl": [
+        {
+          "qualification": "CANDIDATE",
+          "vendor": "NXP"
+        }
+      ],
+      "bom_status": "Identity/attestation",
+      "description": "Secure element",
+      "lead_time_weeks": "UNKNOWN",
+      "lifecycle_status": "UNKNOWN",
+      "manufacturer": "NXP",
+      "moq": "UNKNOWN",
+      "mpn": "SE050C1HQ1",
+      "notes": "Identity/attestation",
+      "preferred_or_alternate": "preferred",
+      "qty": 1,
+      "sole_source": false,
+      "stock_qty": "UNKNOWN",
+      "subsystem": "SecureElement",
+      "unit_price": "UNKNOWN"
+    }
+  ],
+  "rfq_purchase_fab": "NOT_THIS_STREAM",
+  "schema": "gunnchos.supply_chain.fields.v1",
+  "sku": "edge_io_rings",
+  "source_bom": "device_designs/edge_io_rings/manufacturing/ASSEMBLY_BOM.csv"
+}

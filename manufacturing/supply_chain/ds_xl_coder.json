@@ -1,0 +1,332 @@
+{
+  "PRODUCTION_RELEASE_CLAIMED": false,
+  "claim_boundary": "Machine-readable supply-chain fields compiled from existing BOM CSVs. Stock, unit price, lead time, and MOQ stay UNKNOWN unless a cited supplier quote exists (none in this STREAM). RFQ/purchase/fab NOT_THIS_STREAM. PRODUCTION_RELEASE_CLAIMED=false.",
+  "parts": [
+    {
+      "alternate_mpn": "COM-HPC-mMTL-155H-64G",
+      "avl": [
+        {
+          "qualification": "CANDIDATE",
+          "vendor": "ADLINK"
+        }
+      ],
+      "bom_status": "FROZEN_EXACT_MPN",
+      "description": "Shared Student COM-HPC Mini Ultra 7 155H + 32GB",
+      "lead_time_weeks": "UNKNOWN",
+      "lifecycle_status": "UNKNOWN",
+      "manufacturer": "ADLINK",
+      "moq": "UNKNOWN",
+      "mpn": "COM-HPC-mMTL-155H-32G",
+      "notes": "ADR-HW-001 shared compute",
+      "preferred_or_alternate": "preferred",
+      "qty": 1,
+      "sole_source": false,
+      "stock_qty": "UNKNOWN",
+      "subsystem": "COM_MODULE",
+      "unit_price": "UNKNOWN"
+    },
+    {
+      "alternate_mpn": "UNKNOWN",
+      "avl": [
+        {
+          "qualification": "CANDIDATE",
+          "vendor": "gunnchOS3k"
+        }
+      ],
+      "bom_status": "DESIGN_PENDING_CLI",
+      "description": "Dual-eDP carrier PCB",
+      "lead_time_weeks": "UNKNOWN",
+      "lifecycle_status": "UNKNOWN",
+      "manufacturer": "gunnchOS3k",
+      "moq": "UNKNOWN",
+      "mpn": "ds_xl_coder_carrier",
+      "notes": "",
+      "preferred_or_alternate": "preferred",
+      "qty": 1,
+      "sole_source": "UNKNOWN",
+      "stock_qty": "UNKNOWN",
+      "subsystem": "CarrierPCB",
+      "unit_price": "UNKNOWN"
+    },
+    {
+      "alternate_mpn": "UNKNOWN",
+      "avl": [
+        {
+          "qualification": "AVL_PENDING",
+          "vendor": "TE/Samtec class"
+        }
+      ],
+      "bom_status": "AVL_PENDING",
+      "description": "Same as Student",
+      "lead_time_weeks": "UNKNOWN",
+      "lifecycle_status": "UNKNOWN",
+      "manufacturer": "TE/Samtec class",
+      "moq": "UNKNOWN",
+      "mpn": "COM-HPC Mini 400-pin connector set",
+      "notes": "",
+      "preferred_or_alternate": "preferred",
+      "qty": 1,
+      "sole_source": "UNKNOWN",
+      "stock_qty": "UNKNOWN",
+      "subsystem": "COM_Connector",
+      "unit_price": "UNKNOWN"
+    },
+    {
+      "alternate_mpn": "UNKNOWN",
+      "avl": [
+        {
+          "qualification": "AVL_PENDING",
+          "vendor": "BOE/AUO"
+        }
+      ],
+      "bom_status": "AVL_PENDING",
+      "description": "Upper touch panel",
+      "lead_time_weeks": "UNKNOWN",
+      "lifecycle_status": "UNKNOWN",
+      "manufacturer": "BOE/AUO",
+      "moq": "UNKNOWN",
+      "mpn": "13_14_2560x1600_eDP",
+      "notes": "",
+      "preferred_or_alternate": "preferred",
+      "qty": 1,
+      "sole_source": "UNKNOWN",
+      "stock_qty": "UNKNOWN",
+      "subsystem": "DisplayUpper",
+      "unit_price": "UNKNOWN"
+    },
+    {
+      "alternate_mpn": "UNKNOWN",
+      "avl": [
+        {
+          "qualification": "AVL_PENDING",
+          "vendor": "BOE/AUO"
+        }
+      ],
+      "bom_status": "AVL_PENDING",
+      "description": "Lower touch panel",
+      "lead_time_weeks": "UNKNOWN",
+      "lifecycle_status": "UNKNOWN",
+      "manufacturer": "BOE/AUO",
+      "moq": "UNKNOWN",
+      "mpn": "13_14_1920x1200_eDP",
+      "notes": "Second display ICD",
+      "preferred_or_alternate": "preferred",
+      "qty": 1,
+      "sole_source": "UNKNOWN",
+      "stock_qty": "UNKNOWN",
+      "subsystem": "DisplayLower",
+      "unit_price": "UNKNOWN"
+    },
+    {
+      "alternate_mpn": "Parade PS8625 class",
+      "avl": [
+        {
+          "qualification": "CANDIDATE",
+          "vendor": "Lontium"
+        }
+      ],
+      "bom_status": "FOOTPRINT_OPTIONAL",
+      "description": "Optional DP\u2192eDP if single eDP from COM",
+      "lead_time_weeks": "UNKNOWN",
+      "lifecycle_status": "UNKNOWN",
+      "manufacturer": "Lontium",
+      "moq": "UNKNOWN",
+      "mpn": "LT8711UX",
+      "notes": "",
+      "preferred_or_alternate": "alternate",
+      "qty": 1,
+      "sole_source": false,
+      "stock_qty": "UNKNOWN",
+      "subsystem": "eDPBridge",
+      "unit_price": "UNKNOWN"
+    },
+    {
+      "alternate_mpn": "AX211",
+      "avl": [
+        {
+          "qualification": "CANDIDATE",
+          "vendor": "Intel"
+        }
+      ],
+      "bom_status": "FROZEN_BASELINE",
+      "description": "Wi-Fi 7",
+      "lead_time_weeks": "UNKNOWN",
+      "lifecycle_status": "UNKNOWN",
+      "manufacturer": "Intel",
+      "moq": "UNKNOWN",
+      "mpn": "BE200",
+      "notes": "",
+      "preferred_or_alternate": "preferred",
+      "qty": 1,
+      "sole_source": false,
+      "stock_qty": "UNKNOWN",
+      "subsystem": "WiFi",
+      "unit_price": "UNKNOWN"
+    },
+    {
+      "alternate_mpn": "RM500Q-GL",
+      "avl": [
+        {
+          "qualification": "CANDIDATE",
+          "vendor": "Quectel"
+        }
+      ],
+      "bom_status": "FROZEN_EXACT_MPN",
+      "description": "5G NR Sub-6",
+      "lead_time_weeks": "UNKNOWN",
+      "lifecycle_status": "UNKNOWN",
+      "manufacturer": "Quectel",
+      "moq": "UNKNOWN",
+      "mpn": "RM520N-GL",
+      "notes": "NOT 6G; NO NTN",
+      "preferred_or_alternate": "preferred",
+      "qty": 1,
+      "sole_source": false,
+      "stock_qty": "UNKNOWN",
+      "subsystem": "WWAN",
+      "unit_price": "UNKNOWN"
+    },
+    {
+      "alternate_mpn": "CYPD6227",
+      "avl": [
+        {
+          "qualification": "CANDIDATE",
+          "vendor": "Texas Instruments"
+        }
+      ],
+      "bom_status": "FROZEN_BASELINE",
+      "description": "PD",
+      "lead_time_weeks": "UNKNOWN",
+      "lifecycle_status": "UNKNOWN",
+      "manufacturer": "Texas Instruments",
+      "moq": "UNKNOWN",
+      "mpn": "TPS65994ADFBRQ1",
+      "notes": "",
+      "preferred_or_alternate": "preferred",
+      "qty": 1,
+      "sole_source": false,
+      "stock_qty": "UNKNOWN",
+      "subsystem": "PD",
+      "unit_price": "UNKNOWN"
+    },
+    {
+      "alternate_mpn": "BQ25798",
+      "avl": [
+        {
+          "qualification": "CANDIDATE",
+          "vendor": "Texas Instruments"
+        }
+      ],
+      "bom_status": "FROZEN_BASELINE",
+      "description": "Charger",
+      "lead_time_weeks": "UNKNOWN",
+      "lifecycle_status": "UNKNOWN",
+      "manufacturer": "Texas Instruments",
+      "moq": "UNKNOWN",
+      "mpn": "BQ25792RQMR",
+      "notes": "",
+      "preferred_or_alternate": "preferred",
+      "qty": 1,
+      "sole_source": false,
+      "stock_qty": "UNKNOWN",
+      "subsystem": "Charger",
+      "unit_price": "UNKNOWN"
+    },
+    {
+      "alternate_mpn": "BQ40Z80",
+      "avl": [
+        {
+          "qualification": "CANDIDATE",
+          "vendor": "Texas Instruments"
+        }
+      ],
+      "bom_status": "FROZEN_BASELINE",
+      "description": "Gauge",
+      "lead_time_weeks": "UNKNOWN",
+      "lifecycle_status": "UNKNOWN",
+      "manufacturer": "Texas Instruments",
+      "moq": "UNKNOWN",
+      "mpn": "BQ40Z50-R2",
+      "notes": "",
+      "preferred_or_alternate": "preferred",
+      "qty": 1,
+      "sole_source": false,
+      "stock_qty": "UNKNOWN",
+      "subsystem": "FuelGauge",
+      "unit_price": "UNKNOWN"
+    },
+    {
+      "alternate_mpn": "UNKNOWN",
+      "avl": [
+        {
+          "qualification": "CANDIDATE",
+          "vendor": "OEM"
+        }
+      ],
+      "bom_status": "FROZEN_BASELINE",
+      "description": "Storage",
+      "lead_time_weeks": "UNKNOWN",
+      "lifecycle_status": "UNKNOWN",
+      "manufacturer": "OEM",
+      "moq": "UNKNOWN",
+      "mpn": "512GB_PCIe4",
+      "notes": "",
+      "preferred_or_alternate": "preferred",
+      "qty": 1,
+      "sole_source": "UNKNOWN",
+      "stock_qty": "UNKNOWN",
+      "subsystem": "NVMe",
+      "unit_price": "UNKNOWN"
+    },
+    {
+      "alternate_mpn": "UNKNOWN",
+      "avl": [
+        {
+          "qualification": "CANDIDATE",
+          "vendor": "OEM"
+        }
+      ],
+      "bom_status": "FROZEN_BASELINE",
+      "description": "Pack",
+      "lead_time_weeks": "UNKNOWN",
+      "lifecycle_status": "UNKNOWN",
+      "manufacturer": "OEM",
+      "moq": "UNKNOWN",
+      "mpn": "4S1P-60Wh",
+      "notes": "MODELED",
+      "preferred_or_alternate": "preferred",
+      "qty": 1,
+      "sole_source": "UNKNOWN",
+      "stock_qty": "UNKNOWN",
+      "subsystem": "Battery",
+      "unit_price": "UNKNOWN"
+    },
+    {
+      "alternate_mpn": "THSF-mMTL-B",
+      "avl": [
+        {
+          "qualification": "AVL_PENDING",
+          "vendor": "ADLINK"
+        }
+      ],
+      "bom_status": "AVL_PENDING",
+      "description": "COM heatspreader",
+      "lead_time_weeks": "UNKNOWN",
+      "lifecycle_status": "UNKNOWN",
+      "manufacturer": "ADLINK",
+      "moq": "UNKNOWN",
+      "mpn": "HTS-mMTL-B",
+      "notes": "",
+      "preferred_or_alternate": "preferred",
+      "qty": 1,
+      "sole_source": false,
+      "stock_qty": "UNKNOWN",
+      "subsystem": "Heatspreader",
+      "unit_price": "UNKNOWN"
+    }
+  ],
+  "rfq_purchase_fab": "NOT_THIS_STREAM",
+  "schema": "gunnchos.supply_chain.fields.v1",
+  "sku": "ds_xl_coder",
+  "source_bom": "device_designs/ds_xl_coder/manufacturing/ASSEMBLY_BOM.csv"
+}

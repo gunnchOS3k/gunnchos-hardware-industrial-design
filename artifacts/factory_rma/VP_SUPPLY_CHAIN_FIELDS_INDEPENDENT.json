@@ -1,0 +1,123 @@
+{
+  "schema": "gunnchos.supply_chain.fields.independent_verifier_result.v1",
+  "work_item": "STREAM-FACTORY-RMA-SUPPORT",
+  "product": "supply_chain_fields",
+  "verifier_role": "INDEPENDENT_VERIFIER_AGENT",
+  "did_not_implement": true,
+  "did_not_merge": true,
+  "did_not_touch_field_kit_pr_71": true,
+  "cursor_must_not_merge": true,
+  "prefer_fail_over_false_pass": true,
+  "pr": {
+    "number": 63,
+    "url": "https://github.com/gunnchOS3k/gunnchos-hardware-industrial-design/pull/63",
+    "draft": true,
+    "state": "OPEN",
+    "branch": "operating-cycle-3b/factory-rma-supply-chain-fields",
+    "title": "STREAM: supply-chain BOM/AVL fields (unknown stays unknown)"
+  },
+  "claimed_tip": "f12c9edc6c1e4739d83df3af20018e1171d1b97c",
+  "claimed_tip_short": "f12c9ed",
+  "claimed_tip_live_confirmed": true,
+  "verified_tip": "f12c9edc6c1e4739d83df3af20018e1171d1b97c",
+  "verified_tip_short": "f12c9ed",
+  "tip_commit_subject": "feat(supply): add machine-readable BOM/AVL fields without invented stock",
+  "base_main": "4ba876d42f59f03d4b5c5ef0ca776e1253da814d",
+  "base_main_short": "4ba876d",
+  "base_main_confirmed": true,
+  "merge_base_equals_claimed_base": true,
+  "commits_on_pr": 1,
+  "generated_at_utc": "2026-08-13T16:22:00Z",
+  "inspected_paths": {
+    "hardware": "/Users/gunnchos/Downloads/gunnchos-7gc-research-product-spine/repos/gunnchos-hardware-industrial-design",
+    "head": "f12c9edc6c1e4739d83df3af20018e1171d1b97c"
+  },
+  "VP_SUPPLY_CHAIN_FIELDS_INDEPENDENT": "PASS",
+  "HARDWARE_63_READY_FOR_EDMUND_MERGE": true,
+  "READY_FOR_EDMUND_MERGE": true,
+  "PRODUCTION_RELEASE_CLAIMED": false,
+  "fail_reason": null,
+  "pass_note": "Live DRAFT #63 tip f12c9edc6c1e4739d83df3af20018e1171d1b97c. CI 4/4 unique checks green (CAD CI, EVT-1 package, Gate 1 ring, Portfolio hardening). Independent compile+validate: PASS 5 supply-chain field files; pytest tests/test_supply_chain_fields.py 4 passed. All 94 parts keep unit_price/stock_qty/lead_time_weeks/moq=UNKNOWN. Validator rejects invented numeric unit_price. sole_source is never inferred true. rfq_purchase_fab=NOT_THIS_STREAM. PRODUCTION_RELEASE_CLAIMED=false. Cursor does not merge.",
+  "challenges": {
+    "ci_green_on_tip": {
+      "verdict": "PASS",
+      "head_sha": "f12c9edc6c1e4739d83df3af20018e1171d1b97c",
+      "failed_checks": [],
+      "unique_checks": 4,
+      "passing_checks_count": 4,
+      "cad_ci": {
+        "name": "validate",
+        "workflow": "CAD CI",
+        "conclusion": "SUCCESS",
+        "url": "https://github.com/gunnchOS3k/gunnchos-hardware-industrial-design/actions/runs/31719303148/job/94511920133"
+      },
+      "evt1_package": {
+        "name": "validate",
+        "workflow": "EVT-1 hardware package CI",
+        "conclusion": "SUCCESS",
+        "url": "https://github.com/gunnchOS3k/gunnchos-hardware-industrial-design/actions/runs/31719303308/job/94511920507"
+      },
+      "gate1_ring": {
+        "name": "gate1-ring",
+        "workflow": "Gate 1 post-merge integrity",
+        "conclusion": "SUCCESS",
+        "url": "https://github.com/gunnchOS3k/gunnchos-hardware-industrial-design/actions/runs/31719303325/job/94511920608"
+      },
+      "portfolio": {
+        "name": "validate",
+        "workflow": "Portfolio hardening CI",
+        "conclusion": "SUCCESS",
+        "url": "https://github.com/gunnchOS3k/gunnchos-hardware-industrial-design/actions/runs/31719303177/job/94511919723",
+        "ci_tokens": [
+          "PASS 5 supply-chain field files (unknown stays unknown)",
+          "6 passed in 0.26s"
+        ]
+      }
+    },
+    "unknown_fields_stay_unknown": {
+      "verdict": "PASS",
+      "sku_parts": {
+        "handheld_hybrid.json": 15,
+        "student_14_5.json": 19,
+        "ds_xl_coder.json": 14,
+        "dock.json": 23,
+        "edge_io_rings.json": 23
+      },
+      "parts_scanned": 94,
+      "invented_unit_price_stock_lead_moq": [],
+      "PRODUCTION_RELEASE_CLAIMED": false,
+      "rfq_purchase_fab": "NOT_THIS_STREAM",
+      "validator_rejects_invented_price": true
+    },
+    "no_hardcoded_pass": {
+      "verdict": "PASS",
+      "how_pass_is_computed": "validate_supply_chain_fields.py walks every part and fails on numeric unit_price/stock_qty/lead_time_weeks/moq or sole_source=true. Independent scan of compiled JSON found zero invented values. pytest test_validator_rejects_invented_price mutates unit_price=12.50 and asserts an invented error.",
+      "hardcoded_pass": false
+    }
+  },
+  "local_reproduction": {
+    "compile": "WROTE 5 SKUs parts=15/19/14/23/23",
+    "validate": "PASS 5 supply-chain field files (unknown stays unknown)",
+    "pytest": "4 passed"
+  },
+  "defects_S0_S1": {
+    "verdict": "PASS",
+    "S0_open": 0,
+    "S1_open": 0,
+    "items": []
+  },
+  "remaining_open": [
+    "Supplier AVL quotes (stock, price, real lead-time, real MOQ) remain UNKNOWN until a cited quote exists",
+    "RFQ / purchase / fab NOT_THIS_STREAM",
+    "Edmund merge (Cursor never merges)"
+  ],
+  "forbidden": {
+    "merged": false,
+    "PRODUCTION_RELEASE_CLAIMED": false,
+    "invented_stock_or_price": false,
+    "rfq_purchase_fab_claimed": false,
+    "touched_field_kit_pr_71": false
+  },
+  "claim_boundary": "Independent digital verification of hardware DRAFT #63 supply-chain *fields*. Unknown stays UNKNOWN. No invented stock or price. No RFQ, purchase, or fab. Cursor did not implement and must not merge.",
+  "verdict_summary": "Live DRAFT #63 HEAD f12c9ed. CI 4/4 green. 94 parts keep price/stock/lead/MOQ UNKNOWN. HARDWARE_63_READY_FOR_EDMUND_MERGE=true. Cursor does not merge."
+}
