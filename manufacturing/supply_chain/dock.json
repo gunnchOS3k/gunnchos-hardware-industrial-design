@@ -1,0 +1,539 @@
+{
+  "PRODUCTION_RELEASE_CLAIMED": false,
+  "claim_boundary": "Machine-readable supply-chain fields compiled from existing BOM CSVs. Stock, unit price, lead time, and MOQ stay UNKNOWN unless a cited supplier quote exists (none in this STREAM). RFQ/purchase/fab NOT_THIS_STREAM. PRODUCTION_RELEASE_CLAIMED=false.",
+  "parts": [
+    {
+      "alternate_mpn": "VL108",
+      "avl": [
+        {
+          "qualification": "CANDIDATE",
+          "vendor": "Intel"
+        }
+      ],
+      "bom_status": "FROZEN_ADR_HW_002",
+      "description": "Goshen Ridge Thunderbolt 4 / USB4 peripheral dock controller 40G",
+      "lead_time_weeks": "UNKNOWN",
+      "lifecycle_status": "UNKNOWN",
+      "manufacturer": "Intel",
+      "moq": "UNKNOWN",
+      "mpn": "JHL8440",
+      "notes": "NOT TB5; corrects prior JHL9040-as-controller mislabel",
+      "preferred_or_alternate": "preferred",
+      "qty": 1,
+      "sole_source": false,
+      "stock_qty": "UNKNOWN",
+      "subsystem": "USB4_TB4_controller",
+      "unit_price": "UNKNOWN"
+    },
+    {
+      "alternate_mpn": "UNKNOWN",
+      "avl": [
+        {
+          "qualification": "CANDIDATE",
+          "vendor": "Intel"
+        }
+      ],
+      "bom_status": "FROZEN_ADR_HW_002",
+      "description": "Hayden Bridge Thunderbolt 4 retimer 40G SI",
+      "lead_time_weeks": "UNKNOWN",
+      "lifecycle_status": "UNKNOWN",
+      "manufacturer": "Intel",
+      "moq": "UNKNOWN",
+      "mpn": "JHL9040R",
+      "notes": "Retimer only \u2014 not Maple Ridge controller",
+      "preferred_or_alternate": "preferred",
+      "qty": 1,
+      "sole_source": "UNKNOWN",
+      "stock_qty": "UNKNOWN",
+      "subsystem": "TB4_retimer",
+      "unit_price": "UNKNOWN"
+    },
+    {
+      "alternate_mpn": "JHL8440",
+      "avl": [
+        {
+          "qualification": "CANDIDATE",
+          "vendor": "VIA Labs"
+        }
+      ],
+      "bom_status": "SKU_OPTION",
+      "description": "USB3+DP Alt dock cost-down",
+      "lead_time_weeks": "UNKNOWN",
+      "lifecycle_status": "UNKNOWN",
+      "manufacturer": "VIA Labs",
+      "moq": "UNKNOWN",
+      "mpn": "VL108",
+      "notes": "Handheld-first; no USB4 40G claim on this SKU",
+      "preferred_or_alternate": "alternate",
+      "qty": 1,
+      "sole_source": false,
+      "stock_qty": "UNKNOWN",
+      "subsystem": "USB3DP_costdown",
+      "unit_price": "UNKNOWN"
+    },
+    {
+      "alternate_mpn": "CYPD6227",
+      "avl": [
+        {
+          "qualification": "CANDIDATE",
+          "vendor": "Texas Instruments"
+        }
+      ],
+      "bom_status": "FROZEN_BASELINE",
+      "description": "USB-C PD dual-port class",
+      "lead_time_weeks": "UNKNOWN",
+      "lifecycle_status": "UNKNOWN",
+      "manufacturer": "Texas Instruments",
+      "moq": "UNKNOWN",
+      "mpn": "TPS65994ADFBRQ1",
+      "notes": "",
+      "preferred_or_alternate": "preferred",
+      "qty": 1,
+      "sole_source": false,
+      "stock_qty": "UNKNOWN",
+      "subsystem": "PD",
+      "unit_price": "UNKNOWN"
+    },
+    {
+      "alternate_mpn": "RTL8153",
+      "avl": [
+        {
+          "qualification": "CANDIDATE",
+          "vendor": "Realtek"
+        }
+      ],
+      "bom_status": "FROZEN_BASELINE",
+      "description": "2.5GbE USB ethernet",
+      "lead_time_weeks": "UNKNOWN",
+      "lifecycle_status": "UNKNOWN",
+      "manufacturer": "Realtek",
+      "moq": "UNKNOWN",
+      "mpn": "RTL8156",
+      "notes": "",
+      "preferred_or_alternate": "preferred",
+      "qty": 1,
+      "sole_source": false,
+      "stock_qty": "UNKNOWN",
+      "subsystem": "Ethernet",
+      "unit_price": "UNKNOWN"
+    },
+    {
+      "alternate_mpn": "VL822",
+      "avl": [
+        {
+          "qualification": "CANDIDATE",
+          "vendor": "VIA Labs"
+        }
+      ],
+      "bom_status": "FROZEN_BASELINE",
+      "description": "USB 3.1 hub",
+      "lead_time_weeks": "UNKNOWN",
+      "lifecycle_status": "UNKNOWN",
+      "manufacturer": "VIA Labs",
+      "moq": "UNKNOWN",
+      "mpn": "VL817",
+      "notes": "",
+      "preferred_or_alternate": "preferred",
+      "qty": 1,
+      "sole_source": false,
+      "stock_qty": "UNKNOWN",
+      "subsystem": "USBHub",
+      "unit_price": "UNKNOWN"
+    },
+    {
+      "alternate_mpn": "UNKNOWN",
+      "avl": [
+        {
+          "qualification": "CANDIDATE",
+          "vendor": "Texas Instruments"
+        }
+      ],
+      "bom_status": "FROZEN_BASELINE",
+      "description": "PD VBUS regulator",
+      "lead_time_weeks": "UNKNOWN",
+      "lifecycle_status": "UNKNOWN",
+      "manufacturer": "Texas Instruments",
+      "moq": "UNKNOWN",
+      "mpn": "TPS55288RPMR",
+      "notes": "",
+      "preferred_or_alternate": "preferred",
+      "qty": 1,
+      "sole_source": "UNKNOWN",
+      "stock_qty": "UNKNOWN",
+      "subsystem": "BuckBoost",
+      "unit_price": "UNKNOWN"
+    },
+    {
+      "alternate_mpn": "TPS62135",
+      "avl": [
+        {
+          "qualification": "CANDIDATE",
+          "vendor": "Texas Instruments"
+        }
+      ],
+      "bom_status": "FROZEN_BASELINE",
+      "description": "5V system buck",
+      "lead_time_weeks": "UNKNOWN",
+      "lifecycle_status": "UNKNOWN",
+      "manufacturer": "Texas Instruments",
+      "moq": "UNKNOWN",
+      "mpn": "TPS62864",
+      "notes": "",
+      "preferred_or_alternate": "preferred",
+      "qty": 1,
+      "sole_source": false,
+      "stock_qty": "UNKNOWN",
+      "subsystem": "Buck5V",
+      "unit_price": "UNKNOWN"
+    },
+    {
+      "alternate_mpn": "TLV70033",
+      "avl": [
+        {
+          "qualification": "CANDIDATE",
+          "vendor": "Texas Instruments"
+        }
+      ],
+      "bom_status": "FROZEN_BASELINE",
+      "description": "3V3 LDO",
+      "lead_time_weeks": "UNKNOWN",
+      "lifecycle_status": "UNKNOWN",
+      "manufacturer": "Texas Instruments",
+      "moq": "UNKNOWN",
+      "mpn": "TLV75533PDRVR",
+      "notes": "",
+      "preferred_or_alternate": "preferred",
+      "qty": 1,
+      "sole_source": false,
+      "stock_qty": "UNKNOWN",
+      "subsystem": "LDO3V3",
+      "unit_price": "UNKNOWN"
+    },
+    {
+      "alternate_mpn": "UNKNOWN",
+      "avl": [
+        {
+          "qualification": "CANDIDATE",
+          "vendor": "Realtek"
+        }
+      ],
+      "bom_status": "FOOTPRINT_OPTIONAL",
+      "description": "USB audio optional",
+      "lead_time_weeks": "UNKNOWN",
+      "lifecycle_status": "UNKNOWN",
+      "manufacturer": "Realtek",
+      "moq": "UNKNOWN",
+      "mpn": "ALC4050",
+      "notes": "",
+      "preferred_or_alternate": "optional",
+      "qty": 1,
+      "sole_source": "UNKNOWN",
+      "stock_qty": "UNKNOWN",
+      "subsystem": "AudioOpt",
+      "unit_price": "UNKNOWN"
+    },
+    {
+      "alternate_mpn": "DW3000",
+      "avl": [
+        {
+          "qualification": "CANDIDATE",
+          "vendor": "Qorvo"
+        }
+      ],
+      "bom_status": "FOOTPRINT_OPTIONAL",
+      "description": "UWB companion for rings",
+      "lead_time_weeks": "UNKNOWN",
+      "lifecycle_status": "UNKNOWN",
+      "manufacturer": "Qorvo",
+      "moq": "UNKNOWN",
+      "mpn": "DWM3001C",
+      "notes": "ADR-FP-008",
+      "preferred_or_alternate": "optional",
+      "qty": 1,
+      "sole_source": false,
+      "stock_qty": "UNKNOWN",
+      "subsystem": "UWB",
+      "unit_price": "UNKNOWN"
+    },
+    {
+      "alternate_mpn": "UNKNOWN",
+      "avl": [
+        {
+          "qualification": "CANDIDATE",
+          "vendor": "Nexperia"
+        }
+      ],
+      "bom_status": "FROZEN_BASELINE",
+      "description": "ESD on pogo/USB",
+      "lead_time_weeks": "UNKNOWN",
+      "lifecycle_status": "UNKNOWN",
+      "manufacturer": "Nexperia",
+      "moq": "UNKNOWN",
+      "mpn": "PESD5V0S1UL",
+      "notes": "",
+      "preferred_or_alternate": "preferred",
+      "qty": 6,
+      "sole_source": "UNKNOWN",
+      "stock_qty": "UNKNOWN",
+      "subsystem": "ESD",
+      "unit_price": "UNKNOWN"
+    },
+    {
+      "alternate_mpn": "UNKNOWN",
+      "avl": [
+        {
+          "qualification": "AVL_PENDING",
+          "vendor": "GCT/Amphenol"
+        }
+      ],
+      "bom_status": "AVL_PENDING",
+      "description": "USB-C receptacles",
+      "lead_time_weeks": "UNKNOWN",
+      "lifecycle_status": "UNKNOWN",
+      "manufacturer": "GCT/Amphenol",
+      "moq": "UNKNOWN",
+      "mpn": "USB4085 class",
+      "notes": "1 up + 2 down + util",
+      "preferred_or_alternate": "preferred",
+      "qty": 4,
+      "sole_source": "UNKNOWN",
+      "stock_qty": "UNKNOWN",
+      "subsystem": "USB_C_conn",
+      "unit_price": "UNKNOWN"
+    },
+    {
+      "alternate_mpn": "UNKNOWN",
+      "avl": [
+        {
+          "qualification": "AVL_PENDING",
+          "vendor": "TE"
+        }
+      ],
+      "bom_status": "AVL_PENDING",
+      "description": "USB-A 3.2",
+      "lead_time_weeks": "UNKNOWN",
+      "lifecycle_status": "UNKNOWN",
+      "manufacturer": "TE",
+      "moq": "UNKNOWN",
+      "mpn": "USB3 A receptacle",
+      "notes": "",
+      "preferred_or_alternate": "preferred",
+      "qty": 2,
+      "sole_source": "UNKNOWN",
+      "stock_qty": "UNKNOWN",
+      "subsystem": "USB_A_conn",
+      "unit_price": "UNKNOWN"
+    },
+    {
+      "alternate_mpn": "UNKNOWN",
+      "avl": [
+        {
+          "qualification": "AVL_PENDING",
+          "vendor": "TE"
+        }
+      ],
+      "bom_status": "AVL_PENDING",
+      "description": "Video egress",
+      "lead_time_weeks": "UNKNOWN",
+      "lifecycle_status": "UNKNOWN",
+      "manufacturer": "TE",
+      "moq": "UNKNOWN",
+      "mpn": "HDMI Type-A",
+      "notes": "",
+      "preferred_or_alternate": "preferred",
+      "qty": 1,
+      "sole_source": "UNKNOWN",
+      "stock_qty": "UNKNOWN",
+      "subsystem": "HDMI_conn",
+      "unit_price": "UNKNOWN"
+    },
+    {
+      "alternate_mpn": "UNKNOWN",
+      "avl": [
+        {
+          "qualification": "AVL_PENDING",
+          "vendor": "Pulse"
+        }
+      ],
+      "bom_status": "AVL_PENDING",
+      "description": "Magnetics+RJ45",
+      "lead_time_weeks": "UNKNOWN",
+      "lifecycle_status": "UNKNOWN",
+      "manufacturer": "Pulse",
+      "moq": "UNKNOWN",
+      "mpn": "JK0-0136NL class",
+      "notes": "",
+      "preferred_or_alternate": "preferred",
+      "qty": 1,
+      "sole_source": "UNKNOWN",
+      "stock_qty": "UNKNOWN",
+      "subsystem": "RJ45",
+      "unit_price": "UNKNOWN"
+    },
+    {
+      "alternate_mpn": "UNKNOWN",
+      "avl": [
+        {
+          "qualification": "CANDIDATE",
+          "vendor": "Mill-Max"
+        }
+      ],
+      "bom_status": "FROZEN_BASELINE",
+      "description": "Ring charge pogo",
+      "lead_time_weeks": "UNKNOWN",
+      "lifecycle_status": "UNKNOWN",
+      "manufacturer": "Mill-Max",
+      "moq": "UNKNOWN",
+      "mpn": "0900-0-15-20-75-14-11-0",
+      "notes": "",
+      "preferred_or_alternate": "preferred",
+      "qty": 2,
+      "sole_source": "UNKNOWN",
+      "stock_qty": "UNKNOWN",
+      "subsystem": "Pogo",
+      "unit_price": "UNKNOWN"
+    },
+    {
+      "alternate_mpn": "UNKNOWN",
+      "avl": [
+        {
+          "qualification": "CANDIDATE",
+          "vendor": "Nordic"
+        }
+      ],
+      "bom_status": "FOOTPRINT_OPTIONAL",
+      "description": "Optional cradle MCU for UWB/charge mux",
+      "lead_time_weeks": "UNKNOWN",
+      "lifecycle_status": "UNKNOWN",
+      "manufacturer": "Nordic",
+      "moq": "UNKNOWN",
+      "mpn": "nRF52840-QIAA-R",
+      "notes": "",
+      "preferred_or_alternate": "optional",
+      "qty": 1,
+      "sole_source": "UNKNOWN",
+      "stock_qty": "UNKNOWN",
+      "subsystem": "MCU_aux",
+      "unit_price": "UNKNOWN"
+    },
+    {
+      "alternate_mpn": "UNKNOWN",
+      "avl": [
+        {
+          "qualification": "CANDIDATE",
+          "vendor": "gunnchOS3k"
+        }
+      ],
+      "bom_status": "DESIGN_PENDING_CLI",
+      "description": "4-layer main PCB",
+      "lead_time_weeks": "UNKNOWN",
+      "lifecycle_status": "UNKNOWN",
+      "manufacturer": "gunnchOS3k",
+      "moq": "UNKNOWN",
+      "mpn": "dock_main_pcb",
+      "notes": "",
+      "preferred_or_alternate": "preferred",
+      "qty": 1,
+      "sole_source": "UNKNOWN",
+      "stock_qty": "UNKNOWN",
+      "subsystem": "PCB",
+      "unit_price": "UNKNOWN"
+    },
+    {
+      "alternate_mpn": "65W cost-down",
+      "avl": [
+        {
+          "qualification": "CANDIDATE",
+          "vendor": "OEM"
+        }
+      ],
+      "bom_status": "FROZEN_BASELINE",
+      "description": "External USB-C PD adapter",
+      "lead_time_weeks": "UNKNOWN",
+      "lifecycle_status": "UNKNOWN",
+      "manufacturer": "OEM",
+      "moq": "UNKNOWN",
+      "mpn": "PD_adapter_100W",
+      "notes": "",
+      "preferred_or_alternate": "preferred",
+      "qty": 1,
+      "sole_source": false,
+      "stock_qty": "UNKNOWN",
+      "subsystem": "PSU",
+      "unit_price": "UNKNOWN"
+    },
+    {
+      "alternate_mpn": "UNKNOWN",
+      "avl": [
+        {
+          "qualification": "CANDIDATE",
+          "vendor": "gunnchOS3k"
+        }
+      ],
+      "bom_status": "CAD_PENDING",
+      "description": "Enclosure + ring cradle",
+      "lead_time_weeks": "UNKNOWN",
+      "lifecycle_status": "UNKNOWN",
+      "manufacturer": "gunnchOS3k",
+      "moq": "UNKNOWN",
+      "mpn": "dock_enclosure_cradle",
+      "notes": "",
+      "preferred_or_alternate": "preferred",
+      "qty": 1,
+      "sole_source": "UNKNOWN",
+      "stock_qty": "UNKNOWN",
+      "subsystem": "MECH",
+      "unit_price": "UNKNOWN"
+    },
+    {
+      "alternate_mpn": "JHL9580",
+      "avl": [
+        {
+          "qualification": "CANDIDATE",
+          "vendor": "Intel"
+        }
+      ],
+      "bom_status": "REJECTED_ADR_HW_002",
+      "description": "Thunderbolt 5 accessory controller \u2014 OUT OF SCOPE",
+      "lead_time_weeks": "UNKNOWN",
+      "lifecycle_status": "UNKNOWN",
+      "manufacturer": "Intel",
+      "moq": "UNKNOWN",
+      "mpn": "JHL9480",
+      "notes": "Do not populate; not TB4",
+      "preferred_or_alternate": "rejected",
+      "qty": 0,
+      "sole_source": false,
+      "stock_qty": "UNKNOWN",
+      "subsystem": "FORBIDDEN_TB5",
+      "unit_price": "UNKNOWN"
+    },
+    {
+      "alternate_mpn": "JHL9480",
+      "avl": [
+        {
+          "qualification": "CANDIDATE",
+          "vendor": "Intel"
+        }
+      ],
+      "bom_status": "REJECTED_ADR_HW_002",
+      "description": "Thunderbolt 5 controller \u2014 OUT OF SCOPE",
+      "lead_time_weeks": "UNKNOWN",
+      "lifecycle_status": "UNKNOWN",
+      "manufacturer": "Intel",
+      "moq": "UNKNOWN",
+      "mpn": "JHL9580",
+      "notes": "Do not populate; not TB4",
+      "preferred_or_alternate": "rejected",
+      "qty": 0,
+      "sole_source": false,
+      "stock_qty": "UNKNOWN",
+      "subsystem": "FORBIDDEN_TB5_alt",
+      "unit_price": "UNKNOWN"
+    }
+  ],
+  "rfq_purchase_fab": "NOT_THIS_STREAM",
+  "schema": "gunnchos.supply_chain.fields.v1",
+  "sku": "dock",
+  "source_bom": "device_designs/dock/manufacturing/ASSEMBLY_BOM.csv"
+}

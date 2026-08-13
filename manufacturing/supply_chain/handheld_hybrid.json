@@ -1,0 +1,355 @@
+{
+  "PRODUCTION_RELEASE_CLAIMED": false,
+  "claim_boundary": "Machine-readable supply-chain fields compiled from existing BOM CSVs. Stock, unit price, lead time, and MOQ stay UNKNOWN unless a cited supplier quote exists (none in this STREAM). RFQ/purchase/fab NOT_THIS_STREAM. PRODUCTION_RELEASE_CLAIMED=false.",
+  "parts": [
+    {
+      "alternate_mpn": "RM121-D8E16",
+      "avl": [
+        {
+          "qualification": "CANDIDATE",
+          "vendor": "Radxa"
+        }
+      ],
+      "bom_status": "FROZEN_EXACT_MPN",
+      "description": "Radxa NX5 RK3588S 8GB LPDDR4X + 32GB eMMC SODIMM",
+      "lead_time_weeks": "UNKNOWN",
+      "lifecycle_status": "UNKNOWN",
+      "manufacturer": "Radxa",
+      "moq": "UNKNOWN",
+      "mpn": "RM121-D8E32",
+      "notes": "ADR-HW-001 \u2014 not bare RK3588S BGA; lifecycle \u22652033 per brief",
+      "preferred_or_alternate": "preferred",
+      "qty": 1,
+      "sole_source": false,
+      "stock_qty": "UNKNOWN",
+      "subsystem": "SoM",
+      "unit_price": "UNKNOWN"
+    },
+    {
+      "alternate_mpn": "RM121-D8E8",
+      "avl": [
+        {
+          "qualification": "CANDIDATE",
+          "vendor": "Radxa"
+        }
+      ],
+      "bom_status": "APPROVED_ALTERNATE",
+      "description": "NX5 8GB + 16GB eMMC",
+      "lead_time_weeks": "UNKNOWN",
+      "lifecycle_status": "UNKNOWN",
+      "manufacturer": "Radxa",
+      "moq": "UNKNOWN",
+      "mpn": "RM121-D8E16",
+      "notes": "Official brief table",
+      "preferred_or_alternate": "alternate",
+      "qty": 1,
+      "sole_source": false,
+      "stock_qty": "UNKNOWN",
+      "subsystem": "SoM_alt",
+      "unit_price": "UNKNOWN"
+    },
+    {
+      "alternate_mpn": "UNKNOWN",
+      "avl": [
+        {
+          "qualification": "CANDIDATE",
+          "vendor": "gunnchOS3k"
+        }
+      ],
+      "bom_status": "DESIGN_PENDING_CLI",
+      "description": "Game carrier PCB",
+      "lead_time_weeks": "UNKNOWN",
+      "lifecycle_status": "UNKNOWN",
+      "manufacturer": "gunnchOS3k",
+      "moq": "UNKNOWN",
+      "mpn": "handheld_hybrid_carrier",
+      "notes": "",
+      "preferred_or_alternate": "preferred",
+      "qty": 1,
+      "sole_source": "UNKNOWN",
+      "stock_qty": "UNKNOWN",
+      "subsystem": "CarrierPCB",
+      "unit_price": "UNKNOWN"
+    },
+    {
+      "alternate_mpn": "UNKNOWN",
+      "avl": [
+        {
+          "qualification": "AVL_PENDING",
+          "vendor": "TE/Amphenol"
+        }
+      ],
+      "bom_status": "AVL_PENDING",
+      "description": "Matches NX5 260-pin edge",
+      "lead_time_weeks": "UNKNOWN",
+      "lifecycle_status": "UNKNOWN",
+      "manufacturer": "TE/Amphenol",
+      "moq": "UNKNOWN",
+      "mpn": "260-pin SODIMM socket",
+      "notes": "Pinout per Radxa NX5 pinout doc",
+      "preferred_or_alternate": "preferred",
+      "qty": 1,
+      "sole_source": "UNKNOWN",
+      "stock_qty": "UNKNOWN",
+      "subsystem": "SODIMM_connector",
+      "unit_price": "UNKNOWN"
+    },
+    {
+      "alternate_mpn": "UNKNOWN",
+      "avl": [
+        {
+          "qualification": "AVL_PENDING",
+          "vendor": "OEM"
+        }
+      ],
+      "bom_status": "AVL_PENDING",
+      "description": "7 inch touch panel",
+      "lead_time_weeks": "UNKNOWN",
+      "lifecycle_status": "UNKNOWN",
+      "manufacturer": "OEM",
+      "moq": "UNKNOWN",
+      "mpn": "7in_1080p_120Hz_IPS",
+      "notes": "",
+      "preferred_or_alternate": "preferred",
+      "qty": 1,
+      "sole_source": "UNKNOWN",
+      "stock_qty": "UNKNOWN",
+      "subsystem": "Display",
+      "unit_price": "UNKNOWN"
+    },
+    {
+      "alternate_mpn": "AIC8800D",
+      "avl": [
+        {
+          "qualification": "CANDIDATE",
+          "vendor": "Ampak"
+        }
+      ],
+      "bom_status": "FROZEN_BASELINE",
+      "description": "Wi-Fi 6E + BT 5.3 module",
+      "lead_time_weeks": "UNKNOWN",
+      "lifecycle_status": "UNKNOWN",
+      "manufacturer": "Ampak",
+      "moq": "UNKNOWN",
+      "mpn": "AP6275P",
+      "notes": "",
+      "preferred_or_alternate": "preferred",
+      "qty": 1,
+      "sole_source": false,
+      "stock_qty": "UNKNOWN",
+      "subsystem": "WiFiBT",
+      "unit_price": "UNKNOWN"
+    },
+    {
+      "alternate_mpn": "UNKNOWN",
+      "avl": [
+        {
+          "qualification": "CANDIDATE",
+          "vendor": "Quectel"
+        }
+      ],
+      "bom_status": "FOOTPRINT_OPTIONAL",
+      "description": "Optional 5G M.2",
+      "lead_time_weeks": "UNKNOWN",
+      "lifecycle_status": "UNKNOWN",
+      "manufacturer": "Quectel",
+      "moq": "UNKNOWN",
+      "mpn": "RM520N-GL",
+      "notes": "Thermal-gated; NOT 6G; NO NTN",
+      "preferred_or_alternate": "alternate",
+      "qty": 1,
+      "sole_source": "UNKNOWN",
+      "stock_qty": "UNKNOWN",
+      "subsystem": "WWAN_opt",
+      "unit_price": "UNKNOWN"
+    },
+    {
+      "alternate_mpn": "nRF52840-QIAA-R",
+      "avl": [
+        {
+          "qualification": "CANDIDATE",
+          "vendor": "STMicro"
+        }
+      ],
+      "bom_status": "FROZEN_BASELINE",
+      "description": "Gamepad HID MCU",
+      "lead_time_weeks": "UNKNOWN",
+      "lifecycle_status": "UNKNOWN",
+      "manufacturer": "STMicro",
+      "moq": "UNKNOWN",
+      "mpn": "STM32F103C8T6",
+      "notes": "",
+      "preferred_or_alternate": "preferred",
+      "qty": 1,
+      "sole_source": false,
+      "stock_qty": "UNKNOWN",
+      "subsystem": "HID_MCU",
+      "unit_price": "UNKNOWN"
+    },
+    {
+      "alternate_mpn": "IP2726 class",
+      "avl": [
+        {
+          "qualification": "CANDIDATE",
+          "vendor": "Texas Instruments"
+        }
+      ],
+      "bom_status": "FROZEN_BASELINE",
+      "description": "USB-C PD",
+      "lead_time_weeks": "UNKNOWN",
+      "lifecycle_status": "UNKNOWN",
+      "manufacturer": "Texas Instruments",
+      "moq": "UNKNOWN",
+      "mpn": "TPS65987DDHRSHR",
+      "notes": "",
+      "preferred_or_alternate": "preferred",
+      "qty": 1,
+      "sole_source": false,
+      "stock_qty": "UNKNOWN",
+      "subsystem": "PD",
+      "unit_price": "UNKNOWN"
+    },
+    {
+      "alternate_mpn": "BQ25792RQMR",
+      "avl": [
+        {
+          "qualification": "CANDIDATE",
+          "vendor": "Texas Instruments"
+        }
+      ],
+      "bom_status": "FROZEN_BASELINE",
+      "description": "Single-cell pack charger class",
+      "lead_time_weeks": "UNKNOWN",
+      "lifecycle_status": "UNKNOWN",
+      "manufacturer": "Texas Instruments",
+      "moq": "UNKNOWN",
+      "mpn": "BQ25895RTWR",
+      "notes": "topology-dependent",
+      "preferred_or_alternate": "preferred",
+      "qty": 1,
+      "sole_source": false,
+      "stock_qty": "UNKNOWN",
+      "subsystem": "Charger",
+      "unit_price": "UNKNOWN"
+    },
+    {
+      "alternate_mpn": "BQ27Z561YPHR",
+      "avl": [
+        {
+          "qualification": "CANDIDATE",
+          "vendor": "Texas Instruments"
+        }
+      ],
+      "bom_status": "FROZEN_BASELINE",
+      "description": "Fuel gauge",
+      "lead_time_weeks": "UNKNOWN",
+      "lifecycle_status": "UNKNOWN",
+      "manufacturer": "Texas Instruments",
+      "moq": "UNKNOWN",
+      "mpn": "BQ27Z561YPHR",
+      "notes": "",
+      "preferred_or_alternate": "preferred",
+      "qty": 1,
+      "sole_source": false,
+      "stock_qty": "UNKNOWN",
+      "subsystem": "FuelGauge",
+      "unit_price": "UNKNOWN"
+    },
+    {
+      "alternate_mpn": "UNKNOWN",
+      "avl": [
+        {
+          "qualification": "CANDIDATE",
+          "vendor": "OEM"
+        }
+      ],
+      "bom_status": "FROZEN_BASELINE",
+      "description": "Game pack",
+      "lead_time_weeks": "UNKNOWN",
+      "lifecycle_status": "UNKNOWN",
+      "manufacturer": "OEM",
+      "moq": "UNKNOWN",
+      "mpn": "6000mAh_1S2P_or_2S",
+      "notes": "MODELED",
+      "preferred_or_alternate": "preferred",
+      "qty": 1,
+      "sole_source": "UNKNOWN",
+      "stock_qty": "UNKNOWN",
+      "subsystem": "Battery",
+      "unit_price": "UNKNOWN"
+    },
+    {
+      "alternate_mpn": "UNKNOWN",
+      "avl": [
+        {
+          "qualification": "AVL_PENDING",
+          "vendor": "ALPS"
+        }
+      ],
+      "bom_status": "AVL_PENDING",
+      "description": "Analog stick",
+      "lead_time_weeks": "UNKNOWN",
+      "lifecycle_status": "UNKNOWN",
+      "manufacturer": "ALPS",
+      "moq": "UNKNOWN",
+      "mpn": "RKJXV122400D",
+      "notes": "",
+      "preferred_or_alternate": "preferred",
+      "qty": 2,
+      "sole_source": "UNKNOWN",
+      "stock_qty": "UNKNOWN",
+      "subsystem": "Sticks",
+      "unit_price": "UNKNOWN"
+    },
+    {
+      "alternate_mpn": "UNKNOWN",
+      "avl": [
+        {
+          "qualification": "AVL_PENDING",
+          "vendor": "OEM"
+        }
+      ],
+      "bom_status": "AVL_PENDING",
+      "description": "Button set",
+      "lead_time_weeks": "UNKNOWN",
+      "lifecycle_status": "UNKNOWN",
+      "manufacturer": "OEM",
+      "moq": "UNKNOWN",
+      "mpn": "tactile_ABXY_LR_DPAD",
+      "notes": "",
+      "preferred_or_alternate": "preferred",
+      "qty": 1,
+      "sole_source": "UNKNOWN",
+      "stock_qty": "UNKNOWN",
+      "subsystem": "Buttons",
+      "unit_price": "UNKNOWN"
+    },
+    {
+      "alternate_mpn": "ATECC608B",
+      "avl": [
+        {
+          "qualification": "CANDIDATE",
+          "vendor": "NXP"
+        }
+      ],
+      "bom_status": "FROZEN_BASELINE",
+      "description": "Secure element footprint",
+      "lead_time_weeks": "UNKNOWN",
+      "lifecycle_status": "UNKNOWN",
+      "manufacturer": "NXP",
+      "moq": "UNKNOWN",
+      "mpn": "SE050C1HQ1",
+      "notes": "",
+      "preferred_or_alternate": "preferred",
+      "qty": 1,
+      "sole_source": false,
+      "stock_qty": "UNKNOWN",
+      "subsystem": "SE",
+      "unit_price": "UNKNOWN"
+    }
+  ],
+  "rfq_purchase_fab": "NOT_THIS_STREAM",
+  "schema": "gunnchos.supply_chain.fields.v1",
+  "sku": "handheld_hybrid",
+  "source_bom": "device_designs/handheld_hybrid/manufacturing/ASSEMBLY_BOM.csv"
+}

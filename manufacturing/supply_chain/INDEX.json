@@ -1,0 +1,32 @@
+{
+  "PRODUCTION_RELEASE_CLAIMED": false,
+  "rfq_purchase_fab": "NOT_THIS_STREAM",
+  "schema": "gunnchos.supply_chain.index.v1",
+  "skus": [
+    {
+      "parts": 15,
+      "path": "manufacturing/supply_chain/handheld_hybrid.json",
+      "sku": "handheld_hybrid"
+    },
+    {
+      "parts": 19,
+      "path": "manufacturing/supply_chain/student_14_5.json",
+      "sku": "student_14_5"
+    },
+    {
+      "parts": 14,
+      "path": "manufacturing/supply_chain/ds_xl_coder.json",
+      "sku": "ds_xl_coder"
+    },
+    {
+      "parts": 23,
+      "path": "manufacturing/supply_chain/dock.json",
+      "sku": "dock"
+    },
+    {
+      "parts": 23,
+      "path": "manufacturing/supply_chain/edge_io_rings.json",
+      "sku": "edge_io_rings"
+    }
+  ]
+}
