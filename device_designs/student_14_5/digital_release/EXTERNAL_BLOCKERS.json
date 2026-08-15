@@ -1,0 +1,16 @@
+{
+  "product": "student_14_5",
+  "token": "STUDENT_HW_DIGITAL_RELEASE_PACKAGE",
+  "earned": false,
+  "blockers": [
+    "EXT-COM-HPC-400PIN"
+  ],
+  "public_carrier_complete": true,
+  "pin_accurate_complete": false,
+  "cellular": {
+    "mpn": "RM520N-GL",
+    "release": "Rel-16",
+    "ntn": false,
+    "is_6g": false
+  }
+}

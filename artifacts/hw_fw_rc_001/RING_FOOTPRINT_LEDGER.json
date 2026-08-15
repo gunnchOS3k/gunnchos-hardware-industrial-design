@@ -1,0 +1,18 @@
+{
+  "schema": "gunnchos.hw_fw_rc_001.ring_footprint_ledger.v1",
+  "generated_at_utc": "2026-08-15T00:55:38Z",
+  "cont_ix_routing_completeness_footprints": 15,
+  "tip_kicad_pcb_footprint_count": 11,
+  "tip_pcb": "device_designs/edge_io_rings/kicad/edge_io_rings.kicad_pcb",
+  "tip_authoritative_for_rc001": true,
+  "delta": -4,
+  "blocking": false,
+  "note": "Cont IX ROUTING_COMPLETENESS over-counted vs tip PCB; tip PCB is authoritative for HW-FW-RC-001. Non-blocking.",
+  "tip_footprints": [
+    "gunnchos_production:MountingHole_3.2mm x4",
+    "gunnchos_production:Fiducial_1mm x3",
+    "gunnchos_production:USB_C_Receptacle_Production",
+    "gunnchos_production:VQFN-48-1EP_7x7mm_P0.5mm",
+    "gunnchos_production:TestPoint_Pad x2"
+  ]
+}

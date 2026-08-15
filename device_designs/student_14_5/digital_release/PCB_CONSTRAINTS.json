@@ -1,0 +1,22 @@
+{
+  "product": "student_14_5",
+  "stackup": "device_designs/student_14_5/manufacturing/stackup.yaml",
+  "impedance_note": "device_designs/student_14_5/manufacturing/impedance_note.md",
+  "com_connector": "COM-HPC Mini 400-pin \u2014 pin-accurate nets EXTERNAL/NDA",
+  "usb4_host": "on-COM USB4 @ 40G class toward dock JHL8440",
+  "rf_keepouts": "device_designs/student_14_5/docs/radios.md",
+  "tip_drc": "artifacts/hw_fw_rc_001/eda/student_14_5_drc_tip.json",
+  "tip_drc_summary": {
+    "errors": 0,
+    "warnings": 50,
+    "by_type": {
+      "warning:track_dangling": 10,
+      "warning:lib_footprint_mismatch": 39,
+      "warning:silk_over_copper": 1
+    },
+    "track_dangling": 10,
+    "silk_over_copper": 1,
+    "lib_footprint_mismatch": 39
+  },
+  "nda_nets_invented": false
+}

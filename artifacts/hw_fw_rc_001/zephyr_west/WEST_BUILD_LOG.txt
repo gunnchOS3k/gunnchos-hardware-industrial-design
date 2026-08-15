@@ -1,0 +1,35 @@
+[0/1] Re-running CMake...
+Loading Zephyr default modules (Zephyr base (cached)).
+-- Application: /Users/gunnchos/Downloads/gunnchos-7gc-research-product-spine/repos/gunnchos-hardware-industrial-design/firmware/edge_io_rings/zephyr_west/zephyr_app
+-- CMake version: 3.31.10
+-- Cache files will be written to: /Users/gunnchos/Library/Caches/zephyr
+-- Zephyr version: 3.7.1 (/Users/gunnchos/zephyr-workspace/zephyr)
+-- Found west (found suitable version "1.5.0", minimum required is "0.14.0")
+-- Board: nrf52840dk, qualifiers: nrf52840
+-- Found host-tools: zephyr 0.16.8 (/Users/gunnchos/zephyr-workspace/zephyr-sdk-0.16.8)
+-- Found toolchain: zephyr 0.16.8 (/Users/gunnchos/zephyr-workspace/zephyr-sdk-0.16.8)
+-- Found BOARD.dts: /Users/gunnchos/zephyr-workspace/zephyr/boards/nordic/nrf52840dk/nrf52840dk_nrf52840.dts
+-- Generated zephyr.dts: /Users/gunnchos/Downloads/gunnchos-7gc-research-product-spine/repos/gunnchos-hardware-industrial-design/firmware/edge_io_rings/zephyr_west/build/zephyr_west/zephyr/zephyr.dts
+-- Generated devicetree_generated.h: /Users/gunnchos/Downloads/gunnchos-7gc-research-product-spine/repos/gunnchos-hardware-industrial-design/firmware/edge_io_rings/zephyr_west/build/zephyr_west/zephyr/include/generated/zephyr/devicetree_generated.h
+-- Including generated dts.cmake file: /Users/gunnchos/Downloads/gunnchos-7gc-research-product-spine/repos/gunnchos-hardware-industrial-design/firmware/edge_io_rings/zephyr_west/build/zephyr_west/zephyr/dts.cmake
+Parsing /Users/gunnchos/zephyr-workspace/zephyr/Kconfig
+Loaded configuration '/Users/gunnchos/Downloads/gunnchos-7gc-research-product-spine/repos/gunnchos-hardware-industrial-design/firmware/edge_io_rings/zephyr_west/build/zephyr_west/zephyr/.config'
+No change to configuration in '/Users/gunnchos/Downloads/gunnchos-7gc-research-product-spine/repos/gunnchos-hardware-industrial-design/firmware/edge_io_rings/zephyr_west/build/zephyr_west/zephyr/.config'
+No change to Kconfig header in '/Users/gunnchos/Downloads/gunnchos-7gc-research-product-spine/repos/gunnchos-hardware-industrial-design/firmware/edge_io_rings/zephyr_west/build/zephyr_west/zephyr/include/generated/zephyr/autoconf.h'
+-- Configuring done (6.0s)
+-- Generating done (0.2s)
+-- Build files have been written to: /Users/gunnchos/Downloads/gunnchos-7gc-research-product-spine/repos/gunnchos-hardware-industrial-design/firmware/edge_io_rings/zephyr_west/build/zephyr_west
+[1/10] Generating misc/generated/syscalls.json, misc/generated/struct_tags.json
+[2/10] Generating linker_zephyr_pre0.cmd
+[3/10] Building C object CMakeFiles/app.dir/src/main.c.obj
+[4/10] Linking C static library app/libapp.a
+[5/10] Linking C executable zephyr/zephyr_pre0.elf
+[6/10] Generating linker.cmd
+[7/10] Generating isr_tables.c, isr_tables_vt.ld, isr_tables_swi.ld
+[8/10] Building C object zephyr/CMakeFiles/zephyr_final.dir/isr_tables.c.obj
+[9/10] Linking C executable zephyr/zephyr.elf
+Memory region         Used Size  Region Size  %age Used
+           FLASH:       30840 B         1 MB      2.94%
+             RAM:        9024 B       256 KB      3.44%
+        IDT_LIST:          0 GB        32 KB      0.00%
+Generating files from /Users/gunnchos/Downloads/gunnchos-7gc-research-product-spine/repos/gunnchos-hardware-industrial-design/firmware/edge_io_rings/zephyr_west/build/zephyr_west/zephyr/zephyr.elf for board: nrf52840dk

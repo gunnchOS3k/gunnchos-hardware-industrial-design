@@ -1,0 +1,19 @@
+{
+  "schema": "gunnchos.hw_fw_rc_001.tip_drc_summary.v1",
+  "generated_at_utc": "2026-08-15T00:55:38Z",
+  "product": "student_14_5",
+  "pcb": "device_designs/student_14_5/kicad/student_14_5.kicad_pcb",
+  "kicad_cli": "10.0.5",
+  "raw_report": "artifacts/hw_fw_rc_001/eda/student_14_5_drc_tip.json",
+  "errors": 0,
+  "warnings": 50,
+  "by_type": {
+    "warning:track_dangling": 10,
+    "warning:lib_footprint_mismatch": 39,
+    "warning:silk_over_copper": 1
+  },
+  "track_dangling": 10,
+  "silk_over_copper": 1,
+  "lib_footprint_mismatch": 39,
+  "claim_boundary": "Digital tip DRC only; no physical fab claim"
+}

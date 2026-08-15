@@ -1,0 +1,104 @@
+{
+  "schema": "gunnchos.hw_fw_rc_001.edmund_external_blockers.v1",
+  "generated_at_utc": "2026-08-15T00:55:38Z",
+  "packet": "HW-FW-RC-001",
+  "policy": {
+    "no_invented_nda_pin_maps": true,
+    "STUDENT_DSXL_DOCK_TOKENS": false,
+    "reason": "Pin-accurate EXTERNAL unresolved \u2014 prefer FAIL vs placeholder PASS"
+  },
+  "blockers": [
+    {
+      "id": "EXT-COM-HPC-400PIN",
+      "products": [
+        "student_14_5",
+        "ds_xl_coder"
+      ],
+      "item": "COM-HPC Mini 400-pin net-accurate pin map",
+      "vendor": "PICMG / ADLINK",
+      "mpn_context": "COM-HPC-mMTL-155H-32G carrier fanout",
+      "portal": "PICMG member portal + ADLINK NDA / carrier design guide",
+      "format_needed": [
+        "PDF pin map",
+        "CSV net table"
+      ],
+      "why_blocks_token": "STUDENT_HW_DIGITAL_RELEASE_PACKAGE / DSXL_HW_DIGITAL_RELEASE_PACKAGE require pin-accurate schematic completeness",
+      "public_side_done": true,
+      "invented_nets_forbidden": true,
+      "owner_action": "Edmund: obtain NARROW_NDA COM-HPC Mini + ADLINK mMTL carrier collateral"
+    },
+    {
+      "id": "EXT-DSXL-DUAL-EDP",
+      "products": [
+        "ds_xl_coder"
+      ],
+      "item": "Dual eDP COM-HPC pin map for second independent display",
+      "vendor": "ADLINK",
+      "mpn_context": "Same COM; carrier differentiator only",
+      "portal": "ADLINK NDA portal",
+      "format_needed": [
+        "PDF eDP2 lane/pin map"
+      ],
+      "why_blocks_token": "DS-XL two independent useful displays cannot be pin-accurate without eDP2 map",
+      "public_side_done": true,
+      "digital_topology_modeled": true,
+      "invented_nets_forbidden": true,
+      "owner_action": "Edmund: request dual-eDP pin mapping for COM-HPC-mMTL on Mini"
+    },
+    {
+      "id": "EXT-JHL8440-BALLMAP",
+      "products": [
+        "dock"
+      ],
+      "item": "Intel JHL8440 package ball map + reference schematic",
+      "vendor": "Intel",
+      "mpn_context": "Goshen Ridge TB4/USB4 peripheral controller @ 40G (NOT TB5)",
+      "portal": "Intel Resource & Documentation Center (NDA)",
+      "format_needed": [
+        "BGA ball map PDF",
+        "reference sch (optional IBIS)"
+      ],
+      "why_blocks_token": "DOCK_HW_DIGITAL_RELEASE_PACKAGE requires production fanout",
+      "public_side_done": true,
+      "tb5_rejected": true,
+      "invented_nets_forbidden": true,
+      "owner_action": "Edmund: request JHL8440 design kit under NDA"
+    },
+    {
+      "id": "EXT-JHL9040R-BALLMAP",
+      "products": [
+        "dock"
+      ],
+      "item": "Intel JHL9040R package ball map + retimer placement guide",
+      "vendor": "Intel",
+      "mpn_context": "Hayden Bridge TB4 retimer @ 40G \u2014 not the dock controller",
+      "portal": "Intel Resource & Documentation Center (NDA)",
+      "format_needed": [
+        "BGA ball map PDF",
+        "placement/SI guide"
+      ],
+      "why_blocks_token": "Dock SI/retimer production fanout",
+      "public_side_done": true,
+      "tb5_rejected": true,
+      "invented_nets_forbidden": true,
+      "owner_action": "Edmund: request JHL9040R retimer collateral under NDA"
+    },
+    {
+      "id": "EXT-DSXL-PANEL-AVL",
+      "products": [
+        "ds_xl_coder"
+      ],
+      "item": "Exact display panel MPNs + hinge bend OEM spec",
+      "vendor": "BOE/AUO/OEM",
+      "severity": "AVL_QUOTE",
+      "why_blocks_token": "Does not alone unlock token; needed for manufacturer package completeness",
+      "owner_action": "Edmund: panel AVL quotes (UNKNOWN_UNTIL_QUOTE until then)",
+      "blocks_release_token_alone": false
+    }
+  ],
+  "non_blockers_confirmed": [
+    "RM520N-GL Rel-16 Sub-6 NSA+SA \u2014 not NTN/6G",
+    "Dock freeze USB4/TB4 40G JHL8440+JHL9040R \u2014 no TB5/80G",
+    "HANDHELD + RING tokens remain earned on tip-accurate evidence"
+  ]
+}

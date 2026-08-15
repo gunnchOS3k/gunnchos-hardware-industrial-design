@@ -1,7 +1,8 @@
 {
   "product": "handheld_hybrid",
-  "updated_at_utc": "2026-08-09T20:50:52Z",
+  "updated_at_utc": "2026-08-15T00:55:38Z",
   "cont": "IX",
+  "hw_fw_rc_001_remediation": true,
   "erc": {
     "present": true,
     "errors": 0,
@@ -11,18 +12,23 @@
       "warning:isolated_pin_label": 146,
       "warning:lib_symbol_issues": 45,
       "warning:multiple_net_names": 4
-    }
+    },
+    "source": "Cont IX schematic ERC (unchanged)"
   },
   "drc": {
     "present": true,
     "errors": 0,
-    "warnings": 50,
+    "warnings": 39,
     "by_type": {
-      "warning:track_dangling": 10,
-      "warning:lib_footprint_mismatch": 39,
-      "warning:silk_over_copper": 1
-    }
+      "warning:lib_footprint_mismatch": 39
+    },
+    "track_dangling": 0,
+    "silk_over_copper": 0,
+    "lib_footprint_mismatch": 39,
+    "source": "artifacts/hw_fw_rc_001/eda/handheld_hybrid_drc_tip.json",
+    "note": "TIP-ACCURATE kicad-cli DRC re-run on stream-c/hw-fw-rc-001. Family batch deferred."
   },
   "gerber_count": 17,
-  "step_bytes": 14828
+  "step_bytes": 14828,
+  "hw_fw_rc_001_tip_drc": true
 }

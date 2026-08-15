@@ -1,0 +1,21 @@
+{
+  "schema": "gunnchos.hw_fw_rc_001.deferred_heavy_work.v1",
+  "generated_at_utc": "2026-08-15T00:56:23Z",
+  "reason": "Product-Use QEMU likely ACTIVE \u2014 resource rule",
+  "deferred": [
+    "family-wide KiCad ERC/DRC batch re-sweep",
+    "large thermal Monte Carlo",
+    "extra QEMU device profiles",
+    "long soak / reliability sims",
+    "large video/model downloads for factory AV fixtures",
+    "full SI channel simulation for TB4 (NDA tools)"
+  ],
+  "allowed_executed": [
+    "firmware source/tests",
+    "schematic/netlist/BOM/AVL refresh",
+    "lightweight ERC status reuse (Cont IX)",
+    "Ring west build hard gate",
+    "unit tests for RC-001 package honesty",
+    "DVP&R / USB-dock digital models"
+  ]
+}

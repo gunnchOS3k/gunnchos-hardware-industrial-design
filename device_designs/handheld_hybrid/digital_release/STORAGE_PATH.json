@@ -1,0 +1,15 @@
+{
+  "schema": "gunnchos.hw_fw_rc_001.storage_path.v1",
+  "product": "handheld_hybrid",
+  "emmc_gib": 32,
+  "emmc_role": "system_and_recovery_only",
+  "microsd_role": "required_large_content_games_ai_waike_media_user",
+  "ab_slots": true,
+  "encryption": "planned_dm_crypt_or_fbe",
+  "wear": "MODELED",
+  "SHIPPING_IMAGE": false,
+  "evidence": [
+    "npi/phase_xv/handheld_storage_headroom/",
+    "artifacts/hw002/image_fit/"
+  ]
+}

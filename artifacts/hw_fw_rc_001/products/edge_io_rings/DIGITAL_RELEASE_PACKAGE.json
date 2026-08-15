@@ -1,0 +1,227 @@
+{
+  "schema": "gunnchos.hw_fw_rc_001.digital_release_package.v1",
+  "packet": "HW-FW-RC-001",
+  "product": "edge_io_rings",
+  "generated_at_utc": "2026-08-15T00:56:23Z",
+  "vendor_anchors": {
+    "mcu": "nRF52840",
+    "imu": "BMI270",
+    "cap": "IQS7222A",
+    "se": "SE050",
+    "pmic": "nPM1300",
+    "uwb_optional": "DW3000/DWM3001C",
+    "not": [
+      "IMU_only_absolute_position"
+    ]
+  },
+  "sections": {
+    "electrical_block_diagram": "device_designs/edge_io_rings/architecture.md",
+    "power_tree": "device_designs/edge_io_rings/electrical/power_tree.yaml",
+    "rail_budget": "device_designs/edge_io_rings/electrical/power_budget.yaml",
+    "schematic": "device_designs/edge_io_rings/kicad/edge_io_rings.kicad_sch",
+    "pcb": "device_designs/edge_io_rings/kicad/edge_io_rings.kicad_pcb",
+    "stackup": "device_designs/edge_io_rings/manufacturing/stackup.yaml",
+    "bom_assembly": "device_designs/edge_io_rings/bom/assembly_bom.csv",
+    "rf_model": "device_designs/edge_io_rings/electrical/rf_model.yaml",
+    "manufacturing_release_checklist": "device_designs/edge_io_rings/manufacturing/RELEASE_PACKAGE_CHECKLIST.md",
+    "cont_ix_release": "device_designs/edge_io_rings/manufacturing/cont_ix_release",
+    "drivers_readme": "device_designs/edge_io_rings/drivers/README.md"
+  },
+  "eda": {
+    "schematic_path": "device_designs/edge_io_rings/kicad/edge_io_rings.kicad_sch",
+    "pcb_path": "device_designs/edge_io_rings/kicad/edge_io_rings.kicad_pcb",
+    "schematic_complete_editable": true,
+    "pcb_layout_exists": true,
+    "pcb_layout_status": "PRESENT",
+    "erc": {
+      "errors": 0,
+      "warnings": 27,
+      "pass": true,
+      "source": "device_designs/*/manufacturing/ERC_DRC_STATUS.json (ERC; Cont IX sch)",
+      "by_type": {
+        "warning:isolated_pin_label": 7,
+        "warning:lib_symbol_issues": 20
+      }
+    },
+    "drc": {
+      "errors": 0,
+      "warnings": 22,
+      "pass": true,
+      "source": "artifacts/hw_fw_rc_001/eda/edge_io_rings_drc_tip.json",
+      "by_type": {
+        "warning:track_dangling": 10,
+        "warning:lib_footprint_mismatch": 11,
+        "warning:silk_over_copper": 1
+      },
+      "track_dangling": 10,
+      "silk_over_copper": 1,
+      "lib_footprint_mismatch": 11,
+      "note": "TIP-ACCURATE kicad-cli DRC (artifacts/hw_fw_rc_001/eda/*_drc_tip.json). Do not invent NDA pin/ball maps. Family batch deferred."
+    },
+    "cont_ix_erc_present": true,
+    "external_blockers_ref": null
+  },
+  "power_thermal": {
+    "power_budget": "device_designs/edge_io_rings/electrical/power_budget.yaml",
+    "power_tree": "device_designs/edge_io_rings/electrical/power_tree.yaml",
+    "battery_model": {
+      "path": "device_designs/edge_io_rings/electrical/battery_model.yaml",
+      "evidence_class": "MODELED",
+      "PHYSICAL_PENDING": true
+    },
+    "thermal_model": {
+      "path": "device_designs/edge_io_rings/electrical/thermal_model.yaml",
+      "evidence_class": "MODELED",
+      "PHYSICAL_PENDING": true,
+      "physical_thermal_pass": false
+    },
+    "battery_life_claim": false,
+    "physical_thermal_pass": false
+  },
+  "firmware": {
+    "manifest": "firmware/manifests/edge_io_rings_firmware_manifest.yaml",
+    "builds": true,
+    "build_class": "ZEPHYR_WEST",
+    "evidence": [
+      "artifacts/hw_fw_rc_001/zephyr_west/ZEPHYR_WEST_PROBE.json",
+      "artifacts/hw002/zephyr_west/ZEPHYR_WEST_PROBE.json",
+      "firmware/edge_io_rings/zephyr_west/"
+    ],
+    "soft_skip": false,
+    "board": "nrf52840dk/nrf52840",
+    "script": "firmware/edge_io_rings/zephyr_west/scripts/require_west_build.sh",
+    "claim_boundary": "Digital west build only; physical flash/boot PHYSICAL_PENDING"
+  },
+  "bom_avl": {
+    "assembly_bom": "device_designs/edge_io_rings/bom/assembly_bom.csv",
+    "supply_chain_fields": "manufacturing/supply_chain/edge_io_rings.json",
+    "legacy_bom": null,
+    "PRODUCTION_RELEASE_CLAIMED": false,
+    "economics_policy": "UNKNOWN_UNTIL_QUOTE \u2014 no fabricated MOQ/price/stock",
+    "fabricated_economics_findings": [],
+    "bom_avl_honest": true,
+    "note": "Canonical orderable MPNs live in device_designs/*/bom/assembly_bom.csv + manufacturing/supply_chain/*.json"
+  },
+  "drivers": {
+    "classification_json": "docs/full_product_family/DRIVER_CLASSIFICATION.json",
+    "classification_md": "docs/full_product_family/DRIVER_CLASSIFICATION.md",
+    "subsystems": [
+      {
+        "id": "ble_mcu",
+        "mpn": "nRF52840-QIAA-R",
+        "risk": [
+          "UPSTREAM"
+        ]
+      },
+      {
+        "id": "softdevice_if_used",
+        "mpn": "Nordic SoftDevice",
+        "risk": [
+          "BINARY_BLOB"
+        ]
+      },
+      {
+        "id": "imu",
+        "mpn": "BMI270",
+        "risk": [
+          "UPSTREAM"
+        ]
+      },
+      {
+        "id": "cap_touch",
+        "mpn": "IQS7222A",
+        "risk": [
+          "OPEN_VENDOR"
+        ]
+      },
+      {
+        "id": "uwb",
+        "mpn": "DWM3001C",
+        "risk": [
+          "OPEN_VENDOR",
+          "BINARY_BLOB"
+        ]
+      },
+      {
+        "id": "bhi360",
+        "mpn": "BHI360",
+        "risk": [
+          "OPEN_VENDOR"
+        ]
+      },
+      {
+        "id": "se",
+        "mpn": "SE050C1HQ1",
+        "risk": [
+          "OPEN_VENDOR"
+        ]
+      },
+      {
+        "id": "pmic",
+        "mpn": "npm1300-CAAA-R",
+        "risk": [
+          "OPEN_VENDOR",
+          "UPSTREAM"
+        ]
+      }
+    ],
+    "unavailable_triggers": [],
+    "architecture_revision_notes": [],
+    "driver_risks_explicit": true
+  },
+  "factory_service": {
+    "paths": {
+      "factory_test_dir": "manufacturing/edge_io_rings/factory_test",
+      "repair_dir": "manufacturing/edge_io_rings/repair",
+      "repair_plan": "manufacturing/REPAIR_AND_SERVICE_PLAN.md",
+      "programming": "device_designs/edge_io_rings/manufacturing/PROGRAMMING.md",
+      "qc": "device_designs/edge_io_rings/manufacturing/QC_CHECKLIST.md",
+      "rework": "device_designs/edge_io_rings/manufacturing/REWORK.md",
+      "calibration": "device_designs/edge_io_rings/manufacturing/CALIBRATION.md"
+    },
+    "factory_service_complete_digital": true,
+    "production_keys_ca": "PENDING",
+    "physical_line_validation": "PHYSICAL_PENDING"
+  },
+  "severity": {
+    "S0_digital": 0,
+    "S1_digital": 0,
+    "notes": []
+  },
+  "rf_final_pass": false,
+  "spatial_accuracy": "PHYSICAL_PENDING",
+  "claim_boundary": {
+    "physical_validation": false,
+    "SHIPPING_HARDWARE": false,
+    "battery_life_claim": false,
+    "physical_thermal_pass": false,
+    "rf_certified": false
+  },
+  "token": {
+    "token": "RING_HW_DIGITAL_RELEASE_PACKAGE",
+    "earned": true,
+    "criteria": {
+      "schematic_complete": true,
+      "erc_pass": true,
+      "pcb_sufficient": true,
+      "drc_pass_where_layout": true,
+      "bom_avl_honest": true,
+      "driver_risks_explicit": true,
+      "power_model_complete": true,
+      "thermal_model_complete": true,
+      "firmware_builds": true,
+      "factory_service_complete": true,
+      "dvpr_complete": true,
+      "s0_digital_zero": true,
+      "s1_digital_zero": true
+    },
+    "failed_criteria": [],
+    "EVT_PASS": false,
+    "DVT_PASS": false,
+    "PVT_PASS": false,
+    "RF_CERTIFIED": false,
+    "EMC_CERTIFIED": false,
+    "BATTERY_CERTIFIED": false,
+    "SHIPPING_HARDWARE": false
+  }
+}

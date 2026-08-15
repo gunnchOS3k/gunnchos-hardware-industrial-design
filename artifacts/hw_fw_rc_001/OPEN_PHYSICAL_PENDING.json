@@ -1,0 +1,160 @@
+{
+  "schema": "gunnchos.hw_fw_rc_001.open_physical_pending.v1",
+  "generated_at_utc": "2026-08-15T00:56:23Z",
+  "DIGITAL_OPEN": [
+    {
+      "product": "student_14_5",
+      "token": "STUDENT_HW_DIGITAL_RELEASE_PACKAGE",
+      "failed": [],
+      "reason": "EXTERNAL/NDA pin-accurate fanout remains; public Cont IX package is CONDITIONAL_VENDOR_COLLATERAL \u2014 prefer FAIL vs claiming STUDENT/DSXL/DOCK_HW_DIGITAL_RELEASE_PACKAGE"
+    },
+    {
+      "product": "student_14_5",
+      "item": "drc_warnings_remaining",
+      "warnings": 50,
+      "track_dangling": 10,
+      "silk_over_copper": 1,
+      "lib_footprint_mismatch": 39,
+      "source": "artifacts/hw_fw_rc_001/eda/student_14_5_drc_tip.json"
+    },
+    {
+      "product": "ds_xl_coder",
+      "token": "DSXL_HW_DIGITAL_RELEASE_PACKAGE",
+      "failed": [],
+      "reason": "EXTERNAL/NDA pin-accurate fanout remains; public Cont IX package is CONDITIONAL_VENDOR_COLLATERAL \u2014 prefer FAIL vs claiming STUDENT/DSXL/DOCK_HW_DIGITAL_RELEASE_PACKAGE"
+    },
+    {
+      "product": "ds_xl_coder",
+      "item": "drc_warnings_remaining",
+      "warnings": 51,
+      "track_dangling": 10,
+      "silk_over_copper": 1,
+      "lib_footprint_mismatch": 40,
+      "source": "artifacts/hw_fw_rc_001/eda/ds_xl_coder_drc_tip.json"
+    },
+    {
+      "product": "handheld_hybrid",
+      "item": "drc_warnings_remaining",
+      "warnings": 39,
+      "track_dangling": 0,
+      "silk_over_copper": 0,
+      "lib_footprint_mismatch": 39,
+      "source": "artifacts/hw_fw_rc_001/eda/handheld_hybrid_drc_tip.json"
+    },
+    {
+      "product": "dock",
+      "token": "DOCK_HW_DIGITAL_RELEASE_PACKAGE",
+      "failed": [],
+      "reason": "EXTERNAL/NDA pin-accurate fanout remains; public Cont IX package is CONDITIONAL_VENDOR_COLLATERAL \u2014 prefer FAIL vs claiming STUDENT/DSXL/DOCK_HW_DIGITAL_RELEASE_PACKAGE"
+    },
+    {
+      "product": "dock",
+      "item": "drc_warnings_remaining",
+      "warnings": 39,
+      "track_dangling": 10,
+      "silk_over_copper": 1,
+      "lib_footprint_mismatch": 28,
+      "source": "artifacts/hw_fw_rc_001/eda/dock_drc_tip.json"
+    },
+    {
+      "product": "edge_io_rings",
+      "item": "drc_warnings_remaining",
+      "warnings": 22,
+      "track_dangling": 10,
+      "silk_over_copper": 1,
+      "lib_footprint_mismatch": 11,
+      "source": "artifacts/hw_fw_rc_001/eda/edge_io_rings_drc_tip.json"
+    }
+  ],
+  "PHYSICAL_PENDING": [
+    {
+      "product": "student_14_5",
+      "item": "fab_flash_assemble_measure",
+      "status": "PHYSICAL_PENDING"
+    },
+    {
+      "product": "ds_xl_coder",
+      "item": "fab_flash_assemble_measure",
+      "status": "PHYSICAL_PENDING"
+    },
+    {
+      "product": "handheld_hybrid",
+      "item": "fab_flash_assemble_measure",
+      "status": "PHYSICAL_PENDING"
+    },
+    {
+      "product": "dock",
+      "item": "fab_flash_assemble_measure",
+      "status": "PHYSICAL_PENDING"
+    },
+    {
+      "product": "edge_io_rings",
+      "item": "fab_flash_assemble_measure",
+      "status": "PHYSICAL_PENDING"
+    },
+    {
+      "product": "edge_io_rings",
+      "item": "spatial_accuracy_and_physical_boot",
+      "status": "PHYSICAL_PENDING"
+    }
+  ],
+  "EXTERNAL": [
+    {
+      "id": "EXT-COM-HPC-400PIN",
+      "product": "student_14_5",
+      "item": "COM-HPC Mini 400-pin net-accurate pin map",
+      "vendor": "PICMG / ADLINK",
+      "owner_action": "Edmund: obtain NARROW_NDA COM-HPC Mini + ADLINK mMTL carrier collateral",
+      "invented_nets_forbidden": true
+    },
+    {
+      "id": "EXT-COM-HPC-400PIN",
+      "product": "ds_xl_coder",
+      "item": "COM-HPC Mini 400-pin net-accurate pin map",
+      "vendor": "PICMG / ADLINK",
+      "owner_action": "Edmund: obtain NARROW_NDA COM-HPC Mini + ADLINK mMTL carrier collateral",
+      "invented_nets_forbidden": true
+    },
+    {
+      "id": "EXT-DSXL-DUAL-EDP",
+      "product": "ds_xl_coder",
+      "item": "Dual eDP COM-HPC pin map for second independent display",
+      "vendor": "ADLINK",
+      "owner_action": "Edmund: request dual-eDP pin mapping for COM-HPC-mMTL on Mini",
+      "invented_nets_forbidden": true
+    },
+    {
+      "id": "EXT-JHL8440-BALLMAP",
+      "product": "dock",
+      "item": "Intel JHL8440 package ball map + reference schematic",
+      "vendor": "Intel",
+      "owner_action": "Edmund: request JHL8440 design kit under NDA",
+      "invented_nets_forbidden": true
+    },
+    {
+      "id": "EXT-JHL9040R-BALLMAP",
+      "product": "dock",
+      "item": "Intel JHL9040R package ball map + retimer placement guide",
+      "vendor": "Intel",
+      "owner_action": "Edmund: request JHL9040R retimer collateral under NDA",
+      "invented_nets_forbidden": true
+    },
+    {
+      "id": "EXT-DSXL-PANEL-AVL",
+      "product": "ds_xl_coder",
+      "item": "Exact display panel MPNs + hinge bend OEM spec",
+      "vendor": "BOE/AUO/OEM",
+      "owner_action": "Edmund: panel AVL quotes (UNKNOWN_UNTIL_QUOTE until then)",
+      "invented_nets_forbidden": true
+    }
+  ],
+  "HW_FIRMWARE_DIGITAL_PACKAGE_COMPLETE": false,
+  "tokens_policy": {
+    "HANDHELD_HW_DIGITAL_RELEASE_PACKAGE": true,
+    "RING_HW_DIGITAL_RELEASE_PACKAGE": true,
+    "STUDENT_HW_DIGITAL_RELEASE_PACKAGE": false,
+    "DSXL_HW_DIGITAL_RELEASE_PACKAGE": false,
+    "DOCK_HW_DIGITAL_RELEASE_PACKAGE": false,
+    "note": "NDA products stay false until EXTERNAL collateral \u2014 no placeholder PASS"
+  }
+}

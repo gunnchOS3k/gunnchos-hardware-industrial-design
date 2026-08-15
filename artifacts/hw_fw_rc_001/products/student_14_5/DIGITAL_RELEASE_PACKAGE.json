@@ -1,0 +1,273 @@
+{
+  "schema": "gunnchos.hw_fw_rc_001.digital_release_package.v1",
+  "packet": "HW-FW-RC-001",
+  "product": "student_14_5",
+  "generated_at_utc": "2026-08-15T00:56:23Z",
+  "vendor_anchors": {
+    "compute": "ADLINK COM-HPC-mMTL-155H-32G",
+    "cpu": "Core Ultra 7 155H",
+    "memory": "32GB LPDDR5-class onboard COM",
+    "wwan": "Quectel RM520N-GL Rel-16 Sub-6 NSA+SA",
+    "not": [
+      "NTN",
+      "6G",
+      "bare_CPU_BGA"
+    ]
+  },
+  "sections": {
+    "electrical_block_diagram": "device_designs/student_14_5/architecture.md",
+    "power_tree": "device_designs/student_14_5/electrical/power_tree.yaml",
+    "rail_budget": "device_designs/student_14_5/electrical/power_budget.yaml",
+    "schematic": "device_designs/student_14_5/kicad/student_14_5.kicad_sch",
+    "pcb": "device_designs/student_14_5/kicad/student_14_5.kicad_pcb",
+    "stackup": "device_designs/student_14_5/manufacturing/stackup.yaml",
+    "bom_assembly": "device_designs/student_14_5/bom/assembly_bom.csv",
+    "rf_model": "device_designs/student_14_5/electrical/rf_model.yaml",
+    "manufacturing_release_checklist": "device_designs/student_14_5/manufacturing/RELEASE_PACKAGE_CHECKLIST.md",
+    "cont_ix_release": "device_designs/student_14_5/manufacturing/cont_ix_release",
+    "drivers_readme": "device_designs/student_14_5/drivers/README.md"
+  },
+  "eda": {
+    "schematic_path": "device_designs/student_14_5/kicad/student_14_5.kicad_sch",
+    "pcb_path": "device_designs/student_14_5/kicad/student_14_5.kicad_pcb",
+    "schematic_complete_editable": true,
+    "pcb_layout_exists": true,
+    "pcb_layout_status": "PRESENT",
+    "erc": {
+      "errors": 0,
+      "warnings": 40,
+      "pass": true,
+      "source": "device_designs/*/manufacturing/ERC_DRC_STATUS.json (ERC; Cont IX sch)",
+      "by_type": {
+        "warning:isolated_pin_label": 14,
+        "warning:lib_symbol_issues": 26
+      }
+    },
+    "drc": {
+      "errors": 0,
+      "warnings": 50,
+      "pass": true,
+      "source": "artifacts/hw_fw_rc_001/eda/student_14_5_drc_tip.json",
+      "by_type": {
+        "warning:track_dangling": 10,
+        "warning:lib_footprint_mismatch": 39,
+        "warning:silk_over_copper": 1
+      },
+      "track_dangling": 10,
+      "silk_over_copper": 1,
+      "lib_footprint_mismatch": 39,
+      "note": "TIP-ACCURATE kicad-cli DRC (artifacts/hw_fw_rc_001/eda/*_drc_tip.json). Do not invent NDA pin/ball maps. Family batch deferred."
+    },
+    "cont_ix_erc_present": true,
+    "external_blockers_ref": "artifacts/hw_fw_rc_001/EDMUND_EXTERNAL_BLOCKERS.json"
+  },
+  "power_thermal": {
+    "power_budget": "device_designs/student_14_5/electrical/power_budget.yaml",
+    "power_tree": "device_designs/student_14_5/electrical/power_tree.yaml",
+    "battery_model": {
+      "path": "device_designs/student_14_5/electrical/battery_model.yaml",
+      "evidence_class": "MODELED",
+      "PHYSICAL_PENDING": true
+    },
+    "thermal_model": {
+      "path": "device_designs/student_14_5/electrical/thermal_model.yaml",
+      "evidence_class": "MODELED",
+      "PHYSICAL_PENDING": true,
+      "physical_thermal_pass": false
+    },
+    "battery_life_claim": false,
+    "physical_thermal_pass": false
+  },
+  "firmware": {
+    "manifest": "firmware/manifests/student_14_5_firmware_manifest.yaml",
+    "builds": true,
+    "build_class": "ACPI_DT_HARNESS",
+    "evidence": [
+      "firmware/manifests/student_14_5_firmware_manifest.yaml",
+      "firmware/descriptors/acpi/student_14_5_dsdt.dsl",
+      "firmware/descriptors/devicetree/student_14_5.dts"
+    ],
+    "acpi": "firmware/descriptors/acpi/student_14_5_dsdt.dsl",
+    "devicetree": "firmware/descriptors/devicetree/student_14_5.dts",
+    "claim_boundary": "Harness/ACPI/DT digital path; on-target COM/SoM firmware PHYSICAL+BINARY_BLOB pending"
+  },
+  "bom_avl": {
+    "assembly_bom": "device_designs/student_14_5/bom/assembly_bom.csv",
+    "supply_chain_fields": "manufacturing/supply_chain/student_14_5.json",
+    "legacy_bom": "bom/student_14_5/bom.csv",
+    "PRODUCTION_RELEASE_CLAIMED": false,
+    "economics_policy": "UNKNOWN_UNTIL_QUOTE \u2014 no fabricated MOQ/price/stock",
+    "fabricated_economics_findings": [],
+    "bom_avl_honest": true,
+    "note": "Canonical orderable MPNs live in device_designs/*/bom/assembly_bom.csv + manufacturing/supply_chain/*.json"
+  },
+  "drivers": {
+    "classification_json": "docs/full_product_family/DRIVER_CLASSIFICATION.json",
+    "classification_md": "docs/full_product_family/DRIVER_CLASSIFICATION.md",
+    "subsystems": [
+      {
+        "id": "cpu_igpu_npu",
+        "mpn": "Ultra 7 155H on COM-HPC-mMTL",
+        "risk": [
+          "BINARY_BLOB",
+          "UPSTREAM"
+        ]
+      },
+      {
+        "id": "me_csme",
+        "mpn": "on-module",
+        "risk": [
+          "BINARY_BLOB"
+        ]
+      },
+      {
+        "id": "com_board_mgmt",
+        "mpn": "ADLINK SEMA / AMI UEFI",
+        "risk": [
+          "BINARY_BLOB",
+          "OPEN_VENDOR"
+        ]
+      },
+      {
+        "id": "wifi_bt",
+        "mpn": "BE200",
+        "risk": [
+          "BINARY_BLOB",
+          "UPSTREAM"
+        ]
+      },
+      {
+        "id": "wwan",
+        "mpn": "RM520N-GL",
+        "risk": [
+          "OPEN_VENDOR",
+          "BINARY_BLOB"
+        ],
+        "not": [
+          "6G",
+          "NTN"
+        ]
+      },
+      {
+        "id": "esim_euicc",
+        "mpn": "GSMA SGP.22 path",
+        "risk": [
+          "OPEN_VENDOR",
+          "NDA_ONLY"
+        ]
+      },
+      {
+        "id": "tpm",
+        "mpn": "SLB9672XQ2.0",
+        "risk": [
+          "UPSTREAM"
+        ]
+      },
+      {
+        "id": "usb4",
+        "mpn": "on-COM USB4",
+        "risk": [
+          "UPSTREAM",
+          "BINARY_BLOB"
+        ],
+        "not": [
+          "TB5"
+        ]
+      },
+      {
+        "id": "audio",
+        "mpn": "ALC256/ALC245 class",
+        "risk": [
+          "UPSTREAM"
+        ]
+      },
+      {
+        "id": "ec",
+        "mpn": "ITE5570 or NPCX9 class",
+        "risk": [
+          "OPEN_VENDOR",
+          "UPSTREAM"
+        ]
+      },
+      {
+        "id": "touch_webcam",
+        "mpn": "panel OEM / MIPI",
+        "risk": [
+          "BINARY_BLOB",
+          "OPEN_VENDOR"
+        ]
+      }
+    ],
+    "unavailable_triggers": [],
+    "architecture_revision_notes": [
+      {
+        "id": "open_me_replacement",
+        "risk": "UNAVAILABLE",
+        "arch_revision_note": "Retain ADLINK COM + vendor ME/CSME BINARY_BLOB; do not invent open ME"
+      },
+      {
+        "id": "wwan_6g_ntn",
+        "risk": "UNAVAILABLE",
+        "arch_revision_note": "RM520N-GL is Rel-16 Sub-6 NSA+SA only; NTN/6G remain simulated/migration abstractions \u2014 not modem claims"
+      }
+    ],
+    "driver_risks_explicit": true
+  },
+  "factory_service": {
+    "paths": {
+      "factory_test_dir": "manufacturing/student_14_5/factory_test",
+      "repair_dir": "manufacturing/student_14_5/repair",
+      "repair_plan": "manufacturing/REPAIR_AND_SERVICE_PLAN.md",
+      "programming": "device_designs/student_14_5/manufacturing/PROGRAMMING.md",
+      "qc": "device_designs/student_14_5/manufacturing/QC_CHECKLIST.md",
+      "rework": "device_designs/student_14_5/manufacturing/REWORK.md",
+      "calibration": "device_designs/student_14_5/manufacturing/CALIBRATION.md"
+    },
+    "factory_service_complete_digital": true,
+    "production_keys_ca": "PENDING",
+    "physical_line_validation": "PHYSICAL_PENDING"
+  },
+  "severity": {
+    "S0_digital": 0,
+    "S1_digital": 0,
+    "notes": []
+  },
+  "rf_final_pass": false,
+  "spatial_accuracy": null,
+  "claim_boundary": {
+    "physical_validation": false,
+    "SHIPPING_HARDWARE": false,
+    "battery_life_claim": false,
+    "physical_thermal_pass": false,
+    "rf_certified": false
+  },
+  "token": {
+    "token": "STUDENT_HW_DIGITAL_RELEASE_PACKAGE",
+    "earned": false,
+    "criteria": {
+      "schematic_complete": true,
+      "erc_pass": true,
+      "pcb_sufficient": true,
+      "drc_pass_where_layout": true,
+      "bom_avl_honest": true,
+      "driver_risks_explicit": true,
+      "power_model_complete": true,
+      "thermal_model_complete": true,
+      "firmware_builds": true,
+      "factory_service_complete": true,
+      "dvpr_complete": true,
+      "s0_digital_zero": true,
+      "s1_digital_zero": true,
+      "nda_public_side_ok_but_pin_accurate_external": true,
+      "token_withhold_reason": "EXTERNAL/NDA pin-accurate fanout remains; public Cont IX package is CONDITIONAL_VENDOR_COLLATERAL \u2014 prefer FAIL vs claiming STUDENT/DSXL/DOCK_HW_DIGITAL_RELEASE_PACKAGE"
+    },
+    "failed_criteria": [],
+    "EVT_PASS": false,
+    "DVT_PASS": false,
+    "PVT_PASS": false,
+    "RF_CERTIFIED": false,
+    "EMC_CERTIFIED": false,
+    "BATTERY_CERTIFIED": false,
+    "SHIPPING_HARDWARE": false
+  }
+}

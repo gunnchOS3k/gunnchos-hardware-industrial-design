@@ -1,0 +1,12 @@
+{
+  "product": "ds_xl_coder",
+  "power_budget": "device_designs/ds_xl_coder/electrical/power_budget.yaml",
+  "battery_model": "device_designs/ds_xl_coder/electrical/battery_model.yaml",
+  "thermal_model": "device_designs/ds_xl_coder/electrical/thermal_model.yaml",
+  "evidence_class": "MODELED",
+  "battery_life_claim": false,
+  "physical_thermal_pass": false,
+  "PHYSICAL_PENDING": true,
+  "dual_display_power_overhead_modeled": true,
+  "com_mpn": "COM-HPC-mMTL-155H-32G"
+}

@@ -1,0 +1,11 @@
+{
+  "product": "student_14_5",
+  "power_budget": "device_designs/student_14_5/electrical/power_budget.yaml",
+  "battery_model": "device_designs/student_14_5/electrical/battery_model.yaml",
+  "thermal_model": "device_designs/student_14_5/electrical/thermal_model.yaml",
+  "evidence_class": "MODELED",
+  "battery_life_claim": false,
+  "physical_thermal_pass": false,
+  "PHYSICAL_PENDING": true,
+  "com_mpn": "COM-HPC-mMTL-155H-32G"
+}

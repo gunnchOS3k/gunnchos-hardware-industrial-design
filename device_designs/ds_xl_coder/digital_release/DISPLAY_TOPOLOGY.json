@@ -1,0 +1,34 @@
+{
+  "schema": "gunnchos.hw_fw_rc_001.dsxl_display_topology.v1",
+  "product": "ds_xl_coder",
+  "generated_at_utc": "2026-08-15T00:55:38Z",
+  "independent_useful_displays": 2,
+  "paths": [
+    {
+      "id": "DISP1",
+      "interface": "eDP",
+      "role": "primary_useful",
+      "touch": true,
+      "edid": "panel_oem",
+      "com_pins": "EXTERNAL_NDA"
+    },
+    {
+      "id": "DISP2",
+      "interface": "eDP",
+      "role": "second_useful",
+      "touch": true,
+      "edid": "panel_oem",
+      "com_pins": "EXTERNAL_NDA"
+    }
+  ],
+  "orientation_hinge": "MODELED",
+  "input_mapping": "per_panel_HID",
+  "fallback": "single_display_degraded_mode",
+  "icd": [
+    "device_designs/ds_xl_coder/docs/dual_edp_icd.md",
+    "device_designs/ds_xl_coder/docs/second_display_icd.md"
+  ],
+  "pin_accurate_status": "EXTERNAL_NDA",
+  "invented_com_pin_numbers": false,
+  "token_impact": "DSXL_HW_DIGITAL_RELEASE_PACKAGE remains false until EXT-DSXL-DUAL-EDP + COM-HPC map land"
+}

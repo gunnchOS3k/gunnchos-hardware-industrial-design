@@ -1,0 +1,48 @@
+{
+  "schema": "gunnchos.hw_fw_rc_001.ring_sensing_map.v1",
+  "generated_at_utc": "2026-08-15T00:56:23Z",
+  "modalities_required": [
+    "IMU_BMI270",
+    "CAP_IQS7222A",
+    "SE_SE050",
+    "BLE_nRF52840"
+  ],
+  "modalities_optional": [
+    "UWB_DW3000",
+    "BHI360",
+    "BMM350"
+  ],
+  "pmic": "nPM1300",
+  "fusion_policy": ">=2 modalities before action dispatch (ADR-FP-008)",
+  "imu_only_absolute_position": false,
+  "action_map": {
+    "pointer": [
+      "IMU_delta",
+      "CAP_hover"
+    ],
+    "click": [
+      "CAP_touch",
+      "IMU_tap"
+    ],
+    "text": [
+      "CAP_gesture",
+      "SE_auth_optional"
+    ],
+    "delete": [
+      "CAP_hold",
+      "confidence_gate"
+    ],
+    "shortcut": [
+      "CAP_multi",
+      "BLE_HID"
+    ],
+    "gaming": [
+      "IMU_rate",
+      "CAP_trigger",
+      "haptics_optional"
+    ]
+  },
+  "confidence": "required before destructive actions",
+  "ota": "MCUboot/OpenDFU digital path",
+  "spatial_accuracy": "PHYSICAL_PENDING"
+}

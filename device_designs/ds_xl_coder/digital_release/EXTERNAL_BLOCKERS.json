@@ -1,0 +1,12 @@
+{
+  "product": "ds_xl_coder",
+  "token": "DSXL_HW_DIGITAL_RELEASE_PACKAGE",
+  "earned": false,
+  "blockers": [
+    "EXT-COM-HPC-400PIN",
+    "EXT-DSXL-DUAL-EDP",
+    "EXT-DSXL-PANEL-AVL"
+  ],
+  "dual_display_digital_topology": true,
+  "pin_accurate_complete": false
+}

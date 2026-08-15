@@ -1,0 +1,11 @@
+{
+  "product": "dock",
+  "token": "DOCK_HW_DIGITAL_RELEASE_PACKAGE",
+  "earned": false,
+  "blockers": [
+    "EXT-JHL8440-BALLMAP",
+    "EXT-JHL9040R-BALLMAP"
+  ],
+  "tb_generation": "TB4_USB4_40G",
+  "tb5": false
+}
