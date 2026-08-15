@@ -1,0 +1,30 @@
+{
+  "schema": "gunnchos.hw_fw_rc_001.dock_40g_topology.v1",
+  "product": "dock",
+  "generated_at_utc": "2026-08-15T00:55:38Z",
+  "controller": "JHL8440",
+  "retimer": "JHL9040R",
+  "link_gbps": 40,
+  "tb5": false,
+  "rejected_mpns": [
+    "JHL9480",
+    "JHL9580"
+  ],
+  "adr": "docs/adr/ADR-HW-002-dock-usb4-tb4-not-tb5.md",
+  "digital_scenarios": [
+    "attach",
+    "pd_negotiation",
+    "usb4_tb4_topology",
+    "dp_tunneling",
+    "multi_display",
+    "ethernet",
+    "usb_hub",
+    "hotplug",
+    "sleep_wake",
+    "disconnect_reconnect",
+    "fault_isolation"
+  ],
+  "family_validate": "artifacts/hw_fw_rc_001/USB_DOCK_DIGITAL_VALIDATE.json",
+  "ball_maps": "EXTERNAL_NDA",
+  "invented_ball_maps": false
+}

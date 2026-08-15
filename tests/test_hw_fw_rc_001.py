@@ -156,6 +156,57 @@ def test_rc001_self_challenge_rejects_stale_handheld_drc():
     assert any(f["challenge"] == "handheld_tip_drc_cited" and f["result"] == "PASS" for f in vp["findings"])
 
 
+def test_rc001_nda_tokens_stay_false_no_placeholder():
+    tokens = json.loads((RC / "TOKENS_HW_FW_RC_001.json").read_text())["tokens"]
+    assert tokens["STUDENT_HW_DIGITAL_RELEASE_PACKAGE"]["earned"] is False
+    assert tokens["DSXL_HW_DIGITAL_RELEASE_PACKAGE"]["earned"] is False
+    assert tokens["DOCK_HW_DIGITAL_RELEASE_PACKAGE"]["earned"] is False
+    assert tokens["HANDHELD_HW_DIGITAL_RELEASE_PACKAGE"]["earned"] is True
+    assert tokens["RING_HW_DIGITAL_RELEASE_PACKAGE"]["earned"] is True
+    ext = json.loads((RC / "EDMUND_EXTERNAL_BLOCKERS.json").read_text())
+    ids = {b["id"] for b in ext["blockers"]}
+    assert "EXT-COM-HPC-400PIN" in ids
+    assert "EXT-DSXL-DUAL-EDP" in ids
+    assert "EXT-JHL8440-BALLMAP" in ids
+    assert "EXT-JHL9040R-BALLMAP" in ids
+    assert ext["policy"]["no_invented_nda_pin_maps"] is True
+    dock_topo = json.loads(
+        (ROOT / "device_designs/dock/digital_release/USB4_TB4_40G_TOPOLOGY.json").read_text()
+    )
+    assert dock_topo["tb5"] is False
+    assert dock_topo["link_gbps"] == 40
+    dsxl = json.loads(
+        (ROOT / "device_designs/ds_xl_coder/digital_release/DISPLAY_TOPOLOGY.json").read_text()
+    )
+    assert dsxl["independent_useful_displays"] == 2
+    assert dsxl["invented_com_pin_numbers"] is False
+    assert dsxl["pin_accurate_status"] == "EXTERNAL_NDA"
+    ledger = json.loads((RC / "RING_FOOTPRINT_LEDGER.json").read_text())
+    assert ledger["tip_kicad_pcb_footprint_count"] == 11
+    assert ledger["cont_ix_routing_completeness_footprints"] == 15
+    assert ledger["tip_authoritative_for_rc001"] is True
+    assert ledger["blocking"] is False
+
+
+def test_rc001_tip_drc_citations_for_nda_products():
+    for p, warns in (
+        ("student_14_5", 50),
+        ("ds_xl_coder", 51),
+        ("dock", 39),
+        ("edge_io_rings", 22),
+    ):
+        tip = json.loads((RC / "eda" / f"{p}_drc_tip.json").read_text())
+        assert len(tip["violations"]) == warns
+        status = json.loads(
+            (ROOT / f"device_designs/{p}/manufacturing/ERC_DRC_STATUS.json").read_text()
+        )
+        assert status["drc"]["warnings"] == warns
+        assert f"{p}_drc_tip.json" in status["drc"]["source"]
+        pkg = json.loads((RC / "products" / p / "DIGITAL_RELEASE_PACKAGE.json").read_text())
+        assert pkg["eda"]["drc"]["warnings"] == warns
+        assert f"{p}_drc_tip.json" in str(pkg["eda"]["drc"].get("source") or "")
+
+
 def test_rc001_dvpr_covers_domains():
     dvpr = json.loads((RC / "DVPR_MASTER.json").read_text())
     assert dvpr["row_count"] >= 16 * 4  # 5 products minus dock-battery

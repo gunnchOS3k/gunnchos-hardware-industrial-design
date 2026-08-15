@@ -2,7 +2,7 @@
   "schema": "gunnchos.hw_fw_rc_001.packet_summary.v1",
   "packet": "HW-FW-RC-001",
   "stream": "C",
-  "generated_at_utc": "2026-08-15T00:50:17Z",
+  "generated_at_utc": "2026-08-15T00:56:23Z",
   "baseline_main_tip": "6c0b025e505505a74adca510e47c15b8f39bc980",
   "remediation": {
     "prior_fail_tip": "1b2aedcd6e46e24d2eab8ee5fae6a768bfd2144d",
@@ -25,20 +25,20 @@
       "drc_pass": true,
       "erc_warnings": 40,
       "drc_warnings": 50,
-      "drc_source": "device_designs/*/manufacturing/ERC_DRC_STATUS.json",
-      "track_dangling": null,
-      "silk_over_copper": null,
-      "lib_footprint_mismatch": null
+      "drc_source": "artifacts/hw_fw_rc_001/eda/student_14_5_drc_tip.json",
+      "track_dangling": 10,
+      "silk_over_copper": 1,
+      "lib_footprint_mismatch": 39
     },
     "ds_xl_coder": {
       "erc_pass": true,
       "drc_pass": true,
       "erc_warnings": 45,
       "drc_warnings": 51,
-      "drc_source": "device_designs/*/manufacturing/ERC_DRC_STATUS.json",
-      "track_dangling": null,
-      "silk_over_copper": null,
-      "lib_footprint_mismatch": null
+      "drc_source": "artifacts/hw_fw_rc_001/eda/ds_xl_coder_drc_tip.json",
+      "track_dangling": 10,
+      "silk_over_copper": 1,
+      "lib_footprint_mismatch": 40
     },
     "handheld_hybrid": {
       "erc_pass": true,
@@ -55,28 +55,39 @@
       "drc_pass": true,
       "erc_warnings": 19,
       "drc_warnings": 39,
-      "drc_source": "device_designs/*/manufacturing/ERC_DRC_STATUS.json",
-      "track_dangling": null,
-      "silk_over_copper": null,
-      "lib_footprint_mismatch": null
+      "drc_source": "artifacts/hw_fw_rc_001/eda/dock_drc_tip.json",
+      "track_dangling": 10,
+      "silk_over_copper": 1,
+      "lib_footprint_mismatch": 28
     },
     "edge_io_rings": {
       "erc_pass": true,
       "drc_pass": true,
       "erc_warnings": 27,
       "drc_warnings": 22,
-      "drc_source": "device_designs/*/manufacturing/ERC_DRC_STATUS.json",
-      "track_dangling": null,
-      "silk_over_copper": null,
-      "lib_footprint_mismatch": null
+      "drc_source": "artifacts/hw_fw_rc_001/eda/edge_io_rings_drc_tip.json",
+      "track_dangling": 10,
+      "silk_over_copper": 1,
+      "lib_footprint_mismatch": 11
     }
   },
   "optional_notes": {
     "ring_footprints_cont_ix_vs_tip": {
       "cont_ix_routing_completeness_footprints": 15,
       "tip_kicad_pcb_footprint_count": 11,
-      "blocking": false
-    }
+      "tip_authoritative": true,
+      "blocking": false,
+      "ledger": "artifacts/hw_fw_rc_001/RING_FOOTPRINT_LEDGER.json"
+    },
+    "edmund_external_blockers": "artifacts/hw_fw_rc_001/EDMUND_EXTERNAL_BLOCKERS.json",
+    "advanced_this_cycle": [
+      "tip DRC citations for Student/DS-XL/Dock/Rings",
+      "Edmund EXTERNAL blocker packet (no invented NDA maps)",
+      "DS-XL dual-display digital topology (EXTERNAL pin map)",
+      "Dock 40G-only topology package",
+      "per-product PCB constraints + power/thermal honesty stamps",
+      "ring footprint ledger tip 11 supersedes Cont IX 15 (non-blocking)"
+    ]
   },
   "firmware_builds": {
     "student_14_5": {

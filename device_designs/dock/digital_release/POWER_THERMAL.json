@@ -1,0 +1,10 @@
+{
+  "product": "dock",
+  "power_budget": "device_designs/dock/electrical/power_budget.yaml",
+  "thermal_model": "device_designs/dock/electrical/thermal_model.yaml",
+  "evidence_class": "MODELED",
+  "battery_model": "N_A_LINE_POWERED",
+  "physical_thermal_pass": false,
+  "PHYSICAL_PENDING": true,
+  "controller_tdp_class": "JHL8440_40G"
+}

@@ -95,28 +95,30 @@ def erc_drc(product: str) -> dict:
     drc_source = "device_designs/*/manufacturing/ERC_DRC_STATUS.json"
     drc_note = "Family-wide re-sweep DEFERRED (Product-Use QEMU resource rule)"
 
-    # Handheld: prefer tip-accurate kicad-cli DRC (HW-002 closed dangling/silk; Cont IX status is STALE).
-    if product == "handheld_hybrid":
-        tip = _parse_kicad_drc_json(OUT / "eda" / "handheld_hybrid_drc_tip.json")
-        hw002 = _parse_kicad_drc_json(
+    # Prefer tip-accurate kicad-cli DRC under artifacts/hw_fw_rc_001/eda/ when present.
+    tip = _parse_kicad_drc_json(OUT / "eda" / f"{product}_drc_tip.json")
+    if product == "handheld_hybrid" and not tip:
+        tip = _parse_kicad_drc_json(
             ROOT / "artifacts" / "hw002" / "eda" / "handheld_hybrid_drc_after.json"
         )
-        chosen = tip or hw002
-        if chosen:
-            drc = {
-                "present": True,
-                "errors": chosen["errors"],
-                "warnings": chosen["warnings"],
-                "by_type": chosen["by_type"],
-                "track_dangling": chosen["track_dangling"],
-                "silk_over_copper": chosen["silk_over_copper"],
-                "lib_footprint_mismatch": chosen["lib_footprint_mismatch"],
-            }
-            drc_source = chosen["source_path"]
-            drc_note = (
-                "TIP-ACCURATE kicad-cli DRC (not Cont IX). "
-                "track_dangling=0 silk_over_copper=0; residual lib_footprint_mismatch only. "
-                "Do not rubber-stamp Cont IX ERC_DRC_STATUS DRC block."
+    if tip:
+        drc = {
+            "present": True,
+            "errors": tip["errors"],
+            "warnings": tip["warnings"],
+            "by_type": tip["by_type"],
+            "track_dangling": tip["track_dangling"],
+            "silk_over_copper": tip["silk_over_copper"],
+            "lib_footprint_mismatch": tip["lib_footprint_mismatch"],
+        }
+        drc_source = tip["source_path"]
+        drc_note = (
+            "TIP-ACCURATE kicad-cli DRC (artifacts/hw_fw_rc_001/eda/*_drc_tip.json). "
+            "Do not invent NDA pin/ball maps. Family batch deferred."
+        )
+        if product == "handheld_hybrid":
+            drc_note += (
+                " Handheld: track_dangling=0 silk_over_copper=0; residual lib_footprint_mismatch only."
             )
 
     pcb = ROOT / "device_designs" / product / "kicad" / f"{product}.kicad_pcb"
@@ -132,7 +134,7 @@ def erc_drc(product: str) -> dict:
             "errors": int(erc.get("errors", -1)),
             "warnings": int(erc.get("warnings", -1)),
             "pass": erc.get("errors") == 0,
-            "source": "device_designs/*/manufacturing/ERC_DRC_STATUS.json (ERC; Cont IX still valid for sch)",
+            "source": "device_designs/*/manufacturing/ERC_DRC_STATUS.json (ERC; Cont IX sch)",
             "by_type": erc.get("by_type"),
         },
         "drc": {
@@ -147,6 +149,9 @@ def erc_drc(product: str) -> dict:
             "note": drc_note,
         },
         "cont_ix_erc_present": cont is not None,
+        "external_blockers_ref": "artifacts/hw_fw_rc_001/EDMUND_EXTERNAL_BLOCKERS.json"
+        if product in {"student_14_5", "ds_xl_coder", "dock"}
+        else None,
     }
 
 
@@ -948,6 +953,19 @@ def open_pending(packages: dict) -> dict:
     digital = []
     physical = []
     external = []
+    edmund = load_json(OUT / "EDMUND_EXTERNAL_BLOCKERS.json") or {}
+    for b in edmund.get("blockers") or []:
+        for product in b.get("products") or []:
+            external.append(
+                {
+                    "id": b.get("id"),
+                    "product": product,
+                    "item": b.get("item"),
+                    "vendor": b.get("vendor"),
+                    "owner_action": b.get("owner_action"),
+                    "invented_nets_forbidden": b.get("invented_nets_forbidden", True),
+                }
+            )
     for product, pkg in packages.items():
         if not pkg["token"]["earned"]:
             digital.append(
@@ -962,19 +980,23 @@ def open_pending(packages: dict) -> dict:
             digital.append(
                 {
                     "product": product,
-                    "item": "lib_footprint_mismatch_or_other_drc_warnings",
+                    "item": "drc_warnings_remaining",
                     "warnings": pkg["eda"]["drc"]["warnings"],
+                    "track_dangling": pkg["eda"]["drc"].get("track_dangling"),
+                    "silk_over_copper": pkg["eda"]["drc"].get("silk_over_copper"),
+                    "lib_footprint_mismatch": pkg["eda"]["drc"].get("lib_footprint_mismatch"),
+                    "source": pkg["eda"]["drc"].get("source"),
                 }
             )
         physical.append({"product": product, "item": "fab_flash_assemble_measure", "status": "PHYSICAL_PENDING"})
-        if product in {"student_14_5", "ds_xl_coder"}:
-            external.append({"product": product, "item": "COM-HPC Mini 400-pin NDA net map"})
-        if product == "ds_xl_coder":
-            external.append({"product": product, "item": "dual-eDP COM-HPC pin map NDA"})
-        if product == "dock":
-            external.append({"product": product, "item": "JHL8440/JHL9040R package ball maps NDA"})
         if product == "edge_io_rings":
             physical.append({"product": product, "item": "spatial_accuracy_and_physical_boot", "status": "PHYSICAL_PENDING"})
+    if not external:
+        # fallback
+        for product in ("student_14_5", "ds_xl_coder"):
+            external.append({"product": product, "item": "COM-HPC Mini 400-pin NDA net map"})
+        external.append({"product": "ds_xl_coder", "item": "dual-eDP COM-HPC pin map NDA"})
+        external.append({"product": "dock", "item": "JHL8440/JHL9040R package ball maps NDA"})
     return {
         "schema": "gunnchos.hw_fw_rc_001.open_physical_pending.v1",
         "generated_at_utc": utc_now(),
@@ -982,6 +1004,14 @@ def open_pending(packages: dict) -> dict:
         "PHYSICAL_PENDING": physical,
         "EXTERNAL": external,
         "HW_FIRMWARE_DIGITAL_PACKAGE_COMPLETE": False,
+        "tokens_policy": {
+            "HANDHELD_HW_DIGITAL_RELEASE_PACKAGE": True,
+            "RING_HW_DIGITAL_RELEASE_PACKAGE": True,
+            "STUDENT_HW_DIGITAL_RELEASE_PACKAGE": False,
+            "DSXL_HW_DIGITAL_RELEASE_PACKAGE": False,
+            "DOCK_HW_DIGITAL_RELEASE_PACKAGE": False,
+            "note": "NDA products stay false until EXTERNAL collateral — no placeholder PASS",
+        },
     }
 
 
@@ -1059,8 +1089,19 @@ def main() -> None:
             "ring_footprints_cont_ix_vs_tip": {
                 "cont_ix_routing_completeness_footprints": 15,
                 "tip_kicad_pcb_footprint_count": 11,
+                "tip_authoritative": True,
                 "blocking": False,
-            }
+                "ledger": "artifacts/hw_fw_rc_001/RING_FOOTPRINT_LEDGER.json",
+            },
+            "edmund_external_blockers": "artifacts/hw_fw_rc_001/EDMUND_EXTERNAL_BLOCKERS.json",
+            "advanced_this_cycle": [
+                "tip DRC citations for Student/DS-XL/Dock/Rings",
+                "Edmund EXTERNAL blocker packet (no invented NDA maps)",
+                "DS-XL dual-display digital topology (EXTERNAL pin map)",
+                "Dock 40G-only topology package",
+                "per-product PCB constraints + power/thermal honesty stamps",
+                "ring footprint ledger tip 11 supersedes Cont IX 15 (non-blocking)",
+            ],
         },
         "firmware_builds": {p: packages[p]["firmware"] for p in PRODUCTS},
         "self_challenge_verdict": challenge["verdict"],

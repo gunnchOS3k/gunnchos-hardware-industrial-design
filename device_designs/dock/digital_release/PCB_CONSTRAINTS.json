@@ -1,0 +1,20 @@
+{
+  "product": "dock",
+  "stackup": "device_designs/dock/manufacturing/stackup.yaml",
+  "usb4_diffpairs_40g": "MODELED_INTENT \u2014 SI requires JHL NDA ball maps + vendor guidelines",
+  "tip_drc": "artifacts/hw_fw_rc_001/eda/dock_drc_tip.json",
+  "tip_drc_summary": {
+    "errors": 0,
+    "warnings": 39,
+    "by_type": {
+      "warning:track_dangling": 10,
+      "warning:lib_footprint_mismatch": 28,
+      "warning:silk_over_copper": 1
+    },
+    "track_dangling": 10,
+    "silk_over_copper": 1,
+    "lib_footprint_mismatch": 28
+  },
+  "nda_nets_invented": false,
+  "tb5_routing_forbidden": true
+}

@@ -1,0 +1,19 @@
+{
+  "product": "ds_xl_coder",
+  "stackup": "device_designs/ds_xl_coder/manufacturing/stackup.yaml",
+  "dual_edp_diffpairs": "MODELED_INTENT \u2014 length/skew targets in impedance_note; pin map EXTERNAL",
+  "tip_drc": "artifacts/hw_fw_rc_001/eda/ds_xl_coder_drc_tip.json",
+  "tip_drc_summary": {
+    "errors": 0,
+    "warnings": 51,
+    "by_type": {
+      "warning:track_dangling": 10,
+      "warning:lib_footprint_mismatch": 40,
+      "warning:silk_over_copper": 1
+    },
+    "track_dangling": 10,
+    "silk_over_copper": 1,
+    "lib_footprint_mismatch": 40
+  },
+  "nda_nets_invented": false
+}

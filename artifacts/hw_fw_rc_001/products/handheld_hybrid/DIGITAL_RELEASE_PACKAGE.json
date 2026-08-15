@@ -2,7 +2,7 @@
   "schema": "gunnchos.hw_fw_rc_001.digital_release_package.v1",
   "packet": "HW-FW-RC-001",
   "product": "handheld_hybrid",
-  "generated_at_utc": "2026-08-15T00:50:17Z",
+  "generated_at_utc": "2026-08-15T00:56:23Z",
   "vendor_anchors": {
     "som": "Radxa NX5 RM121-D8E32",
     "emmc": "32GB system/recovery",
@@ -36,7 +36,7 @@
       "errors": 0,
       "warnings": 461,
       "pass": true,
-      "source": "device_designs/*/manufacturing/ERC_DRC_STATUS.json (ERC; Cont IX still valid for sch)",
+      "source": "device_designs/*/manufacturing/ERC_DRC_STATUS.json (ERC; Cont IX sch)",
       "by_type": {
         "warning:endpoint_off_grid": 266,
         "warning:isolated_pin_label": 146,
@@ -55,9 +55,10 @@
       "track_dangling": 0,
       "silk_over_copper": 0,
       "lib_footprint_mismatch": 39,
-      "note": "TIP-ACCURATE kicad-cli DRC (not Cont IX). track_dangling=0 silk_over_copper=0; residual lib_footprint_mismatch only. Do not rubber-stamp Cont IX ERC_DRC_STATUS DRC block."
+      "note": "TIP-ACCURATE kicad-cli DRC (artifacts/hw_fw_rc_001/eda/*_drc_tip.json). Do not invent NDA pin/ball maps. Family batch deferred. Handheld: track_dangling=0 silk_over_copper=0; residual lib_footprint_mismatch only."
     },
-    "cont_ix_erc_present": true
+    "cont_ix_erc_present": true,
+    "external_blockers_ref": null
   },
   "power_thermal": {
     "power_budget": "device_designs/handheld_hybrid/electrical/power_budget.yaml",

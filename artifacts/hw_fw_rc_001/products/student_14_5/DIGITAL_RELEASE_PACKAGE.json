@@ -2,7 +2,7 @@
   "schema": "gunnchos.hw_fw_rc_001.digital_release_package.v1",
   "packet": "HW-FW-RC-001",
   "product": "student_14_5",
-  "generated_at_utc": "2026-08-15T00:50:17Z",
+  "generated_at_utc": "2026-08-15T00:56:23Z",
   "vendor_anchors": {
     "compute": "ADLINK COM-HPC-mMTL-155H-32G",
     "cpu": "Core Ultra 7 155H",
@@ -37,7 +37,7 @@
       "errors": 0,
       "warnings": 40,
       "pass": true,
-      "source": "device_designs/*/manufacturing/ERC_DRC_STATUS.json (ERC; Cont IX still valid for sch)",
+      "source": "device_designs/*/manufacturing/ERC_DRC_STATUS.json (ERC; Cont IX sch)",
       "by_type": {
         "warning:isolated_pin_label": 14,
         "warning:lib_symbol_issues": 26
@@ -47,18 +47,19 @@
       "errors": 0,
       "warnings": 50,
       "pass": true,
-      "source": "device_designs/*/manufacturing/ERC_DRC_STATUS.json",
+      "source": "artifacts/hw_fw_rc_001/eda/student_14_5_drc_tip.json",
       "by_type": {
         "warning:track_dangling": 10,
         "warning:lib_footprint_mismatch": 39,
         "warning:silk_over_copper": 1
       },
-      "track_dangling": null,
-      "silk_over_copper": null,
-      "lib_footprint_mismatch": null,
-      "note": "Family-wide re-sweep DEFERRED (Product-Use QEMU resource rule)"
+      "track_dangling": 10,
+      "silk_over_copper": 1,
+      "lib_footprint_mismatch": 39,
+      "note": "TIP-ACCURATE kicad-cli DRC (artifacts/hw_fw_rc_001/eda/*_drc_tip.json). Do not invent NDA pin/ball maps. Family batch deferred."
     },
-    "cont_ix_erc_present": true
+    "cont_ix_erc_present": true,
+    "external_blockers_ref": "artifacts/hw_fw_rc_001/EDMUND_EXTERNAL_BLOCKERS.json"
   },
   "power_thermal": {
     "power_budget": "device_designs/student_14_5/electrical/power_budget.yaml",

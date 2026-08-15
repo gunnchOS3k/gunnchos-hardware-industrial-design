@@ -1,0 +1,10 @@
+{
+  "product": "student_14_5",
+  "compute_mpn": "COM-HPC-mMTL-155H-32G",
+  "cpu": "Core Ultra 7 155H",
+  "memory": "32GB LPDDR5-class onboard COM",
+  "gunnchos_owns": "carrier PCB only (PD, EC, WWAN/Wi-Fi, audio, display connector, battery, I/O, dock USB-C)",
+  "external_required": "COM-HPC Mini 400-pin net-accurate map (PICMG/ADLINK NDA)",
+  "bare_cpu_bga_forbidden": true,
+  "adr": "docs/adr/ADR-HW-001-com-carrier-strategy.md"
+}
