@@ -2,7 +2,7 @@
   "schema": "gunnchos.hw_fw_rc_001.digital_release_package.v1",
   "packet": "HW-FW-RC-001",
   "product": "student_14_5",
-  "generated_at_utc": "2026-08-15T00:44:31Z",
+  "generated_at_utc": "2026-08-15T00:50:17Z",
   "vendor_anchors": {
     "compute": "ADLINK COM-HPC-mMTL-155H-32G",
     "cpu": "Core Ultra 7 155H",
@@ -37,7 +37,7 @@
       "errors": 0,
       "warnings": 40,
       "pass": true,
-      "source": "device_designs/*/manufacturing/ERC_DRC_STATUS.json (Cont IX)",
+      "source": "device_designs/*/manufacturing/ERC_DRC_STATUS.json (ERC; Cont IX still valid for sch)",
       "by_type": {
         "warning:isolated_pin_label": 14,
         "warning:lib_symbol_issues": 26
@@ -47,13 +47,16 @@
       "errors": 0,
       "warnings": 50,
       "pass": true,
-      "source": "device_designs/*/manufacturing/ERC_DRC_STATUS.json (Cont IX)",
+      "source": "device_designs/*/manufacturing/ERC_DRC_STATUS.json",
       "by_type": {
         "warning:track_dangling": 10,
         "warning:lib_footprint_mismatch": 39,
         "warning:silk_over_copper": 1
       },
-      "note": "Family-wide re-sweep DEFERRED (Product-Use QEMU resource rule); Cont IX + HW-002 handheld closure reused"
+      "track_dangling": null,
+      "silk_over_copper": null,
+      "lib_footprint_mismatch": null,
+      "note": "Family-wide re-sweep DEFERRED (Product-Use QEMU resource rule)"
     },
     "cont_ix_erc_present": true
   },

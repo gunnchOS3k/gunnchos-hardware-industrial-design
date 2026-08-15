@@ -1,0 +1,23 @@
+{
+  "schema": "gunnchos.hw_fw_rc_001.handheld_tip_drc.v1",
+  "generated_at_utc": "2026-08-15T00:49:00Z",
+  "pcb": "device_designs/handheld_hybrid/kicad/handheld_hybrid.kicad_pcb",
+  "kicad_cli": "10.0.5",
+  "raw_report": "artifacts/hw_fw_rc_001/eda/handheld_hybrid_drc_tip.json",
+  "errors": 0,
+  "warnings": 39,
+  "by_type": {
+    "warning:lib_footprint_mismatch": 39
+  },
+  "track_dangling": 0,
+  "silk_over_copper": 0,
+  "lib_footprint_mismatch": 39,
+  "unconnected_items": 0,
+  "supersedes_cont_ix_drc": {
+    "errors": 0,
+    "warnings": 50,
+    "track_dangling": 10,
+    "silk_over_copper": 1
+  },
+  "claim_boundary": "Digital DRC only; no physical fab claim"
+}

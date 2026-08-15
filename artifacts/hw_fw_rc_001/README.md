@@ -1,6 +1,6 @@
 # HW-FW-RC-001 — Digital release packages
 
-Generated: 2026-08-15T00:44:31Z
+Generated: 2026-08-15T00:50:17Z
 
 Baseline tip: `6c0b025e505505a74adca510e47c15b8f39bc980` (live GitHub main).
 

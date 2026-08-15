@@ -1,6 +1,6 @@
 {
   "schema": "gunnchos.hw_fw_rc_001.self_challenge_vp.v1",
-  "generated_at_utc": "2026-08-15T00:44:31Z",
+  "generated_at_utc": "2026-08-15T00:50:17Z",
   "verdict": "PASS",
   "fail_count": 0,
   "findings": [
@@ -133,8 +133,14 @@
       "challenge": "no_80g_claim",
       "result": "PASS",
       "detail": "40G only"
+    },
+    {
+      "challenge": "handheld_tip_drc_cited",
+      "result": "PASS",
+      "detail": "tip DRC errors=0 warnings=39 (lib_footprint_mismatch only); dangling=0 silk=0; source=artifacts/hw_fw_rc_001/eda/handheld_hybrid_drc_tip.json"
     }
   ],
   "prefer_fail": true,
+  "remediation": "VP FAIL on 1b2aedc Cont IX rubber-stamp \u2014 tip handheld DRC required",
   "note": "Independent self-challenge for DRAFT PR; Edmund merge still required; Cursor never merges"
 }

@@ -56,12 +56,69 @@ def sha256_file(path: Path) -> str | None:
     return h.hexdigest()
 
 
+def _parse_kicad_drc_json(path: Path) -> dict | None:
+    raw = load_json(path)
+    if not raw:
+        return None
+    vs = raw.get("violations") or []
+    by_type: dict[str, int] = {}
+    errors = 0
+    warnings = 0
+    for v in vs:
+        t = str(v.get("type") or "unknown")
+        key = t if t.startswith(("error", "warning")) else f"warning:{t}"
+        by_type[key] = by_type.get(key, 0) + 1
+        sev = str(v.get("severity") or "").lower()
+        if sev == "error" or t.startswith("error"):
+            errors += 1
+        else:
+            warnings += 1
+    return {
+        "present": True,
+        "errors": errors,
+        "warnings": warnings,
+        "by_type": by_type,
+        "track_dangling": by_type.get("warning:track_dangling", by_type.get("track_dangling", 0)),
+        "silk_over_copper": by_type.get("warning:silk_over_copper", by_type.get("silk_over_copper", 0)),
+        "lib_footprint_mismatch": by_type.get(
+            "warning:lib_footprint_mismatch", by_type.get("lib_footprint_mismatch", 0)
+        ),
+        "source_path": str(path.relative_to(ROOT)),
+    }
+
+
 def erc_drc(product: str) -> dict:
     status = load_json(ROOT / "device_designs" / product / "manufacturing" / "ERC_DRC_STATUS.json") or {}
     cont = load_json(ROOT / "artifacts" / "continuation_ix_pre_evt" / "kicad_cli" / product / "erc.json")
-    # Prefer Cont IX manufacturing status (errors counts)
     erc = status.get("erc") or {}
     drc = status.get("drc") or {}
+    drc_source = "device_designs/*/manufacturing/ERC_DRC_STATUS.json"
+    drc_note = "Family-wide re-sweep DEFERRED (Product-Use QEMU resource rule)"
+
+    # Handheld: prefer tip-accurate kicad-cli DRC (HW-002 closed dangling/silk; Cont IX status is STALE).
+    if product == "handheld_hybrid":
+        tip = _parse_kicad_drc_json(OUT / "eda" / "handheld_hybrid_drc_tip.json")
+        hw002 = _parse_kicad_drc_json(
+            ROOT / "artifacts" / "hw002" / "eda" / "handheld_hybrid_drc_after.json"
+        )
+        chosen = tip or hw002
+        if chosen:
+            drc = {
+                "present": True,
+                "errors": chosen["errors"],
+                "warnings": chosen["warnings"],
+                "by_type": chosen["by_type"],
+                "track_dangling": chosen["track_dangling"],
+                "silk_over_copper": chosen["silk_over_copper"],
+                "lib_footprint_mismatch": chosen["lib_footprint_mismatch"],
+            }
+            drc_source = chosen["source_path"]
+            drc_note = (
+                "TIP-ACCURATE kicad-cli DRC (not Cont IX). "
+                "track_dangling=0 silk_over_copper=0; residual lib_footprint_mismatch only. "
+                "Do not rubber-stamp Cont IX ERC_DRC_STATUS DRC block."
+            )
+
     pcb = ROOT / "device_designs" / product / "kicad" / f"{product}.kicad_pcb"
     sch = ROOT / "device_designs" / product / "kicad" / f"{product}.kicad_sch"
     layout_exists = pcb.is_file() and pcb.stat().st_size > 500
@@ -75,16 +132,19 @@ def erc_drc(product: str) -> dict:
             "errors": int(erc.get("errors", -1)),
             "warnings": int(erc.get("warnings", -1)),
             "pass": erc.get("errors") == 0,
-            "source": "device_designs/*/manufacturing/ERC_DRC_STATUS.json (Cont IX)",
+            "source": "device_designs/*/manufacturing/ERC_DRC_STATUS.json (ERC; Cont IX still valid for sch)",
             "by_type": erc.get("by_type"),
         },
         "drc": {
             "errors": int(drc.get("errors", -1)),
             "warnings": int(drc.get("warnings", -1)),
             "pass": (drc.get("errors") == 0) if layout_exists else None,
-            "source": "device_designs/*/manufacturing/ERC_DRC_STATUS.json (Cont IX)",
+            "source": drc_source,
             "by_type": drc.get("by_type"),
-            "note": "Family-wide re-sweep DEFERRED (Product-Use QEMU resource rule); Cont IX + HW-002 handheld closure reused",
+            "track_dangling": drc.get("track_dangling"),
+            "silk_over_copper": drc.get("silk_over_copper"),
+            "lib_footprint_mismatch": drc.get("lib_footprint_mismatch"),
+            "note": drc_note,
         },
         "cont_ix_erc_present": cont is not None,
     }
@@ -416,6 +476,33 @@ def evaluate_token(product: str, pkg: dict) -> dict:
         "s0_digital_zero": pkg["severity"]["S0_digital"] == 0,
         "s1_digital_zero": pkg["severity"]["S1_digital"] == 0,
     }
+    # Handheld must cite tip-accurate DRC (VP FAIL on Cont IX rubber-stamp).
+    if product == "handheld_hybrid":
+        src = str(pkg["eda"]["drc"].get("source") or "")
+        tip_ok = (
+            "handheld_hybrid_drc_tip.json" in src
+            or "hw002/eda/handheld_hybrid_drc_after.json" in src
+        ) and "Cont IX" not in src
+        by = pkg["eda"]["drc"].get("by_type") or {}
+        dangling = int(
+            pkg["eda"]["drc"].get("track_dangling")
+            if pkg["eda"]["drc"].get("track_dangling") is not None
+            else by.get("warning:track_dangling", by.get("track_dangling", -1))
+        )
+        silk = int(
+            pkg["eda"]["drc"].get("silk_over_copper")
+            if pkg["eda"]["drc"].get("silk_over_copper") is not None
+            else by.get("warning:silk_over_copper", by.get("silk_over_copper", -1))
+        )
+        warns = int(pkg["eda"]["drc"].get("warnings", -1))
+        c["tip_accurate_drc_cited"] = bool(
+            tip_ok and dangling == 0 and silk == 0 and warns == 39 and pkg["eda"]["drc"]["errors"] == 0
+        )
+        if not c["tip_accurate_drc_cited"]:
+            c["token_withhold_reason"] = (
+                "HANDHELD demoted until tip-accurate DRC cited (0/39 lib_footprint_mismatch; "
+                "dangling=0 silk=0) — Cont IX 50-warning DRC block is STALE"
+            )
     # NDA residual: withhold full package token for COM/Dock pin-accurate completeness
     nda_withhold = product in {"student_14_5", "ds_xl_coder", "dock"}
     if nda_withhold:
@@ -426,6 +513,7 @@ def evaluate_token(product: str, pkg: dict) -> dict:
         if k
         not in {
             "nda_public_side_ok_but_pin_accurate_external",
+            "token_withhold_reason",
         }
     )
     # Prefer FAIL for NDA-blocked products: schematic completeness for release package
@@ -776,6 +864,49 @@ def self_challenge(packages: dict, west_probe: dict | None) -> dict:
     if dock["vendor_anchors"].get("link") == "TB4/USB4 40G" and not dock["vendor_anchors"].get("tb5", False):
         passed("no_80g_claim", "40G only")
 
+    # Handheld tip DRC must not rubber-stamp Cont IX (VP FAIL remediation).
+    hh = packages["handheld_hybrid"]
+    tip = _parse_kicad_drc_json(OUT / "eda" / "handheld_hybrid_drc_tip.json")
+    pkg_drc = hh["eda"]["drc"]
+
+    def _i(d: dict, key: str, default: int = -1) -> int:
+        v = d.get(key)
+        return default if v is None else int(v)
+
+    if not tip:
+        fail("handheld_tip_drc_missing", "artifacts/hw_fw_rc_001/eda/handheld_hybrid_drc_tip.json absent")
+    else:
+        stale_cont_ix = (
+            pkg_drc.get("warnings") == 50 and _i(pkg_drc, "track_dangling") == 10
+        ) or (
+            "Cont IX" in str(pkg_drc.get("source") or "")
+            and "TIP-ACCURATE" not in str(pkg_drc.get("note") or "")
+        )
+        matches_tip = (
+            pkg_drc.get("errors") == tip["errors"]
+            and pkg_drc.get("warnings") == tip["warnings"]
+            and _i(pkg_drc, "track_dangling") == tip["track_dangling"]
+            and _i(pkg_drc, "silk_over_copper") == tip["silk_over_copper"]
+            and tip["errors"] == 0
+            and tip["warnings"] == 39
+            and tip["track_dangling"] == 0
+            and tip["silk_over_copper"] == 0
+            and "handheld_hybrid_drc_tip.json" in str(pkg_drc.get("source") or "")
+        )
+        if stale_cont_ix or not matches_tip:
+            fail(
+                "handheld_drc_stale_cont_ix",
+                f"package drc={pkg_drc.get('warnings')} dangling={pkg_drc.get('track_dangling')} "
+                f"silk={pkg_drc.get('silk_over_copper')} source={pkg_drc.get('source')}; "
+                f"tip={tip['warnings']} dangling={tip['track_dangling']} silk={tip['silk_over_copper']}",
+            )
+        else:
+            passed(
+                "handheld_tip_drc_cited",
+                f"tip DRC errors={tip['errors']} warnings={tip['warnings']} "
+                f"(lib_footprint_mismatch only); dangling=0 silk=0; source={pkg_drc.get('source')}",
+            )
+
     fails = [f for f in findings if f["result"] == "FAIL"]
     return {
         "schema": "gunnchos.hw_fw_rc_001.self_challenge_vp.v1",
@@ -784,6 +915,7 @@ def self_challenge(packages: dict, west_probe: dict | None) -> dict:
         "fail_count": len(fails),
         "findings": findings,
         "prefer_fail": True,
+        "remediation": "VP FAIL on 1b2aedc Cont IX rubber-stamp — tip handheld DRC required",
         "note": "Independent self-challenge for DRAFT PR; Edmund merge still required; Cursor never merges",
     }
 
@@ -902,15 +1034,41 @@ def main() -> None:
         "stream": "C",
         "generated_at_utc": utc_now(),
         "baseline_main_tip": "6c0b025e505505a74adca510e47c15b8f39bc980",
+        "remediation": {
+            "prior_fail_tip": "1b2aedcd6e46e24d2eab8ee5fae6a768bfd2144d",
+            "defect": "HANDHELD Cont IX DRC rubber-stamp (50 warnings / dangling=10 / silk=1)",
+            "fix": "tip kicad-cli DRC refresh → 0 errors / 39 warnings (lib_footprint_mismatch only)",
+            "tip_drc_evidence": "artifacts/hw_fw_rc_001/eda/handheld_hybrid_drc_tip.json",
+        },
         "tokens_earned": [t for t, v in tokens["tokens"].items() if v.get("earned")],
         "tokens_withheld": [t for t, v in tokens["tokens"].items() if not v.get("earned")],
-        "erc_drc": {p: {"erc_pass": packages[p]["eda"]["erc"]["pass"], "drc_pass": packages[p]["eda"]["drc"]["pass"], "erc_warnings": packages[p]["eda"]["erc"]["warnings"], "drc_warnings": packages[p]["eda"]["drc"]["warnings"]} for p in PRODUCTS},
+        "erc_drc": {
+            p: {
+                "erc_pass": packages[p]["eda"]["erc"]["pass"],
+                "drc_pass": packages[p]["eda"]["drc"]["pass"],
+                "erc_warnings": packages[p]["eda"]["erc"]["warnings"],
+                "drc_warnings": packages[p]["eda"]["drc"]["warnings"],
+                "drc_source": packages[p]["eda"]["drc"].get("source"),
+                "track_dangling": packages[p]["eda"]["drc"].get("track_dangling"),
+                "silk_over_copper": packages[p]["eda"]["drc"].get("silk_over_copper"),
+                "lib_footprint_mismatch": packages[p]["eda"]["drc"].get("lib_footprint_mismatch"),
+            }
+            for p in PRODUCTS
+        },
+        "optional_notes": {
+            "ring_footprints_cont_ix_vs_tip": {
+                "cont_ix_routing_completeness_footprints": 15,
+                "tip_kicad_pcb_footprint_count": 11,
+                "blocking": False,
+            }
+        },
         "firmware_builds": {p: packages[p]["firmware"] for p in PRODUCTS},
         "self_challenge_verdict": challenge["verdict"],
         "HW_FIRMWARE_DIGITAL_PACKAGE_COMPLETE": False,
         "cursor_never_merges": True,
         "evidence_roots": [
             "artifacts/hw_fw_rc_001/",
+            "artifacts/hw_fw_rc_001/eda/",
             "device_designs/*/digital_release/",
             "artifacts/continuation_ix_pre_evt/",
             "artifacts/hw002/",

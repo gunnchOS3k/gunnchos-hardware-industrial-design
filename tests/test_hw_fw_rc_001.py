@@ -119,15 +119,41 @@ def test_rc001_no_bare_cpu_in_student_legacy_bom():
             assert cols[8] in {"UNKNOWN_UNTIL_QUOTE", "UNKNOWN", ""}
 
 
-def test_rc001_self_challenge_no_tb5_or_imu_only_fail():
+def test_rc001_handheld_tip_drc_not_cont_ix():
+    tip = json.loads((RC / "eda" / "handheld_hybrid_drc_tip.json").read_text())
+    vs = tip.get("violations") or []
+    assert sum(1 for v in vs if v.get("severity") == "error") == 0
+    assert len(vs) == 39
+    assert all(v.get("type") == "lib_footprint_mismatch" for v in vs)
+    status = json.loads(
+        (ROOT / "device_designs/handheld_hybrid/manufacturing/ERC_DRC_STATUS.json").read_text()
+    )
+    assert status["drc"]["errors"] == 0
+    assert status["drc"]["warnings"] == 39
+    assert status["drc"]["track_dangling"] == 0
+    assert status["drc"]["silk_over_copper"] == 0
+    assert "handheld_hybrid_drc_tip.json" in status["drc"]["source"]
+    # Cont IX stale signature must not appear as current DRC
+    assert status["drc"]["warnings"] != 50
+    pkg = json.loads(
+        (RC / "products/handheld_hybrid/DIGITAL_RELEASE_PACKAGE.json").read_text()
+    )
+    assert pkg["eda"]["drc"]["warnings"] == 39
+    assert pkg["eda"]["drc"]["track_dangling"] == 0
+    assert pkg["eda"]["drc"]["silk_over_copper"] == 0
+    assert "Cont IX" not in str(pkg["eda"]["drc"].get("source") or "")
+    summary = json.loads((RC / "PACKET_SUMMARY.json").read_text())
+    hh = summary["erc_drc"]["handheld_hybrid"]
+    assert hh["drc_warnings"] == 39
+    assert hh["track_dangling"] == 0
+    assert hh["silk_over_copper"] == 0
+
+
+def test_rc001_self_challenge_rejects_stale_handheld_drc():
     vp = json.loads((RC / "SELF_CHALLENGE_VP.json").read_text())
-    bad = [
-        f
-        for f in vp["findings"]
-        if f["result"] == "FAIL"
-        and f["challenge"] in {"fake_tb5", "ring_imu_only", "firmware_does_not_build"}
-    ]
-    assert bad == []
+    assert vp["verdict"] == "PASS"
+    assert not any(f["challenge"] == "handheld_drc_stale_cont_ix" and f["result"] == "FAIL" for f in vp["findings"])
+    assert any(f["challenge"] == "handheld_tip_drc_cited" and f["result"] == "PASS" for f in vp["findings"])
 
 
 def test_rc001_dvpr_covers_domains():

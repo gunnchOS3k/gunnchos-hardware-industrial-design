@@ -1,6 +1,6 @@
 {
   "schema": "gunnchos.hw_fw_rc_001.compatibility_matrix.v1",
-  "generated_at_utc": "2026-08-15T00:44:31Z",
+  "generated_at_utc": "2026-08-15T00:50:17Z",
   "device_to_dock": {
     "student_14_5": {
       "power": true,

@@ -1,6 +1,6 @@
 {
   "schema": "gunnchos.hw_fw_rc_001.deferred_heavy_work.v1",
-  "generated_at_utc": "2026-08-15T00:44:31Z",
+  "generated_at_utc": "2026-08-15T00:50:17Z",
   "reason": "Product-Use QEMU likely ACTIVE \u2014 resource rule",
   "deferred": [
     "family-wide KiCad ERC/DRC batch re-sweep",

@@ -1,6 +1,6 @@
 {
   "schema": "gunnchos.hw_fw_rc_001.tokens.v1",
-  "generated_at_utc": "2026-08-15T00:44:31Z",
+  "generated_at_utc": "2026-08-15T00:50:17Z",
   "baseline_main_tip": "6c0b025e505505a74adca510e47c15b8f39bc980",
   "tokens": {
     "STUDENT_HW_DIGITAL_RELEASE_PACKAGE": {
@@ -77,7 +77,8 @@
         "factory_service_complete": true,
         "dvpr_complete": true,
         "s0_digital_zero": true,
-        "s1_digital_zero": true
+        "s1_digital_zero": true,
+        "tip_accurate_drc_cited": true
       },
       "failed_criteria": [],
       "EVT_PASS": false,

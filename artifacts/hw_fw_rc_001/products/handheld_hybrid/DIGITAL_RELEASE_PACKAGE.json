@@ -2,7 +2,7 @@
   "schema": "gunnchos.hw_fw_rc_001.digital_release_package.v1",
   "packet": "HW-FW-RC-001",
   "product": "handheld_hybrid",
-  "generated_at_utc": "2026-08-15T00:44:31Z",
+  "generated_at_utc": "2026-08-15T00:50:17Z",
   "vendor_anchors": {
     "som": "Radxa NX5 RM121-D8E32",
     "emmc": "32GB system/recovery",
@@ -36,7 +36,7 @@
       "errors": 0,
       "warnings": 461,
       "pass": true,
-      "source": "device_designs/*/manufacturing/ERC_DRC_STATUS.json (Cont IX)",
+      "source": "device_designs/*/manufacturing/ERC_DRC_STATUS.json (ERC; Cont IX still valid for sch)",
       "by_type": {
         "warning:endpoint_off_grid": 266,
         "warning:isolated_pin_label": 146,
@@ -46,15 +46,16 @@
     },
     "drc": {
       "errors": 0,
-      "warnings": 50,
+      "warnings": 39,
       "pass": true,
-      "source": "device_designs/*/manufacturing/ERC_DRC_STATUS.json (Cont IX)",
+      "source": "artifacts/hw_fw_rc_001/eda/handheld_hybrid_drc_tip.json",
       "by_type": {
-        "warning:track_dangling": 10,
-        "warning:lib_footprint_mismatch": 39,
-        "warning:silk_over_copper": 1
+        "warning:lib_footprint_mismatch": 39
       },
-      "note": "Family-wide re-sweep DEFERRED (Product-Use QEMU resource rule); Cont IX + HW-002 handheld closure reused"
+      "track_dangling": 0,
+      "silk_over_copper": 0,
+      "lib_footprint_mismatch": 39,
+      "note": "TIP-ACCURATE kicad-cli DRC (not Cont IX). track_dangling=0 silk_over_copper=0; residual lib_footprint_mismatch only. Do not rubber-stamp Cont IX ERC_DRC_STATUS DRC block."
     },
     "cont_ix_erc_present": true
   },
@@ -207,7 +208,8 @@
       "factory_service_complete": true,
       "dvpr_complete": true,
       "s0_digital_zero": true,
-      "s1_digital_zero": true
+      "s1_digital_zero": true,
+      "tip_accurate_drc_cited": true
     },
     "failed_criteria": [],
     "EVT_PASS": false,

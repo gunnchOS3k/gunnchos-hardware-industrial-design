@@ -2,8 +2,14 @@
   "schema": "gunnchos.hw_fw_rc_001.packet_summary.v1",
   "packet": "HW-FW-RC-001",
   "stream": "C",
-  "generated_at_utc": "2026-08-15T00:44:31Z",
+  "generated_at_utc": "2026-08-15T00:50:17Z",
   "baseline_main_tip": "6c0b025e505505a74adca510e47c15b8f39bc980",
+  "remediation": {
+    "prior_fail_tip": "1b2aedcd6e46e24d2eab8ee5fae6a768bfd2144d",
+    "defect": "HANDHELD Cont IX DRC rubber-stamp (50 warnings / dangling=10 / silk=1)",
+    "fix": "tip kicad-cli DRC refresh \u2192 0 errors / 39 warnings (lib_footprint_mismatch only)",
+    "tip_drc_evidence": "artifacts/hw_fw_rc_001/eda/handheld_hybrid_drc_tip.json"
+  },
   "tokens_earned": [
     "HANDHELD_HW_DIGITAL_RELEASE_PACKAGE",
     "RING_HW_DIGITAL_RELEASE_PACKAGE"
@@ -18,31 +24,58 @@
       "erc_pass": true,
       "drc_pass": true,
       "erc_warnings": 40,
-      "drc_warnings": 50
+      "drc_warnings": 50,
+      "drc_source": "device_designs/*/manufacturing/ERC_DRC_STATUS.json",
+      "track_dangling": null,
+      "silk_over_copper": null,
+      "lib_footprint_mismatch": null
     },
     "ds_xl_coder": {
       "erc_pass": true,
       "drc_pass": true,
       "erc_warnings": 45,
-      "drc_warnings": 51
+      "drc_warnings": 51,
+      "drc_source": "device_designs/*/manufacturing/ERC_DRC_STATUS.json",
+      "track_dangling": null,
+      "silk_over_copper": null,
+      "lib_footprint_mismatch": null
     },
     "handheld_hybrid": {
       "erc_pass": true,
       "drc_pass": true,
       "erc_warnings": 461,
-      "drc_warnings": 50
+      "drc_warnings": 39,
+      "drc_source": "artifacts/hw_fw_rc_001/eda/handheld_hybrid_drc_tip.json",
+      "track_dangling": 0,
+      "silk_over_copper": 0,
+      "lib_footprint_mismatch": 39
     },
     "dock": {
       "erc_pass": true,
       "drc_pass": true,
       "erc_warnings": 19,
-      "drc_warnings": 39
+      "drc_warnings": 39,
+      "drc_source": "device_designs/*/manufacturing/ERC_DRC_STATUS.json",
+      "track_dangling": null,
+      "silk_over_copper": null,
+      "lib_footprint_mismatch": null
     },
     "edge_io_rings": {
       "erc_pass": true,
       "drc_pass": true,
       "erc_warnings": 27,
-      "drc_warnings": 22
+      "drc_warnings": 22,
+      "drc_source": "device_designs/*/manufacturing/ERC_DRC_STATUS.json",
+      "track_dangling": null,
+      "silk_over_copper": null,
+      "lib_footprint_mismatch": null
+    }
+  },
+  "optional_notes": {
+    "ring_footprints_cont_ix_vs_tip": {
+      "cont_ix_routing_completeness_footprints": 15,
+      "tip_kicad_pcb_footprint_count": 11,
+      "blocking": false
     }
   },
   "firmware_builds": {
@@ -115,6 +148,7 @@
   "cursor_never_merges": true,
   "evidence_roots": [
     "artifacts/hw_fw_rc_001/",
+    "artifacts/hw_fw_rc_001/eda/",
     "device_designs/*/digital_release/",
     "artifacts/continuation_ix_pre_evt/",
     "artifacts/hw002/"
