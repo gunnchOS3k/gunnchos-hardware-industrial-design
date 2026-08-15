@@ -1,0 +1,35 @@
+{
+  "product": "dock",
+  "packet": "HW-FW-RC-001",
+  "package": "artifacts/hw_fw_rc_001/products/dock/DIGITAL_RELEASE_PACKAGE.json",
+  "token": {
+    "token": "DOCK_HW_DIGITAL_RELEASE_PACKAGE",
+    "earned": false,
+    "criteria": {
+      "schematic_complete": true,
+      "erc_pass": true,
+      "pcb_sufficient": true,
+      "drc_pass_where_layout": true,
+      "bom_avl_honest": true,
+      "driver_risks_explicit": true,
+      "power_model_complete": true,
+      "thermal_model_complete": true,
+      "firmware_builds": true,
+      "factory_service_complete": true,
+      "dvpr_complete": true,
+      "s0_digital_zero": true,
+      "s1_digital_zero": true,
+      "nda_public_side_ok_but_pin_accurate_external": true,
+      "token_withhold_reason": "EXTERNAL/NDA pin-accurate fanout remains; public Cont IX package is CONDITIONAL_VENDOR_COLLATERAL \u2014 prefer FAIL vs claiming STUDENT/DSXL/DOCK_HW_DIGITAL_RELEASE_PACKAGE"
+    },
+    "failed_criteria": [],
+    "EVT_PASS": false,
+    "DVT_PASS": false,
+    "PVT_PASS": false,
+    "RF_CERTIFIED": false,
+    "EMC_CERTIFIED": false,
+    "BATTERY_CERTIFIED": false,
+    "SHIPPING_HARDWARE": false
+  },
+  "generated_at_utc": "2026-08-15T00:44:31Z"
+}

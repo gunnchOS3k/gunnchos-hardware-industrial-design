@@ -1,0 +1,236 @@
+{
+  "schema": "gunnchos.hw_fw_rc_001.digital_release_package.v1",
+  "packet": "HW-FW-RC-001",
+  "product": "dock",
+  "generated_at_utc": "2026-08-15T00:44:31Z",
+  "vendor_anchors": {
+    "controller": "Intel JHL8440",
+    "retimer": "Intel JHL9040R",
+    "link": "TB4/USB4 40G",
+    "not": [
+      "TB5",
+      "80G",
+      "JHL9480",
+      "JHL9580"
+    ]
+  },
+  "sections": {
+    "electrical_block_diagram": "device_designs/dock/architecture.md",
+    "power_tree": "device_designs/dock/electrical/power_tree.yaml",
+    "rail_budget": "device_designs/dock/electrical/power_budget.yaml",
+    "schematic": "device_designs/dock/kicad/dock.kicad_sch",
+    "pcb": "device_designs/dock/kicad/dock.kicad_pcb",
+    "stackup": "device_designs/dock/manufacturing/stackup.yaml",
+    "bom_assembly": "device_designs/dock/bom/assembly_bom.csv",
+    "rf_model": "device_designs/dock/electrical/rf_model.yaml",
+    "manufacturing_release_checklist": "device_designs/dock/manufacturing/RELEASE_PACKAGE_CHECKLIST.md",
+    "cont_ix_release": "device_designs/dock/manufacturing/cont_ix_release",
+    "drivers_readme": "device_designs/dock/drivers/README.md"
+  },
+  "eda": {
+    "schematic_path": "device_designs/dock/kicad/dock.kicad_sch",
+    "pcb_path": "device_designs/dock/kicad/dock.kicad_pcb",
+    "schematic_complete_editable": true,
+    "pcb_layout_exists": true,
+    "pcb_layout_status": "PRESENT",
+    "erc": {
+      "errors": 0,
+      "warnings": 19,
+      "pass": true,
+      "source": "device_designs/*/manufacturing/ERC_DRC_STATUS.json (Cont IX)",
+      "by_type": {
+        "warning:lib_symbol_issues": 15,
+        "warning:isolated_pin_label": 4
+      }
+    },
+    "drc": {
+      "errors": 0,
+      "warnings": 39,
+      "pass": true,
+      "source": "device_designs/*/manufacturing/ERC_DRC_STATUS.json (Cont IX)",
+      "by_type": {
+        "warning:track_dangling": 10,
+        "warning:lib_footprint_mismatch": 28,
+        "warning:silk_over_copper": 1
+      },
+      "note": "Family-wide re-sweep DEFERRED (Product-Use QEMU resource rule); Cont IX + HW-002 handheld closure reused"
+    },
+    "cont_ix_erc_present": true
+  },
+  "power_thermal": {
+    "power_budget": "device_designs/dock/electrical/power_budget.yaml",
+    "power_tree": "device_designs/dock/electrical/power_tree.yaml",
+    "battery_model": {
+      "path": null,
+      "evidence_class": "N_A_DOCK_LINE_POWERED",
+      "PHYSICAL_PENDING": false
+    },
+    "thermal_model": {
+      "path": "device_designs/dock/electrical/thermal_model.yaml",
+      "evidence_class": "MODELED",
+      "PHYSICAL_PENDING": true,
+      "physical_thermal_pass": false
+    },
+    "battery_life_claim": false,
+    "physical_thermal_pass": false
+  },
+  "firmware": {
+    "manifest": "firmware/manifests/dock_firmware_manifest.yaml",
+    "builds": true,
+    "build_class": "MANIFEST_INTERFACE_HARNESS",
+    "evidence": [
+      "firmware/manifests/dock_firmware_manifest.yaml",
+      "firmware/interfaces/docking_external_display_contract.yaml"
+    ],
+    "claim_boundary": "Digital harness/contracts only; on-target dock FW PHYSICAL+BINARY_BLOB pending"
+  },
+  "bom_avl": {
+    "assembly_bom": "device_designs/dock/bom/assembly_bom.csv",
+    "supply_chain_fields": "manufacturing/supply_chain/dock.json",
+    "legacy_bom": null,
+    "PRODUCTION_RELEASE_CLAIMED": false,
+    "economics_policy": "UNKNOWN_UNTIL_QUOTE \u2014 no fabricated MOQ/price/stock",
+    "fabricated_economics_findings": [],
+    "bom_avl_honest": true,
+    "note": "Canonical orderable MPNs live in device_designs/*/bom/assembly_bom.csv + manufacturing/supply_chain/*.json"
+  },
+  "drivers": {
+    "classification_json": "docs/full_product_family/DRIVER_CLASSIFICATION.json",
+    "classification_md": "docs/full_product_family/DRIVER_CLASSIFICATION.md",
+    "subsystems": [
+      {
+        "id": "usb4_tb4_controller",
+        "mpn": "JHL8440",
+        "risk": [
+          "BINARY_BLOB",
+          "UPSTREAM"
+        ],
+        "claim": "TB4_40G_NOT_TB5"
+      },
+      {
+        "id": "tb4_retimer",
+        "mpn": "JHL9040R",
+        "risk": [
+          "BINARY_BLOB"
+        ]
+      },
+      {
+        "id": "tb5_rejected",
+        "mpn": "JHL9480 / JHL9580",
+        "risk": [
+          "UNAVAILABLE"
+        ]
+      },
+      {
+        "id": "pd",
+        "mpn": "TPS65994",
+        "risk": [
+          "OPEN_VENDOR"
+        ]
+      },
+      {
+        "id": "ethernet",
+        "mpn": "RTL8156",
+        "risk": [
+          "UPSTREAM"
+        ]
+      },
+      {
+        "id": "usb_hub",
+        "mpn": "VL817",
+        "risk": [
+          "UPSTREAM"
+        ]
+      },
+      {
+        "id": "uwb_companion",
+        "mpn": "DWM3001C",
+        "risk": [
+          "OPEN_VENDOR",
+          "BINARY_BLOB"
+        ]
+      }
+    ],
+    "unavailable_triggers": [
+      {
+        "id": "tb5_rejected",
+        "mpn": "JHL9480 / JHL9580",
+        "risk": [
+          "UNAVAILABLE"
+        ]
+      }
+    ],
+    "architecture_revision_notes": [
+      {
+        "trigger": "UNAVAILABLE",
+        "subsystems": [
+          "tb5_rejected"
+        ],
+        "note": "Architecture revision / non-claim already recorded in DRIVER_CLASSIFICATION.md (ME open replacement; 6G/NTN on RM520N-GL; TB5 rejected)"
+      },
+      {
+        "id": "tb5_80g",
+        "risk": "UNAVAILABLE",
+        "arch_revision_note": "ADR-HW-002 freezes JHL8440 + JHL9040R @ 40G; reject JHL9480/JHL9580"
+      }
+    ],
+    "driver_risks_explicit": true
+  },
+  "factory_service": {
+    "paths": {
+      "factory_test_dir": "manufacturing/dock/factory_test",
+      "repair_dir": "manufacturing/dock/repair",
+      "repair_plan": "manufacturing/REPAIR_AND_SERVICE_PLAN.md",
+      "programming": "device_designs/dock/manufacturing/PROGRAMMING.md",
+      "qc": "device_designs/dock/manufacturing/QC_CHECKLIST.md",
+      "rework": "device_designs/dock/manufacturing/REWORK.md",
+      "calibration": "device_designs/dock/manufacturing/CALIBRATION.md"
+    },
+    "factory_service_complete_digital": true,
+    "production_keys_ca": "PENDING",
+    "physical_line_validation": "PHYSICAL_PENDING"
+  },
+  "severity": {
+    "S0_digital": 0,
+    "S1_digital": 0,
+    "notes": []
+  },
+  "rf_final_pass": false,
+  "spatial_accuracy": null,
+  "claim_boundary": {
+    "physical_validation": false,
+    "SHIPPING_HARDWARE": false,
+    "battery_life_claim": false,
+    "physical_thermal_pass": false,
+    "rf_certified": false
+  },
+  "token": {
+    "token": "DOCK_HW_DIGITAL_RELEASE_PACKAGE",
+    "earned": false,
+    "criteria": {
+      "schematic_complete": true,
+      "erc_pass": true,
+      "pcb_sufficient": true,
+      "drc_pass_where_layout": true,
+      "bom_avl_honest": true,
+      "driver_risks_explicit": true,
+      "power_model_complete": true,
+      "thermal_model_complete": true,
+      "firmware_builds": true,
+      "factory_service_complete": true,
+      "dvpr_complete": true,
+      "s0_digital_zero": true,
+      "s1_digital_zero": true,
+      "nda_public_side_ok_but_pin_accurate_external": true,
+      "token_withhold_reason": "EXTERNAL/NDA pin-accurate fanout remains; public Cont IX package is CONDITIONAL_VENDOR_COLLATERAL \u2014 prefer FAIL vs claiming STUDENT/DSXL/DOCK_HW_DIGITAL_RELEASE_PACKAGE"
+    },
+    "failed_criteria": [],
+    "EVT_PASS": false,
+    "DVT_PASS": false,
+    "PVT_PASS": false,
+    "RF_CERTIFIED": false,
+    "EMC_CERTIFIED": false,
+    "BATTERY_CERTIFIED": false,
+    "SHIPPING_HARDWARE": false
+  }
+}

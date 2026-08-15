@@ -1,0 +1,122 @@
+{
+  "schema": "gunnchos.hw_fw_rc_001.packet_summary.v1",
+  "packet": "HW-FW-RC-001",
+  "stream": "C",
+  "generated_at_utc": "2026-08-15T00:44:31Z",
+  "baseline_main_tip": "6c0b025e505505a74adca510e47c15b8f39bc980",
+  "tokens_earned": [
+    "HANDHELD_HW_DIGITAL_RELEASE_PACKAGE",
+    "RING_HW_DIGITAL_RELEASE_PACKAGE"
+  ],
+  "tokens_withheld": [
+    "STUDENT_HW_DIGITAL_RELEASE_PACKAGE",
+    "DSXL_HW_DIGITAL_RELEASE_PACKAGE",
+    "DOCK_HW_DIGITAL_RELEASE_PACKAGE"
+  ],
+  "erc_drc": {
+    "student_14_5": {
+      "erc_pass": true,
+      "drc_pass": true,
+      "erc_warnings": 40,
+      "drc_warnings": 50
+    },
+    "ds_xl_coder": {
+      "erc_pass": true,
+      "drc_pass": true,
+      "erc_warnings": 45,
+      "drc_warnings": 51
+    },
+    "handheld_hybrid": {
+      "erc_pass": true,
+      "drc_pass": true,
+      "erc_warnings": 461,
+      "drc_warnings": 50
+    },
+    "dock": {
+      "erc_pass": true,
+      "drc_pass": true,
+      "erc_warnings": 19,
+      "drc_warnings": 39
+    },
+    "edge_io_rings": {
+      "erc_pass": true,
+      "drc_pass": true,
+      "erc_warnings": 27,
+      "drc_warnings": 22
+    }
+  },
+  "firmware_builds": {
+    "student_14_5": {
+      "manifest": "firmware/manifests/student_14_5_firmware_manifest.yaml",
+      "builds": true,
+      "build_class": "ACPI_DT_HARNESS",
+      "evidence": [
+        "firmware/manifests/student_14_5_firmware_manifest.yaml",
+        "firmware/descriptors/acpi/student_14_5_dsdt.dsl",
+        "firmware/descriptors/devicetree/student_14_5.dts"
+      ],
+      "acpi": "firmware/descriptors/acpi/student_14_5_dsdt.dsl",
+      "devicetree": "firmware/descriptors/devicetree/student_14_5.dts",
+      "claim_boundary": "Harness/ACPI/DT digital path; on-target COM/SoM firmware PHYSICAL+BINARY_BLOB pending"
+    },
+    "ds_xl_coder": {
+      "manifest": "firmware/manifests/ds_xl_coder_firmware_manifest.yaml",
+      "builds": true,
+      "build_class": "ACPI_DT_HARNESS",
+      "evidence": [
+        "firmware/manifests/ds_xl_coder_firmware_manifest.yaml",
+        "firmware/descriptors/acpi/ds_xl_coder_dsdt.dsl",
+        "firmware/descriptors/devicetree/ds_xl_coder.dts"
+      ],
+      "acpi": "firmware/descriptors/acpi/ds_xl_coder_dsdt.dsl",
+      "devicetree": "firmware/descriptors/devicetree/ds_xl_coder.dts",
+      "claim_boundary": "Harness/ACPI/DT digital path; on-target COM/SoM firmware PHYSICAL+BINARY_BLOB pending"
+    },
+    "handheld_hybrid": {
+      "manifest": "firmware/manifests/handheld_hybrid_firmware_manifest.yaml",
+      "builds": true,
+      "build_class": "ACPI_DT_HARNESS",
+      "evidence": [
+        "firmware/manifests/handheld_hybrid_firmware_manifest.yaml",
+        "firmware/descriptors/acpi/handheld_hybrid_dsdt.dsl",
+        "firmware/descriptors/devicetree/handheld_hybrid.dts"
+      ],
+      "acpi": "firmware/descriptors/acpi/handheld_hybrid_dsdt.dsl",
+      "devicetree": "firmware/descriptors/devicetree/handheld_hybrid.dts",
+      "claim_boundary": "Harness/ACPI/DT digital path; on-target COM/SoM firmware PHYSICAL+BINARY_BLOB pending"
+    },
+    "dock": {
+      "manifest": "firmware/manifests/dock_firmware_manifest.yaml",
+      "builds": true,
+      "build_class": "MANIFEST_INTERFACE_HARNESS",
+      "evidence": [
+        "firmware/manifests/dock_firmware_manifest.yaml",
+        "firmware/interfaces/docking_external_display_contract.yaml"
+      ],
+      "claim_boundary": "Digital harness/contracts only; on-target dock FW PHYSICAL+BINARY_BLOB pending"
+    },
+    "edge_io_rings": {
+      "manifest": "firmware/manifests/edge_io_rings_firmware_manifest.yaml",
+      "builds": true,
+      "build_class": "ZEPHYR_WEST",
+      "evidence": [
+        "artifacts/hw_fw_rc_001/zephyr_west/ZEPHYR_WEST_PROBE.json",
+        "artifacts/hw002/zephyr_west/ZEPHYR_WEST_PROBE.json",
+        "firmware/edge_io_rings/zephyr_west/"
+      ],
+      "soft_skip": false,
+      "board": "nrf52840dk/nrf52840",
+      "script": "firmware/edge_io_rings/zephyr_west/scripts/require_west_build.sh",
+      "claim_boundary": "Digital west build only; physical flash/boot PHYSICAL_PENDING"
+    }
+  },
+  "self_challenge_verdict": "PASS",
+  "HW_FIRMWARE_DIGITAL_PACKAGE_COMPLETE": false,
+  "cursor_never_merges": true,
+  "evidence_roots": [
+    "artifacts/hw_fw_rc_001/",
+    "device_designs/*/digital_release/",
+    "artifacts/continuation_ix_pre_evt/",
+    "artifacts/hw002/"
+  ]
+}

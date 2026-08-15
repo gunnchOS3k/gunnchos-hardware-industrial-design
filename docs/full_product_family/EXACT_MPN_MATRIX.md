@@ -1,12 +1,12 @@
 # Exact orderable MPN matrix — five-product family
 
-Updated: 2026-08-08T20:15:00Z  
-Branch: `cursor/full-product-continuation-v-hardware-release`  
-Base: `7e1658e63052e7baa2e9f4ab58113a91e4165c72` (#47)  
+Updated: 2026-08-15T00:45:00Z (HW-FW-RC-001 vendor refresh)  
+Branch: `stream-c/hw-fw-rc-001`  
+Prior freeze base retained from Cont V / Cont IX.  
 PHYSICAL_EXECUTION_FREEZE ACTIVE — MPNs frozen for **design**, not purchase.
 
 Evidence class: **PUBLIC_VENDOR_DOCS** for compute/modem/dock role MPNs below.  
-Continuation V independently re-verified ADLINK / Radxa / Intel ARK pages.
+HW-FW-RC-001 re-confirmed ADLINK COM-HPC-mMTL-155H-32G, Radxa NX5 RM121-D8E32, Quectel RM520N-GL Rel-16 Sub-6 NSA+SA (not NTN/6G), Dock JHL8440 + JHL9040R @ 40G (not TB5).
 
 ## Compute / SoM / MCU (primary freezes)
 

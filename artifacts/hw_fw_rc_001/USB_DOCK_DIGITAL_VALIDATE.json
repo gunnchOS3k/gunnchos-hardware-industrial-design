@@ -1,0 +1,91 @@
+{
+  "schema": "gunnchos.hw_fw_rc_001.usb_dock_digital_validate.v1",
+  "generated_at_utc": "2026-08-15T00:44:31Z",
+  "silicon": {
+    "controller": "JHL8440",
+    "retimer": "JHL9040R",
+    "generation": "TB4_USB4_40G",
+    "tb5": false,
+    "link_gbps": 40,
+    "adr": "docs/adr/ADR-HW-002-dock-usb4-tb4-not-tb5.md"
+  },
+  "scenarios": [
+    {
+      "id": "attach",
+      "model": "TYPE_C_ATTACH",
+      "status": "DIGITALLY_DEFINED"
+    },
+    {
+      "id": "pd_negotiation",
+      "model": "PD_CONTRACT_TPS65994",
+      "status": "DIGITALLY_DEFINED"
+    },
+    {
+      "id": "host_device_role",
+      "model": "DRP_POLICY",
+      "status": "DIGITALLY_DEFINED"
+    },
+    {
+      "id": "usb4_tb4_topology",
+      "model": "JHL8440_40G",
+      "status": "DIGITALLY_DEFINED"
+    },
+    {
+      "id": "dp_tunneling",
+      "model": "DP14_TUNNEL",
+      "status": "DIGITALLY_DEFINED"
+    },
+    {
+      "id": "multi_display",
+      "model": "UP_TO_2_DP14",
+      "status": "DIGITALLY_DEFINED"
+    },
+    {
+      "id": "ethernet",
+      "model": "RTL8156",
+      "status": "DIGITALLY_DEFINED"
+    },
+    {
+      "id": "usb_hub",
+      "model": "VL817",
+      "status": "DIGITALLY_DEFINED"
+    },
+    {
+      "id": "audio",
+      "model": "HUB_OR_HOST_PATH",
+      "status": "DIGITALLY_DEFINED"
+    },
+    {
+      "id": "power",
+      "model": "PD_SOURCE_SINK",
+      "status": "DIGITALLY_DEFINED"
+    },
+    {
+      "id": "hotplug",
+      "model": "HOTPLUG_REENUM",
+      "status": "DIGITALLY_DEFINED"
+    },
+    {
+      "id": "sleep_wake",
+      "model": "S3_S0_RESUME",
+      "status": "DIGITALLY_DEFINED"
+    },
+    {
+      "id": "disconnect_reconnect",
+      "model": "LINK_RETRAIN",
+      "status": "DIGITALLY_DEFINED"
+    },
+    {
+      "id": "fault_isolation",
+      "model": "PORT_POWER_FAULT",
+      "status": "DIGITALLY_DEFINED"
+    }
+  ],
+  "compatibility": {
+    "student_14_5": true,
+    "ds_xl_coder": true,
+    "handheld_hybrid": "VL108_COSTDOWN_OR_TB4_LIMITED"
+  },
+  "physical_si_validation": "PHYSICAL_PENDING",
+  "nda_ball_maps": "EXTERNAL"
+}

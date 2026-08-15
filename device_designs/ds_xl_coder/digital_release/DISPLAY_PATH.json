@@ -1,0 +1,16 @@
+{
+  "schema": "gunnchos.hw_fw_rc_001.display_path.v1",
+  "product": "ds_xl_coder",
+  "independent_useful_displays": 2,
+  "paths": [
+    {"id": "primary_edp", "interface": "eDP", "role": "primary_useful"},
+    {"id": "secondary_edp", "interface": "eDP", "role": "second_useful"}
+  ],
+  "touch_input_mapping": "per_panel_HID",
+  "orientation_hinge": "MODELED",
+  "com_pin_map": "EXTERNAL_NDA",
+  "icd": [
+    "device_designs/ds_xl_coder/docs/dual_edp_icd.md",
+    "device_designs/ds_xl_coder/docs/second_display_icd.md"
+  ]
+}

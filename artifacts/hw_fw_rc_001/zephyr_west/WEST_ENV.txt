@@ -1,0 +1,7 @@
+HW-002 require_west_build
+ZEPHYR_BASE=/Users/gunnchos/zephyr-workspace/zephyr
+ZEPHYR_SDK_INSTALL_DIR=/Users/gunnchos/zephyr-workspace/zephyr-sdk-0.16.8
+WEST_BIN=/Users/gunnchos/Downloads/gunnchos-7gc-research-product-spine/repos/edge-io-measurement-node/gate1_digital_fabrication/ring_firmware/.toolchain/west-venv/bin/west
+BOARD=nrf52840dk/nrf52840
+APP=/Users/gunnchos/Downloads/gunnchos-7gc-research-product-spine/repos/gunnchos-hardware-industrial-design/firmware/edge_io_rings/zephyr_west/zephyr_app
+West version: v1.5.0

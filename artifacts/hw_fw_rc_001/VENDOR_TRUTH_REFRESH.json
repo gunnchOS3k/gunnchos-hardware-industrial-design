@@ -1,0 +1,74 @@
+{
+  "schema": "gunnchos.hw_fw_rc_001.vendor_truth_refresh.v1",
+  "generated_at_utc": "2026-08-15T00:44:31Z",
+  "refreshed": true,
+  "anchors": {
+    "student_dsxl_com": {
+      "mpn": "COM-HPC-mMTL-155H-32G",
+      "vendor": "ADLINK",
+      "cpu": "Core Ultra 7 155H",
+      "memory": "32GB LPDDR5x-class onboard",
+      "status": "CONFIRMED_PUBLIC_LISTING",
+      "notes": [
+        "Still listed by distributors (e.g. WDL Systems SKU 1ACMK153)",
+        "Stock may be lead-time constrained \u2014 UNKNOWN_UNTIL_QUOTE for PO",
+        "Alternate COM-HPC-mMTL-155H-64G remains approved"
+      ],
+      "sources": [
+        "https://www.adlinktech.com/en/news/com-hpc-mini-intel-core-ultra",
+        "https://www.wdlsystems.com/adlink-com-hpc-mmtl-155h-32g"
+      ]
+    },
+    "handheld_som": {
+      "mpn": "RM121-D8E32",
+      "vendor": "Radxa",
+      "product": "NX5",
+      "status": "CONFIRMED_PRODUCT_BRIEF",
+      "emmc_gib": 32,
+      "storage_architecture": {
+        "emmc": "system/recovery",
+        "microsd": "large content required"
+      },
+      "lifecycle_floor": ">= 2033-09 per Radxa brief",
+      "sources": [
+        "https://dl.radxa.com/nx5/radxa_nx5_product_brief.pdf",
+        "https://docs.radxa.com/en/som/nx/nx5"
+      ]
+    },
+    "cellular": {
+      "mpn": "RM520N-GL",
+      "vendor": "Quectel",
+      "release": "3GPP Rel-16",
+      "spectrum": "Sub-6",
+      "modes": [
+        "NSA",
+        "SA"
+      ],
+      "ntn": false,
+      "is_6g": false,
+      "sources": [
+        "https://www.quectel.com/product/5g-rm520n-series/"
+      ]
+    },
+    "dock": {
+      "controller": "JHL8440",
+      "retimer": "JHL9040R",
+      "tb_generation": "TB4_40G",
+      "tb5": false,
+      "sources": [
+        "https://www.intel.com/content/www/us/en/products/sku/189982/intel-jhl8440-thunderbolt-4-controller/specifications.html",
+        "https://www.intel.com/content/www/us/en/products/sku/211299/intel-jhl9040r-thunderbolt-4-retimer/specifications.html"
+      ]
+    },
+    "rings": {
+      "mcu": "nRF52840",
+      "imu": "BMI270",
+      "cap": "IQS7222A",
+      "se": "SE050",
+      "pmic": "nPM1300",
+      "uwb_optional": "DW3000/DWM3001C",
+      "status": "CONFIRMED_ADR_AND_BOM"
+    }
+  },
+  "procurement": "PHYSICAL_EXECUTION_FREEZE \u2014 refresh is design truth only"
+}

@@ -1,0 +1,140 @@
+{
+  "schema": "gunnchos.hw_fw_rc_001.self_challenge_vp.v1",
+  "generated_at_utc": "2026-08-15T00:44:31Z",
+  "verdict": "PASS",
+  "fail_count": 0,
+  "findings": [
+    {
+      "challenge": "editable_eda_source",
+      "result": "PASS",
+      "detail": "student_14_5: kicad_sch present (94635 bytes)"
+    },
+    {
+      "challenge": "erc_pass_errors_zero",
+      "result": "PASS",
+      "detail": "student_14_5: warnings=40"
+    },
+    {
+      "challenge": "pcb_editable_source",
+      "result": "PASS",
+      "detail": "student_14_5: kicad_pcb present"
+    },
+    {
+      "challenge": "bom_economics_honest",
+      "result": "PASS",
+      "detail": "student_14_5: UNKNOWN_UNTIL_QUOTE policy held"
+    },
+    {
+      "challenge": "modem_not_ntn_6g",
+      "result": "PASS",
+      "detail": "RM520N-GL Rel-16 Sub-6 only"
+    },
+    {
+      "challenge": "editable_eda_source",
+      "result": "PASS",
+      "detail": "ds_xl_coder: kicad_sch present (100114 bytes)"
+    },
+    {
+      "challenge": "erc_pass_errors_zero",
+      "result": "PASS",
+      "detail": "ds_xl_coder: warnings=45"
+    },
+    {
+      "challenge": "pcb_editable_source",
+      "result": "PASS",
+      "detail": "ds_xl_coder: kicad_pcb present"
+    },
+    {
+      "challenge": "bom_economics_honest",
+      "result": "PASS",
+      "detail": "ds_xl_coder: UNKNOWN_UNTIL_QUOTE policy held"
+    },
+    {
+      "challenge": "modem_not_ntn_6g",
+      "result": "PASS",
+      "detail": "RM520N-GL Rel-16 Sub-6 only"
+    },
+    {
+      "challenge": "editable_eda_source",
+      "result": "PASS",
+      "detail": "handheld_hybrid: kicad_sch present (171357 bytes)"
+    },
+    {
+      "challenge": "erc_pass_errors_zero",
+      "result": "PASS",
+      "detail": "handheld_hybrid: warnings=461"
+    },
+    {
+      "challenge": "pcb_editable_source",
+      "result": "PASS",
+      "detail": "handheld_hybrid: kicad_pcb present"
+    },
+    {
+      "challenge": "bom_economics_honest",
+      "result": "PASS",
+      "detail": "handheld_hybrid: UNKNOWN_UNTIL_QUOTE policy held"
+    },
+    {
+      "challenge": "editable_eda_source",
+      "result": "PASS",
+      "detail": "dock: kicad_sch present (66280 bytes)"
+    },
+    {
+      "challenge": "erc_pass_errors_zero",
+      "result": "PASS",
+      "detail": "dock: warnings=19"
+    },
+    {
+      "challenge": "pcb_editable_source",
+      "result": "PASS",
+      "detail": "dock: kicad_pcb present"
+    },
+    {
+      "challenge": "no_fake_tb5",
+      "result": "PASS",
+      "detail": "Dock freezes 40G JHL8440+JHL9040R"
+    },
+    {
+      "challenge": "bom_economics_honest",
+      "result": "PASS",
+      "detail": "dock: UNKNOWN_UNTIL_QUOTE policy held"
+    },
+    {
+      "challenge": "editable_eda_source",
+      "result": "PASS",
+      "detail": "edge_io_rings: kicad_sch present (84531 bytes)"
+    },
+    {
+      "challenge": "erc_pass_errors_zero",
+      "result": "PASS",
+      "detail": "edge_io_rings: warnings=27"
+    },
+    {
+      "challenge": "pcb_editable_source",
+      "result": "PASS",
+      "detail": "edge_io_rings: kicad_pcb present"
+    },
+    {
+      "challenge": "ring_not_imu_only",
+      "result": "PASS",
+      "detail": "Fusion map requires CAP+SE+BLE (+ optional UWB)"
+    },
+    {
+      "challenge": "firmware_builds",
+      "result": "PASS",
+      "detail": "Ring ZEPHYR_WEST hard gate pass"
+    },
+    {
+      "challenge": "bom_economics_honest",
+      "result": "PASS",
+      "detail": "edge_io_rings: UNKNOWN_UNTIL_QUOTE policy held"
+    },
+    {
+      "challenge": "no_80g_claim",
+      "result": "PASS",
+      "detail": "40G only"
+    }
+  ],
+  "prefer_fail": true,
+  "note": "Independent self-challenge for DRAFT PR; Edmund merge still required; Cursor never merges"
+}

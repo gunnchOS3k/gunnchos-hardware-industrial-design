@@ -1,0 +1,100 @@
+{
+  "schema": "gunnchos.hw_fw_rc_001.open_physical_pending.v1",
+  "generated_at_utc": "2026-08-15T00:44:31Z",
+  "DIGITAL_OPEN": [
+    {
+      "product": "student_14_5",
+      "token": "STUDENT_HW_DIGITAL_RELEASE_PACKAGE",
+      "failed": [],
+      "reason": "EXTERNAL/NDA pin-accurate fanout remains; public Cont IX package is CONDITIONAL_VENDOR_COLLATERAL \u2014 prefer FAIL vs claiming STUDENT/DSXL/DOCK_HW_DIGITAL_RELEASE_PACKAGE"
+    },
+    {
+      "product": "student_14_5",
+      "item": "lib_footprint_mismatch_or_other_drc_warnings",
+      "warnings": 50
+    },
+    {
+      "product": "ds_xl_coder",
+      "token": "DSXL_HW_DIGITAL_RELEASE_PACKAGE",
+      "failed": [],
+      "reason": "EXTERNAL/NDA pin-accurate fanout remains; public Cont IX package is CONDITIONAL_VENDOR_COLLATERAL \u2014 prefer FAIL vs claiming STUDENT/DSXL/DOCK_HW_DIGITAL_RELEASE_PACKAGE"
+    },
+    {
+      "product": "ds_xl_coder",
+      "item": "lib_footprint_mismatch_or_other_drc_warnings",
+      "warnings": 51
+    },
+    {
+      "product": "handheld_hybrid",
+      "item": "lib_footprint_mismatch_or_other_drc_warnings",
+      "warnings": 50
+    },
+    {
+      "product": "dock",
+      "token": "DOCK_HW_DIGITAL_RELEASE_PACKAGE",
+      "failed": [],
+      "reason": "EXTERNAL/NDA pin-accurate fanout remains; public Cont IX package is CONDITIONAL_VENDOR_COLLATERAL \u2014 prefer FAIL vs claiming STUDENT/DSXL/DOCK_HW_DIGITAL_RELEASE_PACKAGE"
+    },
+    {
+      "product": "dock",
+      "item": "lib_footprint_mismatch_or_other_drc_warnings",
+      "warnings": 39
+    },
+    {
+      "product": "edge_io_rings",
+      "item": "lib_footprint_mismatch_or_other_drc_warnings",
+      "warnings": 22
+    }
+  ],
+  "PHYSICAL_PENDING": [
+    {
+      "product": "student_14_5",
+      "item": "fab_flash_assemble_measure",
+      "status": "PHYSICAL_PENDING"
+    },
+    {
+      "product": "ds_xl_coder",
+      "item": "fab_flash_assemble_measure",
+      "status": "PHYSICAL_PENDING"
+    },
+    {
+      "product": "handheld_hybrid",
+      "item": "fab_flash_assemble_measure",
+      "status": "PHYSICAL_PENDING"
+    },
+    {
+      "product": "dock",
+      "item": "fab_flash_assemble_measure",
+      "status": "PHYSICAL_PENDING"
+    },
+    {
+      "product": "edge_io_rings",
+      "item": "fab_flash_assemble_measure",
+      "status": "PHYSICAL_PENDING"
+    },
+    {
+      "product": "edge_io_rings",
+      "item": "spatial_accuracy_and_physical_boot",
+      "status": "PHYSICAL_PENDING"
+    }
+  ],
+  "EXTERNAL": [
+    {
+      "product": "student_14_5",
+      "item": "COM-HPC Mini 400-pin NDA net map"
+    },
+    {
+      "product": "ds_xl_coder",
+      "item": "COM-HPC Mini 400-pin NDA net map"
+    },
+    {
+      "product": "ds_xl_coder",
+      "item": "dual-eDP COM-HPC pin map NDA"
+    },
+    {
+      "product": "dock",
+      "item": "JHL8440/JHL9040R package ball maps NDA"
+    }
+  ],
+  "HW_FIRMWARE_DIGITAL_PACKAGE_COMPLETE": false
+}

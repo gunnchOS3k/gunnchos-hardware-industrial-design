@@ -15,3 +15,6 @@ firmware/edge_io_rings/zephyr_west/.toolchain/
 artifacts/hw002/zephyr_west/out/*.elf
 artifacts/hw002/zephyr_west/out/*.bin
 artifacts/hw002/zephyr_west/out/*.hex
+artifacts/hw_fw_rc_001/zephyr_west/out/*.elf
+artifacts/hw_fw_rc_001/zephyr_west/out/*.bin
+artifacts/hw_fw_rc_001/zephyr_west/out/*.hex

@@ -1,0 +1,221 @@
+{
+  "schema": "gunnchos.hw_fw_rc_001.digital_release_package.v1",
+  "packet": "HW-FW-RC-001",
+  "product": "handheld_hybrid",
+  "generated_at_utc": "2026-08-15T00:44:31Z",
+  "vendor_anchors": {
+    "som": "Radxa NX5 RM121-D8E32",
+    "emmc": "32GB system/recovery",
+    "microsd": "required large content (games/AI/WAIKE/media)",
+    "lifecycle_floor": ">= Sep 2033 (Radxa brief)",
+    "not": [
+      "invented_larger_emmc_sku",
+      "bare_RK3588S_BGA"
+    ]
+  },
+  "sections": {
+    "electrical_block_diagram": "device_designs/handheld_hybrid/architecture.md",
+    "power_tree": "device_designs/handheld_hybrid/electrical/power_tree.yaml",
+    "rail_budget": "device_designs/handheld_hybrid/electrical/power_budget.yaml",
+    "schematic": "device_designs/handheld_hybrid/kicad/handheld_hybrid.kicad_sch",
+    "pcb": "device_designs/handheld_hybrid/kicad/handheld_hybrid.kicad_pcb",
+    "stackup": "device_designs/handheld_hybrid/manufacturing/stackup.yaml",
+    "bom_assembly": "device_designs/handheld_hybrid/bom/assembly_bom.csv",
+    "rf_model": "device_designs/handheld_hybrid/electrical/rf_model.yaml",
+    "manufacturing_release_checklist": "device_designs/handheld_hybrid/manufacturing/RELEASE_PACKAGE_CHECKLIST.md",
+    "cont_ix_release": "device_designs/handheld_hybrid/manufacturing/cont_ix_release",
+    "drivers_readme": "device_designs/handheld_hybrid/drivers/README.md"
+  },
+  "eda": {
+    "schematic_path": "device_designs/handheld_hybrid/kicad/handheld_hybrid.kicad_sch",
+    "pcb_path": "device_designs/handheld_hybrid/kicad/handheld_hybrid.kicad_pcb",
+    "schematic_complete_editable": true,
+    "pcb_layout_exists": true,
+    "pcb_layout_status": "PRESENT",
+    "erc": {
+      "errors": 0,
+      "warnings": 461,
+      "pass": true,
+      "source": "device_designs/*/manufacturing/ERC_DRC_STATUS.json (Cont IX)",
+      "by_type": {
+        "warning:endpoint_off_grid": 266,
+        "warning:isolated_pin_label": 146,
+        "warning:lib_symbol_issues": 45,
+        "warning:multiple_net_names": 4
+      }
+    },
+    "drc": {
+      "errors": 0,
+      "warnings": 50,
+      "pass": true,
+      "source": "device_designs/*/manufacturing/ERC_DRC_STATUS.json (Cont IX)",
+      "by_type": {
+        "warning:track_dangling": 10,
+        "warning:lib_footprint_mismatch": 39,
+        "warning:silk_over_copper": 1
+      },
+      "note": "Family-wide re-sweep DEFERRED (Product-Use QEMU resource rule); Cont IX + HW-002 handheld closure reused"
+    },
+    "cont_ix_erc_present": true
+  },
+  "power_thermal": {
+    "power_budget": "device_designs/handheld_hybrid/electrical/power_budget.yaml",
+    "power_tree": "device_designs/handheld_hybrid/electrical/power_tree.yaml",
+    "battery_model": {
+      "path": "device_designs/handheld_hybrid/electrical/battery_model.yaml",
+      "evidence_class": "MODELED",
+      "PHYSICAL_PENDING": true
+    },
+    "thermal_model": {
+      "path": "device_designs/handheld_hybrid/electrical/thermal_model.yaml",
+      "evidence_class": "MODELED",
+      "PHYSICAL_PENDING": true,
+      "physical_thermal_pass": false
+    },
+    "battery_life_claim": false,
+    "physical_thermal_pass": false
+  },
+  "firmware": {
+    "manifest": "firmware/manifests/handheld_hybrid_firmware_manifest.yaml",
+    "builds": true,
+    "build_class": "ACPI_DT_HARNESS",
+    "evidence": [
+      "firmware/manifests/handheld_hybrid_firmware_manifest.yaml",
+      "firmware/descriptors/acpi/handheld_hybrid_dsdt.dsl",
+      "firmware/descriptors/devicetree/handheld_hybrid.dts"
+    ],
+    "acpi": "firmware/descriptors/acpi/handheld_hybrid_dsdt.dsl",
+    "devicetree": "firmware/descriptors/devicetree/handheld_hybrid.dts",
+    "claim_boundary": "Harness/ACPI/DT digital path; on-target COM/SoM firmware PHYSICAL+BINARY_BLOB pending"
+  },
+  "bom_avl": {
+    "assembly_bom": "device_designs/handheld_hybrid/bom/assembly_bom.csv",
+    "supply_chain_fields": "manufacturing/supply_chain/handheld_hybrid.json",
+    "legacy_bom": "bom/handheld_hybrid/bom.csv",
+    "PRODUCTION_RELEASE_CLAIMED": false,
+    "economics_policy": "UNKNOWN_UNTIL_QUOTE \u2014 no fabricated MOQ/price/stock",
+    "fabricated_economics_findings": [],
+    "bom_avl_honest": true,
+    "note": "Canonical orderable MPNs live in device_designs/*/bom/assembly_bom.csv + manufacturing/supply_chain/*.json"
+  },
+  "drivers": {
+    "classification_json": "docs/full_product_family/DRIVER_CLASSIFICATION.json",
+    "classification_md": "docs/full_product_family/DRIVER_CLASSIFICATION.md",
+    "subsystems": [
+      {
+        "id": "cpu_gpu_npu",
+        "mpn": "RK3588S on NX5",
+        "risk": [
+          "OPEN_VENDOR",
+          "BINARY_BLOB"
+        ]
+      },
+      {
+        "id": "board_fw",
+        "mpn": "Radxa NX5 images",
+        "risk": [
+          "OPEN_VENDOR"
+        ]
+      },
+      {
+        "id": "wifi_bt",
+        "mpn": "AP6275P / AIC8800D class",
+        "risk": [
+          "BINARY_BLOB",
+          "OPEN_VENDOR"
+        ]
+      },
+      {
+        "id": "wwan_optional",
+        "mpn": "RM520N-GL",
+        "risk": [
+          "OPEN_VENDOR",
+          "BINARY_BLOB"
+        ],
+        "not": [
+          "6G",
+          "NTN"
+        ]
+      },
+      {
+        "id": "gpu_vulkan",
+        "mpn": "Mali-G610",
+        "risk": [
+          "BINARY_BLOB"
+        ]
+      },
+      {
+        "id": "gamepad_mcu",
+        "mpn": "STM32F103C8T6 class",
+        "risk": [
+          "UPSTREAM"
+        ]
+      },
+      {
+        "id": "se",
+        "mpn": "SE050C1HQ1",
+        "risk": [
+          "OPEN_VENDOR"
+        ]
+      }
+    ],
+    "unavailable_triggers": [],
+    "architecture_revision_notes": [],
+    "driver_risks_explicit": true
+  },
+  "factory_service": {
+    "paths": {
+      "factory_test_dir": "manufacturing/handheld_hybrid/factory_test",
+      "repair_dir": "manufacturing/handheld_hybrid/repair",
+      "repair_plan": "manufacturing/REPAIR_AND_SERVICE_PLAN.md",
+      "programming": "device_designs/handheld_hybrid/manufacturing/PROGRAMMING.md",
+      "qc": "device_designs/handheld_hybrid/manufacturing/QC_CHECKLIST.md",
+      "rework": "device_designs/handheld_hybrid/manufacturing/REWORK.md",
+      "calibration": "device_designs/handheld_hybrid/manufacturing/CALIBRATION.md"
+    },
+    "factory_service_complete_digital": true,
+    "production_keys_ca": "PENDING",
+    "physical_line_validation": "PHYSICAL_PENDING"
+  },
+  "severity": {
+    "S0_digital": 0,
+    "S1_digital": 0,
+    "notes": []
+  },
+  "rf_final_pass": false,
+  "spatial_accuracy": null,
+  "claim_boundary": {
+    "physical_validation": false,
+    "SHIPPING_HARDWARE": false,
+    "battery_life_claim": false,
+    "physical_thermal_pass": false,
+    "rf_certified": false
+  },
+  "token": {
+    "token": "HANDHELD_HW_DIGITAL_RELEASE_PACKAGE",
+    "earned": true,
+    "criteria": {
+      "schematic_complete": true,
+      "erc_pass": true,
+      "pcb_sufficient": true,
+      "drc_pass_where_layout": true,
+      "bom_avl_honest": true,
+      "driver_risks_explicit": true,
+      "power_model_complete": true,
+      "thermal_model_complete": true,
+      "firmware_builds": true,
+      "factory_service_complete": true,
+      "dvpr_complete": true,
+      "s0_digital_zero": true,
+      "s1_digital_zero": true
+    },
+    "failed_criteria": [],
+    "EVT_PASS": false,
+    "DVT_PASS": false,
+    "PVT_PASS": false,
+    "RF_CERTIFIED": false,
+    "EMC_CERTIFIED": false,
+    "BATTERY_CERTIFIED": false,
+    "SHIPPING_HARDWARE": false
+  }
+}

@@ -1,0 +1,108 @@
+{
+  "schema": "gunnchos.hw_fw_rc_001.compatibility_matrix.v1",
+  "generated_at_utc": "2026-08-15T00:44:31Z",
+  "device_to_dock": {
+    "student_14_5": {
+      "power": true,
+      "display": true,
+      "usb": true,
+      "network": "via_dock_ethernet_or_host",
+      "software": "gunnchOS_dock_contract"
+    },
+    "ds_xl_coder": {
+      "power": true,
+      "display": true,
+      "usb": true,
+      "network": "via_dock_ethernet_or_host",
+      "software": "gunnchOS_dock_contract"
+    },
+    "handheld_hybrid": {
+      "power": true,
+      "display": "LIMITED_DP_ALT_OR_VL108",
+      "usb": true,
+      "network": "via_dock_ethernet_or_host",
+      "software": "gunnchOS_dock_contract"
+    }
+  },
+  "device_to_rings": {
+    "student_14_5": {
+      "ble": true,
+      "input_mapping": [
+        "pointer",
+        "click",
+        "text",
+        "delete",
+        "shortcut",
+        "gaming"
+      ],
+      "se_identity": true,
+      "uwb": "OPTIONAL",
+      "spatial_accuracy": "PHYSICAL_PENDING"
+    },
+    "ds_xl_coder": {
+      "ble": true,
+      "input_mapping": [
+        "pointer",
+        "click",
+        "text",
+        "delete",
+        "shortcut",
+        "gaming"
+      ],
+      "se_identity": true,
+      "uwb": "OPTIONAL",
+      "spatial_accuracy": "PHYSICAL_PENDING"
+    },
+    "handheld_hybrid": {
+      "ble": true,
+      "input_mapping": [
+        "pointer",
+        "click",
+        "text",
+        "delete",
+        "shortcut",
+        "gaming"
+      ],
+      "se_identity": true,
+      "uwb": "OPTIONAL",
+      "spatial_accuracy": "PHYSICAL_PENDING"
+    },
+    "dock": {
+      "ble": true,
+      "input_mapping": [
+        "pointer",
+        "click",
+        "text",
+        "delete",
+        "shortcut",
+        "gaming"
+      ],
+      "se_identity": true,
+      "uwb": "OPTIONAL",
+      "spatial_accuracy": "PHYSICAL_PENDING"
+    }
+  },
+  "device_to_software": {
+    "student_14_5": {
+      "gunnchOS": true,
+      "gunnchAI": true,
+      "WAIKE": true,
+      "games": true
+    },
+    "ds_xl_coder": {
+      "gunnchOS": true,
+      "gunnchAI": true,
+      "WAIKE": true,
+      "games": true
+    },
+    "handheld_hybrid": {
+      "gunnchOS": true,
+      "gunnchAI": true,
+      "WAIKE": true,
+      "games": true
+    }
+  },
+  "claim_boundary": "Digital compatibility intent \u2014 not physical interoperability cert",
+  "rings_product": "edge_io_rings",
+  "dock_product": "dock"
+}
