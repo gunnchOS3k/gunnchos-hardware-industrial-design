@@ -18,7 +18,8 @@
       "factory_service_complete": true,
       "dvpr_complete": true,
       "s0_digital_zero": true,
-      "s1_digital_zero": true
+      "s1_digital_zero": true,
+      "tip_accurate_drc_cited": true
     },
     "failed_criteria": [],
     "EVT_PASS": false,
@@ -29,5 +30,5 @@
     "BATTERY_CERTIFIED": false,
     "SHIPPING_HARDWARE": false
   },
-  "generated_at_utc": "2026-08-15T00:44:31Z"
+  "generated_at_utc": "2026-08-15T00:50:17Z"
 }
