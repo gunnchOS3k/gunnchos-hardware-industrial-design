@@ -33,7 +33,7 @@
     "verdict": "PASS_PRODUCTION_INTENT_DIGITAL_FIT",
     "status": "CLOSED",
     "architecture": "Outcome A retained (32GB eMMC system + microSD)",
-    "device_os_image_fit_tip": "f5da4ed64eeeccbf205980a92901b07f2c43ae22",
+    "device_os_image_fit_tip": "a1e11efcb502ce053d755a2539c26d252e216226",
     "device_os_image_fit_pr": "https://github.com/gunnchOS3k/gunnchos-device-os/pull/107",
     "current_digital_realm_numeric_fit": true,
     "stub_like_rootfs_payloads": false,
@@ -46,14 +46,14 @@
       "factory_rootfs_compressed": 0.004028673,
       "production_def_rootfs_compressed": 0.005843321,
       "production_def_rootfs_uncompressed": 0.011548556,
-      "recovery_composed": 0.020781854,
-      "recovery_margin": 1.979218146,
+      "recovery_composed": 0.020781855,
+      "recovery_margin": 1.979218145,
       "recovery_rootfs_compressed": 0.003587433,
       "shared_boot_combined": 0.013169073,
-      "slot_a_composed": 0.024717629,
-      "slot_a_margin": 4.975282371,
-      "slot_b_composed": 0.024717629,
-      "slot_b_margin": 4.975282371
+      "slot_a_composed": 0.02471763,
+      "slot_a_margin": 4.97528237,
+      "slot_b_composed": 0.02471763,
+      "slot_b_margin": 4.97528237
     }
   },
   "remaining_digital_opens": [
@@ -67,5 +67,9 @@
     "artifacts/hw002/image_fit/",
     "artifacts/hw002/zephyr_west/",
     "artifacts/hw002/eda/"
-  ]
+  ],
+  "stream_c_pkt001_remeasure": {
+    "tip": "a1e11efcb502ce053d755a2539c26d252e216226",
+    "at": "2026-08-16T16:22:28Z"
+  }
 }

@@ -213,7 +213,9 @@
       "slot_a_margin": 4.975282371,
       "slot_b_composed": 0.024717629,
       "slot_b_margin": 4.975282371
-    }
+    },
+    "SHIPPING_IMAGE": false,
+    "PRODUCTION_RELEASE_CLAIMED": false
   },
   "revised_plan_while_open": [
     "NPI CLOSED digitally \u2014 remeasure if realm builder payload grows materially",
@@ -235,5 +237,17 @@
   },
   "npi_defect": "NPI_DEFECT-HANDHELD-IMAGE-SLOT-FIT-001",
   "npi_status": "CLOSED",
-  "claim_boundary": "Digital remodel + measured cross-repo production-intent realm sizes only. No physical flash/endurance PASS. No invented MOQ/price/stock. SHIPPING_IMAGE=false; PRODUCTION_RELEASE_CLAIMED=false."
+  "claim_boundary": "Digital remodel + measured cross-repo production-intent realm sizes only. No physical flash/endurance PASS. No invented MOQ/price/stock. SHIPPING_IMAGE=false; PRODUCTION_RELEASE_CLAIMED=false.",
+  "device_os_tip": "a1e11efcb502ce053d755a2539c26d252e216226",
+  "measured_against_main_tip": "a1e11efcb502ce053d755a2539c26d252e216226",
+  "margins_gib": {
+    "slot_a": 4.97528237,
+    "slot_b": 4.97528237,
+    "recovery": 1.979218145
+  },
+  "stream_c_pkt001": {
+    "remeasured_at_utc": "2026-08-16T16:22:28Z",
+    "tip": "a1e11efcb502ce053d755a2539c26d252e216226",
+    "close_earned": true
+  }
 }

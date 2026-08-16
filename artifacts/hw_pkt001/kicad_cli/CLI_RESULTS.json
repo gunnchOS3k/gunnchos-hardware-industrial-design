@@ -1,0 +1,267 @@
+{
+  "schema": "gunnchos.hardware.hw_pkt001.kicad_cli_results.v1",
+  "stream": "STREAM-C-PKT-001",
+  "task": "C1",
+  "ran_at_utc": "2026-08-16T16:22:36Z",
+  "kicad_cli": "/opt/homebrew/bin/kicad-cli",
+  "version": "10.0.5",
+  "results": [
+    {
+      "product": "handheld_hybrid",
+      "kicad_cli": "/opt/homebrew/bin/kicad-cli",
+      "version": "10.0.5",
+      "sch_path": "electrical/handheld_hybrid/kicad/handheld_hybrid.kicad_sch",
+      "pcb_path": "electrical/handheld_hybrid/kicad/handheld_hybrid.kicad_pcb",
+      "erc_rc": 0,
+      "drc_rc": 0,
+      "erc": {
+        "present": true,
+        "errors": 0,
+        "warnings": 461,
+        "by_type": {
+          "warning:endpoint_off_grid": 266,
+          "warning:isolated_pin_label": 146,
+          "warning:lib_symbol_issues": 45,
+          "warning:multiple_net_names": 4
+        },
+        "raw_keys": [
+          "$schema",
+          "coordinate_units",
+          "date",
+          "ignored_checks",
+          "included_severities",
+          "kicad_version",
+          "sheets",
+          "source"
+        ]
+      },
+      "drc": {
+        "present": true,
+        "errors": 0,
+        "warnings": 50,
+        "by_type": {
+          "warning:lib_footprint_mismatch": 39,
+          "warning:track_dangling": 10,
+          "warning:silk_over_copper": 1
+        },
+        "raw_keys": [
+          "$schema",
+          "coordinate_units",
+          "date",
+          "ignored_checks",
+          "included_severities",
+          "kicad_version",
+          "schematic_parity",
+          "source",
+          "unconnected_items",
+          "violations"
+        ]
+      },
+      "status": "RAN"
+    },
+    {
+      "product": "edge_io_rings",
+      "kicad_cli": "/opt/homebrew/bin/kicad-cli",
+      "version": "10.0.5",
+      "sch_path": "electrical/edge_io_rings/kicad/edge_io_rings.kicad_sch",
+      "pcb_path": "electrical/edge_io_rings/kicad/edge_io_rings.kicad_pcb",
+      "erc_rc": 0,
+      "drc_rc": 0,
+      "erc": {
+        "present": true,
+        "errors": 0,
+        "warnings": 27,
+        "by_type": {
+          "warning:lib_symbol_issues": 20,
+          "warning:isolated_pin_label": 7
+        },
+        "raw_keys": [
+          "$schema",
+          "coordinate_units",
+          "date",
+          "ignored_checks",
+          "included_severities",
+          "kicad_version",
+          "sheets",
+          "source"
+        ]
+      },
+      "drc": {
+        "present": true,
+        "errors": 0,
+        "warnings": 22,
+        "by_type": {
+          "warning:lib_footprint_mismatch": 11,
+          "warning:track_dangling": 10,
+          "warning:silk_over_copper": 1
+        },
+        "raw_keys": [
+          "$schema",
+          "coordinate_units",
+          "date",
+          "ignored_checks",
+          "included_severities",
+          "kicad_version",
+          "schematic_parity",
+          "source",
+          "unconnected_items",
+          "violations"
+        ]
+      },
+      "status": "RAN"
+    },
+    {
+      "product": "dock",
+      "kicad_cli": "/opt/homebrew/bin/kicad-cli",
+      "version": "10.0.5",
+      "sch_path": "electrical/dock/kicad/dock.kicad_sch",
+      "pcb_path": "electrical/dock/kicad/dock.kicad_pcb",
+      "erc_rc": 0,
+      "drc_rc": 0,
+      "erc": {
+        "present": true,
+        "errors": 0,
+        "warnings": 19,
+        "by_type": {
+          "warning:lib_symbol_issues": 15,
+          "warning:isolated_pin_label": 4
+        },
+        "raw_keys": [
+          "$schema",
+          "coordinate_units",
+          "date",
+          "ignored_checks",
+          "included_severities",
+          "kicad_version",
+          "sheets",
+          "source"
+        ]
+      },
+      "drc": {
+        "present": true,
+        "errors": 0,
+        "warnings": 39,
+        "by_type": {
+          "warning:lib_footprint_mismatch": 28,
+          "warning:track_dangling": 10,
+          "warning:silk_over_copper": 1
+        },
+        "raw_keys": [
+          "$schema",
+          "coordinate_units",
+          "date",
+          "ignored_checks",
+          "included_severities",
+          "kicad_version",
+          "schematic_parity",
+          "source",
+          "unconnected_items",
+          "violations"
+        ]
+      },
+      "status": "RAN"
+    },
+    {
+      "product": "student_14_5",
+      "kicad_cli": "/opt/homebrew/bin/kicad-cli",
+      "version": "10.0.5",
+      "sch_path": "electrical/student_14_5/kicad/student_14_5.kicad_sch",
+      "pcb_path": "electrical/student_14_5/kicad/student_14_5.kicad_pcb",
+      "erc_rc": 0,
+      "drc_rc": 0,
+      "erc": {
+        "present": true,
+        "errors": 0,
+        "warnings": 40,
+        "by_type": {
+          "warning:lib_symbol_issues": 26,
+          "warning:isolated_pin_label": 14
+        },
+        "raw_keys": [
+          "$schema",
+          "coordinate_units",
+          "date",
+          "ignored_checks",
+          "included_severities",
+          "kicad_version",
+          "sheets",
+          "source"
+        ]
+      },
+      "drc": {
+        "present": true,
+        "errors": 0,
+        "warnings": 50,
+        "by_type": {
+          "warning:lib_footprint_mismatch": 39,
+          "warning:track_dangling": 10,
+          "warning:silk_over_copper": 1
+        },
+        "raw_keys": [
+          "$schema",
+          "coordinate_units",
+          "date",
+          "ignored_checks",
+          "included_severities",
+          "kicad_version",
+          "schematic_parity",
+          "source",
+          "unconnected_items",
+          "violations"
+        ]
+      },
+      "status": "RAN"
+    },
+    {
+      "product": "ds_xl_coder",
+      "kicad_cli": "/opt/homebrew/bin/kicad-cli",
+      "version": "10.0.5",
+      "sch_path": "electrical/ds_xl_coder/kicad/ds_xl_coder.kicad_sch",
+      "pcb_path": "electrical/ds_xl_coder/kicad/ds_xl_coder.kicad_pcb",
+      "erc_rc": 0,
+      "drc_rc": 0,
+      "erc": {
+        "present": true,
+        "errors": 0,
+        "warnings": 45,
+        "by_type": {
+          "warning:lib_symbol_issues": 27,
+          "warning:isolated_pin_label": 18
+        },
+        "raw_keys": [
+          "$schema",
+          "coordinate_units",
+          "date",
+          "ignored_checks",
+          "included_severities",
+          "kicad_version",
+          "sheets",
+          "source"
+        ]
+      },
+      "drc": {
+        "present": true,
+        "errors": 0,
+        "warnings": 51,
+        "by_type": {
+          "warning:lib_footprint_mismatch": 40,
+          "warning:track_dangling": 10,
+          "warning:silk_over_copper": 1
+        },
+        "raw_keys": [
+          "$schema",
+          "coordinate_units",
+          "date",
+          "ignored_checks",
+          "included_severities",
+          "kicad_version",
+          "schematic_parity",
+          "source",
+          "unconnected_items",
+          "violations"
+        ]
+      },
+      "status": "RAN"
+    }
+  ]
+}

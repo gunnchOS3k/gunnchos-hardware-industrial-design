@@ -1,0 +1,4 @@
+tp_id,signal,note
+TP1,3V3,"PLACEHOLDER — public USB-C / power sense nets only; JHL8440/JHL9040R ball-accurate TPs EXTERNAL_NDA. BLOCKED_NOTE: do not invent vendor ball maps."
+TP2,GND,"PLACEHOLDER — public USB-C / power sense nets only; JHL8440/JHL9040R ball-accurate TPs EXTERNAL_NDA. BLOCKED_NOTE: do not invent vendor ball maps."
+TP_PLACEHOLDER_BLOCKED,SEE_NOTE,"PLACEHOLDER — public USB-C / power sense nets only; JHL8440/JHL9040R ball-accurate TPs EXTERNAL_NDA. BLOCKED_NOTE: do not invent vendor ball maps."

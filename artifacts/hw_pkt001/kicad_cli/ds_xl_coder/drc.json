@@ -1,0 +1,810 @@
+{
+    "$schema": "https://schemas.kicad.org/drc.v1.json",
+    "coordinate_units": "mm",
+    "date": "2026-08-16T11:22:36",
+    "ignored_checks": [
+        {
+            "description": "Footprint has no courtyard defined",
+            "key": "missing_courtyard"
+        },
+        {
+            "description": "Track endpoint not centered on via",
+            "key": "track_not_centered_on_via"
+        },
+        {
+            "description": "Tuning profile track geometries",
+            "key": "tuning_profile_track_geometries"
+        },
+        {
+            "description": "Footprint doesn't match symbol's footprint filters",
+            "key": "footprint_filters_mismatch"
+        },
+        {
+            "description": "Footprint component type doesn't match footprint pads",
+            "key": "footprint_type_mismatch"
+        }
+    ],
+    "included_severities": [
+        "error",
+        "warning"
+    ],
+    "kicad_version": "10.0.5",
+    "schematic_parity": [],
+    "source": "ds_xl_coder.kicad_pcb",
+    "unconnected_items": [],
+    "violations": [
+        {
+            "description": "Track has unconnected end",
+            "items": [
+                {
+                    "description": "Track [<no net>] on F.Cu, length 68.6000 mm",
+                    "pos": {
+                        "x": 37.0,
+                        "y": 18.0
+                    },
+                    "uuid": "78465417-d2f4-111d-b963-dd67d0098ae3"
+                }
+            ],
+            "severity": "warning",
+            "type": "track_dangling"
+        },
+        {
+            "description": "Track has unconnected end",
+            "items": [
+                {
+                    "description": "Track [<no net>] on F.Cu, length 71.8000 mm",
+                    "pos": {
+                        "x": 211.2,
+                        "y": 18.0
+                    },
+                    "uuid": "b879f54e-2488-a191-0b9f-fa5678519f49"
+                }
+            ],
+            "severity": "warning",
+            "type": "track_dangling"
+        },
+        {
+            "description": "Track has unconnected end",
+            "items": [
+                {
+                    "description": "Track [<no net>] on B.Cu, length 68.6000 mm",
+                    "pos": {
+                        "x": 37.0,
+                        "y": 22.0
+                    },
+                    "uuid": "d58d5525-90a1-1073-3a67-5b606a1cacfa"
+                }
+            ],
+            "severity": "warning",
+            "type": "track_dangling"
+        },
+        {
+            "description": "Track has unconnected end",
+            "items": [
+                {
+                    "description": "Track [<no net>] on B.Cu, length 71.8000 mm",
+                    "pos": {
+                        "x": 211.2,
+                        "y": 22.0
+                    },
+                    "uuid": "8ada4169-42cd-624d-eb0f-236d3ebc9d5b"
+                }
+            ],
+            "severity": "warning",
+            "type": "track_dangling"
+        },
+        {
+            "description": "Track has unconnected end",
+            "items": [
+                {
+                    "description": "Track [<no net>] on F.Cu, length 68.6000 mm",
+                    "pos": {
+                        "x": 37.0,
+                        "y": 26.0
+                    },
+                    "uuid": "4669c03f-4220-7726-2799-c8a88be872ac"
+                }
+            ],
+            "severity": "warning",
+            "type": "track_dangling"
+        },
+        {
+            "description": "Track has unconnected end",
+            "items": [
+                {
+                    "description": "Track [<no net>] on F.Cu, length 71.8000 mm",
+                    "pos": {
+                        "x": 211.2,
+                        "y": 26.0
+                    },
+                    "uuid": "fd176d17-b90d-0e20-9c99-3dd4082c45ed"
+                }
+            ],
+            "severity": "warning",
+            "type": "track_dangling"
+        },
+        {
+            "description": "Track has unconnected end",
+            "items": [
+                {
+                    "description": "Track [<no net>] on F.Cu, length 68.6000 mm",
+                    "pos": {
+                        "x": 37.0,
+                        "y": 30.0
+                    },
+                    "uuid": "42301e1f-d5d4-3840-d9f4-3a9002a708f8"
+                }
+            ],
+            "severity": "warning",
+            "type": "track_dangling"
+        },
+        {
+            "description": "Track has unconnected end",
+            "items": [
+                {
+                    "description": "Track [<no net>] on F.Cu, length 71.8000 mm",
+                    "pos": {
+                        "x": 211.2,
+                        "y": 30.0
+                    },
+                    "uuid": "36955438-5e1f-50d1-87c1-c19c4668326f"
+                }
+            ],
+            "severity": "warning",
+            "type": "track_dangling"
+        },
+        {
+            "description": "Track has unconnected end",
+            "items": [
+                {
+                    "description": "Track [<no net>] on F.Cu, length 68.6000 mm",
+                    "pos": {
+                        "x": 37.0,
+                        "y": 34.0
+                    },
+                    "uuid": "7ab8c4ab-b05d-b417-b6a2-ba78732f025c"
+                }
+            ],
+            "severity": "warning",
+            "type": "track_dangling"
+        },
+        {
+            "description": "Track has unconnected end",
+            "items": [
+                {
+                    "description": "Track [<no net>] on F.Cu, length 71.8000 mm",
+                    "pos": {
+                        "x": 211.2,
+                        "y": 34.0
+                    },
+                    "uuid": "e2d6421c-2aea-0d52-fe7f-8c083ab30d2c"
+                }
+            ],
+            "severity": "warning",
+            "type": "track_dangling"
+        },
+        {
+            "description": "Footprint 'MountingHole_3.2mm' does not match copy in library 'gunnchos_production'",
+            "items": [
+                {
+                    "description": "Footprint H1",
+                    "pos": {
+                        "x": 12.0,
+                        "y": 12.0
+                    },
+                    "uuid": "2c5c05d2-ee79-f22f-3d99-07ca1d580f77"
+                }
+            ],
+            "severity": "warning",
+            "type": "lib_footprint_mismatch"
+        },
+        {
+            "description": "Footprint 'MountingHole_3.2mm' does not match copy in library 'gunnchos_production'",
+            "items": [
+                {
+                    "description": "Footprint H2",
+                    "pos": {
+                        "x": 308.0,
+                        "y": 12.0
+                    },
+                    "uuid": "c0f30b34-f2fc-11bb-6d5b-c4930ff8ca1e"
+                }
+            ],
+            "severity": "warning",
+            "type": "lib_footprint_mismatch"
+        },
+        {
+            "description": "Footprint 'MountingHole_3.2mm' does not match copy in library 'gunnchos_production'",
+            "items": [
+                {
+                    "description": "Footprint H3",
+                    "pos": {
+                        "x": 12.0,
+                        "y": 208.0
+                    },
+                    "uuid": "2dcad3b1-3747-ab7b-a4e4-e3fb27b0419c"
+                }
+            ],
+            "severity": "warning",
+            "type": "lib_footprint_mismatch"
+        },
+        {
+            "description": "Footprint 'MountingHole_3.2mm' does not match copy in library 'gunnchos_production'",
+            "items": [
+                {
+                    "description": "Footprint H4",
+                    "pos": {
+                        "x": 308.0,
+                        "y": 208.0
+                    },
+                    "uuid": "c80241db-d2c7-d2f5-d0a5-a8b2acb2120b"
+                }
+            ],
+            "severity": "warning",
+            "type": "lib_footprint_mismatch"
+        },
+        {
+            "description": "Footprint 'Fiducial_1mm' does not match copy in library 'gunnchos_production'",
+            "items": [
+                {
+                    "description": "Footprint FID1",
+                    "pos": {
+                        "x": 160.0,
+                        "y": 12.0
+                    },
+                    "uuid": "87cd0397-ae40-b31f-8054-99949e1c46e5"
+                }
+            ],
+            "severity": "warning",
+            "type": "lib_footprint_mismatch"
+        },
+        {
+            "description": "Footprint 'Fiducial_1mm' does not match copy in library 'gunnchos_production'",
+            "items": [
+                {
+                    "description": "Footprint FID2",
+                    "pos": {
+                        "x": 27.0,
+                        "y": 110.0
+                    },
+                    "uuid": "a58bdf07-12be-3c7b-ba80-ad231c2bd02e"
+                }
+            ],
+            "severity": "warning",
+            "type": "lib_footprint_mismatch"
+        },
+        {
+            "description": "Footprint 'Fiducial_1mm' does not match copy in library 'gunnchos_production'",
+            "items": [
+                {
+                    "description": "Footprint FID3",
+                    "pos": {
+                        "x": 293.0,
+                        "y": 110.0
+                    },
+                    "uuid": "3e3328e9-3abb-ab06-590d-a60d28d93cbd"
+                }
+            ],
+            "severity": "warning",
+            "type": "lib_footprint_mismatch"
+        },
+        {
+            "description": "Footprint 'USB_C_Receptacle_Production' does not match copy in library 'gunnchos_production'",
+            "items": [
+                {
+                    "description": "Footprint JUSB1",
+                    "pos": {
+                        "x": 42.0,
+                        "y": 44.0
+                    },
+                    "uuid": "8680fa9a-2f94-4f62-c38c-10dc99951aa3"
+                }
+            ],
+            "severity": "warning",
+            "type": "lib_footprint_mismatch"
+        },
+        {
+            "description": "Footprint 'VQFN-48-1EP_7x7mm_P0.5mm' does not match copy in library 'gunnchos_production'",
+            "items": [
+                {
+                    "description": "Footprint UPD1",
+                    "pos": {
+                        "x": 66.0,
+                        "y": 44.0
+                    },
+                    "uuid": "85c77485-5f2f-518c-8cfb-4a14fc3d7f9b"
+                }
+            ],
+            "severity": "warning",
+            "type": "lib_footprint_mismatch"
+        },
+        {
+            "description": "Footprint 'WQFN-29-1EP_4x4mm_P0.4mm' does not match copy in library 'gunnchos_production'",
+            "items": [
+                {
+                    "description": "Footprint UCHG1",
+                    "pos": {
+                        "x": 90.0,
+                        "y": 44.0
+                    },
+                    "uuid": "66f2240c-4e95-0e59-a5c3-fc92c1f4ffd2"
+                }
+            ],
+            "severity": "warning",
+            "type": "lib_footprint_mismatch"
+        },
+        {
+            "description": "Footprint 'QFN-16-1EP_3x3mm_P0.5mm' does not match copy in library 'gunnchos_production'",
+            "items": [
+                {
+                    "description": "Footprint U3V3",
+                    "pos": {
+                        "x": 114.0,
+                        "y": 44.0
+                    },
+                    "uuid": "94b24ba5-22ea-c297-fceb-b7c50bb421fd"
+                }
+            ],
+            "severity": "warning",
+            "type": "lib_footprint_mismatch"
+        },
+        {
+            "description": "Footprint 'C_0402' does not match copy in library 'gunnchos_production'",
+            "items": [
+                {
+                    "description": "Footprint C1",
+                    "pos": {
+                        "x": 138.0,
+                        "y": 44.0
+                    },
+                    "uuid": "5e105488-5e8c-7b55-0e68-ba8a06301aee"
+                }
+            ],
+            "severity": "warning",
+            "type": "lib_footprint_mismatch"
+        },
+        {
+            "description": "Footprint 'C_0402' does not match copy in library 'gunnchos_production'",
+            "items": [
+                {
+                    "description": "Footprint C2",
+                    "pos": {
+                        "x": 162.0,
+                        "y": 44.0
+                    },
+                    "uuid": "54b269af-ec1b-d546-ad1c-9ab5cea1d7a0"
+                }
+            ],
+            "severity": "warning",
+            "type": "lib_footprint_mismatch"
+        },
+        {
+            "description": "Footprint 'R_0402' does not match copy in library 'gunnchos_production'",
+            "items": [
+                {
+                    "description": "Footprint R1",
+                    "pos": {
+                        "x": 186.0,
+                        "y": 44.0
+                    },
+                    "uuid": "aaf7a668-6545-30c0-49db-e66186a463ce"
+                }
+            ],
+            "severity": "warning",
+            "type": "lib_footprint_mismatch"
+        },
+        {
+            "description": "Footprint 'R_0402' does not match copy in library 'gunnchos_production'",
+            "items": [
+                {
+                    "description": "Footprint R2",
+                    "pos": {
+                        "x": 210.0,
+                        "y": 44.0
+                    },
+                    "uuid": "7f22ecf1-08ba-ef42-4576-e33d20a07bcc"
+                }
+            ],
+            "severity": "warning",
+            "type": "lib_footprint_mismatch"
+        },
+        {
+            "description": "Footprint 'LED_0603' does not match copy in library 'gunnchos_production'",
+            "items": [
+                {
+                    "description": "Footprint D1",
+                    "pos": {
+                        "x": 234.0,
+                        "y": 44.0
+                    },
+                    "uuid": "ee42b39c-c5af-2960-667a-8fccf34806d6"
+                }
+            ],
+            "severity": "warning",
+            "type": "lib_footprint_mismatch"
+        },
+        {
+            "description": "Footprint 'DFN1006-2' does not match copy in library 'gunnchos_production'",
+            "items": [
+                {
+                    "description": "Footprint DESD1",
+                    "pos": {
+                        "x": 258.0,
+                        "y": 44.0
+                    },
+                    "uuid": "c52c9e6c-1c9c-f00c-18af-63cf199a30bb"
+                }
+            ],
+            "severity": "warning",
+            "type": "lib_footprint_mismatch"
+        },
+        {
+            "description": "Footprint 'COMHPC_Mini_envelope' does not match copy in library 'gunnchos_production'",
+            "items": [
+                {
+                    "description": "Footprint UCOM1",
+                    "pos": {
+                        "x": 42.0,
+                        "y": 68.0
+                    },
+                    "uuid": "b9d60c06-455c-8162-dcc3-8e20aa614717"
+                }
+            ],
+            "severity": "warning",
+            "type": "lib_footprint_mismatch"
+        },
+        {
+            "description": "Footprint 'VQFN-32-1EP_5x5mm_P0.5mm' does not match copy in library 'gunnchos_production'",
+            "items": [
+                {
+                    "description": "Footprint UTPM1",
+                    "pos": {
+                        "x": 66.0,
+                        "y": 68.0
+                    },
+                    "uuid": "b20af9b9-2f6f-5ca7-001c-a974c59c5566"
+                }
+            ],
+            "severity": "warning",
+            "type": "lib_footprint_mismatch"
+        },
+        {
+            "description": "Footprint 'FFC_40P_0.5mm' does not match copy in library 'gunnchos_production'",
+            "items": [
+                {
+                    "description": "Footprint JDISP1",
+                    "pos": {
+                        "x": 90.0,
+                        "y": 68.0
+                    },
+                    "uuid": "08f312e0-d27a-0340-e34e-84096d8cbd80"
+                }
+            ],
+            "severity": "warning",
+            "type": "lib_footprint_mismatch"
+        },
+        {
+            "description": "Footprint 'FFC_40P_0.5mm' does not match copy in library 'gunnchos_production'",
+            "items": [
+                {
+                    "description": "Footprint JNVME1",
+                    "pos": {
+                        "x": 114.0,
+                        "y": 68.0
+                    },
+                    "uuid": "526e8a07-71a6-1f49-83b3-b3193df6a326"
+                }
+            ],
+            "severity": "warning",
+            "type": "lib_footprint_mismatch"
+        },
+        {
+            "description": "Footprint 'FFC_40P_0.5mm' does not match copy in library 'gunnchos_production'",
+            "items": [
+                {
+                    "description": "Footprint JWWAN1",
+                    "pos": {
+                        "x": 138.0,
+                        "y": 68.0
+                    },
+                    "uuid": "3bc79d58-c0d8-36fa-fecb-3eb225a2a823"
+                }
+            ],
+            "severity": "warning",
+            "type": "lib_footprint_mismatch"
+        },
+        {
+            "description": "Footprint 'DFN1006-2' does not match copy in library 'gunnchos_production'",
+            "items": [
+                {
+                    "description": "Footprint JSIM1",
+                    "pos": {
+                        "x": 162.0,
+                        "y": 68.0
+                    },
+                    "uuid": "c87f6664-6938-2904-0530-f15988a09a42"
+                }
+            ],
+            "severity": "warning",
+            "type": "lib_footprint_mismatch"
+        },
+        {
+            "description": "Footprint 'DFN1006-2' does not match copy in library 'gunnchos_production'",
+            "items": [
+                {
+                    "description": "Footprint JWIFI1",
+                    "pos": {
+                        "x": 186.0,
+                        "y": 68.0
+                    },
+                    "uuid": "dd8d5631-54d6-39cd-dcbf-3a691bcd3220"
+                }
+            ],
+            "severity": "warning",
+            "type": "lib_footprint_mismatch"
+        },
+        {
+            "description": "Footprint 'DFN1006-2' does not match copy in library 'gunnchos_production'",
+            "items": [
+                {
+                    "description": "Footprint JETH1",
+                    "pos": {
+                        "x": 210.0,
+                        "y": 68.0
+                    },
+                    "uuid": "29b782b5-2a52-1c1a-6ce5-3b91773cc48b"
+                }
+            ],
+            "severity": "warning",
+            "type": "lib_footprint_mismatch"
+        },
+        {
+            "description": "Footprint 'DFN1006-2' does not match copy in library 'gunnchos_production'",
+            "items": [
+                {
+                    "description": "Footprint JAUD1",
+                    "pos": {
+                        "x": 234.0,
+                        "y": 68.0
+                    },
+                    "uuid": "236c118a-2816-b76f-509b-1ca7aff1ec17"
+                }
+            ],
+            "severity": "warning",
+            "type": "lib_footprint_mismatch"
+        },
+        {
+            "description": "Footprint 'FFC_40P_0.5mm' does not match copy in library 'gunnchos_production'",
+            "items": [
+                {
+                    "description": "Footprint JCAM1",
+                    "pos": {
+                        "x": 258.0,
+                        "y": 68.0
+                    },
+                    "uuid": "ee86af88-4470-ac6f-1cde-c49a279c96ae"
+                }
+            ],
+            "severity": "warning",
+            "type": "lib_footprint_mismatch"
+        },
+        {
+            "description": "Footprint 'DFN1006-2' does not match copy in library 'gunnchos_production'",
+            "items": [
+                {
+                    "description": "Footprint JKEY1",
+                    "pos": {
+                        "x": 42.0,
+                        "y": 92.0
+                    },
+                    "uuid": "d467bb46-8eb0-b55f-f455-b4393ef4fbb7"
+                }
+            ],
+            "severity": "warning",
+            "type": "lib_footprint_mismatch"
+        },
+        {
+            "description": "Footprint 'DFN1006-2' does not match copy in library 'gunnchos_production'",
+            "items": [
+                {
+                    "description": "Footprint JTRK1",
+                    "pos": {
+                        "x": 66.0,
+                        "y": 92.0
+                    },
+                    "uuid": "ab389e10-1c6a-37ed-981a-89cbb7d825e8"
+                }
+            ],
+            "severity": "warning",
+            "type": "lib_footprint_mismatch"
+        },
+        {
+            "description": "Footprint 'DFN1006-2' does not match copy in library 'gunnchos_production'",
+            "items": [
+                {
+                    "description": "Footprint JEC1",
+                    "pos": {
+                        "x": 90.0,
+                        "y": 92.0
+                    },
+                    "uuid": "0e5124e4-a0b4-5050-6a0e-529702acb41e"
+                }
+            ],
+            "severity": "warning",
+            "type": "lib_footprint_mismatch"
+        },
+        {
+            "description": "Footprint 'DFN1006-2' does not match copy in library 'gunnchos_production'",
+            "items": [
+                {
+                    "description": "Footprint JBAT1",
+                    "pos": {
+                        "x": 114.0,
+                        "y": 92.0
+                    },
+                    "uuid": "eeff6655-157b-26d7-04b6-97b725e8fe46"
+                }
+            ],
+            "severity": "warning",
+            "type": "lib_footprint_mismatch"
+        },
+        {
+            "description": "Footprint 'DFN1006-2' does not match copy in library 'gunnchos_production'",
+            "items": [
+                {
+                    "description": "Footprint JSEC1",
+                    "pos": {
+                        "x": 138.0,
+                        "y": 92.0
+                    },
+                    "uuid": "6ac1767b-b899-5e71-a1b4-f9019b9afd6f"
+                }
+            ],
+            "severity": "warning",
+            "type": "lib_footprint_mismatch"
+        },
+        {
+            "description": "Footprint 'DFN1006-2' does not match copy in library 'gunnchos_production'",
+            "items": [
+                {
+                    "description": "Footprint JDBG1",
+                    "pos": {
+                        "x": 162.0,
+                        "y": 92.0
+                    },
+                    "uuid": "8cdb4dc7-673e-28cd-0270-53d69669c32e"
+                }
+            ],
+            "severity": "warning",
+            "type": "lib_footprint_mismatch"
+        },
+        {
+            "description": "Footprint 'FFC_40P_0.5mm' does not match copy in library 'gunnchos_production'",
+            "items": [
+                {
+                    "description": "Footprint JDISP2",
+                    "pos": {
+                        "x": 186.0,
+                        "y": 92.0
+                    },
+                    "uuid": "a4a59f61-2a82-c949-42d0-7bd373169b14"
+                }
+            ],
+            "severity": "warning",
+            "type": "lib_footprint_mismatch"
+        },
+        {
+            "description": "Footprint 'TestPoint_Pad' does not match copy in library 'gunnchos_production'",
+            "items": [
+                {
+                    "description": "Footprint TP1",
+                    "pos": {
+                        "x": 42.0,
+                        "y": 196.0
+                    },
+                    "uuid": "88f4d368-9f08-ced5-c013-c20338b0d671"
+                }
+            ],
+            "severity": "warning",
+            "type": "lib_footprint_mismatch"
+        },
+        {
+            "description": "Footprint 'TestPoint_Pad' does not match copy in library 'gunnchos_production'",
+            "items": [
+                {
+                    "description": "Footprint TP2",
+                    "pos": {
+                        "x": 60.0,
+                        "y": 196.0
+                    },
+                    "uuid": "ebbf687b-d416-f50b-d9dd-2f1370bf7e2f"
+                }
+            ],
+            "severity": "warning",
+            "type": "lib_footprint_mismatch"
+        },
+        {
+            "description": "Footprint 'TestPoint_Pad' does not match copy in library 'gunnchos_production'",
+            "items": [
+                {
+                    "description": "Footprint TP3",
+                    "pos": {
+                        "x": 78.0,
+                        "y": 196.0
+                    },
+                    "uuid": "2b0a1386-91a1-cc55-3e4c-fc93f18ac97e"
+                }
+            ],
+            "severity": "warning",
+            "type": "lib_footprint_mismatch"
+        },
+        {
+            "description": "Footprint 'TestPoint_Pad' does not match copy in library 'gunnchos_production'",
+            "items": [
+                {
+                    "description": "Footprint TP4",
+                    "pos": {
+                        "x": 96.0,
+                        "y": 196.0
+                    },
+                    "uuid": "f9648672-8a35-bcaf-86c5-04c0964fc309"
+                }
+            ],
+            "severity": "warning",
+            "type": "lib_footprint_mismatch"
+        },
+        {
+            "description": "Footprint 'TestPoint_Pad' does not match copy in library 'gunnchos_production'",
+            "items": [
+                {
+                    "description": "Footprint TP5",
+                    "pos": {
+                        "x": 114.0,
+                        "y": 196.0
+                    },
+                    "uuid": "7d50dd30-bd1d-86f0-3b41-0bd7cb8a30be"
+                }
+            ],
+            "severity": "warning",
+            "type": "lib_footprint_mismatch"
+        },
+        {
+            "description": "Footprint 'TestPoint_Pad' does not match copy in library 'gunnchos_production'",
+            "items": [
+                {
+                    "description": "Footprint TP6",
+                    "pos": {
+                        "x": 132.0,
+                        "y": 196.0
+                    },
+                    "uuid": "84b76205-1c2b-5499-4fc5-fe9712cbbe3e"
+                }
+            ],
+            "severity": "warning",
+            "type": "lib_footprint_mismatch"
+        },
+        {
+            "description": "Silkscreen clipped by solder mask",
+            "items": [
+                {
+                    "description": "PCB text 'REV 0.6.0-cont-ix' on F.Silkscreen",
+                    "pos": {
+                        "x": 12.0,
+                        "y": 10.0
+                    },
+                    "uuid": "1624b602-c450-00fd-97e6-e81bef663303"
+                },
+                {
+                    "description": "NPTH pad of H1",
+                    "pos": {
+                        "x": 12.0,
+                        "y": 12.0
+                    },
+                    "uuid": "0f72f510-c41b-408d-a38d-591138a6b73a"
+                }
+            ],
+            "severity": "warning",
+            "type": "silk_over_copper"
+        }
+    ]
+}

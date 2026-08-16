@@ -1,0 +1,48 @@
+{
+  "schema": "gunnchos.hardware.vp_image_fit_remeasure.v1",
+  "stream": "STREAM-C-PKT-001",
+  "task": "C2",
+  "measured_at_utc": "2026-08-16T16:22:28Z",
+  "device_os_tip": "a1e11efcb502ce053d755a2539c26d252e216226",
+  "measured_against_main_tip": "a1e11efcb502ce053d755a2539c26d252e216226",
+  "branch_note": "device-os origin/main (not stub-realm)",
+  "verdict": "PASS_PRODUCTION_INTENT_DIGITAL_FIT",
+  "npi_status": "CLOSED",
+  "npi_recommended_status": "CLOSE",
+  "closure_gate_met": true,
+  "authenticity": {
+    "stub_like_rootfs_payloads": false,
+    "production_intent_digital_present": true,
+    "payload_class_slot_a": "production_intent_digital",
+    "realm_rootfs_artifacts_present": true,
+    "shared_boot_reference_present": true
+  },
+  "margins_gib": {
+    "slot_a": 4.97528237,
+    "slot_b": 4.97528237,
+    "recovery": 1.979218145
+  },
+  "sizes_summary_gib": {
+    "evt_rootfs_compressed": 0.005879017,
+    "evt_rootfs_uncompressed": 0.011701437,
+    "factory_rootfs_compressed": 0.004028673,
+    "production_def_rootfs_compressed": 0.005843321,
+    "production_def_rootfs_uncompressed": 0.011548556,
+    "recovery_composed": 0.020781855,
+    "recovery_margin": 1.979218145,
+    "recovery_rootfs_compressed": 0.003587433,
+    "shared_boot_combined": 0.013169073,
+    "slot_a_composed": 0.02471763,
+    "slot_a_margin": 4.97528237,
+    "slot_b_composed": 0.02471763,
+    "slot_b_margin": 4.97528237
+  },
+  "SHIPPING_IMAGE": false,
+  "PRODUCTION_RELEASE_CLAIMED": false,
+  "physical_flash": false,
+  "evidence": [
+    "artifacts/hw_pkt001/image_fit/IMAGE_FIT_MANIFEST.json",
+    "artifacts/hw_pkt001/image_fit/SHARED_BOOT_PIN.json",
+    "artifacts/hw002/image_fit/DEVICE_OS_IMAGE_FIT_MANIFEST.json"
+  ]
+}

@@ -1,3 +1,3 @@
-tp_id,signal
-TP1,3V3
-TP2,GND
+tp_id,signal,note
+TP1,3V3,Public digital harness TP; physical ICT fixture validation PHYSICAL_PENDING.
+TP2,GND,Public digital harness TP; physical ICT fixture validation PHYSICAL_PENDING.

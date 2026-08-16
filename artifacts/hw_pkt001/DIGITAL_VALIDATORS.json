@@ -1,0 +1,32 @@
+{
+  "schema": "gunnchos.hardware.hw_pkt001.digital_validators.v1",
+  "stream": "STREAM-C-PKT-001",
+  "ran_at_utc": "2026-08-16T16:22:46Z",
+  "results": [
+    {
+      "validator": "validate_bom.py",
+      "status": "PASS",
+      "rc": 0,
+      "present": true,
+      "stdout_tail": "PASS 4 BOM files\n",
+      "stderr_tail": ""
+    },
+    {
+      "validator": "validate_firmware_manifests.py",
+      "status": "PASS",
+      "rc": 0,
+      "present": true,
+      "stdout_tail": "PASS firmware manifest validation\n",
+      "stderr_tail": ""
+    },
+    {
+      "validator": "validate_power_budget.py",
+      "status": "PASS",
+      "rc": 0,
+      "present": true,
+      "stdout_tail": "PASS 4 power budget files\n",
+      "stderr_tail": ""
+    }
+  ],
+  "overall": "PASS"
+}
