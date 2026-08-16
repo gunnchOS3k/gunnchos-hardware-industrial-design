@@ -1,0 +1,29 @@
+{
+  "schema": "gunnchos.c_pkt_003.vendor_toolchain_external.v1",
+  "packet": "C-PKT-003",
+  "generated_at_utc": "2026-08-16T19:50:09Z",
+  "blocked_products": {
+    "student_14_5": {
+      "status": "VENDOR_TOOLCHAIN_EXTERNAL",
+      "reason": "COM-HPC/ME/CSME + ADLINK pin-accurate fanout require NDA vendor collateral; no invented nets",
+      "public_side_closed_digitally": true,
+      "STUDENT_FIRMWARE_DIGITAL_BUILD_PASS": false
+    },
+    "ds_xl_coder": {
+      "status": "VENDOR_TOOLCHAIN_EXTERNAL",
+      "reason": "COM-HPC + dual-eDP NDA; panel OEM external",
+      "public_side_closed_digitally": true,
+      "DSXL_FIRMWARE_DIGITAL_BUILD_PASS": false
+    },
+    "dock": {
+      "status": "VENDOR_TOOLCHAIN_EXTERNAL",
+      "reason": "JHL8440/JHL9040R ball maps NDA; TB4 SI binary",
+      "public_side_closed_digitally": true,
+      "DOCK_FIRMWARE_DIGITAL_BUILD_PASS": false
+    }
+  },
+  "earned": {
+    "RING_FIRMWARE_DIGITAL_BUILD_PASS": true,
+    "note": "Reaffirm prior Zephyr west digital build only; no physical PASS"
+  }
+}

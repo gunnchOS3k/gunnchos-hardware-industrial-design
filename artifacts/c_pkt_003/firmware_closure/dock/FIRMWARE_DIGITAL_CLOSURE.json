@@ -1,0 +1,9 @@
+{
+  "product": "dock",
+  "token": "DOCK_FIRMWARE_DIGITAL_BUILD_PASS",
+  "earned": false,
+  "status": "VENDOR_TOOLCHAIN_EXTERNAL",
+  "note": "NDA JHL ball maps; public docking contracts only",
+  "PHYSICAL": false,
+  "packet": "C-PKT-003"
+}

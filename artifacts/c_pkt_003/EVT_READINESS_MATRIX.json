@@ -1,0 +1,78 @@
+{
+  "schema": "gunnchos.c_pkt_003.evt_readiness_matrix.v1",
+  "packet": "C-PKT-003",
+  "generated_at_utc": "2026-08-16T19:50:09Z",
+  "base_sha": "0e11dea8e8745a551d616e3f6fb93832385096fd",
+  "devices": {
+    "student_14_5": {
+      "product": "student_14_5",
+      "EVT_DIGITAL_PACKET": true,
+      "digital_infra_ready": true,
+      "firmware_gap_class": "EXTERNAL_NDA",
+      "FIRMWARE_DIGITAL_BUILD_PASS": false,
+      "factory_hil_mock": true,
+      "EVT_PHYSICAL_PASS": false,
+      "FACTORY_PHYSICAL_PASS": false,
+      "nda_blocks_pin_accurate": true,
+      "readiness": "DIGITAL_READY_NDA_GATED"
+    },
+    "ds_xl_coder": {
+      "product": "ds_xl_coder",
+      "EVT_DIGITAL_PACKET": true,
+      "digital_infra_ready": true,
+      "firmware_gap_class": "EXTERNAL_NDA",
+      "FIRMWARE_DIGITAL_BUILD_PASS": false,
+      "factory_hil_mock": true,
+      "EVT_PHYSICAL_PASS": false,
+      "FACTORY_PHYSICAL_PASS": false,
+      "nda_blocks_pin_accurate": true,
+      "readiness": "DIGITAL_READY_NDA_GATED"
+    },
+    "handheld_hybrid": {
+      "product": "handheld_hybrid",
+      "EVT_DIGITAL_PACKET": true,
+      "digital_infra_ready": true,
+      "firmware_gap_class": "PHYSICAL_PENDING",
+      "FIRMWARE_DIGITAL_BUILD_PASS": false,
+      "factory_hil_mock": true,
+      "EVT_PHYSICAL_PASS": false,
+      "FACTORY_PHYSICAL_PASS": false,
+      "nda_blocks_pin_accurate": false,
+      "readiness": "DIGITAL_READY_PHYSICAL_PENDING"
+    },
+    "dock": {
+      "product": "dock",
+      "EVT_DIGITAL_PACKET": true,
+      "digital_infra_ready": true,
+      "firmware_gap_class": "EXTERNAL_NDA",
+      "FIRMWARE_DIGITAL_BUILD_PASS": false,
+      "factory_hil_mock": true,
+      "EVT_PHYSICAL_PASS": false,
+      "FACTORY_PHYSICAL_PASS": false,
+      "nda_blocks_pin_accurate": true,
+      "readiness": "DIGITAL_READY_NDA_GATED"
+    },
+    "edge_io_rings": {
+      "product": "edge_io_rings",
+      "EVT_DIGITAL_PACKET": true,
+      "digital_infra_ready": true,
+      "firmware_gap_class": "PHYSICAL_PENDING",
+      "FIRMWARE_DIGITAL_BUILD_PASS": true,
+      "factory_hil_mock": true,
+      "EVT_PHYSICAL_PASS": false,
+      "FACTORY_PHYSICAL_PASS": false,
+      "nda_blocks_pin_accurate": false,
+      "readiness": "DIGITAL_READY_PHYSICAL_PENDING"
+    }
+  },
+  "EVT_DIGITAL_EXECUTION_INFRA_READY": true,
+  "EVT_DIGITAL_EXECUTION_INFRA_READY_rationale": [
+    "Per-device EVT digital packets present",
+    "Factory/HIL mock interfaces present",
+    "Firmware gap matrix + runbook present",
+    "No physical EVT claimed"
+  ],
+  "EVT_PHYSICAL_PASS": false,
+  "FACTORY_PHYSICAL_PASS": false,
+  "SHIPPING_HARDWARE": false
+}

@@ -1,0 +1,9 @@
+{
+  "product": "ds_xl_coder",
+  "token": "DSXL_FIRMWARE_DIGITAL_BUILD_PASS",
+  "earned": false,
+  "status": "VENDOR_TOOLCHAIN_EXTERNAL",
+  "note": "NDA dual-eDP/COM wall; public harness only",
+  "PHYSICAL": false,
+  "packet": "C-PKT-003"
+}

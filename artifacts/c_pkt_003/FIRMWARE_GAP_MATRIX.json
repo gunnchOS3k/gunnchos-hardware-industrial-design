@@ -1,0 +1,142 @@
+{
+  "schema": "gunnchos.c_pkt_003.firmware_gap_matrix.v1",
+  "packet": "C-PKT-003",
+  "generated_at_utc": "2026-08-16T19:50:09Z",
+  "base_sha": "0e11dea8e8745a551d616e3f6fb93832385096fd",
+  "policy": {
+    "no_invented_nda_pin_maps": true,
+    "no_physical_factory_pass": true,
+    "CURSOR_NEVER_MERGES": true,
+    "prefer_fail_closed": true
+  },
+  "devices": {
+    "student_14_5": {
+      "product": "student_14_5",
+      "public_digital_present": true,
+      "firmware_manifest": "firmware/manifests/student_14_5_firmware_manifest.yaml",
+      "acpi_dt": true,
+      "qemu_profile": true,
+      "on_target_build": "VENDOR_TOOLCHAIN_EXTERNAL",
+      "digital_firmware_build_pass": false,
+      "digital_firmware_build_pass_token": "STUDENT_FIRMWARE_DIGITAL_BUILD_PASS",
+      "token_earned": false,
+      "gap_class": "EXTERNAL_NDA",
+      "gaps": [
+        "COM-HPC Mini 400-pin net-accurate map (PICMG/ADLINK NDA)",
+        "On-target UEFI/ME bring-up requires vendor BINARY_BLOB toolchain",
+        "No physical flash evidence"
+      ],
+      "non_nda_closure_this_packet": [
+        "Public ACPI/DT/manifest harness deepened",
+        "Factory/HIL mock interface digital contract",
+        "EVT digital packet + readiness row"
+      ],
+      "PHYSICAL": false,
+      "SHIPPING_HARDWARE": false
+    },
+    "ds_xl_coder": {
+      "product": "ds_xl_coder",
+      "public_digital_present": true,
+      "firmware_manifest": "firmware/manifests/ds_xl_coder_firmware_manifest.yaml",
+      "acpi_dt": true,
+      "qemu_profile": true,
+      "on_target_build": "VENDOR_TOOLCHAIN_EXTERNAL",
+      "digital_firmware_build_pass": false,
+      "digital_firmware_build_pass_token": "DSXL_FIRMWARE_DIGITAL_BUILD_PASS",
+      "token_earned": false,
+      "gap_class": "EXTERNAL_NDA",
+      "gaps": [
+        "COM-HPC Mini 400-pin + dual-eDP pin map NDA",
+        "Panel/hinge OEM MPN external",
+        "On-target dual-display bring-up BINARY_BLOB"
+      ],
+      "non_nda_closure_this_packet": [
+        "Public ACPI/DT/manifest harness",
+        "Factory/HIL mock interface",
+        "EVT digital packet + readiness row"
+      ],
+      "PHYSICAL": false,
+      "SHIPPING_HARDWARE": false
+    },
+    "handheld_hybrid": {
+      "product": "handheld_hybrid",
+      "public_digital_present": true,
+      "firmware_manifest": "firmware/manifests/handheld_hybrid_firmware_manifest.yaml",
+      "acpi_dt": true,
+      "qemu_profile": true,
+      "on_target_build": "DIGITAL_PACKAGE_PRESENT_PHYSICAL_FLASH_PENDING",
+      "digital_firmware_build_pass": false,
+      "digital_firmware_build_pass_token": "HANDHELD_FIRMWARE_DIGITAL_BUILD_PASS",
+      "token_earned": false,
+      "token_withhold_reason": "No real on-target image build executed this packet; prior HW digital release package is not firmware digital BUILD PASS",
+      "gap_class": "PHYSICAL_PENDING",
+      "gaps": [
+        "Physical eMMC flash proof",
+        "On-device A/B update rehearsal"
+      ],
+      "non_nda_closure_this_packet": [
+        "Descriptors + factory mock + EVT digital packet"
+      ],
+      "PHYSICAL": false,
+      "SHIPPING_HARDWARE": false
+    },
+    "dock": {
+      "product": "dock",
+      "public_digital_present": true,
+      "firmware_manifest": "firmware/manifests/dock_firmware_manifest.yaml",
+      "acpi_dt": true,
+      "qemu_profile": true,
+      "on_target_build": "VENDOR_TOOLCHAIN_EXTERNAL",
+      "digital_firmware_build_pass": false,
+      "digital_firmware_build_pass_token": "DOCK_FIRMWARE_DIGITAL_BUILD_PASS",
+      "token_earned": false,
+      "gap_class": "EXTERNAL_NDA",
+      "gaps": [
+        "Intel JHL8440 / JHL9040R ball maps NDA",
+        "TB4 SI BINARY_BLOB",
+        "On-target PD/USB4 bring-up"
+      ],
+      "non_nda_closure_this_packet": [
+        "Public docking interface contracts",
+        "Factory/HIL mock",
+        "EVT digital packet"
+      ],
+      "PHYSICAL": false,
+      "SHIPPING_HARDWARE": false
+    },
+    "edge_io_rings": {
+      "product": "edge_io_rings",
+      "public_digital_present": true,
+      "firmware_manifest": "firmware/manifests/edge_io_rings_firmware_manifest.yaml",
+      "zephyr_west": "firmware/edge_io_rings/zephyr_west/",
+      "on_target_build": "ZEPHYR_WEST_DIGITAL_PRIOR",
+      "digital_firmware_build_pass": true,
+      "digital_firmware_build_pass_token": "RING_FIRMWARE_DIGITAL_BUILD_PASS",
+      "token_earned": true,
+      "token_evidence": "artifacts/hw_fw_rc_001/zephyr_west/RING_ZEPHYR_WEST_BUILD_PASS.md (prior digital earn; reaffirmed)",
+      "gap_class": "PHYSICAL_PENDING",
+      "gaps": [
+        "Physical boot / multimodal tracking",
+        "Factory ICT probe on real PCBA"
+      ],
+      "non_nda_closure_this_packet": [
+        "EVT digital packet + HIL mock"
+      ],
+      "PHYSICAL": false,
+      "SHIPPING_HARDWARE": false
+    }
+  },
+  "summary": {
+    "devices_total": 5,
+    "FIRMWARE_DIGITAL_BUILD_PASS_earned": [
+      "edge_io_rings"
+    ],
+    "VENDOR_TOOLCHAIN_EXTERNAL": [
+      "student_14_5",
+      "ds_xl_coder",
+      "dock"
+    ],
+    "PHYSICAL_FACTORY_PASS": false,
+    "HW_FIRMWARE_DIGITAL_PACKAGE_COMPLETE": false
+  }
+}
