@@ -1,0 +1,47 @@
+{
+  "schema": "gunnchos.c_pkt_003.packet_summary.v1",
+  "packet": "C-PKT-003",
+  "title": "EVT digital readiness + firmware gap closure",
+  "generated_at_utc": "2026-08-16T19:50:09Z",
+  "base_sha": "0e11dea8e8745a551d616e3f6fb93832385096fd",
+  "C_HW1_FIRMWARE_GAP_MATRIX": true,
+  "C_HW2_firmware_closure": {
+    "VENDOR_TOOLCHAIN_EXTERNAL": [
+      "student_14_5",
+      "ds_xl_coder",
+      "dock"
+    ],
+    "RING_FIRMWARE_DIGITAL_BUILD_PASS": true,
+    "STUDENT_FIRMWARE_DIGITAL_BUILD_PASS": false,
+    "DSXL_FIRMWARE_DIGITAL_BUILD_PASS": false,
+    "DOCK_FIRMWARE_DIGITAL_BUILD_PASS": false,
+    "HANDHELD_FIRMWARE_DIGITAL_BUILD_PASS": false
+  },
+  "C_HW3_EVT": {
+    "EVT_READINESS_MATRIX": true,
+    "EVT_EXECUTION_RUNBOOK": true,
+    "per_device_packets": [
+      "student_14_5",
+      "ds_xl_coder",
+      "handheld_hybrid",
+      "dock",
+      "edge_io_rings"
+    ]
+  },
+  "C_HW4_factory_hil_mock": true,
+  "tokens": {
+    "EVT_DIGITAL_EXECUTION_INFRA_READY": true,
+    "EVT_PHYSICAL_PASS": false,
+    "FACTORY_PHYSICAL_PASS": false,
+    "HW_FIRMWARE_DIGITAL_PACKAGE_COMPLETE": false,
+    "SHIPPING_HARDWARE": false,
+    "RF_CERTIFIED": false,
+    "EMC_CERTIFIED": false
+  },
+  "CURSOR_NEVER_MERGES": true,
+  "OPEN": [
+    "Student/DS-XL/Dock NDA pin maps (Edmund EXTERNAL)",
+    "On-target firmware builds for Student/DS-XL/Dock/Handheld",
+    "Physical EVT / factory line"
+  ]
+}

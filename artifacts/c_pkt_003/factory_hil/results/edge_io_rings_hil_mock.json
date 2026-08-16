@@ -1,0 +1,29 @@
+{
+  "schema": "gunnchos.c_pkt_003.hil_mock_result.v1",
+  "product": "edge_io_rings",
+  "generated_at_utc": "2026-08-16T19:50:09Z",
+  "mode": "MOCK_DIGITAL_ONLY",
+  "checks": [
+    {
+      "check": "power_rail_probe",
+      "result": "MOCK_PASS",
+      "physical": false,
+      "note": "Synthetic digital mock \u2014 not factory line evidence"
+    },
+    {
+      "check": "boot_console",
+      "result": "MOCK_PASS",
+      "physical": false,
+      "note": "Synthetic digital mock \u2014 not factory line evidence"
+    },
+    {
+      "check": "ring_imu_sample",
+      "result": "MOCK_PASS",
+      "physical": false,
+      "note": "Synthetic digital mock \u2014 not factory line evidence"
+    }
+  ],
+  "FACTORY_PHYSICAL_PASS": false,
+  "EVT_PHYSICAL_PASS": false,
+  "overall": "DIGITAL_MOCK_OK"
+}

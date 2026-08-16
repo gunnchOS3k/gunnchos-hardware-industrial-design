@@ -1,0 +1,26 @@
+{
+  "schema": "gunnchos.c_pkt_003.evt_digital_packet.v1",
+  "product": "ds_xl_coder",
+  "packet": "C-PKT-003",
+  "EVT_DIGITAL_PACKET": true,
+  "EVT_PHYSICAL_PASS": false,
+  "digital_executable": [
+    "KiCad ERC/DRC tip evidence (prior)",
+    "Firmware manifest + interface contracts",
+    "Factory test limits schema (mock)",
+    "HIL mock runner digital"
+  ],
+  "PHYSICAL_PENDING": [
+    "Fab/assemble/flash",
+    "ICT fixture bring-up",
+    "On-target EVT measurements"
+  ],
+  "EXTERNAL_NDA": [
+    "COM-HPC / JHL ball maps"
+  ],
+  "references": {
+    "prior_evt_digital": "artifacts/hw_pkt001/evt/EVT_DIGITAL_PACKET.md",
+    "npi_evt0": "npi/evt0_measurement_readiness/",
+    "factory_test": "manufacturing/ds_xl_coder/factory_test/"
+  }
+}

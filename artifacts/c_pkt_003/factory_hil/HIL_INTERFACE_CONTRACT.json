@@ -1,0 +1,36 @@
+{
+  "schema": "gunnchos.c_pkt_003.hil_interface.v1",
+  "mode": "MOCK_DIGITAL_ONLY",
+  "PHYSICAL_FACTORY_PASS": false,
+  "endpoints": {
+    "power_rail_probe": {
+      "mock": true,
+      "unit": "V"
+    },
+    "boot_console": {
+      "mock": true,
+      "expects": [
+        "UEFI",
+        "Linux",
+        "Zephyr"
+      ]
+    },
+    "usb_enumerate": {
+      "mock": true
+    },
+    "display_hotplug": {
+      "mock": true,
+      "products": [
+        "dock",
+        "ds_xl_coder"
+      ]
+    },
+    "ring_imu_sample": {
+      "mock": true,
+      "products": [
+        "edge_io_rings"
+      ]
+    }
+  },
+  "honesty": "Mocks return synthetic PASS/FAIL for digital infra soak; never claim factory line PASS"
+}

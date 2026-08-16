@@ -1,0 +1,9 @@
+{
+  "product": "handheld_hybrid",
+  "token": "HANDHELD_FIRMWARE_DIGITAL_BUILD_PASS",
+  "earned": false,
+  "status": "DIGITAL_PENDING_ON_TARGET",
+  "note": "Digital package present; no on-target build this packet",
+  "PHYSICAL": false,
+  "packet": "C-PKT-003"
+}

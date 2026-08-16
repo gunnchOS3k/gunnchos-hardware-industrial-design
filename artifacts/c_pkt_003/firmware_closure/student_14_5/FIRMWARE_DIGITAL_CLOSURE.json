@@ -1,0 +1,9 @@
+{
+  "product": "student_14_5",
+  "token": "STUDENT_FIRMWARE_DIGITAL_BUILD_PASS",
+  "earned": false,
+  "status": "VENDOR_TOOLCHAIN_EXTERNAL",
+  "note": "NDA COM-HPC wall; public harness only",
+  "PHYSICAL": false,
+  "packet": "C-PKT-003"
+}

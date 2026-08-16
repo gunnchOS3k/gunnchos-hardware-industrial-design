@@ -1,0 +1,9 @@
+{
+  "product": "edge_io_rings",
+  "token": "RING_FIRMWARE_DIGITAL_BUILD_PASS",
+  "earned": true,
+  "status": "EARNED",
+  "note": "Prior Zephyr west digital build reaffirmed",
+  "PHYSICAL": false,
+  "packet": "C-PKT-003"
+}
