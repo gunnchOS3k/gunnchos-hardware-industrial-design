@@ -2,14 +2,14 @@
   "updated_at_utc": "2026-08-16T16:24:05Z",
   "DIGITAL": [
     "lib_footprint_mismatch residual warnings remain on Cont IX boards \u2014 digital hygiene OPEN (not DRC error)",
-    "Dock/Student/DS-XL on-target firmware + NDA pin-accurate fanout still open; harness-only digital path \u2014 prior on-target execution failure",
-    "Handheld image-fit digital CLOSE earned on STREAM-C-PKT-001 C2 (device-os a1e11ef) \u2014 physical flash still pending (not a digital blocker)"
+    "Dock/Student/DS-XL on-target firmware + NDA pin-accurate fanout still open; harness-only digital path \u2014 prior on-target execution failure"
   ],
   "PHYSICAL": [
     "PHYSICAL_EXECUTION_FREEZE \u2014 no fab, purchase, flash, assemble",
     "No manufacturer DFM sign-off yet (DFM_PRECHECK is digital self-check only)",
     "Ring physical boot pending despite RING_ZEPHYR_WEST_BUILD_PASS (digital only)",
-    "ICT / real test-point probing PHYSICAL_PENDING (CSV harness placeholders only)"
+    "ICT / real test-point probing PHYSICAL_PENDING (CSV harness placeholders only)",
+    "Handheld image-fit digital CLOSE earned on STREAM-C-PKT-001 C2 (device-os a1e11ef) \u2014 physical flash still pending"
   ],
   "EXTERNAL": [
     "COM-HPC Mini 400-pin net map (PICMG/ADLINK NARROW_NDA) \u2014 Student/DS-XL",

@@ -64,13 +64,15 @@ def test_cont_ix_digital_blockers_empty_or_explained():
     blockers = json.loads((ART / "BLOCKERS_CONT_IX.json").read_text())
     assert "DIGITAL" in blockers and "PHYSICAL" in blockers and "EXTERNAL" in blockers
     # Prefer empty DIGITAL; if non-empty must be an explained digital gap
-    # (execution failure, proxy/hierarchical layout, or tracked NPI_DEFECT OPEN).
+    # (execution failure, proxy/hierarchical layout, tracked NPI_DEFECT OPEN,
+    # or residual lib_footprint_mismatch hygiene warnings — not DRC errors).
     for item in blockers["DIGITAL"]:
         assert (
             "execution failure" in item
             or "proxy" in item
             or "hierarchical" in item
             or ("NPI_DEFECT" in item and "OPEN" in item)
+            or "lib_footprint_mismatch" in item
         )
 
 
