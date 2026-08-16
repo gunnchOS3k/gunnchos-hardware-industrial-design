@@ -1,11 +1,15 @@
-# handheld_hybrid — firmware package pointer (Cont VII §50)
+# handheld_hybrid — firmware package index (STREAM-C-PKT-001)
 
-Firmware lives primarily in sibling repos (`gunnchos-device-os`, `edge-io-measurement-node`).
-This hardware repo holds descriptors / OS compatibility evidence.
+| Item | Status | Honesty |
+|---|---|---|
+| Source | EXTERNAL_REPO | `gunnchos-device-os` |
+| Binary | NOT_IN_HARDWARE_REPO | freeze |
+| Image-fit digital CLOSE | EARNED C2 | tip `a1e11efcb502ce053d755a2539c26d252e216226` — SHIPPING_IMAGE=false |
+| Physical flash proof | PHYSICAL_PENDING | Not claimed |
+| Factory test mode | DIGITAL_STUB | manufacturing factory_test |
+| Update / programming | Documented | firmware_os_interface |
 
-| Item | Status |
-|---|---|
-| Source | EXTERNAL_REPO |
-| Binary | NOT_IN_HARDWARE_REPO (freeze) |
-| Update / programming | Documented in firmware_os_interface |
-| Test mode | factory_test stubs deepened Cont VII |
+### Notes
+
+- Consume `artifacts/hw_pkt001/image_fit/IMAGE_FIT_MANIFEST.json` on remeasure.
+- Do not claim PRODUCTION_RELEASE or shipping image.

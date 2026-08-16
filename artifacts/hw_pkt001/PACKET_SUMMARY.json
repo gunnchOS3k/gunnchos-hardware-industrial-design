@@ -1,0 +1,141 @@
+{
+  "schema": "gunnchos.hw_pkt001.packet_summary.v1",
+  "stream": "STREAM-C-PKT-001",
+  "tasks": [
+    "C1_digital_exhaustion",
+    "C2_image_fit_remeasure"
+  ],
+  "generated_at_utc": "2026-08-16T16:24:05Z",
+  "baseline_branch": "stream/hw-digital-exhaust-pkt001",
+  "baseline_parent_tip": "08b4d227241852c1b85fa2e0ba63138501f7ff67",
+  "device_os_tip": "a1e11efcb502ce053d755a2539c26d252e216226",
+  "HW_FIRMWARE_DIGITAL_PACKAGE_COMPLETE": false,
+  "SoA": false,
+  "STANDARDIZED_6G": false,
+  "COMPLIANT": false,
+  "PHYSICAL": false,
+  "physical_pass": false,
+  "SHIPPING_IMAGE": false,
+  "PRODUCTION_RELEASE_CLAIMED": false,
+  "closes": [
+    "NPI_DEFECT-HANDHELD-IMAGE-SLOT-FIT-001 CLOSED digitally (C2 remeasure; margin>0; non-stub production-intent)",
+    "KiCad ERC/DRC errors=0 on handheld_hybrid, edge_io_rings, dock, student_14_5, ds_xl_coder",
+    "validate_bom / validate_firmware_manifests / validate_power_budget PASS"
+  ],
+  "remaining_OPEN": [
+    "lib_footprint_mismatch residual warnings (digital hygiene)",
+    "EXTERNAL_NDA: COM-HPC Mini 400-pin / dual eDP / JHL8440|JHL9040R ball maps",
+    "PHYSICAL: freeze \u2014 fab/flash/assemble; ring physical boot; ICT probing",
+    "On-target Student/DS-XL/Dock firmware (PHYSICAL + BINARY_BLOB + NDA)"
+  ],
+  "tokens": {
+    "HW_FIRMWARE_DIGITAL_PACKAGE_COMPLETE": false,
+    "SHIPPING_IMAGE": false,
+    "PRODUCTION_RELEASE_CLAIMED": false,
+    "HANDHELD_IMAGE_FIT_DIGITAL_CLOSE": true,
+    "RING_ZEPHYR_WEST_BUILD_PASS": true,
+    "PHYSICAL_PASS": false
+  },
+  "npi": {
+    "NPI_DEFECT-HANDHELD-IMAGE-SLOT-FIT-001": "CLOSED",
+    "NPI_DEFECT-HANDHELD-EDA-DANGLING-SILK-001": "CLOSED"
+  },
+  "image_fit": {
+    "schema": "gunnchos.hardware.vp_image_fit_remeasure.v1",
+    "stream": "STREAM-C-PKT-001",
+    "task": "C2",
+    "measured_at_utc": "2026-08-16T16:22:28Z",
+    "device_os_tip": "a1e11efcb502ce053d755a2539c26d252e216226",
+    "measured_against_main_tip": "a1e11efcb502ce053d755a2539c26d252e216226",
+    "branch_note": "device-os origin/main (not stub-realm)",
+    "verdict": "PASS_PRODUCTION_INTENT_DIGITAL_FIT",
+    "npi_status": "CLOSED",
+    "npi_recommended_status": "CLOSE",
+    "closure_gate_met": true,
+    "authenticity": {
+      "stub_like_rootfs_payloads": false,
+      "production_intent_digital_present": true,
+      "payload_class_slot_a": "production_intent_digital",
+      "realm_rootfs_artifacts_present": true,
+      "shared_boot_reference_present": true
+    },
+    "margins_gib": {
+      "slot_a": 4.97528237,
+      "slot_b": 4.97528237,
+      "recovery": 1.979218145
+    },
+    "sizes_summary_gib": {
+      "evt_rootfs_compressed": 0.005879017,
+      "evt_rootfs_uncompressed": 0.011701437,
+      "factory_rootfs_compressed": 0.004028673,
+      "production_def_rootfs_compressed": 0.005843321,
+      "production_def_rootfs_uncompressed": 0.011548556,
+      "recovery_composed": 0.020781855,
+      "recovery_margin": 1.979218145,
+      "recovery_rootfs_compressed": 0.003587433,
+      "shared_boot_combined": 0.013169073,
+      "slot_a_composed": 0.02471763,
+      "slot_a_margin": 4.97528237,
+      "slot_b_composed": 0.02471763,
+      "slot_b_margin": 4.97528237
+    },
+    "SHIPPING_IMAGE": false,
+    "PRODUCTION_RELEASE_CLAIMED": false,
+    "physical_flash": false,
+    "evidence": [
+      "artifacts/hw_pkt001/image_fit/IMAGE_FIT_MANIFEST.json",
+      "artifacts/hw_pkt001/image_fit/SHARED_BOOT_PIN.json",
+      "artifacts/hw002/image_fit/DEVICE_OS_IMAGE_FIT_MANIFEST.json"
+    ]
+  },
+  "kicad_cli": [
+    {
+      "product": "handheld_hybrid",
+      "status": "RAN",
+      "erc_errors": 0,
+      "erc_warnings": 461,
+      "drc_errors": 0,
+      "drc_warnings": 50
+    },
+    {
+      "product": "edge_io_rings",
+      "status": "RAN",
+      "erc_errors": 0,
+      "erc_warnings": 27,
+      "drc_errors": 0,
+      "drc_warnings": 22
+    },
+    {
+      "product": "dock",
+      "status": "RAN",
+      "erc_errors": 0,
+      "erc_warnings": 19,
+      "drc_errors": 0,
+      "drc_warnings": 39
+    },
+    {
+      "product": "student_14_5",
+      "status": "RAN",
+      "erc_errors": 0,
+      "erc_warnings": 40,
+      "drc_errors": 0,
+      "drc_warnings": 50
+    },
+    {
+      "product": "ds_xl_coder",
+      "status": "RAN",
+      "erc_errors": 0,
+      "erc_warnings": 45,
+      "drc_errors": 0,
+      "drc_warnings": 51
+    }
+  ],
+  "digital_validators": "PASS",
+  "evidence_roots": [
+    "artifacts/hw_pkt001/image_fit/",
+    "artifacts/hw_pkt001/kicad_cli/",
+    "artifacts/hw_pkt001/evt/",
+    "artifacts/hw_pkt001/DIGITAL_VALIDATORS.json",
+    "artifacts/hw_pkt001/VP_IMAGE_FIT_REMEASURE.json"
+  ]
+}

@@ -1,11 +1,13 @@
-# edge_io_rings — firmware package pointer (Cont VII §50)
+# edge_io_rings — firmware package index (STREAM-C-PKT-001)
 
-Firmware lives primarily in sibling repos (`gunnchos-device-os`, `edge-io-measurement-node`).
-This hardware repo holds descriptors / OS compatibility evidence.
+| Item | Status | Honesty |
+|---|---|---|
+| Zephyr west digital build | EARNED (HW-002) | `artifacts/hw002/zephyr_west/` — soft-skip forbidden |
+| Binary in manufacturing package | NOT_SHIPPING_IMAGE | digital artifact only |
+| Physical flash / boot | PHYSICAL_PENDING | Not claimed |
+| Full fusion drivers | EXTERNAL_REPO | `edge-io-measurement-node` |
+| Factory test mode | DIGITAL_STUB | `manufacturing/edge_io_rings/factory_test/` |
 
-| Item | Status |
-|---|---|
-| Source | EXTERNAL_REPO |
-| Binary | NOT_IN_HARDWARE_REPO (freeze) |
-| Update / programming | Documented in firmware_os_interface |
-| Test mode | factory_test stubs deepened Cont VII |
+### Public harness notes
+
+- West build PASS is digital only; multimodal tracking / ring physical boot remain open.

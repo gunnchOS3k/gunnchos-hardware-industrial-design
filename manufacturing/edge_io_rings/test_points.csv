@@ -1,0 +1,4 @@
+tp_id,signal,note
+TP1,3V3,"PLACEHOLDER — public harness nets only; full ICT map PHYSICAL_PENDING / EVT. BLOCKED_NOTE: no invented NDA pin map."
+TP2,GND,"PLACEHOLDER — public harness nets only; full ICT map PHYSICAL_PENDING / EVT. BLOCKED_NOTE: no invented NDA pin map."
+TP_PLACEHOLDER_BLOCKED,SEE_NOTE,"PLACEHOLDER — public harness nets only; full ICT map PHYSICAL_PENDING / EVT. BLOCKED_NOTE: no invented NDA pin map."

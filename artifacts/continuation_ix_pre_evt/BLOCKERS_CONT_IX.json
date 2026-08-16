@@ -1,14 +1,15 @@
 {
-  "updated_at_utc": "2026-08-12T21:05:00Z",
+  "updated_at_utc": "2026-08-16T16:24:05Z",
   "DIGITAL": [
-    "NPI_DEFECT-HANDHELD-IMAGE-SLOT-FIT-001 OPEN \u2014 production A/B image fit unproven (HW-002 remeasure); digital capacity model execution failure pending measured production slot images",
-    "lib_footprint_mismatch residual warnings remain on Cont IX boards \u2014 digital exhaustion execution failure (footprint filter/courtyard hygiene)",
-    "Dock/Student/DS-XL on-target firmware + NDA pin-accurate fanout still open; harness-only digital path \u2014 prior on-target execution failure"
+    "lib_footprint_mismatch residual warnings remain on Cont IX boards \u2014 digital hygiene OPEN (not DRC error)",
+    "Dock/Student/DS-XL on-target firmware + NDA pin-accurate fanout still open; harness-only digital path \u2014 prior on-target execution failure",
+    "Handheld image-fit digital CLOSE earned on STREAM-C-PKT-001 C2 (device-os a1e11ef) \u2014 physical flash still pending (not a digital blocker)"
   ],
   "PHYSICAL": [
     "PHYSICAL_EXECUTION_FREEZE \u2014 no fab, purchase, flash, assemble",
     "No manufacturer DFM sign-off yet (DFM_PRECHECK is digital self-check only)",
-    "Ring physical boot pending despite RING_ZEPHYR_WEST_BUILD_PASS (digital only)"
+    "Ring physical boot pending despite RING_ZEPHYR_WEST_BUILD_PASS (digital only)",
+    "ICT / real test-point probing PHYSICAL_PENDING (CSV harness placeholders only)"
   ],
   "EXTERNAL": [
     "COM-HPC Mini 400-pin net map (PICMG/ADLINK NARROW_NDA) \u2014 Student/DS-XL",
@@ -20,7 +21,7 @@
   "hw002_closures": {
     "NPI_DEFECT-HANDHELD-EDA-DANGLING-SILK-001": "CLOSED \u2014 track_dangling=0 silk_over_copper=0 on handheld_hybrid (digital DRC only)",
     "RING_ZEPHYR_WEST_BUILD_PASS": "EARNED \u2014 real west build in firmware/edge_io_rings/zephyr_west (soft-skip forbidden); physical boot NOT claimed",
-    "NPI_DEFECT-HANDHELD-IMAGE-SLOT-FIT-001": "OPEN \u2014 prefer FAIL; no production slot images",
+    "NPI_DEFECT-HANDHELD-IMAGE-SLOT-FIT-001": "CLOSED \u2014 STREAM-C-PKT-001 C2 remeasure tip a1e11ef; digital production-intent fit; SHIPPING_IMAGE=false",
     "HW_FIRMWARE_DIGITAL_PACKAGE_COMPLETE": false
   },
   "per_product": {
@@ -229,5 +230,17 @@
       }
     }
   },
-  "stream_c_honesty_note": "HW-002 closed handheld dangling/silk DRC + earned Ring Zephyr west PASS. DIGITAL remains non-empty; HW_FIRMWARE_DIGITAL_PACKAGE_COMPLETE=false."
+  "stream_c_honesty_note": "HW-002 closed handheld dangling/silk DRC + earned Ring Zephyr west PASS. DIGITAL remains non-empty; HW_FIRMWARE_DIGITAL_PACKAGE_COMPLETE=false.",
+  "stream_c_pkt001": {
+    "note": "STREAM-C-PKT-001 C1+C2: kicad-cli ERC/DRC re-run (0 errors all 5 products); validators PASS; image-fit remeasure on device-os a1e11ef CLOSE digitally with margin>0 non-stub; SHIPPING_IMAGE=false; HW_FIRMWARE_DIGITAL_PACKAGE_COMPLETE remains false (NDA + on-target gaps).",
+    "image_fit_tip": "a1e11efcb502ce053d755a2539c26d252e216226",
+    "image_fit_npi": "CLOSED",
+    "kicad_cli": "artifacts/hw_pkt001/kicad_cli/CLI_RESULTS.json"
+  },
+  "hw_pkt001_closures": {
+    "NPI_DEFECT-HANDHELD-IMAGE-SLOT-FIT-001": "CLOSED_DIGITAL",
+    "kicad_erc_drc_errors": "0_across_five_products",
+    "digital_validators": "PASS",
+    "HW_FIRMWARE_DIGITAL_PACKAGE_COMPLETE": false
+  }
 }

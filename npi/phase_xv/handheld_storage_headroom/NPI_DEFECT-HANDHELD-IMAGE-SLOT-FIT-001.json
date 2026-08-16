@@ -4,16 +4,17 @@
   "severity": "S1",
   "status": "CLOSED",
   "title": "Handheld production A/B slot images unproven against 32GB eMMC + microSD Outcome A budgets",
-  "summary": "CLOSED digitally on device-os DRAFT #107 tip f5da4ed: production-intent Alpine+gunnchOS userspace A/B (production_shipping_image_definition ~6274218 B compressed) and recovery (~3851977 B) compose under Outcome A 5.0/5.0/2.0 GiB with margins ~4.975/4.975/1.979 GiB. SHIPPING_IMAGE=false; PRODUCTION_RELEASE_CLAIMED=false; no physical flash. Outcome A + microSD retained; no invented eMMC SKU.",
+  "summary": "CLOSED digitally on device-os origin/main tip a1e11efcb502ce053d755a2539c26d252e216226: production-intent Alpine+gunnchOS userspace A/B (production_def ~0.005843321 GiB compressed) and recovery compose under Outcome A with margins slot_a=4.975 slot_b=4.975 recovery=1.979 GiB. SHIPPING_IMAGE=false; PRODUCTION_RELEASE_CLAIMED=false; no physical flash. Outcome A + microSD retained; no invented eMMC SKU. stub_like_rootfs_payloads=False.",
   "related": {
     "prior_headroom_defect": "NPI_DEFECT-HANDHELD-STORAGE-HEADROOM-001",
     "prior_status": "CLOSED_OUTCOME_A_PENDING_V1",
     "remodel": "npi/phase_xv/handheld_storage_headroom/HANDHELD_STORAGE_IMAGE_FIT_REMODEL.json",
+    "hw_pkt001_evidence": "artifacts/hw_pkt001/image_fit/",
     "hw002_evidence": "artifacts/hw002/image_fit/",
     "device_os_image_fit_manifest": "gunnchos-device-os/artifacts/handheld_image_fit/IMAGE_FIT_MANIFEST.json",
-    "device_os_image_fit_pr": "https://github.com/gunnchOS3k/gunnchos-device-os/pull/107",
-    "device_os_image_fit_tip": "f5da4ed64eeeccbf205980a92901b07f2c43ae22",
-    "closure_scope": "digital_production_intent_slot_fit_only"
+    "device_os_image_fit_tip": "a1e11efcb502ce053d755a2539c26d252e216226",
+    "closure_scope": "digital_production_intent_slot_fit_only",
+    "stream": "STREAM-C-PKT-001"
   },
   "verdict": "PASS_PRODUCTION_INTENT_DIGITAL_FIT",
   "blocks_purchase": false,
@@ -27,5 +28,7 @@
   ],
   "evidence_class": "E4_DIGITAL",
   "v1_certification": "NOT_SELF_CERTIFIED",
-  "hw002_note": "Digital CLOSE only. Not shipping image; not physical flash proof."
+  "hw_pkt001_note": "Digital CLOSE only from STREAM-C-PKT-001 C2 remeasure. Not shipping image; not physical flash proof.",
+  "SHIPPING_IMAGE": false,
+  "PRODUCTION_RELEASE_CLAIMED": false
 }
