@@ -5,3 +5,5 @@ Firmware/OS interface requirements linked to the `firmware/` implementation harn
 Implemented in emulation/host harness. Physical-board validation remains pending.
 
 See [FIRMWARE_OS_INTERFACE_STATUS.md](FIRMWARE_OS_INTERFACE_STATUS.md) and [../firmware/README.md](../firmware/README.md).
+
+Interface YAML ↔ OS map: [../os_compatibility/OS_HARDWARE_INTERFACE_TRACEABILITY.md](../os_compatibility/OS_HARDWARE_INTERFACE_TRACEABILITY.md).

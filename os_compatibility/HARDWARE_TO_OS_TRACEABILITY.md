@@ -1,5 +1,7 @@
 # Hardware to OS Traceability
 
+Interface-level firmware/electrical/BOM map: [OS_HARDWARE_INTERFACE_TRACEABILITY.md](OS_HARDWARE_INTERFACE_TRACEABILITY.md).
+
 Cross-repo traceability from hardware artifacts to OS compatibility layer.
 
 | Hardware artifact | OS repo artifact | Device class impact | Compatibility implication | Evidence status | Blocking before release? |
