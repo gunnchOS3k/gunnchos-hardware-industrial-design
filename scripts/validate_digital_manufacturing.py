@@ -15,6 +15,7 @@ ROOT = Path(__file__).resolve().parents[1]
 
 REQUIRED = [
     "DIGITAL_MANUFACTURING_READINESS.md",
+    "DIGITAL_TO_PHYSICAL_HANDOFF.md",
     "docs/packets/PHYSICAL_EVT_BRINGUP_PACKET.md",
     "docs/packets/MANUFACTURER_RFQ_SEND_PACKET.md",
     "os_compatibility/OS_HARDWARE_INTERFACE_TRACEABILITY.md",
@@ -41,6 +42,14 @@ REQUIRED_PHRASES = {
         "DIGITAL_FABRICATION_PASS",
         "UNRES-COM-HPC-400PIN",
     ],
+    "DIGITAL_TO_PHYSICAL_HANDOFF.md": [
+        "PHYSICAL_PENDING",
+        "Student 14.5",
+        "Handheld Hybrid",
+        "DS-XL Coder",
+        "Edge I/O Rings",
+        "Do not invent",
+    ],
     "docs/packets/PHYSICAL_EVT_BRINGUP_PACKET.md": [
         "PHYSICAL_PENDING",
         "Do **not** copy YAML",
@@ -63,6 +72,7 @@ FORBIDDEN_CLAIM_PATTERNS = [
 
 CLAIM_DOCS = [
     "DIGITAL_MANUFACTURING_READINESS.md",
+    "DIGITAL_TO_PHYSICAL_HANDOFF.md",
     "docs/packets/PHYSICAL_EVT_BRINGUP_PACKET.md",
     "docs/packets/MANUFACTURER_RFQ_SEND_PACKET.md",
     "os_compatibility/OS_HARDWARE_INTERFACE_TRACEABILITY.md",
