@@ -1,0 +1,14 @@
+{
+  "schema": "gunnchos.digital_release.firmware_handoff.v1",
+  "product": "handheld_hybrid",
+  "generated_at_utc": "2026-08-18T18:58:38Z",
+  "manifest": "firmware/manifests/handheld_hybrid_firmware_manifest.yaml",
+  "interfaces_dir": "firmware/interfaces/",
+  "claim_boundary": "Harness/ACPI/DT/west digital path only. Not a signed production image. Not board boot.",
+  "SHIPPING_IMAGE": false,
+  "on_target_flash": "PHYSICAL_PENDING",
+  "acpi": "firmware/descriptors/acpi/handheld_hybrid_dsdt.dsl",
+  "devicetree": "firmware/descriptors/devicetree/handheld_hybrid.dts",
+  "storage_path": "device_designs/handheld_hybrid/digital_release/STORAGE_PATH.json",
+  "icd": "device_designs/handheld_hybrid/docs/som_carrier_icd.md"
+}

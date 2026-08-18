@@ -1,28 +1,32 @@
 {
+  "schema": "gunnchos.digital_release.index.v1",
   "product": "ds_xl_coder",
+  "title": "DS-XL Coder",
+  "role": "local create/deploy",
+  "role_note": "Local creation and deployment workstation (learn-to-build). Dual independent useful displays; pin-accurate eDP2 is NDA.",
+  "status": "DIGITAL_RELEASE_BLOCKED_EXTERNAL_DATA",
+  "missing_prerequisite": {
+    "id": "EXT-COM-HPC-400PIN",
+    "also": [
+      "EXT-DSXL-DUAL-EDP",
+      "UNRES-COM-HPC-DUAL-EDP",
+      "UNRES-DSXL-PANEL-MPN"
+    ],
+    "item": "COM-HPC Mini 400-pin net-accurate pin map AND dual eDP lane map",
+    "vendor": "PICMG / ADLINK",
+    "format_needed": [
+      "PDF pin map",
+      "CSV net table",
+      "PDF eDP2 lane/pin map"
+    ],
+    "why": "Two independent useful displays cannot be pin-accurate without COM-HPC + eDP2 maps. Panel MPNs remain AVL quotes (EXT-DSXL-PANEL-AVL) and do not alone unlock the token."
+  },
+  "compute": "ADLINK COM-HPC-mMTL-155H-32G shared with Student (carrier differentiator = dual eDP)",
+  "generated_at_utc": "2026-08-18T18:58:38Z",
   "packet": "HW-FW-RC-001",
-  "package": "artifacts/hw_fw_rc_001/products/ds_xl_coder/DIGITAL_RELEASE_PACKAGE.json",
   "token": {
     "token": "DSXL_HW_DIGITAL_RELEASE_PACKAGE",
     "earned": false,
-    "criteria": {
-      "schematic_complete": true,
-      "erc_pass": true,
-      "pcb_sufficient": true,
-      "drc_pass_where_layout": true,
-      "bom_avl_honest": true,
-      "driver_risks_explicit": true,
-      "power_model_complete": true,
-      "thermal_model_complete": true,
-      "firmware_builds": true,
-      "factory_service_complete": true,
-      "dvpr_complete": true,
-      "s0_digital_zero": true,
-      "s1_digital_zero": true,
-      "nda_public_side_ok_but_pin_accurate_external": true,
-      "token_withhold_reason": "EXTERNAL/NDA pin-accurate fanout remains; public Cont IX package is CONDITIONAL_VENDOR_COLLATERAL \u2014 prefer FAIL vs claiming STUDENT/DSXL/DOCK_HW_DIGITAL_RELEASE_PACKAGE"
-    },
-    "failed_criteria": [],
     "EVT_PASS": false,
     "DVT_PASS": false,
     "PVT_PASS": false,
@@ -31,5 +35,20 @@
     "BATTERY_CERTIFIED": false,
     "SHIPPING_HARDWARE": false
   },
-  "generated_at_utc": "2026-08-15T00:56:23Z"
+  "artifacts": {
+    "BOM.csv": "BOM.csv",
+    "SOURCE_MANIFEST.json": "SOURCE_MANIFEST.json",
+    "EDA_REPORT.json": "EDA_REPORT.json",
+    "MECHANICAL_MANIFEST.json": "MECHANICAL_MANIFEST.json",
+    "FIRMWARE_HANDOFF.json": "FIRMWARE_HANDOFF.json",
+    "OS_INTERFACE.json": "OS_INTERFACE.json",
+    "TEST_PLAN.md": "TEST_PLAN.md",
+    "PHYSICAL_BRINGUP.md": "PHYSICAL_BRINGUP.md",
+    "KNOWN_EXTERNAL_BLOCKERS.md": "KNOWN_EXTERNAL_BLOCKERS.md"
+  },
+  "claim_boundary": {
+    "DIGITAL_FABRICATION_PASS": false,
+    "PHYSICAL_PENDING": true,
+    "RFQ_SENT": false
+  }
 }

@@ -1,0 +1,12 @@
+{
+  "product": "edge_io_rings",
+  "erc_status": "ran",
+  "drc_status": "ran",
+  "erc_errors": "0",
+  "erc_warnings": "27",
+  "drc_errors": "0",
+  "drc_warnings": "22",
+  "fabrication_pass": false,
+  "physical_claim": false,
+  "note": "Zero ERC/DRC errors is digital hygiene only. Not fab complete, not RFQ sent."
+}

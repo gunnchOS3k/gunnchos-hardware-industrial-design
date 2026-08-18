@@ -1,0 +1,33 @@
+{
+  "schema": "gunnchos.digital_release.eda_report.v1",
+  "product": "handheld_hybrid",
+  "generated_at_utc": "2026-08-18T18:58:38Z",
+  "kicad_cli_run": "artifacts/supervisor_ready_eda/kicad_cli_meta.json",
+  "this_run_summary": "artifacts/supervisor_ready_eda/kicad/handheld_hybrid/summary.json",
+  "erc": {
+    "errors": 0,
+    "warnings": 461,
+    "source": "artifacts/supervisor_ready_eda/kicad/handheld_hybrid/erc.json"
+  },
+  "drc": {
+    "errors": 0,
+    "warnings": 39,
+    "source": "artifacts/supervisor_ready_eda/kicad/handheld_hybrid/drc.json"
+  },
+  "warnings_by_code": {
+    "DRC:lib_footprint_mismatch": 39,
+    "ERC:endpoint_off_grid": 266,
+    "ERC:isolated_pin_label": 146,
+    "ERC:lib_symbol_issues": 45,
+    "ERC:multiple_net_names": 4
+  },
+  "warnings_by_class": {
+    "ACCEPTED_BY_DESIGN": 496,
+    "FIXABLE_DIGITALLY": 4
+  },
+  "fixable_digitally_this_run": 4,
+  "drc_not_weakened": true,
+  "ignored_checks_unchanged_policy": true,
+  "DIGITAL_FABRICATION_PASS": false,
+  "note": "Zero ERC/DRC errors is digital hygiene only. Not fab complete, not RFQ sent."
+}

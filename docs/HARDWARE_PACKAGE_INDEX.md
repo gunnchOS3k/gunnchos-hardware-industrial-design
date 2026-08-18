@@ -2,8 +2,12 @@
 
 ## Start here
 - [README](../README.md)
+- [Digital manufacturing readiness](../DIGITAL_MANUFACTURING_READINESS.md)
 - [PRD](../product/PRD_GUNNCHOS_MODULAR_CONSOLE_ECOSYSTEM.md)
 - [Claim Boundary](../product/CLAIM_BOUNDARY.md)
+- [Physical EVT bring-up packet](packets/PHYSICAL_EVT_BRINGUP_PACKET.md)
+- [Manufacturer RFQ send packet](packets/MANUFACTURER_RFQ_SEND_PACKET.md)
+- [UML](uml/README.md)
 
 ## EVT-1 prototype package
 - [versions/prototype_evt1/README.md](../versions/prototype_evt1/README.md)
@@ -30,6 +34,7 @@
 ## OS compatibility handoff (gunnchos-device-os)
 - [os_compatibility/README.md](../os_compatibility/README.md)
 - [HARDWARE_TO_OS_TRACEABILITY.md](../os_compatibility/HARDWARE_TO_OS_TRACEABILITY.md)
+- [OS_HARDWARE_INTERFACE_TRACEABILITY.md](../os_compatibility/OS_HARDWARE_INTERFACE_TRACEABILITY.md)
 - [device_class_exports/](../os_compatibility/device_class_exports/)
 - [firmware_os_interface/](../firmware_os_interface/)
 - [firmware/](../firmware/) — manifests, descriptors, harness

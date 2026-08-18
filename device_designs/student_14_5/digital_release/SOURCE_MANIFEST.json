@@ -1,0 +1,23 @@
+{
+  "schema": "gunnchos.digital_release.source_manifest.v1",
+  "product": "student_14_5",
+  "generated_at_utc": "2026-08-18T18:58:38Z",
+  "schematic": "device_designs/student_14_5/kicad/student_14_5.kicad_sch",
+  "pcb": "device_designs/student_14_5/kicad/student_14_5.kicad_pcb",
+  "bom_assembly": "device_designs/student_14_5/bom/assembly_bom.csv",
+  "power_tree": "device_designs/student_14_5/electrical/power_tree.yaml",
+  "stackup": "device_designs/student_14_5/manufacturing/stackup.yaml",
+  "firmware_manifest": "firmware/manifests/student_14_5_firmware_manifest.yaml",
+  "os_export": "os_compatibility/device_class_exports/student_14_5_os_export.yaml",
+  "cad": [
+    "cad/openscad/student_14_5/student_14_5_concept.scad",
+    "cad/openscad/student_14.scad",
+    "device_designs/student_14_5/cad/README.md"
+  ],
+  "this_run_eda": {
+    "erc": "artifacts/supervisor_ready_eda/kicad/student_14_5/erc.json",
+    "drc": "artifacts/supervisor_ready_eda/kicad/student_14_5/drc.json",
+    "summary": "artifacts/supervisor_ready_eda/kicad/student_14_5/summary.json"
+  },
+  "warning_disposition": "artifacts/supervisor_ready_eda/WARNING_DISPOSITION.csv"
+}

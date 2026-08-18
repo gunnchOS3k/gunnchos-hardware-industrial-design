@@ -26,6 +26,8 @@ jobs:
       - run: pip install -r requirements.txt || pip install pytest pyyaml
       - name: Required files
         run: python3 scripts/check_required_files.py
+      - name: Digital manufacturing packet
+        run: python3 scripts/validate_digital_manufacturing.py
       - name: BOM validation
         run: python3 scripts/validate_bom.py
       - name: Power budget validation

@@ -1,0 +1,23 @@
+{
+  "schema": "gunnchos.digital_release.source_manifest.v1",
+  "product": "edge_io_rings",
+  "generated_at_utc": "2026-08-18T18:58:38Z",
+  "schematic": "device_designs/edge_io_rings/kicad/edge_io_rings.kicad_sch",
+  "pcb": "device_designs/edge_io_rings/kicad/edge_io_rings.kicad_pcb",
+  "bom_assembly": "device_designs/edge_io_rings/bom/assembly_bom.csv",
+  "power_tree": "device_designs/edge_io_rings/electrical/power_tree.yaml",
+  "stackup": "device_designs/edge_io_rings/manufacturing/stackup.yaml",
+  "firmware_manifest": "firmware/manifests/edge_io_rings_firmware_manifest.yaml",
+  "os_export": "os_compatibility/device_class_exports/wearables_arena_set_os_export.yaml",
+  "cad": [
+    "cad/openscad/wearables_arena_set.scad",
+    "device_designs/edge_io_rings/cad/fusion/export_manifest.yaml",
+    "device_designs/edge_io_rings/cad/fusion/README.md"
+  ],
+  "this_run_eda": {
+    "erc": "artifacts/supervisor_ready_eda/kicad/edge_io_rings/erc.json",
+    "drc": "artifacts/supervisor_ready_eda/kicad/edge_io_rings/drc.json",
+    "summary": "artifacts/supervisor_ready_eda/kicad/edge_io_rings/summary.json"
+  },
+  "warning_disposition": "artifacts/supervisor_ready_eda/WARNING_DISPOSITION.csv"
+}

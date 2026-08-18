@@ -1,0 +1,38 @@
+{
+  "timestamp": "2026-08-18T17:15:23Z",
+  "status": "RAN",
+  "openscad": "/opt/homebrew/bin/openscad",
+  "files": {
+    "cad_openscad_ds_xl_coder_ds_xl_coder_concept_scad.log": {
+      "rc": "0",
+      "ok": true
+    },
+    "cad_openscad_ds_xl_coder_scad.log": {
+      "rc": "0",
+      "ok": true
+    },
+    "cad_openscad_handheld_hybrid_handheld_hybrid_concept_scad.log": {
+      "rc": "0",
+      "ok": true
+    },
+    "cad_openscad_handheld_hybrid_scad.log": {
+      "rc": "0",
+      "ok": true
+    },
+    "cad_openscad_student_14_5_student_14_5_concept_scad.log": {
+      "rc": "0",
+      "ok": true
+    },
+    "cad_openscad_student_14_scad.log": {
+      "rc": "0",
+      "ok": true
+    },
+    "cad_openscad_wearables_arena_set_scad.log": {
+      "rc": "0",
+      "ok": true
+    }
+  },
+  "all_parse_ok": true,
+  "physical_claim": false,
+  "note": "Parse/echo export only. Not first-article print, not certified mechanical."
+}

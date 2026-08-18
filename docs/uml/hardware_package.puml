@@ -1,0 +1,24 @@
+@startuml hardware_package
+title gunnchos-hardware-industrial-design current package
+package "design sources" {
+  [cad/openscad]
+  [device_designs/*/kicad]
+  [device_designs/*/bom]
+  [device_designs/*/electrical]
+}
+package "contracts" {
+  [firmware/interfaces]
+  [os_compatibility]
+  [firmware_os_interface]
+}
+package "packets" {
+  [DIGITAL_MANUFACTURING_READINESS.md]
+  [docs/packets]
+  [manufacturing/rfq]
+}
+[cad/openscad] --> [DIGITAL_MANUFACTURING_READINESS.md]
+[device_designs/*/kicad] --> [DIGITAL_MANUFACTURING_READINESS.md]
+[firmware/interfaces] --> [os_compatibility]
+[docs/packets] --> [manufacturing/rfq]
+note right of [docs/packets] : RFQ send is owner EXTERNAL_PENDING
+@enduml

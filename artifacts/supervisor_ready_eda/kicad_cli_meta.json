@@ -1,0 +1,72 @@
+{
+  "timestamp": "2026-08-18T17:15:23Z",
+  "status": "RAN",
+  "kicad_cli": "/opt/homebrew/bin/kicad-cli",
+  "version": "10.0.5",
+  "products": {
+    "handheld_hybrid": {
+      "product": "handheld_hybrid",
+      "erc_status": "ran",
+      "drc_status": "ran",
+      "erc_errors": "0",
+      "erc_warnings": "461",
+      "drc_errors": "0",
+      "drc_warnings": "39",
+      "fabrication_pass": false,
+      "physical_claim": false,
+      "note": "Zero ERC/DRC errors is digital hygiene only. Not fab complete, not RFQ sent."
+    },
+    "dock": {
+      "product": "dock",
+      "erc_status": "ran",
+      "drc_status": "ran",
+      "erc_errors": "0",
+      "erc_warnings": "19",
+      "drc_errors": "0",
+      "drc_warnings": "39",
+      "fabrication_pass": false,
+      "physical_claim": false,
+      "note": "Zero ERC/DRC errors is digital hygiene only. Not fab complete, not RFQ sent."
+    },
+    "edge_io_rings": {
+      "product": "edge_io_rings",
+      "erc_status": "ran",
+      "drc_status": "ran",
+      "erc_errors": "0",
+      "erc_warnings": "27",
+      "drc_errors": "0",
+      "drc_warnings": "22",
+      "fabrication_pass": false,
+      "physical_claim": false,
+      "note": "Zero ERC/DRC errors is digital hygiene only. Not fab complete, not RFQ sent."
+    },
+    "student_14_5": {
+      "product": "student_14_5",
+      "erc_status": "ran",
+      "drc_status": "ran",
+      "erc_errors": "0",
+      "erc_warnings": "40",
+      "drc_errors": "0",
+      "drc_warnings": "50",
+      "fabrication_pass": false,
+      "physical_claim": false,
+      "note": "Zero ERC/DRC errors is digital hygiene only. Not fab complete, not RFQ sent."
+    },
+    "ds_xl_coder": {
+      "product": "ds_xl_coder",
+      "erc_status": "ran",
+      "drc_status": "ran",
+      "erc_errors": "0",
+      "erc_warnings": "45",
+      "drc_errors": "0",
+      "drc_warnings": "51",
+      "fabrication_pass": false,
+      "physical_claim": false,
+      "note": "Zero ERC/DRC errors is digital hygiene only. Not fab complete, not RFQ sent."
+    }
+  },
+  "physical_claim": false,
+  "fabrication_pass": false,
+  "fcc_ce_usbif_claimed": false,
+  "rfq_sent": false
+}
