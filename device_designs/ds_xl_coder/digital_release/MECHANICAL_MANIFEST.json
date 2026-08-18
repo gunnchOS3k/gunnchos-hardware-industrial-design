@@ -1,0 +1,16 @@
+{
+  "schema": "gunnchos.digital_release.mechanical_manifest.v1",
+  "product": "ds_xl_coder",
+  "generated_at_utc": "2026-08-18T18:58:38Z",
+  "sources": [
+    "cad/openscad/ds_xl_coder/ds_xl_coder_concept.scad",
+    "cad/openscad/ds_xl_coder.scad",
+    "device_designs/ds_xl_coder/cad/README.md"
+  ],
+  "openscad_this_run": "artifacts/supervisor_ready_eda/openscad_meta.json",
+  "openscad_parse_ok": true,
+  "physical_claim": false,
+  "first_article_print": false,
+  "tooling_ready": false,
+  "note": "OpenSCAD parse success is not a certified mechanical drawing."
+}

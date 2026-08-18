@@ -1,0 +1,18 @@
+{
+  "schema": "gunnchos.digital_release.os_interface.v1",
+  "product": "ds_xl_coder",
+  "generated_at_utc": "2026-08-18T18:58:38Z",
+  "role": "local create/deploy",
+  "os_export": "os_compatibility/device_class_exports/ds_xl_coder_os_export.yaml",
+  "traceability": "os_compatibility/OS_HARDWARE_INTERFACE_TRACEABILITY.md",
+  "contract": "docs/OS_HARDWARE_CONTRACT.md",
+  "exports_are_profile_assumptions": true,
+  "silicon_boot_proven": false,
+  "hardware_sot": {
+    "compute": "COM-HPC-mMTL-155H-32G",
+    "displays": 2,
+    "os_export_ram_gb": 16,
+    "os_export_display_inches": 7.0
+  },
+  "note": "OS export 7.0 dual_screen is a profile assumption; BOM panels are 13/14 class AVL_PENDING. Do not freeze a diagonal without OEM drawing."
+}

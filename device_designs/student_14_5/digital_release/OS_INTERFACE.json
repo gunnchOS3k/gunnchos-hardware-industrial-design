@@ -1,0 +1,18 @@
+{
+  "schema": "gunnchos.digital_release.os_interface.v1",
+  "product": "student_14_5",
+  "generated_at_utc": "2026-08-18T18:58:38Z",
+  "role": "sustained desk/work",
+  "os_export": "os_compatibility/device_class_exports/student_14_5_os_export.yaml",
+  "traceability": "os_compatibility/OS_HARDWARE_INTERFACE_TRACEABILITY.md",
+  "contract": "docs/OS_HARDWARE_CONTRACT.md",
+  "exports_are_profile_assumptions": true,
+  "silicon_boot_proven": false,
+  "hardware_sot": {
+    "compute": "COM-HPC-mMTL-155H-32G",
+    "ram_on_module_gb": 32,
+    "os_export_ram_gb": 8,
+    "conflict": "UNRES-STUDENT-RAM-EXPORT"
+  },
+  "resolution_policy": "Do not invent a RAM figure. NDA/public module memory map required to freeze the OS export."
+}

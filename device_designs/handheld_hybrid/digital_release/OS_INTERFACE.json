@@ -1,0 +1,25 @@
+{
+  "schema": "gunnchos.digital_release.os_interface.v1",
+  "product": "handheld_hybrid",
+  "generated_at_utc": "2026-08-18T18:58:38Z",
+  "role": "mobile/docked compute",
+  "os_export": "os_compatibility/device_class_exports/handheld_hybrid_os_export.yaml",
+  "traceability": "os_compatibility/OS_HARDWARE_INTERFACE_TRACEABILITY.md",
+  "contract": "docs/OS_HARDWARE_CONTRACT.md",
+  "exports_are_profile_assumptions": true,
+  "silicon_boot_proven": false,
+  "hardware_sot": {
+    "som": "RM121-D8E32",
+    "ram_gb": 8,
+    "emmc_gib": 32,
+    "emmc_role": "system_and_recovery_only",
+    "content": "microSD required for large media/WAIKE/AI",
+    "display_bom": "7in_1080p_120Hz_IPS (AVL_PENDING)"
+  },
+  "os_export_conflicts": [
+    "UNRES-HH-OS-EXPORT-RAM: export ram_gb 12 vs SoM 8GB",
+    "UNRES-HH-OS-EXPORT-STORAGE: export nvme 512GB vs 32GB eMMC + microSD",
+    "UNRES-HH-DISPLAY-DIAGONAL: export 8.4 vs BOM 7in — panel MPN not frozen"
+  ],
+  "resolution_policy": "Hardware BOM/ICD is source of truth. Do not invent NVMe/12GB/8.4in to match the export."
+}

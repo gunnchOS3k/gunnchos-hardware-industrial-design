@@ -1,0 +1,16 @@
+{
+  "schema": "gunnchos.digital_release.mechanical_manifest.v1",
+  "product": "student_14_5",
+  "generated_at_utc": "2026-08-18T18:58:38Z",
+  "sources": [
+    "cad/openscad/student_14_5/student_14_5_concept.scad",
+    "cad/openscad/student_14.scad",
+    "device_designs/student_14_5/cad/README.md"
+  ],
+  "openscad_this_run": "artifacts/supervisor_ready_eda/openscad_meta.json",
+  "openscad_parse_ok": true,
+  "physical_claim": false,
+  "first_article_print": false,
+  "tooling_ready": false,
+  "note": "OpenSCAD parse success is not a certified mechanical drawing."
+}

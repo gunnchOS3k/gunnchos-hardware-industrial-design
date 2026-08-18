@@ -1,0 +1,14 @@
+{
+  "schema": "gunnchos.digital_release.os_interface.v1",
+  "product": "edge_io_rings",
+  "generated_at_utc": "2026-08-18T18:58:38Z",
+  "role": "spatial input (IMU ≠ absolute pose)",
+  "os_export": "os_compatibility/device_class_exports/wearables_arena_set_os_export.yaml",
+  "traceability": "os_compatibility/OS_HARDWARE_INTERFACE_TRACEABILITY.md",
+  "contract": "docs/OS_HARDWARE_CONTRACT.md",
+  "exports_are_profile_assumptions": true,
+  "silicon_boot_proven": false,
+  "companion": "firmware/interfaces/edge_io_contract.yaml",
+  "imu_is_not_absolute_pose": true,
+  "os_export_note": "wearables_arena_set_os_export.yaml is the family wearable profile, not a ring-only DT."
+}

@@ -1,0 +1,23 @@
+{
+  "schema": "gunnchos.digital_release.source_manifest.v1",
+  "product": "handheld_hybrid",
+  "generated_at_utc": "2026-08-18T18:58:38Z",
+  "schematic": "device_designs/handheld_hybrid/kicad/handheld_hybrid.kicad_sch",
+  "pcb": "device_designs/handheld_hybrid/kicad/handheld_hybrid.kicad_pcb",
+  "bom_assembly": "device_designs/handheld_hybrid/bom/assembly_bom.csv",
+  "power_tree": "device_designs/handheld_hybrid/electrical/power_tree.yaml",
+  "stackup": "device_designs/handheld_hybrid/manufacturing/stackup.yaml",
+  "firmware_manifest": "firmware/manifests/handheld_hybrid_firmware_manifest.yaml",
+  "os_export": "os_compatibility/device_class_exports/handheld_hybrid_os_export.yaml",
+  "cad": [
+    "cad/openscad/handheld_hybrid/handheld_hybrid_concept.scad",
+    "cad/openscad/handheld_hybrid.scad",
+    "device_designs/handheld_hybrid/cad/README.md"
+  ],
+  "this_run_eda": {
+    "erc": "artifacts/supervisor_ready_eda/kicad/handheld_hybrid/erc.json",
+    "drc": "artifacts/supervisor_ready_eda/kicad/handheld_hybrid/drc.json",
+    "summary": "artifacts/supervisor_ready_eda/kicad/handheld_hybrid/summary.json"
+  },
+  "warning_disposition": "artifacts/supervisor_ready_eda/WARNING_DISPOSITION.csv"
+}

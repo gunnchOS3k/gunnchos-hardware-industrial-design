@@ -1,27 +1,17 @@
 {
+  "schema": "gunnchos.digital_release.index.v1",
   "product": "handheld_hybrid",
+  "title": "Handheld Hybrid",
+  "role": "mobile/docked compute",
+  "role_note": "Mobile/docked research compute. HID/gamepad is one latency workload, not the product identity. Do not treat as generic gaming.",
+  "status": "DIGITAL_RELEASE_READY",
+  "missing_prerequisite": null,
+  "compute": "Radxa NX5 RM121-D8E32 (8GB LPDDR4X + 32GB eMMC, SODIMM-260, PUBLIC_PINOUT)",
+  "generated_at_utc": "2026-08-18T18:58:38Z",
   "packet": "HW-FW-RC-001",
-  "package": "artifacts/hw_fw_rc_001/products/handheld_hybrid/DIGITAL_RELEASE_PACKAGE.json",
   "token": {
     "token": "HANDHELD_HW_DIGITAL_RELEASE_PACKAGE",
     "earned": true,
-    "criteria": {
-      "schematic_complete": true,
-      "erc_pass": true,
-      "pcb_sufficient": true,
-      "drc_pass_where_layout": true,
-      "bom_avl_honest": true,
-      "driver_risks_explicit": true,
-      "power_model_complete": true,
-      "thermal_model_complete": true,
-      "firmware_builds": true,
-      "factory_service_complete": true,
-      "dvpr_complete": true,
-      "s0_digital_zero": true,
-      "s1_digital_zero": true,
-      "tip_accurate_drc_cited": true
-    },
-    "failed_criteria": [],
     "EVT_PASS": false,
     "DVT_PASS": false,
     "PVT_PASS": false,
@@ -30,5 +20,21 @@
     "BATTERY_CERTIFIED": false,
     "SHIPPING_HARDWARE": false
   },
-  "generated_at_utc": "2026-08-15T00:56:23Z"
+  "artifacts": {
+    "BOM.csv": "BOM.csv",
+    "SOURCE_MANIFEST.json": "SOURCE_MANIFEST.json",
+    "EDA_REPORT.json": "EDA_REPORT.json",
+    "MECHANICAL_MANIFEST.json": "MECHANICAL_MANIFEST.json",
+    "FIRMWARE_HANDOFF.json": "FIRMWARE_HANDOFF.json",
+    "OS_INTERFACE.json": "OS_INTERFACE.json",
+    "TEST_PLAN.md": "TEST_PLAN.md",
+    "PHYSICAL_BRINGUP.md": "PHYSICAL_BRINGUP.md",
+    "KNOWN_EXTERNAL_BLOCKERS.md": "KNOWN_EXTERNAL_BLOCKERS.md",
+    "STORAGE_PATH.json": "STORAGE_PATH.json"
+  },
+  "claim_boundary": {
+    "DIGITAL_FABRICATION_PASS": false,
+    "PHYSICAL_PENDING": true,
+    "RFQ_SENT": false
+  }
 }

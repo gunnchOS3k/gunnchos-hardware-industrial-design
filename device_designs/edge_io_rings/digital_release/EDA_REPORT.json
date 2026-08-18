@@ -1,0 +1,33 @@
+{
+  "schema": "gunnchos.digital_release.eda_report.v1",
+  "product": "edge_io_rings",
+  "generated_at_utc": "2026-08-18T18:58:38Z",
+  "kicad_cli_run": "artifacts/supervisor_ready_eda/kicad_cli_meta.json",
+  "this_run_summary": "artifacts/supervisor_ready_eda/kicad/edge_io_rings/summary.json",
+  "erc": {
+    "errors": 0,
+    "warnings": 27,
+    "source": "artifacts/supervisor_ready_eda/kicad/edge_io_rings/erc.json"
+  },
+  "drc": {
+    "errors": 0,
+    "warnings": 22,
+    "source": "artifacts/supervisor_ready_eda/kicad/edge_io_rings/drc.json"
+  },
+  "warnings_by_code": {
+    "DRC:lib_footprint_mismatch": 11,
+    "DRC:silk_over_copper": 1,
+    "DRC:track_dangling": 10,
+    "ERC:isolated_pin_label": 7,
+    "ERC:lib_symbol_issues": 20
+  },
+  "warnings_by_class": {
+    "ACCEPTED_BY_DESIGN": 38,
+    "FIXABLE_DIGITALLY": 11
+  },
+  "fixable_digitally_this_run": 11,
+  "drc_not_weakened": true,
+  "ignored_checks_unchanged_policy": true,
+  "DIGITAL_FABRICATION_PASS": false,
+  "note": "Zero ERC/DRC errors is digital hygiene only. Not fab complete, not RFQ sent."
+}

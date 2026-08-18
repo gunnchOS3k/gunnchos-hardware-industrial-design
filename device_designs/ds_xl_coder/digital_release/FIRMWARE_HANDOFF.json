@@ -1,0 +1,10 @@
+{
+  "schema": "gunnchos.digital_release.firmware_handoff.v1",
+  "product": "ds_xl_coder",
+  "generated_at_utc": "2026-08-18T18:58:38Z",
+  "manifest": "firmware/manifests/ds_xl_coder_firmware_manifest.yaml",
+  "interfaces_dir": "firmware/interfaces/",
+  "claim_boundary": "Harness/ACPI/DT/west digital path only. Not a signed production image. Not board boot.",
+  "SHIPPING_IMAGE": false,
+  "on_target_flash": "PHYSICAL_PENDING"
+}

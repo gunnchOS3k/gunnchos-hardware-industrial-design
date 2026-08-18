@@ -1,28 +1,29 @@
 {
+  "schema": "gunnchos.digital_release.index.v1",
   "product": "student_14_5",
+  "title": "Student 14.5",
+  "role": "sustained desk/work",
+  "role_note": "Full-session learning/work at a desk. Not a gaming SKU.",
+  "status": "DIGITAL_RELEASE_BLOCKED_EXTERNAL_DATA",
+  "missing_prerequisite": {
+    "id": "EXT-COM-HPC-400PIN",
+    "also": [
+      "UNRES-COM-HPC-400PIN"
+    ],
+    "item": "COM-HPC Mini 400-pin net-accurate pin map",
+    "vendor": "PICMG / ADLINK",
+    "format_needed": [
+      "PDF pin map",
+      "CSV net table"
+    ],
+    "why": "Pin-accurate carrier fanout for COM-HPC-mMTL-155H-32G cannot be completed from public docs."
+  },
+  "compute": "ADLINK COM-HPC-mMTL-155H-32G (carrier only; not bare CPU BGA)",
+  "generated_at_utc": "2026-08-18T18:58:38Z",
   "packet": "HW-FW-RC-001",
-  "package": "artifacts/hw_fw_rc_001/products/student_14_5/DIGITAL_RELEASE_PACKAGE.json",
   "token": {
     "token": "STUDENT_HW_DIGITAL_RELEASE_PACKAGE",
     "earned": false,
-    "criteria": {
-      "schematic_complete": true,
-      "erc_pass": true,
-      "pcb_sufficient": true,
-      "drc_pass_where_layout": true,
-      "bom_avl_honest": true,
-      "driver_risks_explicit": true,
-      "power_model_complete": true,
-      "thermal_model_complete": true,
-      "firmware_builds": true,
-      "factory_service_complete": true,
-      "dvpr_complete": true,
-      "s0_digital_zero": true,
-      "s1_digital_zero": true,
-      "nda_public_side_ok_but_pin_accurate_external": true,
-      "token_withhold_reason": "EXTERNAL/NDA pin-accurate fanout remains; public Cont IX package is CONDITIONAL_VENDOR_COLLATERAL \u2014 prefer FAIL vs claiming STUDENT/DSXL/DOCK_HW_DIGITAL_RELEASE_PACKAGE"
-    },
-    "failed_criteria": [],
     "EVT_PASS": false,
     "DVT_PASS": false,
     "PVT_PASS": false,
@@ -31,5 +32,20 @@
     "BATTERY_CERTIFIED": false,
     "SHIPPING_HARDWARE": false
   },
-  "generated_at_utc": "2026-08-15T00:56:23Z"
+  "artifacts": {
+    "BOM.csv": "BOM.csv",
+    "SOURCE_MANIFEST.json": "SOURCE_MANIFEST.json",
+    "EDA_REPORT.json": "EDA_REPORT.json",
+    "MECHANICAL_MANIFEST.json": "MECHANICAL_MANIFEST.json",
+    "FIRMWARE_HANDOFF.json": "FIRMWARE_HANDOFF.json",
+    "OS_INTERFACE.json": "OS_INTERFACE.json",
+    "TEST_PLAN.md": "TEST_PLAN.md",
+    "PHYSICAL_BRINGUP.md": "PHYSICAL_BRINGUP.md",
+    "KNOWN_EXTERNAL_BLOCKERS.md": "KNOWN_EXTERNAL_BLOCKERS.md"
+  },
+  "claim_boundary": {
+    "DIGITAL_FABRICATION_PASS": false,
+    "PHYSICAL_PENDING": true,
+    "RFQ_SENT": false
+  }
 }
