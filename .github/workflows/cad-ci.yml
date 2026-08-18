@@ -32,3 +32,5 @@ jobs:
           else
             echo "OpenSCAD not installed; skipping STL export (expected in CI)."
           fi
+      - name: Supervisor EDA checks (soft-skip if tools absent)
+        run: bash scripts/run_supervisor_eda_checks.sh

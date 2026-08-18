@@ -10,6 +10,7 @@ REQUIRED_DOCS = [
     "os_compatibility/README.md",
     "os_compatibility/OS_COMPATIBILITY_HANDOFF.md",
     "os_compatibility/HARDWARE_TO_OS_TRACEABILITY.md",
+    "os_compatibility/OS_HARDWARE_INTERFACE_TRACEABILITY.md",
     "os_compatibility/OS_PROFILE_EXPORT_MANIFEST.md",
     "os_compatibility/OS_HARDWARE_CONTRACT_V2.md",
     "os_compatibility/DEVICE_CLASS_OS_SUPPORT_MATRIX.md",

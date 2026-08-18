@@ -1,12 +1,20 @@
 .PHONY: test validate validate-bom validate-cad validate-schematics \
 	generate-device-reports generate-campus-kits generate-contracts \
-	generate-manufacturing-package generate-hbom diagrams e2e smoke gate6-dry-run
+	generate-manufacturing-package generate-hbom diagrams e2e smoke gate6-dry-run \
+	validate-digital-mfg supervisor-eda-checks
 
 test:
 	pytest -q
 
 validate:
 	python3 scripts/hardware_validate.py
+	python3 scripts/validate_digital_manufacturing.py
+
+validate-digital-mfg:
+	python3 scripts/validate_digital_manufacturing.py
+
+supervisor-eda-checks:
+	bash scripts/run_supervisor_eda_checks.sh
 
 validate-bom:
 	python3 scripts/validate_bom_schema.py
