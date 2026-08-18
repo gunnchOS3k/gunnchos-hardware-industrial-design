@@ -1,0 +1,12 @@
+{
+  "product": "handheld_hybrid",
+  "erc_status": "ran",
+  "drc_status": "ran",
+  "erc_errors": "0",
+  "erc_warnings": "461",
+  "drc_errors": "0",
+  "drc_warnings": "39",
+  "fabrication_pass": false,
+  "physical_claim": false,
+  "note": "Zero ERC/DRC errors is digital hygiene only. Not fab complete, not RFQ sent."
+}

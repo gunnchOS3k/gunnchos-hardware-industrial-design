@@ -1,0 +1,12 @@
+{
+  "product": "ds_xl_coder",
+  "erc_status": "ran",
+  "drc_status": "ran",
+  "erc_errors": "0",
+  "erc_warnings": "45",
+  "drc_errors": "0",
+  "drc_warnings": "51",
+  "fabrication_pass": false,
+  "physical_claim": false,
+  "note": "Zero ERC/DRC errors is digital hygiene only. Not fab complete, not RFQ sent."
+}

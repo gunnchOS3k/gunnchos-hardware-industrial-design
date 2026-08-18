@@ -1,0 +1,16 @@
+{
+  "timestamp": "2026-08-18T17:15:23Z",
+  "kicad": {
+    "status": "RAN",
+    "fabrication_pass": false
+  },
+  "openscad": {
+    "status": "RAN",
+    "physical_claim": false
+  },
+  "DIGITAL_FABRICATION_PASS": false,
+  "PHYSICAL_PENDING": true,
+  "EXTERNAL_PENDING": true,
+  "rfq_sent": false,
+  "fcc_ce_usbif": false
+}
