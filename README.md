@@ -40,9 +40,11 @@ Product Charter **layer 1**. Consumed by `gunnchos-device-os`. Linked from the E
 ```bash
 pip install -r requirements.txt
 make validate
+make validate-digital-mfg
 make e2e   # smoke — not manufacturing readiness
 ```
-Start: [docs/START_HERE.md](docs/START_HERE.md) when present.
+Start: [docs/START_HERE.md](docs/START_HERE.md) when present.  
+Digital manufacturing packet: [DIGITAL_MANUFACTURING_READINESS.md](DIGITAL_MANUFACTURING_READINESS.md) (`DIGITAL_FABRICATION_PASS` remains **FALSE**).
 
 ## Architecture
 
@@ -54,8 +56,11 @@ Device packages under `device_designs/` / `devices/` + `cad/`, `bom/`, `firmware
 |---|---|
 | `device_designs/` / `devices/` | Per-SKU design SoT |
 | `bom/` | BOM truth |
+| `cad/` | OpenSCAD concepts / placeholders |
 | `firmware/` | Firmware manifests / host dry-run |
 | `os_compatibility/` | Handoff to device-os |
+| `docs/packets/` | EVT bring-up + RFQ **send** packets (owner actions) |
+| `docs/uml/` | Current / future / legacy diagrams |
 | `docs/history/` | HISTORICAL README eras |
 
 ## Interfaces
@@ -67,6 +72,9 @@ Exports consumed by `gunnchos-device-os` hardware/firmware compatibility layers.
 ```bash
 make test
 make validate-bom validate-cad
+make validate-digital-mfg
+# optional if kicad-cli / openscad installed:
+make supervisor-eda-checks
 ```
 
 ## Evidence

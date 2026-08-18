@@ -18,3 +18,8 @@ artifacts/hw002/zephyr_west/out/*.hex
 artifacts/hw_fw_rc_001/zephyr_west/out/*.elf
 artifacts/hw_fw_rc_001/zephyr_west/out/*.bin
 artifacts/hw_fw_rc_001/zephyr_west/out/*.hex
+
+# Supervisor EDA check working files (JSON summaries are committed)
+artifacts/supervisor_ready_eda/kicad/**/*.log
+artifacts/supervisor_ready_eda/kicad/**/*.log.rc
+artifacts/supervisor_ready_eda/openscad/
