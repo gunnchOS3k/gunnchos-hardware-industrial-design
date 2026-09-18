@@ -1,3 +1,2 @@
-change,subsystem,mpn_or_class,qty,note
-ADD,experiment_only,EXP-RAUC-001_variant,1,EXPERIMENTAL — do not merge to mainline BOM
-REMOVE,none,—,0,Comparison only; mainline unchanged
+item,baseline,variant,qty_delta,class,notes
+compute_or_feature,Vendor capsule + custom EC update orchestration,RAUC A/B,0,EXPERIMENTAL,digital compare only; not purchased

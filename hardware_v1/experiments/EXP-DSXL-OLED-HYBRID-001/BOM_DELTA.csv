@@ -1,3 +1,2 @@
-change,subsystem,mpn_or_class,qty,note
-ADD,experiment_only,EXP-DSXL-OLED-HYBRID-001_variant,1,EXPERIMENTAL — do not merge to mainline BOM
-REMOVE,none,—,0,Comparison only; mainline unchanged
+item,baseline,variant,qty_delta,class,notes
+compute_or_feature,IPS eDP + DDI/DP on custom DSXL-MB-v1,OLED primary + IPS secondary,0,EXPERIMENTAL,digital compare only; not purchased

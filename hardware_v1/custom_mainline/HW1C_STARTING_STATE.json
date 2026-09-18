@@ -1,0 +1,25 @@
+{
+  "schema": "gunnchos.hardware_v1.hw1c.starting_state.v1",
+  "generated_at_utc": "2026-09-18T16:42:43Z",
+  "pr_68": {
+    "state": "OPEN",
+    "is_draft": true,
+    "head_expected": "3730a98bb1285a86553cf4e38f5c7c6e4406a049",
+    "head_observed": "3730a98bb1285a86553cf4e38f5c7c6e4406a049",
+    "drift": false,
+    "branch": "hardware/v1-mainline-ready-for-evt"
+  },
+  "experiment_prs_69_76": {
+    "all_draft": true,
+    "all_open": true,
+    "merged": false
+  },
+  "preflight": {
+    "hardware_v1_validate": "PASS",
+    "rp0_a_cots_packet_valid": true,
+    "software_rc1_untouched": true
+  },
+  "prior_next_owner_action": "ORDER_RP0_A_COTS_BRINGUP_KIT",
+  "doctrine_before": "COM-HPC Mini x86 product mainline",
+  "doctrine_after": "CUSTOM AMD EMBEDDED X86 MOTHERBOARD mainline; COM-HPC = REFERENCE_CONTROL"
+}

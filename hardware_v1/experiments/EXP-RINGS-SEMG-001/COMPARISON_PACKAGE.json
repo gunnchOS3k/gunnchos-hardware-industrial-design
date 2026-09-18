@@ -3,7 +3,7 @@
   "branch": "hardware/exp-rings-semg-wrist",
   "title": "sEMG wrist band vs IMU/cap ring input",
   "hypothesis": "sEMG adds gesture bandwidth without unsafe skin current / privacy regression",
-  "baseline": "IMU + capacitive/touch ring",
+  "baseline": "IMU + capacitive/touch custom ring",
   "variant": "sEMG wrist accessory",
   "metrics": [
     "gesture_f1",
@@ -13,7 +13,9 @@
   ],
   "promotion_gate": "Safety current limits met; youth privacy review pass; not medical claim",
   "not_in_main_bom": true,
+  "hierarchy": "PRODUCT_EXPERIMENT",
   "schema": "gunnchos.hardware_v1.experiment.v1",
-  "generated_at_utc": "2026-09-18T16:24:23Z",
-  "state": "EXPERIMENTAL_COMPARE"
+  "generated_at_utc": "2026-09-18T16:48:54Z",
+  "state": "EXPERIMENTAL_COMPARE",
+  "campaign": "HARDWARE_1_0C_CUSTOM_FIRST_MAINLINE_PIVOT"
 }
