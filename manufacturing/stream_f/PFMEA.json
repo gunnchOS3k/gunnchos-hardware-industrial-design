@@ -1,0 +1,6 @@
+{
+  "schema": "gunnchos.manufacturing.pfmea.v1",
+  "signed": false,
+  "physical_validated": false,
+  "rows_ref": "manufacturing/stream_f/PFMEA.md"
+}

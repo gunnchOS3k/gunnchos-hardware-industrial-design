@@ -1,0 +1,21 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "gunnchos.evt_dvt_pvt.physical_pass_token.v1",
+  "type": "object",
+  "required": [
+    "token",
+    "value"
+  ],
+  "properties": {
+    "token": {
+      "type": "string"
+    },
+    "value": {
+      "type": "boolean"
+    },
+    "allowed_true_only_after": {
+      "type": "string",
+      "description": "Human lab evidence + independent verifier"
+    }
+  }
+}

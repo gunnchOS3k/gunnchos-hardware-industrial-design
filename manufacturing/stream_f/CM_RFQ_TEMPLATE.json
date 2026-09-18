@@ -1,0 +1,20 @@
+{
+  "schema": "gunnchos.manufacturing.cm_rfq_template.v1",
+  "RFQ_SENT": false,
+  "sections": [
+    "header",
+    "scope",
+    "attachments",
+    "volumes",
+    "quality",
+    "incoterms",
+    "warranty"
+  ],
+  "sku_ids": [
+    "student_14_5",
+    "handheld_hybrid",
+    "ds_xl_coder",
+    "edge_io_rings",
+    "dock"
+  ]
+}

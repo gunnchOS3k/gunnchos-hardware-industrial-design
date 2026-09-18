@@ -1,0 +1,18 @@
+{
+  "schema": "gunnchos.stream_f.gate.v1",
+  "section": 16,
+  "gate": "PHYSICAL_VALIDATION_ENGINEERING_PREP_EXHAUSTED",
+  "status": true,
+  "generated_at_utc": "2026-09-18T18:35:47Z",
+  "honesty": {
+    "schema": "gunnchos.stream_f.physical_tokens.v1",
+    "generated_at_utc": "2026-09-18T18:35:47Z",
+    "PHYSICALLY_VALIDATED": false,
+    "EVT_PHYSICAL_PASS": false,
+    "DVT_PHYSICAL_PASS": false,
+    "PVT_PHYSICAL_PASS": false,
+    "SELF_CERTIFIED_V1": false,
+    "note": "All physical pass tokens remain false until lab execution + verifier."
+  },
+  "artifacts_root": "evt_dvt_pvt/"
+}

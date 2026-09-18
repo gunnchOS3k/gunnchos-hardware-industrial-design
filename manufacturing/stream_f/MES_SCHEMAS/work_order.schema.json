@@ -1,0 +1,35 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "gunnchos.mes.work_order.v1",
+  "type": "object",
+  "required": [
+    "wo_id",
+    "sku",
+    "rev",
+    "qty",
+    "phase"
+  ],
+  "properties": {
+    "wo_id": {
+      "type": "string"
+    },
+    "sku": {
+      "type": "string"
+    },
+    "rev": {
+      "type": "string"
+    },
+    "qty": {
+      "type": "integer",
+      "minimum": 1
+    },
+    "phase": {
+      "enum": [
+        "EVT",
+        "DVT",
+        "PVT",
+        "MP"
+      ]
+    }
+  }
+}

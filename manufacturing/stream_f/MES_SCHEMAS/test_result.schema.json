@@ -1,0 +1,33 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "gunnchos.mes.test_result.v1",
+  "type": "object",
+  "required": [
+    "unit_sn",
+    "station",
+    "result",
+    "ts_utc"
+  ],
+  "properties": {
+    "unit_sn": {
+      "type": "string"
+    },
+    "station": {
+      "type": "string"
+    },
+    "result": {
+      "enum": [
+        "PASS",
+        "FAIL",
+        "REWORK",
+        "NOT_RUN"
+      ]
+    },
+    "ts_utc": {
+      "type": "string"
+    },
+    "metrics": {
+      "type": "object"
+    }
+  }
+}

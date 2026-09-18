@@ -1,0 +1,14 @@
+{
+  "schema": "gunnchos.stream_f.gate.v1",
+  "section": 17,
+  "gate": "CERTIFICATION_ENGINEERING_PREP_EXHAUSTED",
+  "status": true,
+  "generated_at_utc": "2026-09-18T18:35:47Z",
+  "honesty": {
+    "CERTIFICATION_COMPLETE": false,
+    "certified_any": false,
+    "lab_engaged": false
+  },
+  "artifacts_root": "certification/stream_f/",
+  "applicable_row_count": 72
+}

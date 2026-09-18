@@ -1,0 +1,25 @@
+{
+  "schema": "gunnchos.mechanical.tolerance_stackup.v1",
+  "units": "mm",
+  "required_fields": [
+    "stack_id",
+    "sku",
+    "datum",
+    "contributors",
+    "method",
+    "rss_mm",
+    "worst_case_mm",
+    "allowance_mm",
+    "status"
+  ],
+  "allowed_status": [
+    "DRAFT_DIGITAL",
+    "REVIEWED_DIGITAL",
+    "PHYSICAL_PENDING"
+  ],
+  "forbidden_status": [
+    "PHYSICAL_PASS",
+    "ERGONOMIC_PASS"
+  ],
+  "note": "Digital stack-up worksheets only; physical CMM evidence required later."
+}
