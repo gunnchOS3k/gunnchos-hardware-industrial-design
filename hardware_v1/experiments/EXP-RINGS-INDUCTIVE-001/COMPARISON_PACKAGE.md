@@ -1,32 +1,30 @@
-# Inductive ring charge vs magnetic cradle contacts
+# EXP-RINGS-INDUCTIVE-001 comparison package
 
-**Generated:** 2026-09-18T16:24:23Z  
-**Campaign:** `HARDWARE_1_0_MASTER_CAMPAIGN`  
-**Claim boundary:** digital architecture / EVT preparation only — not physical pass, not certification, not fab release.
+**Generated:** 2026-09-18T16:48:54Z  
+**Campaign:** `HARDWARE_1_0C_CUSTOM_FIRST_MAINLINE_PIVOT`  
+**Claim boundary:** digital architecture / EVT preparation only — not physical pass, not certification, not fab release, not purchased.
 
-## Identity
-- Experiment ID: `EXP-RINGS-INDUCTIVE-001`
-- Branch: `hardware/exp-rings-inductive-charge`
-- State: `EXPERIMENTAL_COMPARE`
-- `not_in_main_bom`: `True`
+
+## Title
+Inductive ring charge vs magnetic cradle contacts
 
 ## Hypothesis
 Inductive charge improves durability/UX with acceptable efficiency and EMI
 
 ## Baseline (mainline)
-Magnetic cradle pogo/contacts
+Magnetic cradle pogo/contacts (custom ring mainline)
 
 ## Variant
 Qi-class or proprietary inductive coil
 
-## Measurable comparison criteria
-- `charge_efficiency_pct`
-- `emi_delta_db`
-- `wear_cycles`
-- `alignment_fail_rate`
+## Metrics
+- charge_efficiency_pct
+- emi_delta_db
+- wear_cycles
+- alignment_fail_rate
 
 ## Promotion gate
 Efficiency >=70% at EVT coil; EMI does not fail pre-scan relative to baseline
 
-## Non-claims
-No physical results fabricated. No quotes/lead times invented. No merge to mainline without gate.
+## Isolation
+`not_in_main_bom=true` — experimental parts must not mix into MAINLINE_CUSTOM with qty>0.

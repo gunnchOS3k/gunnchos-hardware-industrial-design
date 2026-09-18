@@ -1,3 +1,2 @@
-change,subsystem,mpn_or_class,qty,note
-ADD,experiment_only,EXP-COREBOOT-001_variant,1,EXPERIMENTAL — do not merge to mainline BOM
-REMOVE,none,—,0,Comparison only; mainline unchanged
+item,baseline,variant,qty_delta,class,notes
+compute_or_feature,Vendor-supported UEFI + AGESA on custom AMD motherboard,coreboot and/or AMD openSIL when production-capable for selected platform,0,EXPERIMENTAL,digital compare only; not purchased

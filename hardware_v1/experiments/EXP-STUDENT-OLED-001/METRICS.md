@@ -1,15 +1,14 @@
-# Metrics — EXP-STUDENT-OLED-001
+# EXP-STUDENT-OLED-001 metrics
 
-**Generated:** 2026-09-18T16:24:23Z  
-**Campaign:** `HARDWARE_1_0_MASTER_CAMPAIGN`  
-**Claim boundary:** digital architecture / EVT preparation only — not physical pass, not certification, not fab release.
+**Generated:** 2026-09-18T16:48:54Z  
+**Campaign:** `HARDWARE_1_0C_CUSTOM_FIRST_MAINLINE_PIVOT`  
+**Claim boundary:** digital architecture / EVT preparation only — not physical pass, not certification, not fab release, not purchased.
 
-Record measured values only after physical/lab work.
 
-| Metric | Value | State |
-|---|---|---|
-| `contrast_ratio` | — | PENDING_PHYSICAL_MEASUREMENT |
-| `avg_power_w` | — | PENDING_PHYSICAL_MEASUREMENT |
-| `burnin_risk_score` | — | PENDING_PHYSICAL_MEASUREMENT |
-| `cost_delta_usd` | — | PENDING_PHYSICAL_MEASUREMENT |
-| `nit_hdr` | — | PENDING_PHYSICAL_MEASUREMENT |
+All metrics `UNMEASURED_PENDING_PHYSICAL`.
+
+- `contrast_ratio`: UNMEASURED_PENDING_PHYSICAL
+- `avg_power_w`: UNMEASURED_PENDING_PHYSICAL
+- `burnin_risk_score`: UNMEASURED_PENDING_PHYSICAL
+- `cost_delta_usd`: UNMEASURED_PENDING_PHYSICAL
+- `nit_hdr`: UNMEASURED_PENDING_PHYSICAL

@@ -1,51 +1,118 @@
 {
   "schema": "gunnchos.hardware_v1.campaign.v1",
-  "generated_at_utc": "2026-09-18T16:24:23Z",
+  "generated_at_utc": "2026-09-18T16:48:54Z",
   "decisions": [
     {
-      "id": "DEC-COMPUTE-001",
-      "topic": "Student 14.5 / DS-XL compute module",
+      "id": "DEC-DOCTRINE-001",
+      "topic": "Architecture doctrine",
       "state": "ADOPTED_MAINLINE",
-      "mainline": "COM-HPC Mini x86 Meteor Lake-class module (ADLINK COM-HPC-mMTL-155H-32G class) for EVT",
-      "rationale": "Reconciles Cont IX COM-HPC freeze; shared module across desk SKUs; avoids bare CPU BGA",
+      "mainline": "MAINLINE_CUSTOM owns board around silicon; COTS/modular = REFERENCE_CONTROL; experiments need measured evidence to promote",
+      "rationale": "Owner-directed HW1C custom-first pivot",
       "evidence": [
-        "docs/full_product_family/COM_HPC_FINAL_DECISION_CONT_IX.md",
-        "device_designs/student_14_5/bom/assembly_bom.csv"
+        "hardware_v1/custom_mainline/CUSTOM_FIRST_ARCHITECTURE_DOCTRINE.md"
       ],
-      "experiment_alt": "EXP-ARM-IQX (ARM IQX-class SoM)",
+      "experiment_alt": null,
       "owner_gate": null
+    },
+    {
+      "id": "DEC-COMPUTE-001",
+      "topic": "Student 14.5 / DS-XL compute (custom mainline)",
+      "state": "ADOPTED_MAINLINE",
+      "mainline": "gunnchOS Platform Core v1 \u2014 AMD Ryzen Embedded 8000 FP7r2 BGA custom motherboard (Student 8840U OPN ref 100-000001317E; DS-XL 8845HS OPN ref 100-000001316E). Pin compatibility NOT assumed.",
+      "rationale": "HW1C custom-first doctrine: own the board around the silicon. COM-HPC Mini reclassified REFERENCE_CONTROL_MODULAR_X86.",
+      "evidence": [
+        "hardware_v1/custom_mainline/PLATFORM_CORE_V1.md",
+        "hardware_v1/custom_mainline/DEVICE_SOC_SELECTION_MATRIX.md",
+        "hardware_v1/custom_mainline/CUSTOM_FIRST_ARCHITECTURE_DOCTRINE.md"
+      ],
+      "experiment_alt": "EXP-ARM-IQX-001, EXP-COM-HPC-MODULAR-001, EXP-DSXL-X100-001, EXP-P100-AI-001",
+      "owner_gate": "ACQUIRE_AMD_CUSTOM_PLATFORM_COLLATERAL",
+      "secondary_state": "PENDING_VENDOR_CONFIRMATION"
     },
     {
       "id": "DEC-COMPUTE-002",
-      "topic": "Handheld Hybrid compute for EVT",
+      "topic": "Handheld Hybrid compute",
       "state": "ADOPTED_MAINLINE",
-      "mainline": "COM-HPC Mini EVT mule (shared Meteor Lake-class module) for electrical/thermal bring-up",
-      "rationale": "One EVT mule architecture; production handheld form-factor board remains separate",
+      "mainline": "Custom Handheld-MB-v1 with Ryzen Embedded 8840U (same family target as Student). COM-HPC Handheld mule = REFERENCE_CONTROL only.",
+      "rationale": "Custom-first ownership; lower sustained power within supported envelope; compact topology pending vendor docs.",
       "evidence": [
-        "device_designs/handheld_hybrid/digital_release/INDEX.json"
+        "hardware_v1/custom_mainline/DEVICE_SOC_SELECTION_MATRIX.md",
+        "hardware_v1/custom_mainline/BOARD_REUSE_STRATEGY.md"
       ],
-      "experiment_alt": null,
-      "notes": "Prior Radxa RM121-D8E32 retained as historical digital package; not mixed into Hardware v1 mainline BOM",
-      "owner_gate": null
+      "experiment_alt": "EXP-COM-HPC-MODULAR-001",
+      "owner_gate": "ACQUIRE_AMD_CUSTOM_PLATFORM_COLLATERAL",
+      "secondary_state": "PENDING_VENDOR_CONFIRMATION"
     },
     {
       "id": "DEC-COMPUTE-003",
-      "topic": "Handheld production board",
+      "topic": "Handheld production board geometry",
       "state": "PENDING_PHYSICAL_MEASUREMENT",
-      "mainline": "Production handheld carrier/board geometry PENDING_PHYSICAL_MEASUREMENT after EVT mule data",
-      "rationale": "Cannot freeze production board without measured thermal/power/fit from mule",
+      "mainline": "Handheld-MB-v1 geometry PENDING_PHYSICAL_MEASUREMENT after CPB0/EVT data",
+      "rationale": "Cannot freeze production board without measured thermal/power/fit",
       "evidence": [
+        "hardware_v1/custom_mainline/cpb0/PRD.md",
         "physical_evidence/README.md"
       ],
       "experiment_alt": null,
-      "owner_gate": "EVT mule bring-up measurements"
+      "owner_gate": "CPB0/EVT bring-up measurements"
+    },
+    {
+      "id": "DEC-CPB0-001",
+      "topic": "Custom Platform Board 0",
+      "state": "ADOPTED_MAINLINE",
+      "mainline": "CPB0 debug-friendly learning board on 8845HS preferred; READY_FOR_FAB=false without collateral+EDA",
+      "rationale": "Primary learning path for custom motherboard ownership",
+      "evidence": [
+        "hardware_v1/custom_mainline/cpb0/PRD.md"
+      ],
+      "experiment_alt": null,
+      "owner_gate": "ACQUIRE_AMD_CUSTOM_PLATFORM_COLLATERAL",
+      "secondary_state": "PENDING_VENDOR_CONFIRMATION"
+    },
+    {
+      "id": "DEC-COMHPC-001",
+      "topic": "COM-HPC role",
+      "state": "EXPERIMENTAL_COMPARE",
+      "mainline": "ADLINK COM-HPC Mini mMTL + Mini Base classified REFERENCE_CONTROL_MODULAR_X86 (not product mainline)",
+      "rationale": "Preserve RP0-A COTS packet for software/bring-up isolation; optional owner order",
+      "evidence": [
+        "hardware_v1/reference_platform_0/REFERENCE_PLATFORM_0.md",
+        "hardware_v1/bom/REFERENCE_CONTROL_BOM.csv"
+      ],
+      "experiment_alt": "EXP-COM-HPC-MODULAR-001",
+      "owner_gate": "OPTIONAL_OWNER_ACTION=ORDER_RP0_A_COTS_CONTROL_KIT"
+    },
+    {
+      "id": "DEC-MEMORY-001",
+      "topic": "DDR topology",
+      "state": "PENDING_VENDOR_CONFIRMATION",
+      "mainline": "UNFROZEN \u2014 prefer debug-friendly on CPB0, serviceability on Student, capacity on DS-XL, compactness on Handheld if vendor allows",
+      "rationale": "Must not freeze without AMD topology rules",
+      "evidence": [
+        "hardware_v1/custom_mainline/MEMORY_TOPOLOGY_DECISION.md"
+      ],
+      "experiment_alt": null,
+      "owner_gate": "AMD DDR topology collateral"
+    },
+    {
+      "id": "DEC-FW-001",
+      "topic": "Host firmware stack",
+      "state": "ADOPTED_MAINLINE",
+      "mainline": "Vendor UEFI on COM-HPC module + Zephyr EC on companion MCU",
+      "rationale": "Ship path with vendor support; open alternatives experimental",
+      "evidence": [
+        "firmware/CLAIM_BOUNDARY.md",
+        "firmware_os_interface/"
+      ],
+      "experiment_alt": "EXP-COREBOOT, EXP-RAUC-UPDATE",
+      "owner_gate": null
     },
     {
       "id": "DEC-DISPLAY-001",
       "topic": "Student / DS-XL display technology",
       "state": "ADOPTED_MAINLINE",
-      "mainline": "IPS LCD panels (Student: single eDP; DS-XL: one native eDP + DDI/DP second display). Not dual native eDP unless authoritative module docs prove it.",
-      "rationale": "COM-HPC-mMTL documents 1x eDP + 2x DDI; retain two functional DS-XL displays via eDP+DDI/DP. OLED isolated as experiment.",
+      "mainline": "IPS LCD panels on custom Platform Core boards (Student: single eDP; DS-XL: one native eDP + DDI/DP). Not dual native eDP unless authoritative SoC docs prove it.",
+      "rationale": "Preserve HW1B architecture correction; apply to custom AMD boards. OLED remains experiment.",
       "evidence": [
         "device_designs/student_14_5/bom/assembly_bom.csv",
         "hardware_v1/devices/ds_xl/DUAL_DISPLAY_ARCHITECTURE.md"
@@ -57,8 +124,8 @@
       "id": "DEC-STORAGE-001",
       "topic": "Storage / Wi-Fi",
       "state": "ADOPTED_MAINLINE",
-      "mainline": "M.2 NVMe storage + M.2 Key E Wi-Fi (Intel BE200 class)",
-      "rationale": "Standard COM-HPC Mini IO; field replaceable",
+      "mainline": "M.2 NVMe + M.2 Key E Wi-Fi on custom Platform Core boards (field replaceable where packaging permits)",
+      "rationale": "Custom motherboard ownership of PCIe/NVMe/Wi-Fi integration",
       "evidence": [
         "device_designs/student_14_5/bom/assembly_bom.csv"
       ],
@@ -123,19 +190,6 @@
       "owner_gate": null
     },
     {
-      "id": "DEC-FW-001",
-      "topic": "Host firmware stack",
-      "state": "ADOPTED_MAINLINE",
-      "mainline": "Vendor UEFI on COM-HPC module + Zephyr EC on companion MCU",
-      "rationale": "Ship path with vendor support; open alternatives experimental",
-      "evidence": [
-        "firmware/CLAIM_BOUNDARY.md",
-        "firmware_os_interface/"
-      ],
-      "experiment_alt": "EXP-COREBOOT, EXP-RAUC-UPDATE",
-      "owner_gate": null
-    },
-    {
       "id": "DEC-BATT-001",
       "topic": "Battery chemistry",
       "state": "ADOPTED_MAINLINE",
@@ -174,5 +228,6 @@
       "experiment_alt": null,
       "owner_gate": "ORDER_RP0_A_COTS_BRINGUP_KIT (Cursor does not purchase)"
     }
-  ]
+  ],
+  "campaign": "HARDWARE_1_0C_CUSTOM_FIRST_MAINLINE_PIVOT"
 }

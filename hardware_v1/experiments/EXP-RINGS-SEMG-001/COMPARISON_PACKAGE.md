@@ -1,32 +1,30 @@
-# sEMG wrist band vs IMU/cap ring input
+# EXP-RINGS-SEMG-001 comparison package
 
-**Generated:** 2026-09-18T16:24:23Z  
-**Campaign:** `HARDWARE_1_0_MASTER_CAMPAIGN`  
-**Claim boundary:** digital architecture / EVT preparation only — not physical pass, not certification, not fab release.
+**Generated:** 2026-09-18T16:48:54Z  
+**Campaign:** `HARDWARE_1_0C_CUSTOM_FIRST_MAINLINE_PIVOT`  
+**Claim boundary:** digital architecture / EVT preparation only — not physical pass, not certification, not fab release, not purchased.
 
-## Identity
-- Experiment ID: `EXP-RINGS-SEMG-001`
-- Branch: `hardware/exp-rings-semg-wrist`
-- State: `EXPERIMENTAL_COMPARE`
-- `not_in_main_bom`: `True`
+
+## Title
+sEMG wrist band vs IMU/cap ring input
 
 ## Hypothesis
 sEMG adds gesture bandwidth without unsafe skin current / privacy regression
 
 ## Baseline (mainline)
-IMU + capacitive/touch ring
+IMU + capacitive/touch custom ring
 
 ## Variant
 sEMG wrist accessory
 
-## Measurable comparison criteria
-- `gesture_f1`
-- `skin_current_ua`
-- `false_positive_rate`
-- `privacy_review_pass`
+## Metrics
+- gesture_f1
+- skin_current_ua
+- false_positive_rate
+- privacy_review_pass
 
 ## Promotion gate
 Safety current limits met; youth privacy review pass; not medical claim
 
-## Non-claims
-No physical results fabricated. No quotes/lead times invented. No merge to mainline without gate.
+## Isolation
+`not_in_main_bom=true` — experimental parts must not mix into MAINLINE_CUSTOM with qty>0.
