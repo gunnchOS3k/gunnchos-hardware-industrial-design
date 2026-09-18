@@ -1,22 +1,13 @@
-(kicad_sch (version 20250114) (generator "nxp0_campaign") (generator_version "10.0")
-  (uuid "20184792-3d68-42e7-b404-9d4e2e8898f5")
+(kicad_sch
+  (version 20231120)
+  (generator "nxp1")
+  (uuid 22222222-2222-4222-8222-222222222201)
   (paper "A3")
-  (title_block
-    (title "CPB0-O / PMIC / power tree")
-    (date "2026-09-18")
-    (rev "0.0.1-nxp0")
-    (company "gunnchOS3k / NXP-0")
-    (comment 1 "PLACEHOLDER — not symbol-complete")
-    (comment 2 "Public-collateral only; no NDA")
-    (comment 3 "CPB0_OPEN_READY_FOR_FAB=false")
-  )
-  (lib_symbols)
-  (text "PLACEHOLDER SHEET: PMIC / power tree\nFill from IMX95IEC/IMX95RM/UG10210 (account) + EVK cross-check.\nDo not invent ball maps."
-    (exclude_from_sim no) (at 50 50 0)
-    (effects (font (size 2 2)) (justify left bottom))
-    (uuid "a09bf350-9271-4d8c-8cdc-bbed1f3d72a9")
-  )
-  (sheet_instances
-    (path "/" (page "1"))
-  )
+  (title_block (title "02 PMIC PF09 + PF53") (date "2026-09-18") (rev "NXP1")
+    (comment 1 "Architecture: PF09 + PF5301 + PF5302 per EVK QSG")
+    (comment 2 "Candidate MPF0900AVNA1ES; OTP not frozen from EVK BOM"))
+  (text "Rails: see CPB0_OPEN_POWER_TREE.csv / CPB0_OPEN_POWER_SEQUENCE.csv"
+    (exclude_from_sim no) (at 25.4 25.4 0) (effects (font (size 2 2)) (justify left))
+    (uuid 22222222-2222-4222-8222-222222222202))
+  (sheet_instances ((path "/" (page "3"))))
 )
