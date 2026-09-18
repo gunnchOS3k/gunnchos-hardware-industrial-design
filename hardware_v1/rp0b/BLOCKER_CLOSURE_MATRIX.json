@@ -1,0 +1,84 @@
+{
+  "schema": "gunnchos.hardware_v1.hw1b.blocker_closure_matrix.v1",
+  "generated_at_utc": "2026-09-18T16:24:23Z",
+  "campaign": "HARDWARE_1_0B_RP0_COTS_BLOCKER_CLOSURE",
+  "starting_head": "bd65bc67b413597a7d5534bc8dddaa9d7513b0c3",
+  "blockers": [
+    {
+      "id": "EXT-COM-HPC-400PIN",
+      "classification": "STILL_VENDOR_GATED_FOR_RP0_B",
+      "also": [
+        "NOT_NEEDED_FOR_RP0_A"
+      ],
+      "rp0_a_blocking": false,
+      "rp0_b_blocking": true,
+      "evidence_path": "hardware_v1/reference_platform_0/RP0_A_COMPUTE_PLATFORM.md",
+      "rationale": "ADLINK COM-HPC Mini Base + mMTL COTS path enables RP0-A bring-up without a custom carrier. Authoritative COM-HPC Mini 400-pin net map for custom gunnchOS carrier remains vendor/PICMG gated; COTS reference board does not close custom pin-accurate fab."
+    },
+    {
+      "id": "EXT-DSXL-DUAL-EDP",
+      "classification": "CLOSED_BY_ARCHITECTURE_CHANGE",
+      "also": [],
+      "rp0_a_blocking": false,
+      "rp0_b_blocking": false,
+      "evidence_path": "hardware_v1/devices/ds_xl/DUAL_DISPLAY_ARCHITECTURE.md",
+      "rationale": "COM-HPC-mMTL family documents one native eDP + two DDI interfaces. DS-XL dual-display requirement retained as eDP + DDI/DP; no product requirement mandates two native eDP ports."
+    },
+    {
+      "id": "EXT-JHL8440-BALLMAP",
+      "classification": "STILL_VENDOR_GATED_FOR_RP0_B",
+      "also": [
+        "NOT_NEEDED_FOR_RP0_A"
+      ],
+      "rp0_a_blocking": false,
+      "rp0_b_blocking": true,
+      "evidence_path": "hardware_v1/devices/dock/CUSTOM_DOCK_VENDOR_COLLATERAL_REQUIREMENTS.md",
+      "rationale": "Public functional capability/package class may exist, but pin-accurate ball map for custom dock PCB is not public. RP0-A uses COTS USB4 dock."
+    },
+    {
+      "id": "EXT-JHL9040R-BALLMAP",
+      "classification": "STILL_VENDOR_GATED_FOR_RP0_B",
+      "also": [
+        "NOT_NEEDED_FOR_RP0_A"
+      ],
+      "rp0_a_blocking": false,
+      "rp0_b_blocking": true,
+      "evidence_path": "hardware_v1/devices/dock/CUSTOM_DOCK_VENDOR_COLLATERAL_REQUIREMENTS.md",
+      "rationale": "JHL9040R retimer ball map remains NDA/vendor-gated for custom fanout. Not required for RP0-A COTS dock behavioral validation."
+    },
+    {
+      "id": "UNRES-NRF54L15-FOOTPRINT",
+      "classification": "CLOSED_PUBLIC_EVIDENCE",
+      "also": [
+        "NOT_NEEDED_FOR_RP0_A"
+      ],
+      "rp0_a_blocking": false,
+      "rp0_b_blocking": false,
+      "rp0_b_note": "Wearable CSP47/HDI form-factor remains a separate feasibility gate; QFN48/DK evidence does not equal wearable geometry validation.",
+      "evidence_path": "hardware_v1/devices/rings/NRF54L15_PACKAGE_STRATEGY.md",
+      "rationale": "Nordic public nRF54L15 DK (PCA10156) uses QFN48; official hardware files zip checksummed (ed70a2233d009e7e4dd31a20f66527ef206b23bd357623850a9f3228a089e1d4). Closed for RP0-A / digital reference; CSP47 form-factor remains separate."
+    },
+    {
+      "id": "UNRES-FN990B40-AVL",
+      "classification": "CLOSED_PUBLIC_EVIDENCE",
+      "also": [],
+      "rp0_a_blocking": false,
+      "rp0_b_blocking": false,
+      "evidence_path": "hardware_v1/radio/FN990B40_RP0_A_AVL.md",
+      "rationale": "Exact MPN FN990B40W01T010300 live-verified on Rutronik distributor listing and Telit manufacturer family pages. DigiKey/Mouser live catalog scrape blocked (bot/403); treat DigiKey/Mouser as VERIFY_AT_PURCHASE. PRODUCT_CELLULAR_ANTENNA_DESIGN_PENDING=true."
+    },
+    {
+      "id": "OWNER-RP0-QUOTE-AUTH",
+      "classification": "OWNER_ACTION_REQUIRED",
+      "also": [
+        "NOT_NEEDED_FOR_RP0_A"
+      ],
+      "rp0_a_blocking": false,
+      "rp0_b_blocking": true,
+      "evidence_path": "hardware_v1/OWNER_ACTION_PACKET.md",
+      "rationale": "Reframed: preferred owner action is ORDER_RP0_A_COTS_BRINGUP_KIT (procurement packet ready; Cursor does not purchase). Owner quote/auth for custom RP0-B fab remains separate and cannot set READY_FOR_FAB.",
+      "superseded_next_action": "QUOTE_AND_BUILD_REFERENCE_PLATFORM_0",
+      "preferred_next_action": "ORDER_RP0_A_COTS_BRINGUP_KIT"
+    }
+  ]
+}

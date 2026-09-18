@@ -1,0 +1,9 @@
+sku,subsystem,manufacturer,MPN,description,qty,status,notes
+Edge_IO_Rings,MCU,Nordic Semiconductor,nRF54L15-class,BLE MCU mainline uplift,1,PENDING_VENDOR_CONFIRMATION,Exact orderable MPN pending
+Edge_IO_Rings,IMU,Bosch Sensortec,BMI270,6-axis IMU,1,ADOPTED_MAINLINE,Reconciled from prior BOM
+Edge_IO_Rings,Touch,OEM,cap_touch_controller_class,Capacitive/touch,1,AVL_PENDING,
+Edge_IO_Rings,PMIC,Nordic Semiconductor,npm1300-class,Charger+regulators,1,PENDING_VENDOR_CONFIRMATION,Confirm nRF54L15 pairing
+Edge_IO_Rings,Battery,OEM,qualified_LiPo_ring_cell,Qualified LiPo,1,PENDING_VENDOR_CONFIRMATION,UN38.3 at purchase
+Edge_IO_Rings,Charge,Mill-Max,pogo_cradle_class,Magnetic cradle contacts EVT,2,ADOPTED_MAINLINE,Inductive = experimental only
+Edge_IO_Rings,Antenna,Johanson,2450AT18A100-class,2.4GHz chip antenna,1,ADOPTED_MAINLINE,
+Edge_IO_Rings,Historical_MCU_NOT_MAINLINE,Nordic,nRF52840-QIAA-R,Prior digital package,0,HISTORICAL_ONLY,Not mixed into mainline qty

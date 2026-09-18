@@ -1,0 +1,23 @@
+{
+  "id": "EXP-ARM-IQX-001",
+  "branch": "hardware/exp-arm-iqx",
+  "title": "ARM IQX-class SoM vs custom AMD Platform Core v1",
+  "hypothesis": "ARM SoM reduces idle power and BOM cost at equal desk productivity vs owned custom AMD motherboard",
+  "baseline": "CUSTOM AMD Platform Core v1 (8840U/8845HS)",
+  "variant": "ARM IQX-class SoM (vendor TBD \u2014 PENDING_VENDOR_CONFIRMATION)",
+  "metrics": [
+    "idle_power_w",
+    "sustained_compile_time_s",
+    "thermal_skin_c",
+    "bom_delta_usd_quote",
+    "os_driver_gap_count",
+    "ownership_score"
+  ],
+  "promotion_gate": "All metrics meet or beat baseline on EVT sample n>=3 AND Device OS RC1 interface register shows zero P0 breaks; owner accepts reduced x86 ownership",
+  "not_in_main_bom": true,
+  "hierarchy": "REFERENCE_CONTROL_COMPARE",
+  "schema": "gunnchos.hardware_v1.experiment.v1",
+  "generated_at_utc": "2026-09-18T16:48:54Z",
+  "state": "EXPERIMENTAL_COMPARE",
+  "campaign": "HARDWARE_1_0C_CUSTOM_FIRST_MAINLINE_PIVOT"
+}

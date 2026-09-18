@@ -1,0 +1,20 @@
+{
+  "schema": "gunnchos.hardware_v1.campaign.v1",
+  "campaign": "HARDWARE_1_0_MASTER_CAMPAIGN",
+  "generated_at_utc": "2026-09-18T16:24:23Z",
+  "doctrine_pass": true,
+  "software_rc1_untouched": true,
+  "reconcile_paths": {
+    "digital_manufacturing": "DIGITAL_MANUFACTURING_READINESS.md",
+    "digital_to_physical": "DIGITAL_TO_PHYSICAL_HANDOFF.md",
+    "student_release": "device_designs/student_14_5/digital_release/INDEX.json",
+    "dsxl_release": "device_designs/ds_xl_coder/digital_release/INDEX.json",
+    "handheld_release": "device_designs/handheld_hybrid/digital_release/INDEX.json",
+    "rings_release": "device_designs/edge_io_rings/digital_release/INDEX.json",
+    "dock_bom": "device_designs/dock/bom/assembly_bom.csv",
+    "student_bom": "device_designs/student_14_5/bom/assembly_bom.csv",
+    "evt_dvt_pvt": "manufacturing/EVT_DVT_PVT_PLAN.md",
+    "com_hpc_decision": "docs/full_product_family/COM_HPC_FINAL_DECISION_CONT_IX.md",
+    "dock_arch": "docs/full_product_family/DOCK_ARCHITECTURE_FREEZE_USB4_TB4.md"
+  }
+}

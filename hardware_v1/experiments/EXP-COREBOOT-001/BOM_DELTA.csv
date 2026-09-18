@@ -1,0 +1,2 @@
+item,baseline,variant,qty_delta,class,notes
+compute_or_feature,Vendor-supported UEFI + AGESA on custom AMD motherboard,coreboot and/or AMD openSIL when production-capable for selected platform,0,EXPERIMENTAL,digital compare only; not purchased

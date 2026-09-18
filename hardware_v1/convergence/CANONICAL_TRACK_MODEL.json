@@ -1,0 +1,52 @@
+{
+  "schema": "gunnchos.hardware_v1.canonical_track_model.v1",
+  "generated_at_utc": "2026-09-18T17:46:17Z",
+  "campaign": "HARDWARE_1_0D_FOUR_TRACK_CONVERGENCE_MERGE_READINESS",
+  "rule": "Never use ambiguous 'mainline' without PRODUCT_MAINLINE or OPEN_ENGINEERING_MAINLINE qualifier",
+  "tracks": {
+    "PRODUCT_MAINLINE": {
+      "id": "AMD_CUSTOM_X86",
+      "purpose": [
+        "best product-performance target",
+        "x86 / Windows / game / professional software compatibility",
+        "custom board around Ryzen Embedded silicon",
+        "continues even if vendor collateral is temporarily unavailable"
+      ],
+      "path": "hardware_v1/custom_mainline/"
+    },
+    "OPEN_ENGINEERING_MAINLINE": {
+      "id": "NXP_IMX95_OPEN_CUSTOM",
+      "purpose": [
+        "maximum practical no-NDA board-level ownership",
+        "full custom application-processor motherboard learning",
+        "public design collateral",
+        "path to custom-board fabrication and EVT without AMD NDA dependency"
+      ],
+      "path": "hardware_v1/open_custom_nxp/"
+    },
+    "GREENFIELD_EXPERIMENT": {
+      "id": "GXE",
+      "purpose": [
+        "experience-first software/hardware co-design",
+        "custom kernel/runtime/app architecture",
+        "RISC-V/FPGA research",
+        "extreme-custom GXE-X subtrack"
+      ],
+      "path": "hardware_v1/convergence/GXE_HARDWARE_INTEGRATION_CONTRACT.md",
+      "implementation_in_this_repo": false
+    },
+    "REFERENCE_CONTROL": {
+      "id": "COM_HPC_AND_COTS",
+      "purpose": [
+        "known-good baseline",
+        "software compatibility control",
+        "fault isolation",
+        "performance comparison"
+      ],
+      "path": "hardware_v1/reference_platform_0/"
+    }
+  },
+  "non_equivalence": {
+    "NXP_IMX95_OPEN_CUSTOM_vs_AMD_CUSTOM_X86": "NXP proves board-level ownership/methodology; NOT claimed equivalent for Windows desktop, x86 software, PC gaming, Ryzen-class CPU/GPU, or USB4 unless separately implemented"
+  }
+}

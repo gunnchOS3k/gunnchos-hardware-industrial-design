@@ -102,3 +102,23 @@ validate-continuation-ix:
 	$(PYTHON) scripts/validate_continuation_ix.py
 release: continuation-ix
 	@echo Cont IX release artifacts in artifacts/continuation_ix_pre_evt/
+
+# Hardware v1.0 mainline campaign (digital architecture / EVT prep — not physical pass)
+PYTHON ?= python3
+.PHONY: hardware-v1-generate hardware-v1-validate hardware-v1-gates hardware-v1-report hardware-v1-all
+hardware-v1-generate:
+	$(PYTHON) scripts/generate_hardware_v1d_campaign.py
+
+hardware-v1-validate:
+	$(PYTHON) scripts/validate_hardware_v1.py
+
+hardware-v1-gates:
+	@test -f hardware_v1/GATES.json
+	@$(PYTHON) -c "import json; g=json.load(open('hardware_v1/GATES.json')); keys=['HW_ARCHITECTURE_BASELINE_MERGE_READY','FOUR_TRACK_MODEL_PASS','EXPERIENCE_FIRST_CO_DESIGN_DOCTRINE_PASS','AMD_PRODUCT_MAINLINE_PRESERVED','NXP_OPEN_CUSTOM_TRACK_DEFINED','GXE_INTEGRATION_BOUNDARY_DEFINED','REFERENCE_CONTROL_TRACK_DEFINED','EXPERIMENT_ISOLATION_PASS','SOFTWARE_RC1_BASELINES_UNTOUCHED','CUSTOM_MAINLINE_ARCHITECTURE_FROZEN','CUSTOM_PLATFORM_VENDOR_ACCESS_READY','CPB0_SCHEMATIC_READY','CPB0_PCB_READY','CPB0_READY_FOR_FAB','CUSTOM_MAINLINE_READY_FOR_EVT_BUILD','HARDWARE_V1_READY_FOR_EVT_BUILD','RP0_A_COTS_PROCUREMENT_PACKET_READY','RP0_A_READY_TO_ORDER','COM_HPC_IS_PRODUCT_MAINLINE','PRODUCT_MAINLINE','OPEN_ENGINEERING_MAINLINE','GREENFIELD_EXPERIMENT','REFERENCE_CONTROL','EVT_PENDING','DVT_PENDING','PVT_PENDING','PHYSICAL_HARDWARE_VALIDATED','CERTIFICATION_COMPLETE','MANUFACTURING_VALIDATED','NEXT_OWNER_ACTION','OPTIONAL_OWNER_ACTION','PARALLEL_OWNER_ACTION'];\
+[print(k+'='+str(g.get(k)).lower() if isinstance(g.get(k), bool) else k+'='+str(g.get(k))) for k in keys]"
+
+hardware-v1-report:
+	@test -f hardware_v1/REPORT_SECTION_17_HW1D_A_TO_T.md
+	@echo "Report: hardware_v1/REPORT_SECTION_17_HW1D_A_TO_T.md"
+
+hardware-v1-all: hardware-v1-generate hardware-v1-validate hardware-v1-gates hardware-v1-report
