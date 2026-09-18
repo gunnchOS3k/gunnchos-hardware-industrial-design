@@ -1,0 +1,13 @@
+(kicad_sch
+  (version 20231120)
+  (generator "nxp1")
+  (uuid 22222222-2222-4222-8222-222222222201)
+  (paper "A3")
+  (title_block (title "02 PMIC PF09 + PF53") (date "2026-09-18") (rev "NXP1")
+    (comment 1 "Architecture: PF09 + PF5301 + PF5302 per EVK QSG")
+    (comment 2 "Candidate MPF0900AVNA1ES; OTP not frozen from EVK BOM"))
+  (text "Rails: see CPB0_OPEN_POWER_TREE.csv / CPB0_OPEN_POWER_SEQUENCE.csv"
+    (exclude_from_sim no) (at 25.4 25.4 0) (effects (font (size 2 2)) (justify left))
+    (uuid 22222222-2222-4222-8222-222222222202))
+  (sheet_instances ((path "/" (page "3"))))
+)

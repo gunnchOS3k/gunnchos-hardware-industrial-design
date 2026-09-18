@@ -1,0 +1,78 @@
+{
+  "schema": "gunnchos.hw_dee.convergence_82_83.v1",
+  "generated_at_utc": "2026-09-18T20:04:25Z",
+  "purpose": "Rebind PR #83 NXP-1 CPB0-O EDA onto accepted Stream E baseline after #82 merge",
+  "repo": "gunnchOS3k/gunnchos-hardware-industrial-design",
+  "pr82": {
+    "number": 82,
+    "state": "MERGED",
+    "merge_commit": "3962d9eb9d3e0282f61f92c08dc6789961f0c48a",
+    "url": "https://github.com/gunnchOS3k/gunnchos-hardware-industrial-design/pull/82"
+  },
+  "pr83": {
+    "number": 83,
+    "branch": "hardware/nxp-open-cpb0-eda",
+    "pre_merge_head": "2d3beb807784ae0c2b0c5ebb16d4d28b5c8158f8",
+    "base": "main",
+    "url": "https://github.com/gunnchOS3k/gunnchos-hardware-industrial-design/pull/83",
+    "merge_strategy": "git merge --no-ff origin/main",
+    "keep_draft": true
+  },
+  "origin_main_at_rebind": "3962d9eb9d3e0282f61f92c08dc6789961f0c48a",
+  "worktree": ".worktrees/nxp-open-cpb0-eda",
+  "conflicts": [
+    {
+      "path": "Makefile",
+      "resolution": "UNION",
+      "detail": "Kept NXP-1 targets (nxp-open-*, cpb0-open-*) from #83 and validate-stream-f/bootstrap-stream-f from accepted main (#81/#82)."
+    },
+    {
+      "path": "hardware_v1/open_custom_nxp/READY_FOR_FAB_CHECKLIST.md",
+      "resolution": "NXP1_AUTHORITATIVE_PLUS_STREAM_E_NOTE",
+      "detail": "#83 NXP readiness checklist retained as authoritative; kept non-superseded Stream E note and fail-closed CPB0_OPEN_READY_FOR_FAB=false."
+    }
+  ],
+  "nxp1_state_preserved": {
+    "NXP1_GATES.json_unchanged_vs_pre_merge_head": true,
+    "CPB0_OPEN_READY_FOR_FAB": false,
+    "eda_cpb0_open_present": true,
+    "no_regression_to_stream_e_nxp_placeholders_as_authority": true
+  },
+  "gates_preserved_true": {
+    "MECHANICAL_DIGITAL_ENGINEERING_EXHAUSTED": true,
+    "PHYSICAL_VALIDATION_ENGINEERING_PREP_EXHAUSTED": true,
+    "CERTIFICATION_ENGINEERING_PREP_EXHAUSTED": true,
+    "MANUFACTURING_ENGINEERING_PREP_EXHAUSTED": true,
+    "NXP_OPEN_CUSTOM_DIGITAL_ENGINEERING_EXHAUSTED": true,
+    "AMD_PUBLIC_ENGINEERING_EXHAUSTED": true,
+    "RINGS_DIGITAL_ENGINEERING_EXHAUSTED": true,
+    "DOCK_DIGITAL_ENGINEERING_EXHAUSTED": true
+  },
+  "gates_fail_closed": {
+    "CPB0_OPEN_READY_FOR_FAB": false,
+    "PHYSICAL_HARDWARE_VALIDATED": false,
+    "CERTIFICATION_COMPLETE": false,
+    "MANUFACTURING_VALIDATED": false,
+    "RFQ_SENT": false
+  },
+  "validation": {
+    "validate-stream-f": "PASS",
+    "hardware-v1-validate": "PASS",
+    "nxp-open-audit": "PASS",
+    "nxp-open-validate": "PASS",
+    "nxp-open-gates": "PASS",
+    "cpb0-open-symbol": "PASS",
+    "cpb0-open-fab-audit": "FAIL_CLOSED_READINESS_FALSE_OK",
+    "cpb0_open_fab_audit_detail": "Tool ran; CPB0_OPEN_DIGITAL_FAB_AUDIT_PASS=false and CPB0_OPEN_READY_FOR_FAB=false (expected until UG10210/EVK BOM genuine readiness)."
+  },
+  "final_branch_sha": "87b75c55060d6a386b6e184333cef427976be78a",
+  "status_lines": {
+    "PR83_REBOUND_TO_ACCEPTED_MAIN": true,
+    "PR83_NXP1_STATE_PRESERVED": true,
+    "PR83_VALIDATION_PASS": true,
+    "PR83_MERGEABLE": true,
+    "CPB0_OPEN_READY_FOR_FAB": false,
+    "NEXT_OWNER_ACTION": "LOGIN_FETCH_UG10210_AND_EVK_BOM_HASH_PDFS"
+  },
+  "reconcile_commit": "87b75c55060d6a386b6e184333cef427976be78a"
+}

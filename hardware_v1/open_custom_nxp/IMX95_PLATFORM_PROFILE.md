@@ -1,22 +1,21 @@
 # i.MX95 platform profile (public-class)
 
-**Generated:** 2026-09-18T17:46:17Z  
-**Campaign:** `HARDWARE_1_0D_FOUR_TRACK_CONVERGENCE_MERGE_READINESS`  
-**Claim boundary:** architecture / control-plane baseline only — not physical pass, not certification, not fab release, not purchased, not GXE execution.
 
+**Generated:** 2026-09-18T18:55:43Z  
+**Campaign:** `NXP0_OPEN_CUSTOM_IMX95_IMPLEMENTATION_FOUNDATION`  
+**Claim boundary:** architecture / public-collateral implementation foundation only — not physical pass, not certification, not fab release, not purchased, not NDA, not GXE execution, not software RC1 change.
 
-## Silicon family
+## Silicon selection (CPB0-O)
 
-NXP **i.MX 95** applications processor family (public product page: https://www.nxp.com/products/i.MX95).
+**MIMX9596AVZXN** — 19×19 mm FCBGA (VZ), public EVK proximity IMX95LPD5EVK-19.
 
-## Public-class characteristics (architecture intent only)
+## Public-class characteristics
 
-- Heterogeneous AP + real-time / safety domains (see public RM / datasheet)
-- LPDDR memory class (exact topology pending design-guide rules)
-- High-speed SerDes / PCIe / USB / Ethernet class interfaces (SKU-dependent)
-- Display / camera pipeline suitable for embedded UI + vision learning boards
-- EdgeLock / secure-enclave class security features (public docs)
-- Industrial / commercial / automotive grade variants exist — selection PENDING_OWNER_DECISION
+- Heterogeneous AP + real-time / safety domains (IMX95IEC / IMX95RM)
+- LPDDR5 x32 class on 19×19 (up to 6400 MT/s per IMX95IEC)
+- 2× PCIe Gen3 x1, USB3 Type-C + USB2, 2×1GbE + 10GbE (19×19)
+- Display/camera MIPI class; EdgeLock Secure Enclave (Advanced Profile) public description
+- Industrial/commercial/automotive grades exist — CPB0-O uses documented EVK OPN pending Table-2 fuse verify
 
 ## Role vs PRODUCT_MAINLINE
 
@@ -29,6 +28,6 @@ NXP **i.MX 95** applications processor family (public product page: https://www.
 
 ## Non-claims
 
-- No pin-accurate ball map invented here
-- No fabricated power-sequence numbers
-- No “product mainline replacement” claim
+- No pin-accurate ball map completed in NXP-0
+- No fabricated power-sequence currents
+- No product-mainline replacement claim

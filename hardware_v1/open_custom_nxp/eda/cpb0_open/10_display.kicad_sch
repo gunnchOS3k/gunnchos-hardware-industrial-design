@@ -1,0 +1,22 @@
+(kicad_sch (version 20250114) (generator "nxp0_campaign") (generator_version "10.0")
+  (uuid "a8d79796-82e1-45cf-8e89-08c8452455a0")
+  (paper "A3")
+  (title_block
+    (title "CPB0-O / Display MIPI DSI")
+    (date "2026-09-18")
+    (rev "0.0.1-nxp0")
+    (company "gunnchOS3k / NXP-0")
+    (comment 1 "PLACEHOLDER — not symbol-complete")
+    (comment 2 "Public-collateral only; no NDA")
+    (comment 3 "CPB0_OPEN_READY_FOR_FAB=false")
+  )
+  (lib_symbols)
+  (text "PLACEHOLDER SHEET: Display MIPI DSI\nFill from IMX95IEC/IMX95RM/UG10210 (account) + EVK cross-check.\nDo not invent ball maps."
+    (exclude_from_sim no) (at 50 50 0)
+    (effects (font (size 2 2)) (justify left bottom))
+    (uuid "112c9dc5-be09-4c8d-8c0e-73678c7901f9")
+  )
+  (sheet_instances
+    (path "/" (page "1"))
+  )
+)

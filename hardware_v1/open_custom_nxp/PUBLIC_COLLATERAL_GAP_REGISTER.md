@@ -1,16 +1,19 @@
 # Public collateral gap register
 
-**Generated:** 2026-09-18T17:46:17Z  
-**Campaign:** `HARDWARE_1_0D_FOUR_TRACK_CONVERGENCE_MERGE_READINESS`  
-**Claim boundary:** architecture / control-plane baseline only — not physical pass, not certification, not fab release, not purchased, not GXE execution.
+**Generated:** 2026-09-18T18:50:15Z  
+**Campaign:** `NXP0_OPEN_CUSTOM_IMX95_IMPLEMENTATION_FOUNDATION`  
+**Claim boundary:** architecture / public-collateral implementation foundation only — not physical pass, not certification, not fab release, not purchased, not NDA, not GXE execution, not software RC1 change.
 
 
-| Gap ID | Description | Blocks | Severity | Owner path |
-|---|---|---|---|---|
-| GAP-HW-DESIGN-GUIDE | Hardware Design Guide appears account-gated on product page | net-accurate power/DDR rules for fab | HIGH | Owner NXP account login (Cursor does not accept NDA) |
-| GAP-RM-HASH | IMX95RM not hashed in-repo | reproducible design freeze | MED | Owner fetch + hash commit |
-| GAP-DS-HASH | Datasheet PDFs not hashed | AVL / OPN freeze | MED | Owner fetch + hash |
-| GAP-PACKAGE-SELECT | 15×15 vs 19×19 package not frozen | PCB outline / fanout | HIGH | Owner decision after public BSDL/IBIS review |
-| GAP-EVK-≠-CUSTOM | EVK lessons ≠ custom open-custom board pass | false-green risk | HIGH | Explicit methodology in EVT_PLAN |
 
-No gap may be closed by inventing vendor content.
+| Gap ID | Description | Classification | Blocks |
+|---|---|---|---|
+| GAP-UG10210 | Hardware Design Guide content not ingested (account login) | ACCOUNT_LOGIN_REQUIRED | detailed DDR skew/impedance; fab-ready |
+| GAP-ERRATA | IMX95_P21N errata not ingested | ACCOUNT_LOGIN_REQUIRED | bring-up risk closure |
+| GAP-BSDL-IBIS | 19x19 BSDL/IBIS not ingested | ACCOUNT_LOGIN_REQUIRED | SI/DFT pass claims |
+| GAP-BALLMAP | Package contact assignments not extracted into pinmux CSV | TOOLING_REQUIRED / EDA_PENDING | NXP_PUBLIC_PINMAP_UNDERSTOOD |
+| GAP-EVK-FILES | EVK schematic/layout binaries not hashed locally | ACCOUNT_LOGIN_REQUIRED | reference cross-check |
+| GAP-PMIC-OPN | Exact NXP-recommended PMIC OPN not frozen from public EVK BOM | EDA_PENDING | BOM freeze |
+| GAP-LOCAL-SHA | Datasheet/RM SHA-256 pending owner local fetch | TOOLING_REQUIRED | license-safe archive |
+
+No gap is classified as NDA-required at this time.

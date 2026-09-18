@@ -1,0 +1,5 @@
+rail,near_device,cap_class,qty_class,notes,status
+VDD_SOC,SoC,bulk_HF,TBD_per_guide,follow PF09/EVK when BOM known,PLAN
+VDD_ARM,SoC,bulk_HF,TBD_per_guide,AVP capable regulator,PLAN
+VDDQ_DDR,DRAM,HF,TBD,LPDDR5 0.5V,PLAN
+NVCC_BBSM,SoC,HF,TBD,first rail,PLAN

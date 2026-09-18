@@ -1,0 +1,22 @@
+(kicad_sch (version 20250114) (generator "nxp0_campaign") (generator_version "10.0")
+  (uuid "415a9d9d-8b21-43fb-8067-28fdf579603d")
+  (paper "A3")
+  (title_block
+    (title "CPB0-O / USB-C / USB2")
+    (date "2026-09-18")
+    (rev "0.0.1-nxp0")
+    (company "gunnchOS3k / NXP-0")
+    (comment 1 "PLACEHOLDER — not symbol-complete")
+    (comment 2 "Public-collateral only; no NDA")
+    (comment 3 "CPB0_OPEN_READY_FOR_FAB=false")
+  )
+  (lib_symbols)
+  (text "PLACEHOLDER SHEET: USB-C / USB2\nFill from IMX95IEC/IMX95RM/UG10210 (account) + EVK cross-check.\nDo not invent ball maps."
+    (exclude_from_sim no) (at 50 50 0)
+    (effects (font (size 2 2)) (justify left bottom))
+    (uuid "a8b7bdc1-c6cf-4962-aec3-a374ae0e6311")
+  )
+  (sheet_instances
+    (path "/" (page "1"))
+  )
+)

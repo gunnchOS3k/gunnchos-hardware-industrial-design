@@ -1,0 +1,22 @@
+(kicad_sch (version 20250114) (generator "nxp0_campaign") (generator_version "10.0")
+  (uuid "f8bc1f82-8191-44e2-9160-976f5503acec")
+  (paper "A3")
+  (title_block
+    (title "CPB0-O / Connectors")
+    (date "2026-09-18")
+    (rev "0.0.1-nxp0")
+    (company "gunnchOS3k / NXP-0")
+    (comment 1 "PLACEHOLDER — not symbol-complete")
+    (comment 2 "Public-collateral only; no NDA")
+    (comment 3 "CPB0_OPEN_READY_FOR_FAB=false")
+  )
+  (lib_symbols)
+  (text "PLACEHOLDER SHEET: Connectors\nFill from IMX95IEC/IMX95RM/UG10210 (account) + EVK cross-check.\nDo not invent ball maps."
+    (exclude_from_sim no) (at 50 50 0)
+    (effects (font (size 2 2)) (justify left bottom))
+    (uuid "68f8a6e4-8326-4a77-9e32-520e7cc72d89")
+  )
+  (sheet_instances
+    (path "/" (page "1"))
+  )
+)

@@ -1,0 +1,14 @@
+item_id,refdes,qty,manufacturer,MPN,description,package,rating,lifecycle,preferred_alternate,DNP,risk,public_source,stock_price
+SOC-001,U1,1,NXP,MIMX9596CVZXNAC,i.MX95 AP industrial 19x19,FCBGA-19x19,1.8GHz_class,active_verify,MIMX9596AVZXN_EVK_ALIAS,no,med,IMX95IEC_Table2,VERIFY_AT_PURCHASE
+PMIC-001,U2,1,NXP,MPF0900AVNA1ES,PF09 multi-channel PMIC candidate,HVQFN56,i.MX95_QM,active_verify,MPF0900AVNA2ES,no,high_otp,PF09_product_page,VERIFY_AT_PURCHASE
+REG-5301,U3,1,NXP,PF5301_OPN_PENDING,PF53 core regulator family,TBD,AVP,unknown,PF5302,no,high,EVK_QSG,VERIFY_AT_PURCHASE
+REG-5302,U4,1,NXP,PF5302_OPN_PENDING,PF53 regulator family,TBD,AVP,unknown,PF5301,no,high,EVK_QSG,VERIFY_AT_PURCHASE
+DDR-001,U5,1,PENDING,PENDING_EVK_BOM_OPN,LPDDR5 x32 16GB-class,FBGA,LPDDR5,unknown,—,no,high,EVK_QSG_capacity_only,VERIFY_AT_PURCHASE
+NOR-001,U6,1,PENDING,PENDING_SELECT,Octal SPI NOR 1Gb class,WSON/BGA,1.8V,active_verify,multi-source,no,med,EVK_QSG,VERIFY_AT_PURCHASE
+EC-001,U7,1,PENDING,PENDING_SELECT,Zephyr EC MCU,QFN/BGA,3.3V,active_verify,open_mcu,no,med,EC_arch,VERIFY_AT_PURCHASE
+M2-NVME,J1,1,PENDING,PENDING_SELECT,M.2 M-key,connector,3.3V,active_verify,—,no,low,arch,VERIFY_AT_PURCHASE
+M2-WIFI,J2,1,PENDING,PENDING_SELECT,M.2 E-key,connector,3.3V,active_verify,—,no,low,EVK_like,VERIFY_AT_PURCHASE
+M2-WWAN,J3,1,PENDING,PENDING_SELECT,M.2 B-key,connector,3.3V,active_verify,—,yes,low,optional,VERIFY_AT_PURCHASE
+USBC-001,J4,1,PENDING,PENDING_SELECT,USB-C + ESD,connector,—,active_verify,—,no,med,arch,VERIFY_AT_PURCHASE
+ETHPHY-001,U8 U9,2,PENDING,PENDING_SELECT,1G Ethernet PHY,QFN,—,active_verify,—,no,med,arch,VERIFY_AT_PURCHASE
+XTAL-32K,Y1,1,PENDING,PENDING_SELECT,32.768 kHz crystal,—,—,active_verify,—,no,low,IMX95IEC,VERIFY_AT_PURCHASE

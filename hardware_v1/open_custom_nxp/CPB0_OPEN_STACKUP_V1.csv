@@ -1,0 +1,15 @@
+layer,type,oz,dielectric_target,role
+1,SIGNAL,0.5,—,top escape
+2,GND,1,prepreg,ref
+3,SIGNAL,0.5,core,DDR DQ
+4,GND,1,prepreg,ref
+5,SIGNAL,0.5,core,DDR CA
+6,PWR,1,prepreg,VDD_SOC
+7,PWR,1,core,DDR/analog
+8,GND,1,prepreg,ref
+9,SIGNAL,0.5,core,SerDes
+10,GND,1,prepreg,ref
+11,SIGNAL,0.5,core,MIPI/LS
+12,GND,1,prepreg,ref
+13,PWR,1,core,3V3/1V8
+14,SIGNAL,0.5,—,bottom

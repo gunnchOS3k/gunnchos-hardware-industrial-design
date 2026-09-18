@@ -1,21 +1,10 @@
-# Schematic sheet plan
+# Schematic sheet plan (pointer)
 
-**Generated:** 2026-09-18T17:46:17Z  
-**Campaign:** `HARDWARE_1_0D_FOUR_TRACK_CONVERGENCE_MERGE_READINESS`  
-**Claim boundary:** architecture / control-plane baseline only — not physical pass, not certification, not fab release, not purchased, not GXE execution.
+**Generated:** 2026-09-18T18:54:56Z  
+**Campaign:** `NXP0_OPEN_CUSTOM_IMX95_IMPLEMENTATION_FOUNDATION`  
+**Claim boundary:** architecture / public-collateral implementation foundation only — not physical pass, not certification, not fab release, not purchased, not NDA, not GXE execution, not software RC1 change.
 
 
-| Sheet | Content |
-|---|---|
-| 01 | Block diagram / notes / claim boundary |
-| 02 | i.MX95 power + decoupling |
-| 03 | i.MX95 clocks/reset/boot |
-| 04 | LPDDR |
-| 05 | Storage |
-| 06 | USB / PCIe |
-| 07 | Display / camera |
-| 08 | EC / debug |
-| 09 | Connectors / mechanics |
 
-No net-accurate sheets claimed ready.
-
+Canonical CPB0-O sheet hierarchy: `CPB0_OPEN_SCHEMATIC_SHEET_PLAN.md`.
+EDA: `eda/cpb0_open/`.

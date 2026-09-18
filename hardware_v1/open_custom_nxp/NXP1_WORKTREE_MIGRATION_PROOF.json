@@ -1,0 +1,32 @@
+{
+  "schema": "gunnchos.hardware_v1.nxp1.worktree_migration_proof.v1",
+  "generated_at_utc": "2026-09-18T19:13:27Z",
+  "campaign": "NXP1_CPB0_OPEN_DIGITAL_EDA_CLOSURE",
+  "strategy": "dedicated_worktree_from_origin_main",
+  "original_working_tree": {
+    "path": "/Users/gunnchos/Downloads/gunnchos-7gc-research-product-spine/repos/gunnchos-hardware-industrial-design",
+    "branch": "cursor/supervisor-ready-portfolio-release-001",
+    "head": "5a93e261fdd8187341b94100c0df20eba6bc18b1",
+    "destructively_modified": false,
+    "unrelated_changes_preserved": true
+  },
+  "worktree": {
+    "path": "/Users/gunnchos/Downloads/gunnchos-7gc-research-product-spine/repos/gunnchos-hardware-industrial-design/.worktrees/nxp-open-cpb0-eda",
+    "branch": "hardware/nxp-open-cpb0-eda",
+    "base_ref": "origin/main",
+    "base_sha": "4a8aefb5fd6203842267f5adbd72b8ed324e1fac",
+    "expected_pr80_merge_sha": "4a8aefb5fd6203842267f5adbd72b8ed324e1fac",
+    "base_matches_pr80": true
+  },
+  "transfer": {
+    "nxp0_file_count_source": 72,
+    "nxp0_files_present_in_worktree": 72,
+    "nxp0_files_missing": [],
+    "makefile_nxp_targets_added": true,
+    "zero_loss": true
+  },
+  "validators_pre_nxp0_commit": {
+    "nxp_open_audit": "PASS",
+    "nxp_open_validate": "PASS"
+  }
+}
