@@ -1,32 +1,30 @@
-# RAUC A/B update vs vendor capsule/EC update
+# EXP-RAUC-001 comparison package
 
-**Generated:** 2026-09-18T16:24:23Z  
-**Campaign:** `HARDWARE_1_0_MASTER_CAMPAIGN`  
-**Claim boundary:** digital architecture / EVT preparation only — not physical pass, not certification, not fab release.
+**Generated:** 2026-09-18T16:48:54Z  
+**Campaign:** `HARDWARE_1_0C_CUSTOM_FIRST_MAINLINE_PIVOT`  
+**Claim boundary:** digital architecture / EVT preparation only — not physical pass, not certification, not fab release, not purchased.
 
-## Identity
-- Experiment ID: `EXP-RAUC-001`
-- Branch: `hardware/exp-rauc-update`
-- State: `EXPERIMENTAL_COMPARE`
-- `not_in_main_bom`: `True`
+
+## Title
+RAUC A/B vs vendor capsule/EC update
 
 ## Hypothesis
-RAUC improves field update reliability for rings/EC and optional host slotting
+RAUC improves update safety/ops for custom platforms vs vendor capsule-only flows
 
 ## Baseline (mainline)
-Vendor UEFI capsule + Zephyr DFU
+Vendor capsule + custom EC update orchestration
 
 ## Variant
-RAUC A/B (rings/EC primary; host optional)
+RAUC A/B
 
-## Measurable comparison criteria
-- `update_success_rate`
-- `rollback_success_rate`
-- `brick_rate`
-- `rc1_interface_breaks`
+## Metrics
+- update_success_rate
+- rollback_time_s
+- bandwidth
+- field_ops_complexity
 
 ## Promotion gate
-Rollback verified on EVT; no secret material in repo
+No P0 Device OS RC1 breaks; measured field-ops improvement
 
-## Non-claims
-No physical results fabricated. No quotes/lead times invented. No merge to mainline without gate.
+## Isolation
+`not_in_main_bom=true` — experimental parts must not mix into MAINLINE_CUSTOM with qty>0.

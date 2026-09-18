@@ -1,3 +1,2 @@
-change,subsystem,mpn_or_class,qty,note
-ADD,experiment_only,EXP-STUDENT-OLED-001_variant,1,EXPERIMENTAL — do not merge to mainline BOM
-REMOVE,none,—,0,Comparison only; mainline unchanged
+item,baseline,variant,qty_delta,class,notes
+compute_or_feature,IPS eDP panel on custom Student-MB-v1,OLED eDP panel class,0,EXPERIMENTAL,digital compare only; not purchased

@@ -1,3 +1,2 @@
-change,subsystem,mpn_or_class,qty,note
-ADD,experiment_only,EXP-DOCK-USB4-80-001_variant,1,EXPERIMENTAL — do not merge to mainline BOM
-REMOVE,none,—,0,Comparison only; mainline unchanged
+item,baseline,variant,qty_delta,class,notes
+compute_or_feature,CUSTOM_GUNNCHOS_DOCK_GEN1 USB4 40 (JHL8440 + JHL9040R class),USB4 80-class controller (vendor TBD — PENDING_VENDOR_CONFIRMATION),0,EXPERIMENTAL,digital compare only; not purchased
