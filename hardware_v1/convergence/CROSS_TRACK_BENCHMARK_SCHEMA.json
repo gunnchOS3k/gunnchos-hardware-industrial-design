@@ -1,0 +1,55 @@
+{
+  "schema": "gunnchos.hardware_v1.cross_track_benchmark.v1",
+  "generated_at_utc": "2026-09-18T17:46:17Z",
+  "campaign": "HARDWARE_1_0D_FOUR_TRACK_CONVERGENCE_MERGE_READINESS",
+  "forbid_overall_winner_score": true,
+  "required_identity": [
+    "workload_id",
+    "track",
+    "hardware_identity",
+    "runtime_target_id",
+    "provenance"
+  ],
+  "tracks_enum": [
+    "PRODUCT_MAINLINE_AMD_CUSTOM_X86",
+    "OPEN_ENGINEERING_NXP_IMX95_OPEN_CUSTOM",
+    "GREENFIELD_EXPERIMENT_GXE",
+    "REFERENCE_CONTROL_COM_HPC_AND_COTS"
+  ],
+  "metrics": [
+    "task_success",
+    "latency_ms_p50",
+    "latency_ms_p95",
+    "latency_ms_p99",
+    "energy_per_task_j",
+    "memory_peak_bytes",
+    "cpu_util_pct",
+    "gpu_util_pct",
+    "npu_util_pct",
+    "fpga_util_pct",
+    "network_bytes",
+    "storage_io_bytes",
+    "thermal_c",
+    "power_w_avg",
+    "user_interactions",
+    "accessibility_completion",
+    "recovery_behavior",
+    "compatibility_notes",
+    "manufacturing_complexity_score",
+    "serviceability_score"
+  ],
+  "example": {
+    "workload_id": "desk_compile_hello",
+    "track": "PRODUCT_MAINLINE_AMD_CUSTOM_X86",
+    "hardware_identity": "PlatformCore-v1/CPB0/revA/PENDING",
+    "runtime_target_id": "device-os/v1.0.0-rc.1",
+    "metrics": {
+      "task_success": false,
+      "note": "physical pending"
+    },
+    "provenance": {
+      "git_sha": "PENDING",
+      "claim_boundary": "architecture / control-plane baseline only \u2014 not physical pass, not certification, not fab release, not purchased, not GXE execution."
+    }
+  }
+}
