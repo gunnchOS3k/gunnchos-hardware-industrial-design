@@ -14,7 +14,7 @@
 ## B. branch / final SHA
 
 - Branch: `hardware/nxp-open-cpb0-collateral-unlock`
-- Final tip SHA: _(filled at commit/PR time)_
+- Final tip SHA: 
 
 ## C. owner collateral index
 
