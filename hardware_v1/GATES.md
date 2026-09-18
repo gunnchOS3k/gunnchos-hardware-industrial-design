@@ -79,3 +79,20 @@
 | `NEXT_GATE` | `None` |
 
 **Note:** Preferred: merge DRAFT #68 with a merge commit to accept the architecture/control-plane baseline. This does NOT mean physical hardware is ready. Optional: order RP0-A COTS control kit. Parallel: acquire AMD custom platform collateral. Cursor will not merge, purchase, or accept NDAs.
+
+
+## Stream F digital engineering exhaustion (prep gates)
+
+| Gate | Value | Meaning |
+|---|---|---|
+| `MECHANICAL_DIGITAL_ENGINEERING_EXHAUSTED` | TRUE | Section 15 digital mech package complete |
+| `PHYSICAL_VALIDATION_ENGINEERING_PREP_EXHAUSTED` | TRUE | Section 16 EVT/DVT/PVT packs+schemas ready |
+| `CERTIFICATION_ENGINEERING_PREP_EXHAUSTED` | TRUE | Section 17 SKU×market prep matrix ready |
+| `MANUFACTURING_ENGINEERING_PREP_EXHAUSTED` | TRUE | Section 18 CM/MES/PFMEA templates ready |
+| `ERGONOMIC_PASS` | FALSE | CAD cannot grant ergonomic pass |
+| `PHYSICALLY_VALIDATED` | FALSE | Lab execution pending |
+| `CERTIFICATION_COMPLETE` | FALSE | No marks claimed |
+| `RFQ_SENT` | FALSE | Owner transmits RFQs |
+
+Artifacts: `artifacts/digital_engineering_exhaustion/stream_f/`
+

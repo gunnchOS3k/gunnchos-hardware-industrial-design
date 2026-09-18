@@ -1,0 +1,55 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "gunnchos.evt_dvt_pvt.test_case.v1",
+  "type": "object",
+  "required": [
+    "id",
+    "phase",
+    "sku",
+    "objective",
+    "method",
+    "pass_criteria",
+    "evidence_schema_ref",
+    "physical_pass"
+  ],
+  "properties": {
+    "id": {
+      "type": "string"
+    },
+    "phase": {
+      "enum": [
+        "EVT",
+        "DVT",
+        "PVT"
+      ]
+    },
+    "sku": {
+      "type": "string"
+    },
+    "objective": {
+      "type": "string"
+    },
+    "method": {
+      "type": "string"
+    },
+    "instruments": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "pass_criteria": {
+      "type": "string"
+    },
+    "evidence_schema_ref": {
+      "type": "string"
+    },
+    "physical_pass": {
+      "type": "boolean",
+      "const": false
+    },
+    "digital_prep_complete": {
+      "type": "boolean"
+    }
+  }
+}
