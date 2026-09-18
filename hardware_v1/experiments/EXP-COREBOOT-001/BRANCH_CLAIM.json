@@ -1,0 +1,10 @@
+{
+  "branch": "hardware/exp-coreboot",
+  "experiment_id": "EXP-COREBOOT-001",
+  "title": "coreboot vs vendor UEFI",
+  "base": "hardware/v1-mainline-ready-for-evt",
+  "base_sha": "bd65bc67b413597a7d5534bc8dddaa9d7513b0c3",
+  "state": "EXPERIMENTAL_COMPARE",
+  "not_in_main_bom": true,
+  "comparison_package": "hardware_v1/experiments/EXP-COREBOOT-001/COMPARISON_PACKAGE.md"
+}
