@@ -1,6 +1,7 @@
 # Start Here — gunnchos Hardware Industrial Design
 
 1. Read README portfolio sections
+1b. Read [hardware_v1/README.md](../hardware_v1/README.md) — Hardware v1.0 mainline EVT architecture (digital); `make hardware-v1-validate`
 2. Read [DIGITAL_MANUFACTURING_READINESS.md](../DIGITAL_MANUFACTURING_READINESS.md) — digital packet only; fabrication stays PHYSICAL_PENDING
 2b. Read [DIGITAL_TO_PHYSICAL_HANDOFF.md](../DIGITAL_TO_PHYSICAL_HANDOFF.md) — Student 14.5 / Handheld / DS-XL / Rings boundary
 3. Run `make validate-digital-mfg`

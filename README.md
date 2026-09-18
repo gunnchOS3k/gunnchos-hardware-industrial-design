@@ -4,6 +4,8 @@ Industrial and electrical design source of truth for the **gunnchOS3k** first-pa
 
 > **Current release/state:** `PHYSICAL_PENDING` — design/BOM/RFQ *packets* exist; no fab, no certification, no RFQ send from Cursor.
 
+> **Hardware v1.0 mainline (this campaign):** see [`hardware_v1/`](hardware_v1/README.md) — mainline EVT architecture + isolated experimental comparison tracks. Gates: `HARDWARE_V1_READY_FOR_EVT_BUILD=false`, `REFERENCE_PLATFORM_0_READY_FOR_FAB=false`. Owner next: `QUOTE_AND_BUILD_REFERENCE_PLATFORM_0`. Validate with `make hardware-v1-validate`.
+
 Ecosystem portal: [gunnchos-research-portal](https://github.com/gunnchOS3k/gunnchos-research-portal) · Product charter: [gunnchOS3k_PRODUCT_CHARTER.md](https://github.com/gunnchOS3k/gunnchos-7gc-ai-ran-field-kit/blob/main/program/charter/gunnchOS3k_PRODUCT_CHARTER.md)
 
 ## What is this?

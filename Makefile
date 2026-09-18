@@ -102,3 +102,22 @@ validate-continuation-ix:
 	$(PYTHON) scripts/validate_continuation_ix.py
 release: continuation-ix
 	@echo Cont IX release artifacts in artifacts/continuation_ix_pre_evt/
+
+# Hardware v1.0 mainline campaign (digital architecture / EVT prep — not physical pass)
+PYTHON ?= python3
+.PHONY: hardware-v1-generate hardware-v1-validate hardware-v1-gates hardware-v1-report hardware-v1-all
+hardware-v1-generate:
+	$(PYTHON) scripts/generate_hardware_v1_campaign.py
+
+hardware-v1-validate:
+	$(PYTHON) scripts/validate_hardware_v1.py
+
+hardware-v1-gates:
+	@test -f hardware_v1/GATES.json
+	@$(PYTHON) -c "import json; g=json.load(open('hardware_v1/GATES.json')); print('HARDWARE_V1_READY_FOR_EVT_BUILD='+str(g['HARDWARE_V1_READY_FOR_EVT_BUILD']).lower()); print('REFERENCE_PLATFORM_0_READY_FOR_FAB='+str(g['REFERENCE_PLATFORM_0_READY_FOR_FAB']).lower()); print('EVT_PENDING='+str(g['EVT_PENDING']).lower()); print('DVT_PENDING='+str(g['DVT_PENDING']).lower()); print('PVT_PENDING='+str(g['PVT_PENDING']).lower()); print('PHYSICAL_HARDWARE_VALIDATED='+str(g['PHYSICAL_HARDWARE_VALIDATED']).lower()); print('CERTIFICATION_COMPLETE='+str(g['CERTIFICATION_COMPLETE']).lower()); print('MANUFACTURING_VALIDATED='+str(g['MANUFACTURING_VALIDATED']).lower()); print('NEXT_OWNER_ACTION='+str(g.get('NEXT_OWNER_ACTION'))); print('NEXT_GATE='+str(g.get('NEXT_GATE')))"
+
+hardware-v1-report:
+	@test -f hardware_v1/REPORT_SECTION_33_A_TO_Z.md
+	@echo "Report: hardware_v1/REPORT_SECTION_33_A_TO_Z.md"
+
+hardware-v1-all: hardware-v1-generate hardware-v1-validate hardware-v1-gates hardware-v1-report

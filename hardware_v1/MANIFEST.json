@@ -1,0 +1,408 @@
+{
+  "schema": "gunnchos.hardware_v1.manifest.v1",
+  "generated_at_utc": "2026-09-18T16:02:19Z",
+  "campaign": "HARDWARE_1_0_MASTER_CAMPAIGN",
+  "file_count": 80,
+  "files": [
+    {
+      "path": "hardware_v1/GATES.json",
+      "sha256": "7cf24e8907683a04b1fabb3832ebb55b7e24b8add09ce7d6d4dbbec7cd6ad15f",
+      "bytes": 2595
+    },
+    {
+      "path": "hardware_v1/GATES.md",
+      "sha256": "cad28aa488b4539e07c8416a900d87ec443f471861c975907df20bd30d2fabdf",
+      "bytes": 1215
+    },
+    {
+      "path": "hardware_v1/MANIFEST.json",
+      "sha256": "42901a6f94eaba355e417b61d23700fb2609d8aefb0256f564040167bc55f10f",
+      "bytes": 14435
+    },
+    {
+      "path": "hardware_v1/OWNER_ACTION_PACKET.md",
+      "sha256": "cef551c5ac88cb4996891a16e3ed8876dde2a476aa875f24e38d5857986ba3b5",
+      "bytes": 1575
+    },
+    {
+      "path": "hardware_v1/README.md",
+      "sha256": "4dd5e5f218d5dd3c62e14b53d694897040db27b569312d953c1d59dc81cdefde",
+      "bytes": 566
+    },
+    {
+      "path": "hardware_v1/REPORT_SECTION_33_A_TO_Z.md",
+      "sha256": "1cfd80d0cf367ca60460e8658e000e9c2f294733e526fb3e2700b4a0f345c73a",
+      "bytes": 2288
+    },
+    {
+      "path": "hardware_v1/SOFTWARE_RC1_INTERFACE_IMPACT_REGISTER.json",
+      "sha256": "3b0b6e9c6b90dff01f9b1251ae5d2a1232cada6974b856f202b3734d5bfa8d6f",
+      "bytes": 177
+    },
+    {
+      "path": "hardware_v1/SOFTWARE_RC1_INTERFACE_IMPACT_REGISTER.md",
+      "sha256": "137ccb8d1e07be8411ffd4f2d0e11113dc5dc65c3cd5c9148a901a8c2459caac",
+      "bytes": 1240
+    },
+    {
+      "path": "hardware_v1/bom/AVL.md",
+      "sha256": "7288e371b8d68191e91d765d299b0392a93201dc6a96f9a6a91befb826b6e396",
+      "bytes": 855
+    },
+    {
+      "path": "hardware_v1/bom/MAINLINE_BOM_INDEX.md",
+      "sha256": "1f275df80be40c298dd0d1c46b6f21ad9b066d44b695465362452a628ff636f4",
+      "bytes": 1028
+    },
+    {
+      "path": "hardware_v1/bom/handheld_evt_mule_bom.csv",
+      "sha256": "3e8dd1fc5ff24b776340c6375e6f628db327d00db3089fa43040f82a303475be",
+      "bytes": 1014
+    },
+    {
+      "path": "hardware_v1/bom/rings_mainline_bom.csv",
+      "sha256": "3b5765df90028251c86d7af16856b6f3b8aac3d929fe404eaad85b78b04f7372",
+      "bytes": 968
+    },
+    {
+      "path": "hardware_v1/compliance/COMPLIANCE.md",
+      "sha256": "4f301c1a88ef0ee60624151a70788b1821321299c035b435f6ba6f4be0357837",
+      "bytes": 470
+    },
+    {
+      "path": "hardware_v1/contracts/OS_HARDWARE_V1_CONTRACT.json",
+      "sha256": "ba8010191e8d9eb0a4a28eee572806647fd753d4d17520350784099b79a7e832",
+      "bytes": 176
+    },
+    {
+      "path": "hardware_v1/contracts/OS_HARDWARE_V1_CONTRACT.md",
+      "sha256": "ea339377cad0fa04aedf189ee7bded55a134a08d084552ad292df6bda379529e",
+      "bytes": 1328
+    },
+    {
+      "path": "hardware_v1/control/CAMPAIGN_CONTROL_AUDIT.json",
+      "sha256": "b3518e5cdb2814ebae3fcc871d481c2bab812b599244fd9fa5b6f5a90a2b17f8",
+      "bytes": 1035
+    },
+    {
+      "path": "hardware_v1/control/CAMPAIGN_CONTROL_AUDIT.md",
+      "sha256": "668887e4617bc49641b727a12be5c832423cc360c11c66dc599a007d9a01990c",
+      "bytes": 1946
+    },
+    {
+      "path": "hardware_v1/decisions/DECISION_LEDGER.json",
+      "sha256": "c747d53b7e491c282223b3f5fa8d4ea77e4dd1aa91fb226da49281ff9126ad3f",
+      "bytes": 6935
+    },
+    {
+      "path": "hardware_v1/decisions/DECISION_LEDGER.md",
+      "sha256": "0b6932c5939270c679263a2c998f4b4dbe3c2356542cfca30c52e189f4375a9c",
+      "bytes": 2788
+    },
+    {
+      "path": "hardware_v1/dock/DOCK_PRD.md",
+      "sha256": "d1ddf565813db0e72aa267c27fbcb282d94c5187eb831ea210de779151ff34c9",
+      "bytes": 547
+    },
+    {
+      "path": "hardware_v1/electrical/ELECTRICAL.md",
+      "sha256": "0911f8fbf44cecf48d8a380ea99b788f09b427a15d27a62e6d91113ce6c74b2a",
+      "bytes": 499
+    },
+    {
+      "path": "hardware_v1/experiments/EXP-ARM-IQX-001/BOM_DELTA.csv",
+      "sha256": "2fd5c4244da302304ae466a78c7ca4e817db67de31e664bf843dc49cccca4518",
+      "bytes": 185
+    },
+    {
+      "path": "hardware_v1/experiments/EXP-ARM-IQX-001/COMPARISON_PACKAGE.json",
+      "sha256": "234eb1f7f46b7ccf8cf231deb447fd4bf0de0fae2b79027b4b6acf0c881c55ee",
+      "bytes": 793
+    },
+    {
+      "path": "hardware_v1/experiments/EXP-ARM-IQX-001/COMPARISON_PACKAGE.md",
+      "sha256": "b3aafa3ccc210d0105edc1abfcde3b02fc190a7313722b0feaf15b1827aef894",
+      "bytes": 1013
+    },
+    {
+      "path": "hardware_v1/experiments/EXP-ARM-IQX-001/METRICS.md",
+      "sha256": "036f434ddb0713c5b0a824a9519980829612e12f375f6a3a5cdc67d05395fce1",
+      "bytes": 643
+    },
+    {
+      "path": "hardware_v1/experiments/EXP-COREBOOT-001/BOM_DELTA.csv",
+      "sha256": "d702167d151afc4025e21f47e4c4b4e8d1366180b15630c5a318003db55b6fd6",
+      "bytes": 186
+    },
+    {
+      "path": "hardware_v1/experiments/EXP-COREBOOT-001/COMPARISON_PACKAGE.json",
+      "sha256": "cc6856af9296229d06cc3a4280393885d542fea29330147718ecb6ba9bb6436e",
+      "bytes": 656
+    },
+    {
+      "path": "hardware_v1/experiments/EXP-COREBOOT-001/COMPARISON_PACKAGE.md",
+      "sha256": "66fe486e5b3e1301182122c2fc13f2f4193dcf972fac9825a1aac65af002058a",
+      "bytes": 882
+    },
+    {
+      "path": "hardware_v1/experiments/EXP-COREBOOT-001/METRICS.md",
+      "sha256": "2fea8df31e5b135ea94d806f01312ae6fd5bd1db4a0abe9fdcb4c6b5947cedf3",
+      "bytes": 588
+    },
+    {
+      "path": "hardware_v1/experiments/EXP-DOCK-USB4-80-001/BOM_DELTA.csv",
+      "sha256": "f5144e4ba15505d3f99a1d74ffa5cc2ab7c8632352d4b2f0ad9ca75efd637451",
+      "bytes": 190
+    },
+    {
+      "path": "hardware_v1/experiments/EXP-DOCK-USB4-80-001/COMPARISON_PACKAGE.json",
+      "sha256": "17b0b20d7d35e7d563096c29ebafe0ac1217c46580256d7a6edb06758a6acbd4",
+      "bytes": 722
+    },
+    {
+      "path": "hardware_v1/experiments/EXP-DOCK-USB4-80-001/COMPARISON_PACKAGE.md",
+      "sha256": "b50a02ff5cc342cca291cf1854d98a5fd6e4a1092fd980100139e79bb3587894",
+      "bytes": 945
+    },
+    {
+      "path": "hardware_v1/experiments/EXP-DOCK-USB4-80-001/METRICS.md",
+      "sha256": "d9fb6e0ee66a3c083bf737c459aed0b709ba527d799eb0972ed3e2e433c336df",
+      "bytes": 576
+    },
+    {
+      "path": "hardware_v1/experiments/EXP-DSXL-OLED-HYBRID-001/BOM_DELTA.csv",
+      "sha256": "be315c84320e5ba7b5eb9b2a89c38b8822a8c9e807e588f800fc6ad7884c0649",
+      "bytes": 194
+    },
+    {
+      "path": "hardware_v1/experiments/EXP-DSXL-OLED-HYBRID-001/COMPARISON_PACKAGE.json",
+      "sha256": "eaaf97eefafd4f39ae0f32bff89c113256117501c1d8c6c96d40d3632ea44e8c",
+      "bytes": 672
+    },
+    {
+      "path": "hardware_v1/experiments/EXP-DSXL-OLED-HYBRID-001/COMPARISON_PACKAGE.md",
+      "sha256": "6b8efc2bb5a9dfb3e64bfe6b61bfcda5f9fae40a056188e93a05c7d033209f92",
+      "bytes": 898
+    },
+    {
+      "path": "hardware_v1/experiments/EXP-DSXL-OLED-HYBRID-001/METRICS.md",
+      "sha256": "dcf759373d0cd0f911ad3e4cdf09c4d19317fab4fdb670d47fc0a18209039209",
+      "bytes": 580
+    },
+    {
+      "path": "hardware_v1/experiments/EXP-RAUC-001/BOM_DELTA.csv",
+      "sha256": "4373b7173401328b640163aa65c908cf77337261f0d5f9bf0a47c165dc9c6a97",
+      "bytes": 182
+    },
+    {
+      "path": "hardware_v1/experiments/EXP-RAUC-001/COMPARISON_PACKAGE.json",
+      "sha256": "1459c3bc3c6ee891804fc86a25e826c81d5d390cf15a20cc9f26dcbcf62d7aa6",
+      "bytes": 687
+    },
+    {
+      "path": "hardware_v1/experiments/EXP-RAUC-001/COMPARISON_PACKAGE.md",
+      "sha256": "63315fd279539259654aeea1c414d14f2cd8c5a67a88efe761f6a3a04d91b21b",
+      "bytes": 913
+    },
+    {
+      "path": "hardware_v1/experiments/EXP-RAUC-001/METRICS.md",
+      "sha256": "bcf2ee99102ef1a22c11d4f009045506c1ab157c0f2434b591b115701dd05cca",
+      "bytes": 578
+    },
+    {
+      "path": "hardware_v1/experiments/EXP-RINGS-INDUCTIVE-001/BOM_DELTA.csv",
+      "sha256": "e66d2ff4c0c0351ac1772c18b99b0b1d2b6cee16069c271327f3bb10d528343b",
+      "bytes": 193
+    },
+    {
+      "path": "hardware_v1/experiments/EXP-RINGS-INDUCTIVE-001/COMPARISON_PACKAGE.json",
+      "sha256": "c80ff726292aca1cea3c412c7c9f52517902e1f0a7c581c86007d31c37ec1e21",
+      "bytes": 722
+    },
+    {
+      "path": "hardware_v1/experiments/EXP-RINGS-INDUCTIVE-001/COMPARISON_PACKAGE.md",
+      "sha256": "2140d0c388540204e4ae13c8445759f1c66338e1703bdd0a5c5bced5973446a1",
+      "bytes": 948
+    },
+    {
+      "path": "hardware_v1/experiments/EXP-RINGS-INDUCTIVE-001/METRICS.md",
+      "sha256": "1a8cd2f8e49a5c772502d18ec800a52087a68f286e6f1f267c0b627af3d708bd",
+      "bytes": 582
+    },
+    {
+      "path": "hardware_v1/experiments/EXP-RINGS-SEMG-001/BOM_DELTA.csv",
+      "sha256": "128693f6135b3bb812e8269eda1cd1f754ee82ad3d687b99570050386fabe98a",
+      "bytes": 188
+    },
+    {
+      "path": "hardware_v1/experiments/EXP-RINGS-SEMG-001/COMPARISON_PACKAGE.json",
+      "sha256": "4fd90067bee211cb14eb6a531de0bcfea59c36645802fb54f10cfc7a04050c33",
+      "bytes": 675
+    },
+    {
+      "path": "hardware_v1/experiments/EXP-RINGS-SEMG-001/COMPARISON_PACKAGE.md",
+      "sha256": "cba17c5118ef553e1768ef9102137cc0c5b972a4f1bf9fdaab9c7ccad62bc828",
+      "bytes": 901
+    },
+    {
+      "path": "hardware_v1/experiments/EXP-RINGS-SEMG-001/METRICS.md",
+      "sha256": "d4b318e7b51971417942899b081490b591b90588c57244e1469b408d0e6c28a3",
+      "bytes": 577
+    },
+    {
+      "path": "hardware_v1/experiments/EXP-STUDENT-OLED-001/BOM_DELTA.csv",
+      "sha256": "6ced2e4eb1cf6e752fafcc3de7b5ae86d9b951def3e998be3defd8eab7f450eb",
+      "bytes": 190
+    },
+    {
+      "path": "hardware_v1/experiments/EXP-STUDENT-OLED-001/COMPARISON_PACKAGE.json",
+      "sha256": "09ab806db5941e4c18e9257b25ef3e6b6e5b8b464ef327daa9f93a858bfcd83f",
+      "bytes": 651
+    },
+    {
+      "path": "hardware_v1/experiments/EXP-STUDENT-OLED-001/COMPARISON_PACKAGE.md",
+      "sha256": "578d9474838c77b2dcbe73842f0618d6bd26b3f00a77176082c5cf8d36087a08",
+      "bytes": 874
+    },
+    {
+      "path": "hardware_v1/experiments/EXP-STUDENT-OLED-001/METRICS.md",
+      "sha256": "5e6ad660ea0fad1c422a74600bdbe529691131c692f5e0c92cb4a702b320f680",
+      "bytes": 623
+    },
+    {
+      "path": "hardware_v1/experiments/REGISTRY.json",
+      "sha256": "6740ff33a79e66805e89db219027083e93fc11390f6d7a3493f86e01822c9f0f",
+      "bytes": 5178
+    },
+    {
+      "path": "hardware_v1/experiments/REGISTRY.md",
+      "sha256": "12eac76e02d506961b39f3f78de16cbdaad17a621b9707776c2af15dd41b1d8c",
+      "bytes": 1726
+    },
+    {
+      "path": "hardware_v1/firmware/FIRMWARE_SECURITY.md",
+      "sha256": "2701b5f28fc21455508ebd40392baf30de8463b44446fd1f8f897a0aadc18a4e",
+      "bytes": 515
+    },
+    {
+      "path": "hardware_v1/human_factors/HUMAN_FACTORS.md",
+      "sha256": "9b50e525557981ae8daa15bfaca0c6200c5bba416aa2997f3bf45d908fb3aaa0",
+      "bytes": 567
+    },
+    {
+      "path": "hardware_v1/icd/ICD_dock.md",
+      "sha256": "8577caf3ce3921415326e695e2baab2f4df56211d31efc9074d9baa1f770ab84",
+      "bytes": 501
+    },
+    {
+      "path": "hardware_v1/icd/ICD_ds_xl_coder.md",
+      "sha256": "fbfc6ba4a52ef8dfa476a5ed958657291b95b088cee663488bc09bf3aedd7dbc",
+      "bytes": 515
+    },
+    {
+      "path": "hardware_v1/icd/ICD_edge_io_rings.md",
+      "sha256": "804067e45f99bd2829090c1e2e46e0e3c24fe32af3028ad3cd7ff35958002cb1",
+      "bytes": 519
+    },
+    {
+      "path": "hardware_v1/icd/ICD_handheld_hybrid.md",
+      "sha256": "cc3d1fbd85d59e0b6445cb6b476cc81cffd3b6dfc617016ebaccff3d28ce041f",
+      "bytes": 523
+    },
+    {
+      "path": "hardware_v1/icd/ICD_student_14_5.md",
+      "sha256": "43b7b46dfb405e6e5997161773c425dc088488d5eee9c52c7e5c51e323bf5c59",
+      "bytes": 517
+    },
+    {
+      "path": "hardware_v1/manufacturing/MANUFACTURING.md",
+      "sha256": "0347fd38b5db64516d05c5cca3e9d992043216699707a07e31588707f3a45f97",
+      "bytes": 544
+    },
+    {
+      "path": "hardware_v1/matrices/DVT_MATRIX.md",
+      "sha256": "4b9d839172b09b81b8012adde3ed0f3bcefedc0173ae54ab5ac0002bc59b4e42",
+      "bytes": 673
+    },
+    {
+      "path": "hardware_v1/matrices/EVT_MATRIX.md",
+      "sha256": "a393366f4938a7c6276e633e94480699099529f08c469b03d401a4e4d527f105",
+      "bytes": 673
+    },
+    {
+      "path": "hardware_v1/matrices/PVT_MATRIX.md",
+      "sha256": "c1e03ad59eb5ce39ee6e02a59f95581c2b73e074e2e27df2f2bb43bf7e514aa1",
+      "bytes": 673
+    },
+    {
+      "path": "hardware_v1/mechanical/MECHANICAL.md",
+      "sha256": "8ca5ea2b778400de3bc865460a4164e8c3c010df2baffc8ac3aa5ec4766e1d7f",
+      "bytes": 481
+    },
+    {
+      "path": "hardware_v1/power/POWER_BUDGET.md",
+      "sha256": "a267b804c00116c8c2998254f3b4f3b1b8c34015f658666389070660dd051a0b",
+      "bytes": 556
+    },
+    {
+      "path": "hardware_v1/prd/PRD_dock.md",
+      "sha256": "ef34c2446c543926620ade1b564274b6d41722778208330bf62d9e41c1366afa",
+      "bytes": 492
+    },
+    {
+      "path": "hardware_v1/prd/PRD_ds_xl_coder.md",
+      "sha256": "5aa78163eb9985d96df73ebbd444b87e4f79e096e28feaee85964819fabb2ff8",
+      "bytes": 491
+    },
+    {
+      "path": "hardware_v1/prd/PRD_edge_io_rings.md",
+      "sha256": "f28fd84bb7b1b91b7d27bde576fe1a171b270d05fa3bee5ec135500ec0b71da1",
+      "bytes": 501
+    },
+    {
+      "path": "hardware_v1/prd/PRD_handheld_hybrid.md",
+      "sha256": "9c7f029c80fed3ddf2985ee9093755b2c9d43e5b44d971853d68fc17b8fe36e3",
+      "bytes": 544
+    },
+    {
+      "path": "hardware_v1/prd/PRD_student_14_5.md",
+      "sha256": "34b31e613d0abddc6358c56a68fb40c55f2fc55ae82398e21867b4db7ea073db",
+      "bytes": 498
+    },
+    {
+      "path": "hardware_v1/quality/DFMEA.md",
+      "sha256": "7298eec4ac6fb867963ec2d7a09028cbb8ff8003cd9d00394fe2d3f30e382675",
+      "bytes": 1051
+    },
+    {
+      "path": "hardware_v1/reference_platform_0/REFERENCE_PLATFORM_0.json",
+      "sha256": "dc9425a74bf4dfa52f284a29d4a205bfcee94d1c1fd38511801bbaf1736bcc80",
+      "bytes": 351
+    },
+    {
+      "path": "hardware_v1/reference_platform_0/REFERENCE_PLATFORM_0.md",
+      "sha256": "0f12721c387eb09625971a4e4b4aefa0db14b02194c876c187e6a76ad3199595",
+      "bytes": 748
+    },
+    {
+      "path": "hardware_v1/rf/RF_MAINLINE.md",
+      "sha256": "196374fba90b762c0bee7eb4921ee9565b9b30511dd969da6c121a74532a82e3",
+      "bytes": 719
+    },
+    {
+      "path": "hardware_v1/rings/RINGS_PRD.md",
+      "sha256": "9289eec46e712bf780f24cd0caf6066eda34e3286a6f48bef4e8f30996388e50",
+      "bytes": 602
+    },
+    {
+      "path": "hardware_v1/sourcing/SOURCING.md",
+      "sha256": "1db5daa2328ac08cd36ad696b5a3fc783f65ef893161df05deeb261f64993d17",
+      "bytes": 469
+    },
+    {
+      "path": "hardware_v1/thermal/THERMAL.md",
+      "sha256": "7b2b545298fa9633a91fdd003581f24c068c7b67c4b51049a9330e0a93da3caf",
+      "bytes": 539
+    }
+  ]
+}

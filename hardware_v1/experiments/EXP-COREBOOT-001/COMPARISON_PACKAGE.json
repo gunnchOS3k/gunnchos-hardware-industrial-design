@@ -1,0 +1,19 @@
+{
+  "id": "EXP-COREBOOT-001",
+  "branch": "hardware/exp-coreboot",
+  "title": "coreboot vs vendor UEFI",
+  "hypothesis": "coreboot improves auditability without breaking Device OS RC1 boot contract",
+  "baseline": "Vendor UEFI on COM-HPC",
+  "variant": "coreboot + LinuxBoot or equivalent",
+  "metrics": [
+    "secure_boot_chain_intact",
+    "boot_time_s",
+    "capsule_update_compat",
+    "rc1_interface_breaks"
+  ],
+  "promotion_gate": "Zero P0 RC1 interface breaks; measured boot on EVT mule",
+  "not_in_main_bom": true,
+  "schema": "gunnchos.hardware_v1.experiment.v1",
+  "generated_at_utc": "2026-09-18T16:02:19Z",
+  "state": "EXPERIMENTAL_COMPARE"
+}

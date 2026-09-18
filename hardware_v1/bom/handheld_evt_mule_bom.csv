@@ -1,0 +1,9 @@
+sku,subsystem,manufacturer,MPN,description,qty,status,notes
+Handheld_EVT_Mule,COM_MODULE,ADLINK,COM-HPC-mMTL-155H-32G,COM-HPC Mini Ultra 7 155H + 32GB,1,ADOPTED_MAINLINE,Shared with Student/DS-XL EVT
+Handheld_EVT_Mule,CarrierPCB,gunnchOS3k,handheld_evt_mule_carrier,COM-HPC Mini carrier mule PCB,1,DESIGN_PENDING_EXTERNAL,Blocked on EXT-COM-HPC-400PIN
+Handheld_EVT_Mule,COM_Connector,TE/Samtec class,COM-HPC Mini 400-pin,Connector set,1,AVL_PENDING,Exact MPN from vendor guide
+Handheld_EVT_Mule,WiFi,Intel,BE200,Wi-Fi 7 + BT M.2 Key E,1,ADOPTED_MAINLINE,
+Handheld_EVT_Mule,Storage,OEM,M.2_NVMe_1TB_class,M.2 NVMe,1,AVL_PENDING,Quote required — no fake lead time
+Handheld_EVT_Mule,PD,Texas Instruments,TPS65994ADFBRQ1,USB-C PD,1,ADOPTED_MAINLINE,
+Handheld_EVT_Mule,Battery,OEM,qualified_Li-ion_pack,Qualified Li-ion only,1,PENDING_VENDOR_CONFIRMATION,No experimental chemistry
+Handheld_EVT_Mule,Historical_SoM_NOT_MAINLINE,Radxa,RM121-D8E32,Prior digital package SoM,0,HISTORICAL_ONLY,Not mixed into mainline qty

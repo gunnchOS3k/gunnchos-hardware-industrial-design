@@ -1,0 +1,3 @@
+change,subsystem,mpn_or_class,qty,note
+ADD,experiment_only,EXP-DOCK-USB4-80-001_variant,1,EXPERIMENTAL — do not merge to mainline BOM
+REMOVE,none,—,0,Comparison only; mainline unchanged

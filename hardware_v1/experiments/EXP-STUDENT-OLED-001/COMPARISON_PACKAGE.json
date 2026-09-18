@@ -1,0 +1,20 @@
+{
+  "id": "EXP-STUDENT-OLED-001",
+  "branch": "hardware/exp-student-oled",
+  "title": "Student OLED panel vs IPS",
+  "hypothesis": "OLED improves contrast/weight without exceeding power/thermal budget",
+  "baseline": "IPS eDP panel",
+  "variant": "OLED eDP panel class",
+  "metrics": [
+    "contrast_ratio",
+    "avg_power_w",
+    "burnin_risk_score",
+    "cost_delta_usd",
+    "nit_hdr"
+  ],
+  "promotion_gate": "Power <= IPS+10% at 200 nits office; burn-in mitigation plan owner-approved",
+  "not_in_main_bom": true,
+  "schema": "gunnchos.hardware_v1.experiment.v1",
+  "generated_at_utc": "2026-09-18T16:02:19Z",
+  "state": "EXPERIMENTAL_COMPARE"
+}

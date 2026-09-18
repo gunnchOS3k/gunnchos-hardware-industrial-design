@@ -1,0 +1,20 @@
+{
+  "id": "EXP-ARM-IQX-001",
+  "branch": "hardware/exp-arm-iqx",
+  "title": "ARM IQX-class SoM vs COM-HPC Mini x86",
+  "hypothesis": "ARM SoM reduces idle power and BOM cost at equal desk productivity for Student/DS-XL",
+  "baseline": "COM-HPC-mMTL-155H-32G class",
+  "variant": "ARM IQX-class SoM (vendor TBD \u2014 PENDING_VENDOR_CONFIRMATION)",
+  "metrics": [
+    "idle_power_w",
+    "sustained_compile_time_s",
+    "thermal_skin_c",
+    "bom_delta_usd_quote",
+    "os_driver_gap_count"
+  ],
+  "promotion_gate": "All metrics meet or beat baseline on EVT mule sample n>=3 AND Device OS RC1 interface register shows zero P0 breaks",
+  "not_in_main_bom": true,
+  "schema": "gunnchos.hardware_v1.experiment.v1",
+  "generated_at_utc": "2026-09-18T16:02:19Z",
+  "state": "EXPERIMENTAL_COMPARE"
+}

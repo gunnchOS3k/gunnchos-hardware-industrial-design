@@ -1,0 +1,78 @@
+{
+  "schema": "gunnchos.hardware_v1.gates.v1",
+  "generated_at_utc": "2026-09-18T16:02:19Z",
+  "HARDWARE_V1_READY_FOR_EVT_BUILD": false,
+  "REFERENCE_PLATFORM_0_READY_FOR_FAB": false,
+  "EVT_PENDING": true,
+  "DVT_PENDING": true,
+  "PVT_PENDING": true,
+  "PHYSICAL_HARDWARE_VALIDATED": false,
+  "CERTIFICATION_COMPLETE": false,
+  "MANUFACTURING_VALIDATED": false,
+  "DIGITAL_FABRICATION_PASS": false,
+  "RFQ_SENT": false,
+  "PHYSICAL_PENDING": true,
+  "EXTERNAL_PENDING": true,
+  "DIGITAL_ARCHITECTURE_PACKAGE_COMPLETE": true,
+  "MAINLINE_DECISION_LEDGER_COMPLETE": true,
+  "EXPERIMENTS_REGISTRY_COMPLETE": true,
+  "SOFTWARE_RC1_BASELINES_UNTOUCHED": true,
+  "blockers": [
+    {
+      "id": "EXT-COM-HPC-400PIN",
+      "severity": "PICMG/ADLINK COM-HPC Mini net-accurate pin map for chosen module SKU",
+      "blocks": [
+        "STUDENT_HW_DIGITAL_RELEASE_PACKAGE",
+        "DSXL_HW_DIGITAL_RELEASE_PACKAGE",
+        "REFERENCE_PLATFORM_0_READY_FOR_FAB"
+      ]
+    },
+    {
+      "id": "EXT-DSXL-DUAL-EDP",
+      "severity": "Dual eDP lane map on COM-HPC Mini for DS-XL",
+      "blocks": [
+        "DSXL_HW_DIGITAL_RELEASE_PACKAGE"
+      ]
+    },
+    {
+      "id": "EXT-JHL8440-BALLMAP",
+      "severity": "Intel JHL8440 ball map (NDA) for pin-accurate dock fanout",
+      "blocks": [
+        "DOCK_HW_DIGITAL_RELEASE_PACKAGE",
+        "REFERENCE_PLATFORM_0_READY_FOR_FAB"
+      ]
+    },
+    {
+      "id": "EXT-JHL9040R-BALLMAP",
+      "severity": "Intel JHL9040R retimer ball map (NDA)",
+      "blocks": [
+        "DOCK_HW_DIGITAL_RELEASE_PACKAGE"
+      ]
+    },
+    {
+      "id": "UNRES-NRF54L15-FOOTPRINT",
+      "severity": "Confirmed nRF54L15 package footprint + Nordic reference design for ring PCB",
+      "blocks": [
+        "RINGS_MAINLINE_BOM_FREEZE"
+      ]
+    },
+    {
+      "id": "UNRES-FN990B40-AVL",
+      "severity": "Distributor SKU + antenna kit confirmation for Telit FN990B40-class",
+      "blocks": [
+        "CELLULAR_OPTION_AVL_FREEZE"
+      ]
+    },
+    {
+      "id": "OWNER-RP0-QUOTE-AUTH",
+      "severity": "Owner authorization to request quotes / build Reference Platform 0 (Cursor does not send RFQ)",
+      "blocks": [
+        "HARDWARE_V1_READY_FOR_EVT_BUILD"
+      ]
+    }
+  ],
+  "NEXT_OWNER_ACTION": "QUOTE_AND_BUILD_REFERENCE_PLATFORM_0",
+  "NEXT_OWNER_ACTION_NOTE": "Digital mainline architecture + comparison tracks are packaged. Gates above remain FALSE until external pin maps / AVL confirmations / owner quote-build. Cursor will not send RFQs, purchase, or claim fab.",
+  "NEXT_GATE": null,
+  "NEXT_GATE_IF_OWNER_DECLINES_QUOTE": "EXT-COM-HPC-400PIN"
+}

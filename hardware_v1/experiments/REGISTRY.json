@@ -1,0 +1,136 @@
+{
+  "schema": "gunnchos.hardware_v1.campaign.v1",
+  "generated_at_utc": "2026-09-18T16:02:19Z",
+  "experiments": [
+    {
+      "id": "EXP-ARM-IQX-001",
+      "branch": "hardware/exp-arm-iqx",
+      "title": "ARM IQX-class SoM vs COM-HPC Mini x86",
+      "hypothesis": "ARM SoM reduces idle power and BOM cost at equal desk productivity for Student/DS-XL",
+      "baseline": "COM-HPC-mMTL-155H-32G class",
+      "variant": "ARM IQX-class SoM (vendor TBD \u2014 PENDING_VENDOR_CONFIRMATION)",
+      "metrics": [
+        "idle_power_w",
+        "sustained_compile_time_s",
+        "thermal_skin_c",
+        "bom_delta_usd_quote",
+        "os_driver_gap_count"
+      ],
+      "promotion_gate": "All metrics meet or beat baseline on EVT mule sample n>=3 AND Device OS RC1 interface register shows zero P0 breaks",
+      "not_in_main_bom": true
+    },
+    {
+      "id": "EXP-STUDENT-OLED-001",
+      "branch": "hardware/exp-student-oled",
+      "title": "Student OLED panel vs IPS",
+      "hypothesis": "OLED improves contrast/weight without exceeding power/thermal budget",
+      "baseline": "IPS eDP panel",
+      "variant": "OLED eDP panel class",
+      "metrics": [
+        "contrast_ratio",
+        "avg_power_w",
+        "burnin_risk_score",
+        "cost_delta_usd",
+        "nit_hdr"
+      ],
+      "promotion_gate": "Power <= IPS+10% at 200 nits office; burn-in mitigation plan owner-approved",
+      "not_in_main_bom": true
+    },
+    {
+      "id": "EXP-DSXL-OLED-HYBRID-001",
+      "branch": "hardware/exp-dsxl-oled-hybrid",
+      "title": "DS-XL OLED+IPS hybrid vs dual IPS",
+      "hypothesis": "Primary OLED + secondary IPS improves creator UX without dual-OLED cost/thermal",
+      "baseline": "Dual IPS eDP",
+      "variant": "OLED primary + IPS secondary",
+      "metrics": [
+        "dual_edp_si_margin",
+        "thermal_delta_c",
+        "cost_delta_usd",
+        "color_delta_e"
+      ],
+      "promotion_gate": "Dual-eDP SI margin maintained; EXT-DSXL-DUAL-EDP resolved for both stacks",
+      "not_in_main_bom": true
+    },
+    {
+      "id": "EXP-DOCK-USB4-80-001",
+      "branch": "hardware/exp-dock-usb4-80",
+      "title": "Dock USB4 80 vs USB4 40",
+      "hypothesis": "USB4 80 improves external display/storage UX enough to justify controller cost/SI risk",
+      "baseline": "JHL8440 USB4 40 + JHL9040R",
+      "variant": "USB4 80-class controller (vendor TBD \u2014 PENDING_VENDOR_CONFIRMATION)",
+      "metrics": [
+        "link_rate_gbps",
+        "eye_margin",
+        "bom_delta_usd",
+        "cable_interop_pass_rate"
+      ],
+      "promotion_gate": "Measured eye margin at length L with owner cables; no mainline mix until DVT",
+      "not_in_main_bom": true
+    },
+    {
+      "id": "EXP-RINGS-INDUCTIVE-001",
+      "branch": "hardware/exp-rings-inductive-charge",
+      "title": "Inductive ring charge vs magnetic cradle contacts",
+      "hypothesis": "Inductive charge improves durability/UX with acceptable efficiency and EMI",
+      "baseline": "Magnetic cradle pogo/contacts",
+      "variant": "Qi-class or proprietary inductive coil",
+      "metrics": [
+        "charge_efficiency_pct",
+        "emi_delta_db",
+        "wear_cycles",
+        "alignment_fail_rate"
+      ],
+      "promotion_gate": "Efficiency >=70% at EVT coil; EMI does not fail pre-scan relative to baseline",
+      "not_in_main_bom": true
+    },
+    {
+      "id": "EXP-RINGS-SEMG-001",
+      "branch": "hardware/exp-rings-semg-wrist",
+      "title": "sEMG wrist band vs IMU/cap ring input",
+      "hypothesis": "sEMG adds gesture bandwidth without unsafe skin current / privacy regression",
+      "baseline": "IMU + capacitive/touch ring",
+      "variant": "sEMG wrist accessory",
+      "metrics": [
+        "gesture_f1",
+        "skin_current_ua",
+        "false_positive_rate",
+        "privacy_review_pass"
+      ],
+      "promotion_gate": "Safety current limits met; youth privacy review pass; not medical claim",
+      "not_in_main_bom": true
+    },
+    {
+      "id": "EXP-COREBOOT-001",
+      "branch": "hardware/exp-coreboot",
+      "title": "coreboot vs vendor UEFI",
+      "hypothesis": "coreboot improves auditability without breaking Device OS RC1 boot contract",
+      "baseline": "Vendor UEFI on COM-HPC",
+      "variant": "coreboot + LinuxBoot or equivalent",
+      "metrics": [
+        "secure_boot_chain_intact",
+        "boot_time_s",
+        "capsule_update_compat",
+        "rc1_interface_breaks"
+      ],
+      "promotion_gate": "Zero P0 RC1 interface breaks; measured boot on EVT mule",
+      "not_in_main_bom": true
+    },
+    {
+      "id": "EXP-RAUC-001",
+      "branch": "hardware/exp-rauc-update",
+      "title": "RAUC A/B update vs vendor capsule/EC update",
+      "hypothesis": "RAUC improves field update reliability for rings/EC and optional host slotting",
+      "baseline": "Vendor UEFI capsule + Zephyr DFU",
+      "variant": "RAUC A/B (rings/EC primary; host optional)",
+      "metrics": [
+        "update_success_rate",
+        "rollback_success_rate",
+        "brick_rate",
+        "rc1_interface_breaks"
+      ],
+      "promotion_gate": "Rollback verified on EVT; no secret material in repo",
+      "not_in_main_bom": true
+    }
+  ]
+}

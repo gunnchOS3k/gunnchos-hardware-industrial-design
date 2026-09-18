@@ -1,0 +1,6 @@
+{
+  "schema": "gunnchos.hardware_v1.os_contract.v1",
+  "software_freeze": "v1.0.0-rc.1",
+  "software_baselines_modified": false,
+  "generated_at_utc": "2026-09-18T16:02:19Z"
+}

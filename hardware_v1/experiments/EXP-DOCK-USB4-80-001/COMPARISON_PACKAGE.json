@@ -1,0 +1,19 @@
+{
+  "id": "EXP-DOCK-USB4-80-001",
+  "branch": "hardware/exp-dock-usb4-80",
+  "title": "Dock USB4 80 vs USB4 40",
+  "hypothesis": "USB4 80 improves external display/storage UX enough to justify controller cost/SI risk",
+  "baseline": "JHL8440 USB4 40 + JHL9040R",
+  "variant": "USB4 80-class controller (vendor TBD \u2014 PENDING_VENDOR_CONFIRMATION)",
+  "metrics": [
+    "link_rate_gbps",
+    "eye_margin",
+    "bom_delta_usd",
+    "cable_interop_pass_rate"
+  ],
+  "promotion_gate": "Measured eye margin at length L with owner cables; no mainline mix until DVT",
+  "not_in_main_bom": true,
+  "schema": "gunnchos.hardware_v1.experiment.v1",
+  "generated_at_utc": "2026-09-18T16:02:19Z",
+  "state": "EXPERIMENTAL_COMPARE"
+}
