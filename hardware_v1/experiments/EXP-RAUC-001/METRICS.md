@@ -1,14 +1,13 @@
-# Metrics — EXP-RAUC-001
+# EXP-RAUC-001 metrics
 
-**Generated:** 2026-09-18T16:24:23Z  
-**Campaign:** `HARDWARE_1_0_MASTER_CAMPAIGN`  
-**Claim boundary:** digital architecture / EVT preparation only — not physical pass, not certification, not fab release.
+**Generated:** 2026-09-18T16:48:54Z  
+**Campaign:** `HARDWARE_1_0C_CUSTOM_FIRST_MAINLINE_PIVOT`  
+**Claim boundary:** digital architecture / EVT preparation only — not physical pass, not certification, not fab release, not purchased.
 
-Record measured values only after physical/lab work.
 
-| Metric | Value | State |
-|---|---|---|
-| `update_success_rate` | — | PENDING_PHYSICAL_MEASUREMENT |
-| `rollback_success_rate` | — | PENDING_PHYSICAL_MEASUREMENT |
-| `brick_rate` | — | PENDING_PHYSICAL_MEASUREMENT |
-| `rc1_interface_breaks` | — | PENDING_PHYSICAL_MEASUREMENT |
+All metrics `UNMEASURED_PENDING_PHYSICAL`.
+
+- `update_success_rate`: UNMEASURED_PENDING_PHYSICAL
+- `rollback_time_s`: UNMEASURED_PENDING_PHYSICAL
+- `bandwidth`: UNMEASURED_PENDING_PHYSICAL
+- `field_ops_complexity`: UNMEASURED_PENDING_PHYSICAL

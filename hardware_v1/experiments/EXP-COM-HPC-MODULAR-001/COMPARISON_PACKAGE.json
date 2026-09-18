@@ -1,0 +1,24 @@
+{
+  "id": "EXP-COM-HPC-MODULAR-001",
+  "branch": "hardware/exp-com-hpc-modular-product",
+  "title": "COM-HPC modular product architecture vs custom motherboard mainline",
+  "hypothesis": "COM-HPC modular path matches product goals with lower board complexity; measure whether giving up motherboard ownership is justified",
+  "baseline": "CUSTOM AMD Platform Core v1 (8840U/8845HS)",
+  "variant": "ADLINK COM-HPC Mini mMTL + Mini Base REFERENCE_CONTROL_MODULAR_X86",
+  "metrics": [
+    "time_to_bringup",
+    "bom_complexity",
+    "thermal_skin_c",
+    "usb4_behavior",
+    "os_compat",
+    "ownership_score",
+    "schedule_risk"
+  ],
+  "promotion_gate": "Measured evidence that modular path meets product goals AND owner explicitly accepts reduced motherboard ownership; cannot silently become mainline",
+  "not_in_main_bom": true,
+  "hierarchy": "REFERENCE_CONTROL_COMPARE",
+  "schema": "gunnchos.hardware_v1.experiment.v1",
+  "generated_at_utc": "2026-09-18T16:48:54Z",
+  "state": "EXPERIMENTAL_COMPARE",
+  "campaign": "HARDWARE_1_0C_CUSTOM_FIRST_MAINLINE_PIVOT"
+}

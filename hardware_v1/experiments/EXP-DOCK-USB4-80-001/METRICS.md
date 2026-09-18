@@ -1,14 +1,13 @@
-# Metrics — EXP-DOCK-USB4-80-001
+# EXP-DOCK-USB4-80-001 metrics
 
-**Generated:** 2026-09-18T16:24:23Z  
-**Campaign:** `HARDWARE_1_0_MASTER_CAMPAIGN`  
-**Claim boundary:** digital architecture / EVT preparation only — not physical pass, not certification, not fab release.
+**Generated:** 2026-09-18T16:48:54Z  
+**Campaign:** `HARDWARE_1_0C_CUSTOM_FIRST_MAINLINE_PIVOT`  
+**Claim boundary:** digital architecture / EVT preparation only — not physical pass, not certification, not fab release, not purchased.
 
-Record measured values only after physical/lab work.
 
-| Metric | Value | State |
-|---|---|---|
-| `link_rate_gbps` | — | PENDING_PHYSICAL_MEASUREMENT |
-| `eye_margin` | — | PENDING_PHYSICAL_MEASUREMENT |
-| `bom_delta_usd` | — | PENDING_PHYSICAL_MEASUREMENT |
-| `cable_interop_pass_rate` | — | PENDING_PHYSICAL_MEASUREMENT |
+All metrics `UNMEASURED_PENDING_PHYSICAL`.
+
+- `link_rate_gbps`: UNMEASURED_PENDING_PHYSICAL
+- `eye_margin`: UNMEASURED_PENDING_PHYSICAL
+- `bom_delta_usd`: UNMEASURED_PENDING_PHYSICAL
+- `cable_interop_pass_rate`: UNMEASURED_PENDING_PHYSICAL
