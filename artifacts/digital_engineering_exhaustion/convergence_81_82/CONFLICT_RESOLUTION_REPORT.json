@@ -1,6 +1,6 @@
 {
   "schema": "gunnchos.hw_dee.convergence_81_82.v1",
-  "generated_at_utc": "2026-09-18T19:51:49Z",
+  "generated_at_utc": "2026-09-18T19:52:51Z",
   "purpose": "Resolve PR #82 after accepted Stream F (#81) merge into main",
   "repo": "gunnchOS3k/gunnchos-hardware-industrial-design",
   "pr81": {
@@ -86,7 +86,7 @@
     "no_auto_merge_pr82": true,
     "no_fabricated_physical_evidence": true
   },
-  "final_branch_sha": "ae6d332f3b4b3547ba2d6012498220ffa7e51b28",
+  "final_branch_sha": "2212c7460c04d95151ed00d5cd2da3ffd0044edd",
   "status_lines": {
     "PR82_RECONCILED_WITH_STREAM_F": true,
     "PR82_VALIDATION_PASS": true,
@@ -94,5 +94,7 @@
     "NEXT_OWNER_ACTION": "MERGE_PR_82_WITH_MERGE_COMMIT"
   },
   "reconcile_commit_message": "chore(hardware): reconcile Stream E with accepted Stream F baseline",
-  "note": "final_branch_sha is best-effort self-reference; verify with git rev-parse after push"
+  "note": "final_branch_sha is best-effort self-reference; verify with git rev-parse after push",
+  "reconcile_commit": "2212c7460c04d95151ed00d5cd2da3ffd0044edd",
+  "report_sha_sync_note": "final_branch_sha points at the reconcile merge commit pushed for PR #82"
 }
