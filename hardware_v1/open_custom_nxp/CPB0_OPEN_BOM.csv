@@ -1,0 +1,13 @@
+item_id,function,MPN,qty,required_optional,lifecycle,stock_price,sourcing_class,alternate_strategy,public_evidence
+SOC-001,i.MX 95 AP,MIMX9596AVZXN,1,required,active_verify,VERIFY_AT_PURCHASE,open_engineering,alt: other MIMX9596 VZ OPN from IMX95IEC Table 2,MCUX IMX95LPD5EVK-19 docs
+PMIC-001,System PMIC,PENDING_EVK_BOM_OPN,1,required,unknown,VERIFY_AT_PURCHASE,open_engineering,discrete interim only if design guide allows,IMX95IEC PMIC expectation
+DDR-001,LPDDR5 x32 package,PENDING_EVK_BOM_OPN,1,required,unknown,VERIFY_AT_PURCHASE,open_engineering,density TBD,IMX95IEC + EVK
+EMMC-001,eMMC 5.1,PENDING_SELECT,1,required,active_verify,VERIFY_AT_PURCHASE,commodity,multi-source,public JEDEC
+NOR-001,SPI NOR boot,PENDING_SELECT,1,required,active_verify,VERIFY_AT_PURCHASE,commodity,multi-source,FlexSPI class
+M2-NVME,M.2 M-key connector,PENDING_SELECT,1,required,active_verify,VERIFY_AT_PURCHASE,commodity,multi-source,PCIe0
+M2-WIFI,M.2 E-key connector,PENDING_SELECT,1,required,active_verify,VERIFY_AT_PURCHASE,commodity,multi-source,PCIe1
+M2-WWAN,M.2 B-key connector,PENDING_SELECT,1,optional,active_verify,VERIFY_AT_PURCHASE,commodity,DNP default,optional 5G
+USBC-001,USB-C connector + ESD,PENDING_SELECT,1,required,active_verify,VERIFY_AT_PURCHASE,commodity,multi-source,USB3/2
+ETHPHY-001,1G Ethernet PHY,PENDING_SELECT,2,required,active_verify,VERIFY_AT_PURCHASE,commodity,multi-source,ENET
+EC-001,Zephyr EC MCU,PENDING_SELECT,1,required,active_verify,VERIFY_AT_PURCHASE,open_mcu,prefer open non-NDA,EC architecture
+XTAL-32K,32.768 kHz crystal,PENDING_SELECT,1,required,active_verify,VERIFY_AT_PURCHASE,commodity,—,IMX95IEC RTC

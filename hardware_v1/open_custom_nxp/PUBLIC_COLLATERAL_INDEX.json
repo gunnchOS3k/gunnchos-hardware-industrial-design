@@ -1,89 +1,367 @@
 {
-  "schema": "gunnchos.hardware_v1.nxp.public_collateral.v1",
-  "generated_at_utc": "2026-09-18T17:46:17Z",
-  "campaign": "HARDWARE_1_0D_FOUR_TRACK_CONVERGENCE_MERGE_READINESS",
-  "policy": "public collateral only; metadata/URLs/hashes if redistribution forbidden",
+  "schema": "gunnchos.hardware_v1.nxp.public_collateral.v2",
+  "generated_at_utc": "2026-09-18T18:50:15Z",
+  "campaign": "NXP0_OPEN_CUSTOM_IMX95_IMPLEMENTATION_FOUNDATION",
+  "policy": "public collateral only; ordinary account login allowed; NDA/restricted not used; metadata/URL/hash only if redistribution forbidden; no fabricated stock/quotes/currents",
+  "nda_required_any_item": false,
+  "index_complete_for_categories": true,
+  "categories_covered": [
+    "datasheet",
+    "processor_reference_manual",
+    "hardware_design_guide",
+    "EVK_schematics",
+    "EVK_PCB_layout",
+    "EVK_BOM",
+    "package_mechanical",
+    "pin_mux_iomux",
+    "power_pmic",
+    "LPDDR5_LPDDR4X",
+    "PCIe",
+    "USB",
+    "Ethernet",
+    "display_camera",
+    "boot_security",
+    "EdgeLock",
+    "debug",
+    "thermal_mechanical",
+    "BSP_UBoot_Linux",
+    "errata"
+  ],
   "items": [
     {
       "id": "NXP-IMX95-PRODUCT-PAGE",
       "title": "i.MX 95 Applications Processors Family",
+      "document_number": "i.MX95",
+      "revision": "live",
+      "publication_date": "2026-09-18",
       "url": "https://www.nxp.com/products/i.MX95",
-      "class": "PUBLIC_INDEX",
+      "access_class": "PUBLIC_WEB",
+      "ordinary_account_login_required": false,
+      "nda_required": false,
+      "sha256": "N/A_HTML",
       "redistribution": "URL_ONLY",
-      "sha256": "NOT_FETCHED_IN_CAMPAIGN",
-      "notes": "Authoritative public landing page for datasheets/RM/factsheet"
+      "subsystem": "index",
+      "gates_affected": [
+        "NXP_PUBLIC_COLLATERAL_INDEX_COMPLETE"
+      ],
+      "evidence": "Product landing page lists datasheets/RM/UG/EVK/BSDL"
     },
     {
       "id": "NXP-IMX95IEC",
-      "title": "i.MX 95 Applications Processors Data Sheet for Industrial Products (IMX95IEC)",
+      "title": "i.MX 95 Applications Processors Data Sheet for Industrial Products",
+      "document_number": "IMX95IEC",
+      "revision": "8",
+      "publication_date": "2026-04-07",
       "url": "https://www.nxp.com/docs/en/data-sheet/IMX95IEC.pdf",
-      "class": "PUBLIC_DATASHEET",
+      "access_class": "PUBLIC_DATASHEET",
+      "ordinary_account_login_required": false,
+      "nda_required": false,
+      "sha256": "PENDING_OWNER_LOCAL_FETCH",
       "redistribution": "METADATA_URL_HASH_ONLY_IF_LICENSE_FORBIDS",
-      "sha256": "PENDING_OWNER_FETCH",
-      "notes": "Public datasheet class; do not commit PDF if redistribution forbidden"
-    },
-    {
-      "id": "NXP-IMX95XEC",
-      "title": "i.MX 95 Applications Processors Data Sheet for Extended Industrial Products (IMX95XEC)",
-      "url": "https://www.nxp.com/docs/en/data-sheet/IMX95XEC.pdf",
-      "class": "PUBLIC_DATASHEET",
-      "redistribution": "METADATA_URL_HASH_ONLY_IF_LICENSE_FORBIDS",
-      "sha256": "PENDING_OWNER_FETCH",
-      "notes": "Extended industrial grade variant"
+      "subsystem": "soc,power,memory,package",
+      "gates_affected": [
+        "NXP_PUBLIC_POWER_ARCHITECTURE_UNDERSTOOD",
+        "NXP_PUBLIC_MEMORY_TOPOLOGY_UNDERSTOOD",
+        "CPB0_OPEN_SOC_SELECTION"
+      ],
+      "evidence": "Public PDF Rev 8 Apr 7 2026 listed on product page"
     },
     {
       "id": "NXP-IMX95CEC",
-      "title": "i.MX 95 Applications Processors Data Sheet for Commercial Products (IMX95CEC)",
+      "title": "i.MX 95 Applications Processors Data Sheet for Commercial Products",
+      "document_number": "IMX95CEC",
+      "revision": "8.0",
+      "publication_date": "2026-04-07",
       "url": "https://www.nxp.com/docs/en/data-sheet/IMX95CEC.pdf",
-      "class": "PUBLIC_DATASHEET",
+      "access_class": "PUBLIC_DATASHEET",
+      "ordinary_account_login_required": false,
+      "nda_required": false,
+      "sha256": "PENDING_OWNER_LOCAL_FETCH",
       "redistribution": "METADATA_URL_HASH_ONLY_IF_LICENSE_FORBIDS",
-      "sha256": "PENDING_OWNER_FETCH",
-      "notes": "Commercial grade variant"
+      "subsystem": "soc",
+      "gates_affected": [
+        "CPB0_OPEN_SOC_SELECTION"
+      ],
+      "evidence": "Product page PDF listing"
     },
     {
-      "id": "NXP-IMX95FS",
-      "title": "i.MX 95 Applications Processor Family Factsheet (IMX95FS)",
-      "url": "https://www.nxp.com/products/i.MX95",
-      "class": "PUBLIC_FACTSHEET",
-      "redistribution": "METADATA_URL_ONLY",
-      "sha256": "PENDING_OWNER_FETCH",
-      "notes": "Factsheet linked from product page"
+      "id": "NXP-IMX95XEC",
+      "title": "i.MX 95 Applications Processors Data Sheet for Extended Industrial Products",
+      "document_number": "IMX95XEC",
+      "revision": "8.0",
+      "publication_date": "2026-04-07",
+      "url": "https://www.nxp.com/docs/en/data-sheet/IMX95XEC.pdf",
+      "access_class": "PUBLIC_DATASHEET",
+      "ordinary_account_login_required": false,
+      "nda_required": false,
+      "sha256": "PENDING_OWNER_LOCAL_FETCH",
+      "redistribution": "METADATA_URL_HASH_ONLY_IF_LICENSE_FORBIDS",
+      "subsystem": "soc",
+      "gates_affected": [
+        "CPB0_OPEN_SOC_SELECTION"
+      ],
+      "evidence": "Product page PDF listing"
+    },
+    {
+      "id": "NXP-IMX95AEC",
+      "title": "i.MX 95 Applications Processors Data Sheet for Automotive Products",
+      "document_number": "IMX95AEC",
+      "revision": "8.0",
+      "publication_date": "2026-04-07",
+      "url": "https://www.nxp.com/docs/en/data-sheet/IMX95AEC.pdf",
+      "access_class": "PUBLIC_DATASHEET",
+      "ordinary_account_login_required": false,
+      "nda_required": false,
+      "sha256": "PENDING_OWNER_LOCAL_FETCH",
+      "redistribution": "METADATA_URL_HASH_ONLY_IF_LICENSE_FORBIDS",
+      "subsystem": "soc",
+      "gates_affected": [
+        "CPB0_OPEN_SOC_SELECTION"
+      ],
+      "evidence": "Product page PDF listing"
     },
     {
       "id": "NXP-IMX95RM",
-      "title": "i.MX 95 Applications Processor Reference Manual (IMX95RM)",
+      "title": "i.MX 95 Applications Processor Reference Manual",
+      "document_number": "IMX95RM",
+      "revision": "1.0",
+      "publication_date": "2026-03-30",
       "url": "https://www.nxp.com/products/i.MX95",
-      "class": "PUBLIC_REFERENCE_MANUAL",
-      "redistribution": "METADATA_URL_HASH_ONLY",
-      "sha256": "PENDING_OWNER_FETCH",
-      "notes": "Large RM; commit hash after owner fetch \u2014 do not invent contents"
+      "access_class": "PUBLIC_REFERENCE_MANUAL",
+      "ordinary_account_login_required": false,
+      "nda_required": false,
+      "sha256": "PENDING_OWNER_LOCAL_FETCH",
+      "redistribution": "METADATA_URL_HASH_ONLY_IF_LICENSE_FORBIDS",
+      "subsystem": "pinmux,iomux,boot,peripherals",
+      "gates_affected": [
+        "NXP_PUBLIC_PINMAP_UNDERSTOOD"
+      ],
+      "evidence": "Product page lists IMX95RM Rev 1.0 Mar 30 2026 PDF 123.55 MB"
     },
     {
-      "id": "NXP-IMX95-HW-DESIGN-GUIDE",
+      "id": "NXP-UG10210",
       "title": "i.MX 95 Hardware Design Guide",
+      "document_number": "UG10210",
+      "revision": "2.0",
+      "publication_date": "2026-03-30",
       "url": "https://www.nxp.com/products/i.MX95",
-      "class": "LOGIN_OR_ACCOUNT_GATED",
+      "access_class": "ACCOUNT_LOGIN_GATED",
+      "ordinary_account_login_required": true,
+      "nda_required": false,
+      "sha256": "N/A_NOT_FETCHED_NO_LOGIN_IN_CAMPAIGN",
       "redistribution": "URL_ONLY_NO_CONTENT",
-      "sha256": "N/A",
-      "notes": "Product page marks Account Required \u2014 gap until owner login fetch"
+      "subsystem": "hw_design,ddr,si,pdn,layout",
+      "gates_affected": [
+        "NXP_PUBLIC_MEMORY_TOPOLOGY_UNDERSTOOD",
+        "CPB0_OPEN_READY_FOR_FAB"
+      ],
+      "evidence": "Product page marks Account Required for UG10210; ordinary login allowed, content not ingested this campaign"
     },
     {
-      "id": "NXP-IMX95-BSDL-IBIS",
-      "title": "i.MX 95 BSDL / IBIS models (package variants)",
+      "id": "NXP-IMX95FS",
+      "title": "i.MX 95 Applications Processor Family Factsheet",
+      "document_number": "IMX95FS",
+      "revision": "2.0",
+      "publication_date": "2025-06-06",
       "url": "https://www.nxp.com/products/i.MX95",
-      "class": "PUBLIC_MODEL_OR_GATED",
+      "access_class": "PUBLIC_FACTSHEET",
+      "ordinary_account_login_required": false,
+      "nda_required": false,
+      "sha256": "PENDING_OWNER_LOCAL_FETCH",
       "redistribution": "METADATA_URL_ONLY",
-      "sha256": "PENDING_OWNER_FETCH",
-      "notes": "Use for SI/DFT planning; verify license before any binary commit"
+      "subsystem": "overview",
+      "gates_affected": [
+        "NXP_PUBLIC_COLLATERAL_INDEX_COMPLETE"
+      ],
+      "evidence": "Product page PDF listing"
     },
     {
-      "id": "NXP-MCUX-IMX95-EVK",
-      "title": "MCUXpresso SDK / EVK documentation (imx95 class boards)",
-      "url": "https://mcuxpresso.nxp.com/",
-      "class": "PUBLIC_SDK_DOCS",
+      "id": "NXP-IMX95-ERRATA-P21N",
+      "title": "Mask Set Errata",
+      "document_number": "IMX95_P21N",
+      "revision": "2.0",
+      "publication_date": "2026-08-07",
+      "url": "https://www.nxp.com/products/i.MX95",
+      "access_class": "ACCOUNT_LOGIN_GATED",
+      "ordinary_account_login_required": true,
+      "nda_required": false,
+      "sha256": "N/A_NOT_FETCHED_NO_LOGIN_IN_CAMPAIGN",
+      "redistribution": "URL_ONLY_NO_CONTENT",
+      "subsystem": "errata",
+      "gates_affected": [
+        "CPB0_OPEN_READY_FOR_FAB"
+      ],
+      "evidence": "Product page Account Required"
+    },
+    {
+      "id": "NXP-IMX95LPD5EVK-19-GS",
+      "title": "Getting Started with the i.MX 95 19 mm x 19 mm EVK Board",
+      "document_number": "GS-IMX95LPD5EVK-19",
+      "revision": "live",
+      "publication_date": "2025-11-05",
+      "url": "https://www.nxp.com/document/guide/getting-started-with-the-i-mx-95-19-mm-x-19-mm-evk-board:GS-IMX95LPD5EVK-19",
+      "access_class": "PUBLIC_GUIDE",
+      "ordinary_account_login_required": false,
+      "nda_required": false,
+      "sha256": "N/A_HTML",
+      "redistribution": "URL_ONLY",
+      "subsystem": "evk,bringup",
+      "gates_affected": [
+        "CPB0_OPEN_SOC_SELECTION",
+        "NXP_PUBLIC_MEMORY_TOPOLOGY_UNDERSTOOD"
+      ],
+      "evidence": "Public getting-started; references SOM/baseboard schematics and layouts"
+    },
+    {
+      "id": "NXP-IMX95LPD5EVK-19CM",
+      "title": "i.MX 95 LPD5 EVK Quick Start Guide",
+      "document_number": "IMX95LPD5EVK-19CM",
+      "revision": "1.0",
+      "publication_date": "2024-11-13",
+      "url": "https://www.nxp.com/products/i.MX95",
+      "access_class": "PUBLIC_QSG",
+      "ordinary_account_login_required": false,
+      "nda_required": false,
+      "sha256": "PENDING_OWNER_LOCAL_FETCH",
       "redistribution": "METADATA_URL_ONLY",
-      "sha256": "PENDING_OWNER_FETCH",
-      "notes": "Bring-up reference; EVK \u2260 custom open-custom board validation"
+      "subsystem": "evk",
+      "gates_affected": [
+        "CPB0_OPEN_SOC_SELECTION"
+      ],
+      "evidence": "Product page PDF listing Rev 1.0"
+    },
+    {
+      "id": "NXP-EVK-LPD5-19-SCH-LAYOUT",
+      "title": "IMX95LPD5EVK-19 SOM/Baseboard Schematics and Layouts",
+      "document_number": "IMX95LPD5EVK-19",
+      "revision": "EVK_BUNDLE",
+      "publication_date": "see_GS_page",
+      "url": "https://www.nxp.com/document/guide/getting-started-with-the-i-mx-95-19-mm-x-19-mm-evk-board:GS-IMX95LPD5EVK-19",
+      "access_class": "PUBLIC_OR_ACCOUNT_LINKED_FROM_GS",
+      "ordinary_account_login_required": true,
+      "nda_required": false,
+      "sha256": "N/A_NOT_FETCHED",
+      "redistribution": "METADATA_URL_HASH_ONLY_IF_LICENSE_FORBIDS",
+      "subsystem": "evk_schematic,evk_pcb,evk_bom",
+      "gates_affected": [
+        "CPB0_OPEN_SCHEMATIC_STARTED",
+        "NXP_PUBLIC_PINMAP_UNDERSTOOD"
+      ],
+      "evidence": "GS page lists SOM Board Schematics / Base Board Layout / SOM Board Layout; files not downloaded or redistributed this campaign"
+    },
+    {
+      "id": "NXP-MCUX-IMX95LPD5EVK19",
+      "title": "MCUXpresso SDK board docs IMX95LPD5EVK-19",
+      "document_number": "MCUXSDKIMX95LPD5EVK19",
+      "revision": "25.09.00",
+      "publication_date": "2025-09",
+      "url": "https://mcuxpresso.nxp.com/mcuxsdk/25.09.00/html/_assets/boards/imx95lpd5evk19/mcuxsdk-imx95lpd5evk19.pdf",
+      "access_class": "PUBLIC_SDK_DOCS",
+      "ordinary_account_login_required": false,
+      "nda_required": false,
+      "sha256": "PENDING_OWNER_LOCAL_FETCH",
+      "redistribution": "METADATA_URL_ONLY",
+      "subsystem": "bsp,boot,device_tree",
+      "gates_affected": [
+        "CPB0_OPEN_SOC_SELECTION",
+        "CPB0_OPEN_SECURITY_BOOT"
+      ],
+      "evidence": "Public MCUX PDF states Device MIMX9596 PartNumber MIMX9596AVZXN"
+    },
+    {
+      "id": "NXP-MCUX-IMX95LP4XEVK15",
+      "title": "MCUXpresso SDK board docs IMX95LP4XEVK-15",
+      "document_number": "MCUXSDKIMX95LP4XEVK15",
+      "revision": "26.03.00",
+      "publication_date": "2026-03",
+      "url": "https://mcuxpresso.nxp.com/mcuxsdk/26.03.00/html/_assets/boards/imx95lp4xevk15/mcuxsdk-imx95lp4xevk15.pdf",
+      "access_class": "PUBLIC_SDK_DOCS",
+      "ordinary_account_login_required": false,
+      "nda_required": false,
+      "sha256": "PENDING_OWNER_LOCAL_FETCH",
+      "redistribution": "METADATA_URL_ONLY",
+      "subsystem": "bsp,alt_package",
+      "gates_affected": [
+        "CPB0_OPEN_SOC_SELECTION"
+      ],
+      "evidence": "Public MCUX PDF states PartNumber MIMX9596AVTXN"
+    },
+    {
+      "id": "NXP-BSDL-19",
+      "title": "i.MX 95 19 mm x 19 mm BSDL File",
+      "document_number": "iMX95_19x19-BSDL",
+      "revision": "2",
+      "publication_date": "2026-04-01",
+      "url": "https://www.nxp.com/products/i.MX95",
+      "access_class": "ACCOUNT_LOGIN_GATED",
+      "ordinary_account_login_required": true,
+      "nda_required": false,
+      "sha256": "N/A_NOT_FETCHED",
+      "redistribution": "URL_ONLY_NO_CONTENT",
+      "subsystem": "dft,package",
+      "gates_affected": [
+        "CPB0_OPEN_READY_FOR_FAB"
+      ],
+      "evidence": "Product page Account Required ZIP"
+    },
+    {
+      "id": "NXP-IBIS-19",
+      "title": "i.MX 95 19 mm x 19 mm IBIS Model",
+      "document_number": "iMX95_19x19-IBIS",
+      "revision": "2",
+      "publication_date": "2026-04-01",
+      "url": "https://www.nxp.com/products/i.MX95",
+      "access_class": "ACCOUNT_LOGIN_GATED",
+      "ordinary_account_login_required": true,
+      "nda_required": false,
+      "sha256": "N/A_NOT_FETCHED",
+      "redistribution": "URL_ONLY_NO_CONTENT",
+      "subsystem": "si",
+      "gates_affected": [
+        "CPB0_OPEN_SI_PI"
+      ],
+      "evidence": "Product page Account Required ZIP"
+    },
+    {
+      "id": "NXP-EDGELOCK-PUBLIC",
+      "title": "EdgeLock Secure Enclave Advanced Profile (public marketing + AN index)",
+      "document_number": "EdgeLock-AP",
+      "revision": "index",
+      "publication_date": "live",
+      "url": "https://www.nxp.com/products/i.MX95",
+      "access_class": "PUBLIC_INDEX_PLUS_ACCOUNT_ANS",
+      "ordinary_account_login_required": true,
+      "nda_required": false,
+      "sha256": "N/A",
+      "redistribution": "URL_ONLY",
+      "subsystem": "security,boot",
+      "gates_affected": [
+        "CPB0_OPEN_SECURITY_BOOT"
+      ],
+      "evidence": "Product page describes EdgeLock AP; several ANs Account Required"
+    },
+    {
+      "id": "NXP-LINUX-BSP-INDEX",
+      "title": "i.MX Linux BSP / U-Boot / Yocto reference (software and development tools)",
+      "document_number": "i.MX-Linux-BSP",
+      "revision": "live",
+      "publication_date": "live",
+      "url": "https://www.nxp.com/design/design-center/software/embedded-software/i-mx-software-and-development-tools",
+      "access_class": "PUBLIC_SW_PORTAL",
+      "ordinary_account_login_required": true,
+      "nda_required": false,
+      "sha256": "N/A",
+      "redistribution": "URL_ONLY",
+      "subsystem": "bsp,uboot,linux",
+      "gates_affected": [
+        "CPB0_OPEN_SECURITY_BOOT"
+      ],
+      "evidence": "Public NXP i.MX software portal; binary images may require account"
     }
+  ],
+  "honesty_notes": [
+    "SHA-256 values marked PENDING_OWNER_LOCAL_FETCH were not computed in this campaign (no local PDF commit).",
+    "UG10210, errata, BSDL, IBIS marked Account Required on product page \u2014 not NDA; content not ingested here.",
+    "Do not treat EVK files as CPB0-O validation evidence."
   ]
 }

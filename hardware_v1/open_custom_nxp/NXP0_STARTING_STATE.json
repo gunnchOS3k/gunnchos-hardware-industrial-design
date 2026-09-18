@@ -1,0 +1,94 @@
+{
+  "schema": "gunnchos.hardware_v1.nxp0.starting_state.v1",
+  "generated_at_utc": "2026-09-18T18:50:15Z",
+  "campaign": "NXP0_OPEN_CUSTOM_IMX95_IMPLEMENTATION_FOUNDATION",
+  "claim_boundary": "architecture / public-collateral implementation foundation only \u2014 not physical pass, not certification, not fab release, not purchased, not NDA, not GXE execution, not software RC1 change",
+  "tracks": {
+    "PRODUCT_MAINLINE": "AMD_CUSTOM_X86",
+    "OPEN_ENGINEERING_MAINLINE": "NXP_IMX95_OPEN_CUSTOM",
+    "GREENFIELD_EXPERIMENT": "GXE",
+    "REFERENCE_CONTROL": "COM_HPC_AND_COTS"
+  },
+  "preflight": {
+    "main_includes_hw1d_architecture_merge": true,
+    "hw1d_architecture_merge_pr": 68,
+    "hw1d_architecture_merge_sha": "e5f15d1f1b6ddefa73c0a6127bced8d784aae425",
+    "hw1d1_evidence_pr": 80,
+    "hw1d1_evidence_pr_state": "MERGED",
+    "hw1d1_evidence_merged_at_utc": "2026-09-18T18:25:04Z",
+    "hw1d1_evidence_merge_sha": "4a8aefb5fd6203842267f5adbd72b8ed324e1fac",
+    "hw1d1_evidence_commit_sha": "46707749398b8a32fa24d277672fafbcbe391dbf",
+    "accepted_main_tip_at_preflight": "4a8aefb5fd6203842267f5adbd72b8ed324e1fac",
+    "experiments_69_79_state": "OPEN_DRAFT_UNMERGED",
+    "experiments_69_79_verified": {
+      "69": {
+        "state": "OPEN",
+        "draft": true,
+        "merged": null
+      },
+      "70": {
+        "state": "OPEN",
+        "draft": true,
+        "merged": null
+      },
+      "71": {
+        "state": "OPEN",
+        "draft": true,
+        "merged": null
+      },
+      "72": {
+        "state": "OPEN",
+        "draft": true,
+        "merged": null
+      },
+      "73": {
+        "state": "OPEN",
+        "draft": true,
+        "merged": null
+      },
+      "74": {
+        "state": "OPEN",
+        "draft": true,
+        "merged": null
+      },
+      "75": {
+        "state": "OPEN",
+        "draft": true,
+        "merged": null
+      },
+      "76": {
+        "state": "OPEN",
+        "draft": true,
+        "merged": null
+      },
+      "77": {
+        "state": "OPEN",
+        "draft": true,
+        "merged": null
+      },
+      "78": {
+        "state": "OPEN",
+        "draft": true,
+        "merged": null
+      },
+      "79": {
+        "state": "OPEN",
+        "draft": true,
+        "merged": null
+      }
+    },
+    "software_rc1_baselines_untouched": true,
+    "software_rc1_identity": "v1.0.0-rc.1",
+    "existing_open_custom_nxp_architecture_package": true,
+    "nda_accepted": false,
+    "purchase_rfq_fab": false,
+    "physical_pass_claimed": false
+  },
+  "constraints": {
+    "implement_only": "NXP_IMX95_OPEN_CUSTOM",
+    "no_amd_vendor_restricted_collateral": true,
+    "ordinary_account_login_allowed": true,
+    "nda_restricted_collateral_not_used": true,
+    "may_end_with_cpb0_open_ready_for_fab_false": true
+  }
+}

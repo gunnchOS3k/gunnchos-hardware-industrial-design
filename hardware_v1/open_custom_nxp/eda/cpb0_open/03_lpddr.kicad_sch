@@ -1,0 +1,22 @@
+(kicad_sch (version 20250114) (generator "nxp0_campaign") (generator_version "10.0")
+  (uuid "58360a6f-779e-44bd-a1ab-85bf0034572a")
+  (paper "A3")
+  (title_block
+    (title "CPB0-O / LPDDR5")
+    (date "2026-09-18")
+    (rev "0.0.1-nxp0")
+    (company "gunnchOS3k / NXP-0")
+    (comment 1 "PLACEHOLDER — not symbol-complete")
+    (comment 2 "Public-collateral only; no NDA")
+    (comment 3 "CPB0_OPEN_READY_FOR_FAB=false")
+  )
+  (lib_symbols)
+  (text "PLACEHOLDER SHEET: LPDDR5\nFill from IMX95IEC/IMX95RM/UG10210 (account) + EVK cross-check.\nDo not invent ball maps."
+    (exclude_from_sim no) (at 50 50 0)
+    (effects (font (size 2 2)) (justify left bottom))
+    (uuid "1ab70b78-7d09-4c21-b765-88fb7a789468")
+  )
+  (sheet_instances
+    (path "/" (page "1"))
+  )
+)

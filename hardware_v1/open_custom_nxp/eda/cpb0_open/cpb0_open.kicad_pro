@@ -1,0 +1,47 @@
+{
+  "board": {
+    "design_settings": {
+      "defaults": {},
+      "rules": {}
+    },
+    "layers": [
+      [
+        "F.Cu",
+        "F.Mask",
+        "F.SilkS",
+        "B.Cu",
+        "B.Mask",
+        "B.SilkS",
+        "Edge.Cuts"
+      ]
+    ]
+  },
+  "meta": {
+    "filename": "cpb0_open.kicad_pro",
+    "version": 1
+  },
+  "project": {
+    "files": [
+      {
+        "name": "cpb0_open.kicad_sch",
+        "type": "schematic"
+      },
+      {
+        "name": "cpb0_open.kicad_pcb",
+        "type": "pcb"
+      }
+    ]
+  },
+  "sheets": [
+    [
+      "cpb0_open.kicad_sch",
+      ""
+    ]
+  ],
+  "text_variables": {
+    "CAMPAIGN": "NXP0_OPEN_CUSTOM_IMX95_IMPLEMENTATION_FOUNDATION",
+    "SOC": "MIMX9596AVZXN",
+    "CLAIM": "NOT_FAB_READY",
+    "NXP_OPEN": "1"
+  }
+}

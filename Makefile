@@ -122,3 +122,17 @@ hardware-v1-report:
 	@echo "Report: hardware_v1/REPORT_SECTION_17_HW1D_A_TO_T.md"
 
 hardware-v1-all: hardware-v1-generate hardware-v1-validate hardware-v1-gates hardware-v1-report
+
+
+# NXP-0 open-custom i.MX95 engineering track (public collateral only — not fab / not physical)
+.PHONY: nxp-open-audit nxp-open-validate nxp-open-gates
+nxp-open-audit:
+	$(PYTHON) scripts/audit_nxp_open.py
+
+nxp-open-validate:
+	$(PYTHON) scripts/validate_nxp_open.py
+
+nxp-open-gates:
+	@test -f hardware_v1/open_custom_nxp/NXP0_GATES.json
+	@$(PYTHON) -c "import json; g=json.load(open('hardware_v1/open_custom_nxp/NXP0_GATES.json')); keys=['NXP_OPEN_CUSTOM_TRACK_IMPLEMENTATION_STARTED','NXP_PUBLIC_COLLATERAL_INDEX_COMPLETE','NXP_PUBLIC_PINMAP_UNDERSTOOD','NXP_PUBLIC_POWER_ARCHITECTURE_UNDERSTOOD','NXP_PUBLIC_MEMORY_TOPOLOGY_UNDERSTOOD','CPB0_OPEN_SCHEMATIC_STARTED','CPB0_OPEN_SCHEMATIC_ERC_PASS','CPB0_OPEN_PCB_STARTED','CPB0_OPEN_PCB_DRC_PASS','CPB0_OPEN_READY_FOR_FAB','EVT_PENDING','DVT_PENDING','PVT_PENDING','PHYSICAL_HARDWARE_VALIDATED','NEXT_HARDWARE_ACTION'];\
+[print(k+'='+str(g.get(k)).lower() if isinstance(g.get(k), bool) else k+'='+str(g.get(k))) for k in keys]"

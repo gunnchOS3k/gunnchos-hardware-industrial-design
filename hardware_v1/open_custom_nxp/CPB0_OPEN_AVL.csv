@@ -1,0 +1,5 @@
+item_id,MPN,manufacturer,avl_role,stock_price,notes
+SOC-001,MIMX9596AVZXN,NXP,primary,VERIFY_AT_PURCHASE,no stock invented
+SOC-001,MIMX9596*VZXN*,NXP,alternate_family,VERIFY_AT_PURCHASE,same package class
+EC-001,PENDING_SELECT,various,primary,VERIFY_AT_PURCHASE,Zephyr-capable open MCU
+EMMC-001,PENDING_SELECT,various,multi_source,VERIFY_AT_PURCHASE,JEDEC eMMC
