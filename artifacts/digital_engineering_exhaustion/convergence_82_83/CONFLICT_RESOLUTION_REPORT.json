@@ -65,14 +65,14 @@
     "cpb0-open-fab-audit": "FAIL_CLOSED_READINESS_FALSE_OK",
     "cpb0_open_fab_audit_detail": "Tool ran; CPB0_OPEN_DIGITAL_FAB_AUDIT_PASS=false and CPB0_OPEN_READY_FOR_FAB=false (expected until UG10210/EVK BOM genuine readiness)."
   },
-  "final_branch_sha": "26a72b3a099e5577a095dbaca065be2621131f66",
+  "final_branch_sha": "87b75c55060d6a386b6e184333cef427976be78a",
   "status_lines": {
     "PR83_REBOUND_TO_ACCEPTED_MAIN": true,
     "PR83_NXP1_STATE_PRESERVED": true,
     "PR83_VALIDATION_PASS": true,
-    "PR83_MERGEABLE": "PENDING_PUSH_VERIFY",
+    "PR83_MERGEABLE": true,
     "CPB0_OPEN_READY_FOR_FAB": false,
     "NEXT_OWNER_ACTION": "LOGIN_FETCH_UG10210_AND_EVK_BOM_HASH_PDFS"
   },
-  "reconcile_commit": "26a72b3a099e5577a095dbaca065be2621131f66"
+  "reconcile_commit": "87b75c55060d6a386b6e184333cef427976be78a"
 }

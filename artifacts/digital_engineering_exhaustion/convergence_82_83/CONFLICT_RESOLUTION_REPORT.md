@@ -8,7 +8,7 @@
 
 | Item | Value |
 |---|---|
-| #82 merge commit / origin/main | 3962d9eb9d3e0282f61f92c08dc6789961f0c48a |
+| #82 merge commit / origin/main | 87b75c55060d6a386b6e184333cef427976be78a |
 | PR #83 pre-merge head | 2d3beb807784ae0c2b0c5ebb16d4d28b5c8158f8 |
 | Merge strategy | git merge --no-ff origin/main |
 
@@ -48,7 +48,7 @@
 PR83_REBOUND_TO_ACCEPTED_MAIN=true
 PR83_NXP1_STATE_PRESERVED=true
 PR83_VALIDATION_PASS=true
-PR83_MERGEABLE=pending_push_verify
+PR83_MERGEABLE=true
 CPB0_OPEN_READY_FOR_FAB=false
 NEXT_OWNER_ACTION=LOGIN_FETCH_UG10210_AND_EVK_BOM_HASH_PDFS
 ```
