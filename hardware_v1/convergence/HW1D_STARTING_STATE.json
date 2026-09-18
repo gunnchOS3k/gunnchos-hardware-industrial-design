@@ -1,0 +1,28 @@
+{
+  "schema": "gunnchos.hardware_v1.hw1d.starting_state.v1",
+  "generated_at_utc": "2026-09-18T17:46:17Z",
+  "campaign": "HARDWARE_1_0D_FOUR_TRACK_CONVERGENCE_MERGE_READINESS",
+  "pr_68": {
+    "state": "OPEN",
+    "is_draft": true,
+    "head_expected": "628eacd8f35a2a509f36592c392b6aba88b6c4f8",
+    "head_observed": "628eacd8f35a2a509f36592c392b6aba88b6c4f8",
+    "drift": false,
+    "branch": "hardware/v1-mainline-ready-for-evt"
+  },
+  "experiment_prs_69_79": {
+    "expected_draft": true,
+    "expected_open": true,
+    "expected_unmerged": true,
+    "target_branch": "hardware/v1-mainline-ready-for-evt",
+    "note": "API preflight may be environment-blocked; local remotes confirmed present"
+  },
+  "main_sha_observed": "9ee0ef2f688b2c18428bfabc316b23687a02988d",
+  "preflight": {
+    "hardware_v1_validate": "PASS_BEFORE_HW1D_CHANGES",
+    "software_rc1_untouched": true,
+    "physical_gates_false": true
+  },
+  "doctrine_before": "HW1C single PRODUCT mainline = CUSTOM AMD; COM-HPC = REFERENCE_CONTROL",
+  "doctrine_after": "Four-track: PRODUCT_MAINLINE=AMD_CUSTOM_X86; OPEN_ENGINEERING_MAINLINE=NXP_IMX95_OPEN_CUSTOM; GREENFIELD_EXPERIMENT=GXE; REFERENCE_CONTROL=COM_HPC_AND_COTS"
+}
