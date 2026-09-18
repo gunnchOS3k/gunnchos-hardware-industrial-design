@@ -90,11 +90,12 @@
   "status_lines": {
     "PR82_RECONCILED_WITH_STREAM_F": true,
     "PR82_VALIDATION_PASS": true,
-    "PR82_MERGEABLE": "PENDING_PUSH_VERIFY",
+    "PR82_MERGEABLE": true,
     "NEXT_OWNER_ACTION": "MERGE_PR_82_WITH_MERGE_COMMIT"
   },
   "reconcile_commit_message": "chore(hardware): reconcile Stream E with accepted Stream F baseline",
   "note": "final_branch_sha is best-effort self-reference; verify with git rev-parse after push",
   "reconcile_commit": "2212c7460c04d95151ed00d5cd2da3ffd0044edd",
-  "report_sha_sync_note": "final_branch_sha points at the reconcile merge commit pushed for PR #82"
+  "report_sha_sync_note": "final_branch_sha points at the reconcile merge commit pushed for PR #82",
+  "branch_tip_after_report_stamp": "29746a2283daf3e038e241f5772071555c8654a6"
 }
