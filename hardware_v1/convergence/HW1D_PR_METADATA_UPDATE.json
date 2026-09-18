@@ -1,0 +1,13 @@
+{
+  "schema": "gunnchos.hardware_v1.hw1d.pr_metadata.v1",
+  "generated_at_utc": "2026-09-18T17:51:35Z",
+  "pr": 68,
+  "head": "44b3f034db53ca3fe396fa42b30d3cfda3cf95bf",
+  "body_source_in_repo": "PULL_REQUEST_BODY_HW1D.md",
+  "comment_intended": true,
+  "api_update_status": "BLOCKED_ENVIRONMENT",
+  "api_update_detail": "api.github.com CONNECT tunnel 403 via Cursor sandbox proxy; gh keyring token also reported invalid; git push to github.com succeeded",
+  "owner_workaround": "Paste PULL_REQUEST_BODY_HW1D.md into PR #68 body and post HW1D comment from REPORT_SECTION_17 / OWNER_ACTION_PACKET",
+  "draft_unchanged_intent": true,
+  "merge_not_performed": true
+}
