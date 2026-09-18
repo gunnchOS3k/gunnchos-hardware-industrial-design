@@ -14,7 +14,7 @@
 ## B. branch / final SHA
 
 - Branch: `hardware/nxp-open-cpb0-collateral-unlock`
-- Final tip SHA: `d3ef6ead4f3e13d55197133312e9218bfc256930`
+- Final tip SHA: `f08f3d793c59beab670a5250d59555c9c8115244`
 
 ## C. owner collateral index
 
