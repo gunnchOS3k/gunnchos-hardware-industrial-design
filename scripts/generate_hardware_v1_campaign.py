@@ -95,9 +95,18 @@ def decisions() -> list[dict]:
             "id": "DEC-DISPLAY-001",
             "topic": "Student / DS-XL display technology",
             "state": ADOPTED,
-            "mainline": "IPS LCD panels (single eDP Student; dual eDP DS-XL)",
-            "rationale": "Cost, brightness outdoors/desk, AVL availability; OLED isolated as experiment",
-            "evidence": ["device_designs/student_14_5/bom/assembly_bom.csv"],
+            "mainline": (
+                "IPS LCD panels (Student: single eDP; DS-XL: one native eDP + DDI/DP second display). "
+                "Not dual native eDP unless authoritative module docs prove it."
+            ),
+            "rationale": (
+                "COM-HPC-mMTL documents 1x eDP + 2x DDI; retain two functional DS-XL displays via "
+                "eDP+DDI/DP. OLED isolated as experiment."
+            ),
+            "evidence": [
+                "device_designs/student_14_5/bom/assembly_bom.csv",
+                "hardware_v1/devices/ds_xl/DUAL_DISPLAY_ARCHITECTURE.md",
+            ],
             "experiment_alt": "EXP-STUDENT-OLED, EXP-DSXL-OLED-HYBRID",
             "owner_gate": None,
         },
@@ -115,12 +124,21 @@ def decisions() -> list[dict]:
             "id": "DEC-CELLULAR-001",
             "topic": "Optional cellular",
             "state": ADOPTED,
-            "mainline": "Optional Telit FN990B40-class M.2 5G Sub-6 module; Quectel RM520N-GL approved alternate",
-            "rationale": "FN990B40-class named in Hardware v1 mainline; Quectel retained as AVL alternate from prior freeze",
-            "evidence": ["device_designs/student_14_5/bom/assembly_bom.csv"],
+            "mainline": (
+                "Optional Telit FN990B40 M.2 5G Sub-6 module exact MPN FN990B40W01T010300; "
+                "Quectel RM520N-GL approved alternate"
+            ),
+            "rationale": (
+                "HW1B closed AVL identity with exact MPN + live distributor/manufacturer evidence. "
+                "PRODUCT_CELLULAR_ANTENNA_DESIGN_PENDING=true (dev antennas ≠ production)."
+            ),
+            "evidence": [
+                "device_designs/student_14_5/bom/assembly_bom.csv",
+                "hardware_v1/radio/FN990B40_RP0_A_AVL.md",
+            ],
             "experiment_alt": None,
-            "owner_gate": "PENDING_VENDOR_CONFIRMATION on FN990B40 distributor SKU + antenna kit",
-            "secondary_state": VENDOR,
+            "owner_gate": "PRODUCT_CELLULAR_ANTENNA_DESIGN_PENDING",
+            "secondary_state": None,
         },
         {
             "id": "DEC-DOCK-001",
@@ -136,12 +154,26 @@ def decisions() -> list[dict]:
             "id": "DEC-RINGS-001",
             "topic": "Rings MCU",
             "state": ADOPTED,
-            "mainline": "Nordic nRF54L15 class (BLE + LE Audio capable MCU)",
-            "rationale": "Hardware v1 mainline uplift from nRF52840 digital package; nRF52840 retained as historical evidence, not mainline BOM mix",
-            "evidence": ["device_designs/edge_io_rings/bom/assembly_bom.csv"],
+            "mainline": (
+                "Nordic nRF54L15 (BLE + LE Audio). "
+                "RING_EVT_ELECTRICAL_PLATFORM=QFN48/DK reference (PCA10156); "
+                "RING_FORM_FACTOR_CANDIDATE=CSP47"
+            ),
+            "rationale": (
+                "HW1B closed RP0-A footprint uncertainty via Nordic public DK/QFN48 files. "
+                "CSP47 wearable geometry remains a separate HDI/assembly gate; DK ≠ wearable validation."
+            ),
+            "evidence": [
+                "device_designs/edge_io_rings/bom/assembly_bom.csv",
+                "hardware_v1/devices/rings/NRF54L15_PACKAGE_STRATEGY.md",
+                "hardware_v1/vendor_evidence/nordic/PCA10156_HW_FILES_METADATA.json",
+            ],
             "experiment_alt": None,
-            "owner_gate": VENDOR + " nRF54L15 footprint/devkit availability confirmation",
-            "secondary_state": VENDOR,
+            "owner_gate": "CSP47 wearable HDI/assembly feasibility before form-factor board",
+            "secondary_state": None,
+            "RING_EVT_ELECTRICAL_PLATFORM": "QFN48/DK reference",
+            "RING_FORM_FACTOR_CANDIDATE": "CSP47",
+            "DK_HARDWARE_ID": "PCA10156",
         },
         {
             "id": "DEC-RINGS-002",
@@ -188,11 +220,20 @@ def decisions() -> list[dict]:
             "id": "DEC-RP0-001",
             "topic": "Reference Platform 0 scope",
             "state": ADOPTED,
-            "mainline": "Single COM-HPC Mini carrier mule + dock USB4-40 bring-up board + rings magnetic cradle EVT kit",
-            "rationale": "Minimal set to unlock measured EVT without collapsing SKUs into LCD compromise",
-            "evidence": ["DIGITAL_TO_PHYSICAL_HANDOFF.md"],
+            "mainline": (
+                "Two-stage RP0: RP0-A COTS Integration Bench (ADLINK Mini Base + mMTL + nRF54L15 DK + "
+                "COTS USB4 dock) then RP0-B custom gunnchOS carrier/dock/ring EVT electronics"
+            ),
+            "rationale": (
+                "Do not order custom PCB that is not fabrication-ready. COTS unlocks physical bring-up "
+                "while vendor-gated pin maps remain RP0-B blockers."
+            ),
+            "evidence": [
+                "DIGITAL_TO_PHYSICAL_HANDOFF.md",
+                "hardware_v1/reference_platform_0/RP0_STAGE_MODEL.md",
+            ],
             "experiment_alt": None,
-            "owner_gate": "Owner quote + build authorization (Cursor does not purchase/RFQ-send)",
+            "owner_gate": "ORDER_RP0_A_COTS_BRINGUP_KIT (Cursor does not purchase)",
         },
     ]
 
@@ -235,7 +276,10 @@ def experiments() -> list[dict]:
             "baseline": "Dual IPS eDP",
             "variant": "OLED primary + IPS secondary",
             "metrics": ["dual_edp_si_margin", "thermal_delta_c", "cost_delta_usd", "color_delta_e"],
-            "promotion_gate": "Dual-eDP SI margin maintained; EXT-DSXL-DUAL-EDP resolved for both stacks",
+            "promotion_gate": (
+                "Dual-display SI margin maintained on eDP+DDI/DP (or proven dual-eDP if docs change); "
+                "do not mislabel one eDP + DDI as dual native eDP"
+            ),
             "not_in_main_bom": True,
         },
         {
@@ -297,49 +341,37 @@ def experiments() -> list[dict]:
 
 
 def gate_tokens() -> dict:
-    """Honest gates — not earned without pin maps / fab package / quotes."""
-    blockers = [
-        {
-            "id": "EXT-COM-HPC-400PIN",
-            "severity": "PICMG/ADLINK COM-HPC Mini net-accurate pin map for chosen module SKU",
-            "blocks": ["STUDENT_HW_DIGITAL_RELEASE_PACKAGE", "DSXL_HW_DIGITAL_RELEASE_PACKAGE", "REFERENCE_PLATFORM_0_READY_FOR_FAB"],
-        },
-        {
-            "id": "EXT-DSXL-DUAL-EDP",
-            "severity": "Dual eDP lane map on COM-HPC Mini for DS-XL",
-            "blocks": ["DSXL_HW_DIGITAL_RELEASE_PACKAGE"],
-        },
-        {
-            "id": "EXT-JHL8440-BALLMAP",
-            "severity": "Intel JHL8440 ball map (NDA) for pin-accurate dock fanout",
-            "blocks": ["DOCK_HW_DIGITAL_RELEASE_PACKAGE", "REFERENCE_PLATFORM_0_READY_FOR_FAB"],
-        },
-        {
-            "id": "EXT-JHL9040R-BALLMAP",
-            "severity": "Intel JHL9040R retimer ball map (NDA)",
-            "blocks": ["DOCK_HW_DIGITAL_RELEASE_PACKAGE"],
-        },
-        {
-            "id": "UNRES-NRF54L15-FOOTPRINT",
-            "severity": "Confirmed nRF54L15 package footprint + Nordic reference design for ring PCB",
-            "blocks": ["RINGS_MAINLINE_BOM_FREEZE"],
-        },
-        {
-            "id": "UNRES-FN990B40-AVL",
-            "severity": "Distributor SKU + antenna kit confirmation for Telit FN990B40-class",
-            "blocks": ["CELLULAR_OPTION_AVL_FREEZE"],
-        },
-        {
-            "id": "OWNER-RP0-QUOTE-AUTH",
-            "severity": "Owner authorization to request quotes / build Reference Platform 0 (Cursor does not send RFQ)",
-            "blocks": ["HARDWARE_V1_READY_FOR_EVT_BUILD"],
-        },
-    ]
+    """Honest gates — COTS orderability does not earn custom fab / EVT build."""
+    import sys
+
+    scripts_dir = Path(__file__).resolve().parent
+    if str(scripts_dir) not in sys.path:
+        sys.path.insert(0, str(scripts_dir))
+    from hw1b_rp0_cots_closure import hw1b_gate_overlay
+
+    overlay = hw1b_gate_overlay()
     return {
         "schema": "gunnchos.hardware_v1.gates.v1",
         "generated_at_utc": UTC,
-        "HARDWARE_V1_READY_FOR_EVT_BUILD": False,
-        "REFERENCE_PLATFORM_0_READY_FOR_FAB": False,
+        "campaign_overlay": "HARDWARE_1_0B_RP0_COTS_BLOCKER_CLOSURE",
+        "HARDWARE_V1_READY_FOR_EVT_BUILD": overlay["HARDWARE_V1_READY_FOR_EVT_BUILD"],
+        "HARDWARE_V1_DIGITAL_ARCHITECTURE_COMPLETE": overlay["HARDWARE_V1_DIGITAL_ARCHITECTURE_COMPLETE"],
+        "REFERENCE_PLATFORM_0_READY_FOR_FAB": overlay["REFERENCE_PLATFORM_0_READY_FOR_FAB"],
+        "RP0_A_COTS_PROCUREMENT_PACKET_READY": overlay["RP0_A_COTS_PROCUREMENT_PACKET_READY"],
+        "RP0_A_READY_TO_ORDER": overlay["RP0_A_READY_TO_ORDER"],
+        "RP0_A_PHYSICAL_BUILD_PENDING": overlay["RP0_A_PHYSICAL_BUILD_PENDING"],
+        "RP0_A_BRINGUP_PENDING": overlay["RP0_A_BRINGUP_PENDING"],
+        "RP0_B_CUSTOM_READY_FOR_FAB": overlay["RP0_B_CUSTOM_READY_FOR_FAB"],
+        "PRODUCT_CELLULAR_ANTENNA_DESIGN_PENDING": overlay["PRODUCT_CELLULAR_ANTENNA_DESIGN_PENDING"],
+        "UNRES_NRF54L15_FOOTPRINT_CLOSED": overlay["UNRES_NRF54L15_FOOTPRINT_CLOSED"],
+        "UNRES_FN990B40_AVL_CLOSED": overlay["UNRES_FN990B40_AVL_CLOSED"],
+        "EXT_DSXL_DUAL_EDP_CLOSED": overlay["EXT_DSXL_DUAL_EDP_CLOSED"],
+        "EXT_COM_HPC_400PIN_RP0_A_BLOCKING": overlay["EXT_COM_HPC_400PIN_RP0_A_BLOCKING"],
+        "EXT_COM_HPC_400PIN_RP0_B_BLOCKING": overlay["EXT_COM_HPC_400PIN_RP0_B_BLOCKING"],
+        "EXT_JHL8440_BALLMAP_RP0_A_BLOCKING": overlay["EXT_JHL8440_BALLMAP_RP0_A_BLOCKING"],
+        "EXT_JHL8440_BALLMAP_RP0_B_BLOCKING": overlay["EXT_JHL8440_BALLMAP_RP0_B_BLOCKING"],
+        "EXT_JHL9040R_BALLMAP_RP0_A_BLOCKING": overlay["EXT_JHL9040R_BALLMAP_RP0_A_BLOCKING"],
+        "EXT_JHL9040R_BALLMAP_RP0_B_BLOCKING": overlay["EXT_JHL9040R_BALLMAP_RP0_B_BLOCKING"],
         "EVT_PENDING": True,
         "DVT_PENDING": True,
         "PVT_PENDING": True,
@@ -354,15 +386,15 @@ def gate_tokens() -> dict:
         "MAINLINE_DECISION_LEDGER_COMPLETE": True,
         "EXPERIMENTS_REGISTRY_COMPLETE": True,
         "SOFTWARE_RC1_BASELINES_UNTOUCHED": True,
-        "blockers": blockers,
-        "NEXT_OWNER_ACTION": "QUOTE_AND_BUILD_REFERENCE_PLATFORM_0",
-        "NEXT_OWNER_ACTION_NOTE": (
-            "Digital mainline architecture + comparison tracks are packaged. "
-            "Gates above remain FALSE until external pin maps / AVL confirmations / owner quote-build. "
-            "Cursor will not send RFQs, purchase, or claim fab."
-        ),
-        "NEXT_GATE": None,
-        "NEXT_GATE_IF_OWNER_DECLINES_QUOTE": "EXT-COM-HPC-400PIN",
+        "blockers": overlay["blockers"],
+        "closed_blockers": overlay["closed_blockers"],
+        "NEXT_OWNER_ACTION": overlay["NEXT_OWNER_ACTION"],
+        "NEXT_OWNER_ACTION_NOTE": overlay["NEXT_OWNER_ACTION_NOTE"],
+        "NEXT_GATE": overlay["NEXT_GATE"],
+        "NEXT_GATE_IF_OWNER_DECLINES_ORDER": overlay["NEXT_GATE_IF_OWNER_DECLINES_ORDER"],
+        "legacy_alias": {
+            "REFERENCE_PLATFORM_0_READY_FOR_FAB": "RP0_B_CUSTOM_READY_FOR_FAB",
+        },
     }
 
 
@@ -443,17 +475,18 @@ def build_contracts() -> None:
 ## Host platforms (mainline)
 | SKU | Compute | Display | Storage/Wi-Fi | Optional WWAN |
 |---|---|---|---|---|
-| Student 14.5 | COM-HPC Mini MTL-class | IPS eDP | M.2 NVMe + M.2 Key E | Telit FN990B40-class |
-| DS-XL Coder | same module | Dual IPS eDP | same | same |
-| Handheld Hybrid (EVT mule) | COM-HPC Mini mule | IPS (mule panel) | same | optional |
+| Student 14.5 | COM-HPC Mini MTL-class | IPS eDP | M.2 NVMe + M.2 Key E | Telit FN990B40 (FN990B40W01T010300) |
+| DS-XL Coder | same module | IPS eDP + DDI/DP second display | same | same |
+| Handheld Hybrid (EVT mule) | COM-HPC Mini mule / RP0-A COTS | IPS (mule panel) | same | optional |
 | Handheld Hybrid (production) | PENDING_PHYSICAL_MEASUREMENT | — | — | — |
 
 ## Dock
 - Gen-1: USB4 40 + PD EPR
 - USB4 80: experimental only
+- RP0-A: COTS USB4 dock for behavioral validation (does not certify custom dock PCB)
 
 ## Rings
-- MCU: nRF54L15 class
+- MCU: nRF54L15 — EVT electrical QFN48/DK (PCA10156); form-factor candidate CSP47
 - Sensors: IMU + cap/touch
 - Charge EVT: magnetic cradle
 - Inductive / sEMG: experimental
@@ -688,19 +721,24 @@ def build_reference_platform() -> None:
         md(
             "Reference Platform 0",
             """
-## Definition
-Minimal EVT mule set:
-1. COM-HPC Mini carrier (Student/Handheld shared electrical mule)
-2. Dock Gen-1 USB4-40 bring-up
-3. Rings magnetic cradle EVT kit (nRF54L15 class)
+## Stage model
+See `RP0_STAGE_MODEL.md`.
+
+### RP0-A — COTS Integration Bench
+ADLINK COM-HPC Mini Base + COM-HPC-mMTL-155H-32G + nRF54L15 DK (PCA10156) + COTS USB4 dock.
+No custom fabrication. Procurement packet ready; **NOT_PURCHASED**.
+
+### RP0-B — Custom gunnchOS Reference Carrier
+Net-accurate custom carrier/dock/ring EVT electronics. Requires vendor pin/ball maps + EDA.
 
 ## Fab readiness
-`REFERENCE_PLATFORM_0_READY_FOR_FAB=false`
+`REFERENCE_PLATFORM_0_READY_FOR_FAB=false` (= `RP0_B_CUSTOM_READY_FOR_FAB=false`)
 
-Blocked on external pin/ball maps and owner quote authorization. No fabricated Gerbers claimed in this package.
+COTS orderability does **not** set fab readiness.
 
 ## Owner next action
-`NEXT_OWNER_ACTION=QUOTE_AND_BUILD_REFERENCE_PLATFORM_0` — owner may request quotes using digital packets; Cursor does not send RFQs.
+`NEXT_OWNER_ACTION=ORDER_RP0_A_COTS_BRINGUP_KIT` — Cursor does not purchase.
+If owner declines: `NEXT_GATE=ACQUIRE_RP0_B_VENDOR_COLLATERAL`
 """,
         ),
     )
@@ -709,9 +747,31 @@ Blocked on external pin/ball maps and owner quote authorization. No fabricated G
         {
             "schema": "gunnchos.hardware_v1.rp0.v1",
             "READY_FOR_FAB": False,
+            "RP0_B_CUSTOM_READY_FOR_FAB": False,
+            "RP0_A_COTS_PROCUREMENT_PACKET_READY": True,
+            "RP0_A_READY_TO_ORDER": True,
+            "RP0_A_PHYSICAL_BUILD_PENDING": True,
+            "RP0_A_BRINGUP_PENDING": True,
             "PHYSICAL_PENDING": True,
-            "components": ["com_hpc_mini_carrier_mule", "dock_usb4_40", "rings_magnetic_cradle"],
-            "blockers": ["EXT-COM-HPC-400PIN", "EXT-JHL8440-BALLMAP", "OWNER-RP0-QUOTE-AUTH"],
+            "stages": {
+                "RP0_A": {
+                    "type": "COTS_INTEGRATION_BENCH",
+                    "components": [
+                        "adlink_com_hpc_mmtl_155h_32g",
+                        "adlink_com_hpc_mini_base",
+                        "nrf54l15_dk_pca10156",
+                        "cots_usb4_dock",
+                    ],
+                },
+                "RP0_B": {
+                    "type": "CUSTOM_GUNNCHOS_REFERENCE_CARRIER",
+                    "blockers": [
+                        "EXT-COM-HPC-400PIN",
+                        "EXT-JHL8440-BALLMAP",
+                        "EXT-JHL9040R-BALLMAP",
+                    ],
+                },
+            },
             "generated_at_utc": UTC,
         },
     )
@@ -911,24 +971,33 @@ def build_owner_packet() -> None:
             f"""
 ## What Cursor completed (digital)
 - Mainline decision ledger (one design per decision)
+- HW1B RP0-A/B stage split + public-source blocker closures
+- RP0-A COTS procurement BOM/guide + bring-up matrix
+- RP0-B vendor access packet
 - Contracts, PRDs, ICDs, DFMEA starter, EVT/DVT/PVT matrices
-- BOM/AVL indexes without experimental mix
 - Experiments registry + EXP-*-001 comparison packages
 - Make validators `make hardware-v1-*`
 - Honest gate tokens (see below)
 
 ## What Cursor did NOT do
-- Send RFQs / purchase / contact suppliers
+- Send RFQs / purchase / contact suppliers / accept NDAs
 - Claim physical validation or certification
 - Merge any PR
 - Modify software RC1 baselines
-- Fabricate Gerbers/ODB++/quotes/lead times
+- Fabricate Gerbers/ODB++/quotes/lead times / invent ball maps
 
 ## Gate tokens
 | Token | Value |
 |---|---|
 | `HARDWARE_V1_READY_FOR_EVT_BUILD` | `{gates['HARDWARE_V1_READY_FOR_EVT_BUILD']}` |
-| `REFERENCE_PLATFORM_0_READY_FOR_FAB` | `{gates['REFERENCE_PLATFORM_0_READY_FOR_FAB']}` |
+| `HARDWARE_V1_DIGITAL_ARCHITECTURE_COMPLETE` | `{gates['HARDWARE_V1_DIGITAL_ARCHITECTURE_COMPLETE']}` |
+| `REFERENCE_PLATFORM_0_READY_FOR_FAB` | `{gates['REFERENCE_PLATFORM_0_READY_FOR_FAB']}` (= `RP0_B_CUSTOM_READY_FOR_FAB`) |
+| `RP0_A_COTS_PROCUREMENT_PACKET_READY` | `{gates['RP0_A_COTS_PROCUREMENT_PACKET_READY']}` |
+| `RP0_A_READY_TO_ORDER` | `{gates['RP0_A_READY_TO_ORDER']}` |
+| `RP0_A_PHYSICAL_BUILD_PENDING` | `{gates['RP0_A_PHYSICAL_BUILD_PENDING']}` |
+| `RP0_A_BRINGUP_PENDING` | `{gates['RP0_A_BRINGUP_PENDING']}` |
+| `RP0_B_CUSTOM_READY_FOR_FAB` | `{gates['RP0_B_CUSTOM_READY_FOR_FAB']}` |
+| `PRODUCT_CELLULAR_ANTENNA_DESIGN_PENDING` | `{gates['PRODUCT_CELLULAR_ANTENNA_DESIGN_PENDING']}` |
 | `EVT_PENDING` | `{gates['EVT_PENDING']}` |
 | `DVT_PENDING` | `{gates['DVT_PENDING']}` |
 | `PVT_PENDING` | `{gates['PVT_PENDING']}` |
@@ -944,7 +1013,7 @@ def build_owner_packet() -> None:
 
 {gates['NEXT_OWNER_ACTION_NOTE']}
 
-If owner declines quote/build: `NEXT_GATE={gates['NEXT_GATE_IF_OWNER_DECLINES_QUOTE']}`
+If owner declines RP0-A order: `NEXT_GATE={gates['NEXT_GATE_IF_OWNER_DECLINES_ORDER']}`
 """,
         ),
     )
@@ -953,7 +1022,11 @@ If owner declines quote/build: `NEXT_GATE={gates['NEXT_GATE_IF_OWNER_DECLINES_QU
         HV1 / "GATES.md",
         md(
             "Hardware v1 gate tokens",
-            "\n".join(f"- `{k}` = `{v}`" for k, v in gates.items() if k.isupper() or k.startswith("NEXT")),
+            "\n".join(
+                f"- `{k}` = `{v}`"
+                for k, v in gates.items()
+                if isinstance(v, (bool, str, type(None))) and (k.isupper() or k.startswith("NEXT"))
+            ),
         ),
     )
 
@@ -998,7 +1071,7 @@ Qualified Li-ion; IPC Class 2 + selective tighter controls.
 `hardware_v1/bom/` — no experimental mix.
 
 ## L. Reference Platform 0
-Defined; `REFERENCE_PLATFORM_0_READY_FOR_FAB=false`.
+Two-stage: RP0-A COTS packet ready; `REFERENCE_PLATFORM_0_READY_FOR_FAB=false` (= RP0-B).
 
 ## M. PRDs / ICDs
 `hardware_v1/prd/`, `hardware_v1/icd/`
@@ -1034,13 +1107,13 @@ Mainline DRAFT to `main`; experimental DRAFTs to mainline branch when packages p
 No merge, no RFQ send, no purchase, no secrets.
 
 ## X. NEXT_OWNER_ACTION
-`QUOTE_AND_BUILD_REFERENCE_PLATFORM_0`
+`ORDER_RP0_A_COTS_BRINGUP_KIT`
 
-## Y. Honest blockers
-EXT-COM-HPC-400PIN, EXT-JHL8440-BALLMAP, nRF54L15 footprint confirm, FN990B40 AVL confirm.
+## Y. Honest blockers (RP0-B)
+EXT-COM-HPC-400PIN, EXT-JHL8440-BALLMAP, EXT-JHL9040R-BALLMAP (vendor-gated for custom fab only).
 
 ## Z. Evidence root
-`hardware_v1/`
+`hardware_v1/` including `rp0b/`, `reference_platform_0/RP0_*`, `vendor_evidence/nordic/`
 """,
         ),
     )
@@ -1092,6 +1165,13 @@ def build_manifest() -> None:
 
 def main() -> None:
     HV1.mkdir(parents=True, exist_ok=True)
+    import sys
+
+    scripts_dir = Path(__file__).resolve().parent
+    if str(scripts_dir) not in sys.path:
+        sys.path.insert(0, str(scripts_dir))
+    from hw1b_rp0_cots_closure import build_all as build_hw1b
+
     build_control_audits()
     build_decision_ledger()
     build_contracts()
@@ -1102,6 +1182,7 @@ def main() -> None:
     build_dfmea_matrices()
     build_experiments_registry()
     build_rc1_register()
+    build_hw1b()
     build_owner_packet()
     build_report_az()
     build_readme()

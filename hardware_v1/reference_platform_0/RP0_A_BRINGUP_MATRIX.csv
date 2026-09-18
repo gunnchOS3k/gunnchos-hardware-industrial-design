@@ -1,0 +1,32 @@
+test,evidence_class,required_hardware,measurement,pass_criterion,current_state,owner_lab_action
+power-on,compute,PSU + module + base,rails within spec,boot LED/POST present,UNTESTED_PENDING_PHYSICAL,Execute after RP0-A kit arrives; record evidence artifacts
+BIOS/UEFI,compute,module + display,enter setup,setup reachable,UNTESTED_PENDING_PHYSICAL,Execute after RP0-A kit arrives; record evidence artifacts
+TPM,compute,module TPM,tpm2 presence,TPM enumerated,UNTESTED_PENDING_PHYSICAL,Execute after RP0-A kit arrives; record evidence artifacts
+Secure Boot,compute,UEFI,secure boot state read,state documented,UNTESTED_PENDING_PHYSICAL,Execute after RP0-A kit arrives; record evidence artifacts
+gunnchOS boot,compute,NVMe image,boot to shell/UI,OS boots,UNTESTED_PENDING_PHYSICAL,Execute after RP0-A kit arrives; record evidence artifacts
+NVMe,storage,NVMe SSD,enumerate + R/W,device usable,UNTESTED_PENDING_PHYSICAL,Execute after RP0-A kit arrives; record evidence artifacts
+Wi-Fi,wifi,BE200 + antennas,associate + iperf/smoke,link up,UNTESTED_PENDING_PHYSICAL,Execute after RP0-A kit arrives; record evidence artifacts
+Bluetooth,wifi,BE200,scan/pair smoke,BT up,UNTESTED_PENDING_PHYSICAL,Execute after RP0-A kit arrives; record evidence artifacts
+optional cellular,cellular,FN990 + antennas,enumerate modem,modem present if installed,UNTESTED_PENDING_PHYSICAL,Execute after RP0-A kit arrives; record evidence artifacts
+eDP,display,eDP panel/path,image stable,Display A works,UNTESTED_PENDING_PHYSICAL,Execute after RP0-A kit arrives; record evidence artifacts
+second display over DDI/DP,display,DDI/DP monitor,independent output,Display B works,UNTESTED_PENDING_PHYSICAL,Execute after RP0-A kit arrives; record evidence artifacts
+USB4,dock,USB4 cable + dock,link rate / device tree,USB4 link up,UNTESTED_PENDING_PHYSICAL,Execute after RP0-A kit arrives; record evidence artifacts
+USB-C PD behavior,power,PD supply + meter,contract negotiation,expected PDO,UNTESTED_PENDING_PHYSICAL,Execute after RP0-A kit arrives; record evidence artifacts
+audio,compute,carrier audio,playback/record smoke,audio path works,UNTESTED_PENDING_PHYSICAL,Execute after RP0-A kit arrives; record evidence artifacts
+camera,compute,carrier CSI if present,capture frame,frame or N/A documented,UNTESTED_PENDING_PHYSICAL,Execute after RP0-A kit arrives; record evidence artifacts
+sleep/wake,os,compute,S3/S0ix cycle,resume OK,UNTESTED_PENDING_PHYSICAL,Execute after RP0-A kit arrives; record evidence artifacts
+suspend/resume,os,compute+dock,cycle with dock,resume OK,UNTESTED_PENDING_PHYSICAL,Execute after RP0-A kit arrives; record evidence artifacts
+recovery,os,recovery media,recover boot,recovery path works,UNTESTED_PENDING_PHYSICAL,Execute after RP0-A kit arrives; record evidence artifacts
+firmware update,fw,vendor capsule/EC path,apply + reboot,update succeeds or fail closed,UNTESTED_PENDING_PHYSICAL,Execute after RP0-A kit arrives; record evidence artifacts
+thermals,thermal,probes,skin/module temps,within provisional limits,UNTESTED_PENDING_PHYSICAL,Execute after RP0-A kit arrives; record evidence artifacts
+idle/compile/AI/game power,power,meter,power samples,profiles recorded,UNTESTED_PENDING_PHYSICAL,Execute after RP0-A kit arrives; record evidence artifacts
+dock display,dock,COTS dock + display,external display,image OK,UNTESTED_PENDING_PHYSICAL,Execute after RP0-A kit arrives; record evidence artifacts
+dock Ethernet,dock,COTS dock + NIC,ping/throughput,link OK or PARTIAL,UNTESTED_PENDING_PHYSICAL,Execute after RP0-A kit arrives; record evidence artifacts
+dock USB,dock,COTS dock USB,enumerate peripherals,USB OK,UNTESTED_PENDING_PHYSICAL,Execute after RP0-A kit arrives; record evidence artifacts
+Ring BLE,rings,PCA10156,advertise/connect,BLE OK,UNTESTED_PENDING_PHYSICAL,Execute after RP0-A kit arrives; record evidence artifacts
+Ring IMU,rings,DK + IMU,sample stream,IMU OK,UNTESTED_PENDING_PHYSICAL,Execute after RP0-A kit arrives; record evidence artifacts
+Ring touch/contact,rings,cap eval,touch events,events OK,UNTESTED_PENDING_PHYSICAL,Execute after RP0-A kit arrives; record evidence artifacts
+Ring latency,rings,DK + host,end-to-end latency,latency recorded,UNTESTED_PENDING_PHYSICAL,Execute after RP0-A kit arrives; record evidence artifacts
+Ring false-positive measurements,rings,cap eval,FP rate,rate recorded,UNTESTED_PENDING_PHYSICAL,Execute after RP0-A kit arrives; record evidence artifacts
+Ring haptics,rings,LRA eval,actuation,haptics OK or deferred,UNTESTED_PENDING_PHYSICAL,Execute after RP0-A kit arrives; record evidence artifacts
+Ring charging,rings,magnetic contacts,charge current,charge path OK,UNTESTED_PENDING_PHYSICAL,Execute after RP0-A kit arrives; record evidence artifacts
