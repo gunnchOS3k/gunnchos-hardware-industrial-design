@@ -17,3 +17,8 @@ Minimal digital blockers keeping `CPB0_OPEN_READY_FOR_FAB=false`:
 3. Complete schematic ERC pass with real parts
 4. Footprint library validation vs mechanical drawings
 5. Placement/routing/DRC complete under those constraints
+
+
+## NXP-2 (2026-09-18T22:17:56Z)
+
+Primary owner action: `PROVIDE_MISSING_AUTHORITATIVE_NXP_COLLATERAL` (UG10210 + EVK BOM). No NDA accepted. No RFQ/purchase/fab.

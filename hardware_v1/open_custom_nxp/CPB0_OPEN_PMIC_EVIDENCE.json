@@ -1,0 +1,25 @@
+{
+  "schema": "gunnchos.hardware.cpb0_open.pmic_evidence.v1",
+  "generated_at_utc": "2026-09-18T22:17:56Z",
+  "campaign": "NXP2_CPB0_COLLATERAL_UNLOCK_EDA_CONTINUATION",
+  "evk_bom_present": false,
+  "architecture": "PF09+PF5301+PF5302",
+  "architecture_source": "EVK_QSG_public",
+  "pf09": {
+    "preferred_candidate": "MPF0900AVNA1ES",
+    "status": "CANDIDATE_NOT_OTP_FROZEN",
+    "otp_frozen": false,
+    "evidence_class": "PRODUCT_PAGE_PLUS_QSG"
+  },
+  "pf5301": {
+    "opn": null,
+    "status": "UNRESOLVED",
+    "mark": "UNRESOLVED"
+  },
+  "pf5302": {
+    "opn": null,
+    "status": "UNRESOLVED",
+    "mark": "UNRESOLVED"
+  },
+  "invented_opns": 0
+}

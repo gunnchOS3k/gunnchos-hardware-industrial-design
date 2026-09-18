@@ -1,7 +1,7 @@
 # CPB0-O DDR constraints register
 
-**Generated:** 2026-09-18T18:53:20Z  
-**Campaign:** `NXP0_OPEN_CUSTOM_IMX95_IMPLEMENTATION_FOUNDATION`  
+**Generated:** 2026-09-18T22:17:56Z  
+**Campaign:** `NXP2_CPB0_COLLATERAL_UNLOCK_EDA_CONTINUATION` (continues NXP0/NXP1; owner UG10210 still MISSING)  
 **Claim boundary:** architecture / public-collateral implementation foundation only — not physical pass, not certification, not fab release, not purchased, not NDA, not GXE execution, not software RC1 change.
 
 

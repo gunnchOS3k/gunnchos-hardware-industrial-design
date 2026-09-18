@@ -1,0 +1,14 @@
+{
+  "schema": "gunnchos.hardware.cpb0_open.memory_component_evidence.v1",
+  "generated_at_utc": "2026-09-18T22:17:56Z",
+  "campaign": "NXP2_CPB0_COLLATERAL_UNLOCK_EDA_CONTINUATION",
+  "evk_bom_present": false,
+  "technology": "LPDDR5",
+  "width": "x32",
+  "evk_capacity_class": "16GB_class_from_QSG",
+  "manufacturer": null,
+  "mpn": null,
+  "status": "UNRESOLVED",
+  "mark": "UNRESOLVED",
+  "NXP_PUBLIC_MEMORY_TOPOLOGY_UNDERSTOOD": false
+}
