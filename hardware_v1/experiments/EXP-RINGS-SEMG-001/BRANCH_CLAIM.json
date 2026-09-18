@@ -1,0 +1,10 @@
+{
+  "branch": "hardware/exp-rings-semg-wrist",
+  "experiment_id": "EXP-RINGS-SEMG-001",
+  "title": "sEMG wrist vs IMU/cap ring input",
+  "base": "hardware/v1-mainline-ready-for-evt",
+  "base_sha": "bd65bc67b413597a7d5534bc8dddaa9d7513b0c3",
+  "state": "EXPERIMENTAL_COMPARE",
+  "not_in_main_bom": true,
+  "comparison_package": "hardware_v1/experiments/EXP-RINGS-SEMG-001/COMPARISON_PACKAGE.md"
+}
