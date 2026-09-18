@@ -1,0 +1,44 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "gunnchos.mes.serial_genealogy.v1",
+  "type": "object",
+  "required": [
+    "unit_sn",
+    "sku",
+    "wo_id",
+    "components"
+  ],
+  "properties": {
+    "unit_sn": {
+      "type": "string"
+    },
+    "sku": {
+      "type": "string"
+    },
+    "wo_id": {
+      "type": "string"
+    },
+    "components": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "ref",
+          "mpn",
+          "lot_or_sn"
+        ],
+        "properties": {
+          "ref": {
+            "type": "string"
+          },
+          "mpn": {
+            "type": "string"
+          },
+          "lot_or_sn": {
+            "type": "string"
+          }
+        }
+      }
+    }
+  }
+}

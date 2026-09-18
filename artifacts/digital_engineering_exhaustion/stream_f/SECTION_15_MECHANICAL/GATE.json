@@ -1,0 +1,16 @@
+{
+  "schema": "gunnchos.stream_f.gate.v1",
+  "section": 15,
+  "gate": "MECHANICAL_DIGITAL_ENGINEERING_EXHAUSTED",
+  "status": true,
+  "generated_at_utc": "2026-09-18T18:35:47Z",
+  "honesty": {
+    "ERGONOMIC_PASS": false,
+    "PHYSICAL_FIT_PASS": false,
+    "FIRST_ARTICLE_PRINT_PASS": false,
+    "TOOLING_RELEASE": false
+  },
+  "artifacts_root": "hardware_v1/mechanical/",
+  "sku_count": 5,
+  "stream_e_conflict_paths_touched": false
+}

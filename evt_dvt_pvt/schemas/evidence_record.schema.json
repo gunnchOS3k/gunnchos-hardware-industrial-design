@@ -1,0 +1,47 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "gunnchos.evt_dvt_pvt.evidence_record.v1",
+  "type": "object",
+  "required": [
+    "test_id",
+    "sku",
+    "operator",
+    "instrument_sn",
+    "result",
+    "physical_execution"
+  ],
+  "properties": {
+    "test_id": {
+      "type": "string"
+    },
+    "sku": {
+      "type": "string"
+    },
+    "operator": {
+      "type": "string"
+    },
+    "instrument_sn": {
+      "type": "string"
+    },
+    "result": {
+      "enum": [
+        "NOT_RUN",
+        "FAIL",
+        "PASS",
+        "BLOCKED"
+      ]
+    },
+    "physical_execution": {
+      "type": "boolean"
+    },
+    "attachments": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "notes": {
+      "type": "string"
+    }
+  }
+}

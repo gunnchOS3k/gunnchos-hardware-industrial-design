@@ -1,0 +1,359 @@
+{
+  "schema": "gunnchos.evt_dvt_pvt.test_pack.v1",
+  "phase": "PVT",
+  "generated_at_utc": "2026-09-18T18:35:47Z",
+  "case_count": 25,
+  "cases": [
+    {
+      "id": "PVT-student_14_5-line_process_cap",
+      "phase": "PVT",
+      "sku": "student_14_5",
+      "objective": "Process capability on line",
+      "method": "Documented procedure; execute only on physical units",
+      "instruments": [
+        "TBD_CALIBRATED"
+      ],
+      "pass_criteria": "Written numeric limits freeze before run",
+      "evidence_schema_ref": "evt_dvt_pvt/schemas/evidence_record.schema.json",
+      "physical_pass": false,
+      "digital_prep_complete": true
+    },
+    {
+      "id": "PVT-student_14_5-yield_gate",
+      "phase": "PVT",
+      "sku": "student_14_5",
+      "objective": "Yield vs target",
+      "method": "Documented procedure; execute only on physical units",
+      "instruments": [
+        "TBD_CALIBRATED"
+      ],
+      "pass_criteria": "Written numeric limits freeze before run",
+      "evidence_schema_ref": "evt_dvt_pvt/schemas/evidence_record.schema.json",
+      "physical_pass": false,
+      "digital_prep_complete": true
+    },
+    {
+      "id": "PVT-student_14_5-packaging_ship",
+      "phase": "PVT",
+      "sku": "student_14_5",
+      "objective": "Packaging ship test",
+      "method": "Documented procedure; execute only on physical units",
+      "instruments": [
+        "TBD_CALIBRATED"
+      ],
+      "pass_criteria": "Written numeric limits freeze before run",
+      "evidence_schema_ref": "evt_dvt_pvt/schemas/evidence_record.schema.json",
+      "physical_pass": false,
+      "digital_prep_complete": true
+    },
+    {
+      "id": "PVT-student_14_5-fru_swap",
+      "phase": "PVT",
+      "sku": "student_14_5",
+      "objective": "FRU swap timing",
+      "method": "Documented procedure; execute only on physical units",
+      "instruments": [
+        "TBD_CALIBRATED"
+      ],
+      "pass_criteria": "Written numeric limits freeze before run",
+      "evidence_schema_ref": "evt_dvt_pvt/schemas/evidence_record.schema.json",
+      "physical_pass": false,
+      "digital_prep_complete": true
+    },
+    {
+      "id": "PVT-student_14_5-traceability_mes",
+      "phase": "PVT",
+      "sku": "student_14_5",
+      "objective": "MES genealogy audit",
+      "method": "Documented procedure; execute only on physical units",
+      "instruments": [
+        "TBD_CALIBRATED"
+      ],
+      "pass_criteria": "Written numeric limits freeze before run",
+      "evidence_schema_ref": "evt_dvt_pvt/schemas/evidence_record.schema.json",
+      "physical_pass": false,
+      "digital_prep_complete": true
+    },
+    {
+      "id": "PVT-handheld_hybrid-line_process_cap",
+      "phase": "PVT",
+      "sku": "handheld_hybrid",
+      "objective": "Process capability on line",
+      "method": "Documented procedure; execute only on physical units",
+      "instruments": [
+        "TBD_CALIBRATED"
+      ],
+      "pass_criteria": "Written numeric limits freeze before run",
+      "evidence_schema_ref": "evt_dvt_pvt/schemas/evidence_record.schema.json",
+      "physical_pass": false,
+      "digital_prep_complete": true
+    },
+    {
+      "id": "PVT-handheld_hybrid-yield_gate",
+      "phase": "PVT",
+      "sku": "handheld_hybrid",
+      "objective": "Yield vs target",
+      "method": "Documented procedure; execute only on physical units",
+      "instruments": [
+        "TBD_CALIBRATED"
+      ],
+      "pass_criteria": "Written numeric limits freeze before run",
+      "evidence_schema_ref": "evt_dvt_pvt/schemas/evidence_record.schema.json",
+      "physical_pass": false,
+      "digital_prep_complete": true
+    },
+    {
+      "id": "PVT-handheld_hybrid-packaging_ship",
+      "phase": "PVT",
+      "sku": "handheld_hybrid",
+      "objective": "Packaging ship test",
+      "method": "Documented procedure; execute only on physical units",
+      "instruments": [
+        "TBD_CALIBRATED"
+      ],
+      "pass_criteria": "Written numeric limits freeze before run",
+      "evidence_schema_ref": "evt_dvt_pvt/schemas/evidence_record.schema.json",
+      "physical_pass": false,
+      "digital_prep_complete": true
+    },
+    {
+      "id": "PVT-handheld_hybrid-fru_swap",
+      "phase": "PVT",
+      "sku": "handheld_hybrid",
+      "objective": "FRU swap timing",
+      "method": "Documented procedure; execute only on physical units",
+      "instruments": [
+        "TBD_CALIBRATED"
+      ],
+      "pass_criteria": "Written numeric limits freeze before run",
+      "evidence_schema_ref": "evt_dvt_pvt/schemas/evidence_record.schema.json",
+      "physical_pass": false,
+      "digital_prep_complete": true
+    },
+    {
+      "id": "PVT-handheld_hybrid-traceability_mes",
+      "phase": "PVT",
+      "sku": "handheld_hybrid",
+      "objective": "MES genealogy audit",
+      "method": "Documented procedure; execute only on physical units",
+      "instruments": [
+        "TBD_CALIBRATED"
+      ],
+      "pass_criteria": "Written numeric limits freeze before run",
+      "evidence_schema_ref": "evt_dvt_pvt/schemas/evidence_record.schema.json",
+      "physical_pass": false,
+      "digital_prep_complete": true
+    },
+    {
+      "id": "PVT-ds_xl_coder-line_process_cap",
+      "phase": "PVT",
+      "sku": "ds_xl_coder",
+      "objective": "Process capability on line",
+      "method": "Documented procedure; execute only on physical units",
+      "instruments": [
+        "TBD_CALIBRATED"
+      ],
+      "pass_criteria": "Written numeric limits freeze before run",
+      "evidence_schema_ref": "evt_dvt_pvt/schemas/evidence_record.schema.json",
+      "physical_pass": false,
+      "digital_prep_complete": true
+    },
+    {
+      "id": "PVT-ds_xl_coder-yield_gate",
+      "phase": "PVT",
+      "sku": "ds_xl_coder",
+      "objective": "Yield vs target",
+      "method": "Documented procedure; execute only on physical units",
+      "instruments": [
+        "TBD_CALIBRATED"
+      ],
+      "pass_criteria": "Written numeric limits freeze before run",
+      "evidence_schema_ref": "evt_dvt_pvt/schemas/evidence_record.schema.json",
+      "physical_pass": false,
+      "digital_prep_complete": true
+    },
+    {
+      "id": "PVT-ds_xl_coder-packaging_ship",
+      "phase": "PVT",
+      "sku": "ds_xl_coder",
+      "objective": "Packaging ship test",
+      "method": "Documented procedure; execute only on physical units",
+      "instruments": [
+        "TBD_CALIBRATED"
+      ],
+      "pass_criteria": "Written numeric limits freeze before run",
+      "evidence_schema_ref": "evt_dvt_pvt/schemas/evidence_record.schema.json",
+      "physical_pass": false,
+      "digital_prep_complete": true
+    },
+    {
+      "id": "PVT-ds_xl_coder-fru_swap",
+      "phase": "PVT",
+      "sku": "ds_xl_coder",
+      "objective": "FRU swap timing",
+      "method": "Documented procedure; execute only on physical units",
+      "instruments": [
+        "TBD_CALIBRATED"
+      ],
+      "pass_criteria": "Written numeric limits freeze before run",
+      "evidence_schema_ref": "evt_dvt_pvt/schemas/evidence_record.schema.json",
+      "physical_pass": false,
+      "digital_prep_complete": true
+    },
+    {
+      "id": "PVT-ds_xl_coder-traceability_mes",
+      "phase": "PVT",
+      "sku": "ds_xl_coder",
+      "objective": "MES genealogy audit",
+      "method": "Documented procedure; execute only on physical units",
+      "instruments": [
+        "TBD_CALIBRATED"
+      ],
+      "pass_criteria": "Written numeric limits freeze before run",
+      "evidence_schema_ref": "evt_dvt_pvt/schemas/evidence_record.schema.json",
+      "physical_pass": false,
+      "digital_prep_complete": true
+    },
+    {
+      "id": "PVT-edge_io_rings-line_process_cap",
+      "phase": "PVT",
+      "sku": "edge_io_rings",
+      "objective": "Process capability on line",
+      "method": "Documented procedure; execute only on physical units",
+      "instruments": [
+        "TBD_CALIBRATED"
+      ],
+      "pass_criteria": "Written numeric limits freeze before run",
+      "evidence_schema_ref": "evt_dvt_pvt/schemas/evidence_record.schema.json",
+      "physical_pass": false,
+      "digital_prep_complete": true
+    },
+    {
+      "id": "PVT-edge_io_rings-yield_gate",
+      "phase": "PVT",
+      "sku": "edge_io_rings",
+      "objective": "Yield vs target",
+      "method": "Documented procedure; execute only on physical units",
+      "instruments": [
+        "TBD_CALIBRATED"
+      ],
+      "pass_criteria": "Written numeric limits freeze before run",
+      "evidence_schema_ref": "evt_dvt_pvt/schemas/evidence_record.schema.json",
+      "physical_pass": false,
+      "digital_prep_complete": true
+    },
+    {
+      "id": "PVT-edge_io_rings-packaging_ship",
+      "phase": "PVT",
+      "sku": "edge_io_rings",
+      "objective": "Packaging ship test",
+      "method": "Documented procedure; execute only on physical units",
+      "instruments": [
+        "TBD_CALIBRATED"
+      ],
+      "pass_criteria": "Written numeric limits freeze before run",
+      "evidence_schema_ref": "evt_dvt_pvt/schemas/evidence_record.schema.json",
+      "physical_pass": false,
+      "digital_prep_complete": true
+    },
+    {
+      "id": "PVT-edge_io_rings-fru_swap",
+      "phase": "PVT",
+      "sku": "edge_io_rings",
+      "objective": "FRU swap timing",
+      "method": "Documented procedure; execute only on physical units",
+      "instruments": [
+        "TBD_CALIBRATED"
+      ],
+      "pass_criteria": "Written numeric limits freeze before run",
+      "evidence_schema_ref": "evt_dvt_pvt/schemas/evidence_record.schema.json",
+      "physical_pass": false,
+      "digital_prep_complete": true
+    },
+    {
+      "id": "PVT-edge_io_rings-traceability_mes",
+      "phase": "PVT",
+      "sku": "edge_io_rings",
+      "objective": "MES genealogy audit",
+      "method": "Documented procedure; execute only on physical units",
+      "instruments": [
+        "TBD_CALIBRATED"
+      ],
+      "pass_criteria": "Written numeric limits freeze before run",
+      "evidence_schema_ref": "evt_dvt_pvt/schemas/evidence_record.schema.json",
+      "physical_pass": false,
+      "digital_prep_complete": true
+    },
+    {
+      "id": "PVT-dock-line_process_cap",
+      "phase": "PVT",
+      "sku": "dock",
+      "objective": "Process capability on line",
+      "method": "Documented procedure; execute only on physical units",
+      "instruments": [
+        "TBD_CALIBRATED"
+      ],
+      "pass_criteria": "Written numeric limits freeze before run",
+      "evidence_schema_ref": "evt_dvt_pvt/schemas/evidence_record.schema.json",
+      "physical_pass": false,
+      "digital_prep_complete": true
+    },
+    {
+      "id": "PVT-dock-yield_gate",
+      "phase": "PVT",
+      "sku": "dock",
+      "objective": "Yield vs target",
+      "method": "Documented procedure; execute only on physical units",
+      "instruments": [
+        "TBD_CALIBRATED"
+      ],
+      "pass_criteria": "Written numeric limits freeze before run",
+      "evidence_schema_ref": "evt_dvt_pvt/schemas/evidence_record.schema.json",
+      "physical_pass": false,
+      "digital_prep_complete": true
+    },
+    {
+      "id": "PVT-dock-packaging_ship",
+      "phase": "PVT",
+      "sku": "dock",
+      "objective": "Packaging ship test",
+      "method": "Documented procedure; execute only on physical units",
+      "instruments": [
+        "TBD_CALIBRATED"
+      ],
+      "pass_criteria": "Written numeric limits freeze before run",
+      "evidence_schema_ref": "evt_dvt_pvt/schemas/evidence_record.schema.json",
+      "physical_pass": false,
+      "digital_prep_complete": true
+    },
+    {
+      "id": "PVT-dock-fru_swap",
+      "phase": "PVT",
+      "sku": "dock",
+      "objective": "FRU swap timing",
+      "method": "Documented procedure; execute only on physical units",
+      "instruments": [
+        "TBD_CALIBRATED"
+      ],
+      "pass_criteria": "Written numeric limits freeze before run",
+      "evidence_schema_ref": "evt_dvt_pvt/schemas/evidence_record.schema.json",
+      "physical_pass": false,
+      "digital_prep_complete": true
+    },
+    {
+      "id": "PVT-dock-traceability_mes",
+      "phase": "PVT",
+      "sku": "dock",
+      "objective": "MES genealogy audit",
+      "method": "Documented procedure; execute only on physical units",
+      "instruments": [
+        "TBD_CALIBRATED"
+      ],
+      "pass_criteria": "Written numeric limits freeze before run",
+      "evidence_schema_ref": "evt_dvt_pvt/schemas/evidence_record.schema.json",
+      "physical_pass": false,
+      "digital_prep_complete": true
+    }
+  ],
+  "physical_pass": false
+}

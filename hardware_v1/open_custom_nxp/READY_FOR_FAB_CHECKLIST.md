@@ -20,3 +20,11 @@ See `CPB0_OPEN_READY_FOR_FAB_GATE.md` for the normative gate.
 - [ ] Fab/assembly outputs generated
 
 Current: **NOT READY** (`CPB0_OPEN_READY_FOR_FAB=false`).
+
+## Stream E note
+
+Digital engineering exhausted; checklist items remain unchecked. `CPB0_OPEN_READY_FOR_FAB=false`.
+
+## Convergence note (#82 + #83)
+
+NXP-1 (#83) checklist is authoritative for NXP readiness facts. Stream E digital-exhaustion control-plane preserved on accepted main. Physical/fab tokens remain fail-closed.

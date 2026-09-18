@@ -1,0 +1,39 @@
+{
+  "sku": "dock",
+  "units": "mm",
+  "datum_scheme": "A=bottom_deck B=hinge_or_spine C=connector_face",
+  "critical_dims": [
+    {
+      "id": "CD-DISP",
+      "nom": null,
+      "tol_mm": 0.15,
+      "note": "display opening"
+    },
+    {
+      "id": "CD-PCB",
+      "nom": null,
+      "tol_mm": 0.2,
+      "note": "PCB pocket"
+    },
+    {
+      "id": "CD-CONN",
+      "nom": null,
+      "tol_mm": 0.1,
+      "note": "connector float"
+    },
+    {
+      "id": "CD-BATT",
+      "nom": null,
+      "tol_mm": 0.25,
+      "note": "N/A"
+    }
+  ],
+  "stackups": [
+    {
+      "stack_id": "dock_pcb_to_shell",
+      "method": "RSS",
+      "status": "DRAFT_DIGITAL",
+      "physical_pass": false
+    }
+  ]
+}

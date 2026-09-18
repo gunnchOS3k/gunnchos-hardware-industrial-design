@@ -27,3 +27,8 @@ Prior nRF52840 digital package retained under `device_designs/edge_io_rings/` â€
 - Ring remains fully custom mainline (nRF54L15, IMU, sense, power, antenna, Zephyr, MCUboot, enclosure)
 - nRF54L15 DK = `REFERENCE_CONTROL_RING` (not product mainline)
 - Keep inductive / sEMG experiments
+
+
+## Stream E
+
+See `STREAM_E_RINGS_EXHAUSTION.md` and `kicad_nrf54l15/` (2026-09-18T18:37:46Z).

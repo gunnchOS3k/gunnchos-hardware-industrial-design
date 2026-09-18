@@ -122,8 +122,6 @@ hardware-v1-report:
 	@echo "Report: hardware_v1/REPORT_SECTION_17_HW1D_A_TO_T.md"
 
 hardware-v1-all: hardware-v1-generate hardware-v1-validate hardware-v1-gates hardware-v1-report
-
-
 # NXP-0 open-custom i.MX95 engineering track (public collateral only — not fab / not physical)
 .PHONY: nxp-open-audit nxp-open-validate nxp-open-gates
 nxp-open-audit:
@@ -158,3 +156,9 @@ cpb0-open-release:
 
 cpb0-open-fab-audit:
 	$(PYTHON) scripts/validate_cpb0_open_fab_release.py
+
+.PHONY: validate-stream-f bootstrap-stream-f
+bootstrap-stream-f:
+	$(PYTHON) scripts/bootstrap_stream_f_exhaustion.py
+validate-stream-f:
+	$(PYTHON) scripts/validate_stream_f_exhaustion.py

@@ -1,0 +1,23 @@
+{
+  "board": {
+    "design_settings": {
+      "defaults": {},
+      "diff_pair_dimensions": [],
+      "drc_exclusions": [],
+      "rules": {},
+      "track_widths": [],
+      "via_dimensions": []
+    }
+  },
+  "meta": {
+    "filename": "imx95_open_custom.kicad_pro",
+    "version": 1
+  },
+  "project": {
+    "files": []
+  },
+  "sheets": [
+    ["7ab5e9ca-d8c3-46c9-94ab-3964ffc620f0", ""]
+  ],
+  "text_variables": {}
+}

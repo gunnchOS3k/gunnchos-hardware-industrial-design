@@ -1,0 +1,76 @@
+{
+  "schema": "gunnchos.digital_engineering_exhaustion.stream_f.v1",
+  "generated_at_utc": "2026-09-18T18:35:47Z",
+  "repo": "gunnchos-hardware-industrial-design",
+  "branch_intent": "hardware/stream-f-digital-engineering-exhaustion",
+  "coordinates_with": "Stream E (electrical/KiCad) \u2014 no shared mutable paths",
+  "gates": {
+    "section_15_mechanical": {
+      "schema": "gunnchos.stream_f.gate.v1",
+      "section": 15,
+      "gate": "MECHANICAL_DIGITAL_ENGINEERING_EXHAUSTED",
+      "status": true,
+      "generated_at_utc": "2026-09-18T18:35:47Z",
+      "honesty": {
+        "ERGONOMIC_PASS": false,
+        "PHYSICAL_FIT_PASS": false,
+        "FIRST_ARTICLE_PRINT_PASS": false,
+        "TOOLING_RELEASE": false
+      },
+      "artifacts_root": "hardware_v1/mechanical/",
+      "sku_count": 5,
+      "stream_e_conflict_paths_touched": false
+    },
+    "section_16_evt_dvt_pvt": {
+      "schema": "gunnchos.stream_f.gate.v1",
+      "section": 16,
+      "gate": "PHYSICAL_VALIDATION_ENGINEERING_PREP_EXHAUSTED",
+      "status": true,
+      "generated_at_utc": "2026-09-18T18:35:47Z",
+      "honesty": {
+        "schema": "gunnchos.stream_f.physical_tokens.v1",
+        "generated_at_utc": "2026-09-18T18:35:47Z",
+        "PHYSICALLY_VALIDATED": false,
+        "EVT_PHYSICAL_PASS": false,
+        "DVT_PHYSICAL_PASS": false,
+        "PVT_PHYSICAL_PASS": false,
+        "SELF_CERTIFIED_V1": false,
+        "note": "All physical pass tokens remain false until lab execution + verifier."
+      },
+      "artifacts_root": "evt_dvt_pvt/"
+    },
+    "section_17_certification": {
+      "schema": "gunnchos.stream_f.gate.v1",
+      "section": 17,
+      "gate": "CERTIFICATION_ENGINEERING_PREP_EXHAUSTED",
+      "status": true,
+      "generated_at_utc": "2026-09-18T18:35:47Z",
+      "honesty": {
+        "CERTIFICATION_COMPLETE": false,
+        "certified_any": false,
+        "lab_engaged": false
+      },
+      "artifacts_root": "certification/stream_f/",
+      "applicable_row_count": 72
+    },
+    "section_18_manufacturing": {
+      "schema": "gunnchos.stream_f.gate.v1",
+      "section": 18,
+      "gate": "MANUFACTURING_ENGINEERING_PREP_EXHAUSTED",
+      "status": true,
+      "generated_at_utc": "2026-09-18T18:35:47Z",
+      "honesty": {
+        "RFQ_SENT": false,
+        "MANUFACTURING_VALIDATED": false,
+        "DIGITAL_FABRICATION_PASS": false
+      },
+      "artifacts_root": "manufacturing/stream_f/"
+    }
+  },
+  "paths": {
+    "section_15": "hardware_v1/mechanical/",
+    "section_16": "evt_dvt_pvt/",
+    "section_17": "certification/stream_f/",
+    "section_18": "manufacturing/stream_f/"
+  }
+}

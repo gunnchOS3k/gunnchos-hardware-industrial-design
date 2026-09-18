@@ -1,0 +1,23 @@
+{
+  "board": {
+    "design_settings": {
+      "defaults": {},
+      "diff_pair_dimensions": [],
+      "drc_exclusions": [],
+      "rules": {},
+      "track_widths": [],
+      "via_dimensions": []
+    }
+  },
+  "meta": {
+    "filename": "amd_public_skeleton.kicad_pro",
+    "version": 1
+  },
+  "project": {
+    "files": []
+  },
+  "sheets": [
+    ["51b06d36-9676-49f3-9364-9319f3fc7f77", ""]
+  ],
+  "text_variables": {}
+}

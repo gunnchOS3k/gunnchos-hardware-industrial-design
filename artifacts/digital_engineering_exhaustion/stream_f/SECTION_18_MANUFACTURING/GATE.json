@@ -1,0 +1,13 @@
+{
+  "schema": "gunnchos.stream_f.gate.v1",
+  "section": 18,
+  "gate": "MANUFACTURING_ENGINEERING_PREP_EXHAUSTED",
+  "status": true,
+  "generated_at_utc": "2026-09-18T18:35:47Z",
+  "honesty": {
+    "RFQ_SENT": false,
+    "MANUFACTURING_VALIDATED": false,
+    "DIGITAL_FABRICATION_PASS": false
+  },
+  "artifacts_root": "manufacturing/stream_f/"
+}
