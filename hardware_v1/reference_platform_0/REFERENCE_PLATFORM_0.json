@@ -1,5 +1,7 @@
 {
   "schema": "gunnchos.hardware_v1.rp0.v1",
+  "classification": "REFERENCE_CONTROL_MODULAR_X86",
+  "product_mainline": false,
   "READY_FOR_FAB": false,
   "RP0_B_CUSTOM_READY_FOR_FAB": false,
   "RP0_A_COTS_PROCUREMENT_PACKET_READY": true,
@@ -7,9 +9,11 @@
   "RP0_A_PHYSICAL_BUILD_PENDING": true,
   "RP0_A_BRINGUP_PENDING": true,
   "PHYSICAL_PENDING": true,
+  "OPTIONAL_OWNER_ACTION": "ORDER_RP0_A_COTS_CONTROL_KIT",
   "stages": {
     "RP0_A": {
       "type": "COTS_INTEGRATION_BENCH",
+      "role": "REFERENCE_CONTROL",
       "components": [
         "adlink_com_hpc_mmtl_155h_32g",
         "adlink_com_hpc_mini_base",
@@ -18,13 +22,21 @@
       ]
     },
     "RP0_B": {
-      "type": "CUSTOM_GUNNCHOS_REFERENCE_CARRIER",
+      "type": "CUSTOM_COM_HPC_CARRIER_HISTORICAL",
+      "role": "DEFERRED_RELATIVE_TO_PLATFORM_CORE",
       "blockers": [
         "EXT-COM-HPC-400PIN",
         "EXT-JHL8440-BALLMAP",
         "EXT-JHL9040R-BALLMAP"
       ]
+    },
+    "CPB0": {
+      "type": "CUSTOM_PLATFORM_BOARD_0",
+      "role": "MAINLINE_LEARNING_BOARD",
+      "soc": "8845HS preferred",
+      "READY_FOR_FAB": false
     }
   },
-  "generated_at_utc": "2026-09-18T16:24:23Z"
+  "generated_at_utc": "2026-09-18T16:48:54Z",
+  "campaign": "HARDWARE_1_0C_CUSTOM_FIRST_MAINLINE_PIVOT"
 }

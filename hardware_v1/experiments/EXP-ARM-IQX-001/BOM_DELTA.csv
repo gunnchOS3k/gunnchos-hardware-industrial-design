@@ -1,3 +1,2 @@
-change,subsystem,mpn_or_class,qty,note
-ADD,experiment_only,EXP-ARM-IQX-001_variant,1,EXPERIMENTAL — do not merge to mainline BOM
-REMOVE,none,—,0,Comparison only; mainline unchanged
+item,baseline,variant,qty_delta,class,notes
+compute_or_feature,CUSTOM AMD Platform Core v1 (8840U/8845HS),ARM IQX-class SoM (vendor TBD — PENDING_VENDOR_CONFIRMATION),0,EXPERIMENTAL,digital compare only; not purchased

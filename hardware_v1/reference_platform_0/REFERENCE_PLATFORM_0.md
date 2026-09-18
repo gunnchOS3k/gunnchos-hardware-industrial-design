@@ -1,24 +1,36 @@
-# Reference Platform 0
+# Reference Platform 0 (reclassified)
 
-**Generated:** 2026-09-18T16:24:23Z  
-**Campaign:** `HARDWARE_1_0_MASTER_CAMPAIGN`  
-**Claim boundary:** digital architecture / EVT preparation only — not physical pass, not certification, not fab release.
+**Generated:** 2026-09-18T16:48:54Z  
+**Campaign:** `HARDWARE_1_0C_CUSTOM_FIRST_MAINLINE_PIVOT`  
+**Claim boundary:** digital architecture / EVT preparation only — not physical pass, not certification, not fab release, not purchased.
 
-## Stage model
-See `RP0_STAGE_MODEL.md`.
 
-### RP0-A — COTS Integration Bench
-ADLINK COM-HPC Mini Base + COM-HPC-mMTL-155H-32G + nRF54L15 DK (PCA10156) + COTS USB4 dock.
-No custom fabrication. Procurement packet ready; **NOT_PURCHASED**.
+## Role after HW1C
 
-### RP0-B — Custom gunnchOS Reference Carrier
-Net-accurate custom carrier/dock/ring EVT electronics. Requires vendor pin/ball maps + EDA.
+ADLINK COM-HPC Mini mMTL + Mini Base is **`REFERENCE_CONTROL_MODULAR_X86`**, not product mainline.
 
-## Fab readiness
-`REFERENCE_PLATFORM_0_READY_FOR_FAB=false` (= `RP0_B_CUSTOM_READY_FOR_FAB=false`)
+Uses:
 
-COTS orderability does **not** set fab readiness.
+- validate gunnchOS
+- validate Windows compatibility
+- establish USB4 behavior
+- validate NVMe/Wi-Fi/cellular
+- compare thermals/performance
+- isolate custom motherboard failures
+- provide fallback/demo platform
 
-## Owner next action
-`NEXT_OWNER_ACTION=ORDER_RP0_A_COTS_BRINGUP_KIT` — Cursor does not purchase.
-If owner declines: `NEXT_GATE=ACQUIRE_RP0_B_VENDOR_COLLATERAL`
+## Gates preserved
+
+- `RP0_A_COTS_PROCUREMENT_PACKET_READY=true`
+- `RP0_A_READY_TO_ORDER=true`
+
+Owner intent rename: `OPTIONAL_REFERENCE_CONTROL_PURCHASE` / `OPTIONAL_OWNER_ACTION=ORDER_RP0_A_COTS_CONTROL_KIT`
+
+This is **no longer** the main hardware milestone. Mainline learning board is **CPB0** (custom AMD).
+
+## Stages
+
+- **RP0-A:** COTS Integration Bench (unchanged procurement packet)
+- **RP0-B:** historical custom COM-HPC carrier path — still vendor-gated; subordinated to Platform Core / CPB0 custom-first path
+
+Do not delete HW1B public closures.
