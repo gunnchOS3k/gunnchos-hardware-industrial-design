@@ -1,6 +1,6 @@
 # DS-XL OLED+IPS hybrid vs dual IPS
 
-**Generated:** 2026-09-18T16:02:19Z  
+**Generated:** 2026-09-18T16:24:23Z  
 **Campaign:** `HARDWARE_1_0_MASTER_CAMPAIGN`  
 **Claim boundary:** digital architecture / EVT preparation only — not physical pass, not certification, not fab release.
 
@@ -26,7 +26,7 @@ OLED primary + IPS secondary
 - `color_delta_e`
 
 ## Promotion gate
-Dual-eDP SI margin maintained; EXT-DSXL-DUAL-EDP resolved for both stacks
+Dual-display SI margin maintained on eDP+DDI/DP (or proven dual-eDP if docs change); do not mislabel one eDP + DDI as dual native eDP
 
 ## Non-claims
 No physical results fabricated. No quotes/lead times invented. No merge to mainline without gate.

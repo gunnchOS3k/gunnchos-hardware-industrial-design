@@ -1,6 +1,6 @@
 {
   "schema": "gunnchos.hardware_v1.campaign.v1",
-  "generated_at_utc": "2026-09-18T16:02:19Z",
+  "generated_at_utc": "2026-09-18T16:24:23Z",
   "experiments": [
     {
       "id": "EXP-ARM-IQX-001",
@@ -49,7 +49,7 @@
         "cost_delta_usd",
         "color_delta_e"
       ],
-      "promotion_gate": "Dual-eDP SI margin maintained; EXT-DSXL-DUAL-EDP resolved for both stacks",
+      "promotion_gate": "Dual-display SI margin maintained on eDP+DDI/DP (or proven dual-eDP if docs change); do not mislabel one eDP + DDI as dual native eDP",
       "not_in_main_bom": true
     },
     {
