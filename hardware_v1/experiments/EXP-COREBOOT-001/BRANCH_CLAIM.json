@@ -1,10 +1,12 @@
 {
   "branch": "hardware/exp-coreboot",
   "experiment_id": "EXP-COREBOOT-001",
-  "title": "coreboot vs vendor UEFI",
+  "title": "coreboot/openSIL vs vendor UEFI on custom Platform Core",
   "base": "hardware/v1-mainline-ready-for-evt",
-  "base_sha": "bd65bc67b413597a7d5534bc8dddaa9d7513b0c3",
+  "base_sha": "628eacd8f35a2a509f36592c392b6aba88b6c4f8",
   "state": "EXPERIMENTAL_COMPARE",
   "not_in_main_bom": true,
-  "comparison_package": "hardware_v1/experiments/EXP-COREBOOT-001/COMPARISON_PACKAGE.md"
+  "comparison_package": "hardware_v1/experiments/EXP-COREBOOT-001/COMPARISON_PACKAGE.md",
+  "refreshed_at_utc": "2026-09-18T16:50:34Z",
+  "campaign": "HARDWARE_1_0C_CUSTOM_FIRST_MAINLINE_PIVOT"
 }
