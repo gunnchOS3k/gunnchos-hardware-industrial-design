@@ -1,7 +1,24 @@
 {
   "schema": "gunnchos.hardware_v1.gates.v1",
-  "generated_at_utc": "2026-09-18T16:24:23Z",
-  "campaign_overlay": "HARDWARE_1_0B_RP0_COTS_BLOCKER_CLOSURE",
+  "generated_at_utc": "2026-09-18T16:48:54Z",
+  "campaign": "HARDWARE_1_0C_CUSTOM_FIRST_MAINLINE_PIVOT",
+  "campaign_overlay": "HARDWARE_1_0C_CUSTOM_FIRST_MAINLINE_PIVOT",
+  "CUSTOM_MAINLINE_ARCHITECTURE_FROZEN": true,
+  "CUSTOM_PLATFORM_VENDOR_ACCESS_READY": false,
+  "CUSTOM_SOC_PINMAP_UNDERSTOOD": false,
+  "CUSTOM_POWER_TREE_UNDERSTOOD": false,
+  "CUSTOM_DDR_TOPOLOGY_UNDERSTOOD": false,
+  "CUSTOM_PCIE_TOPOLOGY_UNDERSTOOD": false,
+  "CUSTOM_USB4_TOPOLOGY_UNDERSTOOD": false,
+  "CUSTOM_DISPLAY_TOPOLOGY_UNDERSTOOD": false,
+  "CUSTOM_EC_ARCHITECTURE_UNDERSTOOD": false,
+  "CUSTOM_BOOT_CHAIN_UNDERSTOOD": false,
+  "CUSTOM_DEBUG_ARCHITECTURE_UNDERSTOOD": false,
+  "CUSTOM_MANUFACTURING_FLOW_UNDERSTOOD": false,
+  "CPB0_SCHEMATIC_READY": false,
+  "CPB0_PCB_READY": false,
+  "CPB0_READY_FOR_FAB": false,
+  "CUSTOM_MAINLINE_READY_FOR_EVT_BUILD": false,
   "HARDWARE_V1_READY_FOR_EVT_BUILD": false,
   "HARDWARE_V1_DIGITAL_ARCHITECTURE_COMPLETE": true,
   "REFERENCE_PLATFORM_0_READY_FOR_FAB": false,
@@ -34,10 +51,34 @@
   "MAINLINE_DECISION_LEDGER_COMPLETE": true,
   "EXPERIMENTS_REGISTRY_COMPLETE": true,
   "SOFTWARE_RC1_BASELINES_UNTOUCHED": true,
+  "COM_HPC_IS_PRODUCT_MAINLINE": false,
+  "COM_HPC_CLASSIFICATION": "REFERENCE_CONTROL_MODULAR_X86",
+  "MAINLINE_COMPUTE": "CUSTOM_AMD_PLATFORM_CORE_V1",
   "blockers": [
     {
+      "id": "EXT-AMD-CUSTOM-COLLATERAL",
+      "severity": "AMD Ryzen Embedded 8000 custom platform collateral (pinout/power/DDR/USB4/display/boot/SI/reference design)",
+      "classification": "OWNER_ACTION_REQUIRED",
+      "blocks": [
+        "CUSTOM_PLATFORM_VENDOR_ACCESS_READY",
+        "CPB0_READY_FOR_FAB",
+        "CUSTOM_MAINLINE_READY_FOR_EVT_BUILD",
+        "HARDWARE_V1_READY_FOR_EVT_BUILD"
+      ]
+    },
+    {
+      "id": "EXT-AMD-EDA-OUTPUTS",
+      "severity": "Net-accurate schematic/PCB/DRC/ERC/SI-PI outputs for CPB0",
+      "classification": "OWNER_ACTION_REQUIRED",
+      "blocks": [
+        "CPB0_SCHEMATIC_READY",
+        "CPB0_PCB_READY",
+        "CPB0_READY_FOR_FAB"
+      ]
+    },
+    {
       "id": "EXT-COM-HPC-400PIN",
-      "severity": "PICMG/ADLINK COM-HPC Mini net-accurate pin map for custom RP0-B carrier",
+      "severity": "PICMG/ADLINK COM-HPC Mini net-accurate pin map for historical RP0-B carrier",
       "classification": "STILL_VENDOR_GATED_FOR_RP0_B",
       "blocks": [
         "RP0_B_CUSTOM_READY_FOR_FAB",
@@ -51,8 +92,7 @@
       "severity": "Intel JHL8440 ball map (NDA) for pin-accurate custom dock fanout",
       "classification": "STILL_VENDOR_GATED_FOR_RP0_B",
       "blocks": [
-        "DOCK_HW_DIGITAL_RELEASE_PACKAGE",
-        "RP0_B_CUSTOM_READY_FOR_FAB"
+        "DOCK_HW_DIGITAL_RELEASE_PACKAGE"
       ],
       "rp0_a_blocking": false,
       "rp0_b_blocking": true
@@ -62,18 +102,7 @@
       "severity": "Intel JHL9040R retimer ball map (NDA)",
       "classification": "STILL_VENDOR_GATED_FOR_RP0_B",
       "blocks": [
-        "DOCK_HW_DIGITAL_RELEASE_PACKAGE",
-        "RP0_B_CUSTOM_READY_FOR_FAB"
-      ],
-      "rp0_a_blocking": false,
-      "rp0_b_blocking": true
-    },
-    {
-      "id": "OWNER-RP0-B-FAB-AUTH",
-      "severity": "Owner authorization for custom RP0-B fabrication after pin-accurate package exists",
-      "classification": "OWNER_ACTION_REQUIRED",
-      "blocks": [
-        "HARDWARE_V1_READY_FOR_EVT_BUILD"
+        "DOCK_HW_DIGITAL_RELEASE_PACKAGE"
       ],
       "rp0_a_blocking": false,
       "rp0_b_blocking": true
@@ -96,11 +125,12 @@
       "evidence": "hardware_v1/radio/FN990B40_RP0_A_AVL.md"
     }
   ],
-  "NEXT_OWNER_ACTION": "ORDER_RP0_A_COTS_BRINGUP_KIT",
-  "NEXT_OWNER_ACTION_NOTE": "RP0-A COTS procurement packet is ready. Cursor will not purchase. RP0-B custom fab remains blocked on vendor pin/ball maps. COTS orderability does not set READY_FOR_FAB.",
+  "NEXT_OWNER_ACTION": "ACQUIRE_AMD_CUSTOM_PLATFORM_COLLATERAL",
+  "OPTIONAL_OWNER_ACTION": "ORDER_RP0_A_COTS_CONTROL_KIT",
+  "NEXT_OWNER_ACTION_NOTE": "Preferred: acquire AMD custom platform collateral for Platform Core / CPB0. Optional parallel: order RP0-A COTS control kit. Cursor will not purchase or accept NDAs. COTS readiness must not flip CUSTOM_MAINLINE_READY_FOR_EVT_BUILD.",
   "NEXT_GATE": null,
-  "NEXT_GATE_IF_OWNER_DECLINES_ORDER": "ACQUIRE_RP0_B_VENDOR_COLLATERAL",
   "legacy_alias": {
+    "HARDWARE_V1_READY_FOR_EVT_BUILD": "CUSTOM_MAINLINE_READY_FOR_EVT_BUILD",
     "REFERENCE_PLATFORM_0_READY_FOR_FAB": "RP0_B_CUSTOM_READY_FOR_FAB"
   }
 }

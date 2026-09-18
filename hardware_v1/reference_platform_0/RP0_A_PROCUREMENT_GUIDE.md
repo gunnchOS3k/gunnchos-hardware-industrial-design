@@ -32,3 +32,14 @@ See `RP0_A_PROCUREMENT_BOM.csv` (29 line items).
 
 ## Preferred next action
 `NEXT_OWNER_ACTION=ORDER_RP0_A_COTS_BRINGUP_KIT`
+
+## HW1C reclassification
+
+**Generated:** 2026-09-18T16:48:39Z  
+**Campaign:** `HARDWARE_1_0C_CUSTOM_FIRST_MAINLINE_PIVOT`  
+**Claim boundary:** digital architecture / EVT preparation only — not physical pass, not certification, not fab release, not purchased.
+
+This packet remains valid for **REFERENCE_CONTROL** purchase only.
+`OPTIONAL_OWNER_ACTION=ORDER_RP0_A_COTS_CONTROL_KIT`
+Preferred mainline owner action is `ACQUIRE_AMD_CUSTOM_PLATFORM_COLLATERAL`.
+Cursor will not purchase.

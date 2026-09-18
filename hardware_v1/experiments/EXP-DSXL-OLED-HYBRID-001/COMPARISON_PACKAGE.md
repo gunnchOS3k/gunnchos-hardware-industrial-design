@@ -1,32 +1,30 @@
-# DS-XL OLED+IPS hybrid vs dual IPS
+# EXP-DSXL-OLED-HYBRID-001 comparison package
 
-**Generated:** 2026-09-18T16:24:23Z  
-**Campaign:** `HARDWARE_1_0_MASTER_CAMPAIGN`  
-**Claim boundary:** digital architecture / EVT preparation only — not physical pass, not certification, not fab release.
+**Generated:** 2026-09-18T16:48:54Z  
+**Campaign:** `HARDWARE_1_0C_CUSTOM_FIRST_MAINLINE_PIVOT`  
+**Claim boundary:** digital architecture / EVT preparation only — not physical pass, not certification, not fab release, not purchased.
 
-## Identity
-- Experiment ID: `EXP-DSXL-OLED-HYBRID-001`
-- Branch: `hardware/exp-dsxl-oled-hybrid`
-- State: `EXPERIMENTAL_COMPARE`
-- `not_in_main_bom`: `True`
+
+## Title
+DS-XL OLED+IPS hybrid vs dual IPS
 
 ## Hypothesis
 Primary OLED + secondary IPS improves creator UX without dual-OLED cost/thermal
 
 ## Baseline (mainline)
-Dual IPS eDP
+IPS eDP + DDI/DP on custom DSXL-MB-v1
 
 ## Variant
 OLED primary + IPS secondary
 
-## Measurable comparison criteria
-- `dual_edp_si_margin`
-- `thermal_delta_c`
-- `cost_delta_usd`
-- `color_delta_e`
+## Metrics
+- dual_edp_si_margin
+- thermal_delta_c
+- cost_delta_usd
+- color_delta_e
 
 ## Promotion gate
-Dual-display SI margin maintained on eDP+DDI/DP (or proven dual-eDP if docs change); do not mislabel one eDP + DDI as dual native eDP
+SI margin maintained on eDP+DDI/DP; do not mislabel as dual native eDP
 
-## Non-claims
-No physical results fabricated. No quotes/lead times invented. No merge to mainline without gate.
+## Isolation
+`not_in_main_bom=true` — experimental parts must not mix into MAINLINE_CUSTOM with qty>0.
