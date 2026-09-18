@@ -1,0 +1,33 @@
+{
+  "schema": "gunnchos.hardware.cpb0_open.drc_report.v1",
+  "generated_at_utc": "2026-09-18T22:17:56Z",
+  "campaign": "NXP2_CPB0_COLLATERAL_UNLOCK_EDA_CONTINUATION",
+  "tool": "kicad-cli",
+  "tool_version": "10.0.5",
+  "cli_summary": [
+    "Failed to load board: 5 is not a valid layer count in 'hardware_v1/open_custom_nxp/eda/cpb0_open/cpb0_open.kicad_pcb', line 29, offset 3."
+  ],
+  "report_excerpt_lines": [],
+  "material_unresolved": true,
+  "CPB0_OPEN_PCB_DRC_PASS": false,
+  "CPB0_OPEN_PCB_READY": false,
+  "classifications": [
+    {
+      "item": "PCB file fails kicad-cli load (invalid layer count 5)",
+      "class": "ERROR"
+    },
+    {
+      "item": "DDR rules unresolved",
+      "class": "ERROR"
+    },
+    {
+      "item": "Placement incomplete",
+      "class": "ERROR"
+    },
+    {
+      "item": "Routing incomplete",
+      "class": "ERROR"
+    }
+  ],
+  "tool_error": "Failed to load board: 5 is not a valid layer count in cpb0_open.kicad_pcb"
+}
