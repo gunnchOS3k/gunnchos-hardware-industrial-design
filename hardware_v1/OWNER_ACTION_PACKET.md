@@ -1,41 +1,37 @@
-# Owner action packet
+# Owner action packet (HW1D)
 
-**Generated:** 2026-09-18T16:48:54Z  
-**Campaign:** `HARDWARE_1_0C_CUSTOM_FIRST_MAINLINE_PIVOT`  
-**Claim boundary:** digital architecture / EVT preparation only — not physical pass, not certification, not fab release, not purchased.
+**Generated:** 2026-09-18T17:46:17Z  
+**Campaign:** `HARDWARE_1_0D_FOUR_TRACK_CONVERGENCE_MERGE_READINESS`  
+**Claim boundary:** architecture / control-plane baseline only — not physical pass, not certification, not fab release, not purchased, not GXE execution.
 
 
-## What Cursor completed (digital)
-- Custom-first architecture doctrine + Platform Core v1
-- Device SoC selection matrix (8840U / 8845HS candidates)
-- CPB0 learning board digital package (not fab-ready)
-- AMD custom platform access packet + owner steps
-- Firmware ownership boundary; memory topology UNFROZEN
-- COM-HPC reclassified REFERENCE_CONTROL; RP0-A packet preserved
-- BOM class split MAINLINE_CUSTOM / REFERENCE_CONTROL / EXPERIMENTAL
-- Knowledge map, learning gates, complexity register
-- Experiment hierarchy + EXP-COM-HPC-MODULAR / EXP-DSXL-X100 / EXP-P100-AI packages
-- Gate model: CUSTOM_MAINLINE_READY_FOR_EVT_BUILD (aliases HARDWARE_V1_READY_FOR_EVT_BUILD)
-- HW1B public closures preserved
+## What Cursor completed (digital / architecture)
+- Four-track canonical model (PRODUCT / OPEN_ENGINEERING / GXE / REFERENCE_CONTROL)
+- Experience-first co-design doctrine + Experience Contract schema
+- NXP i.MX95 open-custom architecture package (public collateral metadata only)
+- AMD PRODUCT_MAINLINE preserved; vendor access = external not merge blocker
+- GXE integration contract only (no GXE implementation)
+- Cross-track comparison matrix + benchmark schema
+- Decision ledger track-qualified
+- `HW_ARCHITECTURE_BASELINE_MERGE_READY` gate separated from physical EVT
+- Post-merge plan prepared (not executed)
+- Fail-closed validator updates
 
 ## What Cursor did NOT do
-- Send RFQs / purchase / contact suppliers / accept NDAs
-- Invent AMD pin/power/DDR restricted collateral
-- Claim physical validation, certification, or fab release
-- Merge any PR
+- Merge #68 or any experiment PR
+- Purchase / RFQ / accept NDAs
+- Fabricate physical evidence or restricted pin maps
+- Execute GXE
 - Modify software RC1 baselines
-- Fabricate Gerbers/ODB++/quotes
+- Claim NXP product-equivalent to AMD x86
+- Flip physical EVT/fab/cert gates to true
 
 ## Preferred next action
-`NEXT_OWNER_ACTION=ACQUIRE_AMD_CUSTOM_PLATFORM_COLLATERAL`
+`NEXT_OWNER_ACTION=MERGE_HW_ARCHITECTURE_BASELINE_68_WITH_MERGE_COMMIT`
 
-## Optional parallel action
-`OPTIONAL_OWNER_ACTION=ORDER_RP0_A_COTS_CONTROL_KIT`
+## Optional / parallel
+- `OPTIONAL_OWNER_ACTION=ORDER_RP0_A_COTS_CONTROL_KIT`
+- `PARALLEL_OWNER_ACTION=ACQUIRE_AMD_CUSTOM_PLATFORM_COLLATERAL`
 
-## Honest gate highlights
-- `CUSTOM_MAINLINE_READY_FOR_EVT_BUILD=false`
-- `HARDWARE_V1_READY_FOR_EVT_BUILD=false`
-- `CPB0_READY_FOR_FAB=false`
-- `CUSTOM_PLATFORM_VENDOR_ACCESS_READY=false`
-- Learning gates all `false` where collateral missing
-- `RP0_A_COTS_PROCUREMENT_PACKET_READY=true` / `RP0_A_READY_TO_ORDER=true` (reference control only)
+## Honest physical truth
+Architecture merge-ready ≠ physical hardware ready.

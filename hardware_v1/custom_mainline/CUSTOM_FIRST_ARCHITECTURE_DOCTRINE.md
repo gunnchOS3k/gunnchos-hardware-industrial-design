@@ -70,3 +70,14 @@ Fail-closed rules:
 - CPB0 cannot be READY_FOR_FAB without net-accurate vendor collateral + real EDA
 - experimental variant cannot silently promote
 - public package family equality ≠ pin compatibility without vendor confirmation
+
+## HW1D track qualifiers
+
+Ambiguous bare “mainline” is retired for control-plane language.
+
+- `PRODUCT_MAINLINE` = `AMD_CUSTOM_X86` (this doctrine’s custom Platform Core path)
+- `OPEN_ENGINEERING_MAINLINE` = `NXP_IMX95_OPEN_CUSTOM` (parallel no-NDA engineering lane)
+- `GREENFIELD_EXPERIMENT` = `GXE` (integration contract only in this repo)
+- `REFERENCE_CONTROL` = `COM_HPC_AND_COTS`
+
+`MAINLINE_CUSTOM` in this document means **PRODUCT_MAINLINE** board ownership around AMD silicon.
