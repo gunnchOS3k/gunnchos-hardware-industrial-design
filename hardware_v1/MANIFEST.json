@@ -1,7 +1,7 @@
 {
   "schema": "gunnchos.hardware_v1.manifest.v1",
-  "generated_at_utc": "2026-09-18T16:24:23Z",
-  "campaign": "HARDWARE_1_0_MASTER_CAMPAIGN",
+  "generated_at_utc": "2026-09-18T16:48:54Z",
+  "campaign": "HARDWARE_1_0C_CUSTOM_FIRST_MAINLINE_PIVOT",
   "file_count": 98,
   "files": [
     {
@@ -494,5 +494,10 @@
       "sha256": "acc1c71146f968107ba07ea88c8ba5247415a3922695ffdf1eda2466cf68467f",
       "bytes": 1073
     }
-  ]
+  ],
+  "mainline_compute": "CUSTOM_AMD_PLATFORM_CORE_V1",
+  "com_hpc_classification": "REFERENCE_CONTROL_MODULAR_X86",
+  "custom_mainline_dir": "hardware_v1/custom_mainline/",
+  "next_owner_action": "ACQUIRE_AMD_CUSTOM_PLATFORM_COLLATERAL",
+  "optional_owner_action": "ORDER_RP0_A_COTS_CONTROL_KIT"
 }

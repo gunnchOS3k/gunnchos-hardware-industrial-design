@@ -1,14 +1,13 @@
-# Metrics — EXP-DSXL-OLED-HYBRID-001
+# EXP-DSXL-OLED-HYBRID-001 metrics
 
-**Generated:** 2026-09-18T16:24:23Z  
-**Campaign:** `HARDWARE_1_0_MASTER_CAMPAIGN`  
-**Claim boundary:** digital architecture / EVT preparation only — not physical pass, not certification, not fab release.
+**Generated:** 2026-09-18T16:48:54Z  
+**Campaign:** `HARDWARE_1_0C_CUSTOM_FIRST_MAINLINE_PIVOT`  
+**Claim boundary:** digital architecture / EVT preparation only — not physical pass, not certification, not fab release, not purchased.
 
-Record measured values only after physical/lab work.
 
-| Metric | Value | State |
-|---|---|---|
-| `dual_edp_si_margin` | — | PENDING_PHYSICAL_MEASUREMENT |
-| `thermal_delta_c` | — | PENDING_PHYSICAL_MEASUREMENT |
-| `cost_delta_usd` | — | PENDING_PHYSICAL_MEASUREMENT |
-| `color_delta_e` | — | PENDING_PHYSICAL_MEASUREMENT |
+All metrics `UNMEASURED_PENDING_PHYSICAL`.
+
+- `dual_edp_si_margin`: UNMEASURED_PENDING_PHYSICAL
+- `thermal_delta_c`: UNMEASURED_PENDING_PHYSICAL
+- `cost_delta_usd`: UNMEASURED_PENDING_PHYSICAL
+- `color_delta_e`: UNMEASURED_PENDING_PHYSICAL
