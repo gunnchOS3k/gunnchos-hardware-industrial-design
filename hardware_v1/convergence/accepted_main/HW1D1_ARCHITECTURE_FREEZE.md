@@ -1,0 +1,54 @@
+# HW1D.1 — Accepted hardware-architecture freeze
+
+**Generated:** 2026-09-18T18:10:16Z  
+**Campaign:** `HW1D.1_ACCEPTED_MAIN_REBIND`  
+**Accepted main SHA:** `e5f15d1f1b6ddefa73c0a6127bced8d784aae425`  
+**Accepted main tree:** `eba38aad9c17ff03f7d6cb398d39b0c0987d4a71`  
+**Claim boundary:** architecture freeze only — physical gates remain false.
+
+## Four-track identities
+| Track | Identity |
+|---|---|
+| PRODUCT_MAINLINE | `AMD_CUSTOM_X86` |
+| OPEN_ENGINEERING_MAINLINE | `NXP_IMX95_OPEN_CUSTOM` |
+| GREENFIELD_EXPERIMENT | `GXE` |
+| REFERENCE_CONTROL | `COM_HPC_AND_COTS` |
+
+## Track file hashes (SHA-256)
+
+### PRODUCT_MAINLINE = `AMD_CUSTOM_X86`
+
+- `82312c7f990e955d195354f3c3d983e124924af0f4b195ba0ebcdb1fd338ec2c` — `hardware_v1/convergence/CANONICAL_TRACK_MODEL.json`
+- `2e74b9ec5fe8125bb44e917867d6617f4d2e895cf18579c6d686f409a2861578` — `hardware_v1/custom_mainline/CUSTOM_FIRST_ARCHITECTURE_DOCTRINE.md`
+- `ae8aea172ab15bf7715f02c41903335dcfcbcc53ed8b7f08b1307b10602dd8a1` — `hardware_v1/custom_mainline/PRODUCT_MAINLINE_STATUS.md`
+- `a79f76052df1d51d807f6e7c72f2673cd950a9e4453c569da1ef842bf36c4a45` — `hardware_v1/custom_mainline/PLATFORM_CORE_V1.md`
+
+### OPEN_ENGINEERING_MAINLINE = `NXP_IMX95_OPEN_CUSTOM`
+
+- `4bb5d56b625a42562deea637888f89df72818d2c39398de7653c8826fba8b6e6` — `hardware_v1/open_custom_nxp/OPEN_CUSTOM_DOCTRINE.md`
+- `c53f865e0e610b469f75f81c97ddca73a96869456cda5b1d6376241cce355125` — `hardware_v1/open_custom_nxp/IMX95_PLATFORM_PROFILE.md`
+- `818bf680fa3d971f66e8e4ec878ea8c8672d9aa42f01ea33830c6cfccbbe9639` — `hardware_v1/open_custom_nxp/PUBLIC_COLLATERAL_INDEX.json`
+- `e4bd3adb0c68b2064aedd301b2c41b648c7b83b6edeb6fd46fe9f33895030458` — `hardware_v1/open_custom_nxp/CPB0_OPEN_PRD.md`
+
+### GREENFIELD_EXPERIMENT = `GXE`
+
+- `7506bd03d8ee330ac96a9c580aa1298af6427c808595f084253b544e3b9ef41c` — `hardware_v1/convergence/GXE_HARDWARE_INTEGRATION_CONTRACT.md`
+- `4f59f69ad5c6371bf6db752918dd25c4e1377ed5f9d36b1e03b0d9fad9d2cc64` — `hardware_v1/convergence/EXPERIENCE_FIRST_CO_DESIGN_DOCTRINE.md`
+- `1e1be72ccad7e21118aad6f7bfa92467e6ce2c149dad3bcf21e119ef42ca6bb2` — `hardware_v1/convergence/HARDWARE_EXPERIENCE_CONTRACT_SCHEMA.json`
+
+### REFERENCE_CONTROL = `COM_HPC_AND_COTS`
+
+- `f270986f0f8953098988e8a12225186c31b043b3643bbe0cd41b75b2ba77fa7e` — `hardware_v1/reference_platform_0/REFERENCE_PLATFORM_0.json`
+- `324642d8f48c5570826fd6cc4ecfe5de00208c5cd3b179b001dcc6e262805ce5` — `hardware_v1/reference_platform_0/RP0_A_COMPUTE_PLATFORM.md`
+- `a42cc6b9690f3a7a0153d764012cde304041482c95f9e3513b628ab68bd34076` — `hardware_v1/bom/REFERENCE_CONTROL_BOM.csv`
+## Control-plane hashes
+- `e6550e8490b77e4397727d2ab135595af36312f259670035b11d1c7311e58966` — `hardware_v1/GATES.json`
+- `3f257bb6a514efcc0a9216fd7e14a1409bd34e8a08114feb16673fd1ebbfea17` — `hardware_v1/MANIFEST.json`
+- `82312c7f990e955d195354f3c3d983e124924af0f4b195ba0ebcdb1fd338ec2c` — `hardware_v1/convergence/CANONICAL_TRACK_MODEL.json`
+- `081b4a3065c0f8fc47750c8c980b0ee27007447308f63f52ad8af465a23cd8f8` — `hardware_v1/decisions/DECISION_LEDGER.json`
+- `17aeab5da9833b0cb2fa8f09b16717cae97249f99318ce848c7d2fb11469fafc` — `hardware_v1/experiments/REGISTRY.json`
+## Next lanes (documented; not executed here)
+- `NEXT_HARDWARE_ACTION=START_NXP_OPEN_CUSTOM_IMPLEMENTATION`
+- `NEXT_GXE_ACTION=BUILD_FIRST_VERTICAL_SLICE_IN_RISCV_SIM` (separate workspace)
+- `PARALLEL_AMD_ACTION=ACQUIRE_AMD_CUSTOM_PLATFORM_COLLATERAL` (external; collateral-gated)
+- `OPTIONAL_REFERENCE_ACTION=ORDER_RP0_A_COTS_CONTROL_KIT`
