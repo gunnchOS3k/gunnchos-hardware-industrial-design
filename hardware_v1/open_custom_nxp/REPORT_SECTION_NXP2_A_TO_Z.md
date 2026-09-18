@@ -14,7 +14,22 @@
 ## B. branch / final SHA
 
 - Branch: `hardware/nxp-open-cpb0-collateral-unlock`
-- Final tip SHA: `1954eb2cb02b247ae546d5f172cae5daa1064735`
+- Base (accepted main / PR #83): `56125d1738a437f413ee4418c51c2f3a82bcbac8`
+- Campaign commits (oldest→newest tip is first line of `git log` reverse; listed newest-first):
+
+```
+ccd6b99 docs(nxp2): align A–Z tip SHA with HEAD after stamp commits
+1954eb2 docs(nxp2): correct A–Z report tip SHA stamp
+f7bdf6b docs(nxp2): align A–Z tip SHA with HEAD after stamp commits
+f08f3d7 docs(nxp2): correct A–Z report tip SHA stamp
+d3ef6ea docs(nxp2): stamp final branch tip SHA into A–Z report
+53308bb feat(nxp2): add NXP-2 gates, validators, and A–Z fail-closed fab readiness
+ef94b3c docs(nxp2): record honest ERC/DRC/placement/routing/SI/PI continuation status
+c8fd609 docs(nxp2): fail-closed DDR and EVK BOM reconciliation without invented MPNs
+4e40a8e docs(nxp2): index missing owner UG10210/EVK BOM collateral
+```
+
+- Report file tip will match PR HEAD after this commit lands.
 
 ## C. owner collateral index
 
