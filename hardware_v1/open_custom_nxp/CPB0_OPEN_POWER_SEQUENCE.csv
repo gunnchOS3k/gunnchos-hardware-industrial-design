@@ -1,0 +1,10 @@
+step,event,dependency,timing_token,source,notes
+1,NVCC_BBSM_1P8 valid,input power,tBBSM,IMX95IEC,first/last rail
+2,PMIC_ON_REQ assert,BBSM valid,tPMIC_ON_REQ,IMX95IEC,SoC driven
+3,VDD_SOC / digital 0P8,PMIC_ON_REQ,tstep_dig_0P8,IMX95IEC,use datasheet numbers
+4,1P8 analog/IO group,0P8 group,tstep_0P8_1P8,IMX95IEC,
+5,VDD2H_DDR,1P8 group,tstep_1P8_DDR2H,IMX95IEC,LPDDR5 1.05V class
+6,VDDQ_DDR,VDD2H,tstep_DDR2H_DDR2Q,IMX95IEC,LPDDR5 0.5V class
+7,3P3 peripherals,VDDQ,tstep_DDR2Q_3P3,IMX95IEC,
+8,NVCC_SD2,3P3,tstep_3P3_SD2,IMX95IEC,
+9,POR_B release,rails valid,tPOR_B,IMX95IEC,external PU to NVCC_BBSM

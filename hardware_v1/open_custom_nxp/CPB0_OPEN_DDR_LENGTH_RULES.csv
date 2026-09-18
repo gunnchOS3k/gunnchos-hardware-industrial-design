@@ -1,0 +1,2 @@
+rule_id,group,match_to,skew_ps_or_mil,source,status
+DDR-LEN-001,ALL_LPDDR5,UG10210_TABLE,NOT_INVENTED,UG10210_OR_EVK_LAYOUT,UNRESOLVED

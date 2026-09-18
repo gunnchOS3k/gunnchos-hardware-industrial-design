@@ -1,25 +1,19 @@
-# NXP public-collateral blocker register
+# NXP public blocker register (NXP-1)
 
-**Generated:** 2026-09-18T18:54:56Z  
-**Campaign:** `NXP0_OPEN_CUSTOM_IMX95_IMPLEMENTATION_FOUNDATION`  
-**Claim boundary:** architecture / public-collateral implementation foundation only — not physical pass, not certification, not fab release, not purchased, not NDA, not GXE execution, not software RC1 change.
+**Generated:** 2026-09-18T19:19:08Z
 
+| ID | Blocker | Class | Blocks gate | Resolution |
+|---|---|---|---|---|
+| BLK-UG10210 | Hardware design guide length/impedance tables | ACCOUNT_LOGIN | NXP_PUBLIC_MEMORY_TOPOLOGY_UNDERSTOOD, PCB_READY, FAB | Owner ordinary-account fetch + hash |
+| BLK-EVK-BOM | Exact PF53 + LPDDR5 + OTP MPNs | ACCOUNT_OR_PUBLIC_ZIP | BOM_AVL_DIGITAL_PASS, PMIC OTP freeze | Owner fetch EVK BOM |
+| BLK-IBIS | IBIS models for sim | ACCOUNT_MAYBE | SI PASS | Optional; not required for digital docs |
+| BLK-ERC | Full schematic wiring + ERC zero | EDA | SCHEMATIC_ERC_PASS / READY | Continue EDA after MPNs |
+| BLK-DRC | Routed PCB + DRC | EDA | PCB_DRC_PASS / READY | After DDR rules |
+| BLK-NDA | — | NONE | — | No NDA required items identified |
 
-
-| ID | Blocker | Classification | Notes |
-|---|---|---|---|
-| BLK-PINMAP | Ball-accurate pin/mux CSV incomplete | EDA_PENDING / TOOLING_REQUIRED | Needs IMX95IEC package assignments + IMX95RM IOMUX extract |
-| BLK-UG10210 | Hardware design guide not ingested | ACCOUNT_LOGIN_REQUIRED | Ordinary login OK; content not fetched this campaign |
-| BLK-ERRATA | IMX95_P21N not ingested | ACCOUNT_LOGIN_REQUIRED | |
-| BLK-IBIS | IBIS/BSDL not ingested | ACCOUNT_LOGIN_REQUIRED | Blocks SI/DFT pass |
-| BLK-PMIC-OPN | PMIC exact OPN unknown | EXTERNAL_VENDOR_PENDING / ACCOUNT_LOGIN_REQUIRED | EVK BOM |
-| BLK-DDR-DETAIL | Skew/impedance/device OPN | ACCOUNT_LOGIN_REQUIRED / EDA_PENDING | |
-| BLK-SCH-SYMBOLS | No authoritative i.MX95 KiCad symbol/footprint yet | EDA_PENDING | Do not copy restricted libs |
-| BLK-ERC | ERC pass | EDA_PENDING | |
-| BLK-PCB | Layout not started | EDA_PENDING | |
-| BLK-DRC | DRC pass | EDA_PENDING | |
-| BLK-SHA | Local SHA-256 archive of public PDFs | TOOLING_REQUIRED | Owner fetch |
-| BLK-PHYS | EVT bring-up | PHYSICAL_PENDING | |
-| BLK-CLOSED-INDEX | Category inventory complete | CLOSED_PUBLIC | Index built from product page + datasheet + MCUX + GS |
-
-**NDA:** none identified as required for essential CPB0-O path. If an essential item unexpectedly requires NDA → stop that subpath; do not invent.
+Minimal digital blockers keeping `CPB0_OPEN_READY_FOR_FAB=false`:
+1. UG10210 (or EVK layout) DDR constraint tables
+2. Exact DRAM + PF53 OPNs / PF09 OTP package from EVK BOM
+3. Complete schematic ERC pass with real parts
+4. Footprint library validation vs mechanical drawings
+5. Placement/routing/DRC complete under those constraints
