@@ -1,9 +1,13 @@
 {
   "schema": "gunnchos.hardware_v1.campaign.v1",
-  "generated_at_utc": "2026-09-18T16:48:54Z",
-  "campaign": "HARDWARE_1_0C_CUSTOM_FIRST_MAINLINE_PIVOT",
+  "generated_at_utc": "2026-09-18T17:46:17Z",
+  "campaign": "HARDWARE_1_0D_FOUR_TRACK_CONVERGENCE_MERGE_READINESS",
   "hierarchy": {
-    "mainline": "CUSTOM AMD EMBEDDED X86 MOTHERBOARD (Platform Core v1)",
+    "product_mainline": "PRODUCT_MAINLINE = AMD_CUSTOM_X86 (Platform Core v1)",
+    "open_engineering_mainline": "OPEN_ENGINEERING_MAINLINE = NXP_IMX95_OPEN_CUSTOM",
+    "greenfield_experiment": "GREENFIELD_EXPERIMENT = GXE (integration contract only here)",
+    "reference_control": "REFERENCE_CONTROL = COM_HPC_AND_COTS",
+    "mainline": "PRODUCT_MAINLINE AMD_CUSTOM_X86 (Platform Core v1) \u2014 qualifier required",
     "simpler_reference_alternatives": [
       "COM-HPC Mini modular x86",
       "ARM/IQ-X SoM",
@@ -21,7 +25,7 @@
       "DS-XL X100",
       "Student P100 AI-first"
     ],
-    "guiding_question": "Does the simpler or specialized variant outperform the custom mainline enough to justify giving up some control or increasing specialization?"
+    "guiding_question": "Does the simpler or specialized variant outperform the relevant track baseline enough to justify promotion with measured evidence?"
   },
   "experiments": [
     {
@@ -41,7 +45,9 @@
       ],
       "promotion_gate": "All metrics meet or beat baseline on EVT sample n>=3 AND Device OS RC1 interface register shows zero P0 breaks; owner accepts reduced x86 ownership",
       "not_in_main_bom": true,
-      "hierarchy": "REFERENCE_CONTROL_COMPARE"
+      "hierarchy": "REFERENCE_CONTROL_COMPARE",
+      "merge_ready": false,
+      "promotion_requires_evidence": true
     },
     {
       "id": "EXP-STUDENT-OLED-001",
@@ -59,7 +65,9 @@
       ],
       "promotion_gate": "Power <= IPS+10% at 200 nits office; burn-in mitigation plan owner-approved",
       "not_in_main_bom": true,
-      "hierarchy": "PRODUCT_EXPERIMENT"
+      "hierarchy": "PRODUCT_EXPERIMENT",
+      "merge_ready": false,
+      "promotion_requires_evidence": true
     },
     {
       "id": "EXP-DSXL-OLED-HYBRID-001",
@@ -76,7 +84,9 @@
       ],
       "promotion_gate": "SI margin maintained on eDP+DDI/DP; do not mislabel as dual native eDP",
       "not_in_main_bom": true,
-      "hierarchy": "PRODUCT_EXPERIMENT"
+      "hierarchy": "PRODUCT_EXPERIMENT",
+      "merge_ready": false,
+      "promotion_requires_evidence": true
     },
     {
       "id": "EXP-DOCK-USB4-80-001",
@@ -93,7 +103,9 @@
       ],
       "promotion_gate": "Measured eye margin; no mainline mix until DVT",
       "not_in_main_bom": true,
-      "hierarchy": "PRODUCT_EXPERIMENT"
+      "hierarchy": "PRODUCT_EXPERIMENT",
+      "merge_ready": false,
+      "promotion_requires_evidence": true
     },
     {
       "id": "EXP-RINGS-INDUCTIVE-001",
@@ -110,7 +122,9 @@
       ],
       "promotion_gate": "Efficiency >=70% at EVT coil; EMI does not fail pre-scan relative to baseline",
       "not_in_main_bom": true,
-      "hierarchy": "PRODUCT_EXPERIMENT"
+      "hierarchy": "PRODUCT_EXPERIMENT",
+      "merge_ready": false,
+      "promotion_requires_evidence": true
     },
     {
       "id": "EXP-RINGS-SEMG-001",
@@ -127,7 +141,9 @@
       ],
       "promotion_gate": "Safety current limits met; youth privacy review pass; not medical claim",
       "not_in_main_bom": true,
-      "hierarchy": "PRODUCT_EXPERIMENT"
+      "hierarchy": "PRODUCT_EXPERIMENT",
+      "merge_ready": false,
+      "promotion_requires_evidence": true
     },
     {
       "id": "EXP-COREBOOT-001",
@@ -144,7 +160,9 @@
       ],
       "promotion_gate": "Must not block mainline; only promote after production-capable platform support",
       "not_in_main_bom": true,
-      "hierarchy": "PRODUCT_EXPERIMENT"
+      "hierarchy": "PRODUCT_EXPERIMENT",
+      "merge_ready": false,
+      "promotion_requires_evidence": true
     },
     {
       "id": "EXP-RAUC-001",
@@ -161,7 +179,9 @@
       ],
       "promotion_gate": "No P0 Device OS RC1 breaks; measured field-ops improvement",
       "not_in_main_bom": true,
-      "hierarchy": "PRODUCT_EXPERIMENT"
+      "hierarchy": "PRODUCT_EXPERIMENT",
+      "merge_ready": false,
+      "promotion_requires_evidence": true
     },
     {
       "id": "EXP-COM-HPC-MODULAR-001",
@@ -181,7 +201,9 @@
       ],
       "promotion_gate": "Measured evidence that modular path meets product goals AND owner explicitly accepts reduced motherboard ownership; cannot silently become mainline",
       "not_in_main_bom": true,
-      "hierarchy": "REFERENCE_CONTROL_COMPARE"
+      "hierarchy": "REFERENCE_CONTROL_COMPARE",
+      "merge_ready": false,
+      "promotion_requires_evidence": true
     },
     {
       "id": "EXP-DSXL-X100-001",
@@ -211,7 +233,9 @@
       ],
       "promotion_gate": "Physical comparison n>=3; do not promote without measured data",
       "not_in_main_bom": true,
-      "hierarchy": "PRODUCT_EXPERIMENT"
+      "hierarchy": "PRODUCT_EXPERIMENT",
+      "merge_ready": false,
+      "promotion_requires_evidence": true
     },
     {
       "id": "EXP-P100-AI-001",
@@ -236,7 +260,9 @@
       ],
       "promotion_gate": "Physical comparison; AI-first SKU only after evidence; does not replace mainline now",
       "not_in_main_bom": true,
-      "hierarchy": "PRODUCT_EXPERIMENT"
+      "hierarchy": "PRODUCT_EXPERIMENT",
+      "merge_ready": false,
+      "promotion_requires_evidence": true
     }
   ]
 }

@@ -1,18 +1,24 @@
 {
   "schema": "gunnchos.hardware_v1.campaign.v1",
-  "generated_at_utc": "2026-09-18T16:48:54Z",
+  "generated_at_utc": "2026-09-18T17:46:17Z",
   "decisions": [
     {
       "id": "DEC-DOCTRINE-001",
       "topic": "Architecture doctrine",
       "state": "ADOPTED_MAINLINE",
-      "mainline": "MAINLINE_CUSTOM owns board around silicon; COTS/modular = REFERENCE_CONTROL; experiments need measured evidence to promote",
+      "mainline": "FOUR_TRACK model: PRODUCT_MAINLINE=AMD_CUSTOM_X86; OPEN_ENGINEERING_MAINLINE=NXP_IMX95_OPEN_CUSTOM; GREENFIELD_EXPERIMENT=GXE; REFERENCE_CONTROL=COM_HPC_AND_COTS",
       "rationale": "Owner-directed HW1C custom-first pivot",
       "evidence": [
         "hardware_v1/custom_mainline/CUSTOM_FIRST_ARCHITECTURE_DOCTRINE.md"
       ],
       "experiment_alt": null,
-      "owner_gate": null
+      "owner_gate": null,
+      "track": "ALL_TRACKS",
+      "role": "architecture_control_plane",
+      "evidence_class": "architecture_definition",
+      "promotion_conditions": "N/A \u2014 doctrine",
+      "physical_dependency": false,
+      "external_dependency": false
     },
     {
       "id": "DEC-COMPUTE-001",
@@ -27,7 +33,13 @@
       ],
       "experiment_alt": "EXP-ARM-IQX-001, EXP-COM-HPC-MODULAR-001, EXP-DSXL-X100-001, EXP-P100-AI-001",
       "owner_gate": "ACQUIRE_AMD_CUSTOM_PLATFORM_COLLATERAL",
-      "secondary_state": "PENDING_VENDOR_CONFIRMATION"
+      "secondary_state": "PENDING_VENDOR_CONFIRMATION",
+      "track": "PRODUCT_MAINLINE",
+      "role": "product",
+      "evidence_class": "architecture_definition",
+      "promotion_conditions": "AMD collateral + measured EVT before physical ready",
+      "physical_dependency": true,
+      "external_dependency": true
     },
     {
       "id": "DEC-COMPUTE-002",
@@ -41,7 +53,13 @@
       ],
       "experiment_alt": "EXP-COM-HPC-MODULAR-001",
       "owner_gate": "ACQUIRE_AMD_CUSTOM_PLATFORM_COLLATERAL",
-      "secondary_state": "PENDING_VENDOR_CONFIRMATION"
+      "secondary_state": "PENDING_VENDOR_CONFIRMATION",
+      "track": "PRODUCT_MAINLINE",
+      "role": "product",
+      "evidence_class": "architecture_definition",
+      "promotion_conditions": "AMD collateral + handheld fit measurements",
+      "physical_dependency": true,
+      "external_dependency": true
     },
     {
       "id": "DEC-COMPUTE-003",
@@ -54,7 +72,13 @@
         "physical_evidence/README.md"
       ],
       "experiment_alt": null,
-      "owner_gate": "CPB0/EVT bring-up measurements"
+      "owner_gate": "CPB0/EVT bring-up measurements",
+      "track": "PRODUCT_MAINLINE",
+      "role": "product",
+      "evidence_class": "pending_physical",
+      "promotion_conditions": "CPB0/EVT measurements",
+      "physical_dependency": true,
+      "external_dependency": false
     },
     {
       "id": "DEC-CPB0-001",
@@ -67,20 +91,32 @@
       ],
       "experiment_alt": null,
       "owner_gate": "ACQUIRE_AMD_CUSTOM_PLATFORM_COLLATERAL",
-      "secondary_state": "PENDING_VENDOR_CONFIRMATION"
+      "secondary_state": "PENDING_VENDOR_CONFIRMATION",
+      "track": "PRODUCT_MAINLINE",
+      "role": "product_engineering_learning",
+      "evidence_class": "architecture_definition",
+      "promotion_conditions": "AMD collateral + EDA",
+      "physical_dependency": true,
+      "external_dependency": true
     },
     {
       "id": "DEC-COMHPC-001",
       "topic": "COM-HPC role",
       "state": "EXPERIMENTAL_COMPARE",
-      "mainline": "ADLINK COM-HPC Mini mMTL + Mini Base classified REFERENCE_CONTROL_MODULAR_X86 (not product mainline)",
+      "mainline": "ADLINK COM-HPC Mini mMTL + Mini Base classified REFERENCE_CONTROL_MODULAR_X86 (not PRODUCT_MAINLINE)",
       "rationale": "Preserve RP0-A COTS packet for software/bring-up isolation; optional owner order",
       "evidence": [
         "hardware_v1/reference_platform_0/REFERENCE_PLATFORM_0.md",
         "hardware_v1/bom/REFERENCE_CONTROL_BOM.csv"
       ],
       "experiment_alt": "EXP-COM-HPC-MODULAR-001",
-      "owner_gate": "OPTIONAL_OWNER_ACTION=ORDER_RP0_A_COTS_CONTROL_KIT"
+      "owner_gate": "OPTIONAL_OWNER_ACTION=ORDER_RP0_A_COTS_CONTROL_KIT",
+      "track": "REFERENCE_CONTROL",
+      "role": "control",
+      "evidence_class": "architecture_definition",
+      "promotion_conditions": "Cannot promote to PRODUCT_MAINLINE without measured evidence + owner accept",
+      "physical_dependency": false,
+      "external_dependency": false
     },
     {
       "id": "DEC-MEMORY-001",
@@ -92,7 +128,13 @@
         "hardware_v1/custom_mainline/MEMORY_TOPOLOGY_DECISION.md"
       ],
       "experiment_alt": null,
-      "owner_gate": "AMD DDR topology collateral"
+      "owner_gate": "AMD DDR topology collateral",
+      "track": "PRODUCT_MAINLINE",
+      "role": "product",
+      "evidence_class": "pending_vendor",
+      "promotion_conditions": "AMD DDR topology collateral",
+      "physical_dependency": true,
+      "external_dependency": true
     },
     {
       "id": "DEC-FW-001",
@@ -105,7 +147,13 @@
         "firmware_os_interface/"
       ],
       "experiment_alt": "EXP-COREBOOT, EXP-RAUC-UPDATE",
-      "owner_gate": null
+      "owner_gate": null,
+      "track": "PRODUCT_MAINLINE",
+      "role": "product",
+      "evidence_class": "architecture_definition",
+      "promotion_conditions": "Vendor UEFI path; open stacks stay experimental",
+      "physical_dependency": false,
+      "external_dependency": false
     },
     {
       "id": "DEC-DISPLAY-001",
@@ -118,7 +166,13 @@
         "hardware_v1/devices/ds_xl/DUAL_DISPLAY_ARCHITECTURE.md"
       ],
       "experiment_alt": "EXP-STUDENT-OLED, EXP-DSXL-OLED-HYBRID",
-      "owner_gate": null
+      "owner_gate": null,
+      "track": "PRODUCT_MAINLINE",
+      "role": "product",
+      "evidence_class": "architecture_definition",
+      "promotion_conditions": "OLED remains experiment",
+      "physical_dependency": false,
+      "external_dependency": false
     },
     {
       "id": "DEC-STORAGE-001",
@@ -130,7 +184,13 @@
         "device_designs/student_14_5/bom/assembly_bom.csv"
       ],
       "experiment_alt": null,
-      "owner_gate": null
+      "owner_gate": null,
+      "track": "PRODUCT_MAINLINE",
+      "role": "product",
+      "evidence_class": "architecture_definition",
+      "promotion_conditions": "N/A",
+      "physical_dependency": false,
+      "external_dependency": false
     },
     {
       "id": "DEC-CELLULAR-001",
@@ -144,7 +204,13 @@
       ],
       "experiment_alt": null,
       "owner_gate": "PRODUCT_CELLULAR_ANTENNA_DESIGN_PENDING",
-      "secondary_state": null
+      "secondary_state": null,
+      "track": "PRODUCT_MAINLINE",
+      "role": "product",
+      "evidence_class": "public_avl",
+      "promotion_conditions": "PRODUCT_CELLULAR_ANTENNA_DESIGN_PENDING",
+      "physical_dependency": true,
+      "external_dependency": false
     },
     {
       "id": "DEC-DOCK-001",
@@ -157,7 +223,13 @@
         "device_designs/dock/bom/assembly_bom.csv"
       ],
       "experiment_alt": "EXP-DOCK-USB4-80",
-      "owner_gate": "EXT-JHL8440-BALLMAP / EXT-JHL9040R-BALLMAP vendor NDA packs"
+      "owner_gate": "EXT-JHL8440-BALLMAP / EXT-JHL9040R-BALLMAP vendor NDA packs",
+      "track": "PRODUCT_MAINLINE",
+      "role": "product",
+      "evidence_class": "architecture_definition",
+      "promotion_conditions": "JHL ballmaps for pin-accurate custom dock",
+      "physical_dependency": true,
+      "external_dependency": true
     },
     {
       "id": "DEC-RINGS-001",
@@ -175,7 +247,13 @@
       "secondary_state": null,
       "RING_EVT_ELECTRICAL_PLATFORM": "QFN48/DK reference",
       "RING_FORM_FACTOR_CANDIDATE": "CSP47",
-      "DK_HARDWARE_ID": "PCA10156"
+      "DK_HARDWARE_ID": "PCA10156",
+      "track": "PRODUCT_MAINLINE",
+      "role": "product",
+      "evidence_class": "public_evidence",
+      "promotion_conditions": "CSP47 wearable HDI/assembly feasibility",
+      "physical_dependency": true,
+      "external_dependency": false
     },
     {
       "id": "DEC-RINGS-002",
@@ -187,13 +265,19 @@
         "device_designs/edge_io_rings/bom/assembly_bom.csv"
       ],
       "experiment_alt": "EXP-RINGS-INDUCTIVE-CHARGE, EXP-RINGS-SEMG-WRIST",
-      "owner_gate": null
+      "owner_gate": null,
+      "track": "PRODUCT_MAINLINE",
+      "role": "product",
+      "evidence_class": "architecture_definition",
+      "promotion_conditions": "Inductive/sEMG stay experimental",
+      "physical_dependency": false,
+      "external_dependency": false
     },
     {
       "id": "DEC-BATT-001",
       "topic": "Battery chemistry",
       "state": "ADOPTED_MAINLINE",
-      "mainline": "Qualified Li-ion / LiPo only; no experimental chemistries in mainline",
+      "mainline": "Qualified Li-ion / LiPo only; no experimental chemistries in PRODUCT_MAINLINE",
       "rationale": "UN38.3 / transport path; experimental chemistries deferred Gen2",
       "evidence": [
         "battery/",
@@ -201,7 +285,13 @@
       ],
       "experiment_alt": null,
       "deferred": "solid-state / Na-ion = DEFERRED_GEN2",
-      "owner_gate": null
+      "owner_gate": null,
+      "track": "PRODUCT_MAINLINE",
+      "role": "product",
+      "evidence_class": "architecture_definition",
+      "promotion_conditions": "Experimental chemistries deferred Gen2",
+      "physical_dependency": false,
+      "external_dependency": false
     },
     {
       "id": "DEC-QA-001",
@@ -213,21 +303,127 @@
         "manufacturing/QUALITY_PLAN.md"
       ],
       "experiment_alt": null,
-      "owner_gate": null
+      "owner_gate": null,
+      "track": "PRODUCT_MAINLINE",
+      "role": "product",
+      "evidence_class": "architecture_definition",
+      "promotion_conditions": "N/A",
+      "physical_dependency": false,
+      "external_dependency": false
     },
     {
       "id": "DEC-RP0-001",
       "topic": "Reference Platform 0 scope",
       "state": "ADOPTED_MAINLINE",
-      "mainline": "Two-stage RP0: RP0-A COTS Integration Bench (ADLINK Mini Base + mMTL + nRF54L15 DK + COTS USB4 dock) then RP0-B custom gunnchOS carrier/dock/ring EVT electronics",
+      "mainline": "Two-stage RP0 REFERENCE_CONTROL: RP0-A COTS Integration Bench then historical RP0-B custom path; RP0-A is not PRODUCT_MAINLINE",
       "rationale": "Do not order custom PCB that is not fabrication-ready. COTS unlocks physical bring-up while vendor-gated pin maps remain RP0-B blockers.",
       "evidence": [
         "DIGITAL_TO_PHYSICAL_HANDOFF.md",
         "hardware_v1/reference_platform_0/RP0_STAGE_MODEL.md"
       ],
       "experiment_alt": null,
-      "owner_gate": "ORDER_RP0_A_COTS_BRINGUP_KIT (Cursor does not purchase)"
+      "owner_gate": "ORDER_RP0_A_COTS_BRINGUP_KIT (Cursor does not purchase)",
+      "track": "REFERENCE_CONTROL",
+      "role": "control",
+      "evidence_class": "architecture_definition",
+      "promotion_conditions": "Optional order only; never PRODUCT_MAINLINE",
+      "physical_dependency": false,
+      "external_dependency": false
+    },
+    {
+      "id": "DEC-TRACK-MODEL-001",
+      "topic": "Four-track convergence model",
+      "state": "ADOPTED_MAINLINE",
+      "track": "ALL_TRACKS",
+      "role": "architecture_control_plane",
+      "mainline": "PRODUCT_MAINLINE=AMD_CUSTOM_X86; OPEN_ENGINEERING_MAINLINE=NXP_IMX95_OPEN_CUSTOM; GREENFIELD_EXPERIMENT=GXE; REFERENCE_CONTROL=COM_HPC_AND_COTS",
+      "rationale": "HW1D resolves ambiguous mainline terminology",
+      "evidence": [
+        "hardware_v1/convergence/CANONICAL_TRACK_MODEL.md",
+        "hardware_v1/convergence/CANONICAL_TRACK_MODEL.json"
+      ],
+      "experiment_alt": null,
+      "owner_gate": null,
+      "evidence_class": "architecture_definition",
+      "promotion_conditions": "N/A",
+      "physical_dependency": false,
+      "external_dependency": false
+    },
+    {
+      "id": "DEC-NXP-OPEN-001",
+      "topic": "NXP i.MX95 open-custom engineering lane",
+      "state": "ADOPTED_MAINLINE",
+      "track": "OPEN_ENGINEERING_MAINLINE",
+      "role": "engineering",
+      "mainline": "NXP_IMX95_OPEN_CUSTOM architecture package under hardware_v1/open_custom_nxp/",
+      "rationale": "No-NDA path to custom-board fab learning; not product-equivalent to AMD x86",
+      "evidence": [
+        "hardware_v1/open_custom_nxp/OPEN_CUSTOM_DOCTRINE.md",
+        "hardware_v1/open_custom_nxp/IMX95_PLATFORM_PROFILE.md"
+      ],
+      "experiment_alt": null,
+      "owner_gate": "Public design-guide access + EDA for CPB0-Open",
+      "evidence_class": "architecture_definition",
+      "promotion_conditions": "Cannot replace PRODUCT_MAINLINE without explicit owner decision + measured evidence",
+      "physical_dependency": true,
+      "external_dependency": true
+    },
+    {
+      "id": "DEC-GXE-001",
+      "topic": "GXE integration boundary",
+      "state": "EXPERIMENTAL_COMPARE",
+      "track": "GREENFIELD_EXPERIMENT",
+      "role": "experimental",
+      "mainline": "Integration contract only in this repo; GXE not implemented here",
+      "rationale": "Keep experience-first greenfield separate from hardware architecture baseline",
+      "evidence": [
+        "hardware_v1/convergence/GXE_HARDWARE_INTEGRATION_CONTRACT.md"
+      ],
+      "experiment_alt": "GXE workspace/repo",
+      "owner_gate": null,
+      "evidence_class": "architecture_definition",
+      "promotion_conditions": "GXE evidence outside this repo; never silent promote",
+      "physical_dependency": false,
+      "external_dependency": false
+    },
+    {
+      "id": "DEC-MERGE-READY-001",
+      "topic": "Architecture baseline merge-readiness vs physical readiness",
+      "state": "ADOPTED_MAINLINE",
+      "track": "ALL_TRACKS",
+      "role": "architecture_control_plane",
+      "mainline": "HW_ARCHITECTURE_BASELINE_MERGE_READY may be true while physical EVT/fab/cert gates remain false",
+      "rationale": "Separate architecture/control-plane acceptance from physical hardware readiness",
+      "evidence": [
+        "hardware_v1/GATES.json",
+        "hardware_v1/convergence/POST_MERGE_PLAN.md"
+      ],
+      "experiment_alt": null,
+      "owner_gate": "MERGE_HW_ARCHITECTURE_BASELINE_68_WITH_MERGE_COMMIT",
+      "evidence_class": "architecture_definition",
+      "promotion_conditions": "Owner merge commit only; Cursor does not merge",
+      "physical_dependency": false,
+      "external_dependency": false
+    },
+    {
+      "id": "DEC-EXPERIENCE-001",
+      "topic": "Experience-first co-design doctrine",
+      "state": "ADOPTED_MAINLINE",
+      "track": "ALL_TRACKS",
+      "role": "architecture_control_plane",
+      "mainline": "Software must earn additional hardware; Experience Contracts required",
+      "rationale": "Prevent SKU upsizing from masking software inefficiency",
+      "evidence": [
+        "hardware_v1/convergence/EXPERIENCE_FIRST_CO_DESIGN_DOCTRINE.md",
+        "hardware_v1/convergence/HARDWARE_EXPERIENCE_CONTRACT_SCHEMA.json"
+      ],
+      "experiment_alt": null,
+      "owner_gate": null,
+      "evidence_class": "architecture_definition",
+      "promotion_conditions": "N/A",
+      "physical_dependency": false,
+      "external_dependency": false
     }
   ],
-  "campaign": "HARDWARE_1_0C_CUSTOM_FIRST_MAINLINE_PIVOT"
+  "campaign": "HARDWARE_1_0D_FOUR_TRACK_CONVERGENCE_MERGE_READINESS"
 }

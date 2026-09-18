@@ -25,3 +25,16 @@ Digital architecture + EVT preparation. Not physical validation, not certificati
 - Learning board: **CPB0** (`hardware_v1/custom_mainline/cpb0/`)
 - Doctrine: `hardware_v1/custom_mainline/CUSTOM_FIRST_ARCHITECTURE_DOCTRINE.md`
 - Preferred owner action: `ACQUIRE_AMD_CUSTOM_PLATFORM_COLLATERAL`
+
+## HW1D four-track convergence
+
+**Generated:** 2026-09-18T17:46:17Z  
+**Campaign:** `HARDWARE_1_0D_FOUR_TRACK_CONVERGENCE_MERGE_READINESS`  
+**Claim boundary:** architecture / control-plane baseline only — not physical pass, not certification, not fab release, not purchased, not GXE execution.
+
+- `PRODUCT_MAINLINE` = AMD_CUSTOM_X86
+- `OPEN_ENGINEERING_MAINLINE` = NXP_IMX95_OPEN_CUSTOM
+- `GREENFIELD_EXPERIMENT` = GXE (contract only)
+- `REFERENCE_CONTROL` = COM_HPC_AND_COTS
+- Merge-ready gate: `HW_ARCHITECTURE_BASELINE_MERGE_READY` (≠ physical EVT)
+- Docs: `hardware_v1/convergence/`

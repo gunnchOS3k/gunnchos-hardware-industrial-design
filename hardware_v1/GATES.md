@@ -1,12 +1,22 @@
-# Hardware v1 gates (HW1C)
+# Hardware v1 gates (HW1D)
 
-**Generated:** 2026-09-18T16:48:54Z  
-**Campaign:** `HARDWARE_1_0C_CUSTOM_FIRST_MAINLINE_PIVOT`  
-**Claim boundary:** digital architecture / EVT preparation only — not physical pass, not certification, not fab release, not purchased.
+**Generated:** 2026-09-18T17:46:17Z  
+**Campaign:** `HARDWARE_1_0D_FOUR_TRACK_CONVERGENCE_MERGE_READINESS`  
+**Claim boundary:** architecture / control-plane baseline only — not physical pass, not certification, not fab release, not purchased, not GXE execution.
 
 
 | Token | Value |
 |---|---|
+| `HW_ARCHITECTURE_BASELINE_MERGE_READY` | `true` |
+| `FOUR_TRACK_MODEL_PASS` | `true` |
+| `EXPERIENCE_FIRST_CO_DESIGN_DOCTRINE_PASS` | `true` |
+| `AMD_PRODUCT_MAINLINE_PRESERVED` | `true` |
+| `NXP_OPEN_CUSTOM_TRACK_DEFINED` | `true` |
+| `GXE_INTEGRATION_BOUNDARY_DEFINED` | `true` |
+| `REFERENCE_CONTROL_TRACK_DEFINED` | `true` |
+| `EXPERIMENT_ISOLATION_PASS` | `true` |
+| `GXE_IMPLEMENTED_IN_HARDWARE_REPO` | `false` |
+| `NXP_CLAIMED_PRODUCT_EQUIVALENT_TO_AMD` | `false` |
 | `CUSTOM_MAINLINE_ARCHITECTURE_FROZEN` | `true` |
 | `CUSTOM_PLATFORM_VENDOR_ACCESS_READY` | `false` |
 | `CUSTOM_SOC_PINMAP_UNDERSTOOD` | `false` |
@@ -22,6 +32,7 @@
 | `CPB0_SCHEMATIC_READY` | `false` |
 | `CPB0_PCB_READY` | `false` |
 | `CPB0_READY_FOR_FAB` | `false` |
+| `CPB0_OPEN_READY_FOR_FAB` | `false` |
 | `CUSTOM_MAINLINE_READY_FOR_EVT_BUILD` | `false` |
 | `HARDWARE_V1_READY_FOR_EVT_BUILD` | `false` |
 | `HARDWARE_V1_DIGITAL_ARCHITECTURE_COMPLETE` | `true` |
@@ -58,10 +69,13 @@
 | `COM_HPC_IS_PRODUCT_MAINLINE` | `false` |
 | `COM_HPC_CLASSIFICATION` | `REFERENCE_CONTROL_MODULAR_X86` |
 | `MAINLINE_COMPUTE` | `CUSTOM_AMD_PLATFORM_CORE_V1` |
-| `NEXT_OWNER_ACTION` | `ACQUIRE_AMD_CUSTOM_PLATFORM_COLLATERAL` |
+| `PRODUCT_MAINLINE` | `AMD_CUSTOM_X86` |
+| `OPEN_ENGINEERING_MAINLINE` | `NXP_IMX95_OPEN_CUSTOM` |
+| `GREENFIELD_EXPERIMENT` | `GXE` |
+| `REFERENCE_CONTROL` | `COM_HPC_AND_COTS` |
+| `NEXT_OWNER_ACTION` | `MERGE_HW_ARCHITECTURE_BASELINE_68_WITH_MERGE_COMMIT` |
 | `OPTIONAL_OWNER_ACTION` | `ORDER_RP0_A_COTS_CONTROL_KIT` |
+| `PARALLEL_OWNER_ACTION` | `ACQUIRE_AMD_CUSTOM_PLATFORM_COLLATERAL` |
 | `NEXT_GATE` | `None` |
 
-**Note:** Preferred: acquire AMD custom platform collateral for Platform Core / CPB0. Optional parallel: order RP0-A COTS control kit. Cursor will not purchase or accept NDAs. COTS readiness must not flip CUSTOM_MAINLINE_READY_FOR_EVT_BUILD.
-
-`HARDWARE_V1_READY_FOR_EVT_BUILD` aliases `CUSTOM_MAINLINE_READY_FOR_EVT_BUILD`. COTS cannot flip it true.
+**Note:** Preferred: merge DRAFT #68 with a merge commit to accept the architecture/control-plane baseline. This does NOT mean physical hardware is ready. Optional: order RP0-A COTS control kit. Parallel: acquire AMD custom platform collateral. Cursor will not merge, purchase, or accept NDAs.
