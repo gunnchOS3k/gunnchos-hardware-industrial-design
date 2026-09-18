@@ -1,32 +1,30 @@
-# coreboot vs vendor UEFI
+# EXP-COREBOOT-001 comparison package
 
-**Generated:** 2026-09-18T16:24:23Z  
-**Campaign:** `HARDWARE_1_0_MASTER_CAMPAIGN`  
-**Claim boundary:** digital architecture / EVT preparation only — not physical pass, not certification, not fab release.
+**Generated:** 2026-09-18T16:48:54Z  
+**Campaign:** `HARDWARE_1_0C_CUSTOM_FIRST_MAINLINE_PIVOT`  
+**Claim boundary:** digital architecture / EVT preparation only — not physical pass, not certification, not fab release, not purchased.
 
-## Identity
-- Experiment ID: `EXP-COREBOOT-001`
-- Branch: `hardware/exp-coreboot`
-- State: `EXPERIMENTAL_COMPARE`
-- `not_in_main_bom`: `True`
+
+## Title
+coreboot/openSIL vs vendor UEFI on custom Platform Core
 
 ## Hypothesis
-coreboot improves auditability without breaking Device OS RC1 boot contract
+Reproducible host firmware is achievable without blocking production on vendor UEFI/AGESA path
 
 ## Baseline (mainline)
-Vendor UEFI on COM-HPC
+Vendor-supported UEFI + AGESA on custom AMD motherboard
 
 ## Variant
-coreboot + LinuxBoot or equivalent
+coreboot and/or AMD openSIL when production-capable for selected platform
 
-## Measurable comparison criteria
-- `secure_boot_chain_intact`
-- `boot_time_s`
-- `capsule_update_compat`
-- `rc1_interface_breaks`
+## Metrics
+- boot_time_s
+- secure_boot_coverage
+- repro_build
+- platform_enablement_gaps
 
 ## Promotion gate
-Zero P0 RC1 interface breaks; measured boot on EVT mule
+Must not block mainline; only promote after production-capable platform support
 
-## Non-claims
-No physical results fabricated. No quotes/lead times invented. No merge to mainline without gate.
+## Isolation
+`not_in_main_bom=true` — experimental parts must not mix into MAINLINE_CUSTOM with qty>0.

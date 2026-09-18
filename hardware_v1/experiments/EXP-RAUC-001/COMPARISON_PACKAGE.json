@@ -1,19 +1,21 @@
 {
   "id": "EXP-RAUC-001",
   "branch": "hardware/exp-rauc-update",
-  "title": "RAUC A/B update vs vendor capsule/EC update",
-  "hypothesis": "RAUC improves field update reliability for rings/EC and optional host slotting",
-  "baseline": "Vendor UEFI capsule + Zephyr DFU",
-  "variant": "RAUC A/B (rings/EC primary; host optional)",
+  "title": "RAUC A/B vs vendor capsule/EC update",
+  "hypothesis": "RAUC improves update safety/ops for custom platforms vs vendor capsule-only flows",
+  "baseline": "Vendor capsule + custom EC update orchestration",
+  "variant": "RAUC A/B",
   "metrics": [
     "update_success_rate",
-    "rollback_success_rate",
-    "brick_rate",
-    "rc1_interface_breaks"
+    "rollback_time_s",
+    "bandwidth",
+    "field_ops_complexity"
   ],
-  "promotion_gate": "Rollback verified on EVT; no secret material in repo",
+  "promotion_gate": "No P0 Device OS RC1 breaks; measured field-ops improvement",
   "not_in_main_bom": true,
+  "hierarchy": "PRODUCT_EXPERIMENT",
   "schema": "gunnchos.hardware_v1.experiment.v1",
-  "generated_at_utc": "2026-09-18T16:24:23Z",
-  "state": "EXPERIMENTAL_COMPARE"
+  "generated_at_utc": "2026-09-18T16:48:54Z",
+  "state": "EXPERIMENTAL_COMPARE",
+  "campaign": "HARDWARE_1_0C_CUSTOM_FIRST_MAINLINE_PIVOT"
 }
