@@ -1,0 +1,8 @@
+ref,mpn,qty,manufacturer,description,status,notes
+U1,IMX95_OPN_TBD,1,NXP,i.MX95 applications processor,ARCHITECTURE_PLACEHOLDER,Package 15x15 vs 19x19 pending
+U2,PMIC_TBD,1,TBD,PMIC matching i.MX95 rails,PENDING_DESIGN_GUIDE,Do not invent rail voltages
+U3,LPDDR_TBD,1,TBD,LPDDR device(s),PENDING_DESIGN_GUIDE,Topology blocked
+U4,EMMC_or_NVME_TBD,1,TBD,Boot/storage,OPEN_AVL,
+J1,USB_C_TBD,1,TBD,USB-C connector,OPEN_AVL,
+J2,DEBUG_HDR,1,TBD,SWD/UART header,OPEN_AVL,
+ANT_MOD,WIFI_BT_MODULE_OPTIONAL,0,TBD,Optional certified module,OPTIONAL,

@@ -1,0 +1,817 @@
+{
+    "$schema": "https://schemas.kicad.org/erc.v1.json",
+    "coordinate_units": "mm",
+    "date": "2026-09-18T13:38:05",
+    "ignored_checks": [
+        {
+            "description": "Global label only appears once in the schematic",
+            "key": "single_global_label"
+        },
+        {
+            "description": "Four connection points are joined together",
+            "key": "four_way_junction"
+        },
+        {
+            "description": "SPICE model issue",
+            "key": "simulation_model_issue"
+        },
+        {
+            "description": "Assigned footprint doesn't match footprint filters",
+            "key": "footprint_filter"
+        }
+    ],
+    "included_severities": [
+        "error",
+        "warning"
+    ],
+    "kicad_version": "10.0.5",
+    "sheets": [
+        {
+            "path": "/",
+            "uuid_path": "/92eea545-8931-40eb-8283-c410562d1857",
+            "violations": [
+                {
+                    "description": "Pin not connected",
+                    "items": [
+                        {
+                            "description": "Symbol C1 Pin 1 [Passive, Line]",
+                            "pos": {
+                                "x": 0.4064,
+                                "y": 0.4699
+                            },
+                            "uuid": "b3b62f69-9052-4adf-8583-7c999bb2d747"
+                        }
+                    ],
+                    "severity": "error",
+                    "type": "pin_not_connected"
+                },
+                {
+                    "description": "Pin not connected",
+                    "items": [
+                        {
+                            "description": "Symbol C1 Pin 2 [Passive, Line]",
+                            "pos": {
+                                "x": 0.4064,
+                                "y": 0.5461
+                            },
+                            "uuid": "b55f7690-b0c5-473b-aea5-247a26c67499"
+                        }
+                    ],
+                    "severity": "error",
+                    "type": "pin_not_connected"
+                },
+                {
+                    "description": "Pin not connected",
+                    "items": [
+                        {
+                            "description": "Symbol TP1 Pin 1 [Passive, Line]",
+                            "pos": {
+                                "x": 0.4064,
+                                "y": 1.016
+                            },
+                            "uuid": "a4b43511-fec3-4659-b497-e27855a6d891"
+                        }
+                    ],
+                    "severity": "error",
+                    "type": "pin_not_connected"
+                },
+                {
+                    "description": "Pin not connected",
+                    "items": [
+                        {
+                            "description": "Symbol C2 Pin 1 [Passive, Line]",
+                            "pos": {
+                                "x": 0.508,
+                                "y": 0.4699
+                            },
+                            "uuid": "4808726c-0983-4da9-9f80-fa7a6a453dac"
+                        }
+                    ],
+                    "severity": "error",
+                    "type": "pin_not_connected"
+                },
+                {
+                    "description": "Pin not connected",
+                    "items": [
+                        {
+                            "description": "Symbol C2 Pin 2 [Passive, Line]",
+                            "pos": {
+                                "x": 0.508,
+                                "y": 0.5461
+                            },
+                            "uuid": "eee95695-58e0-4bcb-bf8b-1dd96c5b912c"
+                        }
+                    ],
+                    "severity": "error",
+                    "type": "pin_not_connected"
+                },
+                {
+                    "description": "Pin not connected",
+                    "items": [
+                        {
+                            "description": "Symbol TP2 Pin 1 [Passive, Line]",
+                            "pos": {
+                                "x": 0.508,
+                                "y": 1.016
+                            },
+                            "uuid": "77b7431b-7bb6-4a0a-9ddd-22bba0702137"
+                        }
+                    ],
+                    "severity": "error",
+                    "type": "pin_not_connected"
+                },
+                {
+                    "description": "Label not connected",
+                    "items": [
+                        {
+                            "description": "Global Label 'VDD'",
+                            "pos": {
+                                "x": 0.55,
+                                "y": 0.762
+                            },
+                            "uuid": "cecd2e32-06a2-459e-86fc-3dc7a0572065"
+                        }
+                    ],
+                    "severity": "error",
+                    "type": "label_dangling"
+                },
+                {
+                    "description": "Label not connected",
+                    "items": [
+                        {
+                            "description": "Global Label 'GND'",
+                            "pos": {
+                                "x": 0.55,
+                                "y": 0.8636
+                            },
+                            "uuid": "2777b9a3-5480-413c-a44e-76ac7a3e75d1"
+                        }
+                    ],
+                    "severity": "error",
+                    "type": "label_dangling"
+                },
+                {
+                    "description": "Pin not connected",
+                    "items": [
+                        {
+                            "description": "Symbol U1 Pin 1 [PWR, Passive, Line]",
+                            "pos": {
+                                "x": 0.5842,
+                                "y": 0.7112
+                            },
+                            "uuid": "67b2f05a-9052-4fed-bc79-a8ef37e13d24"
+                        }
+                    ],
+                    "severity": "error",
+                    "type": "pin_not_connected"
+                },
+                {
+                    "description": "Pin not connected",
+                    "items": [
+                        {
+                            "description": "Symbol U1 Pin 2 [GND, Passive, Line]",
+                            "pos": {
+                                "x": 0.5842,
+                                "y": 0.762
+                            },
+                            "uuid": "b5be682b-1a1b-4d0b-8a65-133cd39fd407"
+                        }
+                    ],
+                    "severity": "error",
+                    "type": "pin_not_connected"
+                },
+                {
+                    "description": "Pin not connected",
+                    "items": [
+                        {
+                            "description": "Symbol U1 Pin 3 [CTRL, Passive, Line]",
+                            "pos": {
+                                "x": 0.5842,
+                                "y": 0.8128
+                            },
+                            "uuid": "9f686649-3460-49aa-8d28-8dca34f0666e"
+                        }
+                    ],
+                    "severity": "error",
+                    "type": "pin_not_connected"
+                },
+                {
+                    "description": "Pin not connected",
+                    "items": [
+                        {
+                            "description": "Symbol TP3 Pin 1 [Passive, Line]",
+                            "pos": {
+                                "x": 0.6096,
+                                "y": 1.016
+                            },
+                            "uuid": "d3f8c0b5-20b3-4499-b005-5a712b3b0e30"
+                        }
+                    ],
+                    "severity": "error",
+                    "type": "pin_not_connected"
+                },
+                {
+                    "description": "Pin not connected",
+                    "items": [
+                        {
+                            "description": "Symbol U1 Pin 4 [IO_A, Passive, Line]",
+                            "pos": {
+                                "x": 0.9398,
+                                "y": 0.7112
+                            },
+                            "uuid": "0f623785-67c0-4522-8b9d-14909f2dc6a9"
+                        }
+                    ],
+                    "severity": "error",
+                    "type": "pin_not_connected"
+                },
+                {
+                    "description": "Pin not connected",
+                    "items": [
+                        {
+                            "description": "Symbol U1 Pin 5 [IO_B, Passive, Line]",
+                            "pos": {
+                                "x": 0.9398,
+                                "y": 0.762
+                            },
+                            "uuid": "c24a772d-6020-431b-89ee-8be290a76562"
+                        }
+                    ],
+                    "severity": "error",
+                    "type": "pin_not_connected"
+                },
+                {
+                    "description": "Pin not connected",
+                    "items": [
+                        {
+                            "description": "Symbol U1 Pin 6 [RF_ANT, Passive, Line]",
+                            "pos": {
+                                "x": 0.9398,
+                                "y": 0.8128
+                            },
+                            "uuid": "28c1ae75-8730-4a6d-bbac-8364fa22dc9d"
+                        }
+                    ],
+                    "severity": "error",
+                    "type": "pin_not_connected"
+                },
+                {
+                    "description": "Label not connected",
+                    "items": [
+                        {
+                            "description": "Global Label 'ANT_MATCH_PLACEHOLDER'",
+                            "pos": {
+                                "x": 1.0,
+                                "y": 0.7112
+                            },
+                            "uuid": "e52094ae-68e4-4db1-ab0f-e9f7fffaa97d"
+                        }
+                    ],
+                    "severity": "error",
+                    "type": "label_dangling"
+                },
+                {
+                    "description": "Pin not connected",
+                    "items": [
+                        {
+                            "description": "Symbol R1 Pin 1 [Passive, Line]",
+                            "pos": {
+                                "x": 1.016,
+                                "y": 0.4699
+                            },
+                            "uuid": "ef3c7411-cfd8-407a-ac81-44b7df2ae92d"
+                        }
+                    ],
+                    "severity": "error",
+                    "type": "pin_not_connected"
+                },
+                {
+                    "description": "Pin not connected",
+                    "items": [
+                        {
+                            "description": "Symbol R1 Pin 2 [Passive, Line]",
+                            "pos": {
+                                "x": 1.016,
+                                "y": 0.5461
+                            },
+                            "uuid": "68a8dbc8-a204-456b-917d-ea0829a6fa81"
+                        }
+                    ],
+                    "severity": "error",
+                    "type": "pin_not_connected"
+                },
+                {
+                    "description": "Pin not connected",
+                    "items": [
+                        {
+                            "description": "Symbol R2 Pin 1 [Passive, Line]",
+                            "pos": {
+                                "x": 1.1176,
+                                "y": 0.4699
+                            },
+                            "uuid": "c54f848b-4b6c-439e-b140-6bb013b84c7a"
+                        }
+                    ],
+                    "severity": "error",
+                    "type": "pin_not_connected"
+                },
+                {
+                    "description": "Pin not connected",
+                    "items": [
+                        {
+                            "description": "Symbol R2 Pin 2 [Passive, Line]",
+                            "pos": {
+                                "x": 1.1176,
+                                "y": 0.5461
+                            },
+                            "uuid": "cd8560b8-9d15-4a4c-9b33-c25174be9371"
+                        }
+                    ],
+                    "severity": "error",
+                    "type": "pin_not_connected"
+                },
+                {
+                    "description": "Pin not connected",
+                    "items": [
+                        {
+                            "description": "Symbol C3 Pin 1 [Passive, Line]",
+                            "pos": {
+                                "x": 1.2192,
+                                "y": 0.4699
+                            },
+                            "uuid": "63e72d14-4139-4eea-baaf-fb32a85e310f"
+                        }
+                    ],
+                    "severity": "error",
+                    "type": "pin_not_connected"
+                },
+                {
+                    "description": "Pin not connected",
+                    "items": [
+                        {
+                            "description": "Symbol C3 Pin 2 [Passive, Line]",
+                            "pos": {
+                                "x": 1.2192,
+                                "y": 0.5461
+                            },
+                            "uuid": "731bea87-fda8-47e7-8902-d5e87dbecfc9"
+                        }
+                    ],
+                    "severity": "error",
+                    "type": "pin_not_connected"
+                },
+                {
+                    "description": "Label not connected",
+                    "items": [
+                        {
+                            "description": "Global Label 'I2C_SDA'",
+                            "pos": {
+                                "x": 1.3,
+                                "y": 0.635
+                            },
+                            "uuid": "a3584b94-13f5-42a9-b5d9-7890ddd00e15"
+                        }
+                    ],
+                    "severity": "error",
+                    "type": "label_dangling"
+                },
+                {
+                    "description": "Label not connected",
+                    "items": [
+                        {
+                            "description": "Global Label 'I2C_SCL'",
+                            "pos": {
+                                "x": 1.3,
+                                "y": 0.7112
+                            },
+                            "uuid": "20e8535d-ab65-4b52-92c7-db008b9c41f1"
+                        }
+                    ],
+                    "severity": "error",
+                    "type": "label_dangling"
+                },
+                {
+                    "description": "Label not connected",
+                    "items": [
+                        {
+                            "description": "Global Label 'IMU_INT'",
+                            "pos": {
+                                "x": 1.3,
+                                "y": 0.7874
+                            },
+                            "uuid": "ebb02463-2e78-4ab1-a8e2-a8d9f7298543"
+                        }
+                    ],
+                    "severity": "error",
+                    "type": "label_dangling"
+                },
+                {
+                    "description": "Label not connected",
+                    "items": [
+                        {
+                            "description": "Global Label 'HAPTIC_TRIG'",
+                            "pos": {
+                                "x": 1.3,
+                                "y": 1.016
+                            },
+                            "uuid": "0a43aaf0-1f98-4f8b-b339-fbfe77fdb109"
+                        }
+                    ],
+                    "severity": "error",
+                    "type": "label_dangling"
+                },
+                {
+                    "description": "Pin not connected",
+                    "items": [
+                        {
+                            "description": "Symbol U2 Pin 1 [PWR, Passive, Line]",
+                            "pos": {
+                                "x": 1.3462,
+                                "y": 0.5842
+                            },
+                            "uuid": "a2cfdd5b-2c6a-425c-9ab4-c00813298633"
+                        }
+                    ],
+                    "severity": "error",
+                    "type": "pin_not_connected"
+                },
+                {
+                    "description": "Pin not connected",
+                    "items": [
+                        {
+                            "description": "Symbol U2 Pin 2 [GND, Passive, Line]",
+                            "pos": {
+                                "x": 1.3462,
+                                "y": 0.635
+                            },
+                            "uuid": "1ba8edf2-85e4-467c-ad50-cc862fa6af19"
+                        }
+                    ],
+                    "severity": "error",
+                    "type": "pin_not_connected"
+                },
+                {
+                    "description": "Pin not connected",
+                    "items": [
+                        {
+                            "description": "Symbol U2 Pin 3 [CTRL, Passive, Line]",
+                            "pos": {
+                                "x": 1.3462,
+                                "y": 0.6858
+                            },
+                            "uuid": "fc49ac1e-5ff8-49af-823b-529fcbe1bfd4"
+                        }
+                    ],
+                    "severity": "error",
+                    "type": "pin_not_connected"
+                },
+                {
+                    "description": "Pin not connected",
+                    "items": [
+                        {
+                            "description": "Symbol U3 Pin 1 [PWR, Passive, Line]",
+                            "pos": {
+                                "x": 1.3462,
+                                "y": 0.9652
+                            },
+                            "uuid": "87375969-97ad-42fd-aab4-c167ba80aef5"
+                        }
+                    ],
+                    "severity": "error",
+                    "type": "pin_not_connected"
+                },
+                {
+                    "description": "Pin not connected",
+                    "items": [
+                        {
+                            "description": "Symbol U3 Pin 2 [GND, Passive, Line]",
+                            "pos": {
+                                "x": 1.3462,
+                                "y": 1.016
+                            },
+                            "uuid": "0b4ca1f7-db9d-4531-a563-fc089eb90c6f"
+                        }
+                    ],
+                    "severity": "error",
+                    "type": "pin_not_connected"
+                },
+                {
+                    "description": "Pin not connected",
+                    "items": [
+                        {
+                            "description": "Symbol U3 Pin 3 [CTRL, Passive, Line]",
+                            "pos": {
+                                "x": 1.3462,
+                                "y": 1.0668
+                            },
+                            "uuid": "62f311ef-a090-4cac-ab94-17011aa64b0b"
+                        }
+                    ],
+                    "severity": "error",
+                    "type": "pin_not_connected"
+                },
+                {
+                    "description": "Pin not connected",
+                    "items": [
+                        {
+                            "description": "Symbol U2 Pin 4 [IO_A, Passive, Line]",
+                            "pos": {
+                                "x": 1.7018,
+                                "y": 0.5842
+                            },
+                            "uuid": "d0457af2-f0ac-4a53-bcfc-49f07716b94c"
+                        }
+                    ],
+                    "severity": "error",
+                    "type": "pin_not_connected"
+                },
+                {
+                    "description": "Pin not connected",
+                    "items": [
+                        {
+                            "description": "Symbol U2 Pin 5 [IO_B, Passive, Line]",
+                            "pos": {
+                                "x": 1.7018,
+                                "y": 0.635
+                            },
+                            "uuid": "d44b7d8c-55af-4015-bcc2-bce940c846ef"
+                        }
+                    ],
+                    "severity": "error",
+                    "type": "pin_not_connected"
+                },
+                {
+                    "description": "Pin not connected",
+                    "items": [
+                        {
+                            "description": "Symbol U2 Pin 6 [RF_ANT, Passive, Line]",
+                            "pos": {
+                                "x": 1.7018,
+                                "y": 0.6858
+                            },
+                            "uuid": "167a888c-a896-4066-af1d-1247845aa94b"
+                        }
+                    ],
+                    "severity": "error",
+                    "type": "pin_not_connected"
+                },
+                {
+                    "description": "Pin not connected",
+                    "items": [
+                        {
+                            "description": "Symbol U3 Pin 4 [IO_A, Passive, Line]",
+                            "pos": {
+                                "x": 1.7018,
+                                "y": 0.9652
+                            },
+                            "uuid": "2a3a2515-d025-4855-aab6-1757a07a6b31"
+                        }
+                    ],
+                    "severity": "error",
+                    "type": "pin_not_connected"
+                },
+                {
+                    "description": "Pin not connected",
+                    "items": [
+                        {
+                            "description": "Symbol U3 Pin 5 [IO_B, Passive, Line]",
+                            "pos": {
+                                "x": 1.7018,
+                                "y": 1.016
+                            },
+                            "uuid": "b189bc12-e6f9-4edc-82bc-78be25a8b274"
+                        }
+                    ],
+                    "severity": "error",
+                    "type": "pin_not_connected"
+                },
+                {
+                    "description": "Pin not connected",
+                    "items": [
+                        {
+                            "description": "Symbol U3 Pin 6 [RF_ANT, Passive, Line]",
+                            "pos": {
+                                "x": 1.7018,
+                                "y": 1.0668
+                            },
+                            "uuid": "3f6b4421-8268-4883-93ea-489e123157b1"
+                        }
+                    ],
+                    "severity": "error",
+                    "type": "pin_not_connected"
+                },
+                {
+                    "description": "The current configuration does not include the symbol library ''",
+                    "items": [
+                        {
+                            "description": "Symbol C1 [C]",
+                            "pos": {
+                                "x": 0.4064,
+                                "y": 0.508
+                            },
+                            "uuid": "1c42be69-c2cb-4a00-9d4e-4d1cfeb98465"
+                        }
+                    ],
+                    "severity": "warning",
+                    "type": "lib_symbol_issues"
+                },
+                {
+                    "description": "The current configuration does not include the symbol library ''",
+                    "items": [
+                        {
+                            "description": "Symbol TP1 [TP]",
+                            "pos": {
+                                "x": 0.4064,
+                                "y": 1.016
+                            },
+                            "uuid": "c140a24f-9eeb-4d5b-a8d8-4926e90ab356"
+                        }
+                    ],
+                    "severity": "warning",
+                    "type": "lib_symbol_issues"
+                },
+                {
+                    "description": "The current configuration does not include the symbol library ''",
+                    "items": [
+                        {
+                            "description": "Symbol C2 [C]",
+                            "pos": {
+                                "x": 0.508,
+                                "y": 0.508
+                            },
+                            "uuid": "4e5e9016-437c-469c-bb41-153556374fa1"
+                        }
+                    ],
+                    "severity": "warning",
+                    "type": "lib_symbol_issues"
+                },
+                {
+                    "description": "The current configuration does not include the symbol library ''",
+                    "items": [
+                        {
+                            "description": "Symbol TP2 [TP]",
+                            "pos": {
+                                "x": 0.508,
+                                "y": 1.016
+                            },
+                            "uuid": "f4ca268d-6a15-4a43-bca9-219db41739e9"
+                        }
+                    ],
+                    "severity": "warning",
+                    "type": "lib_symbol_issues"
+                },
+                {
+                    "description": "The current configuration does not include the symbol library ''",
+                    "items": [
+                        {
+                            "description": "Symbol TP3 [TP]",
+                            "pos": {
+                                "x": 0.6096,
+                                "y": 1.016
+                            },
+                            "uuid": "3e1a6ccb-244d-409c-8c44-da080dfab2af"
+                        }
+                    ],
+                    "severity": "warning",
+                    "type": "lib_symbol_issues"
+                },
+                {
+                    "description": "The current configuration does not include the footprint library 'gunnchos_production'",
+                    "items": [
+                        {
+                            "description": "Symbol U1 [ROLE_IC]",
+                            "pos": {
+                                "x": 0.762,
+                                "y": 0.762
+                            },
+                            "uuid": "aaf0a545-aa3f-44c5-834f-5eaeb42617d2"
+                        }
+                    ],
+                    "severity": "warning",
+                    "type": "footprint_link_issues"
+                },
+                {
+                    "description": "The current configuration does not include the symbol library ''",
+                    "items": [
+                        {
+                            "description": "Symbol U1 [ROLE_IC]",
+                            "pos": {
+                                "x": 0.762,
+                                "y": 0.762
+                            },
+                            "uuid": "aaf0a545-aa3f-44c5-834f-5eaeb42617d2"
+                        }
+                    ],
+                    "severity": "warning",
+                    "type": "lib_symbol_issues"
+                },
+                {
+                    "description": "The current configuration does not include the symbol library ''",
+                    "items": [
+                        {
+                            "description": "Symbol R1 [R]",
+                            "pos": {
+                                "x": 1.016,
+                                "y": 0.508
+                            },
+                            "uuid": "bb3192be-45aa-46ae-bec9-b58273f370e7"
+                        }
+                    ],
+                    "severity": "warning",
+                    "type": "lib_symbol_issues"
+                },
+                {
+                    "description": "The current configuration does not include the symbol library ''",
+                    "items": [
+                        {
+                            "description": "Symbol R2 [R]",
+                            "pos": {
+                                "x": 1.1176,
+                                "y": 0.508
+                            },
+                            "uuid": "7d0a0c05-efb3-497b-8b8d-add9a4222b6a"
+                        }
+                    ],
+                    "severity": "warning",
+                    "type": "lib_symbol_issues"
+                },
+                {
+                    "description": "The current configuration does not include the symbol library ''",
+                    "items": [
+                        {
+                            "description": "Symbol C3 [C]",
+                            "pos": {
+                                "x": 1.2192,
+                                "y": 0.508
+                            },
+                            "uuid": "6ec29e67-d26e-4748-a66f-4d1136765eec"
+                        }
+                    ],
+                    "severity": "warning",
+                    "type": "lib_symbol_issues"
+                },
+                {
+                    "description": "The current configuration does not include the footprint library 'gunnchos_production'",
+                    "items": [
+                        {
+                            "description": "Symbol U2 [ROLE_IC]",
+                            "pos": {
+                                "x": 1.524,
+                                "y": 0.635
+                            },
+                            "uuid": "298ebc02-add8-4c3d-a40f-ae580b9d9859"
+                        }
+                    ],
+                    "severity": "warning",
+                    "type": "footprint_link_issues"
+                },
+                {
+                    "description": "The current configuration does not include the symbol library ''",
+                    "items": [
+                        {
+                            "description": "Symbol U2 [ROLE_IC]",
+                            "pos": {
+                                "x": 1.524,
+                                "y": 0.635
+                            },
+                            "uuid": "298ebc02-add8-4c3d-a40f-ae580b9d9859"
+                        }
+                    ],
+                    "severity": "warning",
+                    "type": "lib_symbol_issues"
+                },
+                {
+                    "description": "The current configuration does not include the footprint library 'gunnchos_production'",
+                    "items": [
+                        {
+                            "description": "Symbol U3 [ROLE_IC]",
+                            "pos": {
+                                "x": 1.524,
+                                "y": 1.016
+                            },
+                            "uuid": "507137ac-235f-485c-8e1e-7b9dba1c1b3c"
+                        }
+                    ],
+                    "severity": "warning",
+                    "type": "footprint_link_issues"
+                },
+                {
+                    "description": "The current configuration does not include the symbol library ''",
+                    "items": [
+                        {
+                            "description": "Symbol U3 [ROLE_IC]",
+                            "pos": {
+                                "x": 1.524,
+                                "y": 1.016
+                            },
+                            "uuid": "507137ac-235f-485c-8e1e-7b9dba1c1b3c"
+                        }
+                    ],
+                    "severity": "warning",
+                    "type": "lib_symbol_issues"
+                }
+            ]
+        }
+    ],
+    "source": "rings_nrf54l15.kicad_sch"
+}

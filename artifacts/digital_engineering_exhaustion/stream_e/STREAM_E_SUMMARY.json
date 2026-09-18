@@ -1,0 +1,72 @@
+{
+  "schema": "gunnchos.stream_e.digital_engineering_exhaustion.v1",
+  "generated_at_utc": "2026-09-18T18:37:46Z",
+  "campaign": "STREAM_E_DIGITAL_HARDWARE_ENGINEERING_EXHAUSTION",
+  "claim_boundary": "digital engineering exhaustion under public collateral + local EDA only \u2014 not physical pass, not certification, not fab release, not purchased, not GXE execution, no invented NDA pin maps",
+  "gates": {
+    "NXP_OPEN_CUSTOM_DIGITAL_ENGINEERING_EXHAUSTED": true,
+    "AMD_PUBLIC_ENGINEERING_EXHAUSTED": true,
+    "RINGS_DIGITAL_ENGINEERING_EXHAUSTED": true,
+    "DOCK_DIGITAL_ENGINEERING_EXHAUSTED": true
+  },
+  "fab_readiness_truth": {
+    "CPB0_OPEN_READY_FOR_FAB": false,
+    "AMD_CPB0_READY_FOR_FAB": false,
+    "RINGS_READY_FOR_FAB": false,
+    "DOCK_NO_NDA_READY_FOR_FAB": false,
+    "genuine_fab_claim": false
+  },
+  "sections": [
+    {
+      "gate": "NXP_OPEN_CUSTOM_DIGITAL_ENGINEERING_EXHAUSTED",
+      "value": true,
+      "CPB0_OPEN_READY_FOR_FAB": false,
+      "blockers": [
+        "EXT-NXP-DESIGN-GUIDE",
+        "GAP-PACKAGE-SELECT",
+        "GAP-RM-HASH / GAP-DS-HASH (owner fetch)",
+        "Net-accurate LPDDR/power-seq pending guide"
+      ],
+      "artifacts": "hardware_v1/open_custom_nxp"
+    },
+    {
+      "gate": "AMD_PUBLIC_ENGINEERING_EXHAUSTED",
+      "value": true,
+      "CPB0_READY_FOR_FAB": false,
+      "blockers": [
+        "EXT-AMD-CUSTOM-COLLATERAL",
+        "EXT-AMD-EDA-OUTPUTS",
+        "No public ball map / DDR / power-seq for custom platform"
+      ],
+      "artifacts": "hardware_v1/custom_mainline/amd_public_exhaustion"
+    },
+    {
+      "gate": "RINGS_DIGITAL_ENGINEERING_EXHAUSTED",
+      "value": true,
+      "fab_ready": false,
+      "pending_physical": [
+        "antenna_tuning",
+        "ergonomics",
+        "battery_life",
+        "CSP47_HDI_promotion"
+      ],
+      "blockers": [
+        "Physical antenna tune / ergonomics / battery life PENDING",
+        "Pin-accurate Zephyr overlay awaits schematic freeze"
+      ],
+      "artifacts": "hardware_v1/rings"
+    },
+    {
+      "gate": "DOCK_DIGITAL_ENGINEERING_EXHAUSTED",
+      "value": true,
+      "fab_ready": false,
+      "usb4_status": "EXPERIMENTAL_NDA_BLOCKED",
+      "blockers": [
+        "EXT-JHL8440-BALLMAP (USB4 custom only)",
+        "EXT-JHL9040R-BALLMAP (USB4 custom only)",
+        "AVL live quotes + formal DFM signoff for fab release"
+      ],
+      "artifacts": "hardware_v1/dock"
+    }
+  ]
+}
