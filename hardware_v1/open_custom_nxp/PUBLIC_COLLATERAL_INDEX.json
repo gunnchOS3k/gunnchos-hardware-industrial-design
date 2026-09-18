@@ -1,0 +1,89 @@
+{
+  "schema": "gunnchos.hardware_v1.nxp.public_collateral.v1",
+  "generated_at_utc": "2026-09-18T17:46:17Z",
+  "campaign": "HARDWARE_1_0D_FOUR_TRACK_CONVERGENCE_MERGE_READINESS",
+  "policy": "public collateral only; metadata/URLs/hashes if redistribution forbidden",
+  "items": [
+    {
+      "id": "NXP-IMX95-PRODUCT-PAGE",
+      "title": "i.MX 95 Applications Processors Family",
+      "url": "https://www.nxp.com/products/i.MX95",
+      "class": "PUBLIC_INDEX",
+      "redistribution": "URL_ONLY",
+      "sha256": "NOT_FETCHED_IN_CAMPAIGN",
+      "notes": "Authoritative public landing page for datasheets/RM/factsheet"
+    },
+    {
+      "id": "NXP-IMX95IEC",
+      "title": "i.MX 95 Applications Processors Data Sheet for Industrial Products (IMX95IEC)",
+      "url": "https://www.nxp.com/docs/en/data-sheet/IMX95IEC.pdf",
+      "class": "PUBLIC_DATASHEET",
+      "redistribution": "METADATA_URL_HASH_ONLY_IF_LICENSE_FORBIDS",
+      "sha256": "PENDING_OWNER_FETCH",
+      "notes": "Public datasheet class; do not commit PDF if redistribution forbidden"
+    },
+    {
+      "id": "NXP-IMX95XEC",
+      "title": "i.MX 95 Applications Processors Data Sheet for Extended Industrial Products (IMX95XEC)",
+      "url": "https://www.nxp.com/docs/en/data-sheet/IMX95XEC.pdf",
+      "class": "PUBLIC_DATASHEET",
+      "redistribution": "METADATA_URL_HASH_ONLY_IF_LICENSE_FORBIDS",
+      "sha256": "PENDING_OWNER_FETCH",
+      "notes": "Extended industrial grade variant"
+    },
+    {
+      "id": "NXP-IMX95CEC",
+      "title": "i.MX 95 Applications Processors Data Sheet for Commercial Products (IMX95CEC)",
+      "url": "https://www.nxp.com/docs/en/data-sheet/IMX95CEC.pdf",
+      "class": "PUBLIC_DATASHEET",
+      "redistribution": "METADATA_URL_HASH_ONLY_IF_LICENSE_FORBIDS",
+      "sha256": "PENDING_OWNER_FETCH",
+      "notes": "Commercial grade variant"
+    },
+    {
+      "id": "NXP-IMX95FS",
+      "title": "i.MX 95 Applications Processor Family Factsheet (IMX95FS)",
+      "url": "https://www.nxp.com/products/i.MX95",
+      "class": "PUBLIC_FACTSHEET",
+      "redistribution": "METADATA_URL_ONLY",
+      "sha256": "PENDING_OWNER_FETCH",
+      "notes": "Factsheet linked from product page"
+    },
+    {
+      "id": "NXP-IMX95RM",
+      "title": "i.MX 95 Applications Processor Reference Manual (IMX95RM)",
+      "url": "https://www.nxp.com/products/i.MX95",
+      "class": "PUBLIC_REFERENCE_MANUAL",
+      "redistribution": "METADATA_URL_HASH_ONLY",
+      "sha256": "PENDING_OWNER_FETCH",
+      "notes": "Large RM; commit hash after owner fetch \u2014 do not invent contents"
+    },
+    {
+      "id": "NXP-IMX95-HW-DESIGN-GUIDE",
+      "title": "i.MX 95 Hardware Design Guide",
+      "url": "https://www.nxp.com/products/i.MX95",
+      "class": "LOGIN_OR_ACCOUNT_GATED",
+      "redistribution": "URL_ONLY_NO_CONTENT",
+      "sha256": "N/A",
+      "notes": "Product page marks Account Required \u2014 gap until owner login fetch"
+    },
+    {
+      "id": "NXP-IMX95-BSDL-IBIS",
+      "title": "i.MX 95 BSDL / IBIS models (package variants)",
+      "url": "https://www.nxp.com/products/i.MX95",
+      "class": "PUBLIC_MODEL_OR_GATED",
+      "redistribution": "METADATA_URL_ONLY",
+      "sha256": "PENDING_OWNER_FETCH",
+      "notes": "Use for SI/DFT planning; verify license before any binary commit"
+    },
+    {
+      "id": "NXP-MCUX-IMX95-EVK",
+      "title": "MCUXpresso SDK / EVK documentation (imx95 class boards)",
+      "url": "https://mcuxpresso.nxp.com/",
+      "class": "PUBLIC_SDK_DOCS",
+      "redistribution": "METADATA_URL_ONLY",
+      "sha256": "PENDING_OWNER_FETCH",
+      "notes": "Bring-up reference; EVK \u2260 custom open-custom board validation"
+    }
+  ]
+}

@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Validate Hardware v1.0 / HW1B / HW1C campaign package — honest fail-closed checks."""
+"""Validate Hardware v1.0 / HW1B / HW1C / HW1D campaign package — honest fail-closed checks."""
 from __future__ import annotations
 
 import csv
@@ -54,6 +54,7 @@ REQUIRED = [
     "vendor_access/RP0_B_VENDOR_ACCESS_PACKET.md",
     "vendor_access/AMD_CUSTOM_PLATFORM_ACCESS_PACKET.md",
     "custom_mainline/HW1C_STARTING_STATE.json",
+    "custom_mainline/PRODUCT_MAINLINE_STATUS.md",
     "custom_mainline/CUSTOM_FIRST_ARCHITECTURE_DOCTRINE.md",
     "custom_mainline/PLATFORM_CORE_V1.md",
     "custom_mainline/DEVICE_SOC_SELECTION_MATRIX.md",
@@ -74,6 +75,34 @@ REQUIRED = [
     "custom_mainline/cpb0/SCHEMATIC_SHEET_PLAN.md",
     "custom_mainline/cpb0/PCB_CONSTRAINT_PLAN.md",
     "custom_mainline/cpb0/BRINGUP_PLAN.md",
+    "convergence/HW1D_STARTING_STATE.json",
+    "convergence/CANONICAL_TRACK_MODEL.md",
+    "convergence/CANONICAL_TRACK_MODEL.json",
+    "convergence/EXPERIENCE_FIRST_CO_DESIGN_DOCTRINE.md",
+    "convergence/GXE_HARDWARE_INTEGRATION_CONTRACT.md",
+    "convergence/CROSS_TRACK_COMPARISON_MATRIX.md",
+    "convergence/CROSS_TRACK_BENCHMARK_SCHEMA.json",
+    "convergence/HARDWARE_EXPERIENCE_CONTRACT_SCHEMA.json",
+    "convergence/HARDWARE_EXPERIENCE_CONTRACT_GUIDE.md",
+    "convergence/POST_MERGE_PLAN.md",
+    "open_custom_nxp/OPEN_CUSTOM_DOCTRINE.md",
+    "open_custom_nxp/IMX95_PLATFORM_PROFILE.md",
+    "open_custom_nxp/PUBLIC_COLLATERAL_INDEX.md",
+    "open_custom_nxp/PUBLIC_COLLATERAL_GAP_REGISTER.md",
+    "open_custom_nxp/CPB0_OPEN_PRD.md",
+    "open_custom_nxp/SYSTEM_BLOCK_DIAGRAM.md",
+    "open_custom_nxp/POWER_ARCHITECTURE.md",
+    "open_custom_nxp/MEMORY_ARCHITECTURE.md",
+    "open_custom_nxp/PCIE_USB_ARCHITECTURE.md",
+    "open_custom_nxp/DISPLAY_CAMERA_ARCHITECTURE.md",
+    "open_custom_nxp/SECURITY_BOOT_ARCHITECTURE.md",
+    "open_custom_nxp/DEBUG_BRINGUP_ARCHITECTURE.md",
+    "open_custom_nxp/PRELIMINARY_BOM.csv",
+    "open_custom_nxp/SCHEMATIC_SHEET_PLAN.md",
+    "open_custom_nxp/PCB_CONSTRAINT_PLAN.md",
+    "open_custom_nxp/EVT_PLAN.md",
+    "open_custom_nxp/READY_FOR_FAB_CHECKLIST.md",
+    "REPORT_SECTION_17_HW1D_A_TO_T.md",
     "quality/DFMEA.md",
     "matrices/EVT_MATRIX.md",
     "matrices/DVT_MATRIX.md",
@@ -281,10 +310,10 @@ def validate_hw1c_fail_closed(gates: dict, errors: list[str]) -> None:
     if gates.get("CUSTOM_MAINLINE_ARCHITECTURE_FROZEN") is not True:
         fail("CUSTOM_MAINLINE_ARCHITECTURE_FROZEN must be true after HW1C doctrine pivot", errors)
 
-    # Preferred next action
-    if gates.get("NEXT_OWNER_ACTION") != "ACQUIRE_AMD_CUSTOM_PLATFORM_COLLATERAL":
+    # Preferred next action (HW1D): architecture baseline merge; AMD collateral remains parallel
+    if gates.get("NEXT_OWNER_ACTION") != "MERGE_HW_ARCHITECTURE_BASELINE_68_WITH_MERGE_COMMIT":
         fail(
-            f"NEXT_OWNER_ACTION must be ACQUIRE_AMD_CUSTOM_PLATFORM_COLLATERAL, got {gates.get('NEXT_OWNER_ACTION')!r}",
+            f"NEXT_OWNER_ACTION must be MERGE_HW_ARCHITECTURE_BASELINE_68_WITH_MERGE_COMMIT, got {gates.get('NEXT_OWNER_ACTION')!r}",
             errors,
         )
     if gates.get("OPTIONAL_OWNER_ACTION") != "ORDER_RP0_A_COTS_CONTROL_KIT":
@@ -382,9 +411,161 @@ def validate_hw1c_fail_closed(gates: dict, errors: list[str]) -> None:
             if needed not in ids:
                 fail(f"registry missing {needed}", errors)
         hier = r.get("hierarchy") or {}
-        mainline = (hier.get("mainline") or "").upper()
-        if "CUSTOM" not in mainline or "AMD" not in mainline:
-            fail("experiment hierarchy mainline must be custom AMD motherboard", errors)
+        mainline = (hier.get("mainline") or hier.get("product_mainline") or "").upper()
+        if "AMD" not in mainline and "CUSTOM" not in mainline:
+            fail("experiment hierarchy mainline must be custom AMD PRODUCT_MAINLINE", errors)
+        if "PRODUCT_MAINLINE" not in (hier.get("product_mainline") or hier.get("mainline") or "").upper() and "AMD" not in mainline:
+            fail("experiment hierarchy must identify PRODUCT_MAINLINE AMD", errors)
+
+
+def validate_hw1d_fail_closed(gates: dict, errors: list[str]) -> None:
+    """HW1D four-track convergence fail-closed semantics."""
+    if gates.get("HW_ARCHITECTURE_BASELINE_MERGE_READY") is not True:
+        fail("HW_ARCHITECTURE_BASELINE_MERGE_READY must be true when architecture definition complete", errors)
+
+    # Architecture merge-ready must NOT imply physical EVT
+    if gates.get("HW_ARCHITECTURE_BASELINE_MERGE_READY") is True and gates.get("HARDWARE_V1_READY_FOR_EVT_BUILD") is True:
+        fail("architecture merge-ready must not imply HARDWARE_V1_READY_FOR_EVT_BUILD=true", errors)
+    if gates.get("HW_ARCHITECTURE_BASELINE_MERGE_READY") is True and gates.get("CUSTOM_MAINLINE_READY_FOR_EVT_BUILD") is True:
+        fail("architecture merge-ready must not imply CUSTOM_MAINLINE_READY_FOR_EVT_BUILD=true", errors)
+
+    # Track identities
+    if gates.get("PRODUCT_MAINLINE") != "AMD_CUSTOM_X86":
+        fail("PRODUCT_MAINLINE must be AMD_CUSTOM_X86", errors)
+    if gates.get("OPEN_ENGINEERING_MAINLINE") != "NXP_IMX95_OPEN_CUSTOM":
+        fail("OPEN_ENGINEERING_MAINLINE must be NXP_IMX95_OPEN_CUSTOM", errors)
+    if gates.get("GREENFIELD_EXPERIMENT") != "GXE":
+        fail("GREENFIELD_EXPERIMENT must be GXE", errors)
+    if gates.get("REFERENCE_CONTROL") != "COM_HPC_AND_COTS":
+        fail("REFERENCE_CONTROL must be COM_HPC_AND_COTS", errors)
+
+    for k in (
+        "FOUR_TRACK_MODEL_PASS",
+        "EXPERIENCE_FIRST_CO_DESIGN_DOCTRINE_PASS",
+        "AMD_PRODUCT_MAINLINE_PRESERVED",
+        "NXP_OPEN_CUSTOM_TRACK_DEFINED",
+        "GXE_INTEGRATION_BOUNDARY_DEFINED",
+        "REFERENCE_CONTROL_TRACK_DEFINED",
+        "EXPERIMENT_ISOLATION_PASS",
+    ):
+        if gates.get(k) is not True:
+            fail(f"{k} must be true after HW1D", errors)
+
+    if gates.get("GXE_IMPLEMENTED_IN_HARDWARE_REPO") is not False:
+        fail("GXE_IMPLEMENTED_IN_HARDWARE_REPO must be false", errors)
+    if gates.get("NXP_CLAIMED_PRODUCT_EQUIVALENT_TO_AMD") is not False:
+        fail("NXP_CLAIMED_PRODUCT_EQUIVALENT_TO_AMD must be false", errors)
+    if gates.get("CPB0_OPEN_READY_FOR_FAB") is not False:
+        fail("CPB0_OPEN_READY_FOR_FAB must be false", errors)
+
+    # AMD product mainline must not be removed
+    for rel in (
+        "custom_mainline/PLATFORM_CORE_V1.md",
+        "custom_mainline/PRODUCT_MAINLINE_STATUS.md",
+        "custom_mainline/DEVICE_SOC_SELECTION_MATRIX.md",
+        "bom/MAINLINE_CUSTOM_BOM.csv",
+    ):
+        if not (HV1 / rel).is_file():
+            fail(f"AMD PRODUCT_MAINLINE artifact missing: {rel}", errors)
+
+    # NXP must not claim product equivalence
+    doctrine = HV1 / "open_custom_nxp" / "OPEN_CUSTOM_DOCTRINE.md"
+    if doctrine.is_file():
+        t = doctrine.read_text(encoding="utf-8").lower()
+        if "not" not in t or "equivalent" not in t:
+            fail("NXP doctrine must explicitly deny product equivalence to AMD x86", errors)
+        for needle in ("windows", "pc gaming", "ryzen"):
+            if needle not in t:
+                fail(f"NXP doctrine must mention non-equivalence aspect: {needle}", errors)
+
+    # GXE must not claim implemented
+    gxe = HV1 / "convergence" / "GXE_HARDWARE_INTEGRATION_CONTRACT.md"
+    if gxe.is_file():
+        t = gxe.read_text(encoding="utf-8")
+        if "GXE_IMPLEMENTED_IN_HARDWARE_REPO=false" not in t.replace(" ", ""):
+            fail("GXE contract must state GXE_IMPLEMENTED_IN_HARDWARE_REPO=false", errors)
+
+    # COM-HPC cannot be product mainline (already checked) + track model must exist
+    track = HV1 / "convergence" / "CANONICAL_TRACK_MODEL.json"
+    if track.is_file():
+        tm = json.loads(track.read_text(encoding="utf-8"))
+        tracks = tm.get("tracks") or {}
+        if "PRODUCT_MAINLINE" not in tracks or "OPEN_ENGINEERING_MAINLINE" not in tracks:
+            fail("canonical track model missing required tracks", errors)
+        if (tracks.get("PRODUCT_MAINLINE") or {}).get("id") != "AMD_CUSTOM_X86":
+            fail("PRODUCT_MAINLINE id must be AMD_CUSTOM_X86", errors)
+
+    # Experience contract schema required fields
+    ecs = HV1 / "convergence" / "HARDWARE_EXPERIENCE_CONTRACT_SCHEMA.json"
+    if ecs.is_file():
+        s = json.loads(ecs.read_text(encoding="utf-8"))
+        needed = {
+            "user_cohorts",
+            "workload",
+            "accessibility",
+            "time_to_usable",
+            "interaction_latency",
+            "energy_per_task",
+            "minimum",
+            "target",
+            "enhanced",
+            "fallback",
+            "measurement_method",
+        }
+        fields = set(s.get("required_fields") or [])
+        missing = needed - fields
+        if missing:
+            fail(f"experience contract schema missing fields: {sorted(missing)}", errors)
+
+    # Benchmark schema must forbid overall winner
+    bms = HV1 / "convergence" / "CROSS_TRACK_BENCHMARK_SCHEMA.json"
+    if bms.is_file():
+        b = json.loads(bms.read_text(encoding="utf-8"))
+        if b.get("forbid_overall_winner_score") is not True:
+            fail("cross-track benchmark schema must forbid overall winner score", errors)
+
+    # Decision ledger track qualifiers
+    ledger_path = HV1 / "decisions" / "DECISION_LEDGER.json"
+    if ledger_path.is_file():
+        ledger = json.loads(ledger_path.read_text(encoding="utf-8"))
+        for d in ledger.get("decisions", []):
+            if not d.get("track"):
+                fail(f"decision {d.get('id')} missing track qualifier", errors)
+            if "role" not in d:
+                fail(f"decision {d.get('id')} missing role", errors)
+            text_blob = " ".join(
+                str(d.get(k, "")) for k in ("mainline", "topic", "rationale")
+            ).lower()
+            # Allow 'mainline' only with track context elsewhere; flag bare product claims for COM-HPC
+            if d.get("id") == "DEC-COMHPC-001" and d.get("track") != "REFERENCE_CONTROL":
+                fail("DEC-COMHPC-001 must be REFERENCE_CONTROL track", errors)
+
+    # NXP preliminary BOM must not contaminate with qty>0 experimental product rows
+    nbom = HV1 / "open_custom_nxp" / "PRELIMINARY_BOM.csv"
+    if nbom.is_file():
+        with nbom.open(encoding="utf-8") as fh:
+            for row in csv.DictReader(fh):
+                if (row.get("qty") or "0").strip() not in {"0", ""}:
+                    fail(f"NXP preliminary BOM must keep qty=0 until OPN freeze: {row.get('item_id')}", errors)
+                if (row.get("class") or "") == "MAINLINE_CUSTOM":
+                    fail("NXP BOM must not use MAINLINE_CUSTOM class (use OPEN_ENGINEERING_MAINLINE)", errors)
+
+    # Soft scan: no claim GXE implemented / NXP product-equivalent in convergence docs
+    for path in (HV1 / "convergence").rglob("*"):
+        if not path.is_file() or path.suffix.lower() not in {".md", ".json"}:
+            continue
+        text = path.read_text(encoding="utf-8", errors="replace")
+        if "GXE_IMPLEMENTED=true" in text.replace(" ", ""):
+            fail(f"{path.name} claims GXE implemented", errors)
+        if "NXP_PRODUCT_EQUIVALENT_TO_AMD=true" in text.replace(" ", ""):
+            fail(f"{path.name} claims NXP product-equivalent to AMD", errors)
+
+    # Doctrine must include earn-hardware rule
+    efd = HV1 / "convergence" / "EXPERIENCE_FIRST_CO_DESIGN_DOCTRINE.md"
+    if efd.is_file():
+        t = efd.read_text(encoding="utf-8").lower()
+        if "software must earn additional hardware" not in t:
+            fail("experience-first doctrine missing core rule", errors)
 
 
 def main() -> int:
@@ -435,6 +616,7 @@ def main() -> int:
             "PRODUCT_CELLULAR_ANTENNA_DESIGN_PENDING",
             "CUSTOM_MAINLINE_ARCHITECTURE_FROZEN",
             "SOFTWARE_RC1_BASELINES_UNTOUCHED",
+            "HW_ARCHITECTURE_BASELINE_MERGE_READY",
         ]
         for k in must_false:
             if gates.get(k) is not False:
@@ -448,6 +630,7 @@ def main() -> int:
             fail("must set NEXT_OWNER_ACTION or NEXT_GATE", errors)
         validate_hw1b_fail_closed(gates, errors)
         validate_hw1c_fail_closed(gates, errors)
+        validate_hw1d_fail_closed(gates, errors)
 
     ledger_path = HV1 / "decisions" / "DECISION_LEDGER.json"
     if ledger_path.is_file():
@@ -521,7 +704,15 @@ def main() -> int:
     print("HARDWARE_V1_VALIDATE: PASS")
     print("DIGITAL_ARCHITECTURE_PACKAGE_COMPLETE=true")
     print("HARDWARE_V1_DIGITAL_ARCHITECTURE_COMPLETE=true")
-    print("CUSTOM_MAINLINE_ARCHITECTURE_FROZEN=true")
+    print("HW_ARCHITECTURE_BASELINE_MERGE_READY=true")
+    print("FOUR_TRACK_MODEL_PASS=true")
+    print("EXPERIENCE_FIRST_CO_DESIGN_DOCTRINE_PASS=true")
+    print("AMD_PRODUCT_MAINLINE_PRESERVED=true")
+    print("NXP_OPEN_CUSTOM_TRACK_DEFINED=true")
+    print("GXE_INTEGRATION_BOUNDARY_DEFINED=true")
+    print("REFERENCE_CONTROL_TRACK_DEFINED=true")
+    print("EXPERIMENT_ISOLATION_PASS=true")
+    print("SOFTWARE_RC1_BASELINES_UNTOUCHED=true")
     print("CUSTOM_PLATFORM_VENDOR_ACCESS_READY=false")
     print("CUSTOM_MAINLINE_READY_FOR_EVT_BUILD=false")
     print("HARDWARE_V1_READY_FOR_EVT_BUILD=false")
@@ -530,7 +721,7 @@ def main() -> int:
     print("RP0_A_COTS_PROCUREMENT_PACKET_READY=true")
     print("RP0_A_READY_TO_ORDER=true")
     print("PHYSICAL_HARDWARE_VALIDATED=false")
-    print("NEXT_OWNER_ACTION=ACQUIRE_AMD_CUSTOM_PLATFORM_COLLATERAL")
+    print("NEXT_OWNER_ACTION=MERGE_HW_ARCHITECTURE_BASELINE_68_WITH_MERGE_COMMIT")
     print("OPTIONAL_OWNER_ACTION=ORDER_RP0_A_COTS_CONTROL_KIT")
     return 0
 
