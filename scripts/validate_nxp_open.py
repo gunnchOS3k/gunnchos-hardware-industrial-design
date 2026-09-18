@@ -60,12 +60,12 @@ FORBIDDEN_PHRASES = [
 EXPECTED_GATES = {
     "NXP_OPEN_CUSTOM_TRACK_IMPLEMENTATION_STARTED": True,
     "NXP_PUBLIC_COLLATERAL_INDEX_COMPLETE": True,
-    "NXP_PUBLIC_PINMAP_UNDERSTOOD": False,
+    "NXP_PUBLIC_PINMAP_UNDERSTOOD": True,
     "NXP_PUBLIC_POWER_ARCHITECTURE_UNDERSTOOD": True,
     "NXP_PUBLIC_MEMORY_TOPOLOGY_UNDERSTOOD": False,
     "CPB0_OPEN_SCHEMATIC_STARTED": True,
     "CPB0_OPEN_SCHEMATIC_ERC_PASS": False,
-    "CPB0_OPEN_PCB_STARTED": False,
+    "CPB0_OPEN_PCB_STARTED": True,
     "CPB0_OPEN_PCB_DRC_PASS": False,
     "CPB0_OPEN_READY_FOR_FAB": False,
     "EVT_PENDING": True,
@@ -123,6 +123,15 @@ def main() -> int:
                 fail("NEXT_HARDWARE_ACTION must be CONTINUE_CPB0_OPEN_EDA while digital work remains", errors)
         if "MIMX9596" not in str(gates.get("selected_soc_opn", "")):
             fail("selected_soc_opn must be an exact MIMX9596* OPN", errors)
+        # prefer complete Table-2 code when present
+        if gates.get("NXP_PUBLIC_PINMAP_UNDERSTOOD") is True:
+            ball = NXP / "CPB0_OPEN_SOC_BALLMAP.csv"
+            if ball.exists():
+                brows = list(csv.DictReader(ball.open(encoding="utf-8")))
+                if not brows:
+                    fail("ballmap empty while pinmap understood", errors)
+                if any(str(r.get("unresolved","")).lower() in {"true","1","yes"} for r in brows):
+                    fail("unresolved ballmap rows while NXP_PUBLIC_PINMAP_UNDERSTOOD", errors)
 
     # Collateral: no NDA required flags
     idx_path = NXP / "PUBLIC_COLLATERAL_INDEX.json"
@@ -140,8 +149,10 @@ def main() -> int:
 
     # SoC selection must be exact
     soc = (NXP / "CPB0_OPEN_SOC_SELECTION.md").read_text(encoding="utf-8") if (NXP / "CPB0_OPEN_SOC_SELECTION.md").exists() else ""
-    if "MIMX9596AVZXN" not in soc:
-        fail("CPB0_OPEN_SOC_SELECTION.md must name exact OPN MIMX9596AVZXN", errors)
+    if "MIMX9596AVZXN" not in soc and "MIMX9596CVZXNAC" not in soc:
+        fail("CPB0_OPEN_SOC_SELECTION.md must name MIMX9596AVZXN and/or MIMX9596CVZXNAC", errors)
+    if "MIMX9596CVZXNAC" not in soc:
+        fail("CPB0_OPEN_SOC_SELECTION.md must freeze Table-2 OPN MIMX9596CVZXNAC", errors)
 
     # Pinmux CSV schema + unresolved honesty vs gate
     pin_path = NXP / "CPB0_OPEN_PINMUX_MAP.csv"

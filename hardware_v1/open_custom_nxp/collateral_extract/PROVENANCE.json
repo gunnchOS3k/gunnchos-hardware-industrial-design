@@ -1,0 +1,14 @@
+{
+  "source_document": "IMX95IEC",
+  "source_revision": "8.0",
+  "source_date": "2026-04-07",
+  "source_url": "https://www.nxp.com/docs/en/data-sheet/IMX95IEC.pdf",
+  "wayback_url": "https://web.archive.org/web/20260428205131if_/https://www.nxp.com/docs/en/data-sheet/IMX95IEC.pdf",
+  "pdf_sha256": "1d1f5bb8cf06528d7e96ce94ec6a7b045fd691ef863a68ddb45804f29f073e9b",
+  "attachment_19mm_ballmap": "i.mx95_19mm_ballmap.xlsx",
+  "attachment_19mm_ballmap_sha256": "f7112bc30ee489f735e0e5a8ca681175f291180914b47e2f0adc8c868a83ca13",
+  "attachment_pinmux_pinlist": "imx95_pinmux_pinlist.xlsx",
+  "attachment_pinmux_pinlist_sha256": "bf96650573814a2b728c08a0c5f5cb4d9289e93f2b6385d3fad5670639bc0d16",
+  "redistribution": "EXTRACTED_DESIGN_FACTS_ONLY_XLSX_NOT_COMMITTED",
+  "nda_required": false
+}

@@ -1,7 +1,7 @@
 {
-  "schema": "gunnchos.hardware_v1.nxp.public_collateral.v2",
-  "generated_at_utc": "2026-09-18T18:50:15Z",
-  "campaign": "NXP0_OPEN_CUSTOM_IMX95_IMPLEMENTATION_FOUNDATION",
+  "schema": "gunnchos.hardware_v1.nxp.public_collateral.v3",
+  "generated_at_utc": "2026-09-18T19:19:08Z",
+  "campaign": "NXP1_CPB0_OPEN_DIGITAL_EDA_CLOSURE",
   "policy": "public collateral only; ordinary account login allowed; NDA/restricted not used; metadata/URL/hash only if redistribution forbidden; no fabricated stock/quotes/currents",
   "nda_required_any_item": false,
   "index_complete_for_categories": true,
@@ -44,7 +44,14 @@
       "gates_affected": [
         "NXP_PUBLIC_COLLATERAL_INDEX_COMPLETE"
       ],
-      "evidence": "Product landing page lists datasheets/RM/UG/EVK/BSDL"
+      "evidence": "Product landing page lists datasheets/RM/UG/EVK/BSDL",
+      "retrieved": false,
+      "retrieval_date": null,
+      "account_required": false,
+      "redistribution_allowed": false,
+      "used_for_design": false,
+      "source_revision": "live",
+      "source_hash": "N/A_HTML"
     },
     {
       "id": "NXP-IMX95IEC",
@@ -64,7 +71,14 @@
         "NXP_PUBLIC_MEMORY_TOPOLOGY_UNDERSTOOD",
         "CPB0_OPEN_SOC_SELECTION"
       ],
-      "evidence": "Public PDF Rev 8 Apr 7 2026 listed on product page"
+      "evidence": "PDF retrieved via Wayback 2026-04-28 snapshot; ballmap/pinlist attachments extracted to CSV facts only",
+      "retrieved": true,
+      "retrieval_date": "2026-09-18",
+      "account_required": false,
+      "redistribution_allowed": false,
+      "used_for_design": true,
+      "source_revision": "8",
+      "source_hash": "1d1f5bb8cf06528d7e96ce94ec6a7b045fd691ef863a68ddb45804f29f073e9b"
     },
     {
       "id": "NXP-IMX95CEC",
@@ -82,7 +96,14 @@
       "gates_affected": [
         "CPB0_OPEN_SOC_SELECTION"
       ],
-      "evidence": "Product page PDF listing"
+      "evidence": "Product page PDF listing",
+      "retrieved": false,
+      "retrieval_date": null,
+      "account_required": false,
+      "redistribution_allowed": false,
+      "used_for_design": false,
+      "source_revision": "8.0",
+      "source_hash": "PENDING_OWNER_LOCAL_FETCH"
     },
     {
       "id": "NXP-IMX95XEC",
@@ -100,7 +121,14 @@
       "gates_affected": [
         "CPB0_OPEN_SOC_SELECTION"
       ],
-      "evidence": "Product page PDF listing"
+      "evidence": "Product page PDF listing",
+      "retrieved": false,
+      "retrieval_date": null,
+      "account_required": false,
+      "redistribution_allowed": false,
+      "used_for_design": false,
+      "source_revision": "8.0",
+      "source_hash": "PENDING_OWNER_LOCAL_FETCH"
     },
     {
       "id": "NXP-IMX95AEC",
@@ -118,7 +146,14 @@
       "gates_affected": [
         "CPB0_OPEN_SOC_SELECTION"
       ],
-      "evidence": "Product page PDF listing"
+      "evidence": "Product page PDF listing",
+      "retrieved": false,
+      "retrieval_date": null,
+      "account_required": false,
+      "redistribution_allowed": false,
+      "used_for_design": false,
+      "source_revision": "8.0",
+      "source_hash": "PENDING_OWNER_LOCAL_FETCH"
     },
     {
       "id": "NXP-IMX95RM",
@@ -136,7 +171,14 @@
       "gates_affected": [
         "NXP_PUBLIC_PINMAP_UNDERSTOOD"
       ],
-      "evidence": "Product page lists IMX95RM Rev 1.0 Mar 30 2026 PDF 123.55 MB"
+      "evidence": "Product page lists IMX95RM Rev 1.0 Mar 30 2026 PDF 123.55 MB",
+      "retrieved": false,
+      "retrieval_date": null,
+      "account_required": false,
+      "redistribution_allowed": false,
+      "used_for_design": false,
+      "source_revision": "1.0",
+      "source_hash": "PENDING_OWNER_LOCAL_FETCH"
     },
     {
       "id": "NXP-UG10210",
@@ -155,7 +197,14 @@
         "NXP_PUBLIC_MEMORY_TOPOLOGY_UNDERSTOOD",
         "CPB0_OPEN_READY_FOR_FAB"
       ],
-      "evidence": "Product page marks Account Required for UG10210; ordinary login allowed, content not ingested this campaign"
+      "evidence": "Product page marks Account Required for UG10210; ordinary login allowed, content not ingested this campaign",
+      "retrieved": false,
+      "retrieval_date": null,
+      "account_required": true,
+      "redistribution_allowed": true,
+      "used_for_design": false,
+      "source_revision": "2.0",
+      "source_hash": "N/A_NOT_FETCHED_NO_LOGIN_IN_CAMPAIGN"
     },
     {
       "id": "NXP-IMX95FS",
@@ -173,7 +222,14 @@
       "gates_affected": [
         "NXP_PUBLIC_COLLATERAL_INDEX_COMPLETE"
       ],
-      "evidence": "Product page PDF listing"
+      "evidence": "Product page PDF listing",
+      "retrieved": false,
+      "retrieval_date": null,
+      "account_required": false,
+      "redistribution_allowed": true,
+      "used_for_design": false,
+      "source_revision": "2.0",
+      "source_hash": "PENDING_OWNER_LOCAL_FETCH"
     },
     {
       "id": "NXP-IMX95-ERRATA-P21N",
@@ -191,7 +247,14 @@
       "gates_affected": [
         "CPB0_OPEN_READY_FOR_FAB"
       ],
-      "evidence": "Product page Account Required"
+      "evidence": "Product page Account Required",
+      "retrieved": false,
+      "retrieval_date": null,
+      "account_required": true,
+      "redistribution_allowed": true,
+      "used_for_design": false,
+      "source_revision": "2.0",
+      "source_hash": "N/A_NOT_FETCHED_NO_LOGIN_IN_CAMPAIGN"
     },
     {
       "id": "NXP-IMX95LPD5EVK-19-GS",
@@ -210,7 +273,14 @@
         "CPB0_OPEN_SOC_SELECTION",
         "NXP_PUBLIC_MEMORY_TOPOLOGY_UNDERSTOOD"
       ],
-      "evidence": "Public getting-started; references SOM/baseboard schematics and layouts"
+      "evidence": "Public getting-started; references SOM/baseboard schematics and layouts",
+      "retrieved": false,
+      "retrieval_date": null,
+      "account_required": false,
+      "redistribution_allowed": false,
+      "used_for_design": false,
+      "source_revision": "live",
+      "source_hash": "N/A_HTML"
     },
     {
       "id": "NXP-IMX95LPD5EVK-19CM",
@@ -228,7 +298,14 @@
       "gates_affected": [
         "CPB0_OPEN_SOC_SELECTION"
       ],
-      "evidence": "Product page PDF listing Rev 1.0"
+      "evidence": "Product page PDF listing Rev 1.0",
+      "retrieved": false,
+      "retrieval_date": null,
+      "account_required": false,
+      "redistribution_allowed": true,
+      "used_for_design": false,
+      "source_revision": "1.0",
+      "source_hash": "PENDING_OWNER_LOCAL_FETCH"
     },
     {
       "id": "NXP-EVK-LPD5-19-SCH-LAYOUT",
@@ -247,7 +324,14 @@
         "CPB0_OPEN_SCHEMATIC_STARTED",
         "NXP_PUBLIC_PINMAP_UNDERSTOOD"
       ],
-      "evidence": "GS page lists SOM Board Schematics / Base Board Layout / SOM Board Layout; files not downloaded or redistributed this campaign"
+      "evidence": "GS page lists SOM Board Schematics / Base Board Layout / SOM Board Layout; files not downloaded or redistributed this campaign",
+      "retrieved": false,
+      "retrieval_date": null,
+      "account_required": true,
+      "redistribution_allowed": false,
+      "used_for_design": false,
+      "source_revision": "EVK_BUNDLE",
+      "source_hash": "N/A_NOT_FETCHED"
     },
     {
       "id": "NXP-MCUX-IMX95LPD5EVK19",
@@ -266,7 +350,14 @@
         "CPB0_OPEN_SOC_SELECTION",
         "CPB0_OPEN_SECURITY_BOOT"
       ],
-      "evidence": "Public MCUX PDF states Device MIMX9596 PartNumber MIMX9596AVZXN"
+      "evidence": "Public MCUX PDF states Device MIMX9596 PartNumber MIMX9596AVZXN",
+      "retrieved": false,
+      "retrieval_date": null,
+      "account_required": false,
+      "redistribution_allowed": true,
+      "used_for_design": false,
+      "source_revision": "25.09.00",
+      "source_hash": "PENDING_OWNER_LOCAL_FETCH"
     },
     {
       "id": "NXP-MCUX-IMX95LP4XEVK15",
@@ -284,7 +375,14 @@
       "gates_affected": [
         "CPB0_OPEN_SOC_SELECTION"
       ],
-      "evidence": "Public MCUX PDF states PartNumber MIMX9596AVTXN"
+      "evidence": "Public MCUX PDF states PartNumber MIMX9596AVTXN",
+      "retrieved": false,
+      "retrieval_date": null,
+      "account_required": false,
+      "redistribution_allowed": true,
+      "used_for_design": false,
+      "source_revision": "26.03.00",
+      "source_hash": "PENDING_OWNER_LOCAL_FETCH"
     },
     {
       "id": "NXP-BSDL-19",
@@ -302,7 +400,14 @@
       "gates_affected": [
         "CPB0_OPEN_READY_FOR_FAB"
       ],
-      "evidence": "Product page Account Required ZIP"
+      "evidence": "Product page Account Required ZIP",
+      "retrieved": false,
+      "retrieval_date": null,
+      "account_required": true,
+      "redistribution_allowed": true,
+      "used_for_design": false,
+      "source_revision": "2",
+      "source_hash": "N/A_NOT_FETCHED"
     },
     {
       "id": "NXP-IBIS-19",
@@ -320,7 +425,14 @@
       "gates_affected": [
         "CPB0_OPEN_SI_PI"
       ],
-      "evidence": "Product page Account Required ZIP"
+      "evidence": "Product page Account Required ZIP",
+      "retrieved": false,
+      "retrieval_date": null,
+      "account_required": true,
+      "redistribution_allowed": true,
+      "used_for_design": false,
+      "source_revision": "2",
+      "source_hash": "N/A_NOT_FETCHED"
     },
     {
       "id": "NXP-EDGELOCK-PUBLIC",
@@ -338,7 +450,14 @@
       "gates_affected": [
         "CPB0_OPEN_SECURITY_BOOT"
       ],
-      "evidence": "Product page describes EdgeLock AP; several ANs Account Required"
+      "evidence": "Product page describes EdgeLock AP; several ANs Account Required",
+      "retrieved": false,
+      "retrieval_date": null,
+      "account_required": true,
+      "redistribution_allowed": false,
+      "used_for_design": false,
+      "source_revision": "index",
+      "source_hash": "N/A"
     },
     {
       "id": "NXP-LINUX-BSP-INDEX",
@@ -356,7 +475,64 @@
       "gates_affected": [
         "CPB0_OPEN_SECURITY_BOOT"
       ],
-      "evidence": "Public NXP i.MX software portal; binary images may require account"
+      "evidence": "Public NXP i.MX software portal; binary images may require account",
+      "retrieved": false,
+      "retrieval_date": null,
+      "account_required": true,
+      "redistribution_allowed": false,
+      "used_for_design": false,
+      "source_revision": "live",
+      "source_hash": "N/A"
+    },
+    {
+      "id": "NXP-PF09-PRODUCT",
+      "title": "PF09 Multi-Channel PMIC for i.MX 95",
+      "document_number": "PF09",
+      "revision": "live",
+      "publication_date": "2026-09-18",
+      "url": "https://www.nxp.com/products/PF09",
+      "access_class": "PUBLIC_WEB",
+      "ordinary_account_login_required": false,
+      "account_required": false,
+      "nda_required": false,
+      "sha256": "N/A_HTML",
+      "source_hash": "N/A_HTML",
+      "redistribution": "URL_ONLY",
+      "redistribution_allowed": true,
+      "retrieved": true,
+      "retrieval_date": "2026-09-18",
+      "used_for_design": true,
+      "source_revision": "live",
+      "subsystem": "power_pmic",
+      "gates_affected": [
+        "NXP_OPEN_PMIC_ARCHITECTURE_FROZEN"
+      ],
+      "evidence": "Public part table lists MPF0900* i.MX95 OTP variants"
+    },
+    {
+      "id": "NXP-IMX95LPD5EVK19-QSG",
+      "title": "IMX95LPD5EVK-19 Quick Start Guide",
+      "document_number": "IMX95LPD5EVK19QSG",
+      "revision": "1",
+      "publication_date": "2024",
+      "url": "https://www.nxp.com/docs/en/quick-reference-guide/IMX95LPD5EVK-19CM.pdf",
+      "access_class": "PUBLIC_QSG",
+      "ordinary_account_login_required": false,
+      "account_required": false,
+      "nda_required": false,
+      "sha256": "PENDING_OWNER_LOCAL_FETCH",
+      "source_hash": "PENDING_OWNER_LOCAL_FETCH",
+      "redistribution": "METADATA_URL_HASH_ONLY_IF_LICENSE_FORBIDS",
+      "redistribution_allowed": false,
+      "retrieved": false,
+      "retrieval_date": null,
+      "used_for_design": true,
+      "source_revision": "1",
+      "subsystem": "EVK_BOM,power_pmic,memory",
+      "gates_affected": [
+        "NXP_OPEN_PMIC_ARCHITECTURE_FROZEN"
+      ],
+      "evidence": "Public QSG text lists PF09/PF5301/PF5302 and LPDDR5 16GB class"
     }
   ],
   "honesty_notes": [

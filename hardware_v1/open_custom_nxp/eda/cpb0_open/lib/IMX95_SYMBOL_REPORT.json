@@ -1,0 +1,23 @@
+{
+  "schema": "gunnchos.hardware_v1.nxp1.imx95_symbol_report.v1",
+  "generated_at_utc": "2026-09-18T19:19:55Z",
+  "symbol_name": "MIMX9596_VZ_19x19",
+  "symbol_path": "hardware_v1/open_custom_nxp/eda/cpb0_open/lib/gunnchos_imx95.kicad_sym",
+  "source_ballmap": "hardware_v1/open_custom_nxp/collateral_extract/IMX95IEC_19mm_ballmap_SPN_r1.0.csv",
+  "pin_count": 758,
+  "expected_pin_count": 758,
+  "unresolved_count": 0,
+  "sha256": "a08de744458e516bc14069efdd039be2479953ac4452a1d51d47590392338d2f",
+  "units": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8
+  ],
+  "validation_errors": [],
+  "CPB0_OPEN_SOC_SYMBOL_VALIDATED": true
+}
