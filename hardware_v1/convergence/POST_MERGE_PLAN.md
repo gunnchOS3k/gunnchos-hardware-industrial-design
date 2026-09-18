@@ -21,6 +21,12 @@
 
 `HW1D.1_ACCEPTED_MAIN_REBIND`
 
-## Non-execution
+## Execution status (HW1D.1)
 
-This file is preparation only. Cursor must **not** merge #68 or retarget experiments until the owner merges.
+Owner merged #68 with a merge commit (`e5f15d1f1b6ddefa73c0a6127bced8d784aae425`).  
+HW1D.1 accepted-main rebind evidence is under `hardware_v1/convergence/accepted_main/`.  
+Experiments #69–#79 were retargeted to `main` and kept DRAFT (not merged).
+
+## Non-execution (historical prep note)
+
+This file originally said Cursor must **not** merge #68 or retarget until the owner merges — that precondition is now satisfied.

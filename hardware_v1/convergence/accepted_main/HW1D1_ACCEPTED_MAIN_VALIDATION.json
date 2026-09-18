@@ -1,0 +1,46 @@
+{
+  "schema": "gunnchos.hardware_v1.hw1d1.accepted_main_validation.v1",
+  "generated_at_utc": "2026-09-18T18:10:16Z",
+  "campaign": "HW1D.1_ACCEPTED_MAIN_REBIND",
+  "accepted_main_sha": "e5f15d1f1b6ddefa73c0a6127bced8d784aae425",
+  "commands": {
+    "make hardware-v1-validate": "PASS",
+    "make hardware-v1-all": "PASS_AT_MERGE_TREE_THEN_GENERATOR_TIMESTAMP_CHURN_DISCARDED",
+    "make hardware-v1-gates": "PASS"
+  },
+  "note": "hardware-v1-all was executed once for acceptance proof; generator-only timestamp churn was restored to accepted-main content so freeze hashes remain honest.",
+  "checks": {
+    "FOUR_TRACK_MODEL_PASS": true,
+    "BOM_CLASSIFICATION_PASS": true,
+    "EXPERIMENT_ISOLATION_PASS": true,
+    "EXPERIENCE_CONTRACT_PRESENT": true,
+    "NO_PHYSICAL_CLAIM": true,
+    "SOFTWARE_RC1_BASELINES_UNTOUCHED": true
+  },
+  "physical_gates_remain_false": {
+    "PHYSICAL_HARDWARE_VALIDATED": false,
+    "CERTIFICATION_COMPLETE": false,
+    "MANUFACTURING_VALIDATED": false,
+    "DIGITAL_FABRICATION_PASS": false,
+    "RFQ_SENT": false,
+    "CPB0_SCHEMATIC_READY": false,
+    "CPB0_PCB_READY": false,
+    "CPB0_READY_FOR_FAB": false,
+    "CPB0_OPEN_READY_FOR_FAB": false,
+    "CUSTOM_MAINLINE_READY_FOR_EVT_BUILD": false,
+    "HARDWARE_V1_READY_FOR_EVT_BUILD": false,
+    "REFERENCE_PLATFORM_0_READY_FOR_FAB": false,
+    "CUSTOM_PLATFORM_VENDOR_ACCESS_READY": false,
+    "COM_HPC_IS_PRODUCT_MAINLINE": false,
+    "GXE_IMPLEMENTED_IN_HARDWARE_REPO": false,
+    "NXP_CLAIMED_PRODUCT_EQUIVALENT_TO_AMD": false
+  },
+  "pending_remain_true": {
+    "EVT_PENDING": true,
+    "DVT_PENDING": true,
+    "PVT_PENDING": true,
+    "PHYSICAL_PENDING": true,
+    "EXTERNAL_PENDING": true
+  },
+  "verdict": "ACCEPTED_MAIN_VALIDATION_PASS"
+}

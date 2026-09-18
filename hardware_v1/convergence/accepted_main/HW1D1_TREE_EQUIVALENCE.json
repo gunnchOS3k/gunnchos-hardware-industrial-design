@@ -1,0 +1,14 @@
+{
+  "schema": "gunnchos.hardware_v1.hw1d1.tree_equivalence.v1",
+  "generated_at_utc": "2026-09-18T18:10:16Z",
+  "campaign": "HW1D.1_ACCEPTED_MAIN_REBIND",
+  "tested_head": "14a96d3d14fad0430ea0d59bf88c20d74b9e587b",
+  "merge_commit": "e5f15d1f1b6ddefa73c0a6127bced8d784aae425",
+  "tested_tree": "eba38aad9c17ff03f7d6cb398d39b0c0987d4a71",
+  "merge_tree": "eba38aad9c17ff03f7d6cb398d39b0c0987d4a71",
+  "merge_parent2_tree": "eba38aad9c17ff03f7d6cb398d39b0c0987d4a71",
+  "material_drift": false,
+  "diff_stat_tested_vs_merge": "",
+  "verdict": "PASS",
+  "stop_before_retarget": false
+}

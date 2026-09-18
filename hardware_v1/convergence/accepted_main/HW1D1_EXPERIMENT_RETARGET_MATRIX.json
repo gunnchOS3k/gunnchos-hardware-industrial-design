@@ -1,0 +1,265 @@
+{
+  "schema": "gunnchos.hardware_v1.hw1d1.experiment_retarget_matrix.v1",
+  "generated_at_utc": "2026-09-18T18:12:00Z",
+  "campaign": "HW1D.1_ACCEPTED_MAIN_REBIND",
+  "accepted_main_sha": "e5f15d1f1b6ddefa73c0a6127bced8d784aae425",
+  "policy": {
+    "keep_draft": true,
+    "do_not_merge_experiments": true,
+    "base_target": "main",
+    "previous_base": "hardware/v1-mainline-ready-for-evt"
+  },
+  "prs": [
+    {
+      "pr": 69,
+      "title": "EXP: ARM IQX-class SoM vs custom AMD Platform Core v1",
+      "url": "https://github.com/gunnchOS3k/gunnchos-hardware-industrial-design/pull/69",
+      "branch": "hardware/exp-arm-iqx",
+      "experiment_id": "EXP-ARM-IQX-001",
+      "is_draft": true,
+      "state": "OPEN",
+      "base_before": "hardware/v1-mainline-ready-for-evt",
+      "base_after": "main",
+      "head_oid": "d80b7f8ec0a9cf9aa8e4b7fffe31ee3e0eebeccd",
+      "files_vs_main": [
+        "hardware_v1/experiments/EXP-ARM-IQX-001/BRANCH_CLAIM.json",
+        "hardware_v1/experiments/EXP-ARM-IQX-001/BRANCH_CLAIM.md"
+      ],
+      "file_count": 2,
+      "experiment_only_delta": true,
+      "polluted": false,
+      "refresh_from_accepted_main": false,
+      "merged": false,
+      "retarget_status": "PASS"
+    },
+    {
+      "pr": 70,
+      "title": "EXP: Student OLED panel vs IPS",
+      "url": "https://github.com/gunnchOS3k/gunnchos-hardware-industrial-design/pull/70",
+      "branch": "hardware/exp-student-oled",
+      "experiment_id": "EXP-STUDENT-OLED-001",
+      "is_draft": true,
+      "state": "OPEN",
+      "base_before": "hardware/v1-mainline-ready-for-evt",
+      "base_after": "main",
+      "head_oid": "8964b28a26b0781c82d7199518d7ea7c2ca968bf",
+      "files_vs_main": [
+        "hardware_v1/experiments/EXP-STUDENT-OLED-001/BRANCH_CLAIM.json",
+        "hardware_v1/experiments/EXP-STUDENT-OLED-001/BRANCH_CLAIM.md"
+      ],
+      "file_count": 2,
+      "experiment_only_delta": true,
+      "polluted": false,
+      "refresh_from_accepted_main": false,
+      "merged": false,
+      "retarget_status": "PASS"
+    },
+    {
+      "pr": 71,
+      "title": "EXP: DS-XL OLED+IPS hybrid vs dual IPS",
+      "url": "https://github.com/gunnchOS3k/gunnchos-hardware-industrial-design/pull/71",
+      "branch": "hardware/exp-dsxl-oled-hybrid",
+      "experiment_id": "EXP-DSXL-OLED-HYBRID-001",
+      "is_draft": true,
+      "state": "OPEN",
+      "base_before": "hardware/v1-mainline-ready-for-evt",
+      "base_after": "main",
+      "head_oid": "a16e10ff2afaebb1e24ff4a29cb1fe8bd5d23994",
+      "files_vs_main": [
+        "hardware_v1/experiments/EXP-DSXL-OLED-HYBRID-001/BRANCH_CLAIM.json",
+        "hardware_v1/experiments/EXP-DSXL-OLED-HYBRID-001/BRANCH_CLAIM.md"
+      ],
+      "file_count": 2,
+      "experiment_only_delta": true,
+      "polluted": false,
+      "refresh_from_accepted_main": false,
+      "merged": false,
+      "retarget_status": "PASS"
+    },
+    {
+      "pr": 72,
+      "title": "EXP: Dock USB4 80 vs USB4 40",
+      "url": "https://github.com/gunnchOS3k/gunnchos-hardware-industrial-design/pull/72",
+      "branch": "hardware/exp-dock-usb4-80",
+      "experiment_id": "EXP-DOCK-USB4-80-001",
+      "is_draft": true,
+      "state": "OPEN",
+      "base_before": "hardware/v1-mainline-ready-for-evt",
+      "base_after": "main",
+      "head_oid": "865f45d9e45cce1b78368ff4e59ef74ce8d3f9ae",
+      "files_vs_main": [
+        "hardware_v1/experiments/EXP-DOCK-USB4-80-001/BRANCH_CLAIM.json",
+        "hardware_v1/experiments/EXP-DOCK-USB4-80-001/BRANCH_CLAIM.md"
+      ],
+      "file_count": 2,
+      "experiment_only_delta": true,
+      "polluted": false,
+      "refresh_from_accepted_main": false,
+      "merged": false,
+      "retarget_status": "PASS"
+    },
+    {
+      "pr": 73,
+      "title": "EXP: Inductive ring charge vs magnetic cradle",
+      "url": "https://github.com/gunnchOS3k/gunnchos-hardware-industrial-design/pull/73",
+      "branch": "hardware/exp-rings-inductive-charge",
+      "experiment_id": "EXP-RINGS-INDUCTIVE-001",
+      "is_draft": true,
+      "state": "OPEN",
+      "base_before": "hardware/v1-mainline-ready-for-evt",
+      "base_after": "main",
+      "head_oid": "0a4fbb0bd8d5de39d3c21392b02269e3bcebf3d3",
+      "files_vs_main": [
+        "hardware_v1/experiments/EXP-RINGS-INDUCTIVE-001/BRANCH_CLAIM.json",
+        "hardware_v1/experiments/EXP-RINGS-INDUCTIVE-001/BRANCH_CLAIM.md"
+      ],
+      "file_count": 2,
+      "experiment_only_delta": true,
+      "polluted": false,
+      "refresh_from_accepted_main": false,
+      "merged": false,
+      "retarget_status": "PASS"
+    },
+    {
+      "pr": 74,
+      "title": "EXP: sEMG wrist vs IMU/cap ring input",
+      "url": "https://github.com/gunnchOS3k/gunnchos-hardware-industrial-design/pull/74",
+      "branch": "hardware/exp-rings-semg-wrist",
+      "experiment_id": "EXP-RINGS-SEMG-001",
+      "is_draft": true,
+      "state": "OPEN",
+      "base_before": "hardware/v1-mainline-ready-for-evt",
+      "base_after": "main",
+      "head_oid": "f7a954c0ba91647d9ee9858c1d60d002e667666a",
+      "files_vs_main": [
+        "hardware_v1/experiments/EXP-RINGS-SEMG-001/BRANCH_CLAIM.json",
+        "hardware_v1/experiments/EXP-RINGS-SEMG-001/BRANCH_CLAIM.md"
+      ],
+      "file_count": 2,
+      "experiment_only_delta": true,
+      "polluted": false,
+      "refresh_from_accepted_main": false,
+      "merged": false,
+      "retarget_status": "PASS"
+    },
+    {
+      "pr": 75,
+      "title": "EXP: coreboot vs vendor UEFI",
+      "url": "https://github.com/gunnchOS3k/gunnchos-hardware-industrial-design/pull/75",
+      "branch": "hardware/exp-coreboot",
+      "experiment_id": "EXP-COREBOOT-001",
+      "is_draft": true,
+      "state": "OPEN",
+      "base_before": "hardware/v1-mainline-ready-for-evt",
+      "base_after": "main",
+      "head_oid": "98fa0117f122ca5d719f49e061bc47f926c4c1eb",
+      "files_vs_main": [
+        "hardware_v1/experiments/EXP-COREBOOT-001/BRANCH_CLAIM.json",
+        "hardware_v1/experiments/EXP-COREBOOT-001/BRANCH_CLAIM.md"
+      ],
+      "file_count": 2,
+      "experiment_only_delta": true,
+      "polluted": false,
+      "refresh_from_accepted_main": false,
+      "merged": false,
+      "retarget_status": "PASS"
+    },
+    {
+      "pr": 76,
+      "title": "EXP: RAUC A/B vs vendor capsule/EC update",
+      "url": "https://github.com/gunnchOS3k/gunnchos-hardware-industrial-design/pull/76",
+      "branch": "hardware/exp-rauc-update",
+      "experiment_id": "EXP-RAUC-001",
+      "is_draft": true,
+      "state": "OPEN",
+      "base_before": "hardware/v1-mainline-ready-for-evt",
+      "base_after": "main",
+      "head_oid": "63ee0f157b2af12479ae8f44a163d6c53a3b64f7",
+      "files_vs_main": [
+        "hardware_v1/experiments/EXP-RAUC-001/BRANCH_CLAIM.json",
+        "hardware_v1/experiments/EXP-RAUC-001/BRANCH_CLAIM.md"
+      ],
+      "file_count": 2,
+      "experiment_only_delta": true,
+      "polluted": false,
+      "refresh_from_accepted_main": false,
+      "merged": false,
+      "retarget_status": "PASS"
+    },
+    {
+      "pr": 77,
+      "title": "EXP: COM-HPC modular product architecture vs custom motherboard mainline",
+      "url": "https://github.com/gunnchOS3k/gunnchos-hardware-industrial-design/pull/77",
+      "branch": "hardware/exp-com-hpc-modular-product",
+      "experiment_id": "EXP-COM-HPC-MODULAR-001",
+      "is_draft": true,
+      "state": "OPEN",
+      "base_before": "hardware/v1-mainline-ready-for-evt",
+      "base_after": "main",
+      "head_oid": "47614414f55feac453e90322bf564d7bb6406dd4",
+      "files_vs_main": [
+        "hardware_v1/experiments/EXP-COM-HPC-MODULAR-001/BRANCH_CLAIM.json",
+        "hardware_v1/experiments/EXP-COM-HPC-MODULAR-001/BRANCH_CLAIM.md"
+      ],
+      "file_count": 2,
+      "experiment_only_delta": true,
+      "polluted": false,
+      "refresh_from_accepted_main": false,
+      "merged": false,
+      "retarget_status": "PASS"
+    },
+    {
+      "pr": 78,
+      "title": "EXP: DS-XL Ryzen AI Embedded X100-class vs 8845HS mainline",
+      "url": "https://github.com/gunnchOS3k/gunnchos-hardware-industrial-design/pull/78",
+      "branch": "hardware/exp-dsxl-x100",
+      "experiment_id": "EXP-DSXL-X100-001",
+      "is_draft": true,
+      "state": "OPEN",
+      "base_before": "hardware/v1-mainline-ready-for-evt",
+      "base_after": "main",
+      "head_oid": "7dd2989d225d99966b7da11c7265bc0943448f9f",
+      "files_vs_main": [
+        "hardware_v1/experiments/EXP-DSXL-X100-001/BRANCH_CLAIM.json",
+        "hardware_v1/experiments/EXP-DSXL-X100-001/BRANCH_CLAIM.md"
+      ],
+      "file_count": 2,
+      "experiment_only_delta": true,
+      "polluted": false,
+      "refresh_from_accepted_main": false,
+      "merged": false,
+      "retarget_status": "PASS"
+    },
+    {
+      "pr": 79,
+      "title": "EXP: Student P132/P132i AI-first vs 8840U mainline",
+      "url": "https://github.com/gunnchOS3k/gunnchos-hardware-industrial-design/pull/79",
+      "branch": "hardware/exp-student-p100-ai",
+      "experiment_id": "EXP-P100-AI-001",
+      "is_draft": true,
+      "state": "OPEN",
+      "base_before": "hardware/v1-mainline-ready-for-evt",
+      "base_after": "main",
+      "head_oid": "753833c98cfee5bef989e160bde87fe2face0430",
+      "files_vs_main": [
+        "hardware_v1/experiments/EXP-P100-AI-001/BRANCH_CLAIM.json",
+        "hardware_v1/experiments/EXP-P100-AI-001/BRANCH_CLAIM.md"
+      ],
+      "file_count": 2,
+      "experiment_only_delta": true,
+      "polluted": false,
+      "refresh_from_accepted_main": false,
+      "merged": false,
+      "retarget_status": "PASS"
+    }
+  ],
+  "summary": {
+    "count": 11,
+    "all_draft": true,
+    "all_base_main": true,
+    "all_experiment_only": true,
+    "any_refresh_needed": false,
+    "any_merged": false,
+    "verdict": "RETARGET_MATRIX_PASS"
+  }
+}

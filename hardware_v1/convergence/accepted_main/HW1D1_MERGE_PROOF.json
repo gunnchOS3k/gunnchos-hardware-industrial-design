@@ -1,0 +1,42 @@
+{
+  "schema": "gunnchos.hardware_v1.hw1d1.merge_proof.v1",
+  "generated_at_utc": "2026-09-18T18:10:16Z",
+  "campaign": "HW1D.1_ACCEPTED_MAIN_REBIND",
+  "claim_boundary": "architecture/control-plane accepted-main rebind only \u2014 not physical pass, not certification, not fab, not purchase, not GXE execution",
+  "preconditions": {
+    "pr_68_state": "MERGED",
+    "merge_method": "CREATE_A_MERGE_COMMIT",
+    "merge_commit_has_two_parents": true,
+    "parent_1_previous_main": "9ee0ef2f688b2c18428bfabc316b23687a02988d",
+    "parent_2_tested_pr_head": "14a96d3d14fad0430ea0d59bf88c20d74b9e587b",
+    "expected_tested_head": "14a96d3d14fad0430ea0d59bf88c20d74b9e587b",
+    "observed_tested_head_parent2": "14a96d3d14fad0430ea0d59bf88c20d74b9e587b",
+    "tested_head_match": true,
+    "experiments_69_79_still_draft": true,
+    "experiments_not_merged": true
+  },
+  "pr_68": {
+    "number": 68,
+    "url": "https://github.com/gunnchOS3k/gunnchos-hardware-industrial-design/pull/68",
+    "merged_at_utc": "2026-09-18T18:05:42Z",
+    "merged_by": "gunnchOS3k",
+    "base_ref": "main",
+    "head_ref": "hardware/v1-mainline-ready-for-evt",
+    "merge_commit": "e5f15d1f1b6ddefa73c0a6127bced8d784aae425"
+  },
+  "accepted_main": {
+    "ref": "main",
+    "sha": "e5f15d1f1b6ddefa73c0a6127bced8d784aae425",
+    "tree": "eba38aad9c17ff03f7d6cb398d39b0c0987d4a71"
+  },
+  "tree_equivalence": {
+    "tested_head": "14a96d3d14fad0430ea0d59bf88c20d74b9e587b",
+    "tested_tree": "eba38aad9c17ff03f7d6cb398d39b0c0987d4a71",
+    "merge_commit_tree": "eba38aad9c17ff03f7d6cb398d39b0c0987d4a71",
+    "merge_parent2_tree": "eba38aad9c17ff03f7d6cb398d39b0c0987d4a71",
+    "material_drift": false,
+    "verdict": "PASS_TREES_IDENTICAL"
+  },
+  "verdict": "MERGE_PROOF_PASS",
+  "retarget_authorized": true
+}
