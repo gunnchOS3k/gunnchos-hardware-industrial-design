@@ -1,11 +1,27 @@
 # Hardware v1 gate tokens
 
-**Generated:** 2026-09-18T16:02:19Z  
+**Generated:** 2026-09-18T16:24:23Z  
 **Campaign:** `HARDWARE_1_0_MASTER_CAMPAIGN`  
 **Claim boundary:** digital architecture / EVT preparation only — not physical pass, not certification, not fab release.
 
 - `HARDWARE_V1_READY_FOR_EVT_BUILD` = `False`
+- `HARDWARE_V1_DIGITAL_ARCHITECTURE_COMPLETE` = `True`
 - `REFERENCE_PLATFORM_0_READY_FOR_FAB` = `False`
+- `RP0_A_COTS_PROCUREMENT_PACKET_READY` = `True`
+- `RP0_A_READY_TO_ORDER` = `True`
+- `RP0_A_PHYSICAL_BUILD_PENDING` = `True`
+- `RP0_A_BRINGUP_PENDING` = `True`
+- `RP0_B_CUSTOM_READY_FOR_FAB` = `False`
+- `PRODUCT_CELLULAR_ANTENNA_DESIGN_PENDING` = `True`
+- `UNRES_NRF54L15_FOOTPRINT_CLOSED` = `True`
+- `UNRES_FN990B40_AVL_CLOSED` = `True`
+- `EXT_DSXL_DUAL_EDP_CLOSED` = `True`
+- `EXT_COM_HPC_400PIN_RP0_A_BLOCKING` = `False`
+- `EXT_COM_HPC_400PIN_RP0_B_BLOCKING` = `True`
+- `EXT_JHL8440_BALLMAP_RP0_A_BLOCKING` = `False`
+- `EXT_JHL8440_BALLMAP_RP0_B_BLOCKING` = `True`
+- `EXT_JHL9040R_BALLMAP_RP0_A_BLOCKING` = `False`
+- `EXT_JHL9040R_BALLMAP_RP0_B_BLOCKING` = `True`
 - `EVT_PENDING` = `True`
 - `DVT_PENDING` = `True`
 - `PVT_PENDING` = `True`
@@ -20,7 +36,7 @@
 - `MAINLINE_DECISION_LEDGER_COMPLETE` = `True`
 - `EXPERIMENTS_REGISTRY_COMPLETE` = `True`
 - `SOFTWARE_RC1_BASELINES_UNTOUCHED` = `True`
-- `NEXT_OWNER_ACTION` = `QUOTE_AND_BUILD_REFERENCE_PLATFORM_0`
-- `NEXT_OWNER_ACTION_NOTE` = `Digital mainline architecture + comparison tracks are packaged. Gates above remain FALSE until external pin maps / AVL confirmations / owner quote-build. Cursor will not send RFQs, purchase, or claim fab.`
+- `NEXT_OWNER_ACTION` = `ORDER_RP0_A_COTS_BRINGUP_KIT`
+- `NEXT_OWNER_ACTION_NOTE` = `RP0-A COTS procurement packet is ready. Cursor will not purchase. RP0-B custom fab remains blocked on vendor pin/ball maps. COTS orderability does not set READY_FOR_FAB.`
 - `NEXT_GATE` = `None`
-- `NEXT_GATE_IF_OWNER_DECLINES_QUOTE` = `EXT-COM-HPC-400PIN`
+- `NEXT_GATE_IF_OWNER_DECLINES_ORDER` = `ACQUIRE_RP0_B_VENDOR_COLLATERAL`

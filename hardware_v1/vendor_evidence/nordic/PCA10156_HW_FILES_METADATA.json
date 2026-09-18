@@ -1,0 +1,10 @@
+{
+  "artifact": "PCA10156-nRF54L15-DK 1_0_0.zip",
+  "url": "https://nsscprodmedia.blob.core.windows.net/prod/software-and-other-downloads/dev-kits/nrf54l15-dk/pca10156-nrf54l15-dk-1_0_0.zip",
+  "sha256": "ed70a2233d009e7e4dd31a20f66527ef206b23bd357623850a9f3228a089e1d4",
+  "bytes": 14098311,
+  "dk_id": "PCA10156",
+  "soc_package_on_dk": "QFN48",
+  "redistributed_in_repo": false,
+  "captured_at_utc": "2026-09-18T16:24:23Z"
+}

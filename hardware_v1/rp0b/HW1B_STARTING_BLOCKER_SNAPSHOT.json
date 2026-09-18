@@ -1,0 +1,38 @@
+{
+  "schema": "gunnchos.hardware_v1.hw1b.starting_blocker_snapshot.v1",
+  "campaign": "HARDWARE_1_0B_RP0_COTS_BLOCKER_CLOSURE",
+  "captured_at_utc": "2026-09-18T16:24:23Z",
+  "pr_68_state": {
+    "number": 68,
+    "state": "OPEN",
+    "isDraft": true,
+    "merged": false,
+    "headRefOid_expected": "bd65bc67b413597a7d5534bc8dddaa9d7513b0c3",
+    "headRefOid_observed": "bd65bc67b413597a7d5534bc8dddaa9d7513b0c3",
+    "head_advanced_from_expected": false,
+    "baseRefName": "main",
+    "headRefName": "hardware/v1-mainline-ready-for-evt"
+  },
+  "experimental_prs_69_76_base": "hardware/v1-mainline-ready-for-evt",
+  "SOFTWARE_RC1_BASELINES_UNTOUCHED": true,
+  "starting_gates": {
+    "HARDWARE_V1_READY_FOR_EVT_BUILD": false,
+    "REFERENCE_PLATFORM_0_READY_FOR_FAB": false,
+    "NEXT_OWNER_ACTION": "QUOTE_AND_BUILD_REFERENCE_PLATFORM_0"
+  },
+  "starting_blockers": [
+    "EXT-COM-HPC-400PIN",
+    "EXT-DSXL-DUAL-EDP",
+    "EXT-JHL8440-BALLMAP",
+    "EXT-JHL9040R-BALLMAP",
+    "UNRES-NRF54L15-FOOTPRINT",
+    "UNRES-FN990B40-AVL",
+    "OWNER-RP0-QUOTE-AUTH"
+  ],
+  "doctrine": [
+    "Do not order custom PCB that is not fabrication-ready",
+    "Use COTS for RP0-A; vendor-gated pin maps block RP0-B only",
+    "No RFQ send / purchase / supplier contact / NDA acceptance",
+    "No software RC1 mutation"
+  ]
+}
