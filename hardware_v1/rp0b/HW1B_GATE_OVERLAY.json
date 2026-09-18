@@ -1,0 +1,98 @@
+{
+  "HARDWARE_V1_DIGITAL_ARCHITECTURE_COMPLETE": true,
+  "DIGITAL_ARCHITECTURE_PACKAGE_COMPLETE": true,
+  "HARDWARE_V1_READY_FOR_EVT_BUILD": false,
+  "REFERENCE_PLATFORM_0_READY_FOR_FAB": false,
+  "RP0_A_COTS_PROCUREMENT_PACKET_READY": true,
+  "RP0_A_READY_TO_ORDER": true,
+  "RP0_A_PHYSICAL_BUILD_PENDING": true,
+  "RP0_A_BRINGUP_PENDING": true,
+  "RP0_B_CUSTOM_READY_FOR_FAB": false,
+  "PRODUCT_CELLULAR_ANTENNA_DESIGN_PENDING": true,
+  "UNRES_NRF54L15_FOOTPRINT_CLOSED": true,
+  "UNRES_FN990B40_AVL_CLOSED": true,
+  "EXT_DSXL_DUAL_EDP_CLOSED": true,
+  "EXT_COM_HPC_400PIN_RP0_A_BLOCKING": false,
+  "EXT_COM_HPC_400PIN_RP0_B_BLOCKING": true,
+  "EXT_JHL8440_BALLMAP_RP0_A_BLOCKING": false,
+  "EXT_JHL8440_BALLMAP_RP0_B_BLOCKING": true,
+  "EXT_JHL9040R_BALLMAP_RP0_A_BLOCKING": false,
+  "EXT_JHL9040R_BALLMAP_RP0_B_BLOCKING": true,
+  "EVT_PENDING": true,
+  "DVT_PENDING": true,
+  "PVT_PENDING": true,
+  "PHYSICAL_HARDWARE_VALIDATED": false,
+  "CERTIFICATION_COMPLETE": false,
+  "MANUFACTURING_VALIDATED": false,
+  "DIGITAL_FABRICATION_PASS": false,
+  "RFQ_SENT": false,
+  "PHYSICAL_PENDING": true,
+  "EXTERNAL_PENDING": true,
+  "SOFTWARE_RC1_BASELINES_UNTOUCHED": true,
+  "blockers": [
+    {
+      "id": "EXT-COM-HPC-400PIN",
+      "severity": "PICMG/ADLINK COM-HPC Mini net-accurate pin map for custom RP0-B carrier",
+      "classification": "STILL_VENDOR_GATED_FOR_RP0_B",
+      "blocks": [
+        "RP0_B_CUSTOM_READY_FOR_FAB",
+        "REFERENCE_PLATFORM_0_READY_FOR_FAB"
+      ],
+      "rp0_a_blocking": false,
+      "rp0_b_blocking": true
+    },
+    {
+      "id": "EXT-JHL8440-BALLMAP",
+      "severity": "Intel JHL8440 ball map (NDA) for pin-accurate custom dock fanout",
+      "classification": "STILL_VENDOR_GATED_FOR_RP0_B",
+      "blocks": [
+        "DOCK_HW_DIGITAL_RELEASE_PACKAGE",
+        "RP0_B_CUSTOM_READY_FOR_FAB"
+      ],
+      "rp0_a_blocking": false,
+      "rp0_b_blocking": true
+    },
+    {
+      "id": "EXT-JHL9040R-BALLMAP",
+      "severity": "Intel JHL9040R retimer ball map (NDA)",
+      "classification": "STILL_VENDOR_GATED_FOR_RP0_B",
+      "blocks": [
+        "DOCK_HW_DIGITAL_RELEASE_PACKAGE",
+        "RP0_B_CUSTOM_READY_FOR_FAB"
+      ],
+      "rp0_a_blocking": false,
+      "rp0_b_blocking": true
+    },
+    {
+      "id": "OWNER-RP0-B-FAB-AUTH",
+      "severity": "Owner authorization for custom RP0-B fabrication after pin-accurate package exists",
+      "classification": "OWNER_ACTION_REQUIRED",
+      "blocks": [
+        "HARDWARE_V1_READY_FOR_EVT_BUILD"
+      ],
+      "rp0_a_blocking": false,
+      "rp0_b_blocking": true
+    }
+  ],
+  "closed_blockers": [
+    {
+      "id": "EXT-DSXL-DUAL-EDP",
+      "classification": "CLOSED_BY_ARCHITECTURE_CHANGE",
+      "evidence": "hardware_v1/devices/ds_xl/DUAL_DISPLAY_ARCHITECTURE.md"
+    },
+    {
+      "id": "UNRES-NRF54L15-FOOTPRINT",
+      "classification": "CLOSED_PUBLIC_EVIDENCE",
+      "evidence": "hardware_v1/devices/rings/NRF54L15_PACKAGE_STRATEGY.md"
+    },
+    {
+      "id": "UNRES-FN990B40-AVL",
+      "classification": "CLOSED_PUBLIC_EVIDENCE",
+      "evidence": "hardware_v1/radio/FN990B40_RP0_A_AVL.md"
+    }
+  ],
+  "NEXT_OWNER_ACTION": "ORDER_RP0_A_COTS_BRINGUP_KIT",
+  "NEXT_OWNER_ACTION_NOTE": "RP0-A COTS procurement packet is ready. Cursor will not purchase. RP0-B custom fab remains blocked on vendor pin/ball maps. COTS orderability does not set READY_FOR_FAB.",
+  "NEXT_GATE": null,
+  "NEXT_GATE_IF_OWNER_DECLINES_ORDER": "ACQUIRE_RP0_B_VENDOR_COLLATERAL"
+}

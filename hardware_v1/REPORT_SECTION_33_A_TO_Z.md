@@ -1,6 +1,6 @@
 # Section 33 report A–Z
 
-**Generated:** 2026-09-18T16:02:19Z  
+**Generated:** 2026-09-18T16:24:23Z  
 **Campaign:** `HARDWARE_1_0_MASTER_CAMPAIGN`  
 **Claim boundary:** digital architecture / EVT preparation only — not physical pass, not certification, not fab release.
 
@@ -38,7 +38,7 @@ Qualified Li-ion; IPC Class 2 + selective tighter controls.
 `hardware_v1/bom/` — no experimental mix.
 
 ## L. Reference Platform 0
-Defined; `REFERENCE_PLATFORM_0_READY_FOR_FAB=false`.
+Two-stage: RP0-A COTS packet ready; `REFERENCE_PLATFORM_0_READY_FOR_FAB=false` (= RP0-B).
 
 ## M. PRDs / ICDs
 `hardware_v1/prd/`, `hardware_v1/icd/`
@@ -74,10 +74,10 @@ Mainline DRAFT to `main`; experimental DRAFTs to mainline branch when packages p
 No merge, no RFQ send, no purchase, no secrets.
 
 ## X. NEXT_OWNER_ACTION
-`QUOTE_AND_BUILD_REFERENCE_PLATFORM_0`
+`ORDER_RP0_A_COTS_BRINGUP_KIT`
 
-## Y. Honest blockers
-EXT-COM-HPC-400PIN, EXT-JHL8440-BALLMAP, nRF54L15 footprint confirm, FN990B40 AVL confirm.
+## Y. Honest blockers (RP0-B)
+EXT-COM-HPC-400PIN, EXT-JHL8440-BALLMAP, EXT-JHL9040R-BALLMAP (vendor-gated for custom fab only).
 
 ## Z. Evidence root
-`hardware_v1/`
+`hardware_v1/` including `rp0b/`, `reference_platform_0/RP0_*`, `vendor_evidence/nordic/`
