@@ -1,0 +1,10 @@
+{
+  "schema": "gunnchos.hardware.cpb0_open.pi_audit.v1",
+  "generated_at_utc": "2026-09-18T22:17:56Z",
+  "campaign": "NXP2_CPB0_COLLATERAL_UNLOCK_EDA_CONTINUATION",
+  "rail_currents_invented": false,
+  "decoupling_audit": "INCOMPLETE",
+  "voltage_drop_estimates": "NOT_CLAIMED",
+  "PI_PASS": false,
+  "reason": "No frozen load currents from collateral; analytical PDN not signed off"
+}

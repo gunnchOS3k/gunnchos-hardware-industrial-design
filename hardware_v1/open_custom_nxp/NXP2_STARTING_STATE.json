@@ -1,0 +1,20 @@
+{
+  "schema": "gunnchos.hardware_v1.nxp2.starting_state.v1",
+  "generated_at_utc": "2026-09-18T22:17:56Z",
+  "campaign": "NXP2_CPB0_COLLATERAL_UNLOCK_EDA_CONTINUATION",
+  "preflight": {
+    "accepted_main_expected": "56125d1738a437f413ee4418c51c2f3a82bcbac8",
+    "accepted_main_actual": "56125d1738a437f413ee4418c51c2f3a82bcbac8",
+    "baseline_ok": true,
+    "pr83_title": "NXP open-custom: CPB0-O public-collateral EDA foundation",
+    "historical_nxp1_branch_not_used_as_baseline": true,
+    "nda_accepted": false,
+    "rfq_sent": false,
+    "purchase_executed": false
+  },
+  "owner_collateral": {
+    "ug10210": "MISSING",
+    "evk_bom": "MISSING",
+    "intake_dir": "/Users/gunnchos/Downloads/owner_collateral/nxp_imx95"
+  }
+}

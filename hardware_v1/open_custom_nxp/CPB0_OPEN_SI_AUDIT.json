@@ -1,0 +1,11 @@
+{
+  "schema": "gunnchos.hardware.cpb0_open.si_audit.v1",
+  "generated_at_utc": "2026-09-18T22:17:56Z",
+  "campaign": "NXP2_CPB0_COLLATERAL_UNLOCK_EDA_CONTINUATION",
+  "impedance_checked": false,
+  "length_skew_checked": false,
+  "reference_continuity_checked": false,
+  "simulation_tooling": "unavailable_or_not_run",
+  "SI_PASS": false,
+  "reason": "No authoritative impedance/length rules; no routed DDR to analyze"
+}

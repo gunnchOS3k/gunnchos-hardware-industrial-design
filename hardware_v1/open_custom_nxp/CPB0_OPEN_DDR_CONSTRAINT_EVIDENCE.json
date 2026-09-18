@@ -1,0 +1,17 @@
+{
+  "schema": "gunnchos.hardware.cpb0_open.ddr_constraint_evidence.v1",
+  "generated_at_utc": "2026-09-18T22:17:56Z",
+  "campaign": "NXP2_CPB0_COLLATERAL_UNLOCK_EDA_CONTINUATION",
+  "ug10210_present": false,
+  "evk_layout_present": false,
+  "extracted_authoritative_rows": 0,
+  "public_class_rows": 5,
+  "unresolved_rows": 7,
+  "invented_values": 0,
+  "NXP_PUBLIC_MEMORY_TOPOLOGY_UNDERSTOOD": false,
+  "blocking_documents": [
+    "UG10210",
+    "EVK_BOM_OR_LAYOUT"
+  ],
+  "notes": "No UG10210 ingested; cannot extract length/impedance. Public datasheet class retained only."
+}
