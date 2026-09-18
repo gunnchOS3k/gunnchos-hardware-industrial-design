@@ -1,0 +1,12 @@
+{
+  "schema": "cpb0_open.rail_log.v1",
+  "fields": [
+    "timestamp",
+    "rail",
+    "voltage_V",
+    "current_A",
+    "limit_A",
+    "notes",
+    "operator"
+  ]
+}
