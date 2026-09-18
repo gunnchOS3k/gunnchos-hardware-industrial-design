@@ -1,0 +1,23 @@
+{
+  "board": {
+    "design_settings": {
+      "defaults": {},
+      "diff_pair_dimensions": [],
+      "drc_exclusions": [],
+      "rules": {},
+      "track_widths": [],
+      "via_dimensions": []
+    }
+  },
+  "meta": {
+    "filename": "dock_no_nda.kicad_pro",
+    "version": 1
+  },
+  "project": {
+    "files": []
+  },
+  "sheets": [
+    ["81067b85-23a2-438b-bfc9-35d8ea38afef", ""]
+  ],
+  "text_variables": {}
+}

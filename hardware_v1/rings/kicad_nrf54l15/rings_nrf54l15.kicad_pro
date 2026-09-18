@@ -1,0 +1,23 @@
+{
+  "board": {
+    "design_settings": {
+      "defaults": {},
+      "diff_pair_dimensions": [],
+      "drc_exclusions": [],
+      "rules": {},
+      "track_widths": [],
+      "via_dimensions": []
+    }
+  },
+  "meta": {
+    "filename": "rings_nrf54l15.kicad_pro",
+    "version": 1
+  },
+  "project": {
+    "files": []
+  },
+  "sheets": [
+    ["d8d94693-7a21-41ea-921c-a88fadea33e4", ""]
+  ],
+  "text_variables": {}
+}

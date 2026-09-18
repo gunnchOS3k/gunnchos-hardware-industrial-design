@@ -24,3 +24,8 @@
 - COTS TB4/USB4 dock: `REFERENCE_CONTROL_DOCK`
 - JHL8440/JHL9040R ball maps remain external blockers for pin-accurate custom dock
 - Do not demote custom Dock because COTS control is easier
+
+
+## Stream E no-NDA path
+
+See `NO_NDA_PATH.md` (2026-09-18T18:37:46Z). USB4 remains experimental.

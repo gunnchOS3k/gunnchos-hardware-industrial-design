@@ -79,3 +79,17 @@
 | `NEXT_GATE` | `None` |
 
 **Note:** Preferred: merge DRAFT #68 with a merge commit to accept the architecture/control-plane baseline. This does NOT mean physical hardware is ready. Optional: order RP0-A COTS control kit. Parallel: acquire AMD custom platform collateral. Cursor will not merge, purchase, or accept NDAs.
+
+
+## Stream E digital exhaustion (2026-09-18T18:37:46Z)
+
+| Token | Value |
+|---|---|
+| `NXP_OPEN_CUSTOM_DIGITAL_ENGINEERING_EXHAUSTED` | `true` |
+| `AMD_PUBLIC_ENGINEERING_EXHAUSTED` | `true` |
+| `RINGS_DIGITAL_ENGINEERING_EXHAUSTED` | `true` |
+| `DOCK_DIGITAL_ENGINEERING_EXHAUSTED` | `true` |
+| `CPB0_OPEN_READY_FOR_FAB` | `false` |
+| `CPB0_READY_FOR_FAB` | `false` |
+
+Fab-readiness truth: digital public/local-EDA path exhausted; **not** fab-ready.

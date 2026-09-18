@@ -1,0 +1,6 @@
+/ {
+    aliases {
+        imu = &i2c0;
+    };
+};
+/* Pin-accurate overlay requires final pinmux from EVT schematic freeze */
