@@ -1,10 +1,13 @@
-# Experiments registry
+# Display / camera architecture
 
 **Generated:** 2026-09-18T17:46:17Z  
 **Campaign:** `HARDWARE_1_0D_FOUR_TRACK_CONVERGENCE_MERGE_READINESS`  
 **Claim boundary:** architecture / control-plane baseline only — not physical pass, not certification, not fab release, not purchased, not GXE execution.
 
 
-Hierarchy uses track qualifiers. All #69–#79 remain DRAFT experiments — not merge-ready without promotion evidence.
+## Intent
+Single primary display + one camera path for bring-up and experience-contract latency experiments on embedded UI.
 
-See `REGISTRY.json`.
+## Non-claims
+Not a dual-eDP AMD-class creator display claim.
+

@@ -1,38 +1,48 @@
 {
   "schema": "gunnchos.hardware_v1.manifest.v1",
-  "generated_at_utc": "2026-09-18T16:48:54Z",
-  "campaign": "HARDWARE_1_0C_CUSTOM_FIRST_MAINLINE_PIVOT",
-  "file_count": 98,
+  "generated_at_utc": "2026-09-18T17:46:17Z",
+  "campaign": "HARDWARE_1_0D_FOUR_TRACK_CONVERGENCE_MERGE_READINESS",
+  "file_count": 166,
+  "product_mainline": "AMD_CUSTOM_X86",
+  "open_engineering_mainline": "NXP_IMX95_OPEN_CUSTOM",
+  "greenfield_experiment": "GXE",
+  "reference_control": "COM_HPC_AND_COTS",
+  "next_owner_action": "MERGE_HW_ARCHITECTURE_BASELINE_68_WITH_MERGE_COMMIT",
   "files": [
     {
       "path": "hardware_v1/GATES.json",
-      "sha256": "52a3dba91d3feb75f4b9b6583b23371edc7f6fbf59d059274a2950be5bbecd79",
-      "bytes": 3804
+      "sha256": "e6550e8490b77e4397727d2ab135595af36312f259670035b11d1c7311e58966",
+      "bytes": 6421
     },
     {
       "path": "hardware_v1/GATES.md",
-      "sha256": "d9ed81624c1fe165322733b7405b5dc9477f50d5efe3e2aff10d8256cc1a40ac",
-      "bytes": 1907
-    },
-    {
-      "path": "hardware_v1/MANIFEST.json",
-      "sha256": "a80f376bbb49cdaf85c17147fe7de70d577d3524e6b525b52cb3085106859b73",
-      "bytes": 14596
+      "sha256": "c5a73c259e3c74a20ed4f9cc74dead49c83a0117ccd950eddefe309537b63823",
+      "bytes": 3838
     },
     {
       "path": "hardware_v1/OWNER_ACTION_PACKET.md",
-      "sha256": "6a360f4b3c8f48781d8fc112e90148c8dcaafce7abf0e73be57d5a70eb0f95f1",
-      "bytes": 2033
+      "sha256": "6c1b6eb622c05660b58483dfb1a8d5093d45ceccba34cabaf525e59ec237bab7",
+      "bytes": 1541
     },
     {
       "path": "hardware_v1/README.md",
-      "sha256": "34279fa21d56ce6508d4000ea2d4c5fb528744f6f1dfd29232c83820c2e10eb0",
-      "bytes": 566
+      "sha256": "41582fac34229092392dfa2dbb0276c337e7e7046db4d576db7b32275f025ee0",
+      "bytes": 1814
     },
     {
       "path": "hardware_v1/REPORT_SECTION_15_HW1B_A_TO_T.md",
       "sha256": "b3435627108ff75ebbf738451d82e9d079f32636f8114cfa9275cda6b3c07d20",
       "bytes": 2452
+    },
+    {
+      "path": "hardware_v1/REPORT_SECTION_17_HW1D_A_TO_T.md",
+      "sha256": "b0e3c7f98316938c601da4f0702173feeb9250ef273e9958d689aa2a0f1e0e2b",
+      "bytes": 3576
+    },
+    {
+      "path": "hardware_v1/REPORT_SECTION_24_HW1C_A_TO_Z.md",
+      "sha256": "7a298982f11fd54ca341b059f703ed2e6d79282766e8b20ca8926666191aa003",
+      "bytes": 3462
     },
     {
       "path": "hardware_v1/REPORT_SECTION_33_A_TO_Z.md",
@@ -55,9 +65,24 @@
       "bytes": 855
     },
     {
+      "path": "hardware_v1/bom/EXPERIMENTAL_BOM_INDEX.md",
+      "sha256": "22b2cfc2bdfc7d38a955a7d5af23503ef90f320d394ec83b7ad5f5a2d656a8af",
+      "bytes": 1015
+    },
+    {
       "path": "hardware_v1/bom/MAINLINE_BOM_INDEX.md",
-      "sha256": "6ec044c5c8a472c489668b541cda5734a1e021657582d8b2215090b4b832b8dd",
-      "bytes": 1028
+      "sha256": "46e6bd47719444a8ca9e60358b9b559ec332ced59fe0d32820fc9bac545c0ffc",
+      "bytes": 1409
+    },
+    {
+      "path": "hardware_v1/bom/MAINLINE_CUSTOM_BOM.csv",
+      "sha256": "cff8d9d06ccd5bf93512c4dc7ff1dc4291bebe3ee2096f7aa3c79af2bd08a95c",
+      "bytes": 1011
+    },
+    {
+      "path": "hardware_v1/bom/REFERENCE_CONTROL_BOM.csv",
+      "sha256": "3b70a5b53d1b3028440a8d821c9941a601ee42053450ac797796617e5ee853ba",
+      "bytes": 653
     },
     {
       "path": "hardware_v1/bom/handheld_evt_mule_bom.csv",
@@ -95,14 +120,174 @@
       "bytes": 1946
     },
     {
+      "path": "hardware_v1/convergence/CANONICAL_TRACK_MODEL.json",
+      "sha256": "82312c7f990e955d195354f3c3d983e124924af0f4b195ba0ebcdb1fd338ec2c",
+      "bytes": 1984
+    },
+    {
+      "path": "hardware_v1/convergence/CANONICAL_TRACK_MODEL.md",
+      "sha256": "b0f60588e43a7f330d2b8dab78b4d5292b2baac3d7d23423a20f1dbcbf1b43f2",
+      "bytes": 1794
+    },
+    {
+      "path": "hardware_v1/convergence/CROSS_TRACK_BENCHMARK_SCHEMA.json",
+      "sha256": "95f570a13ae986f93a4e294c485129a9d02208e00b77e0015c78affc6d1da69a",
+      "bytes": 1549
+    },
+    {
+      "path": "hardware_v1/convergence/CROSS_TRACK_COMPARISON_MATRIX.md",
+      "sha256": "9ed915de28db0248655a526846e4ad84088ae13224bb556ac2dbc806b4d0c953",
+      "bytes": 1742
+    },
+    {
+      "path": "hardware_v1/convergence/EXPERIENCE_FIRST_CO_DESIGN_DOCTRINE.md",
+      "sha256": "4f59f69ad5c6371bf6db752918dd25c4e1377ed5f9d36b1e03b0d9fad9d2cc64",
+      "bytes": 1976
+    },
+    {
+      "path": "hardware_v1/convergence/GXE_HARDWARE_INTEGRATION_CONTRACT.md",
+      "sha256": "7506bd03d8ee330ac96a9c580aa1298af6427c808595f084253b544e3b9ef41c",
+      "bytes": 1850
+    },
+    {
+      "path": "hardware_v1/convergence/HARDWARE_EXPERIENCE_CONTRACT_GUIDE.md",
+      "sha256": "7c49dcbaf3c7da9dd9e468a1e5e292066a87732238dc9a61b5df4b0981e81833",
+      "bytes": 1086
+    },
+    {
+      "path": "hardware_v1/convergence/HARDWARE_EXPERIENCE_CONTRACT_SCHEMA.json",
+      "sha256": "1e1be72ccad7e21118aad6f7bfa92467e6ce2c149dad3bcf21e119ef42ca6bb2",
+      "bytes": 1569
+    },
+    {
+      "path": "hardware_v1/convergence/HW1D_STARTING_STATE.json",
+      "sha256": "b478043624faf20b834619052a7f3126561b8932e0d6ae83236b9983af2ac079",
+      "bytes": 1194
+    },
+    {
+      "path": "hardware_v1/convergence/POST_MERGE_PLAN.md",
+      "sha256": "ea9f37bff1f29f7f777d230c76700335ce2004d13866568df96befba56f590f1",
+      "bytes": 974
+    },
+    {
+      "path": "hardware_v1/custom_mainline/BOARD_REUSE_STRATEGY.md",
+      "sha256": "f3014b4a632827361451fa853a893c9e2dcd995db8ec255363c5baa395bc2044",
+      "bytes": 932
+    },
+    {
+      "path": "hardware_v1/custom_mainline/COMMON_PLATFORM_BLOCKS.md",
+      "sha256": "d0f5144effe4cfbd8ad76667ab3a4966b832eb5fbd581c890a59fbfe4e15a013",
+      "bytes": 721
+    },
+    {
+      "path": "hardware_v1/custom_mainline/CUSTOM_FIRST_ARCHITECTURE_DOCTRINE.md",
+      "sha256": "ba06f6399313719361bce84c08f9a7be77202d2cc574781f271b16ac945c0f33",
+      "bytes": 2250
+    },
+    {
+      "path": "hardware_v1/custom_mainline/CUSTOM_MAINLINE_COMPLEXITY_REGISTER.md",
+      "sha256": "7c9be003c470f26a546b1427600ec20bf06936eb92e0efe7d0e6cd5d934c96f1",
+      "bytes": 1894
+    },
+    {
+      "path": "hardware_v1/custom_mainline/DEVICE_SOC_SELECTION_MATRIX.md",
+      "sha256": "d9d3ec38c30b93a962adf98d51a69e2acf52857008ed6d77d29bf74b2d491dff",
+      "bytes": 1794
+    },
+    {
+      "path": "hardware_v1/custom_mainline/FIRMWARE_OWNERSHIP_BOUNDARY.md",
+      "sha256": "01443a818feb770921b4b0386dc206bd05b78d2e22797feee84c687de4687471",
+      "bytes": 1000
+    },
+    {
+      "path": "hardware_v1/custom_mainline/HW1C_STARTING_STATE.json",
+      "sha256": "437b449ed97c8634e6f0e2939b799e4cc6be788985812cc190180b5e6730e3fe",
+      "bytes": 814
+    },
+    {
+      "path": "hardware_v1/custom_mainline/KNOWLEDGE_MAP.md",
+      "sha256": "fc6dddf5e71f3b45ab2fce4bb448fac3c2b5ceecf01d340e78b994939701d671",
+      "bytes": 23482
+    },
+    {
+      "path": "hardware_v1/custom_mainline/LEARNING_GATES.md",
+      "sha256": "eb71d5fd0d3a7cd44859e8e744f955363f8adb0ed36fd78996ca9a042cea68fa",
+      "bytes": 820
+    },
+    {
+      "path": "hardware_v1/custom_mainline/MEMORY_TOPOLOGY_DECISION.md",
+      "sha256": "001f13a2ab8f9036e1735a3b15ec8c10ae361e024c53523491b13f9f2a676d6c",
+      "bytes": 900
+    },
+    {
+      "path": "hardware_v1/custom_mainline/PLATFORM_CORE_V1.md",
+      "sha256": "a79f76052df1d51d807f6e7c72f2673cd950a9e4453c569da1ef842bf36c4a45",
+      "bytes": 1657
+    },
+    {
+      "path": "hardware_v1/custom_mainline/PRODUCT_MAINLINE_STATUS.md",
+      "sha256": "ae8aea172ab15bf7715f02c41903335dcfcbcc53ed8b7f08b1307b10602dd8a1",
+      "bytes": 1537
+    },
+    {
+      "path": "hardware_v1/custom_mainline/cpb0/BRINGUP_PLAN.md",
+      "sha256": "6e9a11aeb6651dccec182a903b2db8de13957052b6be2d9b4c3403765295f8e1",
+      "bytes": 495
+    },
+    {
+      "path": "hardware_v1/custom_mainline/cpb0/CLOCK_RESET_MAP.md",
+      "sha256": "49b32a57fa8e8be63bfa4439131091d0966a62b13c3471624737a782bbb28fe0",
+      "bytes": 463
+    },
+    {
+      "path": "hardware_v1/custom_mainline/cpb0/DEBUG_PLAN.md",
+      "sha256": "33de2904947c6e00de87f62fae726ac5993882bb59ce94021dda386fa204579f",
+      "bytes": 619
+    },
+    {
+      "path": "hardware_v1/custom_mainline/cpb0/INTERFACE_MATRIX.csv",
+      "sha256": "8e421546a710d566c4b23a9abdd7bf9fe9d85f70c74f068878e520abe16f2ab6",
+      "bytes": 740
+    },
+    {
+      "path": "hardware_v1/custom_mainline/cpb0/PCB_CONSTRAINT_PLAN.md",
+      "sha256": "4ad0268c5a0441fcd8d4283a7ec5a9b25615cdc205e36ec4b94d010a53ccf01f",
+      "bytes": 459
+    },
+    {
+      "path": "hardware_v1/custom_mainline/cpb0/POWER_TREE.md",
+      "sha256": "1a675c8ec8ee5917cbfd55ff041b8ff9db58b26fa3cc81367a4eb6aae600b307",
+      "bytes": 599
+    },
+    {
+      "path": "hardware_v1/custom_mainline/cpb0/PRD.md",
+      "sha256": "e08b37783241ad8918940982d156829f2fff5a09776f3968a1032892db874a1d",
+      "bytes": 1076
+    },
+    {
+      "path": "hardware_v1/custom_mainline/cpb0/PRELIMINARY_BOM.csv",
+      "sha256": "3286699424998afa27ec6fe5c8f098566e12c2ccbb1b05e03e3ef27d8f9ff924",
+      "bytes": 695
+    },
+    {
+      "path": "hardware_v1/custom_mainline/cpb0/SCHEMATIC_SHEET_PLAN.md",
+      "sha256": "c739237d1d48b8d680734c63a4f973ff85a36b9607a31df7ce546458982c9b16",
+      "bytes": 503
+    },
+    {
+      "path": "hardware_v1/custom_mainline/cpb0/SYSTEM_BLOCK_DIAGRAM.md",
+      "sha256": "d833735dab0786548e739056dd48d89a0c632ebec844fa970dd2b4717dee65a2",
+      "bytes": 1009
+    },
+    {
       "path": "hardware_v1/decisions/DECISION_LEDGER.json",
-      "sha256": "53e74004340c3887ebe9efb89f8f7b47a0f2760ee16b03998465983e9aebd536",
-      "bytes": 7763
+      "sha256": "081b4a3065c0f8fc47750c8c980b0ee27007447308f63f52ad8af465a23cd8f8",
+      "bytes": 18898
     },
     {
       "path": "hardware_v1/decisions/DECISION_LEDGER.md",
-      "sha256": "87aeff1629b3ab9b984f391f3a48d95f754fe32d7143a1fe3b09b98798c659fd",
-      "bytes": 2991
+      "sha256": "737336f36dc868b400ab6cc30a66ab8f8b891cd798fa70dacbc896019c6c2fe2",
+      "bytes": 2782
     },
     {
       "path": "hardware_v1/devices/dock/CUSTOM_DOCK_VENDOR_COLLATERAL_REQUIREMENTS.md",
@@ -121,8 +306,8 @@
     },
     {
       "path": "hardware_v1/dock/DOCK_PRD.md",
-      "sha256": "93178f33b6f172efbfb9d4b6d8c6faa5f8f747b9abf0d10356577ef18267ffc0",
-      "bytes": 547
+      "sha256": "0d3cabf01001fd19ef9f6d12435d789b45a04c93bfe4993a9d94aeee5b48e478",
+      "bytes": 1056
     },
     {
       "path": "hardware_v1/electrical/ELECTRICAL.md",
@@ -131,173 +316,233 @@
     },
     {
       "path": "hardware_v1/experiments/EXP-ARM-IQX-001/BOM_DELTA.csv",
-      "sha256": "2fd5c4244da302304ae466a78c7ca4e817db67de31e664bf843dc49cccca4518",
-      "bytes": 185
+      "sha256": "70395b61dfcb56090e3d2b7fbd19944e060af9508da9a16c60ef3188fe3d8519",
+      "bytes": 222
     },
     {
       "path": "hardware_v1/experiments/EXP-ARM-IQX-001/COMPARISON_PACKAGE.json",
-      "sha256": "203af0f55a646cf457648625b049bfa3359bbb9653efbf1ca8fc615b63d1f4d5",
-      "bytes": 793
+      "sha256": "99903d65870d8cd6415698d73e8aeea5dbc31c867a0eaec7e6f58a9cc137ea59",
+      "bytes": 991
     },
     {
       "path": "hardware_v1/experiments/EXP-ARM-IQX-001/COMPARISON_PACKAGE.md",
-      "sha256": "088c4eb9c21f3d260390c9d5ae197a916c66c3819a220b5889c31ee322b2acee",
-      "bytes": 1013
+      "sha256": "7f11fe48bc224af56ab7d41457ee614630fef65a7e5eb12752c8524b028188b2",
+      "bytes": 996
     },
     {
       "path": "hardware_v1/experiments/EXP-ARM-IQX-001/METRICS.md",
-      "sha256": "89d4e670b86cb0514bb2c99b0db9a58d451f75a59fcbb4873a8192066973c3a2",
-      "bytes": 643
+      "sha256": "38ee25665e421b926399254a56b1550c93932103b0f93a494c5cea872f871d5f",
+      "bytes": 616
+    },
+    {
+      "path": "hardware_v1/experiments/EXP-COM-HPC-MODULAR-001/BOM_DELTA.csv",
+      "sha256": "f239c1da4833847d538d8dbf356e2168584d6e5e1edaeedcd1197a22d9b5eb7e",
+      "bytes": 226
+    },
+    {
+      "path": "hardware_v1/experiments/EXP-COM-HPC-MODULAR-001/COMPARISON_PACKAGE.json",
+      "sha256": "258b1cc30fcdb6c21a3900f1c5dd65d32c1e29b8071f8424830aa6230bd5e459",
+      "bytes": 1067
+    },
+    {
+      "path": "hardware_v1/experiments/EXP-COM-HPC-MODULAR-001/COMPARISON_PACKAGE.md",
+      "sha256": "68e5adb3147f18d54254e70e084eab4773f49d6b1373745bff9b84e429455d17",
+      "bytes": 1054
+    },
+    {
+      "path": "hardware_v1/experiments/EXP-COM-HPC-MODULAR-001/METRICS.md",
+      "sha256": "f9d4f719b255d1d9c66a1d9f40612afe5bab1e26a884c13eeedacfbb01bf7910",
+      "bytes": 648
     },
     {
       "path": "hardware_v1/experiments/EXP-COREBOOT-001/BOM_DELTA.csv",
-      "sha256": "d702167d151afc4025e21f47e4c4b4e8d1366180b15630c5a318003db55b6fd6",
-      "bytes": 186
+      "sha256": "eac0163072b20f9d87489f542c20bd11db4cb4845d68df3f05d15aa88a0438c5",
+      "bytes": 246
     },
     {
       "path": "hardware_v1/experiments/EXP-COREBOOT-001/COMPARISON_PACKAGE.json",
-      "sha256": "033acd303c22bb74dcb75e2c50ff07685eb451166d3138dc5060cb93b7c3b6c7",
-      "bytes": 656
+      "sha256": "5db9c96e4f4d6acffacd8191b4ffa1986734e10cff9c6ca3803962b2ef7d315c",
+      "bytes": 889
     },
     {
       "path": "hardware_v1/experiments/EXP-COREBOOT-001/COMPARISON_PACKAGE.md",
-      "sha256": "e1c4c43f7a5e3605e919f9163d914fa7e12ec5c1e6d16622e8b91cf8e7f6e37e",
-      "bytes": 882
-    },
-    {
-      "path": "hardware_v1/experiments/EXP-COREBOOT-001/METRICS.md",
-      "sha256": "80d943a4d84acb9da353e8a35b30a593fbaee173d6fa75b2ca4993b342151e59",
-      "bytes": 588
-    },
-    {
-      "path": "hardware_v1/experiments/EXP-DOCK-USB4-80-001/BOM_DELTA.csv",
-      "sha256": "f5144e4ba15505d3f99a1d74ffa5cc2ab7c8632352d4b2f0ad9ca75efd637451",
-      "bytes": 190
-    },
-    {
-      "path": "hardware_v1/experiments/EXP-DOCK-USB4-80-001/COMPARISON_PACKAGE.json",
-      "sha256": "5905bc0fa15d2acdb08a9a7fff9dc01ffa83d1f5374ae11366058910533d04ce",
-      "bytes": 722
-    },
-    {
-      "path": "hardware_v1/experiments/EXP-DOCK-USB4-80-001/COMPARISON_PACKAGE.md",
-      "sha256": "0c054253ad34e303367ba159c3f6a2271c1fe995a01f65d4c4b942f705b3e4dd",
-      "bytes": 945
-    },
-    {
-      "path": "hardware_v1/experiments/EXP-DOCK-USB4-80-001/METRICS.md",
-      "sha256": "079786238a852820f4b8b8ffe422f2ef89fe4a3ef8c95c33a42d70bfeaa44197",
-      "bytes": 576
-    },
-    {
-      "path": "hardware_v1/experiments/EXP-DSXL-OLED-HYBRID-001/BOM_DELTA.csv",
-      "sha256": "be315c84320e5ba7b5eb9b2a89c38b8822a8c9e807e588f800fc6ad7884c0649",
-      "bytes": 194
-    },
-    {
-      "path": "hardware_v1/experiments/EXP-DSXL-OLED-HYBRID-001/COMPARISON_PACKAGE.json",
-      "sha256": "5b5521cd39f22f833fd42795b4ad962aeb6cd0daf05bb37edc4dd64b3500985d",
-      "bytes": 732
-    },
-    {
-      "path": "hardware_v1/experiments/EXP-DSXL-OLED-HYBRID-001/COMPARISON_PACKAGE.md",
-      "sha256": "0d65b60729530caa9843d7b9b48a5c0ca36d916189bab6f4ffe5be7c09c3e5ec",
-      "bytes": 958
-    },
-    {
-      "path": "hardware_v1/experiments/EXP-DSXL-OLED-HYBRID-001/METRICS.md",
-      "sha256": "fbb6d6042598317e489e265815597556de3ac8fac21d308267a90b059f56174e",
-      "bytes": 580
-    },
-    {
-      "path": "hardware_v1/experiments/EXP-RAUC-001/BOM_DELTA.csv",
-      "sha256": "4373b7173401328b640163aa65c908cf77337261f0d5f9bf0a47c165dc9c6a97",
-      "bytes": 182
-    },
-    {
-      "path": "hardware_v1/experiments/EXP-RAUC-001/COMPARISON_PACKAGE.json",
-      "sha256": "de12ee241839bd4065a17aa476395253044c79b66546c7581d00deb74d26c696",
-      "bytes": 687
-    },
-    {
-      "path": "hardware_v1/experiments/EXP-RAUC-001/COMPARISON_PACKAGE.md",
-      "sha256": "177203ed4f5fb6097f8e4968bf2144c0d0d301931b5c2884797c9e51aab2c1fd",
+      "sha256": "55066075ca132cea47c1c20d2fcb69d067bb0799749aab3800b8adf2e8826fcc",
       "bytes": 913
     },
     {
+      "path": "hardware_v1/experiments/EXP-COREBOOT-001/METRICS.md",
+      "sha256": "758a8a11a6576cb2975daf683241b18feee02fa22e435f7d8cad4b138c1a0aad",
+      "bytes": 512
+    },
+    {
+      "path": "hardware_v1/experiments/EXP-DOCK-USB4-80-001/BOM_DELTA.csv",
+      "sha256": "474f77084292dc1fd7e973f42e124f9a7a2f48314eb43c3a594c266c8ce5f73d",
+      "bytes": 247
+    },
+    {
+      "path": "hardware_v1/experiments/EXP-DOCK-USB4-80-001/COMPARISON_PACKAGE.json",
+      "sha256": "bea06803190c158fef0831b2743fb9cf70ce5927cc66bc0ba2ce195513922136",
+      "bytes": 822
+    },
+    {
+      "path": "hardware_v1/experiments/EXP-DOCK-USB4-80-001/COMPARISON_PACKAGE.md",
+      "sha256": "6f3612ee598e0a59f1e02b621d9bf937f904f413ff521753f919d360f4d626b0",
+      "bytes": 839
+    },
+    {
+      "path": "hardware_v1/experiments/EXP-DOCK-USB4-80-001/METRICS.md",
+      "sha256": "3316dd83aada45686f66472f89f3b403b4163d05d5f07de4e4ad36193f7916b7",
+      "bytes": 510
+    },
+    {
+      "path": "hardware_v1/experiments/EXP-DSXL-OLED-HYBRID-001/BOM_DELTA.csv",
+      "sha256": "23b6075e866b8f5c6f30dbedccab11309c2fcfe69c3509305166565592c515ce",
+      "bytes": 183
+    },
+    {
+      "path": "hardware_v1/experiments/EXP-DSXL-OLED-HYBRID-001/COMPARISON_PACKAGE.json",
+      "sha256": "069bf16de2950e1f6337c39ed06e4fdcfd3be0b0332ecc0d8dddccb472289520",
+      "bytes": 790
+    },
+    {
+      "path": "hardware_v1/experiments/EXP-DSXL-OLED-HYBRID-001/COMPARISON_PACKAGE.md",
+      "sha256": "c073a6d93c5255a021098f2fc83533921db88617c0bfe8771c1dc0d1296257a3",
+      "bytes": 806
+    },
+    {
+      "path": "hardware_v1/experiments/EXP-DSXL-OLED-HYBRID-001/METRICS.md",
+      "sha256": "10b83119e7fc2578206cd6edbb9094a1937278bffb7fb6113624b5e369624cfd",
+      "bytes": 514
+    },
+    {
+      "path": "hardware_v1/experiments/EXP-DSXL-X100-001/BOM_DELTA.csv",
+      "sha256": "2d036145825c9868e7e1c67e5721a1a69bda9c83aaab774e4a3e13393ab2ed81",
+      "bytes": 212
+    },
+    {
+      "path": "hardware_v1/experiments/EXP-DSXL-X100-001/COMPARISON_PACKAGE.json",
+      "sha256": "f81bae0702169fe373d16aeced0771316a15603878c1e9f71d4a7999aac41fbd",
+      "bytes": 1048
+    },
+    {
+      "path": "hardware_v1/experiments/EXP-DSXL-X100-001/COMPARISON_PACKAGE.md",
+      "sha256": "c3cad17165f93cd428f48770469b0b458d5a9ce2916cc878e564bc1a1d06c9a6",
+      "bytes": 1006
+    },
+    {
+      "path": "hardware_v1/experiments/EXP-DSXL-X100-001/METRICS.md",
+      "sha256": "79a860439d9048f4188ff8fc913e4811b8533ebf9622bd49c6ee9c101b7a564a",
+      "bytes": 1053
+    },
+    {
+      "path": "hardware_v1/experiments/EXP-P100-AI-001/BOM_DELTA.csv",
+      "sha256": "93a5e8405acb0b5d4128cbfbeec95ed79271232aa173a5ff3a8a02a28a7e5f1d",
+      "bytes": 218
+    },
+    {
+      "path": "hardware_v1/experiments/EXP-P100-AI-001/COMPARISON_PACKAGE.json",
+      "sha256": "bf338ce30c6721824d254d316c29d8c75db46498f6d030f81db25d7a4328c945",
+      "bytes": 989
+    },
+    {
+      "path": "hardware_v1/experiments/EXP-P100-AI-001/COMPARISON_PACKAGE.md",
+      "sha256": "10f45b2f83c06970c124e381f37b0cbeecd8d6515c987245eb174b8f41db9977",
+      "bytes": 966
+    },
+    {
+      "path": "hardware_v1/experiments/EXP-P100-AI-001/METRICS.md",
+      "sha256": "81a4abe02c36a0efe3e88127ef59aa2900ee2673111453e1bf5855fe6896f9ec",
+      "bytes": 825
+    },
+    {
+      "path": "hardware_v1/experiments/EXP-RAUC-001/BOM_DELTA.csv",
+      "sha256": "b73c69d64e00f71e314dd334d890deba50477a773fb287658ae7658f1db06647",
+      "bytes": 173
+    },
+    {
+      "path": "hardware_v1/experiments/EXP-RAUC-001/COMPARISON_PACKAGE.json",
+      "sha256": "b2942f68a385538ea641698d243b69c4cd02ccc8d34cb03ba604a493b0960b89",
+      "bytes": 759
+    },
+    {
+      "path": "hardware_v1/experiments/EXP-RAUC-001/COMPARISON_PACKAGE.md",
+      "sha256": "96a692e96b6ac32e7e64c1e5c282cad9d513839873960ec57859a08f04d1d172",
+      "bytes": 780
+    },
+    {
       "path": "hardware_v1/experiments/EXP-RAUC-001/METRICS.md",
-      "sha256": "a03198c6fa7c181a5318940c5ce37b60f450ca118b94673eec79379cf91cdc0e",
-      "bytes": 578
+      "sha256": "f648b1c8f77e2bb16b87cea90568a666878f5a24c9c5b09598382bbd56098ef1",
+      "bytes": 505
     },
     {
       "path": "hardware_v1/experiments/EXP-RINGS-INDUCTIVE-001/BOM_DELTA.csv",
-      "sha256": "e66d2ff4c0c0351ac1772c18b99b0b1d2b6cee16069c271327f3bb10d528343b",
-      "bytes": 193
+      "sha256": "1f16d59aec001be5752af111f39b5912a3ebb417ec8683c958d142b59cfcfb4d",
+      "bytes": 208
     },
     {
       "path": "hardware_v1/experiments/EXP-RINGS-INDUCTIVE-001/COMPARISON_PACKAGE.json",
-      "sha256": "f0f4b75799a6acbb0f9766f1ce5aabc2299aa4e55a31f15db3d7c4df9ca9082a",
-      "bytes": 722
+      "sha256": "0d363248949a4966464da6aea471f459ee4187a3a161b3a798e0f31e46c01578",
+      "bytes": 841
     },
     {
       "path": "hardware_v1/experiments/EXP-RINGS-INDUCTIVE-001/COMPARISON_PACKAGE.md",
-      "sha256": "d0b24e1fbca52065ac27bcc42a73acabb4871659cc356c0aa4218f6a6b5b786a",
-      "bytes": 948
+      "sha256": "4a699e9b692f256076adb7df8397f5901994d4058a56f07a57a7d8beb2d078ed",
+      "bytes": 851
     },
     {
       "path": "hardware_v1/experiments/EXP-RINGS-INDUCTIVE-001/METRICS.md",
-      "sha256": "e590d51c36b658c4d672b2f2cbdd113233d1bbcbabde1c88aeaf8abeae964c52",
-      "bytes": 582
+      "sha256": "24ec6ede8b018be03bbf2e103c71b75868abd8f7ba5de622ca54d772d0e7f3ac",
+      "bytes": 516
     },
     {
       "path": "hardware_v1/experiments/EXP-RINGS-SEMG-001/BOM_DELTA.csv",
-      "sha256": "128693f6135b3bb812e8269eda1cd1f754ee82ad3d687b99570050386fabe98a",
-      "bytes": 188
+      "sha256": "041571147f7024d2fe74b622a6c13717ba3c392c9a4fc7a318e1ecf05ad31bab",
+      "bytes": 172
     },
     {
       "path": "hardware_v1/experiments/EXP-RINGS-SEMG-001/COMPARISON_PACKAGE.json",
-      "sha256": "fd044ac1bc3998a7d097072b602bb4fe88934cb0607c5b24c29be437dc2ccff1",
-      "bytes": 675
+      "sha256": "289234a94ac3948171479bfc62c974b14ee2c66eacf74649635e7823ace70e33",
+      "bytes": 778
     },
     {
       "path": "hardware_v1/experiments/EXP-RINGS-SEMG-001/COMPARISON_PACKAGE.md",
-      "sha256": "de9aeb671e4727f6910d8a30a1921210ed5851770b3338ac015be243ac3fe99c",
-      "bytes": 901
+      "sha256": "26cf20668d8f5784133829b492cf62a1b905f6612c7f5c66d60305aff1e9f8e7",
+      "bytes": 794
     },
     {
       "path": "hardware_v1/experiments/EXP-RINGS-SEMG-001/METRICS.md",
-      "sha256": "ae75caa4a09d60c09cecfb033c5edf1a557ab8ecd3907d28fd56d5bfed04a8b1",
-      "bytes": 577
+      "sha256": "c27d2d0d4770ead6ff1e00ff4bc4646627229e136a8bd7af6976fabb93ef1a6a",
+      "bytes": 511
     },
     {
       "path": "hardware_v1/experiments/EXP-STUDENT-OLED-001/BOM_DELTA.csv",
-      "sha256": "6ced2e4eb1cf6e752fafcc3de7b5ae86d9b951def3e998be3defd8eab7f450eb",
-      "bytes": 190
+      "sha256": "6c67fbd10f59c4e961e69a417209c2f9dcefa15f8705b2b61e8a60c3614e2208",
+      "bytes": 175
     },
     {
       "path": "hardware_v1/experiments/EXP-STUDENT-OLED-001/COMPARISON_PACKAGE.json",
-      "sha256": "798423eceac20014917bd01dff80a89bdb4210705e0e860c3f40ede875e0d891",
-      "bytes": 651
+      "sha256": "1169eab88de5912f6875a22e0c229a7f92097ced145fff6c483935214c3001fa",
+      "bytes": 771
     },
     {
       "path": "hardware_v1/experiments/EXP-STUDENT-OLED-001/COMPARISON_PACKAGE.md",
-      "sha256": "98410b16a72b8b11ee1cf38e0d9e0b6fad8c80e4788b5518d4362fa9fef4d299",
-      "bytes": 874
+      "sha256": "809a2efc2b132e029a3baffb406541e7c63376c806c0e0ac98464e73e26fc121",
+      "bytes": 786
     },
     {
       "path": "hardware_v1/experiments/EXP-STUDENT-OLED-001/METRICS.md",
-      "sha256": "78d7b9de840fe4fbe041a868505e9981c45ed6ae14564de25506a9b5dc5a8c4d",
-      "bytes": 623
+      "sha256": "564368c0f80446234724b4637a4bdbb5494abcd00a82952293078374aaaec4cf",
+      "bytes": 547
     },
     {
       "path": "hardware_v1/experiments/REGISTRY.json",
-      "sha256": "427e6eef1d875314a4754878e8bd05ab210283f863e1da7abffb9c9a55d82b9e",
-      "bytes": 5238
+      "sha256": "17aeab5da9833b0cb2fa8f09b16717cae97249f99318ce848c7d2fb11469fafc",
+      "bytes": 10466
     },
     {
       "path": "hardware_v1/experiments/REGISTRY.md",
-      "sha256": "712b832e2d1601625c7e0c02879259741988d2a6059872c05cedc746be8ba21a",
-      "bytes": 1786
+      "sha256": "ac2092542b6c973061332358341f708e46f8cca02a9a7c676a156f9634ab91ad",
+      "bytes": 433
     },
     {
       "path": "hardware_v1/firmware/FIRMWARE_SECURITY.md",
@@ -360,6 +605,101 @@
       "bytes": 481
     },
     {
+      "path": "hardware_v1/open_custom_nxp/CPB0_OPEN_PRD.md",
+      "sha256": "e4bd3adb0c68b2064aedd301b2c41b648c7b83b6edeb6fd46fe9f33895030458",
+      "bytes": 779
+    },
+    {
+      "path": "hardware_v1/open_custom_nxp/DEBUG_BRINGUP_ARCHITECTURE.md",
+      "sha256": "66e3e5e7dbfd1a42b3e04a7f7a22627dbb9f5002ef8b5bf49e7e4f080a7abd70",
+      "bytes": 519
+    },
+    {
+      "path": "hardware_v1/open_custom_nxp/DISPLAY_CAMERA_ARCHITECTURE.md",
+      "sha256": "4ac8fe5b7bfaff0d0e70203baa9e1fb779ffd4c4f6d4da754f8ac7cee452eea0",
+      "bytes": 488
+    },
+    {
+      "path": "hardware_v1/open_custom_nxp/EVT_PLAN.md",
+      "sha256": "5983716b4a5f81da4fbd1ad581230152d5041342688c04669e11d85a3cdd9957",
+      "bytes": 575
+    },
+    {
+      "path": "hardware_v1/open_custom_nxp/IMX95_PLATFORM_PROFILE.md",
+      "sha256": "c53f865e0e610b469f75f81c97ddca73a96869456cda5b1d6376241cce355125",
+      "bytes": 1484
+    },
+    {
+      "path": "hardware_v1/open_custom_nxp/MEMORY_ARCHITECTURE.md",
+      "sha256": "e8e9395867816f66d7ccd67d19f085041400870ff923f6e80d0dd8be32653ad9",
+      "bytes": 491
+    },
+    {
+      "path": "hardware_v1/open_custom_nxp/OPEN_CUSTOM_DOCTRINE.md",
+      "sha256": "4bb5d56b625a42562deea637888f89df72818d2c39398de7653c8826fba8b6e6",
+      "bytes": 1251
+    },
+    {
+      "path": "hardware_v1/open_custom_nxp/PCB_CONSTRAINT_PLAN.md",
+      "sha256": "2f8647a73eda407a36d4babf2cb92e02d14d38fb71b8e8e2bdedd9dacfae10ce",
+      "bytes": 501
+    },
+    {
+      "path": "hardware_v1/open_custom_nxp/PCIE_USB_ARCHITECTURE.md",
+      "sha256": "1890edeb2fd790cbfffd9275416a2ef78f3135ae33a091f21db14b70dec5825a",
+      "bytes": 483
+    },
+    {
+      "path": "hardware_v1/open_custom_nxp/POWER_ARCHITECTURE.md",
+      "sha256": "d830007cb3906bd47cf2ecbe7e09eaf8e1383d9402f765feb0fcd717438c007e",
+      "bytes": 588
+    },
+    {
+      "path": "hardware_v1/open_custom_nxp/PRELIMINARY_BOM.csv",
+      "sha256": "20e233ff471fbc1301f8d8db2d0c3bad1dad509afde16f870aab4474ecd2c390",
+      "bytes": 573
+    },
+    {
+      "path": "hardware_v1/open_custom_nxp/PUBLIC_COLLATERAL_GAP_REGISTER.md",
+      "sha256": "cd77999e1eda9b7f405cab560084e63f4b10b860bbbf9079ebdb09abed84fdfa",
+      "bytes": 1087
+    },
+    {
+      "path": "hardware_v1/open_custom_nxp/PUBLIC_COLLATERAL_INDEX.json",
+      "sha256": "818bf680fa3d971f66e8e4ec878ea8c8672d9aa42f01ea33830c6cfccbbe9639",
+      "bytes": 3682
+    },
+    {
+      "path": "hardware_v1/open_custom_nxp/PUBLIC_COLLATERAL_INDEX.md",
+      "sha256": "330b2ad57f941a27409ab900ccbd1085f2395668f71146a6931bc6aa8d1c6904",
+      "bytes": 2112
+    },
+    {
+      "path": "hardware_v1/open_custom_nxp/README.md",
+      "sha256": "3fb1a22ca85831bbb88436ea7c7484f5f1e7d98678f97e51b1b46c0b291d216a",
+      "bytes": 436
+    },
+    {
+      "path": "hardware_v1/open_custom_nxp/READY_FOR_FAB_CHECKLIST.md",
+      "sha256": "c8d50ffcac85e5f4b7aedff54ee6fd679e4e1e6c5329c8ff57a017974978b3f1",
+      "bytes": 636
+    },
+    {
+      "path": "hardware_v1/open_custom_nxp/SCHEMATIC_SHEET_PLAN.md",
+      "sha256": "599ec4bf6eaa9fae965bcca8d5c8e997eab5e88e2d23ee6499ef42acad769130",
+      "bytes": 608
+    },
+    {
+      "path": "hardware_v1/open_custom_nxp/SECURITY_BOOT_ARCHITECTURE.md",
+      "sha256": "bb4bd1d896c589349840d21d5da179912036c0b6c5d5800117199f59b84c6e5e",
+      "bytes": 476
+    },
+    {
+      "path": "hardware_v1/open_custom_nxp/SYSTEM_BLOCK_DIAGRAM.md",
+      "sha256": "3a5a4974a36271283367764456671ad28b4055cdfe0d0a5d42d796282cb0999b",
+      "bytes": 1073
+    },
+    {
       "path": "hardware_v1/power/POWER_BUDGET.md",
       "sha256": "78cf4147a4537862b341c212ca74392dac5ba990fa8ec5273dcab01e99e5eb17",
       "bytes": 556
@@ -401,13 +741,13 @@
     },
     {
       "path": "hardware_v1/reference_platform_0/REFERENCE_PLATFORM_0.json",
-      "sha256": "c9e40bef5699e6461737ec336fad55c1c7ec5ae2930792e9e57b9de8271bf48f",
-      "bytes": 773
+      "sha256": "f270986f0f8953098988e8a12225186c31b043b3643bbe0cd41b75b2ba77fa7e",
+      "bytes": 1225
     },
     {
       "path": "hardware_v1/reference_platform_0/REFERENCE_PLATFORM_0.md",
-      "sha256": "1e9f2ffcf61f5dd7d10117efb7213db2d5a6e6bbb38ae4f20c5f3b9cb4103154",
-      "bytes": 928
+      "sha256": "98735847745e0c37eaf57b838cd29c8aecf4b36a403286dbe90806f9b29158d7",
+      "bytes": 1176
     },
     {
       "path": "hardware_v1/reference_platform_0/RP0_A_BRINGUP_MATRIX.csv",
@@ -431,8 +771,8 @@
     },
     {
       "path": "hardware_v1/reference_platform_0/RP0_A_PROCUREMENT_GUIDE.md",
-      "sha256": "4335350860d695fbd1b2f0723132fdbfd1223fd8bd562c0eae556c050ea45870",
-      "bytes": 1225
+      "sha256": "68a40630fa3cc74ef54f8a490007d75b0685618fcc53d19c6b2287c52c43b4f3",
+      "bytes": 1712
     },
     {
       "path": "hardware_v1/reference_platform_0/RP0_STAGE_MODEL.md",
@@ -446,8 +786,8 @@
     },
     {
       "path": "hardware_v1/rings/RINGS_PRD.md",
-      "sha256": "9d2327852bee03e0a4645ceea494d428a2cef4c87bb421a1f24e3c9874ffa378",
-      "bytes": 602
+      "sha256": "20936eada15f6994517e1efb9a1f205c1e6152a20ce6f56cb1e14f9bfeef750c",
+      "bytes": 1068
     },
     {
       "path": "hardware_v1/rp0b/BLOCKER_CLOSURE_MATRIX.json",
@@ -480,6 +820,11 @@
       "bytes": 539
     },
     {
+      "path": "hardware_v1/vendor_access/AMD_CUSTOM_PLATFORM_ACCESS_PACKET.md",
+      "sha256": "c53a33c58e6a3b3c6cfc087fe75d3486a109d924dda00ddc235586a5605b1ca3",
+      "bytes": 2564
+    },
+    {
       "path": "hardware_v1/vendor_access/RP0_B_VENDOR_ACCESS_PACKET.md",
       "sha256": "bc1e12c5103f79d49c6f11d7a9e7d2b4aade82552fda0f447deb584326669613",
       "bytes": 1805
@@ -494,10 +839,5 @@
       "sha256": "acc1c71146f968107ba07ea88c8ba5247415a3922695ffdf1eda2466cf68467f",
       "bytes": 1073
     }
-  ],
-  "mainline_compute": "CUSTOM_AMD_PLATFORM_CORE_V1",
-  "com_hpc_classification": "REFERENCE_CONTROL_MODULAR_X86",
-  "custom_mainline_dir": "hardware_v1/custom_mainline/",
-  "next_owner_action": "ACQUIRE_AMD_CUSTOM_PLATFORM_COLLATERAL",
-  "optional_owner_action": "ORDER_RP0_A_COTS_CONTROL_KIT"
+  ]
 }
