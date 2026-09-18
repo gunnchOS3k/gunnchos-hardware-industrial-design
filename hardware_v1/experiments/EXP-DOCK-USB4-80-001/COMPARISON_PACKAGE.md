@@ -1,6 +1,6 @@
 # Dock USB4 80 vs USB4 40
 
-**Generated:** 2026-09-18T16:02:19Z  
+**Generated:** 2026-09-18T16:24:23Z  
 **Campaign:** `HARDWARE_1_0_MASTER_CAMPAIGN`  
 **Claim boundary:** digital architecture / EVT preparation only — not physical pass, not certification, not fab release.
 

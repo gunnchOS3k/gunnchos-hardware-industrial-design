@@ -14,6 +14,6 @@
   "promotion_gate": "Zero P0 RC1 interface breaks; measured boot on EVT mule",
   "not_in_main_bom": true,
   "schema": "gunnchos.hardware_v1.experiment.v1",
-  "generated_at_utc": "2026-09-18T16:02:19Z",
+  "generated_at_utc": "2026-09-18T16:24:23Z",
   "state": "EXPERIMENTAL_COMPARE"
 }
