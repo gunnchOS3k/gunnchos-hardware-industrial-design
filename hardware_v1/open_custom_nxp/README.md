@@ -22,3 +22,8 @@ Selected CPB0-O SoC: **MIMX9596AVZXN**
 ## Make targets
 
 `make nxp-open-audit` · `make nxp-open-validate` · `make nxp-open-gates`
+
+
+## NXP-2 (2026-09-18T22:17:56Z)
+
+Collateral-unlock continuation from accepted main `56125d1738a437f413ee4418c51c2f3a82bcbac8`. Owner UG10210/EVK BOM missing — see `owner_collateral/NXP_OWNER_COLLATERAL_INDEX.md` and `REPORT_SECTION_NXP2_A_TO_Z.md`.

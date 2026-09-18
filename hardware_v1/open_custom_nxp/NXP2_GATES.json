@@ -1,11 +1,14 @@
 {
-  "schema": "gunnchos.hardware_v1.nxp1.gates.v1",
+  "schema": "gunnchos.hardware_v1.nxp2.gates.v1",
   "generated_at_utc": "2026-09-18T22:17:56Z",
-  "campaign": "NXP1_CPB0_OPEN_DIGITAL_EDA_CLOSURE",
+  "campaign": "NXP2_CPB0_COLLATERAL_UNLOCK_EDA_CONTINUATION",
+  "accepted_main_sha": "56125d1738a437f413ee4418c51c2f3a82bcbac8",
+  "branch": "hardware/nxp-open-cpb0-collateral-unlock",
   "PRODUCT_MAINLINE": "AMD_CUSTOM_X86",
   "OPEN_ENGINEERING_MAINLINE": "NXP_IMX95_OPEN_CUSTOM",
   "GREENFIELD_EXPERIMENT": "GXE",
   "REFERENCE_CONTROL": "COM_HPC_AND_COTS",
+  "owner_collateral_authoritative_present": false,
   "NXP_OPEN_CUSTOM_TRACK_IMPLEMENTATION_STARTED": true,
   "NXP_PUBLIC_COLLATERAL_INDEX_COMPLETE": true,
   "NXP_EXACT_SOC_OPN_FROZEN": true,
@@ -47,5 +50,16 @@
   "pmic_preferred_candidate": "MPF0900AVNA1ES",
   "pmic_otp_frozen": false,
   "dram_mpn_frozen": false,
-  "hw1d1_evidence_pr80_merge_sha": "4a8aefb5fd6203842267f5adbd72b8ed324e1fac"
+  "remaining_blockers": [
+    "MISSING_UG10210",
+    "MISSING_EVK_BOM",
+    "SCHEMATIC_MULTIUNIT_INCOMPLETE",
+    "FOOTPRINT_MECH_UNVALIDATED",
+    "PLACEMENT_INCOMPLETE",
+    "ROUTING_BLOCKED",
+    "SI_PI_NO_PASS",
+    "DRC_NO_PASS",
+    "BOM_AVL_CRITICAL_MPNS_PENDING",
+    "FAB_OUTPUTS_ABSENT"
+  ]
 }

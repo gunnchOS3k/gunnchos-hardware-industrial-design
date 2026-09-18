@@ -131,24 +131,24 @@ nxp-open-validate:
 	$(PYTHON) scripts/validate_nxp_open.py
 
 nxp-open-gates:
-	@test -f hardware_v1/open_custom_nxp/NXP1_GATES.json
-	@$(PYTHON) -c "import json; g=json.load(open('hardware_v1/open_custom_nxp/NXP1_GATES.json')); keys=['NXP_OPEN_CUSTOM_TRACK_IMPLEMENTATION_STARTED','NXP_PUBLIC_COLLATERAL_INDEX_COMPLETE','NXP_PUBLIC_PINMAP_UNDERSTOOD','NXP_PUBLIC_POWER_ARCHITECTURE_UNDERSTOOD','NXP_PUBLIC_MEMORY_TOPOLOGY_UNDERSTOOD','CPB0_OPEN_SCHEMATIC_STARTED','CPB0_OPEN_SCHEMATIC_ERC_PASS','CPB0_OPEN_PCB_STARTED','CPB0_OPEN_PCB_DRC_PASS','CPB0_OPEN_READY_FOR_FAB','EVT_PENDING','DVT_PENDING','PVT_PENDING','PHYSICAL_HARDWARE_VALIDATED','NEXT_HARDWARE_ACTION'];\
+	@test -f hardware_v1/open_custom_nxp/NXP2_GATES.json
+	@$(PYTHON) -c "import json; from pathlib import Path; p=Path('hardware_v1/open_custom_nxp/NXP2_GATES.json'); g=json.loads(p.read_text()); keys=['NXP_OPEN_CUSTOM_TRACK_IMPLEMENTATION_STARTED','NXP_PUBLIC_COLLATERAL_INDEX_COMPLETE','NXP_PUBLIC_PINMAP_UNDERSTOOD','NXP_PUBLIC_POWER_ARCHITECTURE_UNDERSTOOD','NXP_PUBLIC_MEMORY_TOPOLOGY_UNDERSTOOD','CPB0_OPEN_SCHEMATIC_STARTED','CPB0_OPEN_SCHEMATIC_ERC_PASS','CPB0_OPEN_PCB_STARTED','CPB0_OPEN_PCB_DRC_PASS','CPB0_OPEN_READY_FOR_FAB','EVT_PENDING','DVT_PENDING','PVT_PENDING','PHYSICAL_HARDWARE_VALIDATED','NEXT_HARDWARE_ACTION','NEXT_OWNER_ACTION'];\
 [print(k+'='+str(g.get(k)).lower() if isinstance(g.get(k), bool) else k+'='+str(g.get(k))) for k in keys]"
 
 
-# NXP-1 CPB0-O digital EDA / fab-audit targets (public collateral — not physical)
+# NXP-1/NXP-2 CPB0-O digital EDA / fab-audit targets (public collateral — not physical)
 .PHONY: cpb0-open-symbol cpb0-open-erc cpb0-open-drc cpb0-open-release cpb0-open-fab-audit
 cpb0-open-symbol:
 	$(PYTHON) scripts/generate_imx95_kicad_symbol.py
 
 cpb0-open-erc:
-	@test -f hardware_v1/open_custom_nxp/eda/cpb0_open/ERC_REPORT.md
-	@echo "ERC gate is document-backed; see ERC_REPORT.md (no silent PASS)"
-	@$(PYTHON) -c "import json; from pathlib import Path; g=json.loads(Path('hardware_v1/open_custom_nxp/NXP1_GATES.json').read_text()); assert g.get('CPB0_OPEN_SCHEMATIC_ERC_PASS') is False or Path('hardware_v1/open_custom_nxp/eda/cpb0_open/ERC_WAIVERS.json').exists(); print('CPB0_OPEN_SCHEMATIC_ERC_PASS='+str(g.get('CPB0_OPEN_SCHEMATIC_ERC_PASS')).lower())"
+	@test -f hardware_v1/open_custom_nxp/CPB0_OPEN_ERC_REPORT.md
+	@echo "ERC gate is document-backed; see CPB0_OPEN_ERC_REPORT.md (no silent PASS)"
+	@$(PYTHON) -c "import json; from pathlib import Path; g=json.loads(Path('hardware_v1/open_custom_nxp/NXP2_GATES.json').read_text()); assert g.get('CPB0_OPEN_SCHEMATIC_ERC_PASS') is False or Path('hardware_v1/open_custom_nxp/eda/cpb0_open/ERC_WAIVERS.json').exists(); print('CPB0_OPEN_SCHEMATIC_ERC_PASS='+str(g.get('CPB0_OPEN_SCHEMATIC_ERC_PASS')).lower())"
 
 cpb0-open-drc:
-	@test -f hardware_v1/open_custom_nxp/eda/cpb0_open/DRC_REPORT.md
-	@$(PYTHON) -c "import json; from pathlib import Path; g=json.loads(Path('hardware_v1/open_custom_nxp/NXP1_GATES.json').read_text()); print('CPB0_OPEN_PCB_DRC_PASS='+str(g.get('CPB0_OPEN_PCB_DRC_PASS')).lower())"
+	@test -f hardware_v1/open_custom_nxp/CPB0_OPEN_DRC_REPORT.md
+	@$(PYTHON) -c "import json; from pathlib import Path; g=json.loads(Path('hardware_v1/open_custom_nxp/NXP2_GATES.json').read_text()); print('CPB0_OPEN_PCB_DRC_PASS='+str(g.get('CPB0_OPEN_PCB_DRC_PASS')).lower())"
 
 cpb0-open-release:
 	@test -f hardware_v1/open_custom_nxp/release/cpb0_open/A0/MANIFEST.json

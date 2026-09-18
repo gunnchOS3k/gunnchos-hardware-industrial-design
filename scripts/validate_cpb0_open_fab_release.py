@@ -9,9 +9,12 @@ NXP = ROOT / "hardware_v1" / "open_custom_nxp"
 
 def main() -> int:
     errors: list[str] = []
-    gates_path = NXP / "NXP1_GATES.json"
+    # Prefer NXP-2 campaign gates when present; else NXP-1.
+    gates_path = NXP / "NXP2_GATES.json"
     if not gates_path.exists():
-        print("FAIL: missing NXP1_GATES.json"); return 1
+        gates_path = NXP / "NXP1_GATES.json"
+    if not gates_path.exists():
+        print("FAIL: missing NXP2_GATES.json / NXP1_GATES.json"); return 1
     gates = json.loads(gates_path.read_text())
 
     # Exact SoC

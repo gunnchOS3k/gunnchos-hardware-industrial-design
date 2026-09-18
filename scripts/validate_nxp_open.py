@@ -43,6 +43,10 @@ REQUIRED = [
     "NXP_TO_AMD_TRANSFER_MAP.md",
     "CPB0_OPEN_EXPERIENCE_WORKLOAD_PLAN.md",
     "REPORT_SECTION_20_NXP0_A_TO_V.md",
+    "REPORT_SECTION_NXP2_A_TO_Z.md",
+    "NXP2_GATES.json",
+    "NXP2_STARTING_STATE.json",
+    "owner_collateral/NXP_OWNER_COLLATERAL_INDEX.json",
     "OPEN_CUSTOM_DOCTRINE.md",
     "eda/cpb0_open/cpb0_open.kicad_pro",
     "eda/cpb0_open/cpb0_open.kicad_sch",
@@ -123,6 +127,29 @@ def main() -> int:
                 fail("NEXT_HARDWARE_ACTION must be CONTINUE_CPB0_OPEN_EDA while digital work remains", errors)
         if "MIMX9596" not in str(gates.get("selected_soc_opn", "")):
             fail("selected_soc_opn must be an exact MIMX9596* OPN", errors)
+
+    # NXP-2 owner-collateral honesty
+    n2_path = NXP / "NXP2_GATES.json"
+    if n2_path.exists():
+        n2 = json.loads(n2_path.read_text())
+        if n2.get("CPB0_OPEN_READY_FOR_FAB") is True:
+            fail("NXP2_GATES must keep CPB0_OPEN_READY_FOR_FAB=false without full prerequisites", errors)
+        if n2.get("PHYSICAL_HARDWARE_VALIDATED") is True:
+            fail("NXP2_GATES PHYSICAL_HARDWARE_VALIDATED must be false", errors)
+        for pending in ("EVT_PENDING", "DVT_PENDING", "PVT_PENDING"):
+            if n2.get(pending) is not True:
+                fail(f"NXP2_GATES {pending} must be true", errors)
+        idx = NXP / "owner_collateral" / "NXP_OWNER_COLLATERAL_INDEX.json"
+        if idx.exists():
+            ix = json.loads(idx.read_text())
+            if ix.get("files_indexed_count_authoritative", 0) == 0:
+                if n2.get("NEXT_OWNER_ACTION") != "PROVIDE_MISSING_AUTHORITATIVE_NXP_COLLATERAL":
+                    fail(
+                        "missing authoritative collateral requires NEXT_OWNER_ACTION=PROVIDE_MISSING_AUTHORITATIVE_NXP_COLLATERAL",
+                        errors,
+                    )
+                if n2.get("NXP_PUBLIC_MEMORY_TOPOLOGY_UNDERSTOOD") is True:
+                    fail("cannot claim memory topology understood without UG10210/EVK collateral", errors)
         # prefer complete Table-2 code when present
         if gates.get("NXP_PUBLIC_PINMAP_UNDERSTOOD") is True:
             ball = NXP / "CPB0_OPEN_SOC_BALLMAP.csv"
