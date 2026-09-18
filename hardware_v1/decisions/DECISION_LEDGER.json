@@ -1,6 +1,6 @@
 {
   "schema": "gunnchos.hardware_v1.campaign.v1",
-  "generated_at_utc": "2026-09-18T16:02:19Z",
+  "generated_at_utc": "2026-09-18T16:24:23Z",
   "decisions": [
     {
       "id": "DEC-COMPUTE-001",
@@ -44,10 +44,11 @@
       "id": "DEC-DISPLAY-001",
       "topic": "Student / DS-XL display technology",
       "state": "ADOPTED_MAINLINE",
-      "mainline": "IPS LCD panels (single eDP Student; dual eDP DS-XL)",
-      "rationale": "Cost, brightness outdoors/desk, AVL availability; OLED isolated as experiment",
+      "mainline": "IPS LCD panels (Student: single eDP; DS-XL: one native eDP + DDI/DP second display). Not dual native eDP unless authoritative module docs prove it.",
+      "rationale": "COM-HPC-mMTL documents 1x eDP + 2x DDI; retain two functional DS-XL displays via eDP+DDI/DP. OLED isolated as experiment.",
       "evidence": [
-        "device_designs/student_14_5/bom/assembly_bom.csv"
+        "device_designs/student_14_5/bom/assembly_bom.csv",
+        "hardware_v1/devices/ds_xl/DUAL_DISPLAY_ARCHITECTURE.md"
       ],
       "experiment_alt": "EXP-STUDENT-OLED, EXP-DSXL-OLED-HYBRID",
       "owner_gate": null
@@ -68,14 +69,15 @@
       "id": "DEC-CELLULAR-001",
       "topic": "Optional cellular",
       "state": "ADOPTED_MAINLINE",
-      "mainline": "Optional Telit FN990B40-class M.2 5G Sub-6 module; Quectel RM520N-GL approved alternate",
-      "rationale": "FN990B40-class named in Hardware v1 mainline; Quectel retained as AVL alternate from prior freeze",
+      "mainline": "Optional Telit FN990B40 M.2 5G Sub-6 module exact MPN FN990B40W01T010300; Quectel RM520N-GL approved alternate",
+      "rationale": "HW1B closed AVL identity with exact MPN + live distributor/manufacturer evidence. PRODUCT_CELLULAR_ANTENNA_DESIGN_PENDING=true (dev antennas \u2260 production).",
       "evidence": [
-        "device_designs/student_14_5/bom/assembly_bom.csv"
+        "device_designs/student_14_5/bom/assembly_bom.csv",
+        "hardware_v1/radio/FN990B40_RP0_A_AVL.md"
       ],
       "experiment_alt": null,
-      "owner_gate": "PENDING_VENDOR_CONFIRMATION on FN990B40 distributor SKU + antenna kit",
-      "secondary_state": "PENDING_VENDOR_CONFIRMATION"
+      "owner_gate": "PRODUCT_CELLULAR_ANTENNA_DESIGN_PENDING",
+      "secondary_state": null
     },
     {
       "id": "DEC-DOCK-001",
@@ -94,14 +96,19 @@
       "id": "DEC-RINGS-001",
       "topic": "Rings MCU",
       "state": "ADOPTED_MAINLINE",
-      "mainline": "Nordic nRF54L15 class (BLE + LE Audio capable MCU)",
-      "rationale": "Hardware v1 mainline uplift from nRF52840 digital package; nRF52840 retained as historical evidence, not mainline BOM mix",
+      "mainline": "Nordic nRF54L15 (BLE + LE Audio). RING_EVT_ELECTRICAL_PLATFORM=QFN48/DK reference (PCA10156); RING_FORM_FACTOR_CANDIDATE=CSP47",
+      "rationale": "HW1B closed RP0-A footprint uncertainty via Nordic public DK/QFN48 files. CSP47 wearable geometry remains a separate HDI/assembly gate; DK \u2260 wearable validation.",
       "evidence": [
-        "device_designs/edge_io_rings/bom/assembly_bom.csv"
+        "device_designs/edge_io_rings/bom/assembly_bom.csv",
+        "hardware_v1/devices/rings/NRF54L15_PACKAGE_STRATEGY.md",
+        "hardware_v1/vendor_evidence/nordic/PCA10156_HW_FILES_METADATA.json"
       ],
       "experiment_alt": null,
-      "owner_gate": "PENDING_VENDOR_CONFIRMATION nRF54L15 footprint/devkit availability confirmation",
-      "secondary_state": "PENDING_VENDOR_CONFIRMATION"
+      "owner_gate": "CSP47 wearable HDI/assembly feasibility before form-factor board",
+      "secondary_state": null,
+      "RING_EVT_ELECTRICAL_PLATFORM": "QFN48/DK reference",
+      "RING_FORM_FACTOR_CANDIDATE": "CSP47",
+      "DK_HARDWARE_ID": "PCA10156"
     },
     {
       "id": "DEC-RINGS-002",
@@ -158,13 +165,14 @@
       "id": "DEC-RP0-001",
       "topic": "Reference Platform 0 scope",
       "state": "ADOPTED_MAINLINE",
-      "mainline": "Single COM-HPC Mini carrier mule + dock USB4-40 bring-up board + rings magnetic cradle EVT kit",
-      "rationale": "Minimal set to unlock measured EVT without collapsing SKUs into LCD compromise",
+      "mainline": "Two-stage RP0: RP0-A COTS Integration Bench (ADLINK Mini Base + mMTL + nRF54L15 DK + COTS USB4 dock) then RP0-B custom gunnchOS carrier/dock/ring EVT electronics",
+      "rationale": "Do not order custom PCB that is not fabrication-ready. COTS unlocks physical bring-up while vendor-gated pin maps remain RP0-B blockers.",
       "evidence": [
-        "DIGITAL_TO_PHYSICAL_HANDOFF.md"
+        "DIGITAL_TO_PHYSICAL_HANDOFF.md",
+        "hardware_v1/reference_platform_0/RP0_STAGE_MODEL.md"
       ],
       "experiment_alt": null,
-      "owner_gate": "Owner quote + build authorization (Cursor does not purchase/RFQ-send)"
+      "owner_gate": "ORDER_RP0_A_COTS_BRINGUP_KIT (Cursor does not purchase)"
     }
   ]
 }

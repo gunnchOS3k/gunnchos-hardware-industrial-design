@@ -1,16 +1,30 @@
 {
   "schema": "gunnchos.hardware_v1.rp0.v1",
   "READY_FOR_FAB": false,
+  "RP0_B_CUSTOM_READY_FOR_FAB": false,
+  "RP0_A_COTS_PROCUREMENT_PACKET_READY": true,
+  "RP0_A_READY_TO_ORDER": true,
+  "RP0_A_PHYSICAL_BUILD_PENDING": true,
+  "RP0_A_BRINGUP_PENDING": true,
   "PHYSICAL_PENDING": true,
-  "components": [
-    "com_hpc_mini_carrier_mule",
-    "dock_usb4_40",
-    "rings_magnetic_cradle"
-  ],
-  "blockers": [
-    "EXT-COM-HPC-400PIN",
-    "EXT-JHL8440-BALLMAP",
-    "OWNER-RP0-QUOTE-AUTH"
-  ],
-  "generated_at_utc": "2026-09-18T16:02:19Z"
+  "stages": {
+    "RP0_A": {
+      "type": "COTS_INTEGRATION_BENCH",
+      "components": [
+        "adlink_com_hpc_mmtl_155h_32g",
+        "adlink_com_hpc_mini_base",
+        "nrf54l15_dk_pca10156",
+        "cots_usb4_dock"
+      ]
+    },
+    "RP0_B": {
+      "type": "CUSTOM_GUNNCHOS_REFERENCE_CARRIER",
+      "blockers": [
+        "EXT-COM-HPC-400PIN",
+        "EXT-JHL8440-BALLMAP",
+        "EXT-JHL9040R-BALLMAP"
+      ]
+    }
+  },
+  "generated_at_utc": "2026-09-18T16:24:23Z"
 }
