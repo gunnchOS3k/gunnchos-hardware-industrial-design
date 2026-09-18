@@ -81,7 +81,7 @@
 **Note:** Preferred: merge DRAFT #68 with a merge commit to accept the architecture/control-plane baseline. This does NOT mean physical hardware is ready. Optional: order RP0-A COTS control kit. Parallel: acquire AMD custom platform collateral. Cursor will not merge, purchase, or accept NDAs.
 
 
-## Stream E digital exhaustion (2026-09-18T18:37:46Z)
+## Stream E digital exhaustion (2026-09-18T19:50:19Z)
 
 | Token | Value |
 |---|---|
@@ -93,3 +93,22 @@
 | `CPB0_READY_FOR_FAB` | `false` |
 
 Fab-readiness truth: digital public/local-EDA path exhausted; **not** fab-ready.
+
+## Stream F digital engineering exhaustion (prep gates)
+
+| Gate | Value | Meaning |
+|---|---|---|
+| `MECHANICAL_DIGITAL_ENGINEERING_EXHAUSTED` | TRUE | Section 15 digital mech package complete |
+| `PHYSICAL_VALIDATION_ENGINEERING_PREP_EXHAUSTED` | TRUE | Section 16 EVT/DVT/PVT packs+schemas ready |
+| `CERTIFICATION_ENGINEERING_PREP_EXHAUSTED` | TRUE | Section 17 SKU×market prep matrix ready |
+| `MANUFACTURING_ENGINEERING_PREP_EXHAUSTED` | TRUE | Section 18 CM/MES/PFMEA templates ready |
+| `ERGONOMIC_PASS` | FALSE | CAD cannot grant ergonomic pass |
+| `PHYSICALLY_VALIDATED` | FALSE | Lab execution pending |
+| `CERTIFICATION_COMPLETE` | FALSE | No marks claimed |
+| `RFQ_SENT` | FALSE | Owner transmits RFQs |
+
+Artifacts: `artifacts/digital_engineering_exhaustion/stream_f/`
+
+## Convergence note (#81 + #82)
+
+Additive union after merging accepted Stream F (`#81`) into Stream E (`#82`). Physical/fab/cert tokens remain fail-closed.

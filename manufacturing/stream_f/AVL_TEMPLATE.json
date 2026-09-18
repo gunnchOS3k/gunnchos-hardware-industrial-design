@@ -1,0 +1,24 @@
+{
+  "schema": "gunnchos.manufacturing.avl.v1",
+  "generated_at_utc": "2026-09-18T18:35:47Z",
+  "columns": [
+    "line",
+    "mpn",
+    "mfr",
+    "alt_mpn",
+    "distributor",
+    "lifecycle",
+    "rohs",
+    "reach",
+    "safety_cert_refs",
+    "approve_status"
+  ],
+  "approve_status_allowed": [
+    "CANDIDATE",
+    "APPROVED_DIGITAL",
+    "HOLD",
+    "OBSOLETE"
+  ],
+  "rows_seed": [],
+  "note": "Populate from bom/ + component_selection/; no purchase authorization."
+}

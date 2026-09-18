@@ -1,0 +1,98 @@
+{
+  "schema": "gunnchos.hw_dee.convergence_81_82.v1",
+  "generated_at_utc": "2026-09-18T19:51:49Z",
+  "purpose": "Resolve PR #82 after accepted Stream F (#81) merge into main",
+  "repo": "gunnchOS3k/gunnchos-hardware-industrial-design",
+  "pr81": {
+    "number": 81,
+    "state": "MERGED",
+    "merge_commit": "026c745653d6811b9458c0a2988143c5493e3b8b",
+    "url": "https://github.com/gunnchOS3k/gunnchos-hardware-industrial-design/pull/81"
+  },
+  "pr82": {
+    "number": 82,
+    "branch": "hardware/stream-e-digital-engineering-exhaustion",
+    "pre_merge_head": "c54d5c6834762ff3af916dc4636ef7c7a054c03b",
+    "base": "main",
+    "url": "https://github.com/gunnchOS3k/gunnchos-hardware-industrial-design/pull/82",
+    "merge_strategy": "git merge --no-ff origin/main"
+  },
+  "origin_main_at_reconcile": "026c745653d6811b9458c0a2988143c5493e3b8b",
+  "worktree": ".worktrees/stream-e-digital-engineering-exhaustion",
+  "dirty_primary_tree": true,
+  "conflicts": [
+    {
+      "path": "hardware_v1/GATES.json",
+      "resolution": "ADDITIVE_UNION",
+      "detail": "Retained all Stream E exhaustion tokens and STREAM_E_FAB_READINESS_TRUTH; added all Stream F exhaustion tokens, ERGONOMIC_PASS=false, PHYSICALLY_VALIDATED=false, and stream_f artifact pointer. Physical/fab tokens remain fail-closed."
+    },
+    {
+      "path": "hardware_v1/GATES.md",
+      "resolution": "ADDITIVE_UNION",
+      "detail": "Preserved both Stream E and Stream F documentation sections plus convergence note."
+    }
+  ],
+  "auto_merged_without_conflict_examples": [
+    "Makefile (Stream F validate-stream-f targets appended)",
+    "artifacts/digital_engineering_exhaustion/stream_f/**",
+    "hardware_v1/mechanical/**",
+    "evt_dvt_pvt/**",
+    "certification/stream_f/**",
+    "manufacturing/stream_f/**"
+  ],
+  "gates_preserved_true": {
+    "MECHANICAL_DIGITAL_ENGINEERING_EXHAUSTED": true,
+    "PHYSICAL_VALIDATION_ENGINEERING_PREP_EXHAUSTED": true,
+    "CERTIFICATION_ENGINEERING_PREP_EXHAUSTED": true,
+    "MANUFACTURING_ENGINEERING_PREP_EXHAUSTED": true,
+    "NXP_OPEN_CUSTOM_DIGITAL_ENGINEERING_EXHAUSTED": true,
+    "AMD_PUBLIC_ENGINEERING_EXHAUSTED": true,
+    "RINGS_DIGITAL_ENGINEERING_EXHAUSTED": true,
+    "DOCK_DIGITAL_ENGINEERING_EXHAUSTED": true
+  },
+  "gates_preserved_fail_closed": {
+    "CPB0_OPEN_READY_FOR_FAB": false,
+    "PHYSICAL_HARDWARE_VALIDATED": false,
+    "EVT_PENDING": true,
+    "DVT_PENDING": true,
+    "PVT_PENDING": true,
+    "CERTIFICATION_COMPLETE": false,
+    "MANUFACTURING_VALIDATED": false,
+    "RFQ_SENT": false,
+    "ERGONOMIC_PASS": false,
+    "PHYSICALLY_VALIDATED": false
+  },
+  "validation": {
+    "validate-stream-f": "PASS",
+    "hardware-v1-validate": "PASS",
+    "gate_truth_check": "PASS",
+    "nxp_open_makefile_targets_on_branch": "ABSENT (expected on PR #83)",
+    "validate-stream-e_makefile_target": "ABSENT"
+  },
+  "doctrine": {
+    "stream_f_owns": [
+      "mechanical",
+      "EVT/DVT/PVT prep",
+      "cert prep",
+      "mfg prep"
+    ],
+    "stream_e_owns": [
+      "NXP open-custom",
+      "AMD public",
+      "Rings",
+      "Dock"
+    ],
+    "no_force_push": true,
+    "no_auto_merge_pr82": true,
+    "no_fabricated_physical_evidence": true
+  },
+  "final_branch_sha": "ae6d332f3b4b3547ba2d6012498220ffa7e51b28",
+  "status_lines": {
+    "PR82_RECONCILED_WITH_STREAM_F": true,
+    "PR82_VALIDATION_PASS": true,
+    "PR82_MERGEABLE": "PENDING_PUSH_VERIFY",
+    "NEXT_OWNER_ACTION": "MERGE_PR_82_WITH_MERGE_COMMIT"
+  },
+  "reconcile_commit_message": "chore(hardware): reconcile Stream E with accepted Stream F baseline",
+  "note": "final_branch_sha is best-effort self-reference; verify with git rev-parse after push"
+}

@@ -1,0 +1,331 @@
+{
+  "schema": "gunnchos.evt_dvt_pvt.test_pack.v1",
+  "phase": "DVT",
+  "generated_at_utc": "2026-09-18T18:35:47Z",
+  "case_count": 23,
+  "cases": [
+    {
+      "id": "DVT-student_14_5-drop_durability",
+      "phase": "DVT",
+      "sku": "student_14_5",
+      "objective": "Drop / tumble durability",
+      "method": "Documented procedure; execute only on physical units",
+      "instruments": [
+        "TBD_CALIBRATED"
+      ],
+      "pass_criteria": "Written numeric limits freeze before run",
+      "evidence_schema_ref": "evt_dvt_pvt/schemas/evidence_record.schema.json",
+      "physical_pass": false,
+      "digital_prep_complete": true
+    },
+    {
+      "id": "DVT-student_14_5-env_temp_humidity",
+      "phase": "DVT",
+      "sku": "student_14_5",
+      "objective": "Environmental chamber",
+      "method": "Documented procedure; execute only on physical units",
+      "instruments": [
+        "TBD_CALIBRATED"
+      ],
+      "pass_criteria": "Written numeric limits freeze before run",
+      "evidence_schema_ref": "evt_dvt_pvt/schemas/evidence_record.schema.json",
+      "physical_pass": false,
+      "digital_prep_complete": true
+    },
+    {
+      "id": "DVT-student_14_5-battery_cycle",
+      "phase": "DVT",
+      "sku": "student_14_5",
+      "objective": "Battery cycle if applicable",
+      "method": "Documented procedure; execute only on physical units",
+      "instruments": [
+        "TBD_CALIBRATED"
+      ],
+      "pass_criteria": "Written numeric limits freeze before run",
+      "evidence_schema_ref": "evt_dvt_pvt/schemas/evidence_record.schema.json",
+      "physical_pass": false,
+      "digital_prep_complete": true
+    },
+    {
+      "id": "DVT-student_14_5-emc_prescan",
+      "phase": "DVT",
+      "sku": "student_14_5",
+      "objective": "Pre-scan EMC",
+      "method": "Documented procedure; execute only on physical units",
+      "instruments": [
+        "TBD_CALIBRATED"
+      ],
+      "pass_criteria": "Written numeric limits freeze before run",
+      "evidence_schema_ref": "evt_dvt_pvt/schemas/evidence_record.schema.json",
+      "physical_pass": false,
+      "digital_prep_complete": true
+    },
+    {
+      "id": "DVT-student_14_5-display_input",
+      "phase": "DVT",
+      "sku": "student_14_5",
+      "objective": "Display/input soak",
+      "method": "Documented procedure; execute only on physical units",
+      "instruments": [
+        "TBD_CALIBRATED"
+      ],
+      "pass_criteria": "Written numeric limits freeze before run",
+      "evidence_schema_ref": "evt_dvt_pvt/schemas/evidence_record.schema.json",
+      "physical_pass": false,
+      "digital_prep_complete": true
+    },
+    {
+      "id": "DVT-handheld_hybrid-drop_durability",
+      "phase": "DVT",
+      "sku": "handheld_hybrid",
+      "objective": "Drop / tumble durability",
+      "method": "Documented procedure; execute only on physical units",
+      "instruments": [
+        "TBD_CALIBRATED"
+      ],
+      "pass_criteria": "Written numeric limits freeze before run",
+      "evidence_schema_ref": "evt_dvt_pvt/schemas/evidence_record.schema.json",
+      "physical_pass": false,
+      "digital_prep_complete": true
+    },
+    {
+      "id": "DVT-handheld_hybrid-env_temp_humidity",
+      "phase": "DVT",
+      "sku": "handheld_hybrid",
+      "objective": "Environmental chamber",
+      "method": "Documented procedure; execute only on physical units",
+      "instruments": [
+        "TBD_CALIBRATED"
+      ],
+      "pass_criteria": "Written numeric limits freeze before run",
+      "evidence_schema_ref": "evt_dvt_pvt/schemas/evidence_record.schema.json",
+      "physical_pass": false,
+      "digital_prep_complete": true
+    },
+    {
+      "id": "DVT-handheld_hybrid-battery_cycle",
+      "phase": "DVT",
+      "sku": "handheld_hybrid",
+      "objective": "Battery cycle if applicable",
+      "method": "Documented procedure; execute only on physical units",
+      "instruments": [
+        "TBD_CALIBRATED"
+      ],
+      "pass_criteria": "Written numeric limits freeze before run",
+      "evidence_schema_ref": "evt_dvt_pvt/schemas/evidence_record.schema.json",
+      "physical_pass": false,
+      "digital_prep_complete": true
+    },
+    {
+      "id": "DVT-handheld_hybrid-emc_prescan",
+      "phase": "DVT",
+      "sku": "handheld_hybrid",
+      "objective": "Pre-scan EMC",
+      "method": "Documented procedure; execute only on physical units",
+      "instruments": [
+        "TBD_CALIBRATED"
+      ],
+      "pass_criteria": "Written numeric limits freeze before run",
+      "evidence_schema_ref": "evt_dvt_pvt/schemas/evidence_record.schema.json",
+      "physical_pass": false,
+      "digital_prep_complete": true
+    },
+    {
+      "id": "DVT-handheld_hybrid-display_input",
+      "phase": "DVT",
+      "sku": "handheld_hybrid",
+      "objective": "Display/input soak",
+      "method": "Documented procedure; execute only on physical units",
+      "instruments": [
+        "TBD_CALIBRATED"
+      ],
+      "pass_criteria": "Written numeric limits freeze before run",
+      "evidence_schema_ref": "evt_dvt_pvt/schemas/evidence_record.schema.json",
+      "physical_pass": false,
+      "digital_prep_complete": true
+    },
+    {
+      "id": "DVT-ds_xl_coder-drop_durability",
+      "phase": "DVT",
+      "sku": "ds_xl_coder",
+      "objective": "Drop / tumble durability",
+      "method": "Documented procedure; execute only on physical units",
+      "instruments": [
+        "TBD_CALIBRATED"
+      ],
+      "pass_criteria": "Written numeric limits freeze before run",
+      "evidence_schema_ref": "evt_dvt_pvt/schemas/evidence_record.schema.json",
+      "physical_pass": false,
+      "digital_prep_complete": true
+    },
+    {
+      "id": "DVT-ds_xl_coder-env_temp_humidity",
+      "phase": "DVT",
+      "sku": "ds_xl_coder",
+      "objective": "Environmental chamber",
+      "method": "Documented procedure; execute only on physical units",
+      "instruments": [
+        "TBD_CALIBRATED"
+      ],
+      "pass_criteria": "Written numeric limits freeze before run",
+      "evidence_schema_ref": "evt_dvt_pvt/schemas/evidence_record.schema.json",
+      "physical_pass": false,
+      "digital_prep_complete": true
+    },
+    {
+      "id": "DVT-ds_xl_coder-emc_prescan",
+      "phase": "DVT",
+      "sku": "ds_xl_coder",
+      "objective": "Pre-scan EMC",
+      "method": "Documented procedure; execute only on physical units",
+      "instruments": [
+        "TBD_CALIBRATED"
+      ],
+      "pass_criteria": "Written numeric limits freeze before run",
+      "evidence_schema_ref": "evt_dvt_pvt/schemas/evidence_record.schema.json",
+      "physical_pass": false,
+      "digital_prep_complete": true
+    },
+    {
+      "id": "DVT-ds_xl_coder-display_input",
+      "phase": "DVT",
+      "sku": "ds_xl_coder",
+      "objective": "Display/input soak",
+      "method": "Documented procedure; execute only on physical units",
+      "instruments": [
+        "TBD_CALIBRATED"
+      ],
+      "pass_criteria": "Written numeric limits freeze before run",
+      "evidence_schema_ref": "evt_dvt_pvt/schemas/evidence_record.schema.json",
+      "physical_pass": false,
+      "digital_prep_complete": true
+    },
+    {
+      "id": "DVT-edge_io_rings-drop_durability",
+      "phase": "DVT",
+      "sku": "edge_io_rings",
+      "objective": "Drop / tumble durability",
+      "method": "Documented procedure; execute only on physical units",
+      "instruments": [
+        "TBD_CALIBRATED"
+      ],
+      "pass_criteria": "Written numeric limits freeze before run",
+      "evidence_schema_ref": "evt_dvt_pvt/schemas/evidence_record.schema.json",
+      "physical_pass": false,
+      "digital_prep_complete": true
+    },
+    {
+      "id": "DVT-edge_io_rings-env_temp_humidity",
+      "phase": "DVT",
+      "sku": "edge_io_rings",
+      "objective": "Environmental chamber",
+      "method": "Documented procedure; execute only on physical units",
+      "instruments": [
+        "TBD_CALIBRATED"
+      ],
+      "pass_criteria": "Written numeric limits freeze before run",
+      "evidence_schema_ref": "evt_dvt_pvt/schemas/evidence_record.schema.json",
+      "physical_pass": false,
+      "digital_prep_complete": true
+    },
+    {
+      "id": "DVT-edge_io_rings-battery_cycle",
+      "phase": "DVT",
+      "sku": "edge_io_rings",
+      "objective": "Battery cycle if applicable",
+      "method": "Documented procedure; execute only on physical units",
+      "instruments": [
+        "TBD_CALIBRATED"
+      ],
+      "pass_criteria": "Written numeric limits freeze before run",
+      "evidence_schema_ref": "evt_dvt_pvt/schemas/evidence_record.schema.json",
+      "physical_pass": false,
+      "digital_prep_complete": true
+    },
+    {
+      "id": "DVT-edge_io_rings-emc_prescan",
+      "phase": "DVT",
+      "sku": "edge_io_rings",
+      "objective": "Pre-scan EMC",
+      "method": "Documented procedure; execute only on physical units",
+      "instruments": [
+        "TBD_CALIBRATED"
+      ],
+      "pass_criteria": "Written numeric limits freeze before run",
+      "evidence_schema_ref": "evt_dvt_pvt/schemas/evidence_record.schema.json",
+      "physical_pass": false,
+      "digital_prep_complete": true
+    },
+    {
+      "id": "DVT-edge_io_rings-display_input",
+      "phase": "DVT",
+      "sku": "edge_io_rings",
+      "objective": "Display/input soak",
+      "method": "Documented procedure; execute only on physical units",
+      "instruments": [
+        "TBD_CALIBRATED"
+      ],
+      "pass_criteria": "Written numeric limits freeze before run",
+      "evidence_schema_ref": "evt_dvt_pvt/schemas/evidence_record.schema.json",
+      "physical_pass": false,
+      "digital_prep_complete": true
+    },
+    {
+      "id": "DVT-dock-drop_durability",
+      "phase": "DVT",
+      "sku": "dock",
+      "objective": "Drop / tumble durability",
+      "method": "Documented procedure; execute only on physical units",
+      "instruments": [
+        "TBD_CALIBRATED"
+      ],
+      "pass_criteria": "Written numeric limits freeze before run",
+      "evidence_schema_ref": "evt_dvt_pvt/schemas/evidence_record.schema.json",
+      "physical_pass": false,
+      "digital_prep_complete": true
+    },
+    {
+      "id": "DVT-dock-env_temp_humidity",
+      "phase": "DVT",
+      "sku": "dock",
+      "objective": "Environmental chamber",
+      "method": "Documented procedure; execute only on physical units",
+      "instruments": [
+        "TBD_CALIBRATED"
+      ],
+      "pass_criteria": "Written numeric limits freeze before run",
+      "evidence_schema_ref": "evt_dvt_pvt/schemas/evidence_record.schema.json",
+      "physical_pass": false,
+      "digital_prep_complete": true
+    },
+    {
+      "id": "DVT-dock-emc_prescan",
+      "phase": "DVT",
+      "sku": "dock",
+      "objective": "Pre-scan EMC",
+      "method": "Documented procedure; execute only on physical units",
+      "instruments": [
+        "TBD_CALIBRATED"
+      ],
+      "pass_criteria": "Written numeric limits freeze before run",
+      "evidence_schema_ref": "evt_dvt_pvt/schemas/evidence_record.schema.json",
+      "physical_pass": false,
+      "digital_prep_complete": true
+    },
+    {
+      "id": "DVT-dock-display_input",
+      "phase": "DVT",
+      "sku": "dock",
+      "objective": "Display/input soak",
+      "method": "Documented procedure; execute only on physical units",
+      "instruments": [
+        "TBD_CALIBRATED"
+      ],
+      "pass_criteria": "Written numeric limits freeze before run",
+      "evidence_schema_ref": "evt_dvt_pvt/schemas/evidence_record.schema.json",
+      "physical_pass": false,
+      "digital_prep_complete": true
+    }
+  ],
+  "physical_pass": false
+}

@@ -1,6 +1,6 @@
 {
   "schema": "gunnchos.hardware_v1.gates.v1",
-  "generated_at_utc": "2026-09-18T18:37:46Z",
+  "generated_at_utc": "2026-09-18T19:50:19Z",
   "campaign": "HARDWARE_1_0D_FOUR_TRACK_CONVERGENCE_MERGE_READINESS",
   "campaign_overlay": "STREAM_E_DIGITAL_HARDWARE_ENGINEERING_EXHAUSTION",
   "HW_ARCHITECTURE_BASELINE_MERGE_READY": true,
@@ -173,5 +173,16 @@
     "RINGS_READY_FOR_FAB": false,
     "DOCK_NO_NDA_READY_FOR_FAB": false,
     "reason": "Digital exhaustion complete; physical/guide/AVL/NDA gaps remain"
+  },
+  "campaign_overlay_note": "Reconciled with accepted Stream F (#81) baseline; additive gate union",
+  "MECHANICAL_DIGITAL_ENGINEERING_EXHAUSTED": true,
+  "PHYSICAL_VALIDATION_ENGINEERING_PREP_EXHAUSTED": true,
+  "CERTIFICATION_ENGINEERING_PREP_EXHAUSTED": true,
+  "MANUFACTURING_ENGINEERING_PREP_EXHAUSTED": true,
+  "ERGONOMIC_PASS": false,
+  "PHYSICALLY_VALIDATED": false,
+  "stream_f": {
+    "generated_at_utc": "2026-09-18T18:35:47Z",
+    "artifacts": "artifacts/digital_engineering_exhaustion/stream_f/"
   }
 }

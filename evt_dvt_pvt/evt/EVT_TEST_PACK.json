@@ -1,0 +1,345 @@
+{
+  "schema": "gunnchos.evt_dvt_pvt.test_pack.v1",
+  "phase": "EVT",
+  "generated_at_utc": "2026-09-18T18:35:47Z",
+  "case_count": 24,
+  "cases": [
+    {
+      "id": "EVT-student_14_5-bringup_power",
+      "phase": "EVT",
+      "sku": "student_14_5",
+      "objective": "First-power rails + UVLO",
+      "method": "Documented procedure; execute only on physical units",
+      "instruments": [
+        "TBD_CALIBRATED"
+      ],
+      "pass_criteria": "Written numeric limits freeze before run",
+      "evidence_schema_ref": "evt_dvt_pvt/schemas/evidence_record.schema.json",
+      "physical_pass": false,
+      "digital_prep_complete": true
+    },
+    {
+      "id": "EVT-student_14_5-fit_check",
+      "phase": "EVT",
+      "sku": "student_14_5",
+      "objective": "Mechanical fit to enclosure mule",
+      "method": "Documented procedure; execute only on physical units",
+      "instruments": [
+        "TBD_CALIBRATED"
+      ],
+      "pass_criteria": "Written numeric limits freeze before run",
+      "evidence_schema_ref": "evt_dvt_pvt/schemas/evidence_record.schema.json",
+      "physical_pass": false,
+      "digital_prep_complete": true
+    },
+    {
+      "id": "EVT-student_14_5-boot_console",
+      "phase": "EVT",
+      "sku": "student_14_5",
+      "objective": "Serial/OS bring-up smoke",
+      "method": "Documented procedure; execute only on physical units",
+      "instruments": [
+        "TBD_CALIBRATED"
+      ],
+      "pass_criteria": "Written numeric limits freeze before run",
+      "evidence_schema_ref": "evt_dvt_pvt/schemas/evidence_record.schema.json",
+      "physical_pass": false,
+      "digital_prep_complete": true
+    },
+    {
+      "id": "EVT-student_14_5-thermal_spot",
+      "phase": "EVT",
+      "sku": "student_14_5",
+      "objective": "Spot thermal under load",
+      "method": "Documented procedure; execute only on physical units",
+      "instruments": [
+        "TBD_CALIBRATED"
+      ],
+      "pass_criteria": "Written numeric limits freeze before run",
+      "evidence_schema_ref": "evt_dvt_pvt/schemas/evidence_record.schema.json",
+      "physical_pass": false,
+      "digital_prep_complete": true
+    },
+    {
+      "id": "EVT-student_14_5-rf_smoke",
+      "phase": "EVT",
+      "sku": "student_14_5",
+      "objective": "Radio smoke if SKU has radios",
+      "method": "Documented procedure; execute only on physical units",
+      "instruments": [
+        "TBD_CALIBRATED"
+      ],
+      "pass_criteria": "Written numeric limits freeze before run",
+      "evidence_schema_ref": "evt_dvt_pvt/schemas/evidence_record.schema.json",
+      "physical_pass": false,
+      "digital_prep_complete": true
+    },
+    {
+      "id": "EVT-handheld_hybrid-bringup_power",
+      "phase": "EVT",
+      "sku": "handheld_hybrid",
+      "objective": "First-power rails + UVLO",
+      "method": "Documented procedure; execute only on physical units",
+      "instruments": [
+        "TBD_CALIBRATED"
+      ],
+      "pass_criteria": "Written numeric limits freeze before run",
+      "evidence_schema_ref": "evt_dvt_pvt/schemas/evidence_record.schema.json",
+      "physical_pass": false,
+      "digital_prep_complete": true
+    },
+    {
+      "id": "EVT-handheld_hybrid-fit_check",
+      "phase": "EVT",
+      "sku": "handheld_hybrid",
+      "objective": "Mechanical fit to enclosure mule",
+      "method": "Documented procedure; execute only on physical units",
+      "instruments": [
+        "TBD_CALIBRATED"
+      ],
+      "pass_criteria": "Written numeric limits freeze before run",
+      "evidence_schema_ref": "evt_dvt_pvt/schemas/evidence_record.schema.json",
+      "physical_pass": false,
+      "digital_prep_complete": true
+    },
+    {
+      "id": "EVT-handheld_hybrid-boot_console",
+      "phase": "EVT",
+      "sku": "handheld_hybrid",
+      "objective": "Serial/OS bring-up smoke",
+      "method": "Documented procedure; execute only on physical units",
+      "instruments": [
+        "TBD_CALIBRATED"
+      ],
+      "pass_criteria": "Written numeric limits freeze before run",
+      "evidence_schema_ref": "evt_dvt_pvt/schemas/evidence_record.schema.json",
+      "physical_pass": false,
+      "digital_prep_complete": true
+    },
+    {
+      "id": "EVT-handheld_hybrid-thermal_spot",
+      "phase": "EVT",
+      "sku": "handheld_hybrid",
+      "objective": "Spot thermal under load",
+      "method": "Documented procedure; execute only on physical units",
+      "instruments": [
+        "TBD_CALIBRATED"
+      ],
+      "pass_criteria": "Written numeric limits freeze before run",
+      "evidence_schema_ref": "evt_dvt_pvt/schemas/evidence_record.schema.json",
+      "physical_pass": false,
+      "digital_prep_complete": true
+    },
+    {
+      "id": "EVT-handheld_hybrid-rf_smoke",
+      "phase": "EVT",
+      "sku": "handheld_hybrid",
+      "objective": "Radio smoke if SKU has radios",
+      "method": "Documented procedure; execute only on physical units",
+      "instruments": [
+        "TBD_CALIBRATED"
+      ],
+      "pass_criteria": "Written numeric limits freeze before run",
+      "evidence_schema_ref": "evt_dvt_pvt/schemas/evidence_record.schema.json",
+      "physical_pass": false,
+      "digital_prep_complete": true
+    },
+    {
+      "id": "EVT-ds_xl_coder-bringup_power",
+      "phase": "EVT",
+      "sku": "ds_xl_coder",
+      "objective": "First-power rails + UVLO",
+      "method": "Documented procedure; execute only on physical units",
+      "instruments": [
+        "TBD_CALIBRATED"
+      ],
+      "pass_criteria": "Written numeric limits freeze before run",
+      "evidence_schema_ref": "evt_dvt_pvt/schemas/evidence_record.schema.json",
+      "physical_pass": false,
+      "digital_prep_complete": true
+    },
+    {
+      "id": "EVT-ds_xl_coder-fit_check",
+      "phase": "EVT",
+      "sku": "ds_xl_coder",
+      "objective": "Mechanical fit to enclosure mule",
+      "method": "Documented procedure; execute only on physical units",
+      "instruments": [
+        "TBD_CALIBRATED"
+      ],
+      "pass_criteria": "Written numeric limits freeze before run",
+      "evidence_schema_ref": "evt_dvt_pvt/schemas/evidence_record.schema.json",
+      "physical_pass": false,
+      "digital_prep_complete": true
+    },
+    {
+      "id": "EVT-ds_xl_coder-boot_console",
+      "phase": "EVT",
+      "sku": "ds_xl_coder",
+      "objective": "Serial/OS bring-up smoke",
+      "method": "Documented procedure; execute only on physical units",
+      "instruments": [
+        "TBD_CALIBRATED"
+      ],
+      "pass_criteria": "Written numeric limits freeze before run",
+      "evidence_schema_ref": "evt_dvt_pvt/schemas/evidence_record.schema.json",
+      "physical_pass": false,
+      "digital_prep_complete": true
+    },
+    {
+      "id": "EVT-ds_xl_coder-thermal_spot",
+      "phase": "EVT",
+      "sku": "ds_xl_coder",
+      "objective": "Spot thermal under load",
+      "method": "Documented procedure; execute only on physical units",
+      "instruments": [
+        "TBD_CALIBRATED"
+      ],
+      "pass_criteria": "Written numeric limits freeze before run",
+      "evidence_schema_ref": "evt_dvt_pvt/schemas/evidence_record.schema.json",
+      "physical_pass": false,
+      "digital_prep_complete": true
+    },
+    {
+      "id": "EVT-ds_xl_coder-rf_smoke",
+      "phase": "EVT",
+      "sku": "ds_xl_coder",
+      "objective": "Radio smoke if SKU has radios",
+      "method": "Documented procedure; execute only on physical units",
+      "instruments": [
+        "TBD_CALIBRATED"
+      ],
+      "pass_criteria": "Written numeric limits freeze before run",
+      "evidence_schema_ref": "evt_dvt_pvt/schemas/evidence_record.schema.json",
+      "physical_pass": false,
+      "digital_prep_complete": true
+    },
+    {
+      "id": "EVT-edge_io_rings-bringup_power",
+      "phase": "EVT",
+      "sku": "edge_io_rings",
+      "objective": "First-power rails + UVLO",
+      "method": "Documented procedure; execute only on physical units",
+      "instruments": [
+        "TBD_CALIBRATED"
+      ],
+      "pass_criteria": "Written numeric limits freeze before run",
+      "evidence_schema_ref": "evt_dvt_pvt/schemas/evidence_record.schema.json",
+      "physical_pass": false,
+      "digital_prep_complete": true
+    },
+    {
+      "id": "EVT-edge_io_rings-fit_check",
+      "phase": "EVT",
+      "sku": "edge_io_rings",
+      "objective": "Mechanical fit to enclosure mule",
+      "method": "Documented procedure; execute only on physical units",
+      "instruments": [
+        "TBD_CALIBRATED"
+      ],
+      "pass_criteria": "Written numeric limits freeze before run",
+      "evidence_schema_ref": "evt_dvt_pvt/schemas/evidence_record.schema.json",
+      "physical_pass": false,
+      "digital_prep_complete": true
+    },
+    {
+      "id": "EVT-edge_io_rings-boot_console",
+      "phase": "EVT",
+      "sku": "edge_io_rings",
+      "objective": "Serial/OS bring-up smoke",
+      "method": "Documented procedure; execute only on physical units",
+      "instruments": [
+        "TBD_CALIBRATED"
+      ],
+      "pass_criteria": "Written numeric limits freeze before run",
+      "evidence_schema_ref": "evt_dvt_pvt/schemas/evidence_record.schema.json",
+      "physical_pass": false,
+      "digital_prep_complete": true
+    },
+    {
+      "id": "EVT-edge_io_rings-thermal_spot",
+      "phase": "EVT",
+      "sku": "edge_io_rings",
+      "objective": "Spot thermal under load",
+      "method": "Documented procedure; execute only on physical units",
+      "instruments": [
+        "TBD_CALIBRATED"
+      ],
+      "pass_criteria": "Written numeric limits freeze before run",
+      "evidence_schema_ref": "evt_dvt_pvt/schemas/evidence_record.schema.json",
+      "physical_pass": false,
+      "digital_prep_complete": true
+    },
+    {
+      "id": "EVT-edge_io_rings-rf_smoke",
+      "phase": "EVT",
+      "sku": "edge_io_rings",
+      "objective": "Radio smoke if SKU has radios",
+      "method": "Documented procedure; execute only on physical units",
+      "instruments": [
+        "TBD_CALIBRATED"
+      ],
+      "pass_criteria": "Written numeric limits freeze before run",
+      "evidence_schema_ref": "evt_dvt_pvt/schemas/evidence_record.schema.json",
+      "physical_pass": false,
+      "digital_prep_complete": true
+    },
+    {
+      "id": "EVT-dock-bringup_power",
+      "phase": "EVT",
+      "sku": "dock",
+      "objective": "First-power rails + UVLO",
+      "method": "Documented procedure; execute only on physical units",
+      "instruments": [
+        "TBD_CALIBRATED"
+      ],
+      "pass_criteria": "Written numeric limits freeze before run",
+      "evidence_schema_ref": "evt_dvt_pvt/schemas/evidence_record.schema.json",
+      "physical_pass": false,
+      "digital_prep_complete": true
+    },
+    {
+      "id": "EVT-dock-fit_check",
+      "phase": "EVT",
+      "sku": "dock",
+      "objective": "Mechanical fit to enclosure mule",
+      "method": "Documented procedure; execute only on physical units",
+      "instruments": [
+        "TBD_CALIBRATED"
+      ],
+      "pass_criteria": "Written numeric limits freeze before run",
+      "evidence_schema_ref": "evt_dvt_pvt/schemas/evidence_record.schema.json",
+      "physical_pass": false,
+      "digital_prep_complete": true
+    },
+    {
+      "id": "EVT-dock-boot_console",
+      "phase": "EVT",
+      "sku": "dock",
+      "objective": "Serial/OS bring-up smoke",
+      "method": "Documented procedure; execute only on physical units",
+      "instruments": [
+        "TBD_CALIBRATED"
+      ],
+      "pass_criteria": "Written numeric limits freeze before run",
+      "evidence_schema_ref": "evt_dvt_pvt/schemas/evidence_record.schema.json",
+      "physical_pass": false,
+      "digital_prep_complete": true
+    },
+    {
+      "id": "EVT-dock-thermal_spot",
+      "phase": "EVT",
+      "sku": "dock",
+      "objective": "Spot thermal under load",
+      "method": "Documented procedure; execute only on physical units",
+      "instruments": [
+        "TBD_CALIBRATED"
+      ],
+      "pass_criteria": "Written numeric limits freeze before run",
+      "evidence_schema_ref": "evt_dvt_pvt/schemas/evidence_record.schema.json",
+      "physical_pass": false,
+      "digital_prep_complete": true
+    }
+  ],
+  "physical_pass": false
+}

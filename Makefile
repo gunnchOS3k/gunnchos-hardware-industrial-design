@@ -122,3 +122,9 @@ hardware-v1-report:
 	@echo "Report: hardware_v1/REPORT_SECTION_17_HW1D_A_TO_T.md"
 
 hardware-v1-all: hardware-v1-generate hardware-v1-validate hardware-v1-gates hardware-v1-report
+
+.PHONY: validate-stream-f bootstrap-stream-f
+bootstrap-stream-f:
+	$(PYTHON) scripts/bootstrap_stream_f_exhaustion.py
+validate-stream-f:
+	$(PYTHON) scripts/validate_stream_f_exhaustion.py

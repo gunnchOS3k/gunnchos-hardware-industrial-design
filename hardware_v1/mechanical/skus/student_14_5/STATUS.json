@@ -1,0 +1,19 @@
+{
+  "schema": "gunnchos.mechanical.sku_status.v1",
+  "sku": "student_14_5",
+  "label": "Student 14.5",
+  "generated_at_utc": "2026-09-18T18:35:47Z",
+  "ENCLOSURE_CAD_DIGITAL": true,
+  "TOLERANCE_STACK_DIGITAL": true,
+  "CONNECTOR_ENVELOPE_DIGITAL": true,
+  "SERVICE_PLAN_DIGITAL": true,
+  "THERMAL_VENT_PLAN_DIGITAL": true,
+  "ANTENNA_KEEPOUT_DIGITAL": true,
+  "EXPLODED_VIEW_DIGITAL": true,
+  "DFM_DFA_DIGITAL": true,
+  "DRAWING_PACKAGE_DIGITAL": true,
+  "ERGONOMIC_PASS": false,
+  "PHYSICAL_FIT_PASS": false,
+  "FIRST_ARTICLE_PRINT_PASS": false,
+  "claim": "DIGITAL_PREP_ONLY"
+}
