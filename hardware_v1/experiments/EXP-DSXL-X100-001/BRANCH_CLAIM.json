@@ -1,0 +1,12 @@
+{
+  "branch": "hardware/exp-dsxl-x100",
+  "experiment_id": "EXP-DSXL-X100-001",
+  "title": "DS-XL Ryzen AI Embedded X100-class vs 8845HS mainline",
+  "base": "hardware/v1-mainline-ready-for-evt",
+  "base_sha": "628eacd8f35a2a509f36592c392b6aba88b6c4f8",
+  "state": "EXPERIMENTAL_COMPARE",
+  "not_in_main_bom": true,
+  "comparison_package": "hardware_v1/experiments/EXP-DSXL-X100-001/COMPARISON_PACKAGE.md",
+  "refreshed_at_utc": "2026-09-18T16:50:34Z",
+  "campaign": "HARDWARE_1_0C_CUSTOM_FIRST_MAINLINE_PIVOT"
+}
