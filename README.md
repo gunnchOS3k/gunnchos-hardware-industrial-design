@@ -122,3 +122,11 @@ Practical OS/firmware handoff docs remain below and under `os_compatibility/`, `
 - [os_compatibility/README.md](os_compatibility/README.md)
 - [firmware/README.md](firmware/README.md)
 - OpenSCAD under `cad/openscad/`
+
+## Feedback & Suggestions
+
+Tried this project? File public feedback via the ecosystem hub:
+
+https://github.com/gunnchOS3k/gunnchos-research-portal/blob/main/FEEDBACK.md
+
+Security vulnerabilities: private only — https://github.com/gunnchOS3k/gunnchos-research-portal/blob/main/SECURITY.md

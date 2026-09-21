@@ -20,9 +20,11 @@ def main() -> int:
     for f in files:
         print(f"  {f}")
 
-    gates_path = NXP / "NXP0_GATES.json"
+    gates_path = NXP / "NXP2_GATES.json"
     if not gates_path.exists():
-        print("FAIL: NXP0_GATES.json missing")
+        gates_path = NXP / "NXP0_GATES.json"
+    if not gates_path.exists():
+        print("FAIL: NXP2_GATES.json / NXP0_GATES.json missing")
         return 1
     g = json.loads(gates_path.read_text())
     keys = [
@@ -41,6 +43,7 @@ def main() -> int:
         "PVT_PENDING",
         "PHYSICAL_HARDWARE_VALIDATED",
         "NEXT_HARDWARE_ACTION",
+        "NEXT_OWNER_ACTION",
     ]
     print("--- token block ---")
     for k in keys:

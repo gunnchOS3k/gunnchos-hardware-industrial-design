@@ -1,0 +1,22 @@
+{
+  "schema": "gunnchos.hardware.cpb0_open.footprint_validation.v1",
+  "generated_at_utc": "2026-09-18T22:17:56Z",
+  "campaign": "NXP2_CPB0_COLLATERAL_UNLOCK_EDA_CONTINUATION",
+  "imx95_fcbga": {
+    "footprint": "eda/cpb0_open/lib/gunnchos_imx95.pretty/IMX95_FCBGA_19x19_0P7.kicad_mod",
+    "ballmap_source": "CPB0_OPEN_SOC_BALLMAP.csv",
+    "mechanical_drawing_present": false,
+    "validated_vs_mechanical": false,
+    "ball_count_from_ballmap": "see CSV",
+    "checks": {
+      "ball_count": "GENERATED_FROM_BALLMAP_ONLY",
+      "pitch": "0.7mm_assumed_from_public_package_class",
+      "body_dimensions": "UNVALIDATED_NO_MECH_DWG",
+      "pad_diameter": "UNVALIDATED_NO_MECH_DWG",
+      "courtyard": "UNVALIDATED",
+      "pin1_orientation": "UNVALIDATED_NO_MECH_DWG"
+    }
+  },
+  "pmic_lpddr_connectors": "NOT_VALIDATED",
+  "CPB0_OPEN_FOOTPRINT_LIBRARY_VALIDATED": false
+}

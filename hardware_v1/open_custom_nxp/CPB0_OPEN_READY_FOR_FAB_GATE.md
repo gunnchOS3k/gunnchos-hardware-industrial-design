@@ -27,3 +27,8 @@ Set `CPB0_OPEN_READY_FOR_FAB=true` **only** when all are true:
 ## This campaign
 
 **`CPB0_OPEN_READY_FOR_FAB=false`** (allowed).
+
+
+## NXP-2 (2026-09-18T22:17:56Z)
+
+Owner UG10210/EVK BOM still missing. All section-13 prerequisites evaluated; **`CPB0_OPEN_READY_FOR_FAB=false`** with no exceptions.

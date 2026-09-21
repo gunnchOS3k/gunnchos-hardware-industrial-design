@@ -1,5 +1,5 @@
-# Release package A0 — NOT FAB COMPLETE
+# CPB0-O release A0 (NXP-2)
 
-Digital campaign did **not** generate Gerbers because schematic ERC / PCB DRC / DDR rules remain incomplete.
+`fab_outputs_present=false`
 
-Placeholder only. Do not send to fabricator.
+Fab outputs intentionally not generated while ERC/DRC/BOM/DDR prerequisites remain false.

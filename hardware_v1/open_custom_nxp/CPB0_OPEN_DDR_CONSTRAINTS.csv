@@ -1,0 +1,14 @@
+parameter,value,unit,source_document,source_section,source_page,confidence
+interface_width,x32,bits,IMX95IEC,package/memory summary,public,HIGH_PUBLIC
+max_rate_19x19_lpddr5,6400,MT/s,IMX95IEC,LPDDR5 capability,public,HIGH_PUBLIC
+vdd2h_ddr_lpddr5,1.05,V_class,IMX95IEC,power domains,public,HIGH_PUBLIC
+vddq_ddr_lpddr5,0.5,V_class,IMX95IEC,power domains,public,HIGH_PUBLIC
+package_escape,19x19_0p7mm,package,IMX95IEC,package,public,HIGH_PUBLIC
+trace_length_budget,UNRESOLVED,—,UG10210,MISSING,—,BLOCKED_MISSING_COLLATERAL
+impedance_targets,UNRESOLVED,ohm,UG10210,MISSING,—,BLOCKED_MISSING_COLLATERAL
+intra_byte_skew,UNRESOLVED,ps_or_mil,UG10210,MISSING,—,BLOCKED_MISSING_COLLATERAL
+inter_byte_skew,UNRESOLVED,ps_or_mil,UG10210,MISSING,—,BLOCKED_MISSING_COLLATERAL
+ck_dqs_relationship,UNRESOLVED,—,UG10210,MISSING,—,BLOCKED_MISSING_COLLATERAL
+byte_lane_mapping,UNRESOLVED,—,EVK_LAYOUT_OR_UG10210,MISSING,—,BLOCKED_MISSING_COLLATERAL
+via_stub_constraints,UNRESOLVED,—,UG10210,MISSING,—,BLOCKED_MISSING_COLLATERAL
+vref_odt_policy,training_managed_class,—,IMX95IEC,public class only,public,MEDIUM_PUBLIC_INCOMPLETE

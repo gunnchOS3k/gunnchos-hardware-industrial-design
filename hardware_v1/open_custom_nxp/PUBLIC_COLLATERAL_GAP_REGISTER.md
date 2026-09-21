@@ -17,3 +17,11 @@
 | GAP-LOCAL-SHA | Datasheet/RM SHA-256 pending owner local fetch | TOOLING_REQUIRED | license-safe archive |
 
 No gap is classified as NDA-required at this time.
+
+
+## NXP-2 intake (2026-09-18T22:17:56Z)
+
+| Gap ID | Description | Classification | Blocks |
+|---|---|---|---|
+| GAP-UG10210 | Still MISSING after NXP-2 search | OWNER_COLLATERAL_MISSING | memory topology / DDR rules / READY_FOR_FAB |
+| GAP-EVK-BOM | Still MISSING after NXP-2 search | OWNER_COLLATERAL_MISSING | DRAM MPN / PF53 OPNs / PF09 OTP |

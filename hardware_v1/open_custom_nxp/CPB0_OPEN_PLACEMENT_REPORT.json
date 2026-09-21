@@ -1,0 +1,19 @@
+{
+  "schema": "gunnchos.hardware.cpb0_open.placement_report.v1",
+  "generated_at_utc": "2026-09-18T22:17:56Z",
+  "campaign": "NXP2_CPB0_COLLATERAL_UNLOCK_EDA_CONTINUATION",
+  "board_outline_mm": [
+    170,
+    120
+  ],
+  "constraint_checks": {
+    "soc_ddr_geometry": "INCOMPLETE_NO_DDR_RULES",
+    "pmic_proximity": "INTENT_ONLY",
+    "decoupling": "INTENT_ONLY",
+    "hs_connectors": "INTENT_ONLY",
+    "ddr_escape": "BLOCKED_MISSING_UG10210",
+    "thermal_zones": "DRAFT",
+    "debug_access": "INTENT_ONLY"
+  },
+  "CPB0_OPEN_PLACEMENT_PASS": false
+}

@@ -1,0 +1,96 @@
+{
+  "schema": "gunnchos.hardware.nxp_owner_collateral_index.v1",
+  "generated_at_utc": "2026-09-18T22:17:56Z",
+  "campaign": "NXP2_CPB0_COLLATERAL_UNLOCK_EDA_CONTINUATION",
+  "accepted_main_sha": "56125d1738a437f413ee4418c51c2f3a82bcbac8",
+  "branch": "hardware/nxp-open-cpb0-collateral-unlock",
+  "claim_boundary": "public-collateral / owner-collateral digital EDA only \u2014 not physical pass, not certification, not fab order, not purchased, not NDA, not GXE execution, not software RC1 change",
+  "local_non_repo_intake_dir": "/Users/gunnchos/Downloads/owner_collateral/nxp_imx95",
+  "committed_path_primary_pr83": "hardware_v1/open_custom_nxp/owner_collateral/",
+  "committed_path_campaign_requested": "hardware/nxp_open/owner_collateral/",
+  "path_mapping_note": "PR #83 live package is hardware_v1/open_custom_nxp/. Campaign path hardware/nxp_open/owner_collateral/ is mirrored metadata-only for NXP-2.",
+  "search_roots_checked": [
+    "/Users/gunnchos/Downloads",
+    "/Users/gunnchos/Downloads/gunnchos-7gc-research-product-spine",
+    "/Users/gunnchos/Downloads/gunnchos-7gc-research-product-spine/repos/gunnchos-hardware-industrial-design",
+    "/Users/gunnchos/Library/Application Support/Cursor/AgentStores/cursor_agent_stores/0061a93b-2c71-4e7f-8530-01a124b5ac05/files",
+    "/Users/gunnchos/Library/Application Support/Cursor/AgentStores/cursor_agent_stores/u296542766/files",
+    "/Users/gunnchos/Desktop",
+    "/Users/gunnchos/Documents",
+    "/Users/gunnchos/Downloads/owner_collateral/nxp_imx95"
+  ],
+  "search_result": "NO_AUTHORITATIVE_UG10210_OR_EVK_BOM_FOUND",
+  "required_documents": [
+    {
+      "id": "UG10210",
+      "document_title": "i.MX95 Hardware Design Guide / UG10210 (or equivalent DDR layout guide)",
+      "document_number": "UG10210",
+      "required_for": [
+        "DDR length/skew",
+        "impedance targets",
+        "NXP_PUBLIC_MEMORY_TOPOLOGY_UNDERSTOOD"
+      ],
+      "status": "MISSING",
+      "sha256": null,
+      "local_path": null,
+      "redistribution_allowed": null
+    },
+    {
+      "id": "EVK_BOM",
+      "document_title": "i.MX95 EVK manufacturing / design BOM",
+      "document_number": "IMX95LPD5EVK-19 BOM (or equivalent)",
+      "required_for": [
+        "LPDDR5 MPN",
+        "PF5301 OPN",
+        "PF5302 OPN",
+        "PF09 OTP/package freeze"
+      ],
+      "status": "MISSING",
+      "sha256": null,
+      "local_path": null,
+      "redistribution_allowed": null
+    }
+  ],
+  "optional_documents": [
+    {
+      "id": "EVK_SCHEMATIC_PDF",
+      "status": "MISSING"
+    },
+    {
+      "id": "EVK_LAYOUT_FILES",
+      "status": "MISSING"
+    },
+    {
+      "id": "MECHANICAL_PACKAGE_DRAWING",
+      "status": "MISSING"
+    },
+    {
+      "id": "PF09_OTP_TABLE",
+      "status": "MISSING"
+    },
+    {
+      "id": "DRAM_VENDOR_DATASHEET_FOR_EXACT_MPN",
+      "status": "MISSING"
+    }
+  ],
+  "local_intake_files": [
+    {
+      "filename": "README_INTAKE.txt",
+      "source_url": null,
+      "download_date": "2026-09-18",
+      "document_title": "Intake folder placeholder / README only",
+      "document_number": null,
+      "revision": null,
+      "date": null,
+      "sha256": "2854ccf4bce266a739530d5a73369e008d63c86909e83714df3ed2bd61f055d4",
+      "license_or_access_class": "LOCAL_INTAKE_PLACEHOLDER",
+      "redistribution_allowed": true,
+      "authoritative_nxp_collateral": false,
+      "absolute_path": "/Users/gunnchos/Downloads/owner_collateral/nxp_imx95/README_INTAKE.txt"
+    }
+  ],
+  "files_indexed_count_authoritative": 0,
+  "nda_accepted": false,
+  "redistribution_of_restricted_pdfs_into_git": false,
+  "NEXT_OWNER_ACTION": "PROVIDE_MISSING_AUTHORITATIVE_NXP_COLLATERAL"
+}
