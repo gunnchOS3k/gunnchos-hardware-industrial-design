@@ -1,0 +1,22 @@
+{
+  "repo": "gunnchos-hardware-industrial-design",
+  "productName": "Hardware industrial design",
+  "family": "Devices",
+  "classification": "STATIC_PRODUCT_SURFACE_WORKER",
+  "acceptedSha": "af5af66a28e36351b3929ef15756b6df6381ff6a",
+  "status": "STAGING_WORKER",
+  "summary": "First-party hardware design status for the gunnchOS hardware work, including the Hardware Quartet design record.",
+  "capabilities": [
+    "Review design status and manufacturing boundaries",
+    "Open the source repository"
+  ],
+  "limitations": [
+    "No manufactured, shipping, or certified hardware is claimed",
+    "EVT, DVT, PVT, RF, and factory gates stay where the repository leaves them",
+    "This page is a design surface, not a store"
+  ],
+  "sourceUrl": "https://github.com/gunnchOS3k/gunnchos-hardware-industrial-design",
+  "returnUrlEnv": "GUNNCHOS_PORTAL_URL",
+  "returnUrl": "https://gunnchos-site.gunnchos-finds.workers.dev",
+  "workerName": "gunnchos-hardware"
+}
