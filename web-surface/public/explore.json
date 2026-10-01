@@ -1,0 +1,112 @@
+{
+  "schema": "gunnchos.surfacekit.v2",
+  "measured_topology": false,
+  "diagram_note": "Reading aid built from repository headings. It is not a measured topology and it is not a live system.",
+  "nodes": [
+    {
+      "id": "overview",
+      "label": "Overview"
+    },
+    {
+      "id": "what-is-this",
+      "label": "What is this?"
+    },
+    {
+      "id": "why-does-it-exist",
+      "label": "Why does it exist?"
+    },
+    {
+      "id": "where-does-it-fit",
+      "label": "Where does it fit?"
+    }
+  ],
+  "rows": [
+    {
+      "source": "README.md",
+      "scenario_id": "Overview",
+      "site_id": "Devices",
+      "ethical_framing": "# gunnchos-hardware-industrial-design Industrial and electrical design source of truth for the **gunnchOS3k** first-party device family (Student 14.5, Handheld Hybrid, DS-XL Coder, Edge I/O Rings, First-party Dock). > **Current release/state:** `PHYSICAL_PENDING` \u2014 design/BOM/RFQ *packets* exist; no fab, no certification, no RFQ send from Cursor. > **Hardware v1.0 mainline (this campaign):** see [`hardware_v1/`](hard"
+    },
+    {
+      "source": "README.md",
+      "scenario_id": "What is this?",
+      "site_id": "Devices",
+      "ethical_framing": "CAD, BOM, device-class specs, firmware/OS compatibility handoff packages, and manufacturer-facing design artifacts for first-party hardware."
+    },
+    {
+      "source": "README.md",
+      "scenario_id": "Why does it exist?",
+      "site_id": "Devices",
+      "ethical_framing": "So OS, Lab, manufacturing, and education work share one honest hardware truth before physical EVT."
+    },
+    {
+      "source": "README.md",
+      "scenario_id": "Where does it fit?",
+      "site_id": "Devices",
+      "ethical_framing": "Product Charter **layer 1**. Consumed by `gunnchos-device-os`. Linked from the Ecosystem Portal."
+    },
+    {
+      "source": "README.md",
+      "scenario_id": "What is real today?",
+      "site_id": "Devices",
+      "ethical_framing": "- Device-family design packages and BOM/validation scripts (`make validate`, `make e2e` smoke) - OS/firmware compatibility export packages for Device Lab / OS - RFQ *packet* preparation artifacts (packets \u2260 sent RFQs)"
+    },
+    {
+      "source": "README.md",
+      "scenario_id": "What is simulated / modelled?",
+      "site_id": "Devices",
+      "ethical_framing": "- QEMU/host firmware dry-runs and capsule *simulation* - Conceptual/legacy EVT-0 CAD framing (see `docs/history/`)"
+    }
+  ],
+  "sources": [],
+  "sections": [
+    {
+      "id": "overview",
+      "title": "Overview",
+      "body": "# gunnchos-hardware-industrial-design Industrial and electrical design source of truth for the **gunnchOS3k** first-party device family (Student 14.5, Handheld Hybrid, DS-XL Coder, Edge I/O Rings, First-party Dock). > **Current release/state:** `PHYSICAL_PENDING` \u2014 design/BOM/RFQ *packets* exist; no fab, no certification, no RFQ send from Cursor. > **Hardware v1.0 mainline (this campaign):** see [`hardware_v1/`](hard"
+    },
+    {
+      "id": "what-is-this",
+      "title": "What is this?",
+      "body": "CAD, BOM, device-class specs, firmware/OS compatibility handoff packages, and manufacturer-facing design artifacts for first-party hardware."
+    },
+    {
+      "id": "why-does-it-exist",
+      "title": "Why does it exist?",
+      "body": "So OS, Lab, manufacturing, and education work share one honest hardware truth before physical EVT."
+    },
+    {
+      "id": "where-does-it-fit",
+      "title": "Where does it fit?",
+      "body": "Product Charter **layer 1**. Consumed by `gunnchos-device-os`. Linked from the Ecosystem Portal."
+    },
+    {
+      "id": "what-is-real-today",
+      "title": "What is real today?",
+      "body": "- Device-family design packages and BOM/validation scripts (`make validate`, `make e2e` smoke) - OS/firmware compatibility export packages for Device Lab / OS - RFQ *packet* preparation artifacts (packets \u2260 sent RFQs)"
+    },
+    {
+      "id": "what-is-simulated-modelled",
+      "title": "What is simulated / modelled?",
+      "body": "- QEMU/host firmware dry-runs and capsule *simulation* - Conceptual/legacy EVT-0 CAD framing (see `docs/history/`)"
+    }
+  ],
+  "artifacts": [
+    "results/CAD_CI_FAILURE_FIX_REPORT.md",
+    "results/CI_FAILURE_FIX_REPORT.md",
+    "results/COMPLETE_IMPLEMENTATION_AND_COMPONENT_SELECTION_REPORT.md",
+    "results/CROSS_REPO_PRODUCT_SIMULATION_REPORT.md",
+    "results/EVT1_FINAL_VALIDATION_REPORT.md",
+    "results/FIRMWARE_COMPATIBILITY_SMOKE_REPORT.md",
+    "results/FIRMWARE_REQUIREMENTS_ONLY_AUDIT.md",
+    "results/MECHANICAL_CORRECTNESS_VALIDATION.md",
+    "results/MECHANICAL_PRINT_DVT_PVT_CERTIFICATION_PASS_REPORT.md",
+    "results/NOT_IMPLEMENTED_LANGUAGE_AUDIT.md",
+    "results/OPENSCAD_CRASH_POSTMERGE_AUDIT.md",
+    "results/OS_COMPATIBILITY_HANDOFF_PASS_REPORT.md"
+  ],
+  "methods": " # Reproducibility \u2014 gunnchos Hardware Industrial Design ## Clone / setup / run ```bash git clone https://github.com/gunnchOS3k/{name}.git cd gunnchos-hardware-industrial-design # See README.md for repo-specific setup python3 scripts/check_required_files.py # Expected: CI smoke pass; tests pass or documented skip ``` ## Expected outputs - Required documentation files present (`python3 scripts/check_required_files.py`) - Tests pass **or** documented smoke-only path for docs-only repos - No claim of field deployment from synthetic outputs alone ## Tool versions | Tool | Version guidance | |------|------------------| | Python | 3.10+ where `requirements.txt` exists | | Node | 18+ LTS where `pac",
+  "cards": [],
+  "runtime_mode": "PRECOMPUTED",
+  "runtime_boot": false
+}
