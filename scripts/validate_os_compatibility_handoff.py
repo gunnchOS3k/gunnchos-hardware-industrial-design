@@ -33,6 +33,31 @@ EXPORTS = [
     "os_compatibility/device_class_exports/wearables_arena_set_os_export.yaml",
 ]
 
+# Canonical Device Quartet identities. Display names are the authored product
+# labels; they are not physical certification claims.
+QUARTET_IDENTITIES = {
+    "student_14_5_os_export.yaml": {
+        "device_id": "student_14_5",
+        "hardware_repo_device_name": "Student 14.5",
+        "os_repo_profile_name": "student_14_5",
+    },
+    "handheld_hybrid_os_export.yaml": {
+        "device_id": "handheld_hybrid",
+        "hardware_repo_device_name": "Handheld Hybrid",
+        "os_repo_profile_name": "handheld_hybrid",
+    },
+    "ds_xl_coder_os_export.yaml": {
+        "device_id": "ds_xl_coder",
+        "hardware_repo_device_name": "DS-XL Coder",
+        "os_repo_profile_name": "ds_xl_coder",
+    },
+    "wearables_arena_set_os_export.yaml": {
+        "device_id": "wearables_arena_set",
+        "hardware_repo_device_name": "Wearables / Arena Set",
+        "os_repo_profile_name": "wearables_arena_set",
+    },
+}
+
 EXPORT_FIELDS = [
     "device_id",
     "hardware_repo_device_name",
@@ -99,6 +124,24 @@ FORBIDDEN = [
 README_LINK = "os_compatibility/"
 
 
+def export_identity_errors(filename: str, data: dict) -> list[str]:
+    """Reject a quartet export whose identity is missing or swapped.
+
+    Field presence alone is not enough: a complete document can still name
+    the wrong device.
+    """
+    name = Path(filename).name
+    expected = QUARTET_IDENTITIES.get(name)
+    if expected is None:
+        return [f"{name} is not a Device Quartet export"]
+    errors: list[str] = []
+    for field, want in expected.items():
+        got = data.get(field)
+        if got != want:
+            errors.append(f"{name} {field}={got!r} expected {want!r}")
+    return errors
+
+
 def load_yaml(path: Path) -> dict:
     try:
         import yaml  # type: ignore
@@ -136,6 +179,10 @@ def main() -> int:
             if field not in data:
                 print(f"FAIL {export} missing field {field}")
                 return 1
+        identity_errors = export_identity_errors(export, data)
+        if identity_errors:
+            print("FAIL " + "; ".join(identity_errors))
+            return 1
 
     matrix = (ROOT / "production_release/PRODUCTION_RELEASE_EVIDENCE_MATRIX.md").read_text()
     if "OS compatibility" not in matrix or "os_compatibility" not in matrix.lower():
