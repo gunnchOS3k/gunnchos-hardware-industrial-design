@@ -93,18 +93,37 @@ def _parse_simple_yaml(text: str) -> dict[str, Any]:
     return root
 
 
+def _absorb_profiles(source: dict[str, Any], supplied: dict[str, dict[str, str]]) -> bool:
+    """Merge canonical profiles. Return True when a key cannot be normalized.
+
+    A failed key is omitted. It is not stored under its raw name.
+    """
+    rejected = False
+    for raw_key, value in (source.get("profiles") or {}).items():
+        canon = normalize_device_id(str(raw_key))
+        if canon is None or canon not in CANONICAL_DEVICES or not isinstance(value, dict):
+            rejected = True
+            continue
+        supplied[canon] = {**supplied.get(canon, {}), **value, "device_profile": canon}
+    return rejected
+
+
 def load_qemu_profiles(profiles_yaml: Path, profiles_json: Path | None = None) -> dict[str, dict[str, str]]:
-    profiles: dict[str, dict[str, str]] = dict(DEFAULT_QEMU_PROFILES)
+    """Load digital QEMU profiles for the Device Quartet.
+
+    Defaults are digital placeholders for a canonical identity the file omits.
+    They are not physical devices. If a key fails normalization, that key is
+    dropped and defaults are not used to fill the quartet around it.
+    """
+    supplied: dict[str, dict[str, str]] = {}
+    rejected = False
     if profiles_yaml.exists():
-        data = load_structured(profiles_yaml)
-        for k, v in (data.get("profiles") or {}).items():
-            canon = normalize_device_id(str(k)) or str(k)
-            if isinstance(v, dict):
-                profiles[canon] = {**profiles.get(canon, {}), **v, "device_profile": canon}
+        rejected = _absorb_profiles(load_structured(profiles_yaml), supplied) or rejected
     if profiles_json and profiles_json.exists():
-        data = json.loads(profiles_json.read_text())
-        for k, v in (data.get("profiles") or {}).items():
-            canon = normalize_device_id(str(k)) or str(k)
-            if isinstance(v, dict):
-                profiles[canon] = {**profiles.get(canon, {}), **v, "device_profile": canon}
+        rejected = _absorb_profiles(json.loads(profiles_json.read_text()), supplied) or rejected
+    if rejected:
+        return supplied
+    profiles = {device_id: dict(profile) for device_id, profile in DEFAULT_QEMU_PROFILES.items()}
+    for device_id, profile in supplied.items():
+        profiles[device_id] = {**profiles.get(device_id, {}), **profile, "device_profile": device_id}
     return profiles
